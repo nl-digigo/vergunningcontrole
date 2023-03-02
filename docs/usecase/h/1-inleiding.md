@@ -1,4 +1,4 @@
-## Inleiding
+# Inleiding
 
 Deze specficatie pakt het volgende op:
 

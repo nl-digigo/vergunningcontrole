@@ -1,4 +1,4 @@
-## Informatiemodel
+# Informatiemodel
 
 > DEF
 > Een <dfn>informatiemodel</dfn> maakt een representatie van de werkelijkheid die eenvoudig(er) door een systeem te verwerken is.

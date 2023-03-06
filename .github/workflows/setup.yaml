@@ -80,8 +80,6 @@ jobs:
         run: |
           # Delete the setup workflow, it has served its purpose
           rm .github/workflows/setup.yaml
-          # Replace the template README with the repo README
-          mv README_AFTER_CLONE.md README.md
 
       - name: Save template version info
         run: |

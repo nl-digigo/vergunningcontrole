@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 env:
-  DOCS_HOME: "https://docs.crow.nl"
+  DOCS_HOME: "https://bimloket.github.io"
 
 jobs:
   setup-repo:

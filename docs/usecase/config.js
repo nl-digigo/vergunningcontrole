@@ -2,7 +2,7 @@ var respecConfig = {
   // => https://github.com/stichting-crow/respec/wiki
   specStatus: "WV",
   shortName: "usecase",
-  specType: "Handreiking"
+  specType: "Handreiking",
   imprint: "bimloket",
   editors: [
     // alleen `name` is verplicht, https://respec.org/docs/#person

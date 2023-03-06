@@ -74,24 +74,6 @@ jobs:
           # Move generated content to workflows directory of repo
           mv /tmp/workflows/* .github/workflows/
 
-      - name: Add first document 👩‍🍳
-        env:
-          INFO: ${{ steps.fetch-repo-and-user-details.outputs.result }}
-        run: |
-          # Run cookiecutter
-          pushd /tmp
-          cookiecutter gh:stichting-crow/respec-document-template --no-input \
-            document_short_name="$REPO_NAME" \
-            repository_name="$REPO_NAME" \
-            document_title="$(echo $INFO | jq -r .repository.description)" \
-            document_type="technische documentatie" \
-            first_editor="$(echo $INFO | jq -r .user.name)"
-
-          popd
-          # Move generated content to root directory of repo
-          mkdir docs
-          mv /tmp/$REPO_NAME docs/
-
       - name: Clean up after importing 👩‍🍳
         env:
           INFO: ${{ steps.fetch-repo-and-user-details.outputs.result }}

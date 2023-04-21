@@ -16,6 +16,6 @@ Deze specficatie pakt het volgende op:
 Afbeelding:
 
 <figure>
-<img src="./h/media/maximalesnelheid.PNG">
-<figcaption>Maximale snelheid voor navigatiesystemen, van rechts naar links: Een wegbeheerder neemt een [=verkeersbesluit=]; het [=NDW=] registreert een nieuwe verkeerskundige situatie; in het [=NTM=] wordt de actuele verkeerskundige informatie gepubliceerd; [=SMART Mobility=] systemen kunnen de juiste verkeerskundige situatie afleiden uit de informatie en daarmee [=weggebruikers=] ondersteunen. </caption>
+<img src=".\h\media\Meerwaarde3DVergunning_Liggend.png">
+<figcaption>Bijschrift van de infographic Vergunningscontroleservice </caption>
 </figure>

@@ -1,4 +1,4 @@
-````SPARQL`
+```SPARQL
 Use-case 1: 
 
 democase1:algemeen_BoundingboxAlles

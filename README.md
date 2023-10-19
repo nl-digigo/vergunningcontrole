@@ -2,7 +2,7 @@
 
 Dit is de GitHub-repository voor de vergunningscontroleservice
 
-Zie voor de use case: https://bimloket.github.io/vergunningcontrole/usecase/
+Zie voor de use case: https://digigo.github.io/vergunningcontrole/usecase/
 
 ## Instructies voor redacteurs
 

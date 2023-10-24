@@ -1,4 +1,11 @@
-```SPARQL
+# Code snippets
+
+Hieronder vindt men 
+
+> EXAMPLE "Boundingbox"
+
+>
+```sparql
 democase1:algemeen_BoundingboxAlles
         rdf:type      democase1:algemeen ;
         rdfs:comment  "adds a handy boundingbox data of the whole project" ;
@@ -80,8 +87,9 @@ democase1:algemeen_BoundingboxAlles
         <http://www.buildingbits.nl/2021/rulesV2/nextRule> ifcintake:addWKTFromMatricsForSite.
 ```
 
+> EXAMPLE "Focuspoint on site"
 
-``` SPARQL
+>``` SPARQL
 democase1:FocuspointOnSite
         rdf:type      democase1:algemeen ;
         rdfs:comment  "create a focus point for zooming purposes in Rotterdam3D" ;

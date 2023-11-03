@@ -4,7 +4,7 @@
 ## Use-case 1: Bluswatervoorziening
 1) Om deze use-case op te lossen is eerst gezocht naar de brandweeringang x,y,z in de BIM-database. Met een query wordt in het IFC-model opgezocht waar de brandweeringang(en) zich bevind(t)(en) en in het 3D-model helder gepresenteerd met rood gemarkeerde deur. 
 <figure>
-<img src=".\h\media\branddeuren in IFC.jpg"alt="Image" style="width:200x;" >
+<img src=".\h\media\Branddeuren in IFC.jpg"alt="Image" style="width:200x;" >
 <figcaption> Brandweeringang in IFC rood gemarkeerd </caption>
 </figure>
 

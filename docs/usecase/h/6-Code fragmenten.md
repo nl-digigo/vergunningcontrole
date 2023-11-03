@@ -2,148 +2,123 @@
 
 Hieronder vindt men 
 
-> EXAMPLE "Boundingbox"
+> EXAMPLE "Dakhellinganalyse"
 
 >
 ```sparql
-democase1:algemeen_BoundingboxAlles
-        rdf:type      democase1:algemeen ;
-        rdfs:comment  "adds a handy boundingbox data of the whole project" ;
-        rdfs:label    "algemeen Boundingbox alles" ;
+:demo2_dakhellingenOmgeving
+        rdf:type    :demo2 ;
+        rdfs:label  "demo2 dakhellingen omgeving" ;
         <http://www.bbsgroep.nl/application/v2/sparqlstring>
-                "prefix owl: <http://www.w3.org/2002/07/owl#>\r\n
-                prefix xsd: <http://www.w3.org/2001/XMLSchema#>\r\n
-                prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\n
-                prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n
-                prefix ifc:<http://rdf.bg/ontologies/ifc#>\r\n
-                prefix cs:<http://connectedapps.com/customsparql#>
-                \r\n\r\n
-
-                insert {
-                        \r\n\r\
-                                ngraph<{{data}}_algemeen>
-                                \r\n
-                                {
-                                        \r\n\r\n\t
-                                        ?min <http://rdf.bg/ontologies/ifc#geometry> ?geometry.
-                                        \r\n\t
-                                        
-                                        ?min <http://rdf.bg/ontologies/ifc#locationwkt> ?wkt.
-                                        \r\n
-                                }
-                        \r\
-                        
-                                ngraph<{{data}}>
-                                \r\n
-                                        {
-                                        \r\n\r\n\t
-                                        ?min <http://rdf.bg/ontologies/ifc#geometry> ?geometry.
-                                        \r\n\t
-                                        ?min <http://rdf.bg/ontologies/ifc#locationwkt>  ?wkt.
-                                        \r\n
-                                        }
-                                \r\n\r\n 
-                                \r\n  
-                                \r\n
-                                }
-                        \r\n
-                        
-                where
-                \r\n
+                "
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>      
+                INSERT                 
+                {
+                        graph <{{data}}_case2>   
                         {
-                        \r\n  \r\n  
-                        graph<{{data}}>
-                        \r\n\r\n  
+                        ?dekhellingUri a <http://www.rotterdam.nl/vergunningdemo/2022/vergunningaanvraag/bestemmingsplan#Dakhelling> .    
+                        ?dekhellingUri <http://www.rotterdam.nl/vergunningdemo/2022/vergunningaanvraag/bestemmingsplan#dakhelling> ?dakhelling.          
+                        ?dekhellingUri <http://www.rotterdam.nl/vergunningdemo/2022/vergunningaanvraag/bestemmingsplan#aantal> ?aantal.    
+                        }  
+                }    
+                where
+                {                
+                        {
+                                select distinct  ?dakhelling  (count(distinct ?uri ) as ?aantal) where
                                 {
-                                        \r\n      
-                                        ?min a <http://rdf.bg/ontologies/ifc#Min>.
-                                        \r\n      
-                                        ?min <http://rdf.bg/ontologies/ifc#xMin> ?xmin.
-                                        \r\n      
-                                        ?min <http://rdf.bg/ontologies/ifc#yMin> ?ymin.
-                                        \r\n      
-                                        ?min <http://rdf.bg/ontologies/ifc#zMin> ?zmin.
-                                        \r\n      
-                                        ?max a <http://rdf.bg/ontologies/ifc#Max>.
-                                        \r\n      
-                                        ?max <http://rdf.bg/ontologies/ifc#xMax> ?xmax.
-                                        \r\n      
-                                        ?max <http://rdf.bg/ontologies/ifc#yMax> ?ymax.
-                                        \r\n      
-                                        ?max <http://rdf.bg/ontologies/ifc#zMax> ?zmax.
-                                        \r\n  \r\n   
-                
-                                        bind (cs:createbox(?xmin,?ymin,?zmin,?xmax,?ymax,?zmax) as ?geometry)
-                                        \r\n   
-                                        bind (cs:blob2wktpoint(?geometry) as ?wkt)
-                                        \r\n  \r\n  
-                                }
-                        \r\n    
-                        \r\n
-                        } 
-                \r\n\r\n";
-
-        <http://www.bbsgroep.nl/application/v2/tag> "algemeen" ;
-        <http://www.buildingbits.nl/2021/rulesV2/nextRule> ifcintake:addWKTFromMatricsForSite.
+                                        graph <{{data}}>     
+                                        {
+                                                ?best a <http://www.rotterdam.nl/vergunningdemo/2022/vergunningaanvraag/bestemmingsplan#Bestemmingsplan>    
+                                        }    
+                                        graph <http://www.rotterdam.nl/vergunningdemo/2021/vergunningaanvraag/gis2d>      
+                                        {
+                                                ?best  <http://www.rotterdam.nl/vergunningdemo/2022/vergunningaanvraag/bestemmingsplan#bevat> ?uri.            
+                                                ?uri a <http://www.buildingbits.nl/def#Roof3dBuildings_Aspect_Slope>.   
+                                                ?uri <http://www.buildingbits.nl/def#MEAN_1> ?hellingS.    
+                                                bind(xsd:float(?hellingS) as ?helling)       
+                                                bind(if (?helling<10,\"0-10\",if(?helling<20,\"10-20\",
+                                                if(?helling<30,\"20-30\",if(?helling<40,\"30-40\",if(?helling<50,\"40-50\",if(?helling<60,\"50-60\",
+                                                if(?helling<70,\"60-70\",if(?helling<80,\"70-80\",\">80\")))))))) as ?dakhelling)         
+                                        }  
+                                }    
+                                group by ?dakhelling    
+                                order by asc(?dakhelling)    
+                        }         
+                        bind(URI(concat(\"http://www.rotterdam.nl/vergunningdemo/2022/vergunningaanvraag/bestemmingsplan#dakhelling\",replace(?dakhelling,\"-\",\"b\"))) as ?dekhellingUri)    
+                }" ;
+                        <http://www.bbsgroep.nl/application/v2/tag>
+                "case2" ;
+        <http://www.buildingbits.nl/2021/rulesV2/nextRule>
+                :demo2_dakhellingTotaal .
 ```
 
 > EXAMPLE "Focuspoint on site"
 
 >``` SPARQL
-democase1:FocuspointOnSite
-        rdf:type      democase1:algemeen ;
-        rdfs:comment  "create a focus point for zooming purposes in Rotterdam3D" ;
-        rdfs:label    "Focuspoint on site" ;
+democase1:3_case_1_buitenDeurWGS
+        rdf:type      democase1:demo1 ;
+        rdfs:comment  "creeer wkt wgs84 strings voor de buitendeuren" ;
+        rdfs:label    "case 1 buitendeur WGS en label deze deur in scope voor deze case" ;
+        <http://www.bbsgroep.nl/application/v2/active>
+                true ;
         <http://www.bbsgroep.nl/application/v2/sparqlstring>
-                "\r\n
-                PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
-                \r\n
-                PREFIX geo: <http://www.opengis.net/ont/geosparql#>
-                \r\n
-                PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
-                \r\n
-                prefix ifc:<http://rdf.bg/ontologies/ifc#>
-                \r\n
-                prefix cs:<http://connectedapps.com/customsparql#>
-                \r\n\r\n\r\n
-                
-                insert {
-                        graph <{{data}}>
-                        \r\n    
-                                {
-                                \r\n\r\n     
-                                ?x  <http://www.opengis.net/ont/geosparql#asWKTFocuspoint> ?point
-                                \r\n
-                                }
-                                \r\n
-                        }
-                        \r\n
-                where
-                \r\n
+                "  
+                PREFIX ifc:<http://rdf.bg/ontologies/ifc#>  
+                PREFIX cs:<http://connectedapps.com/customsparql#>    
+                INSERT  
+                {
+                        graph<{{data}}>  
                         {
-                        \r\n    
-                        graph <{{data}}>
-                        \r\n    
+                                ?uri a <http://www.rotterdam.nl/vergunningdemo/2021/case1Branddeur>.  
+                                ?uri <http://www.opengis.net/ont/geosparql#asWKTPoint> ?geometry        
+                        }  
+                }  
+                where  
+                {
+                        graph<{{data}}>    
+                        {
                                 {
-                                \r\n\r\n       
-                                ?x a <http://rdf.bg/ontologies/ifc#IfcSite>.
-                                \r\n\t\t 
-                                ?uri a <http://www.rotterdam.nl/vergunningdemo/2021/case1ObstakelGebouw>.
-                                \r\n     \t
-                                ?uri  <http://www.opengis.net/ont/geosparql#asWKT> ?geometry.
-                                \r\n 
-
-                                filter (STR(?geometry)!=\"false\")        
-                                \r\n   
-
-                                bind (cs:wktcentrepoint(?geometry) as ?point)
-                                \r\n
-
-                                filter (STR(?point)!=\"false\")\r\n\r\n   
+                                        ?uri a <http://rdf.bg/ontologies/ifc#IfcFireSuppressionTerminal>
                                 }
-                        \r\n
-                        }" ;
-        <http://www.bbsgroep.nl/application/v2/tag> "algemeen";
-        <http://www.buildingbits.nl/2021/rulesV2/nextRule> democase1:focuspoint_op_basis_van_kavel.
+                                union
+                                {
+                                        ?uri  a <http://rdf.bg/ontologies/ifc#IfcFireSuppressionTerminalType> 
+                                } 
+                                union
+                                {
+                                        ?uri a <http://rdf.bg/ontologies/ifc#IfcValve>
+                                }     
+                                union
+                                {
+                                        ?uri a <http://rdf.bg/ontologies/ifc#IfcDoor>.    
+                                        ?uri <http://rdf.bg/ontologies/ifc#propertySets>/<http://rdf.bg/ontologies/ifc#properties> ?ps.       
+                                        {
+                                                ?ps <http://rdf.bg/ontologies/ifc#name> \"Entrance\".      
+                                                ?ps <http://rdf.bg/ontologies/ifc#value> ?a.    
+                                        }      
+                                        union
+                                        {
+                                                ?ps <http://rdf.bg/ontologies/ifc#name> \"Brandweer_ingang\".       
+                                                ?ps <http://rdf.bg/ontologies/ifc#value> ?a.       
+                                        }           
+                                        union
+                                        {
+                                                ?ps <http://rdf.bg/ontologies/ifc#name> \"Fire_Exit\".       
+                                                ?ps <http://rdf.bg/ontologies/ifc#value> ?a.         
+                                        }       
+                                        filter (?a=\"True\" || ?a=true)    
+                                }      
+                                optional 
+                                {
+                                        ?uri <http://www.opengis.net/ont/geosparql#asWKT> ?wkt.          
+                                        bind (cs:wktcentrepoint(?wkt) as ?geometry)         filter (STR(?geometry)!=\"false\")     
+                                }        
+                        }      
+                }      " ;
+        <http://www.bbsgroep.nl/application/v2/tag>
+                "case1" ;
+        <http://www.buildingbits.nl/2021/rulesV2/nextRule>
+                democase1:branddeuren_decomposed_wktpoint .
+
 ```
 

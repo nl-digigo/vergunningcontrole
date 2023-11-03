@@ -7,7 +7,7 @@ Door samen met geïnteresseerde partijen op te trekken in pilotprojecten worden 
 
 Hoe mooi zou het zijn als een ontwikkelende partij zijn nieuwbouwplan alvast als een digitale toekomstige werkelijkheid kan verbinden met de digitale stad, dat een digitale beschrijving biedt van de actuele werkelijkheid (‘Digital Twin’)? Met een druk op de knop ziet een ontwikkelende en toetsende partij wat deze voorgestelde toekomstige werkelijkheid doet met de omgeving en of deze voldoet aan de afspraken. Zo kunnen we nu sneller zien wat mogelijk en wenselijk is, we kunnen sneller het gewenste bouwen en in de toekomst sneller het gewenste beheren. 
 
-# De omgevingswet voor Rotterdammers in de digitale stad
+# Wetgeving voor Rotterdammers in de digitale stad
 Binnen de digitale stad gaan we uit van drie verschillende werkelijkheden. De 'echte' wereld noemen we de fysieke werkelijkheid. In de fysieke werkelijkheid gelden de natuurwetten. Mensen, Rotterdammers, ervaren dit als fysiek, echt, tastbaar. De tweede werkelijkheid is de werkelijkheid waarin we afspraken met elkaar maken. Dit doen wij in wet– en regelgeving zoals de omgevingswet, normen en waarden, mondelinge afspraken of in standaarden. Deze werkelijkheid noemen we de sociale werkelijkheid of ook wel de juridische werkelijkheid. De informatiesystemen waarin alles geborgd wordt met data en applicaties noemen we de digitale werkelijkheid, de digitale stad.
 
 <figure>
@@ -16,10 +16,19 @@ Binnen de digitale stad gaan we uit van drie verschillende werkelijkheden. De 'e
 </figure>
 
 Met de vergunningscontroleservice wil de gemeente Rotterdam machine en mens optimaal samen laten werken bij het controleren van een verzoek voor een bouwvergunning. Dit levert voordelen op die in hoofdstuk 2 beschreven zijn. Om een goede VCS te kunnen ontwikkelen is het van groot belang dat de digitale/administratieve, fysieke en sociale/juridische werkelijkheid samen werkt. De werkelijkheden dienen met elkaar in overeenstemming te zijn. De basis voor een goede beslissing voor beschikking is:
-• sluitende en kwalitatief goede informatie;
-• heldere wetgeving; 
-• een fysieke werkelijkheid die hiermee in overeenstemming is. 
+    • sluitende en kwalitatief goede informatie;
+    • heldere wetgeving; 
+    • een fysieke werkelijkheid die hiermee in overeenstemming is. 
 Als een van deze componenten ontbreekt is er een grote kans op het van ontstaan onbetrouwbare situaties en conflicten tussen partijen. Als deze componenten als een samenhangend geheel werken kunnen mens en machine elkaar versterken en tot een optimale service komen. 
+
+# Omgevingswet
+Rotterdammers willen graag wonen in een omgeving die veilig is en er netjes en verzorgd uitziet. Om nu én in de toekomst de schaarse ruimte die we hebben zo optimaal mogelijk te gebruiken, hebben de landelijke, provinciale én lokale overheid regels en afspraken gemaakt. Deze afspraken komen tot 2024 terug in onder andere een bestemmingsplan, de welstandnota en het bouwbesluit. Hierin ligt vast of en hoe er gebouwd mag worden, wat de omvang van die bebouwing is en waarvoor een perceel of een gebouw gebruikt mag worden. 
+Met de Omgevingswet wil de overheid de regels voor ruimtelijke ontwikkeling vereenvoudigen en samenvoegen. Zodat het straks makkelijker is om bouwprojecten te starten. De nieuwe wet zorgt voor een samenhangende aanpak van de leefomgeving, ruimte voor lokaal maatwerk en betere en snellere besluitvorming. Daarnaast wordt participatie bevorderd. Bijvoorbeeld door burgers en ondernemers zo goed mogelijk te betrekken bij de ontwikkeling van de leefomgeving. Daarom voert de gemeente grote veranderingen door in het kader van de Omgevingswet. De vergunningscontroleservice wordt ook in het kader van de omgevingswet ontwikkeld. 
+
+<figure>
+<img src=".\h\media\Omgevingswet Verandering op drie gebieden.jpg"alt="Image" style="width:500px;">
+<figcaption> Omgevingswet verandering op drie gebieden </caption>
+</figure>
 
 Dit document toont de bevindingen die zijn gedaan in de ontwikkeling van het prototype vergunningscontroleservice. 
 

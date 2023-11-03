@@ -1,4 +1,4 @@
-# Use-Cases
+# Use-Cases, de opgave
 
 Het prototype van de vergunningcontroleservice kan ondersteunen in de controle en visualisatie van een vijftal use-cases. Hierbij stelt de gemeente Rotterdam dat alle Bouw Informatie Modellen van toekomstige situatie (in IFC) die de service in behandeling kan nemen moeten voldoen aan de BIM Basis ILS en de ILS O&E van het BIM-loket. Waar deze standaarden ontoereikend zijn is dit aangevuld met Rotterdamse vergunningscontrole ILS. Per uses-case staat een eerste aanzet beschreven welke parameters men kan benutten om tot een eindresultaat te komen. Dit is ter inspiratie. De vergunningscontroleservice maakt daarnaast gebruik van de digitale stad in CityGML/CityJSON. Ook hiervan is een aanzet gegeven welke parameters hiervan benut kunnen worden. Ook deze uitwerking moet men zien als indicatief. 
 

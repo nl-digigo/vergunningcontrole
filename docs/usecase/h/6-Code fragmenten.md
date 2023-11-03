@@ -2,9 +2,10 @@
 
 Hieronder vindt men twee code-fragmenten. Dit is een deel van de digitale regels waarmee men vergunningen kan controleren. 
 
-EXAMPLE "Dakhellinganalyse"
+
 
 ```sparql
+## Voorbeeld deel dakhellinganalyse ten behoeve van welstandscontrole
 :demo2_dakhellingenOmgeving
         rdf:type    :demo2 ;
         rdfs:label  "demo2 dakhellingen omgeving" ;
@@ -51,15 +52,15 @@ EXAMPLE "Dakhellinganalyse"
                 :demo2_dakhellingTotaal .
 ```
 
-> EXAMPLE "Focuspoint on site"
 
->```sparql
+
+```sparql
+## Voorbeeld deel brandweeringang ten behoeve van bereikbaarheid brandhydrant controle
 democase1:3_case_1_buitenDeurWGS
         rdf:type      democase1:demo1 ;
         rdfs:comment  "creeer wkt wgs84 strings voor de buitendeuren" ;
         rdfs:label    "case 1 buitendeur WGS en label deze deur in scope voor deze case" ;
-        <http://www.bbsgroep.nl/application/v2/active>
-                true ;
+        <http://www.bbsgroep.nl/application/v2/active> true ;
         <http://www.bbsgroep.nl/application/v2/sparqlstring>
                 "  
                 PREFIX ifc:<http://rdf.bg/ontologies/ifc#>  
@@ -110,10 +111,11 @@ democase1:3_case_1_buitenDeurWGS
                                 optional 
                                 {
                                         ?uri <http://www.opengis.net/ont/geosparql#asWKT> ?wkt.          
-                                        bind (cs:wktcentrepoint(?wkt) as ?geometry)         filter (STR(?geometry)!=\"false\")     
+                                        bind (cs:wktcentrepoint(?wkt) as ?geometry)         
+                                        filter (STR(?geometry)!=\"false\")     
                                 }        
                         }      
-                }      " ;
+                } " ;
         <http://www.bbsgroep.nl/application/v2/tag>
                 "case1" ;
         <http://www.buildingbits.nl/2021/rulesV2/nextRule>

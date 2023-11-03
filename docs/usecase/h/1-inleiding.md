@@ -26,7 +26,7 @@ Rotterdammers willen graag wonen in een omgeving die veilig is en er netjes en v
 Met de Omgevingswet wil de overheid de regels voor ruimtelijke ontwikkeling vereenvoudigen en samenvoegen. Zodat het straks makkelijker is om bouwprojecten te starten. De nieuwe wet zorgt voor een samenhangende aanpak van de leefomgeving, ruimte voor lokaal maatwerk en betere en snellere besluitvorming. Daarnaast wordt participatie bevorderd. Bijvoorbeeld door burgers en ondernemers zo goed mogelijk te betrekken bij de ontwikkeling van de leefomgeving. Daarom voert de gemeente grote veranderingen door in het kader van de Omgevingswet. De vergunningscontroleservice wordt ook in het kader van de omgevingswet ontwikkeld. 
 
 <figure>
-<img src=".\h\media\Omgevingswet Verandering op drie gebieden.jpg"alt="Image" style="width:500px;">
+<img src=".\h\media\Omgevingswet Verandering op drie gebieden.jpg"alt="Image" style="width:1000px;">
 <figcaption> Omgevingswet verandering op drie gebieden </caption>
 </figure>
 

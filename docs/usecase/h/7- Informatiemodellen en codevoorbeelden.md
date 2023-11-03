@@ -4,13 +4,13 @@
 Het3D-model van de stad, het 3D-model van de gewenste ontwikkeling en de gedigitaliseerde wet- en regelgeving moeten op elkaar afgestemd zijn. Door de TU-Delft is een stroomdiagram en een sequentie-diagram opgesteld waarin de relatie en de uitwisseling tussen de verschillende bronnen wordt aangegeven. Deze relatie en uitwisseling is nodig om digitale ondersteuning in toetsing te faciliteren. Dit stroomdiagram en de sequentie-diagram is leidraad voor de architectuur modellen zijn ontwikkeld in het onderzoek "EuroSDR GeoBIM".
 
 <figure>
-<img src=".\h\media\Building PermissionActivityDEF.jpg"alt="Image" style="width:500px;" >
+<img src=".\h\media\Building PermissionActivityDEF.jpg"alt="Image" style="width:1000px;" >
 <figcaption> Activiteitendiagram vergunningscontrole </caption>
 </figure>
 
 
 <figure>
-<img src=".\h\media\Sequence DiagramDEF.jpg"alt="Image" style="width:500px;" >
+<img src=".\h\media\Sequence DiagramDEF.jpg"alt="Image" style="width:1000px;" >
 <figcaption> Sequence Diagram vergunningscontrole</caption>
 </figure>
 

@@ -1,10 +1,9 @@
 # Code snippets
 
-Hieronder vindt men 
+Hieronder vindt men twee code-fragmenten. Dit is een deel van de digitale regels waarmee men vergunningen kan controleren. 
 
-> EXAMPLE "Dakhellinganalyse"
+EXAMPLE "Dakhellinganalyse"
 
->
 ```sparql
 :demo2_dakhellingenOmgeving
         rdf:type    :demo2 ;
@@ -54,7 +53,7 @@ Hieronder vindt men
 
 > EXAMPLE "Focuspoint on site"
 
->``` SPARQL
+>```sparql
 democase1:3_case_1_buitenDeurWGS
         rdf:type      democase1:demo1 ;
         rdfs:comment  "creeer wkt wgs84 strings voor de buitendeuren" ;

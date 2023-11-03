@@ -15,13 +15,13 @@ In de prototype-fase heeft men het focusgebied Traviataweg in Hoogvliet geselect
 Bij het opstellen en/of aanvullen van BIM-modellen maakt men gebruik van specifieke software. Aangezien de vergunningscontroleservice geen software wil voorschrijven is hier gekozen voor een universeel uitwisselformaat. Het uitwisselformaat van de BIM-modellen is het open-standaard-formaat IFC. De ontwikkeling is in beheer bij BuildingSMART. Bij deze pilot is gewerkt met twee versies. Namelijk IFC 2x3 en IFC 4.1.
 
 <figure>
-<img src=".\h\media\IFC_logo.jpg"alt="Image" style="width:200x; float:right;" >
+<img src=".\h\media\IFC_logo.jpg"alt="Image" style="width:200px; float:right;" >
 <figcaption> Uitwisselstandaard IFC </caption>
 </figure>
 
 Voor GEO-informatie geldt ander uitwisselformaat. Rotterdam-3D is beschikbaar gesteld als CityGML-bestanden voor 3D weergave en analyse in het prototype. In de viewer van de vergunningscontrole is het basismodel van Rotterdam-3D hergebruikt. Dit wordt gedaan door het aanroepen van 3D-tiles (formaat GLTF, dat is onderdeel van de OGC standaard 3D Tiles) via een url. De datastroom van Rotterdam3D, is in het kort:
 <figure>
-<img src=".\h\media\GLTF.jpg"alt="Image" style="width:200x; float:right;" >
+<img src=".\h\media\GLTF.jpg"alt="Image" style="width:200px; float:right;" >
 <figcaption> Uitwisselstandaard GLTF </caption>
 </figure>
 
@@ -38,7 +38,7 @@ De datastroom is open en beschikbaar voor de Cesiumviewer van de vergunningscont
 Om de BIM-modellen goed te kunnen begrijpen moeten deze modellen uitgewerkt worden volgens bepaalde modelleer-standaarden. Dit zijn minimale vereisten voor de opbouw en invulling van de IFC-bestanden. Deze vereisten noemt men Informatie Levering Specificatie (ILS). In dit prototype gaat men uit van de BIM basis ILS, en de ILS Ontwerp & Engineering (O&E) van het digiGO BIM-Loket. Dit zijn landelijke standaarden. Deze worden vaak gehanteerd in de praktijk. De inhoud van BIM-modellen die men met deze uitvraag van deze ILS-standaarden bereikt is echter niet volledig toereikend voor de beoordeling omgevingsvergunning. Niet alle data die benodigd is voor toetsing is in de genoemde ILS-specificaties opgenomen. Hierdoor is het noodzakelijk een aanvullende Informatie Leverings Specificatie (ILS) naast de BIM basis ILS en de ILS O&E uit te vragen, voor nu een Rotterdamse ILS. De specificaties in deze uitvraag zullen nader geformuleerd moeten worden en separaat uitgevraagd moeten worden bij de aanlevering van BIM-modellen voor gewenste toetsing. Voor het prototype is dit gedaan voor de usecases die behandeld worden. In de toekomst zal deze Rotterdamse ILS uitgebreid moeten worden voor volledige toetsing van aanvragen. In de toekomst dient de ILS t.b.v. de vergunningscontroleservice ook een landelijke standaard te worden, bijvoorbeeld als onderdeel van de indieningsvereisten in het Digitaal Stelsel Omgevingswet.
 
 <figure>
-<img src=".\h\media\ILS-en.jpg"alt="Image" style="width:200x;" >
+<img src=".\h\media\ILS-en.jpg"alt="Image" style="width:200px;" >
 <figcaption> BIM Basis ILS, ILS O&E en een fictieve DSO-ILS </caption>
 </figure>
 
@@ -49,7 +49,7 @@ Objecten komen binnen Rotterdam voor in verschillende registraties. In het proto
 Bijvoorbeeld: De brandkraan gedefinieerd in IMBOR is een subtype van Put en kan uitgewisseld worden met het IMGEO-put. In het IMKL is de Brandkraan een leidingelement en iets anders dan een put. De vraag komt op hoe dit gemapped kan worden aan elkaar. Dit werd in dit prototype niet duidelijk. Ook tussen BOR en BGT zijn er dit soort afstemmingsissues die opgelost moeten worden. Hierin worden links en mappingen voorzien naar andere standaarden/OTL’en.
 
 <figure>
-<img src=".\h\media\NEN3610 reeks.jpg"alt="Image" style="width:200x;" >
+<img src=".\h\media\NEN3610 reeks.jpg"alt="Image" style="width:200px;" >
 <figcaption> NEN 3610 reeks </caption>
 </figure>
 
@@ -83,7 +83,7 @@ Voor het maken van linked data zijn de stappen gevolgd die zijn beschreven door 
 6) Consumeren van de data in visualisatie
 
 <figure>
-<img src=".\h\media\6 stappen in het maken van linked data.jpg"alt="Image" style="width:200x;" >
+<img src=".\h\media\6 stappen in het maken van linked data.jpg"alt="Image" style="width:200px;" >
 <figcaption> De 6 stappen in het maken van linked data volgens PLDN </caption>
 </figure>
 

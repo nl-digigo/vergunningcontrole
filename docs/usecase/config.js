@@ -11,7 +11,7 @@ var respecConfig = {
       company: "Rotterdam",
     },
   ],
- github: "https://github.com/bimloket/vergunningcontrole",
+ github: "https://github.com/nl-digigo/vergunningcontrole",
  license: "cc-by",
 };
 

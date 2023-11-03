@@ -1,7 +1,7 @@
 var respecConfig = {
   // => https://github.com/stichting-crow/respec/wiki
-  specStatus: "WV",
-  shortName: "usecase",
+  specStatus: "DRAFT", //In DOC veranderen wanneer helemaal af
+  shortName: "vergunningscontrole/usecase",
   specType: "Handreiking",
   imprint: "bimloket",
   editors: [

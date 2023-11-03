@@ -15,13 +15,13 @@ In de prototype-fase heeft men het focusgebied Traviataweg in Hoogvliet geselect
 Bij het opstellen en/of aanvullen van BIM-modellen maakt men gebruik van specifieke software. Aangezien de vergunningscontroleservice geen software wil voorschrijven is hier gekozen voor een universeel uitwisselformaat. Het uitwisselformaat van de BIM-modellen is het open-standaard-formaat IFC. De ontwikkeling is in beheer bij BuildingSMART. Bij deze pilot is gewerkt met twee versies. Namelijk IFC 2x3 en IFC 4.1.
 
 <figure>
-<img src=".\h\media\IFC_logo.jpg"alt="Image" style="width:200px; float:right;" >
+<img src=".\h\media\IFC_logo.jpg"alt="Image" style="width:200px;">
 <figcaption> Uitwisselstandaard IFC </caption>
 </figure>
 
 Voor GEO-informatie geldt ander uitwisselformaat. Rotterdam-3D is beschikbaar gesteld als CityGML-bestanden voor 3D weergave en analyse in het prototype. In de viewer van de vergunningscontrole is het basismodel van Rotterdam-3D hergebruikt. Dit wordt gedaan door het aanroepen van 3D-tiles (formaat GLTF, dat is onderdeel van de OGC standaard 3D Tiles) via een url. De datastroom van Rotterdam3D, is in het kort:
 <figure>
-<img src=".\h\media\GLTF.jpg"alt="Image" style="width:200px; float:right;" >
+<img src=".\h\media\GLTF.jpg"alt="Image" style="width:200px;">
 <figcaption> Uitwisselstandaard GLTF </caption>
 </figure>
 

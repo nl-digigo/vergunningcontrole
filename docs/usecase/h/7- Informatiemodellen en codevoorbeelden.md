@@ -1,7 +1,7 @@
 # Informatiemodellen
 
 **Workflow** 
-Het3D-model van de stad, het 3D-model van de gewenste ontwikkeling en de gedigitaliseerde wet- en regelgeving moeten op elkaar afgestemd zijn. Door de TU-Delft is een stroomdiagram en een sequentie-diagram opgesteld waarin de relatie en de uitwisseling tussen de verschillende bronnen wordt aangegeven. Deze relatie en uitwisseling is nodig om digitale ondersteuning in toetsing te faciliteren. Dit stroomdiagram en de sequentie-diagram is leidraad voor de architectuur modellen zijn ontwikkeld in het onderzoek "EuroSDR GeoBIM".
+Het 3D-model van de stad, het 3D-model van de gewenste ontwikkeling en de gedigitaliseerde wet- en regelgeving moeten op elkaar afgestemd zijn. Door de TU-Delft is een stroomdiagram en een sequentie-diagram opgesteld waarin de relatie en de uitwisseling tussen de verschillende bronnen wordt aangegeven. Deze relatie en uitwisseling is nodig om digitale ondersteuning in toetsing te faciliteren. Dit stroomdiagram en de sequentie-diagram is leidraad voor de architectuur modellen zijn ontwikkeld in het onderzoek "EuroSDR GeoBIM".
 
 <figure>
 <img src=".\h\media\Building PermissionActivityDEF.jpg"alt="Image" style="width:1000px;" >
@@ -16,8 +16,14 @@ Het3D-model van de stad, het 3D-model van de gewenste ontwikkeling en de gedigit
 
 
 **Architectuur** 
+De vergunningscontroleservice werkt samen met het Digitaal Stelsel Omgevingswet (DSO) en met Vergunningverlening, toezicht en handhaving systemen (VTH-systemen). In een architectuurschets geeft de gemeente aan hoe deze samenhang eruit kan zien.  
 
-
+<figure>
+<img src=".\h\media\dso_v.1.8.jpg"alt="Image" style="width:1000px;" >
+<figcaption> <a hreff="https://dso.architectuur.synnefo.online/" target="new">Live version </a>  
+<figcaption> <a hreff="https://dso.architectuur.synnefo.online/" target="new">Architectuurplaat </a> 
+Omgevingswet & vergunningscontrole</caption>
+</figure>
 
 
 

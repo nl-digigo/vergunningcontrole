@@ -17,7 +17,7 @@ Het 3D-model van de stad, het 3D-model van de gewenste ontwikkeling en de gedigi
 De vergunningscontroleservice werkt samen met het Digitaal Stelsel Omgevingswet (DSO) en met Vergunningverlening, toezicht en handhaving systemen (VTH-systemen). In een architectuurschets geeft de gemeente aan hoe deze samenhang eruit kan zien.
 
 <figure>
-<img src=".\h\media\dso_v.1.8.png"alt="Image" style="width:1000px;" >
+<img src=".\h\media\dso_v_1_8.png"alt="Image" style="width:1000px;" >
 <figcaption> <a hreff="https://dso.architectuur.synnefo.online/" target="new">Live version </a>  
 <figcaption> <a hreff="https://dso.architectuur.synnefo.online/" target="new">Architectuurplaat </a> 
 Omgevingswet & vergunningscontrole</caption>

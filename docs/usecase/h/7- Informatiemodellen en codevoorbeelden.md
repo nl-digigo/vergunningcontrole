@@ -18,8 +18,7 @@ De vergunningscontroleservice werkt samen met het Digitaal Stelsel Omgevingswet 
 
 <figure>
 <img src=".\h\media\dso_v_1_8.png"alt="Image" style="width:1000px;" >
-<figcaption> <a hreff="https://dso.architectuur.synnefo.online/" target="new">Live version </a>  
-<figcaption> <a hreff="https://dso.architectuur.synnefo.online/" target="new">Architectuurplaat </a> 
+<figcaption> <a href="https://dso.architectuur.synnefo.online/" target="new">Live version Architectuurplaat</a>  
 Omgevingswet & vergunningscontrole</caption>
 </figure>
 

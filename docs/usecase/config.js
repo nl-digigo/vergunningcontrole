@@ -3,7 +3,7 @@ var respecConfig = {
   specStatus: "DRAFT", //In DOC veranderen wanneer helemaal af
   shortName: "vergunningscontrole/usecase",
   specType: "Handreiking",
-  imprint: "bimloket",
+  imprint: "digigo",
   editors: [
     // alleen `name` is verplicht, https://respec.org/docs/#person
     {
@@ -11,8 +11,6 @@ var respecConfig = {
       company: "Rotterdam",
     },
   ],
- github: "https://github.com/nl-digigo/vergunningcontrole",
- license: "cc-by",
+  github: "https://github.com/nl-digigo/vergunningcontrole",
+  license: "cc-by",
 };
-
-

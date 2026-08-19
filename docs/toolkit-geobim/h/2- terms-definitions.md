@@ -1,19 +1,3 @@
-## Informatiemodel
-
-> DEF
-> Een <dfn>informatiemodel</dfn> maakt een representatie van de werkelijkheid die eenvoudig(er) door een systeem te verwerken is.
-
-> NOTE
-> Opmerking over deze tekst.
-
-> EXAMPLE "hallo"
-> IMBOR is een [=informatiemodel=].
-
-> ISSUE #1
-
-> ADVISEMENT
-> Notabele opmerking
-
 ### Het gebruik van referentiepunten
 Voor kleine netwerken worden vaste meetpunten op plekken gezet waarvan met een bepaalde zekerheid aangenomen kan worden dat deze niet verstoord worden of verdwijnen. De meetpunten worden in RDNAP bepaald, en kunnen beschouwd worden als stabiel in het terrein. De bepaling in RD wordt door middel van RTK-<a>GNSS</a> uitgevoerd met een nauwkeurigheid van 2-3 cm. Wanneer het niet mogelijk is meetpunten direct via RTK-GNSS te bepalen, bijvoorbeeld als de meetpunten in een muur/wand zitten, worden er tijdelijke punten gemaakt en via tachymetrie de RD-coördinaten ingemeten. Door middel van waterpassing wordt de hoogte (H) met mm-nauwkeurigheid bepaald.
 

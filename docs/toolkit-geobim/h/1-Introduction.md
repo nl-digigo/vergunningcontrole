@@ -1,6 +1,6 @@
 ## Inleiding
 
-Deze specficatie pakt het volgende op:
+Deze specificatie pakt het volgende op:
 
 - opsomming
 - van

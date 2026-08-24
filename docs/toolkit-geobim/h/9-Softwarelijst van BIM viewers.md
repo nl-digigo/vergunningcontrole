@@ -25,6 +25,7 @@ Hieronder vindt u een overzicht van veelgebruikte BIM-viewers waarmee gemeenten 
 | 17 | [IFC SDK — Open Design Alliance](https://www.opendesign.com/products/ifc-sdk) | Gratis / betaald | SDK met gratis opties |
 | 18 | [Pillr](https://pillr.nl/nl) | Betaald | Nederlands BIM-platform |
 | 19 | [Plannerly](https://plannerly.com/) | Gratis / betaald | The BIM Management Platform |
+| 20 | [IFCLite](https://ifclite.com/) | Gratis  | nnn |
 
 ---
 

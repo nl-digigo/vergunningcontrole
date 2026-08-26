@@ -54,7 +54,8 @@ Is de aangevraagde gebruiksfunctie toegestaan op de betreffende locatie?
 Nb. voor het bepalen van de regels geldt niet alleen het bestemmingplan (met de status onherroepelijk), maar mogelijk ook een Paraplu bestemmingsplan met algemene regelgeving (afzonderlijk document).
 
 Sommige checks zijn niet te automatiseren en vragen om een handmatige toets. Dat heeft te maken met verschil van interpretatie tussen de juridische regel en de (technische) informatie uit de bouwaanvraag.
-#Controlevraag: heeft dit te maken met uitzonderingen?
+
+*#Controlevraag: heeft dit te maken met uitzonderingen?*
 
 ### Informatiebehoefte
 

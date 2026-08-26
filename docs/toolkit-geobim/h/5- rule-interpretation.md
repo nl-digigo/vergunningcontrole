@@ -43,7 +43,7 @@ Is de aangevraagde gebruiksfunctie toegestaan op de betreffende locatie?
 
 - Bepaal de aangevraagde gebruiksfunctie(‘s)
 
-- Bepaal aan de hand van de locatie van de kavel of perceel de betreffende Regels over toegestane gebruiksfuncties / bestemmingen via Regels op de Kaart <https://omgevingswet.overheid.nl/regels-op-de-kaart/zoeken/locatie?session=aa1f4c6e-30e6-47c3-8301-03c60978f374>
+- Bepaal aan de hand van de locatie van de kavel of perceel de betreffende Regels over toegestane gebruiksfuncties / bestemmingen via  <https://omgevingswet.overheid.nl/regels-op-de-kaart/zoeken/locatie?session=aa1f4c6e-30e6-47c3-8301-03c60978f374> <regels op de kaart>
 
 - Bepaal op basis van de bouwtekening (plattegronden) per bouwlaag de contouren van de gebruiksfunctie en ruimten
 

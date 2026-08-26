@@ -57,37 +57,8 @@ Sommige checks zijn niet te automatiseren en vragen om een handmatige toets. Dat
 
 *#Controlevraag: heeft dit te maken met uitzonderingen?*
 
-### Informatiebehoefte
 
-#### Gebouwdata
-
-- Bouwaanvraag /Plattegrond/ bouwtekening
-
-- Gebruiksfunctie per ruimten per bouwlaag
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Bouwwerkperceel: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-#### Omgevingsdata / geodata
-
-- Perceelgrenzen
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- Perceelgrens: BRK – Digitale Kadastrale Kaart
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_KadastraleGrens>
-
-### Regelgeving
+### Regelgeving en normen
 
 Regels op de Kaart: Vigerend (onherroepelijk) omgevingsplan met aanwijzing zonering voor gebruiksfunctie / bestemming (eventueel beperkt tot aantal bouwlagen).
 

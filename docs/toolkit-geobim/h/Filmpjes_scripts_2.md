@@ -47,7 +47,7 @@ Draai je de pagina via **GitHub Pages** (Jekyll of ReSpec)? Dan mag een iframe w
 [![Filmpje 1 — Wat is een BIM-model, en wat is een IFC?](https://img.youtube.com/vi/FILMPJE-1/hqdefault.jpg)](https://www.youtube.com/watch?v=FILMPJE-1)
 
 <!-- Voor GitHub Pages kun je in plaats van bovenstaande regel dit gebruiken (werkt niet op github.com zelf):
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FILMPJE-1" title="Filmpje 1 — Wat is een BIM-model, en wat is een IFC?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/bOxQxctZF-4?si=rHDYlFUa64GxZkaP" title="Filmpje 1 — Wat is een BIM-model, en wat is een IFC?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 -->
 
 <!-- ▲ EINDE VIDEOBLOK ▲ -->
@@ -60,6 +60,8 @@ Draai je de pagina via **GitHub Pages** (Jekyll of ReSpec)? Dan mag een iframe w
 Hoi. Je krijgt binnenkort iets nieuws op je bureau. En ik wil je in twee minuten laten zien wat dat is, zodat je niet schrikt als het er ligt.
 
 *[BEELD: stapel pdf-tekeningen op het scherm]*
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bOxQxctZF-4?si=rHDYlFUa64GxZkaP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Dit is wat je nu binnenkrijgt bij een vergunningsaanvraag. Pdf'jes. Tekeningen. Je print ze uit, je legt de plattegrond naast de doorsnede, en je gaat meten en tellen.
 

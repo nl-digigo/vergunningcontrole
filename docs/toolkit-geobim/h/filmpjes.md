@@ -25,7 +25,7 @@ de thumbnail — iframes worden daar weggefilterd.
 
 <!-- ▼ VIDEOBLOK — vervang FILMPJE-1 door de YouTube-ID ▼ -->
 
-[![Filmpje 1 — Wat is een BIM-model, en wat is een IFC?](https://img.youtube.com/vi/FILMPJE-1/hqdefault.jpg)]([https://www.youtube.com/watch?v=FILMPJE-1](https://youtu.be/pIr8xzqIrVg))
+[![Filmpje 1 — Wat is een BIM-model, en wat is een IFC?](https://img.youtube.com/vi/FILMPJE-1/hqdefault.jpg)](https://youtu.be/pIr8xzqIrVg))
 
 <!-- GitHub Pages-variant:
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FILMPJE-1" title="Filmpje 1 — Wat is een BIM-model, en wat is een IFC?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

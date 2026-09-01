@@ -150,6 +150,8 @@ Het te hanteren referentiepeil kan variëren. Bijv. bij dijkwoningen wordt een a
 Overschrijdt het aangevraagde bebouwde oppervlakte opgeteld bij de oppervlakte van aanwezige bebouwing het toegestane maximale bebouwingspercentage voor een bepaald gebied?
 
 Als voorbeeld: een grondgebonden nieuwbouwwoning op een vrije kavel.
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a3266879-642d-4c8f-a2da-e6a37d097755" />
+
 
 ### Werkwijze
 

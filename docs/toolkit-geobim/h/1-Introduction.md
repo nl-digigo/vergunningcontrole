@@ -1,13 +1,14 @@
-## Inleiding
+| Layer                                  | What municipalities see                                        | Example in GitHub                                                                                                                                                                                      |
+| -------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Layer 0 – Rule foundation**          | Legal source + interpretation + definitions                    | **`5-rule-interpretation.md`** → Regel #2 → *Regelgeving / Opmerkingen*. Example: the reference level can vary and the definition may differ in the omgevingsplan. ([GitHub][1])                       |
+| **Layer 1 – Check & approach**         | What exactly are we checking and how is it currently assessed? | **`5-rule-interpretation.md`** → Regel #2 → *Toets + Werkwijze*. Example: determine building height, retrieve the permitted maximum via *Regels op de Kaart*, then compare. ([GitHub][1])              |
+| **Layer 2 – Data requirements**        | Which BIM and GEO information is required?                     | **`4-geo-and-BIM-data.md`** + *Informatiebehoefte* in the rule interpretation. For Rule #2 this includes building/roof information, parcel boundaries and the municipal reference level. ([GitHub][2]) |
+| **Layer 3 – Procedure**                | Software-independent steps for performing the check            | **`6-rule-pseudocode.md`** → pseudocode/checking logic. ([GitHub][3])                                                                                                                                  |
+| **Layer 4 – Machine-readable rule**    | Formal/structured representation that software can consume     | **`7-rule-encoding.md`** → rule encoding. ([GitHub][4])                                                                                                                                                |
+| **Layer 5 – Reference implementation** | How a software supplier actually implements/executes the check | Supplier implementation / reference implementation linked from the toolkit. **Different software can implement the same agreed rule specification.**                                                   |
 
-Deze specificatie pakt het volgende op:
+[1]: https://github.com/nl-digigo/vergunningcontrole/blob/BM13/machineleesbare-regels/docs/toolkit-geobim/h/5-%20rule-interpretation.md "vergunningcontrole/docs/toolkit-geobim/h/5- rule-interpretation.md at BM13/machineleesbare-regels · nl-digigo/vergunningcontrole · GitHub"
+[2]: https://github.com/nl-digigo/vergunningcontrole/blob/BM13/machineleesbare-regels/docs/toolkit-geobim/h/4-geo-and-BIM-data.md "vergunningcontrole/docs/toolkit-geobim/h/4-geo-and-BIM-data.md at BM13/machineleesbare-regels · nl-digigo/vergunningcontrole · GitHub"
+[3]: https://github.com/nl-digigo/vergunningcontrole/blob/BM13/machineleesbare-regels/docs/toolkit-geobim/h/6-rule-pseudocode.md "vergunningcontrole/docs/toolkit-geobim/h/6-rule-pseudocode.md at BM13/machineleesbare-regels · nl-digigo/vergunningcontrole · GitHub"
+[4]: https://github.com/nl-digigo/vergunningcontrole/blob/BM13/machineleesbare-regels/docs/toolkit-geobim/h/7-rule-encoding.md "vergunningcontrole/docs/toolkit-geobim/h/7-rule-encoding.md at BM13/machineleesbare-regels · nl-digigo/vergunningcontrole · GitHub"
 
-- opsomming
-- van
-- elementen
-
-| kolom     | column |
-| --------- | ------ |
-| waarde    | value  |
-| vrij      | free   |
-| { .data } |

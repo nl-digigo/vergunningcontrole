@@ -1,5 +1,5 @@
 	# Rule interpretation
-# BM13 —  Regels: inventarisatie
+# BM13 —  Regels Interpretatie: inventarisatie
 
 **Project:** VNG Beleidsmaatregel 13 — Vergunningverlening met BIM
 **Versie:** 0.3 (3 juli 2026) — *onder bewerking*

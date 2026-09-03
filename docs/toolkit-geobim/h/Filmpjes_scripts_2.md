@@ -284,11 +284,11 @@ Vanaf het volgende filmpje gaan we dat doen. Echte checks, op de Molenstraat.
 
 ---
 
-# Filmpje 5 — Wat is geo-informatie? *(Gerlof)*
+# Filmpje 5a — Wat is geo-informatie? *(Gerlof)*
 
-<!-- ▼ VIDEOBLOK — vervang FILMPJE-5 door de YouTube-ID (het stukje na v= in de URL) ▼ -->
+<!-- ▼ VIDEOBLOK — vervang FILMPJE-5a door de YouTube-ID (het stukje na v= in de URL) ▼ -->
 
-[![Filmpje 5 — Wat is geo-informatie?](https://img.youtube.com/vi/FILMPJE-5/hqdefault.jpg)](https://www.youtube.com/watch?v=FILMPJE-5)
+[![Filmpje 5a — Wat is geo-informatie?](https://img.youtube.com/vi/FILMPJE-5a/hqdefault.jpg)](https://www.youtube.com/watch?v=FILMPJE-5)
 
 <!-- Voor GitHub Pages kun je in plaats van bovenstaande regel dit gebruiken (werkt niet op github.com zelf):
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FILMPJE-5" title="Filmpje 5 — Wat is geo-informatie?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -327,19 +327,62 @@ En je kunt lagen stapelen. Elke laag vertelt iets anders over dezelfde plek.
 
 Dit geldt voor het hele land. Dus ook voor jouw gemeente, ook voor de Molenstraat.
 
-Waarom vertel ik dit? Omdat we in het volgende filmpje het gebouw en de kaart bij elkaar gaan brengen. Het model van de aanvraag, precies op de goede plek op de kaart. En dan kun je in één oogopslag zien of het klopt.
-
+Waarom vertel ik dit? Omdat we in het volgende filmpje laten zien hoe je deze geodata kunt gebruiken in GIS. 
 Neem even twee minuten om zelf op deze site rond te klikken. Dat is de beste voorbereiding op wat hierna komt.
 
 ---
 
 **Playlist-toelichting:**
-> De kaartlagen van heel Nederland staan gratis online bij PDOK. Ik laat zien wat daar staat en hoe je ze over elkaar heen legt.
+> De kaartlagen van heel Nederland staan gratis online bij PDOK. Ik laat zien wat daar staat, voor heel nederland en hoe je ze kunt previewen.
 > Kijk dit filmpje voordat je aan het GIS-filmpje begint.
 
 **Opnametip:** dit filmpje bestond nog niet en is precies waarom het bestaande geo-filmpje niet landde. Niet inkorten — dit is het aanloopje.
 
 ---
+# Filmpje 5b — Wat is GIS? *(Gerlof)*
+
+<!-- ▼ VIDEOBLOK — vervang FILMPJE-5b door de YouTube-ID (het stukje na v= in de URL) ▼ -->
+
+[![Filmpje 5b — Wat is geo-informatie?](https://img.youtube.com/vi/FILMPJE-5b/hqdefault.jpg)](https://www.youtube.com/watch?v=FILMPJE-5)
+
+<!-- Voor GitHub Pages kun je in plaats van bovenstaande regel dit gebruiken (werkt niet op github.com zelf):
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FILMPJE-5" title="Filmpje 5 — Wat is geo-informatie?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+-->
+
+<!-- ▲ EINDE VIDEOBLOK ▲ -->
+
+**Duur:** 2 tot 3 minuten · **Leerdoel:** de kijker weet wat GIS is en dat je in bijvoorbeeld Qgis kaartlagen uit PDOK kunt bekijken, bevragen en over elkaar heen leggen.
+**In beeld:** Qgis, een leeg project.
+
+> Dit filmpje maakt Gerlof. Het script staat in de ik-vorm; pas het aan naar wie het inspreekt.
+Even weg van het gebouw. We gaan naar de kaart.
+
+---
+
+*[BEELD: Qgis, leeg project]*
+
+GIS is het computerprogramma waarmee je geodata kunt bekijken, bevragen en combineren. Wat je hier zit is Qgis, dat is een OpenSource GIS. Net als PDOK is Qgis gratis en voor iedereen te gebruiken.
+In Qgis kun je kaartlagen uit PDOK bekijken. Je richt op die wijze je eigen "projectomgeving" in.
+
+*[BEELD: PDOK plugin]*
+
+In Qgis kun je losse functies toevoegen via het Plugin menu. Ik heb de PDOK knop toegevoegd. Daarmee heb je toegang tot alle  kaartlagen in PDOK. Kies daar de geodata die je nodig hebt voor je project. Ik kies bijvoorbeeld de luchtfoto, de kadastrale kaart met de panden uit de BAG. En voeg deze toe aan mijn projectomgeving. Ze verschijnen dan in de legenda en ik kan ze zichtbaar maken in het kaartvenster.
+
+*[BEELD: Legenda en kaartvenster en aan- en uitzetten van de kaartlagen]*
+
+Kijk, dit is de luchtfoto. En hier leg ik de perceelsgrenzen eroverheen. Je ziet meteen welk stuk grond van wie is.
+
+*[BEELD: nog een laag erbij]*
+
+En je kunt lagen stapelen. Nu heb ik ook de kaart met BAG-panden er over heen gelegd. Op deze manier kun je alle geodata die je wilt gebruiken voor het beoordelen van een vergunningaanvraag opzoeken en toevoegen. Voor elke  locatie in je gemeente heb je de relevante informatie over de omgeving dan beschikbaar.
+
+*[BEELD: uitzoomen naar gemeente of juist inzoomen op een locatie]*
+
+Waarom vertel ik dit? Omdat we in het volgende filmpje het gebouw en de kaart bij elkaar gaan brengen. Het model van de aanvraag, precies op de goede plek op de kaart. En dan kun je in één oogopslag zien of het klopt.
+Met Qgis kun je nog veel meer dan wat we hier laten zien. Voor nu is dit eerst voldoende om te weten. Wil je meer weten, dan er misschien ook wel een collega, die je meer kan vertellen.
+
+**Opnametip:** dit filmpje bestaat nog niet en is wel van belang omdat we anders te snel van PDOK naar GIS en BIM stappen.
+
 
 # Filmpje 6a — Het model op de kaart: BIM in een GIS-omgeving *(Gerlof)*
 

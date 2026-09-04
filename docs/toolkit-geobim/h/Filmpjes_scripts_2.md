@@ -381,6 +381,14 @@ En je kunt lagen stapelen. Nu heb ik ook de kaart met BAG-panden er over heen ge
 Waarom vertel ik dit? Omdat we in het volgende filmpje het gebouw en de kaart bij elkaar gaan brengen. Het model van de aanvraag, precies op de goede plek op de kaart. En dan kun je in één oogopslag zien of het klopt.
 Met Qgis kun je nog veel meer dan wat we hier laten zien. Voor nu is dit eerst voldoende om te weten. Wil je meer weten, dan er misschien ook wel een collega, die je meer kan vertellen.
 
+---
+
+**Playlist-toelichting:**
+> De informatie over de omgeving (uit PDOK) bekijken en gebruiken in GIS. Ik laat zien hoe je dat in QGIS voor elkaar krijgt.
+> Kijk eerst het filmpje over geo-informatie.
+
+**Opnametip:** begin niet met klikken. De eerste twintig seconden zijn alleen uitleg van wat je gaat doen en waarom. Dat ontbrak in de vorige versie en dat was de belangrijkste klacht.
+
 **Opnametip:** dit filmpje bestaat nog niet en is wel van belang omdat we anders te snel van PDOK naar GIS en BIM stappen.
 
 

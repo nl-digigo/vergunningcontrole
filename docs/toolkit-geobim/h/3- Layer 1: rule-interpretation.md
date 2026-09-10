@@ -10,7 +10,6 @@
 > *Afbeeldingen uit het brondocument zijn in deze Markdown-versie vervangen door een placeholder.*
 > <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a3266879-642d-4c8f-a2da-e6a37d097755" />
 
-*deze afbeelding komt niet overeen met de nummering van de checks onderstaand*
 ## Inhoud
 
 - [Regel #1: Gebruiksfunctie komt overeen met bestemming](#regel-1-gebruiksfunctie-komt-overeen-met-bestemming)
@@ -97,42 +96,6 @@ Overschrijdt de hoogte van het gebouw de toegestane maximale gebouwhoogte van he
 Nb.  
 De hoogte wordt gemeten vanaf referentiepeil = 0 (meestal bovenkant begane grond vloer). Of een referentiepeil (door gemeente bepaald). Voor de uiteindelijke hoogte is het ook belangrijk dat er gekeken wordt naar de installaties die (eventueel) op het dak staan.
 
-### Informatiebehoefte
-
-#### Gebouwdata
-
-- Bouwaanvraag /Plattegrond / bouwtekening
-
-- Dakvorm
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Bouwwerkperceel: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- *Hoogte van het gebouw is geen begrip in ILS ruimte*
-
-#### Omgevingsdata / geodata
-
-- Perceelgrenzen
-
-- Referentiepeil (door gemeente bepaald)
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- Perceelgrens: BRK – Digitale Kadastrale Kaart
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_KadastraleGrens>
-
-- Referentiepeil: AHN / ingemeten terreinmodel
-
-  - <https://www.ahn.nl/producten>
-
-Nb. We verwijzen hier naar de jaarlijkse landsdekkende luchtfoto's en het landsdekkende hoogtebestand van respectievelijk Beeldmateriaal Nederland en Algemeen Hoogtebestand Nederland. Sommige gemeenten hebben daarnaast nog eigen luchtfoto's en soms ook nog eigen hoogtebestanden.
-
 ### Regelgeving
 
 Regels op de Kaart: Vigerend (onherroepelijk) omgevingsplan met zonering (of bouwvlak) en normen voor maximale bouwhoogte.
@@ -177,72 +140,6 @@ Nb De gebouwde oppervlakte wordt berekend op basis van de aangevraagde en bestaa
 Bij het splitsen van kavels en percelen is de berekening ingewikkelder.
 
 Sommige checks zijn niet te automatiseren en vragen om een handmatige toets. Dat heeft te maken met verschil van interpretatie tussen de juridische regel en de (technische) informatie uit de bouwaanvraag.
-
-### Informatiebehoefte
-
-#### Gebouwdata
-
-- Bouwaanvraag /Plattegrond / bouwtekening/situatietekening
-
-- Gebouwtype
-
-- Gebruiksfunctie
-
-- Plattegrond op maaiveld / begane grond
-
-- Bruto oppervlakte per begane grond laag
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Bouwwerkperceel: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-- Gebouwtype: IfcBuilding (MarketCategory en MarketSubCategory)
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-#### Omgevingsdata / geodata
-
-- Bestaande bebouwing
-
-- Luchtfoto
-
-- Perceelgrenzen
-
-- Referentiepeil (door gemeente bepaald)
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- BGT Pand
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGregistratie_entiteit_Pand>
-
-<!-- -->
-
-- BGT Overig bouwwerk
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Overig%2520bouwwerk>
-
-<!-- -->
-
-- Luchtfoto
-
-  - <https://www.beeldmateriaal.nl/producten>
-
-- Perceelgrens: BRK – Digitale Kadastrale Kaart
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_KadastraleGrens>
-
-- Referentiepeil: AHN / ingemeten terreinmodel
-
-  - <https://www.ahn.nl/producten>
-
-Nb. We verwijzen hier naar de jaarlijkse landsdekkende luchtfoto's en het landsdekkende hoogtebestand van respectievelijk Beeldmateriaal Nederland en Algemeen Hoogtebestand Nederland. Sommige gemeenten hebben daarnaast nog eigen luchtfoto's en soms ook nog eigen hoogtebestanden.
 
 ### Regelgeving
 
@@ -291,30 +188,6 @@ Deels gelijk aan regel \#1.
 Nb voor het bepalen van de regels geldt niet alleen het bestemmingplan (met de status onherroepelijk), maar mogelijk ook een Paraplu bestemmingsplan met algemene regelgeving (afzonderlijk document).
 
 Sommige checks zijn niet te automatiseren en vragen om een handmatige toets. Dat heeft te maken met verschil van interpretatie tussen de juridische regel en de (technische) informatie uit de bouwaanvraag.
-
-### Informatiebehoefte
-
-#### Gebouwdata
-
-- Bouwaanvraag /Plattegrond / bouwtekening
-
-- Gebouwtype
-
-- Gebruiksfunctie per ruimten per bouwlaag
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Gebouwtype: IfcBuilding (MarketCategory en MarketSubCategory)
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-#### Omgevingsdata / geodata
-
-Geen
 
 ### Regelgeving
 

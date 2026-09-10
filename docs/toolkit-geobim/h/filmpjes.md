@@ -129,7 +129,7 @@ De kaartlagen van heel Nederland staan gratis online bij PDOK. Wat staat daar, e
 
 De informatie over de omgeving (uit PDOK) bekijken en gebruiken in GIS. Ik laat zien hoe je dat in QGIS voor elkaar krijgt.
 
-**2 tot 3 minuten**. Kijk eerst het filmpje over geo-informatie.
+**2 tot 3 minuten** · Kijk eerst het filmpje over geo-informatie.
 
 ---
 

@@ -10,7 +10,7 @@
 > *Afbeeldingen uit het brondocument zijn in deze Markdown-versie vervangen door een placeholder.*
 > <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a3266879-642d-4c8f-a2da-e6a37d097755" />
 
-
+*deze afbeelding komt niet overeen met de nummering van de checks onderstaand*
 ## Inhoud
 
 - [Regel #1: Gebruiksfunctie komt overeen met bestemming](#regel-1-gebruiksfunctie-komt-overeen-met-bestemming)

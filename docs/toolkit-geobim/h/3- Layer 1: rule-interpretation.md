@@ -5,7 +5,7 @@
 **Versie:** 0.3 (3 juli 2026) — *onder bewerking*
 **Status:** Resultaat van fysieke sessies met deelnemende gemeenten, 7 april 2026 en 8 juni 2026, Zoetermeer
 
-> Deze inventarisatie beschrijft per regel: de toets, de werkwijze, de regelgevingsbron, de huidige toetstijd en opmerkingen. Regels #1–#6 betreffen het omgevingsplan (OPA), regels #7–#17 het Besluit bouwwerken leefomgeving (Bbl).
+> Deze inventarisatie beschrijft per regel: de toets, de werkwijze, de regelgevingsbron, de huidige toetstijd en opmerkingen. Regels #1–#6 betreffen het omgevingsplan (OPA) (ook: de Omgevingsplantoets, regels #7–#17 het Besluit bouwwerken leefomgeving (Bbl) (ook: de Technische toets)
 >
 > *Afbeeldingen uit het brondocument zijn in deze Markdown-versie vervangen door een placeholder.*
 > <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a3266879-642d-4c8f-a2da-e6a37d097755" />

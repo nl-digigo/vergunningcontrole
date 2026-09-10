@@ -119,7 +119,7 @@ De kaartlagen van heel Nederland staan gratis online bij PDOK. Wat staat daar, e
 
 <!-- ▼ VIDEOBLOK — vervang FILMPJE-5b door de YouTube-ID▼ -->
 
-[![Filmpje 5b — Wat is geo-informatie?](https://img.youtube.com/vi/FILMPJE-5b/hqdefault.jpg)](https://www.youtube.com/watch?v=FILMPJE-5b)
+[![Filmpje 5b — Wat is GIS?](https://img.youtube.com/vi/FILMPJE-5b/hqdefault.jpg)](https://www.youtube.com/watch?v=FILMPJE-5b)
 
 <!-- Voor GitHub Pages kun je in plaats van bovenstaande regel dit gebruiken (werkt niet op github.com zelf):
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FILMPJE-5b" title="Filmpje 5b — Wat is GIS?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

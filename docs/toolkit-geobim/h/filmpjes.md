@@ -97,21 +97,39 @@ Voordat je iets kunt controleren, moet je het kunnen vinden. Hoe krijg je alleen
 
 ## Het gebouw en de omgeving
 
-### 5. Wat is geo-informatie?
+### 5a. Wat is geo-informatie?
 
-<!-- ▼ VIDEOBLOK — vervang FILMPJE-5 door de YouTube-ID ▼ -->
+<!-- ▼ VIDEOBLOK — vervang FILMPJE-5a door de YouTube-ID ▼ -->
 
-[![Filmpje 5 — Wat is geo-informatie?](https://img.youtube.com/vi/FILMPJE-5/hqdefault.jpg)](https://www.youtube.com/watch?v=FILMPJE-5)
+[![Filmpje 5a — Wat is geo-informatie?](https://img.youtube.com/vi/FILMPJE-5a/hqdefault.jpg)](https://www.youtube.com/watch?v=FILMPJE-5)
 
 <!-- GitHub Pages-variant:
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FILMPJE-5" title="Filmpje 5 — Wat is geo-informatie?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FILMPJE-5" title="Filmpje 5a — Wat is geo-informatie?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 -->
 
 <!-- ▲ EINDE VIDEOBLOK ▲ -->
 
 De kaartlagen van heel Nederland staan gratis online bij PDOK. Wat staat daar, en hoe leg je ze over elkaar heen?
 
-**2 à 3 minuten** · Kijk dit voordat je aan filmpje 6 begint.
+**2 à 3 minuten** · Kijk dit voordat je aan filmpje 5b begint.
+
+---
+
+# Filmpje 5b — Wat is GIS?
+
+<!-- ▼ VIDEOBLOK — vervang FILMPJE-5b door de YouTube-ID▼ -->
+
+[![Filmpje 5b — Wat is geo-informatie?](https://img.youtube.com/vi/FILMPJE-5b/hqdefault.jpg)](https://www.youtube.com/watch?v=FILMPJE-5b)
+
+<!-- Voor GitHub Pages kun je in plaats van bovenstaande regel dit gebruiken (werkt niet op github.com zelf):
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FILMPJE-5b" title="Filmpje 5b — Wat is GIS?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+-->
+
+<!-- ▲ EINDE VIDEOBLOK ▲ -->
+
+De informatie over de omgeving (uit PDOK) bekijken en gebruiken in GIS. Ik laat zien hoe je dat in QGIS voor elkaar krijgt.
+
+**2 tot 3 minuten**. Kijk eerst het filmpje over geo-informatie.
 
 ---
 

@@ -343,10 +343,10 @@ Neem even twee minuten om zelf op deze site rond te klikken. Dat is de beste voo
 
 <!-- ▼ VIDEOBLOK — vervang FILMPJE-5b door de YouTube-ID (het stukje na v= in de URL) ▼ -->
 
-[![Filmpje 5b — Wat is geo-informatie?](https://img.youtube.com/vi/FILMPJE-5b/hqdefault.jpg)](https://www.youtube.com/watch?v=FILMPJE-5)
+[![Filmpje 5b — Wat is geo-informatie?](https://img.youtube.com/vi/FILMPJE-5b/hqdefault.jpg)](https://www.youtube.com/watch?v=FILMPJE-5b)
 
 <!-- Voor GitHub Pages kun je in plaats van bovenstaande regel dit gebruiken (werkt niet op github.com zelf):
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FILMPJE-5" title="Filmpje 5 — Wat is geo-informatie?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FILMPJE-5" title="Filmpje 5b — Wat is GIS?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 -->
 
 <!-- ▲ EINDE VIDEOBLOK ▲ -->

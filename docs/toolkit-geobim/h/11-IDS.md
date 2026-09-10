@@ -1,16 +1,42 @@
-# ILS voor Ruimten in de Omgevingswet — specificaties
+# ILS voor omgevingsvergunning — specificaties
 
 Machineleesbare indieningsvereisten voor ruimtemodellering bij een omgevingsvergunningaanvraag, uitgedrukt als [buildingSMART IDS](https://www.buildingsmart.org/standards/bsi-standards/information-delivery-specification-ids/) 1.0.
 
 | | |
 |---|---|
-| **Bron** | `ILS voor ruimten in de omgevingswet` v0.95 — 42 specificaties |
+| **Bron** | `ILS voor omgevingsvergunning` v0.1 — 42 specificaties |
 | **IFC-schema** | IFC4 en IFC4X3_ADD2 |
 | **Begrippen** | bSDD-dictionary [Omgevingswet Ruimten](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) 0.3.0 (`bsnl`, nl-NL) |
 | **Processtap** | GEMMA 015-02 Inhoudelijk behandelen vergunningaanvraag / 015-02-02 Toetsen activiteiten aan regelgeving |
 | **Checks** | 17 regels uit de BM13-regelinventarisatie v0.3, 3-7-2026 |
 
 Elke specificatie is ook beschikbaar als afzonderlijk `.ids`-bestand, genummerd in dezelfde volgorde. De XML-blokken hieronder tonen alleen het `ids:specification`-element; een los bestand bevat daarnaast het `ids:info`-blok — met de checknummers in `purpose` en de GEMMA-processtap in `milestone` — en is daarmee zelfstandig valideerbaar.
+
+## Overzicht per check
+
+De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#6 betreffen het omgevingsplan (OPA), regels #7–#17 het Besluit bouwwerken leefomgeving (Bbl).
+
+| Check | Onderwerp | Specificaties |
+|-------|-----------|---------------|
+| **#1** | Gebruiksfunctie komt overeen met bestemming | 01, 02, 03, 04, 05, 06, 07, 09, 10, 13, 15, 16, 17, 25, 26 |
+| **#2** | Maximale bouwhoogte | 01, 02, 03, 04, 05, 06, 07, 09, 10, 13 |
+| **#3** | Maximaal bebouwingspercentage | 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 16, 25, 26 |
+| **#4** | Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen | 01, 04, 05, 06, 07, 11, 13, 16, 17 |
+| **#5** | Beroep aan huis: max. 50% gebruiksoppervlakte | 01, 02, 03, 04, 05, 06, 07, 09, 10, 15, 16, 17, 23, 25, 26, 28, 33 |
+| **#6** | Maximum aantal bouwlagen | 01, 04, 05, 06, 07, 09, 10, 13, 14, 16, 23, 25, 26, 28, 33 |
+| **#7** | Brandcompartimenten | 01, 02, 03, 07, 09, 10, 16, 30, 35, 37, 38, 40, 41 |
+| **#8** | Brandwerendheid | 01, 07, 30, 35, 37, 38, 40, 41 |
+| **#9** | Vrije breedte | 01, 07, 13, 16, 18, 19, 21, 24, 25, 26, 29, 40, 41 |
+| **#10** | Hoogteverschil | 01, 02, 03, 07, 08, 13, 16, 18, 19, 21, 24, 25, 26, 29, 40 |
+| **#11** | Rc-waarde | 01, 07, 10, 16, 18, 19, 36, 37, 40, 41 |
+| **#12** | U-waarde | 01, 07, 10, 16, 37, 38, 42 |
+| **#13** | MPG | 01, 07, 16, 25, 26, 40, 41 |
+| **#14** | Vluchtwegen | 01, 07, 08, 16, 21, 25, 26, 30, 32, 38, 40 |
+| **#15** | Loopafstand | 01, 07, 16, 20, 21, 25, 26, 30, 31, 32, 33, 38, 40 |
+| **#16** | Vluchtbreedte | 01, 07, 13, 16, 19, 20, 22, 27, 32, 38, 40, 41 |
+| **#17** | Daglicht | 01, 02, 03, 07, 08, 09, 10, 11, 16, 19, 26, 37, 38, 41, 42 |
+
+---
 
 ## Overzicht per specificatie
 
@@ -59,31 +85,7 @@ Elke specificatie is ook beschikbaar als afzonderlijk `.ids`-bestand, genummerd 
 | 41 | [9.18h Fysieke elementen IfcWall](#41-918h-fysieke-elementen-ifcwall) | IFC4 IFC4X3_ADD2 | #7, #8, #9, #11, #13, #16, #17 |
 | 42 | [9.18i Fysieke elementen Ifcwindow](#42-918i-fysieke-elementen-ifcwindow) | IFC4 IFC4X3_ADD2 | #12, #17 |
 
-## Overzicht per check
 
-De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#6 betreffen het omgevingsplan (OPA), regels #7–#17 het Besluit bouwwerken leefomgeving (Bbl).
-
-| Check | Onderwerp | Specificaties |
-|-------|-----------|---------------|
-| **#1** | Gebruiksfunctie komt overeen met bestemming | 01, 02, 03, 04, 05, 06, 07, 09, 10, 13, 15, 16, 17, 25, 26 |
-| **#2** | Maximale bouwhoogte | 01, 02, 03, 04, 05, 06, 07, 09, 10, 13 |
-| **#3** | Maximaal bebouwingspercentage | 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 16, 25, 26 |
-| **#4** | Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen | 01, 04, 05, 06, 07, 11, 13, 16, 17 |
-| **#5** | Beroep aan huis: max. 50% gebruiksoppervlakte | 01, 02, 03, 04, 05, 06, 07, 09, 10, 15, 16, 17, 23, 25, 26, 28, 33 |
-| **#6** | Maximum aantal bouwlagen | 01, 04, 05, 06, 07, 09, 10, 13, 14, 16, 23, 25, 26, 28, 33 |
-| **#7** | Brandcompartimenten | 01, 02, 03, 07, 09, 10, 16, 30, 35, 37, 38, 40, 41 |
-| **#8** | Brandwerendheid | 01, 07, 30, 35, 37, 38, 40, 41 |
-| **#9** | Vrije breedte | 01, 07, 13, 16, 18, 19, 21, 24, 25, 26, 29, 40, 41 |
-| **#10** | Hoogteverschil | 01, 02, 03, 07, 08, 13, 16, 18, 19, 21, 24, 25, 26, 29, 40 |
-| **#11** | Rc-waarde | 01, 07, 10, 16, 18, 19, 36, 37, 40, 41 |
-| **#12** | U-waarde | 01, 07, 10, 16, 37, 38, 42 |
-| **#13** | MPG | 01, 07, 16, 25, 26, 40, 41 |
-| **#14** | Vluchtwegen | 01, 07, 08, 16, 21, 25, 26, 30, 32, 38, 40 |
-| **#15** | Loopafstand | 01, 07, 16, 20, 21, 25, 26, 30, 31, 32, 33, 38, 40 |
-| **#16** | Vluchtbreedte | 01, 07, 13, 16, 19, 20, 22, 27, 32, 38, 40, 41 |
-| **#17** | Daglicht | 01, 02, 03, 07, 08, 09, 10, 11, 16, 19, 26, 37, 38, 41, 42 |
-
----
 
 ## 01 — 9 ILS voor Ruimten in de omgevingswet
 

@@ -194,13 +194,13 @@ Een documenteigenaar is geen exclusieve schrijver — iedereen mag in elk bestan
 
 ## Bronnen
 
-- [Expertconsult GitHub/ReSpec met Elisabeth de Vries, 14 september 2026](https://fathom.video/calls/822075569)
-- [Proces en transactievisie op VISI in GEMMA en BM13, 14 september 2026](https://fathom.video/calls/819719903)
-- [Bila Lex en Jeroen, 10 september 2026](https://fathom.video/calls/816215856)
-- [Projectoverleg beleidsmaatregel 13, 7 september 2026](https://fathom.video/calls/810858933)
-- [Bila Lex en Jeroen, 3 september 2026](https://fathom.video/calls/807702274)
-- [Bespreken GitHub-publicatie BIM naar GEO met Rolf Jonker, 28 augustus 2026](https://fathom.video/calls/800418542)
-- [Projectoverleg beleidsmaatregel 13, 24 augustus 2026](https://fathom.video/calls/793509583)
-- [Work together publishing method, Lex en Siham, 20 augustus 2026](https://fathom.video/calls/791026447)
-- [GitHub — Rules, met Gerlof en Siham, 19 augustus 2026](https://fathom.video/calls/788717981)
-- [Projectoverleg beleidsmaatregel 13, 17 augustus 2026](https://fathom.video/calls/784531172)
+- [Expertconsult GitHub/ReSpec met Elisabeth de Vries, 14 september 2026]
+- [Proces en transactievisie op VISI in GEMMA en BM13, 14 september 2026]
+- [Bila Lex en Jeroen, 10 september 2026]
+- [Projectoverleg beleidsmaatregel 13, 7 september 2026]
+- [Bila Lex en Jeroen, 3 september 2026]
+- [Bespreken GitHub-publicatie BIM naar GEO met Rolf Jonker, 28 augustus 2026]
+- [Projectoverleg beleidsmaatregel 13, 24 augustus 2026]
+- [Work together publishing method, Lex en Siham, 20 augustus 2026]
+- [GitHub — Rules, met Gerlof en Siham, 19 augustus 2026]
+- [Projectoverleg beleidsmaatregel 13, 17 augustus 2026]

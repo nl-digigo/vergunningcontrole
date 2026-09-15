@@ -8,7 +8,8 @@
 > Deze inventarisatie beschrijft per regel: de toets, de werkwijze, de regelgevingsbron, de huidige toetstijd en opmerkingen. Regels #1–#6 betreffen het omgevingsplan (OPA) (ook: de Omgevingsplantoets, regels #7–#17 het Besluit bouwwerken leefomgeving (Bbl) (ook: de Technische toets)
 >
 > *Afbeeldingen uit het brondocument zijn in deze Markdown-versie vervangen door een placeholder.*
-> <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a3266879-642d-4c8f-a2da-e6a37d097755" />
+
+> <img width="1536" height="1024" alt="image" src="docs\toolkit-geobim\h\media\Overzicht regels.png" />
 
 ## Inhoud
 
@@ -832,7 +833,7 @@ Sommige gemeenten hebben werkafspraken met de brandweer over wie de check uitvoe
 
 ## Regel #17: Daglicht
 
-*[afbeelding: zie brondocument]*
+<img width="1536" height="1024" alt="image" src="docs\toolkit-geobim\h\media\Overzicht regels.png" />
 
 ### Toets
 

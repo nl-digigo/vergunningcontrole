@@ -9,7 +9,7 @@
 >
 > *Afbeeldingen uit het brondocument zijn in deze Markdown-versie vervangen door een placeholder.*
 
-> <img width="1536" height="1024" alt="image" src="docs\toolkit-geobim\h\media\Overzicht regels.png" />
+> <img width="1536" height="1024" alt="image" src="https://github.com/nl-digigo/vergunningcontrole/blob/BM13/machineleesbare-regels/docs/toolkit-geobim/h/media/Overzicht%20regels.png" />
 
 ## Inhoud
 
@@ -833,7 +833,7 @@ Sommige gemeenten hebben werkafspraken met de brandweer over wie de check uitvoe
 
 ## Regel #17: Daglicht
 
-<img width="1536" height="1024" alt="image" src="docs\toolkit-geobim\h\media\Overzicht regels.png" />
+<img width="1536" height="1024" alt="image" src="https://github.com/nl-digigo/vergunningcontrole/blob/BM13/machineleesbare-regels/docs/toolkit-geobim/h/media/Regel%20%2317.png" />
 
 ### Toets
 

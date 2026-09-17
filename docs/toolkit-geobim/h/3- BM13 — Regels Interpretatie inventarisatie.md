@@ -9,7 +9,7 @@
 >
 > *Afbeeldingen uit het brondocument zijn in deze Markdown-versie vervangen door een placeholder.*
 
-> <img width="1536" height="1024" alt="image" src="https://github.com/nl-digigo/vergunningcontrole/blob/BM13/machineleesbare-regels/docs/toolkit-geobim/h/media/Omgevinsplanregels.png" />
+> <img width="1536" height="1024" alt="image" src="https://github.com/nl-digigo/vergunningcontrole/blob/BM13/machineleesbare-regels/docs/toolkit-geobim/h/media/Omgevingsplanregels.png" />
 
 > <img width="1536" height="1024" alt="image" src="https://github.com/nl-digigo/vergunningcontrole/blob/BM13/machineleesbare-regels/docs/toolkit-geobim/h/media/BBL%20regels.png" />
 

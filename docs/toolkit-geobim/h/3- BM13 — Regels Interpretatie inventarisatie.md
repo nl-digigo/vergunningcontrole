@@ -1404,7 +1404,7 @@ De gecorrigeerde loopafstand tussen een punt in een gebruiksgebied en ten minste
 Noot: gecorrigeerde loopafstand is de afstand tussen een meest verwijderde punt in een gebruiksgebied en de uitgang van een brandcompartiment vermenigvuldigd met 1.5.  
 De loopafstand is de afstand tussen een meest verwijderd punt in een niet nader in te delen gebruiksgebied en bij een verblijfsruimte en de uitgang van een brandcompartiment vermenigvuldigd met 1.
 
-*[afbeelding: zie brondocument]*
+<img width="1536" height="1024" alt="image" src="https://github.com/nl-digigo/vergunningcontrole/blob/BM13/machineleesbare-regels/docs/toolkit-geobim/h/media/Loopafstand.png" />
 
 ### Informatiebehoefte
 

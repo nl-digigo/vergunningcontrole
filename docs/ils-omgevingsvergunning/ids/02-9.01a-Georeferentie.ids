@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
+  <ids:info>
+    <ids:title>9.01a Georeferentie</ids:title>
+    <ids:copyright>VDCbase,,Gemeente Rotterdam, AECgeeks, VORM, Arons en Gelauff, IMplace, On-Track</ids:copyright>
+    <ids:version>0.95</ids:version>
+    <ids:description>Deelspecificatie 02 van 42 uit 'ILS voor ruimten in de omgevingswet' versie 0.95. Afgesplitst uit het totaalbestand; de specificatie zelf is ongewijzigd.</ids:description>
+    <ids:author>menno@aronsengelauff.nl</ids:author>
+    <ids:date>2026-03-19</ids:date>
+    <ids:purpose>Indieningsvereisten van ruimte-modellering t.b.v. vergunningsaanvraag Omgevings Plan Activiteit (Omgevingsplan) en Technische Activiteit (BLL) voor bouwwerken zijnde Gebouw — BM13-checks: #1, #2, #3, #5, #7, #10, #17 (bron: BM13-regelinventarisatie v0.3, 3-7-2026).</ids:purpose>
+    <ids:milestone>015-03 Inhoudelijk behandelen aanvraag / processtap Toetsen aan regelgeving (GEMMA Omgevingswet, bedrijfsproces 015 Behandelen aanvraag)</ids:milestone>
+  </ids:info>
+  <ids:specifications>
+    <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.01a Georeferentie" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Georeferentie" description="Georeferentie met IfcMapConversion. (LoGref50) Een BIM-Model moet de IFCClass IFCMAPCONVERSION bevatten met de attributen Easting, Northing, OrthogonalHeight, XAxisAbscissa, XAxisOrdinate en Scale ingevuld. Het model dient een SourceCRS en TargetCRS te hebben. Dit is echter niet te valideren d.m.v. IDS. Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCMAPCONVERSION</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Georeferentie" cardinality="optional">
+          <ids:value>
+            <ids:simpleValue>Georeferentie</ids:simpleValue>
+          </ids:value>
+          <ids:system>
+            <ids:simpleValue>Omgevingswet-Ruimten</ids:simpleValue>
+          </ids:system>
+        </ids:classification>
+        <ids:attribute cardinality="required" instructions="Verplaatsing in Oostrichting om het BIM-model op de goede plek te krijgen.&#10;Voorbeeld: 92370.710706">
+          <ids:name>
+            <ids:simpleValue>Eastings</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+        <ids:attribute cardinality="required" instructions="Verplaatsing in Noordrichting om het BIM-model op de goede plek te krijgen.&#10;Voorbeeld: 437455.379788">
+          <ids:name>
+            <ids:simpleValue>Northings</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+        <ids:attribute cardinality="required" instructions="Verplaatsing in Hoogterichting om het BIM-model op de goede plek te krijgen.&#10;Voorbeeld: 1.3092">
+          <ids:name>
+            <ids:simpleValue>OrthogonalHeight</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+        <ids:attribute cardinality="required" instructions="Specificeert de waarde langs de oostelijke as van het eindpunt van een vector die de positie van de lokale x-as van het engineering coördinaatreferentiesysteem aangeeft.&#10;Voorbeeld: 0.8">
+          <ids:name>
+            <ids:simpleValue>XAxisAbscissa</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+        <ids:attribute cardinality="required" instructions="Specificeert de waarde langs de oostelijke as van het eindpunt van een vector die de positie van de lokale x-as van het engineering coördinaatreferentiesysteem aangeeft.&#10;Voorbeeld: 0.1">
+          <ids:name>
+            <ids:simpleValue>XAxisOrdinate</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+        <ids:attribute cardinality="required" instructions="Schaal van eenheden in BIM-model t.o.v. eenheden in target CRS&#10;Voorbeeld: 1/0.001">
+          <ids:name>
+            <ids:simpleValue>Scale</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+      </ids:requirements>
+    </ids:specification>
+  </ids:specifications>
+</ids:ids>

@@ -21,6 +21,8 @@ Informatieleveringsspecificatie (ILS) voor het aanvragen van een omgevingsvergun
 - Statische leesversie zonder ReSpec: [`ils-omgevingsvergunning.html`](ils-omgevingsvergunning.html), gegenereerd uit dezelfde hoofdstukken
 - Losse hoofdstukken: map [`hoofdstukken/`](hoofdstukken/)
 
+De opmaak van de tabellen staat in [`assets/ils-tables.css`](assets/ils-tables.css) en [`assets/ils-tables.js`](assets/ils-tables.js). De ReSpec-pagina's laden die bestanden; de statische leesversies hebben ze ingesloten. Na een wijziging in `assets/` zet `python tools/inline-tabelstijl.py` ze opnieuw in de statische leesversies.
+
 | Nr | Hoofdstuk | Referentiesjabloon |
 |---|---|---|
 | 00 | [Samenvatting](hoofdstukken/00-samenvatting.md) | — |
@@ -50,7 +52,9 @@ Informatieleveringsspecificatie (ILS) voor het aanvragen van een omgevingsvergun
 ```
 ├── index.html              ReSpec-pagina (voegt de hoofdstukken samen)
 ├── ils-omgevingsvergunning.html  statische leesversie (alles in één bestand)
-├── js/config.js            ReSpec-configuratie
+├── config.js               ReSpec-configuratie
+├── assets/                 tabelstijl (ils-tables.css en ils-tables.js)
+├── tools/                  hulpscripts (tabelstijl in de statische leesversies zetten)
 ├── hoofdstukken/           één Markdown-bestand per hoofdstuk
 ├── en/                     Engelse vertaling (automatisch, NL is leidend)
 ├── ils-omgevingsvergunning-en.html  statische Engelse leesversie

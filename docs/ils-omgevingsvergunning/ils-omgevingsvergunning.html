@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="nl" data-ils-dark><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ILS Omgevingsvergunning</title><style>:root{--bg:#fbfbfa;--fg:#1d2330;--muted:#5b6475;--line:#dfe3ea;--soft:#f1f4f8;--accent:#0b4f8a;--accent-soft:#e6eef7;--note:#fff7e0;--note-line:#e2b93b;--code:#eef1f5}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12151b;--fg:#e4e7ed;--muted:#9aa3b2;--line:#2c323d;--soft:#1a1f27;--accent:#7fb4e8;--accent-soft:#1b2a3a;--note:#2a2415;--note-line:#a6852a;--code:#1e242d}}
 :root[data-theme="dark"]{--bg:#12151b;--fg:#e4e7ed;--muted:#9aa3b2;--line:#2c323d;--soft:#1a1f27;--accent:#7fb4e8;--accent-soft:#1b2a3a;--note:#2a2415;--note-line:#a6852a;--code:#1e242d}
@@ -4756,4 +4756,648 @@ Resultaat per check (voldoet / voldoet niet / handmatig beoordelen)
 </section>
 
 <footer><p>ILS Omgevingsvergunning v0.1.0 · VNG · Machineleesbare bijlagen: <a href="ids/">ids/</a> · <a href="data/specificaties_checks.csv">data/specificaties_checks.csv</a></p></footer>
-</main></div></body></html>
+</main></div><!-- ils-tabelstijl:begin -->
+<style>
+/* ==========================================================================
+   Tabelstijl ILS Omgevingsvergunning
+   Gebruikt door index.html (ReSpec, NL) en en/index.html (ReSpec, EN), en
+   ingevoegd in de statische leesversies. Werkt samen met assets/ils-tables.js,
+   dat tabellen van een scroll-omhulsel en herkenbare kolomtypen voorziet.
+   ========================================================================== */
+
+:root {
+  --ils-fg: #1d2330;
+  --ils-muted: #5b6475;
+  --ils-line: #e4e8ef;
+  --ils-line-strong: #c9d1de;
+  --ils-surface: #ffffff;
+  --ils-head-bg: #f3f6fa;
+  --ils-zebra: #fafbfd;
+  --ils-hover: #eef4fb;
+  --ils-accent: #0b4f8a;
+  --ils-accent-soft: #e6eef7;
+  --ils-ok: #1f6b46;
+  --ils-ok-soft: #e4f2ea;
+  --ils-warn: #7d5600;
+  --ils-warn-soft: #fbf0d9;
+  --ils-no: #8a3c3c;
+  --ils-no-soft: #f8e9e9;
+  --ils-radius: 10px;
+  --ils-shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 1px 12px rgba(16, 24, 40, .05);
+}
+
+/* Donkere modus alleen waar de pagina daarop is voorbereid: de statische
+   leesversies zetten data-ils-dark op <html>. */
+@media (prefers-color-scheme: dark) {
+  :root[data-ils-dark]:not([data-theme="light"]) {
+    --ils-fg: #e4e7ed;
+    --ils-muted: #9aa3b2;
+    --ils-line: #2c323d;
+    --ils-line-strong: #3d4552;
+    --ils-surface: #161a21;
+    --ils-head-bg: #1c222b;
+    --ils-zebra: #191e26;
+    --ils-hover: #1e2836;
+    --ils-accent: #7fb4e8;
+    --ils-accent-soft: #1b2a3a;
+    --ils-ok: #7fc9a2;
+    --ils-ok-soft: #172a20;
+    --ils-warn: #d8b25e;
+    --ils-warn-soft: #2a2415;
+    --ils-no: #e29a9a;
+    --ils-no-soft: #2e1d1d;
+    --ils-shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 1px 12px rgba(0, 0, 0, .35);
+  }
+}
+
+:root[data-theme="dark"] {
+  --ils-fg: #e4e7ed;
+  --ils-muted: #9aa3b2;
+  --ils-line: #2c323d;
+  --ils-line-strong: #3d4552;
+  --ils-surface: #161a21;
+  --ils-head-bg: #1c222b;
+  --ils-zebra: #191e26;
+  --ils-hover: #1e2836;
+  --ils-accent: #7fb4e8;
+  --ils-accent-soft: #1b2a3a;
+  --ils-ok: #7fc9a2;
+  --ils-ok-soft: #172a20;
+  --ils-warn: #d8b25e;
+  --ils-warn-soft: #2a2415;
+  --ils-no: #e29a9a;
+  --ils-no-soft: #2e1d1d;
+  --ils-shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 1px 12px rgba(0, 0, 0, .35);
+}
+
+/* --------------------------------------------------------------------------
+   1. Omhulsel: horizontaal scrollen met randschaduw zodra er meer kolommen zijn
+   -------------------------------------------------------------------------- */
+
+.ils-table {
+  position: relative;
+  margin: 1.25em 0 1.75em;
+}
+
+.ils-table__scroll {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  border: 1px solid var(--ils-line);
+  border-radius: var(--ils-radius);
+  background: var(--ils-surface);
+  box-shadow: var(--ils-shadow);
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Lange tabellen scrollen binnen een venster, zodat de kop in beeld blijft. */
+.ils-table--tall .ils-table__scroll {
+  max-height: min(72vh, 780px);
+  overflow-y: auto;
+}
+
+.ils-table::before,
+.ils-table::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 28px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .18s ease;
+  border-radius: var(--ils-radius);
+  z-index: 3;
+}
+
+.ils-table::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(16, 24, 40, .13), rgba(16, 24, 40, 0));
+}
+
+.ils-table::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(16, 24, 40, .13), rgba(16, 24, 40, 0));
+}
+
+.ils-table.is-scrolled-left::before,
+.ils-table.is-scrollable-right::after { opacity: 1; }
+
+/* Bij een plakkende eerste kolom werpt die kolom zelf de schaduw. */
+.ils-table--wide.is-scrollable.is-scrolled-left::before { opacity: 0; }
+
+/* --------------------------------------------------------------------------
+   2. Basis
+   -------------------------------------------------------------------------- */
+
+.ils-table table {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-collapse: separate; /* nodig voor een plakkende kop met randen */
+  border-spacing: 0;
+  font-size: .92rem;
+  line-height: 1.45;
+  color: var(--ils-fg);
+  background: transparent;
+}
+
+.ils-table th,
+.ils-table td {
+  padding: .62em .9em;
+  border: 0;
+  border-bottom: 1px solid var(--ils-line);
+  text-align: left;
+  vertical-align: top;
+  background-clip: padding-box;
+  hyphens: none;   /* geen afbreekstreepjes en geen woorden die middenin breken */
+  overflow-wrap: normal;
+}
+
+.ils-table tbody tr:last-child > * { border-bottom: 0; }
+
+.ils-table tbody tr { background: var(--ils-surface); }
+.ils-table tbody tr:nth-child(even) { background: var(--ils-zebra); }
+.ils-table tbody tr:hover { background: var(--ils-hover); }
+
+/* --------------------------------------------------------------------------
+   3. Kop
+   -------------------------------------------------------------------------- */
+
+.ils-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--ils-head-bg);
+  border-bottom: 1px solid var(--ils-line-strong);
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--ils-muted);
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+/* Sleutel-waardetabellen zonder kopteksten tonen geen kop. */
+.ils-table--headless thead { display: none; }
+
+/* --------------------------------------------------------------------------
+   4. Kolomtypen (gezet door assets/ils-tables.js)
+   -------------------------------------------------------------------------- */
+
+.ils-table .ils-col-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.ils-table .ils-col-short {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ils-table .ils-col-nowrap { white-space: nowrap; }
+
+/* Eerste kolom blijft staan zolang er horizontaal gescrold kan worden. */
+.ils-table--wide.is-scrollable .ils-col-sticky {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: inherit;
+  font-weight: 600;
+  box-shadow: 1px 0 0 var(--ils-line);
+}
+
+.ils-table--wide.is-scrollable thead .ils-col-sticky {
+  z-index: 3;
+  background: var(--ils-head-bg);
+}
+
+.ils-table--wide.is-scrollable.is-scrolled-left .ils-col-sticky {
+  box-shadow: 1px 0 0 var(--ils-line), 8px 0 10px -8px rgba(16, 24, 40, .45);
+}
+
+/* Sleutel-waardetabellen: eerste kolom als label. */
+.ils-table--pairs td:first-child,
+.ils-table--pairs th[scope="row"] {
+  width: 30%;
+  min-width: 11rem;
+  font-weight: 600;
+  color: var(--ils-fg);
+}
+
+/* Veel kolommen: compacter zetten. */
+.ils-table--wide table { font-size: .86rem; }
+.ils-table--wide th,
+.ils-table--wide td { padding: .5em .72em; }
+
+/* Lege waarde (streepje) rustig houden. */
+.ils-table .ils-empty { color: var(--ils-muted); }
+
+/* --------------------------------------------------------------------------
+   5. Labels in cellen
+   -------------------------------------------------------------------------- */
+
+.ils-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: .1em .5em;
+  border: 1px solid var(--ils-line-strong);
+  border-radius: 99px;
+  background: var(--ils-surface);
+  font-size: .82em;
+  line-height: 1.5;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+a.ils-chip {
+  color: var(--ils-accent);
+  border-color: var(--ils-accent-soft);
+  background: var(--ils-accent-soft);
+}
+
+a.ils-chip:hover {
+  border-color: var(--ils-accent);
+  text-decoration: none;
+}
+
+.ils-chip--check {
+  color: var(--ils-accent);
+  background: var(--ils-accent-soft);
+  border-color: transparent;
+  font-variant-numeric: tabular-nums;
+}
+
+/* De labels staan in een span binnen de cel: een <td> mag geen flexbox worden,
+   dat haalt de tabelopmaak uit elkaar. */
+.ils-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3em;
+  align-items: flex-start;
+}
+
+.ils-col-short .ils-tags,
+.ils-col-num .ils-tags { justify-content: center; }
+
+/* Een cel vol verwijzingen krijgt ruimte, zodat de tekstkolommen ernaast
+   niet tot enkele woorden worden samengeknepen. */
+.ils-table td.ils-cell-tags { min-width: 12rem; }
+.ils-table td.ils-cell-tags.ils-col-short { min-width: 0; }
+
+.ils-tags .ils-rest { display: contents; }
+
+.ils-tags[data-collapsed="true"] .ils-rest { display: none; }
+
+.ils-more {
+  appearance: none;
+  padding: .1em .55em;
+  border: 1px dashed var(--ils-line-strong);
+  border-radius: 99px;
+  background: transparent;
+  color: var(--ils-muted);
+  font: inherit;
+  font-size: .82em;
+  line-height: 1.5;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ils-more:hover {
+  color: var(--ils-accent);
+  border-color: var(--ils-accent);
+}
+
+/* Kardinaliteit R / O / X uit de IDS-tabellen. */
+.ils-card {
+  display: inline-block;
+  min-width: 1.6em;
+  padding: .05em .45em;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  font-size: .82em;
+  text-align: center;
+}
+
+.ils-card--r { color: var(--ils-accent); background: var(--ils-accent-soft); }
+.ils-card--o { color: var(--ils-muted); border-color: var(--ils-line-strong); }
+.ils-card--x { color: var(--ils-no); background: var(--ils-no-soft); }
+
+/* Ja / nee met een rustig statusbolletje. */
+.ils-flag::before {
+  content: "";
+  display: inline-block;
+  width: .5em;
+  height: .5em;
+  margin-right: .45em;
+  border-radius: 50%;
+  vertical-align: .08em;
+  background: currentColor;
+}
+
+.ils-flag--yes { color: var(--ils-ok); }
+.ils-flag--no { color: var(--ils-muted); }
+.ils-flag--partial { color: var(--ils-warn); }
+
+.ils-table td code,
+.ils-table th code { font-size: .88em; }
+
+/* --------------------------------------------------------------------------
+   6. Klein scherm en afdrukken
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+  .ils-table table { font-size: .85rem; }
+  .ils-table th,
+  .ils-table td { padding: .5em .65em; }
+  .ils-table--pairs td:first-child { min-width: 8rem; }
+}
+
+@media print {
+  .ils-table__scroll,
+  .ils-table--tall .ils-table__scroll {
+    max-height: none;
+    overflow: visible;
+    box-shadow: none;
+    border-color: #bbb;
+  }
+  .ils-table::before,
+  .ils-table::after { display: none; }
+  .ils-table thead { display: table-header-group; }
+  .ils-table thead th { position: static; background: #f2f2f2; color: #333; }
+  .ils-table tr { break-inside: avoid; }
+  .ils-table--wide.is-scrollable .ils-col-sticky { position: static; box-shadow: none; }
+  .ils-tags[data-collapsed="true"] .ils-rest { display: contents; }
+  .ils-more { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ils-table::before,
+  .ils-table::after { transition: none; }
+}
+</style>
+<script>
+/* ==========================================================================
+   Tabelverrijking ILS Omgevingsvergunning
+   Hoort bij assets/ils-tables.css. Het script laat de inhoud ongemoeid en
+   voegt alleen structuur toe die met CSS niet te maken is:
+     - een omhulsel waarin brede tabellen horizontaal scrollen (met randschaduw)
+     - een plakkende kop en, bij brede tabellen, een plakkende eerste kolom
+     - kolomtypen: getal, korte waarde, vrije tekst
+     - labels voor IDS-verwijzingen, checknummers, kardinaliteit (R/O/X) en ja/nee
+   Draait zowel op de ReSpec-pagina's als op de statische leesversies.
+   ========================================================================== */
+
+(function () {
+  "use strict";
+
+  var NL = (document.documentElement.lang || "nl").toLowerCase().indexOf("nl") === 0;
+
+  var TXT = {
+    more: NL ? "Toon alle %d specificaties" : "Show all %d specifications",
+    less: NL ? "Toon minder" : "Show less",
+    card: NL
+      ? { R: "verplicht", O: "optioneel", X: "verboden" }
+      : { R: "required", O: "optional", X: "prohibited" }
+  };
+
+  var WIDE_COLS = 5;      // vanaf dit aantal kolommen: compacte, brede tabel
+  var TALL_ROWS = 25;     // vanaf dit aantal rijen: eigen scrollvenster met vaste kop
+  var MAX_CHIPS = 8;      // meer labels dan dit worden ingeklapt
+
+  var RE_NUM = /^-?\d+([.,]\d+)?\s*%?$/;
+  var RE_CHECKS = /^#\d+(\s*[–—-]\s*#?\d+)?([\s,;]+#\d+(\s*[–—-]\s*#?\d+)?)*$/;
+  var RE_CARD = /^(card\.?|kardinaliteit|cardinality)$/i;
+  var RE_YES = /^(ja|yes)\b/i;
+  var RE_NO = /^(nee|nej|no)\b/i;
+  var RE_PARTIAL = /^(beperkt|deels|limited|partly|partial)\b/i;
+  var RE_EMPTY = /^(—|-|–|n\.v\.t\.|n\/a)$/;
+
+  function text(el) {
+    return (el.textContent || "").trim();
+  }
+
+  function addClass(el, name) {
+    if (el && el.classList) el.classList.add(name);
+  }
+
+  /* ---- cellen -------------------------------------------------------- */
+
+  // Leegt een cel en geeft een container terug waarin labels naast elkaar staan.
+  function tagBox(cell) {
+    cell.textContent = "";
+    addClass(cell, "ils-cell-tags");
+    var box = document.createElement("span");
+    box.className = "ils-tags";
+    cell.appendChild(box);
+    return box;
+  }
+
+  function chipifyLinks(cell) {
+    var links = cell.querySelectorAll("a");
+    if (links.length < 3) return false;
+    // alleen als de cel vrijwel uitsluitend uit verwijzingen bestaat
+    var rest = text(cell);
+    for (var i = 0; i < links.length; i++) rest = rest.replace(text(links[i]), "");
+    if (rest.replace(/[\s,;·|]/g, "").length > 2) return false;
+
+    // de labels komen in een binnencontainer: een <td> mag geen flexbox worden
+    var box = tagBox(cell);
+    var rests = null;
+    for (var j = 0; j < links.length; j++) {
+      addClass(links[j], "ils-chip");
+      if (j === MAX_CHIPS && links.length > MAX_CHIPS + 1) {
+        rests = document.createElement("span");
+        rests.className = "ils-rest";
+        box.appendChild(rests);
+      }
+      (rests || box).appendChild(links[j]);
+    }
+
+    if (rests) {
+      var hidden = links.length - MAX_CHIPS;
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "ils-more";
+      btn.textContent = "+" + hidden;
+      btn.setAttribute("aria-expanded", "false");
+      btn.setAttribute("title", TXT.more.replace("%d", links.length));
+      btn.addEventListener("click", function () {
+        var collapsed = box.getAttribute("data-collapsed") !== "false";
+        box.setAttribute("data-collapsed", collapsed ? "false" : "true");
+        btn.setAttribute("aria-expanded", collapsed ? "true" : "false");
+        btn.textContent = collapsed ? "−" : "+" + hidden;
+        btn.setAttribute("title", collapsed ? TXT.less : TXT.more.replace("%d", links.length));
+      });
+      box.setAttribute("data-collapsed", "true");
+      box.appendChild(btn);
+    }
+    return true;
+  }
+
+  function chipifyChecks(cell) {
+    var value = text(cell);
+    if (!RE_CHECKS.test(value) || cell.querySelector("a")) return false;
+    var parts = value.split(/[\s,;]+/).filter(Boolean);
+    var box = tagBox(cell);
+    parts.forEach(function (part) {
+      var chip = document.createElement("span");
+      chip.className = "ils-chip ils-chip--check";
+      chip.textContent = part;
+      box.appendChild(chip);
+    });
+    return true;
+  }
+
+  function badgeCardinality(cell) {
+    var value = text(cell);
+    if (!/^[ROX]$/.test(value)) return false;
+    var span = document.createElement("span");
+    span.className = "ils-card ils-card--" + value.toLowerCase();
+    span.textContent = value;
+    if (TXT.card[value]) span.title = TXT.card[value];
+    cell.textContent = "";
+    cell.appendChild(span);
+    return true;
+  }
+
+  function flagYesNo(cell) {
+    var value = text(cell);
+    var kind = RE_YES.test(value) ? "yes" : RE_NO.test(value) ? "no" : RE_PARTIAL.test(value) ? "partial" : null;
+    if (!kind || cell.children.length) return false;
+    addClass(cell, "ils-flag");
+    addClass(cell, "ils-flag--" + kind);
+    return true;
+  }
+
+  /* ---- kolommen ------------------------------------------------------ */
+
+  function columnCells(rows, index) {
+    var cells = [];
+    for (var i = 0; i < rows.length; i++) {
+      var cell = rows[i].cells[index];
+      if (cell && cell.colSpan === 1) cells.push(cell);
+    }
+    return cells;
+  }
+
+  function classifyColumns(table, headCells, bodyRows) {
+    var count = headCells.length || (bodyRows[0] ? bodyRows[0].cells.length : 0);
+
+    for (var c = 0; c < count; c++) {
+      var cells = columnCells(bodyRows, c);
+      if (!cells.length) continue;
+
+      var header = headCells[c] ? text(headCells[c]) : "";
+      var values = cells.map(text).filter(function (v) { return v && !RE_EMPTY.test(v); });
+      var isNum = values.length > 0 && values.every(function (v) { return RE_NUM.test(v); });
+      var isShort = values.length > 0 && values.every(function (v) { return v.length <= 4; });
+      var isCard = RE_CARD.test(header) || (values.length > 0 && values.every(function (v) { return /^[ROX]$/.test(v); }));
+
+      var colClass = isNum ? "ils-col-num" : (isShort || isCard) ? "ils-col-short" : null;
+      if (colClass) {
+        if (headCells[c]) addClass(headCells[c], colClass);
+        cells.forEach(function (cell) { addClass(cell, colClass); });
+      }
+
+      cells.forEach(function (cell) {
+        if (RE_EMPTY.test(text(cell))) {
+          addClass(cell, "ils-empty");
+          return;
+        }
+        if (isCard && badgeCardinality(cell)) return;
+        if (chipifyLinks(cell)) return;
+        if (chipifyChecks(cell)) return;
+        if (c > 0) flagYesNo(cell);
+      });
+    }
+  }
+
+  /* ---- scrollstatus -------------------------------------------------- */
+
+  function watchScroll(wrap, scroller) {
+    function update() {
+      var slack = scroller.scrollWidth - scroller.clientWidth;
+      wrap.classList.toggle("is-scrollable", slack > 2);
+      wrap.classList.toggle("is-scrolled-left", scroller.scrollLeft > 2);
+      wrap.classList.toggle("is-scrollable-right", slack > 2 && scroller.scrollLeft < slack - 2);
+    }
+    scroller.addEventListener("scroll", update, { passive: true });
+    if (window.ResizeObserver) new ResizeObserver(update).observe(scroller);
+    else window.addEventListener("resize", update);
+    update();
+    // na het laden van webfonts kunnen kolombreedtes nog verschuiven
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(update);
+  }
+
+  /* ---- tabel --------------------------------------------------------- */
+
+  function enhance(table) {
+    if (table.hasAttribute("data-ils-table")) return;
+    table.setAttribute("data-ils-table", "");
+
+    var head = table.tHead;
+    var headCells = head && head.rows.length ? Array.prototype.slice.call(head.rows[head.rows.length - 1].cells) : [];
+    var bodyRows = Array.prototype.slice.call(table.tBodies.length ? table.tBodies[0].rows : []);
+    var cols = headCells.length || (bodyRows[0] ? bodyRows[0].cells.length : 0);
+
+    // omhulsel: hergebruik het bestaande scrollblok van de statische leesversie
+    var scroller = table.parentNode;
+    if (!scroller || !scroller.classList || !scroller.classList.contains("tw")) {
+      scroller = document.createElement("div");
+      table.parentNode.insertBefore(scroller, table);
+      scroller.appendChild(table);
+    }
+    addClass(scroller, "ils-table__scroll");
+
+    var wrap = document.createElement("div");
+    wrap.className = "ils-table";
+    scroller.parentNode.insertBefore(wrap, scroller);
+    wrap.appendChild(scroller);
+
+    if (cols >= WIDE_COLS) addClass(wrap, "ils-table--wide");
+    if (bodyRows.length > TALL_ROWS) addClass(wrap, "ils-table--tall");
+    if (cols === 2) addClass(wrap, "ils-table--pairs");
+    if (headCells.length && headCells.every(function (cell) { return !text(cell); })) {
+      addClass(wrap, "ils-table--headless");
+    }
+
+    if (cols >= WIDE_COLS) {
+      if (headCells[0]) addClass(headCells[0], "ils-col-sticky");
+      columnCells(bodyRows, 0).forEach(function (cell) { addClass(cell, "ils-col-sticky"); });
+    }
+
+    classifyColumns(table, headCells, bodyRows);
+    watchScroll(wrap, scroller);
+  }
+
+  function run() {
+    var tables = document.querySelectorAll("table:not([data-ils-table])");
+    for (var i = 0; i < tables.length; i++) enhance(tables[i]);
+  }
+
+  function start() {
+    run();
+    // ReSpec voegt de hoofdstukken asynchroon toe
+    if (window.MutationObserver) {
+      var pending = null;
+      new MutationObserver(function () {
+        if (pending) return;
+        pending = setTimeout(function () { pending = null; run(); }, 60);
+      }).observe(document.body, { childList: true, subtree: true });
+    }
+    if (document.respec && document.respec.ready) document.respec.ready.then(run);
+    document.addEventListener("respec-ready", run);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start);
+  } else {
+    start();
+  }
+})();
+</script>
+<!-- ils-tabelstijl:einde -->
+</body></html>

@@ -2,6 +2,12 @@
 
 Dit project volgt [semantische versies](https://semver.org/lang/nl/). `0.x` = concept, `1.0.0` = vastgesteld.
 
+## [Niet uitgebracht]
+
+### Gewijzigd
+- Nieuwe tabelstijl voor de hele ILS (`assets/ils-tables.css` en `assets/ils-tables.js`): brede tabellen scrollen horizontaal met een meelopende eerste kolom, de kolomkop blijft staan, IDS-verwijzingen en checknummers worden als label getoond, kardinaliteit R/O/X als badge en ja/nee met een statusbolletje. De inhoud van de hoofdstukken is niet gewijzigd.
+- De statische leesversies bevatten dezelfde stijl; `tools/inline-tabelstijl.py` zet die er opnieuw in na een wijziging in `assets/`.
+
 ## [0.1.0] – 2026-09-17
 
 ### Toegevoegd

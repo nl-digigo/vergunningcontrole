@@ -1,0 +1,379 @@
+/* ==========================================================================
+   Tabelstijl ILS Omgevingsvergunning
+   Gebruikt door index.html (ReSpec, NL) en en/index.html (ReSpec, EN), en
+   ingevoegd in de statische leesversies. Werkt samen met assets/ils-tables.js,
+   dat tabellen van een scroll-omhulsel en herkenbare kolomtypen voorziet.
+   ========================================================================== */
+
+:root {
+  --ils-fg: #1d2330;
+  --ils-muted: #5b6475;
+  --ils-line: #e4e8ef;
+  --ils-line-strong: #c9d1de;
+  --ils-surface: #ffffff;
+  --ils-head-bg: #f3f6fa;
+  --ils-zebra: #fafbfd;
+  --ils-hover: #eef4fb;
+  --ils-accent: #0b4f8a;
+  --ils-accent-soft: #e6eef7;
+  --ils-ok: #1f6b46;
+  --ils-ok-soft: #e4f2ea;
+  --ils-warn: #7d5600;
+  --ils-warn-soft: #fbf0d9;
+  --ils-no: #8a3c3c;
+  --ils-no-soft: #f8e9e9;
+  --ils-radius: 10px;
+  --ils-shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 1px 12px rgba(16, 24, 40, .05);
+}
+
+/* Donkere modus alleen waar de pagina daarop is voorbereid: de statische
+   leesversies zetten data-ils-dark op <html>. */
+@media (prefers-color-scheme: dark) {
+  :root[data-ils-dark]:not([data-theme="light"]) {
+    --ils-fg: #e4e7ed;
+    --ils-muted: #9aa3b2;
+    --ils-line: #2c323d;
+    --ils-line-strong: #3d4552;
+    --ils-surface: #161a21;
+    --ils-head-bg: #1c222b;
+    --ils-zebra: #191e26;
+    --ils-hover: #1e2836;
+    --ils-accent: #7fb4e8;
+    --ils-accent-soft: #1b2a3a;
+    --ils-ok: #7fc9a2;
+    --ils-ok-soft: #172a20;
+    --ils-warn: #d8b25e;
+    --ils-warn-soft: #2a2415;
+    --ils-no: #e29a9a;
+    --ils-no-soft: #2e1d1d;
+    --ils-shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 1px 12px rgba(0, 0, 0, .35);
+  }
+}
+
+:root[data-theme="dark"] {
+  --ils-fg: #e4e7ed;
+  --ils-muted: #9aa3b2;
+  --ils-line: #2c323d;
+  --ils-line-strong: #3d4552;
+  --ils-surface: #161a21;
+  --ils-head-bg: #1c222b;
+  --ils-zebra: #191e26;
+  --ils-hover: #1e2836;
+  --ils-accent: #7fb4e8;
+  --ils-accent-soft: #1b2a3a;
+  --ils-ok: #7fc9a2;
+  --ils-ok-soft: #172a20;
+  --ils-warn: #d8b25e;
+  --ils-warn-soft: #2a2415;
+  --ils-no: #e29a9a;
+  --ils-no-soft: #2e1d1d;
+  --ils-shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 1px 12px rgba(0, 0, 0, .35);
+}
+
+/* --------------------------------------------------------------------------
+   1. Omhulsel: horizontaal scrollen met randschaduw zodra er meer kolommen zijn
+   -------------------------------------------------------------------------- */
+
+.ils-table {
+  position: relative;
+  margin: 1.25em 0 1.75em;
+}
+
+.ils-table__scroll {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  border: 1px solid var(--ils-line);
+  border-radius: var(--ils-radius);
+  background: var(--ils-surface);
+  box-shadow: var(--ils-shadow);
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Lange tabellen scrollen binnen een venster, zodat de kop in beeld blijft. */
+.ils-table--tall .ils-table__scroll {
+  max-height: min(72vh, 780px);
+  overflow-y: auto;
+}
+
+.ils-table::before,
+.ils-table::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 28px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .18s ease;
+  border-radius: var(--ils-radius);
+  z-index: 3;
+}
+
+.ils-table::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(16, 24, 40, .13), rgba(16, 24, 40, 0));
+}
+
+.ils-table::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(16, 24, 40, .13), rgba(16, 24, 40, 0));
+}
+
+.ils-table.is-scrolled-left::before,
+.ils-table.is-scrollable-right::after { opacity: 1; }
+
+/* Bij een plakkende eerste kolom werpt die kolom zelf de schaduw. */
+.ils-table--wide.is-scrollable.is-scrolled-left::before { opacity: 0; }
+
+/* --------------------------------------------------------------------------
+   2. Basis
+   -------------------------------------------------------------------------- */
+
+.ils-table table {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-collapse: separate; /* nodig voor een plakkende kop met randen */
+  border-spacing: 0;
+  font-size: .92rem;
+  line-height: 1.45;
+  color: var(--ils-fg);
+  background: transparent;
+}
+
+.ils-table th,
+.ils-table td {
+  padding: .62em .9em;
+  border: 0;
+  border-bottom: 1px solid var(--ils-line);
+  text-align: left;
+  vertical-align: top;
+  background-clip: padding-box;
+  hyphens: none;   /* geen afbreekstreepjes en geen woorden die middenin breken */
+  overflow-wrap: normal;
+}
+
+.ils-table tbody tr:last-child > * { border-bottom: 0; }
+
+.ils-table tbody tr { background: var(--ils-surface); }
+.ils-table tbody tr:nth-child(even) { background: var(--ils-zebra); }
+.ils-table tbody tr:hover { background: var(--ils-hover); }
+
+/* --------------------------------------------------------------------------
+   3. Kop
+   -------------------------------------------------------------------------- */
+
+.ils-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--ils-head-bg);
+  border-bottom: 1px solid var(--ils-line-strong);
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--ils-muted);
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+/* Sleutel-waardetabellen zonder kopteksten tonen geen kop. */
+.ils-table--headless thead { display: none; }
+
+/* --------------------------------------------------------------------------
+   4. Kolomtypen (gezet door assets/ils-tables.js)
+   -------------------------------------------------------------------------- */
+
+.ils-table .ils-col-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.ils-table .ils-col-short {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ils-table .ils-col-nowrap { white-space: nowrap; }
+
+/* Eerste kolom blijft staan zolang er horizontaal gescrold kan worden. */
+.ils-table--wide.is-scrollable .ils-col-sticky {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: inherit;
+  font-weight: 600;
+  box-shadow: 1px 0 0 var(--ils-line);
+}
+
+.ils-table--wide.is-scrollable thead .ils-col-sticky {
+  z-index: 3;
+  background: var(--ils-head-bg);
+}
+
+.ils-table--wide.is-scrollable.is-scrolled-left .ils-col-sticky {
+  box-shadow: 1px 0 0 var(--ils-line), 8px 0 10px -8px rgba(16, 24, 40, .45);
+}
+
+/* Sleutel-waardetabellen: eerste kolom als label. */
+.ils-table--pairs td:first-child,
+.ils-table--pairs th[scope="row"] {
+  width: 30%;
+  min-width: 11rem;
+  font-weight: 600;
+  color: var(--ils-fg);
+}
+
+/* Veel kolommen: compacter zetten. */
+.ils-table--wide table { font-size: .86rem; }
+.ils-table--wide th,
+.ils-table--wide td { padding: .5em .72em; }
+
+/* Lege waarde (streepje) rustig houden. */
+.ils-table .ils-empty { color: var(--ils-muted); }
+
+/* --------------------------------------------------------------------------
+   5. Labels in cellen
+   -------------------------------------------------------------------------- */
+
+.ils-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: .1em .5em;
+  border: 1px solid var(--ils-line-strong);
+  border-radius: 99px;
+  background: var(--ils-surface);
+  font-size: .82em;
+  line-height: 1.5;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+a.ils-chip {
+  color: var(--ils-accent);
+  border-color: var(--ils-accent-soft);
+  background: var(--ils-accent-soft);
+}
+
+a.ils-chip:hover {
+  border-color: var(--ils-accent);
+  text-decoration: none;
+}
+
+.ils-chip--check {
+  color: var(--ils-accent);
+  background: var(--ils-accent-soft);
+  border-color: transparent;
+  font-variant-numeric: tabular-nums;
+}
+
+/* De labels staan in een span binnen de cel: een <td> mag geen flexbox worden,
+   dat haalt de tabelopmaak uit elkaar. */
+.ils-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3em;
+  align-items: flex-start;
+}
+
+.ils-col-short .ils-tags,
+.ils-col-num .ils-tags { justify-content: center; }
+
+/* Een cel vol verwijzingen krijgt ruimte, zodat de tekstkolommen ernaast
+   niet tot enkele woorden worden samengeknepen. */
+.ils-table td.ils-cell-tags { min-width: 12rem; }
+.ils-table td.ils-cell-tags.ils-col-short { min-width: 0; }
+
+.ils-tags .ils-rest { display: contents; }
+
+.ils-tags[data-collapsed="true"] .ils-rest { display: none; }
+
+.ils-more {
+  appearance: none;
+  padding: .1em .55em;
+  border: 1px dashed var(--ils-line-strong);
+  border-radius: 99px;
+  background: transparent;
+  color: var(--ils-muted);
+  font: inherit;
+  font-size: .82em;
+  line-height: 1.5;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ils-more:hover {
+  color: var(--ils-accent);
+  border-color: var(--ils-accent);
+}
+
+/* Kardinaliteit R / O / X uit de IDS-tabellen. */
+.ils-card {
+  display: inline-block;
+  min-width: 1.6em;
+  padding: .05em .45em;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  font-size: .82em;
+  text-align: center;
+}
+
+.ils-card--r { color: var(--ils-accent); background: var(--ils-accent-soft); }
+.ils-card--o { color: var(--ils-muted); border-color: var(--ils-line-strong); }
+.ils-card--x { color: var(--ils-no); background: var(--ils-no-soft); }
+
+/* Ja / nee met een rustig statusbolletje. */
+.ils-flag::before {
+  content: "";
+  display: inline-block;
+  width: .5em;
+  height: .5em;
+  margin-right: .45em;
+  border-radius: 50%;
+  vertical-align: .08em;
+  background: currentColor;
+}
+
+.ils-flag--yes { color: var(--ils-ok); }
+.ils-flag--no { color: var(--ils-muted); }
+.ils-flag--partial { color: var(--ils-warn); }
+
+.ils-table td code,
+.ils-table th code { font-size: .88em; }
+
+/* --------------------------------------------------------------------------
+   6. Klein scherm en afdrukken
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+  .ils-table table { font-size: .85rem; }
+  .ils-table th,
+  .ils-table td { padding: .5em .65em; }
+  .ils-table--pairs td:first-child { min-width: 8rem; }
+}
+
+@media print {
+  .ils-table__scroll,
+  .ils-table--tall .ils-table__scroll {
+    max-height: none;
+    overflow: visible;
+    box-shadow: none;
+    border-color: #bbb;
+  }
+  .ils-table::before,
+  .ils-table::after { display: none; }
+  .ils-table thead { display: table-header-group; }
+  .ils-table thead th { position: static; background: #f2f2f2; color: #333; }
+  .ils-table tr { break-inside: avoid; }
+  .ils-table--wide.is-scrollable .ils-col-sticky { position: static; box-shadow: none; }
+  .ils-tags[data-collapsed="true"] .ils-rest { display: contents; }
+  .ils-more { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ils-table::before,
+  .ils-table::after { transition: none; }
+}

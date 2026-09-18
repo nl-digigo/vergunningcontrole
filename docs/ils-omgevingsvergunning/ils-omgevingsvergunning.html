@@ -1,0 +1,4759 @@
+<!DOCTYPE html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ILS Omgevingsvergunning</title><style>:root{--bg:#fbfbfa;--fg:#1d2330;--muted:#5b6475;--line:#dfe3ea;--soft:#f1f4f8;--accent:#0b4f8a;--accent-soft:#e6eef7;--note:#fff7e0;--note-line:#e2b93b;--code:#eef1f5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12151b;--fg:#e4e7ed;--muted:#9aa3b2;--line:#2c323d;--soft:#1a1f27;--accent:#7fb4e8;--accent-soft:#1b2a3a;--note:#2a2415;--note-line:#a6852a;--code:#1e242d}}
+:root[data-theme="dark"]{--bg:#12151b;--fg:#e4e7ed;--muted:#9aa3b2;--line:#2c323d;--soft:#1a1f27;--accent:#7fb4e8;--accent-soft:#1b2a3a;--note:#2a2415;--note-line:#a6852a;--code:#1e242d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:16px}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 16px}
+.head{border-bottom:1px solid var(--line);padding:40px 0 28px;background:var(--soft)}
+.kicker{margin:0;color:var(--muted);font-size:.85rem;letter-spacing:.02em}
+h1{font-size:2.2rem;line-height:1.15;margin:.3em 0 .2em;text-wrap:balance}
+.sub{margin:0 0 20px;color:var(--muted);font-size:1.1rem;max-width:60ch}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 24px;margin:0}
+.meta dt{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.meta dd{margin:2px 0 0}
+.badge{display:inline-block;padding:1px 10px;border-radius:99px;background:var(--note);border:1px solid var(--note-line);font-size:.85rem}
+.layout{display:grid;grid-template-columns:280px minmax(0,1fr);gap:40px;padding-top:28px}
+.toc{position:sticky;top:16px;align-self:start;max-height:calc(100vh - 32px);overflow:auto;font-size:.88rem;padding-right:8px}
+.toch{font-weight:600;margin:0 0 8px}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc ol ol{padding-left:14px;margin:2px 0 8px}
+.toc a{display:block;padding:2px 0;color:var(--fg);text-decoration:none}
+.toc a:hover{color:var(--accent)}
+.toc ol ol a{color:var(--muted)}
+.num{color:var(--accent);font-variant-numeric:tabular-nums;margin-right:.3em}
+main{min-width:0;max-width:900px;overflow-wrap:break-word;hyphens:auto}
+section{margin-bottom:48px}
+h2{font-size:1.6rem;border-bottom:2px solid var(--line);padding-bottom:6px;margin:0 0 16px}
+h3{font-size:1.2rem;margin:32px 0 10px}
+h4{font-size:1rem;margin:24px 0 8px}
+.abstract{background:var(--accent-soft);padding:20px 24px;border-radius:8px}
+.abstract h2{border:0}
+.tw{overflow-x:auto;margin:12px 0 20px;border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{padding:6px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+tbody tr:last-child td{border-bottom:0}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.88em}
+pre{background:var(--code);padding:12px 14px;border-radius:6px;overflow-x:auto;font-size:.85rem;line-height:1.45}
+pre code{background:none;padding:0}
+blockquote{margin:16px 0;padding:8px 16px;border-left:4px solid var(--accent);background:var(--soft)}
+.note{background:var(--note);border-left:4px solid var(--note-line);padding:10px 14px;border-radius:4px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;padding:16px 0 40px}
+@media (max-width:900px){.layout{grid-template-columns:1fr}.toc{position:static;max-height:none;border-bottom:1px solid var(--line);padding-bottom:16px}h1{font-size:1.7rem}}
+@media print{.toc{display:none}.layout{display:block}}
+td.c{text-align:center;color:var(--accent)}
+.banner{background:var(--note);border-bottom:1px solid var(--note-line);padding:10px 0;font-size:.92rem}
+</style></head><body>
+<div class="banner"><div class="wrap">English version (machine-translated): <a href="ils-omgevingsvergunning-en.html">ils-omgevingsvergunning-en.html</a></div></div>
+<header class="head"><div class="wrap">
+<p class="kicker">Informatieleveringsspecificatie · Werkversie 0.1.0 · 17 september 2026</p>
+<h1>ILS Omgevingsvergunning</h1>
+<p class="sub">Informatieleveringsspecificatie voor een aanvraag omgevingsvergunning met een 3D-informatiemodel</p>
+<dl class="meta">
+<div><dt>Uitgever</dt><dd>Vereniging van Nederlandse Gemeenten (VNG)</dd></div>
+<div><dt>Opsteller</dt><dd>Lex Ransijn, VDCbase (in opdracht van VNG)</dd></div>
+<div><dt>Projectleiding</dt><dd>Jeroen de Ruig, VNG (projectleider BM13)</dd></div>
+<div><dt>In samenwerking met</dt><dd>BNA, NEPROM, NL Ingenieurs, Woningbouwers NL, digiGO, Bouwend Nederland</dd></div>
+<div><dt>Status</dt><dd><span class="badge">Concept</span></dd></div>
+</dl></div></header>
+<div class="wrap layout">
+<nav class="toc" aria-label="Inhoud"><p class="toch">Inhoud</p><ol><li><a href="#samenvatting">Samenvatting</a></li><li><a href="#leeswijzer"><span class="num">1</span> Leeswijzer en introductie</a><ol><li><a href="#leeswijzer-voor-wie"><span class="num">1.1</span> Voor wie?</a></li><li><a href="#leeswijzer-introductie"><span class="num">1.2</span> Introductie</a></li><li><a href="#leeswijzer-positie-in-het-lagenmodel-van-de-geobim-toolkit"><span class="num">1.3</span> Positie in het lagenmodel van de GeoBIM-toolkit</a></li></ol></li><li><a href="#scope"><span class="num">2</span> Toepassings- en werkingsgebied</a><ol><li><a href="#scope-toepassingsgebied"><span class="num">2.1</span> Toepassingsgebied</a></li><li><a href="#scope-werkingsgebied"><span class="num">2.2</span> Werkingsgebied</a></li><li><a href="#scope-positionering-ten-opzichte-van-aanpalende-documenten"><span class="num">2.3</span> Positionering ten opzichte van aanpalende documenten</a></li></ol></li><li><a href="#perspectieven"><span class="num">3</span> Perspectieven en informatiedoelstellingen</a><ol><li><a href="#perspectieven-motivatielaag-waar-komen-de-eisen-vandaan"><span class="num">3.1</span> Motivatielaag: waar komen de eisen vandaan?</a></li><li><a href="#perspectieven-informatiedoelstellingen"><span class="num">3.2</span> Informatiedoelstellingen</a></li><li><a href="#perspectieven-koppeling-met-de-gemma-processen"><span class="num">3.3</span> Koppeling met de GEMMA-processen</a></li><li><a href="#perspectieven-de-17-checks"><span class="num">3.4</span> De 17 checks</a></li><li><a href="#perspectieven-scheiding-tussen-informatiemanagement-en-informatieproductie"><span class="num">3.5</span> Scheiding tussen informatiemanagement en informatieproductie</a></li></ol></li><li><a href="#mijlpalen"><span class="num">4</span> Informatieproductiemijlpalen en -schema</a><ol><li><a href="#mijlpalen-fasering"><span class="num">4.1</span> Fasering</a></li><li><a href="#mijlpalen-mijlpalen"><span class="num">4.2</span> Mijlpalen</a></li><li><a href="#mijlpalen-belangrijke-beslismomenten"><span class="num">4.3</span> Belangrijke beslismomenten</a></li><li><a href="#mijlpalen-informatieproductieschema-invulformat"><span class="num">4.4</span> Informatieproductieschema (invulformat)</a></li><li><a href="#mijlpalen-projectinformatie-invulformat"><span class="num">4.5</span> Projectinformatie (invulformat)</a></li></ol></li><li><a href="#vereisten"><span class="num">5</span> Tabel met vereisten</a><ol><li><a href="#vereisten-overzicht-per-check"><span class="num">5.1</span> Overzicht per check</a></li><li><a href="#vereisten-overzicht-per-specificatie"><span class="num">5.2</span> Overzicht per specificatie</a></li></ol></li><li><a href="#loin"><span class="num">6</span> Level of Information Need</a></li><li><a href="#acceptatie"><span class="num">7</span> Acceptatiecriteria</a><ol><li><a href="#acceptatie-criteria"><span class="num">7.1</span> Criteria</a></li><li><a href="#acceptatie-wie-voert-de-controle-uit"><span class="num">7.2</span> Wie voert de controle uit?</a></li><li><a href="#acceptatie-acceptatietabel-per-mijlpaal"><span class="num">7.3</span> Acceptatietabel per mijlpaal</a></li></ol></li><li><a href="#standaard"><span class="num">8</span> Informatieproductiestandaard en -methoden</a><ol><li><a href="#standaard-normen-en-richtlijnen"><span class="num">8.1</span> Normen en richtlijnen</a></li><li><a href="#standaard-bestandsnaamgeving-informatiecontainers"><span class="num">8.2</span> Bestandsnaamgeving (informatiecontainers)</a></li><li><a href="#standaard-statuscodering-en-metadata"><span class="num">8.3</span> Statuscodering en metadata</a></li><li><a href="#standaard-afspraken-over-het-ifc-model"><span class="num">8.4</span> Afspraken over het IFC-model</a></li><li><a href="#standaard-productiemethode-ruimtemodel"><span class="num">8.5</span> Productiemethode: ruimtemodel</a></li><li><a href="#standaard-ongestructureerde-informatie"><span class="num">8.6</span> Ongestructureerde informatie</a></li></ol></li><li><a href="#geometrie"><span class="num">9</span> Geometrische controle</a><ol><li><a href="#geometrie-het-probleem"><span class="num">9.1</span> Het probleem</a></li><li><a href="#geometrie-aanpak-tweeledige-controle"><span class="num">9.2</span> Aanpak: tweeledige controle</a></li><li><a href="#geometrie-technische-opzet-laag-4"><span class="num">9.3</span> Technische opzet (laag 4)</a></li><li><a href="#geometrie-knelpunt-status-van-de-rdf-vertaling-van-ifc"><span class="num">9.4</span> Knelpunt: status van de RDF-vertaling van IFC</a></li></ol></li><li><a href="#referentie"><span class="num">10</span> Referentie-informatie en gedeelde bronnen</a><ol><li><a href="#referentie-referentie-informatie"><span class="num">10.1</span> Referentie-informatie</a></li><li><a href="#referentie-informatiemodel-als-grondslag"><span class="num">10.2</span> Informatiemodel als grondslag</a></li><li><a href="#referentie-gedeelde-bronnen-bijlagen-in-deze-repository"><span class="num">10.3</span> Gedeelde bronnen (bijlagen in deze repository)</a></li></ol></li><li><a href="#verantwoordelijkheden"><span class="num">11</span> Verantwoordelijkheidsmatrix</a><ol><li><a href="#verantwoordelijkheden-informatiemanagement-sturen"><span class="num">11.1</span> Informatiemanagement (sturen)</a></li><li><a href="#verantwoordelijkheden-informatieproductie-leveren"><span class="num">11.2</span> Informatieproductie (leveren)</a></li><li><a href="#verantwoordelijkheden-koppeling-met-iso-19650-en-gemma"><span class="num">11.3</span> Koppeling met ISO 19650 en GEMMA</a></li><li><a href="#verantwoordelijkheden-invulformat-informatieproductieteam"><span class="num">11.4</span> Invulformat informatieproductieteam</a></li></ol></li><li><a href="#beheer"><span class="num">12</span> Beheer, versiebeheer en doorontwikkeling</a><ol><li><a href="#beheer-beheerorganisatie"><span class="num">12.1</span> Beheerorganisatie</a></li><li><a href="#beheer-wijzigingsprocedure"><span class="num">12.2</span> Wijzigingsprocedure</a></li><li><a href="#beheer-versiebeheer"><span class="num">12.3</span> Versiebeheer</a></li><li><a href="#beheer-iso-19650-transitieplan"><span class="num">12.4</span> ISO 19650-transitieplan</a></li><li><a href="#beheer-community"><span class="num">12.5</span> Community</a></li><li><a href="#beheer-implementatiepad-voorstel"><span class="num">12.6</span> Implementatiepad (voorstel)</a></li><li><a href="#beheer-ontwikkelagenda"><span class="num">12.7</span> Ontwikkelagenda</a></li></ol></li><li><a href="#toetsing"><span class="num">13</span> Verantwoording volgens het digiGO Toetsingskader ILS</a><ol><li><a href="#toetsing-4-1-openheid"><span class="num">13.1</span> 4.1 Openheid</a></li><li><a href="#toetsing-4-2-ontwerp"><span class="num">13.2</span> 4.2 Ontwerp</a></li><li><a href="#toetsing-4-3-geschiktheid"><span class="num">13.3</span> 4.3 Geschiktheid</a></li><li><a href="#toetsing-4-4-standaarden-en-interoperabiliteit"><span class="num">13.4</span> 4.4 Standaarden en interoperabiliteit</a></li><li><a href="#toetsing-4-5-ontwikkeling-en-beheer"><span class="num">13.5</span> 4.5 Ontwikkeling en beheer</a></li><li><a href="#toetsing-4-6-draagvlak-en-adoptie"><span class="num">13.6</span> 4.6 Draagvlak en adoptie</a></li><li><a href="#toetsing-4-7-aansluiting-op-het-ils-referentiesjabloon"><span class="num">13.7</span> 4.7 Aansluiting op het ILS-Referentiesjabloon</a></li></ol></li><li><a href="#open-punten"><span class="num">14</span> Open punten en beslisvragen</a><ol><li><a href="#open-punten-vragen-voor-de-consultatie-van-gemeenten"><span class="num">14.1</span> Vragen voor de consultatie van gemeenten</a></li></ol></li><li><a href="#begrippen"><span class="num">15</span> Begrippen en afkortingen</a><ol></ol></li></ol></nav>
+<main>
+<section id="samenvatting" class="abstract"><h2>Samenvatting</h2><p>Deze Informatieleveringsspecificatie (ILS) Omgevingsvergunning legt vast <strong>welke informatie</strong> een aanvrager in een 3D-informatiemodel (IFC) aanlevert, <strong>in welk formaat</strong>, <strong>op welk moment</strong> en <strong>door wie</strong>, zodat een gemeente de aanvraag voor een omgevingsvergunning voor een groot deel geautomatiseerd kan toetsen.</p>
+<p>De ILS is opgesteld binnen het VNG-programma <strong>BM13 – Machineleesbare regels / GeoBIM-toolkit</strong> en volgt de opbouw van het <strong>digiGO Toetsingskader ILS</strong> en het <strong>ILS-Referentiesjabloon</strong> (Deel A: toelichting, Deel B: machineleesbaar datasjabloon).</p>
+<p><strong>In het kort</strong></p>
+<ul>
+<li><strong>Doel:</strong> 17 checks die gemeenten uitvoeren bij het <em>inhoudelijk behandelen van de aanvraag</em> (GEMMA bedrijfsproces 015 <em>Behandelen aanvraag</em>, deelproces 015-03 <em>Inhoudelijk behandelen aanvraag</em>, processtap <em>Toetsen aan regelgeving</em>).</li>
+<li><strong>Activiteiten:</strong> omgevingsplanactiviteit bouwen (checks #1–#6) en technische bouwactiviteit (checks #7–#17).</li>
+<li><strong>Gebouwtype:</strong> in deze versie in principe <em>woonfunctie</em>.</li>
+<li><strong>Machineleesbaar deel:</strong> 42 IDS 1.0-deelspecificaties, afgeleid van de <em>ILS voor Ruimten in de Omgevingswet</em> (bSDD <code>bsnl/Omgevingswet-Ruimten/0.3.0</code>).</li>
+<li><strong>Informatiemodel:</strong> IFC 4.3 (ISO 16739-1:2024); IFC4 ADD2 TC1 toegestaan zolang software IFC 4.3 nog niet ondersteunt.</li>
+<li><strong>Geometrie:</strong> IDS toetst geen geometrie. Deze ILS stelt daarom aanvullende geometrische eisen en beschrijft een tweeledige controle: de CAD-software levert hoeveelheden aan, de ontvangende software rekent ze na.</li>
+</ul>
+<p class="note">Dit is een <strong>werkversie (0.1)</strong>. Onderdelen die per gemeente of project worden ingevuld staan als <em>invulformat</em> in deze ILS. Openstaande keuzes staan in <a href="#open-punten">Open punten en beslisvragen</a>.</p><p><strong>Colofon.</strong> Uitgegeven door de Vereniging van Nederlandse Gemeenten (VNG). Opgesteld door Lex Ransijn (VDCbase) in opdracht van VNG, onder leiding van projectleider Jeroen de Ruig, in samenwerking met de stuurgroepleden BNA, NEPROM, NL Ingenieurs, Woningbouwers NL, digiGO en Bouwend Nederland.</p>
+</section>
+<section id="leeswijzer"><h2><span class="num">1</span> Leeswijzer en introductie</h2><h3 id="leeswijzer-voor-wie"><span class="num">1.1</span> Voor wie?</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Lezer</th>
+<th>Wat haal je uit dit document?</th>
+<th>Begin bij</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Vergunningverlener / VTH-medewerker gemeente</td>
+<td>Welke informatie je mag verwachten en hoe je die toetst</td>
+<td><a href="#scope">Toepassingsgebied</a>, <a href="#acceptatie">Acceptatiecriteria</a></td>
+</tr>
+<tr>
+<td>Aanvrager, architect, modelleur</td>
+<td>Wat je moet modelleren en aanleveren</td>
+<td><a href="#vereisten">Tabel met vereisten</a>, <a href="#loin">LOIN</a>, <a href="#standaard">Informatieproductiestandaard</a></td>
+</tr>
+<tr>
+<td>Softwareleverancier</td>
+<td>Hoe de eisen machineleesbaar zijn en hoe checks werken</td>
+<td><a href="#loin">LOIN</a>, <a href="#geometrie">Geometrische controle</a>, map <code>ids/</code></td>
+</tr>
+<tr>
+<td>Beleidsmaker, digiGO-adviseur</td>
+<td>Hoe deze ILS zich verhoudt tot het Toetsingskader ILS</td>
+<td><a href="#toetsing">Verantwoording toetsingskader</a></td>
+</tr>
+</tbody></table></div>
+<h3 id="leeswijzer-introductie"><span class="num">1.2</span> Introductie</h3><p>Deze ILS beschrijft de afspraken voor het aanleveren van gegevens aan het VTH-domein (vergunningverlening, toezicht en handhaving) bij een aanvraag voor een omgevingsvergunning. Het document is een <strong>voorbeeld-EIR</strong> (<em>Exchange Information Requirements</em>) van een gemeente: een generieke uitvraag die elke gemeente kan overnemen en aanvullen met eigen eisen.</p>
+<p>De ILS volgt NEN-EN ISO 19650-1/-2. De herziening van de ISO 19650-serie (onder meer de overgang van EIR naar <em>information production requirements</em>, IPR) volgen we actief. Zie <a href="#beheer">Beheer en versiebeheer</a>.</p>
+<h3 id="leeswijzer-positie-in-het-lagenmodel-van-de-geobim-toolkit"><span class="num">1.3</span> Positie in het lagenmodel van de GeoBIM-toolkit</h3><p>De GeoBIM-toolkit beschrijft elke check in zes lagen. Deze ILS bundelt <strong>laag 2</strong> voor alle 17 checks:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Laag</th>
+<th>Inhoud</th>
+<th>Relatie met deze ILS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>Begrippen en juridische bron (wet, omgevingsplan, NEN)</td>
+<td>Verwezen vanuit de <a href="#vereisten">Tabel met vereisten</a></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Methode: procedure, context, interpretatie</td>
+<td>Buiten deze ILS (checkfiche per check)</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>Data-eisen: BIM- en geo-informatie</strong></td>
+<td><strong>Deze ILS</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Pseudocode: stappen, uitkomstparameters, gemeentelijke variatie</td>
+<td>Gebruikt de data uit laag 2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Referentiecodering: machineleesbare regels (SHACL, SPARQL)</td>
+<td>Zie <a href="#geometrie">Geometrische controle</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Implementatievoorbeelden: volwassenheidsniveaus, video&#39;s, code</td>
+<td>Buiten deze ILS</td>
+</tr>
+</tbody></table></div>
+<p>De checkfiches (één map per check) verwijzen voor laag 2 naar de betreffende rij in de <a href="#vereisten">Tabel met vereisten</a>.</p>
+</section>
+<section id="scope"><h2><span class="num">2</span> Toepassings- en werkingsgebied</h2><h3 id="scope-toepassingsgebied"><span class="num">2.1</span> Toepassingsgebied</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Dimensie</th>
+<th>Afbakening in versie 0.1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Domein</td>
+<td>Vergunningverlening in het kader van de Omgevingswet (VTH)</td>
+</tr>
+<tr>
+<td>Proces</td>
+<td>GEMMA 015 <em>Behandelen aanvraag</em> → 015-03 <em>Inhoudelijk behandelen aanvraag</em> → processtap <em>Toetsen aan regelgeving</em> (activiteiten <em>Controleren indieningsvereisten</em> en <em>Uitvoeren inhoudelijke toetsing</em>). Zie de <a href="#gemma-matrix">GEMMA-matrix</a> voor de overige processen</td>
+</tr>
+<tr>
+<td>Activiteiten</td>
+<td>Omgevingsplanactiviteit bouwen (OPA, ook <em>buitenplanse OPA</em>, BOPA) en technische bouwactiviteit (TBA)</td>
+</tr>
+<tr>
+<td>Fasen</td>
+<td>Vooroverleg, aanvraag OPA, aanvraag TBA (zie <a href="#mijlpalen">Mijlpalen</a>)</td>
+</tr>
+<tr>
+<td>Type bouwwerk</td>
+<td>Gebouw, in principe met <strong>woonfunctie</strong> (nieuwbouw en verbouw)</td>
+</tr>
+<tr>
+<td>Checks</td>
+<td>17 checks uit de BM13-regelinventarisatie (v0.3)</td>
+</tr>
+<tr>
+<td>Informatiemodel</td>
+<td>IFC 4.3 (ISO 16739-1:2024)</td>
+</tr>
+</tbody></table></div>
+<p><strong>Buiten scope</strong> in deze versie: organisatie-informatie-eisen (OIR) en asset-informatie-eisen (AIR) van de gemeente, welstandstoetsing (ID11), bijwerken van de BAG (ID12), duurzaamheidsanalyses anders dan MPG, en andere gebruiksfuncties dan wonen. De aanbeveling is dat elke gemeente een eigen OIR en AIR opstelt; deze ILS kan daar later op aansluiten.</p>
+<h3 id="scope-werkingsgebied"><span class="num">2.2</span> Werkingsgebied</h3><p>De ILS geldt voor partijen die een aanvraag met een 3D-informatiemodel indienen bij een gemeente die deze ILS als indieningsvereiste hanteert. De rollen volgen de GEMMA-procesbeschrijving en de rolverdeling uit ISO 19650-2:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Rol (ISO 19650)</th>
+<th>Rol in de vergunningsketen</th>
+<th>Verplichting</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Opdrachtgever (<em>appointing party</em>)</td>
+<td>Gemeente als bevoegd gezag</td>
+<td>Stelt de ILS vast als indieningsvereiste en toetst</td>
+</tr>
+<tr>
+<td>Hoofdopdrachtnemer (<em>lead appointed party</em>)</td>
+<td>Aanvrager / initiatiefnemer</td>
+<td>Is verantwoordelijk voor een complete, correcte aanlevering</td>
+</tr>
+<tr>
+<td>Opdrachtnemer (<em>appointed party</em>)</td>
+<td>Architect, modelleur, adviseur</td>
+<td>Produceert het informatiemodel volgens deze ILS</td>
+</tr>
+<tr>
+<td>Derde</td>
+<td>Omgevingsloket (DSO), softwareleverancier, adviesdienst</td>
+<td>Faciliteert indienen, valideren en toetsen</td>
+</tr>
+</tbody></table></div>
+<p>Let op: in de vergunningsketen is de gemeente geen opdrachtgever in contractuele zin. We gebruiken de ISO-rollen hier om de informatiestroom te beschrijven, niet om een contractrelatie te suggereren. Zie <a href="#verantwoordelijkheden">Verantwoordelijkheidsmatrix</a>.</p>
+<h3 id="scope-positionering-ten-opzichte-van-aanpalende-documenten"><span class="num">2.3</span> Positionering ten opzichte van aanpalende documenten</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Wat staat erin</th>
+<th>Relatie met deze ILS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Deze ILS</strong></td>
+<td>Welke informatie, formaat, moment, rol, acceptatiecriteria</td>
+<td>—</td>
+</tr>
+<tr>
+<td>ILS voor Ruimten in de Omgevingswet (digiGO)</td>
+<td>Ruimtelijke objecten en attributen</td>
+<td>Bron van het machineleesbare deel (IDS), aangevuld en gesplitst per specificatie</td>
+</tr>
+<tr>
+<td>BIM basis ILS (digiGO)</td>
+<td>Generieke afspraken over IFC-uitwisseling</td>
+<td>Uitgangspunt; deze ILS verwijst ernaar en herhaalt het niet</td>
+</tr>
+<tr>
+<td>ILS Ontwerp en Engineering (O&amp;E)</td>
+<td>Afspraken in de ontwerpfase</td>
+<td>Afgestemd over het gebruik van <code>ObjectType</code></td>
+</tr>
+<tr>
+<td>Informatieprotocol (nog op te stellen)</td>
+<td>Juridische status van het model bij de aanvraag</td>
+<td>Aanbevolen aanvulling, zie <a href="#open-punten">Open punten</a></td>
+</tr>
+<tr>
+<td>BIM-uitvoeringsplan / informatieproductieplan van de aanvrager</td>
+<td>Projectspecifieke uitwerking</td>
+<td>Vult de invulformats in deze ILS in</td>
+</tr>
+<tr>
+<td>Checkfiches GeoBIM-toolkit (17 mappen)</td>
+<td>Methode en regels per check</td>
+<td>Verwijzen naar deze ILS voor laag 2</td>
+</tr>
+<tr>
+<td>Indieningsvereisten Omgevingsregeling</td>
+<td>Wettelijke indieningsvereisten</td>
+<td>Deze ILS is een digitale invulling, geen vervanging</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="perspectieven"><h2><span class="num">3</span> Perspectieven en informatiedoelstellingen</h2><h3 id="perspectieven-motivatielaag-waar-komen-de-eisen-vandaan"><span class="num">3.1</span> Motivatielaag: waar komen de eisen vandaan?</h3><p>ISO 19650-1 (herzien) onderscheidt drie informatieperspectieven die naast elkaar bestaan. Deze ILS maakt per perspectief zichtbaar waar de eisen vandaan komen:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Perspectief</th>
+<th>Bron van de eis in deze casus</th>
+<th>Uitwerking</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Organisatie</strong></td>
+<td>Gemeentelijke taken in vergunningverlening, toezicht en handhaving; het GEMMA-procesmodel (015 <em>Behandelen aanvraag</em>); de wens om aanvragen sneller en transparanter te toetsen</td>
+<td>Informatiedoelstellingen ID01, ID02, ID05</td>
+</tr>
+<tr>
+<td><strong>Asset</strong></td>
+<td>Het bouwwerk als object in basisregistraties (BAG, BRK) en omgevingsplan; later hergebruik van het model bij toezicht en handhaving</td>
+<td>ID03, ID04, ID10, ID12 (deels buiten scope)</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td>De concrete aanvraag: vooroverleg, aanvraag OPA en aanvraag TBA voor één bouwwerk</td>
+<td>17 checks, <a href="#vereisten">Tabel met vereisten</a></td>
+</tr>
+</tbody></table></div>
+<p>De keten loopt dus van <strong>gemeentelijke taak</strong> (vergunningverlening, toezicht, inhoudelijke beoordeling en handhaving) via <strong>informatiedoelstelling</strong> naar <strong>check</strong> en ten slotte naar <strong>IDS-specificatie</strong>. In de <a href="#vereisten">Tabel met vereisten</a> is elke check naar een informatiedoelstelling en naar de betreffende IDS&#39;en herleidbaar.</p>
+<h3 id="perspectieven-informatiedoelstellingen"><span class="num">3.2</span> Informatiedoelstellingen</h3><p>De informatiedoelstellingen (ID) zijn groepen eisen. <strong>ID01 en ID02 zijn gekoppeld aan de twee aanvraagactiviteiten van deze ILS:</strong> ID01 aan de omgevingsplanactiviteit bouwen, ID02 aan de technische bouwactiviteit. Die twee zijn in deze versie uitgewerkt tot de 17 checks.</p>
+<p><strong>ID03 tot en met ID12 zijn optioneel.</strong> Het zijn voorstellen om als doelstelling op te nemen. Ze vallen buiten de 17 checks en zijn nog niet onderzocht. De verwachting is wel dat gemeenten de informatie uit het model ook hiervoor gaan gebruiken. Een gemeente kan ze nu al uitvragen, maar ze zijn geen voorwaarde voor een ontvankelijke aanvraag.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Doelstelling</th>
+<th>Status in v0.1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>ID01</strong></td>
+<td><strong>Omgevingsplanactiviteit bouwen (OPA): controle op het omgevingsplan (gemeentelijk)</strong></td>
+<td><strong>Verplicht – checks #1–#6</strong></td>
+</tr>
+<tr>
+<td><strong>ID02</strong></td>
+<td><strong>Technische bouwactiviteit (TBA): controle op het Besluit bouwwerken leefomgeving (landelijk)</strong></td>
+<td><strong>Verplicht – checks #7–#17, inclusief de informatie uit ID01</strong></td>
+</tr>
+<tr>
+<td>ID03</td>
+<td>Digitalisering bestaand bouwwerk voor VTH-processen (inmeten, scannen, NEN 2580-rapportage)</td>
+<td>Optioneel – voorstel, nog te onderzoeken</td>
+</tr>
+<tr>
+<td>ID04</td>
+<td>VTH-processen voeden met gebouwinformatie (hoeveelheden uit het ruimtemodel en uit fysieke objecten)</td>
+<td>Optioneel – voorstel, nog te onderzoeken</td>
+</tr>
+<tr>
+<td>ID05</td>
+<td>Vergunnings-, toezicht- en handhavingsproces ondersteunen (modelcoördinatie, issuebeheer via BCF)</td>
+<td>Optioneel – voorstel, nog te onderzoeken</td>
+</tr>
+<tr>
+<td>ID06</td>
+<td>Gemeente en omwonenden bij het ontwerp betrekken (visualisatie)</td>
+<td>Optioneel – voorstel, nog te onderzoeken</td>
+</tr>
+<tr>
+<td>ID07</td>
+<td>Duurzaamheidsanalyses (GWP, WLC; MPG valt onder ID02, check #13)</td>
+<td>Optioneel – voorstel, nog te onderzoeken</td>
+</tr>
+<tr>
+<td>ID08</td>
+<td>Overdracht en archivering van digitale gegevens</td>
+<td>Optioneel – voorstel, nog te onderzoeken</td>
+</tr>
+<tr>
+<td>ID09</td>
+<td>Decommissioning 2 Reuse (circulariteit)</td>
+<td>Optioneel – voorstel, nog te onderzoeken</td>
+</tr>
+<tr>
+<td>ID10</td>
+<td>Panddelen en verblijfsobjecten (IfcSpatialZone per panddeel, IfcZone per verblijfsobject)</td>
+<td>Optioneel – voorstel, nog te onderzoeken (sterk aanbevolen bij bestaande bouw)</td>
+</tr>
+<tr>
+<td>ID11</td>
+<td>Controle op welstandseisen</td>
+<td>Optioneel – voorstel, nog te onderzoeken</td>
+</tr>
+<tr>
+<td>ID12</td>
+<td>BAG bijwerken</td>
+<td>Optioneel – voorstel, nog te onderzoeken</td>
+</tr>
+</tbody></table></div>
+<h4 id="perspectieven-id01-informatie-opnieuw-meeleveren-bij-id02">ID01-informatie opnieuw meeleveren bij ID02</h4><p>De informatie voor ID01 wordt vroeg in het traject geleverd: bij het vooroverleg (M1) en de aanvraag voor de omgevingsplanactiviteit (M2). <strong>Bij de aanvraag voor de technische bouwactiviteit (M3, ID02) levert de aanvrager die informatie opnieuw mee, in de bijgewerkte versie.</strong> De reden:</p>
+<ul>
+<li>Het ontwerp is tussen M2 en M3 verder uitgewerkt. Hoogte, bouwlagen, gebruiksfuncties en georeferentie kunnen zijn veranderd, en de gemeente moet kunnen zien dat de TBA-aanvraag nog past binnen wat voor de OPA is getoetst.</li>
+<li>De TBA-checks gebruiken dezelfde basisobjecten, zoals project, georeferentie, percelen, gebouw, bouwlagen en gebruiksfuncties (zie de <a href="#vereisten">Tabel met vereisten</a>).</li>
+<li>Er is dan één samenhangend model per aanvraag, zonder verwijzing naar een eerder ingediende versie.</li>
+</ul>
+<p>Concreet: het model bij M3 voldoet aan <strong>alle</strong> IDS-specificaties van ID01 <strong>én</strong> ID02. De gemeente mag checks #1–#6 bij M3 opnieuw uitvoeren om afwijkingen ten opzichte van M2 te signaleren.</p>
+<p><a id="gemma-matrix"></a></p>
+<h3 id="perspectieven-koppeling-met-de-gemma-processen"><span class="num">3.3</span> Koppeling met de GEMMA-processen</h3><p>De matrix hieronder koppelt elke informatiedoelstelling aan de bedrijfsprocessen uit het <a href="https://www.gemmaonline.nl/wiki/Bedrijfsprocessen_omgevingswet">GEMMA-processenmodel Omgevingswet</a>. Het vertrekpunt is het deelproces <a href="https://www.gemmaonline.nl/wiki?title=Uitwerking_deelproces&amp;proces=Omgevingswet/id-ad8a0931-792a-46c3-b9e9-a9c669fedf59">015-03 Inhoudelijk behandelen aanvraag</a>.</p>
+<p>● = primair proces waarin de informatie wordt gebruikt · ○ = ondersteunend of later gebruik</p>
+<h4 id="perspectieven-gebruikte-processen-en-codes">Gebruikte processen en codes</h4><div class="tw"><table>
+<thead>
+<tr>
+<th>Code</th>
+<th>GEMMA-proces</th>
+<th>Niveau</th>
+<th>Cluster</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>013</strong></td>
+<td>Verkennen en begeleiden initiatief</td>
+<td>Bedrijfsproces</td>
+<td>Behandelen aanvraag / melding / informatie</td>
+</tr>
+<tr>
+<td><strong>015</strong></td>
+<td>Behandelen aanvraag</td>
+<td>Bedrijfsproces</td>
+<td>Behandelen aanvraag / melding / informatie</td>
+</tr>
+<tr>
+<td>015-02</td>
+<td>Uitvoeren intake aanvraag</td>
+<td>Deelproces</td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>015-03</td>
+<td>Inhoudelijk behandelen aanvraag</td>
+<td>Deelproces</td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>015-03.1</td>
+<td>Toetsen aan regelgeving</td>
+<td>Processtap*</td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>015-03.2</td>
+<td>Opstellen ontwerpbesluit</td>
+<td>Processtap*</td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>015-03.3</td>
+<td>Ter inzage leggen ontwerpbesluit</td>
+<td>Processtap*</td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>015-03.4</td>
+<td>Opstellen besluit</td>
+<td>Processtap*</td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>015-04</td>
+<td>Besluiten aanvraag</td>
+<td>Deelproces</td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>015-05</td>
+<td>Bekendmaken beschikking op aanvraag</td>
+<td>Deelproces</td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>BMI</td>
+<td>Behandelen melding of informatie</td>
+<td>Bedrijfsproces (nr. te verifiëren)</td>
+<td>Behandelen aanvraag / melding / informatie</td>
+</tr>
+<tr>
+<td>UC</td>
+<td>Uitvoeren controle</td>
+<td>Bedrijfsproces (nr. te verifiëren)</td>
+<td>Toezichthouden en handhaven</td>
+</tr>
+<tr>
+<td>025</td>
+<td>Nemen handhavingsbesluit</td>
+<td>Bedrijfsproces (nr. te verifiëren; deelproces 025-02 <em>Voorbereiden opleggen sanctie</em>)</td>
+<td>Toezichthouden en handhaven</td>
+</tr>
+<tr>
+<td>AB</td>
+<td>Aanleveren brondata</td>
+<td>Bedrijfsproces (nr. te verifiëren)</td>
+<td>Brondatabeheer</td>
+</tr>
+<tr>
+<td>BIO</td>
+<td>Beheren informatie over objecten</td>
+<td>Bedrijfsproces (nr. te verifiëren)</td>
+<td>Brondatabeheer</td>
+</tr>
+<tr>
+<td>MA</td>
+<td>Monitoren en analyseren</td>
+<td>Bedrijfsproces (nr. te verifiëren)</td>
+<td>Evaluatie</td>
+</tr>
+</tbody></table></div>
+<p>* GEMMA nummert de processtappen binnen een deelproces niet. De codes 015-03.1 tot en met .4 zijn een eigen codering in deze ILS, in de volgorde van GEMMA. Codes zonder nummer (BMI, UC, AB, BIO, MA) zijn tijdelijke afkortingen: het GEMMA-nummer is nog niet bevestigd.</p>
+<h4 id="perspectieven-matrix-informatiedoelstellingen-gemma-processen">Matrix informatiedoelstellingen × GEMMA-processen</h4><div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>013</th>
+<th>015-02</th>
+<th>015-03.1</th>
+<th>015-03.2</th>
+<th>015-03.3</th>
+<th>015-03.4</th>
+<th>015-04</th>
+<th>015-05</th>
+<th>BMI</th>
+<th>UC</th>
+<th>025</th>
+<th>AB</th>
+<th>BIO</th>
+<th>MA</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>ID01</strong> OPA</td>
+<td class="c">○</td>
+<td class="c">○</td>
+<td class="c">●</td>
+<td class="c">○</td>
+<td class="c"></td>
+<td class="c">○</td>
+<td class="c">○</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+</tr>
+<tr>
+<td><strong>ID02</strong> TBA</td>
+<td class="c"></td>
+<td class="c">○</td>
+<td class="c">●</td>
+<td class="c">○</td>
+<td class="c"></td>
+<td class="c">○</td>
+<td class="c">○</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">○</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>ID03 Digitalisering bestaand</td>
+<td class="c">○</td>
+<td class="c"></td>
+<td class="c">○</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">●</td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>ID04 VTH voeden met gebouwinformatie</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">○</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">○</td>
+<td class="c">○</td>
+</tr>
+<tr>
+<td>ID05 VTH-proces ondersteunen</td>
+<td class="c"></td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">●</td>
+<td class="c">○</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>ID06 Betrekken omgeving</td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">○</td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">○</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>ID07 Duurzaamheid</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">○</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">●</td>
+</tr>
+<tr>
+<td>ID08 Overdracht en archief</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">○</td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">●</td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>ID09 Circulariteit</td>
+<td class="c">○</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">○</td>
+<td class="c">●</td>
+</tr>
+<tr>
+<td>ID10 Panddelen en verblijfsobjecten</td>
+<td class="c"></td>
+<td class="c">○</td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>ID11 Welstand</td>
+<td class="c">○</td>
+<td class="c"></td>
+<td class="c">●</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>ID12 BAG bijwerken</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">○</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c"></td>
+</tr>
+</tbody></table></div>
+<h4 id="perspectieven-toelichting-per-doelstelling">Toelichting per doelstelling</h4><div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Primaire processtap / activiteit (GEMMA)</th>
+<th>Toelichting</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ID01</td>
+<td>015-03.1 <em>Controleren indieningsvereisten</em>, <em>Uitvoeren inhoudelijke toetsing</em></td>
+<td>Toetsing aan het omgevingsplan (checks #1–#6). Indicatief al in 013 bij het vooroverleg</td>
+</tr>
+<tr>
+<td>ID02</td>
+<td>015-03.1 <em>Controleren indieningsvereisten</em>, <em>Uitvoeren inhoudelijke toetsing</em></td>
+<td>Toetsing aan het Bbl (checks #7–#17), inclusief herhaling van ID01. Later bruikbaar bij <em>Uitvoeren controle</em></td>
+</tr>
+<tr>
+<td>ID03</td>
+<td>BIO; 013</td>
+<td>Een digitaal model van de bestaande situatie als basis voor verbouw en objectinformatie</td>
+</tr>
+<tr>
+<td>ID04</td>
+<td>UC; BIO</td>
+<td>Hoeveelheden en materialen uit het model als voorbereiding op controles en analyses</td>
+</tr>
+<tr>
+<td>ID05</td>
+<td>015-02 <em>Registreren</em>, <em>Toewijzen hoofdbehandelaar</em>; 015-03.1 <em>Betrekken interne adviseurs / ketenpartners</em>; UC</td>
+<td>Model en BCF-issues als gedeelde bron voor behandelaars, adviseurs en toezichthouders</td>
+</tr>
+<tr>
+<td>ID06</td>
+<td>013; 015-03.3 <em>Ter inzage leggen ontwerpbesluit</em>; 015-03.2 <em>Verzamelen zienswijzen</em></td>
+<td>Visualisatie voor participatie en zienswijzen</td>
+</tr>
+<tr>
+<td>ID07</td>
+<td>MA; 015-03.1</td>
+<td>Duurzaamheidsprestaties monitoren (MPG zelf zit in ID02)</td>
+</tr>
+<tr>
+<td>ID08</td>
+<td>BMI (o.a. gereedmelding / dossier bevoegd gezag); BIO; 015-05 <em>Administratief afronden</em></td>
+<td>Opleverdossier en archivering</td>
+</tr>
+<tr>
+<td>ID09</td>
+<td>MA; BIO</td>
+<td>Restwaarde en circulariteit op objectniveau</td>
+</tr>
+<tr>
+<td>ID10</td>
+<td>015-03.1 <em>Controleren gerelateerde verzoeken</em>, <em>Uitvoeren inhoudelijke toetsing</em>; AB</td>
+<td>Ruimten koppelen aan pand en verblijfsobject (BAG-ID)</td>
+</tr>
+<tr>
+<td>ID11</td>
+<td>015-03.1 <em>Betrekken interne adviseurs</em>, <em>Opstellen advies</em> (welstandscommissie); 013</td>
+<td>Welstandstoetsing met het model</td>
+</tr>
+<tr>
+<td>ID12</td>
+<td>AB; BIO; 015-05</td>
+<td>Terugleveren van gebouw- en verblijfsobjectgegevens aan de BAG</td>
+</tr>
+</tbody></table></div>
+<p class="note">De koppeling van ID01 en ID02 aan 015-03 volgt uit de BM13-scope. De koppelingen van ID03–ID12 zijn een eerste voorstel en worden bij de uitwerking van die doelstellingen getoetst met VNG (GEMMA-beheer) en de pilotgemeenten.</p><h3 id="perspectieven-de-17-checks"><span class="num">3.4</span> De 17 checks</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Activiteit</th>
+<th>ID</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Gebruiksfunctie komt overeen met bestemming</td>
+<td>OPA</td>
+<td>ID01</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Maximale bouwhoogte</td>
+<td>OPA</td>
+<td>ID01</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Maximaal bebouwingspercentage</td>
+<td>OPA</td>
+<td>ID01</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Gebruiksfunctie/bestemming beperkt tot x bouwlagen</td>
+<td>OPA</td>
+<td>ID01</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Beroep aan huis: maximaal 50% gebruiksoppervlakte</td>
+<td>OPA</td>
+<td>ID01</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Maximum aantal bouwlagen</td>
+<td>OPA</td>
+<td>ID01</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Brandcompartimenten</td>
+<td>TBA</td>
+<td>ID02</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Brandwerendheid</td>
+<td>TBA</td>
+<td>ID02</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Vrije breedte</td>
+<td>TBA</td>
+<td>ID02</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Hoogteverschil</td>
+<td>TBA</td>
+<td>ID02</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Rc-waarde</td>
+<td>TBA</td>
+<td>ID02</td>
+</tr>
+<tr>
+<td>12</td>
+<td>U-waarde</td>
+<td>TBA</td>
+<td>ID02</td>
+</tr>
+<tr>
+<td>13</td>
+<td>MPG</td>
+<td>TBA</td>
+<td>ID02</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vluchtwegen</td>
+<td>TBA</td>
+<td>ID02</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Loopafstand</td>
+<td>TBA</td>
+<td>ID02</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Vluchtbreedte</td>
+<td>TBA</td>
+<td>ID02</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Daglicht</td>
+<td>TBA</td>
+<td>ID02</td>
+</tr>
+</tbody></table></div>
+<h3 id="perspectieven-scheiding-tussen-informatiemanagement-en-informatieproductie"><span class="num">3.5</span> Scheiding tussen informatiemanagement en informatieproductie</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Laag</th>
+<th>Wie</th>
+<th>Artefacten</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Informatiemanagement (sturen)</td>
+<td>Gemeente (bevoegd gezag) en richtlijnhouder</td>
+<td>Deze ILS, acceptatiecriteria, besluit over ontvankelijkheid</td>
+</tr>
+<tr>
+<td>Informatieproductie (leveren)</td>
+<td>Aanvrager en diens modelleurs</td>
+<td>Informatiemodel (IFC), BIM-uitvoeringsplan, validatierapport</td>
+</tr>
+</tbody></table></div>
+<p>Het modelleren ligt dus bij de aanvrager. De gemeente stelt eisen en toetst.</p>
+</section>
+<section id="mijlpalen"><h2><span class="num">4</span> Informatieproductiemijlpalen en -schema</h2><h3 id="mijlpalen-fasering"><span class="num">4.1</span> Fasering</h3><p>We volgen de fasering van de <strong>STB 2025</strong> (BNA/NL Ingenieurs). Een gemeente mag de STB 2014-fasering gebruiken als die beter aansluit op haar werkwijze.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Fase STB 2025</th>
+<th>Code</th>
+<th>Relevantie voor deze ILS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.1–1.3 Initiatief, haalbaarheid, projectdefinitie</td>
+<td>INI, HBH, PD</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2.1 Structuurontwerp</td>
+<td>SO</td>
+<td>Vooroverleg (optioneel)</td>
+</tr>
+<tr>
+<td>2.2 Voorontwerp</td>
+<td>VO</td>
+<td><strong>Mijlpaal M1: vooroverleg</strong></td>
+</tr>
+<tr>
+<td>2.3 Definitief ontwerp</td>
+<td>DO</td>
+<td>Voorbereiding aanvraag</td>
+</tr>
+<tr>
+<td>2.4 Omgevingsvergunning</td>
+<td>OV</td>
+<td><strong>M2: aanvraag OPA</strong> en <strong>M3: aanvraag TBA</strong></td>
+</tr>
+<tr>
+<td>3.1 Technisch ontwerp</td>
+<td>TO</td>
+<td>M3 als de TBA later wordt ingediend (gefaseerde aanvraag)</td>
+</tr>
+<tr>
+<td>3.2 Uitvoeringsgereed ontwerp</td>
+<td>UO</td>
+<td>Buiten scope</td>
+</tr>
+<tr>
+<td>4.x Realisatie, oplevering</td>
+<td>UIT, AB, OND</td>
+<td>Buiten scope (toezicht, <em>as built</em>)</td>
+</tr>
+<tr>
+<td>5 Gebruik</td>
+<td>GBR</td>
+<td>Buiten scope</td>
+</tr>
+</tbody></table></div>
+<h3 id="mijlpalen-mijlpalen"><span class="num">4.2</span> Mijlpalen</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Mijlpaal</th>
+<th>Moment</th>
+<th>GEMMA-stap</th>
+<th>Wat wordt geleverd</th>
+<th>Checks</th>
+<th>Minimale IDS-set</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>M1 Vooroverleg</strong></td>
+<td>Voorontwerp, vóór de formele aanvraag</td>
+<td>Vooroverleg / 21.090 Verzorgen aanvraag</td>
+<td>Massamodel met georeferentie, gebouw, bouwlagen en gebruiksfuncties</td>
+<td>#1–#6 (indicatief)</td>
+<td>9.01a–e, 9.02, 9.03, 9.04, 9.05a, 9.06a, 9.08</td>
+</tr>
+<tr>
+<td><strong>M2 Aanvraag OPA</strong></td>
+<td>Definitief ontwerp</td>
+<td>21.130 Indienen bescheiden t.b.v. toetsing aan omgevingsplan</td>
+<td>Ruimtemodel met bruto/netto inhouden en gebruiksfuncties</td>
+<td>#1–#6</td>
+<td>Alle specificaties met #1–#6 in de <a href="#vereisten">Tabel met vereisten</a></td>
+</tr>
+<tr>
+<td><strong>M3 Aanvraag TBA</strong></td>
+<td>Definitief of technisch ontwerp</td>
+<td>Indienen bescheiden technische bouwactiviteit</td>
+<td>Volledig ruimtemodel plus fysieke elementen met eigenschappen, <strong>inclusief de bijgewerkte ID01-informatie</strong></td>
+<td>#1–#17 (#1–#6 als controle op wijzigingen)</td>
+<td>Alle specificaties met #1–#17</td>
+</tr>
+<tr>
+<td>M4 Acceptatie</td>
+<td>Na elke levering</td>
+<td>015-02 Uitvoeren intake aanvraag / 015-03 Toetsen aan regelgeving (<em>Controleren indieningsvereisten</em>)</td>
+<td>Validatierapport, eventueel BCF-issues terug naar de aanvrager</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<p>De gemeente neemt na elke levering <strong>[invullen, voorstel: 10] werkdagen</strong> om de ontvankelijkheid van het informatiemodel te bevestigen (acceptatiecriteria AC1–AC4). Dit valt binnen de wettelijke beslistermijn en staat daar niet los van.</p>
+<blockquote>
+<p><strong>Let op:</strong> de informatie voor ID01 (M1/M2) moet bij M3 opnieuw worden meegeleverd, in de actuele versie. Zie <a href="#perspectieven">ID01-informatie opnieuw meeleveren</a>.</p>
+</blockquote>
+<h3 id="mijlpalen-belangrijke-beslismomenten"><span class="num">4.3</span> Belangrijke beslismomenten</h3><ol>
+<li><strong>Vooroverleg:</strong> is het initiatief kansrijk ten opzichte van het omgevingsplan?</li>
+<li><strong>Ontvankelijkheid:</strong> voldoet het aangeleverde model aan de acceptatiecriteria?</li>
+<li><strong>Inhoudelijke toetsing:</strong> voldoet het bouwplan aan de 17 checks (geautomatiseerd, met menselijke beoordeling waar nodig)?</li>
+<li><strong>Besluit:</strong> vergunning verlenen, weigeren of aanvullende gegevens vragen.</li>
+</ol>
+<h3 id="mijlpalen-informatieproductieschema-invulformat"><span class="num">4.4</span> Informatieproductieschema (invulformat)</h3><p>Dit schema vult de aanvrager in, bijvoorbeeld in het BIM-uitvoeringsplan:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Mijlpaal</th>
+<th>Informatiecontainer (bestandsnaam)</th>
+<th>Verantwoordelijke</th>
+<th>Geplande datum</th>
+<th>Status (S0–A)</th>
+<th>IDS-validatie geslaagd</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>M1</td>
+<td><code>&lt;project&gt;_ARC_XX_M3D_ZZZ.ifc</code></td>
+<td><code>&lt;organisatie&gt;</code></td>
+<td><code>jjjj-mm-dd</code></td>
+<td>S3</td>
+<td>ja/nee</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr>
+<td>M3</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody></table></div>
+<h3 id="mijlpalen-projectinformatie-invulformat"><span class="num">4.5</span> Projectinformatie (invulformat)</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Veld</th>
+<th>Invulling</th>
+<th>Waar in het model</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Gemeente / bevoegd gezag</td>
+<td><code>&lt;Gemeente Y&gt;</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Volwassenheidsniveau gemeente</td>
+<td><code>1 / 2 / 3 / 4 / 5</code> (CHEK-volwassenheidsmatrix)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Projectnaam en -code</td>
+<td><code>&lt;code&gt;</code></td>
+<td><code>IfcProject.Name</code></td>
+</tr>
+<tr>
+<td>Zaaknummer DSO</td>
+<td><code>&lt;nummer&gt;</code></td>
+<td><code>IfcProject.LongName</code> of <code>Description</code></td>
+</tr>
+<tr>
+<td>Locatie</td>
+<td>Kadastrale percelen, BAG-pand-ID&#39;s, verblijfsobject-ID&#39;s</td>
+<td>9.03b, 9.04, 9.05a, 9.07</td>
+</tr>
+<tr>
+<td>Scope</td>
+<td>Nieuwbouw / verbouw; heel pand, panddeel of verblijfsobject(en)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Fase</td>
+<td>STB 2025-fasecode</td>
+<td><code>IfcProject.Phase</code></td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="vereisten"><h2><span class="num">5</span> Tabel met vereisten</h2><p>De tabel met vereisten koppelt elke check aan de regelgeving, de aanvraagactiviteit en de deelspecificaties (IDS) die de benodigde informatie uitvragen. Zo is per informatie-eis te herleiden <strong>waarom</strong> (check), <strong>wat</strong> (IDS), <strong>wanneer</strong> (mijlpaal, zie <a href="#mijlpalen">Mijlpalen</a>) en <strong>door wie</strong> (zie <a href="#verantwoordelijkheden">Verantwoordelijkheidsmatrix</a>) er geleverd wordt.</p>
+<p>Afkortingen: <strong>OPA</strong> = omgevingsplanactiviteit (bouwen, gemeentelijk omgevingsplan); <strong>TBA</strong> = technische bouwactiviteit (Besluit bouwwerken leefomgeving, Bbl).</p>
+<h3 id="vereisten-overzicht-per-check"><span class="num">5.1</span> Overzicht per check</h3><p>ID01 = omgevingsplanactiviteit bouwen, ID02 = technische bouwactiviteit. Bij een aanvraag voor ID02 gelden ook alle specificaties van ID01; die informatie wordt opnieuw en bijgewerkt meegeleverd.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Omschrijving</th>
+<th>Activiteit</th>
+<th>Bron</th>
+<th>Informatiedoel</th>
+<th>Geometrie nodig</th>
+<th>Aantal IDS</th>
+<th>Deelspecificaties</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>#1</td>
+<td>Gebruiksfunctie komt overeen met bestemming</td>
+<td>OPA</td>
+<td>Omgevingsplan</td>
+<td>ID01</td>
+<td>nee</td>
+<td>15</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9</a>, <a href="ids/02-9.01a-Georeferentie.ids">9.01a</a>, <a href="ids/03-9.01b-Coordinatenstelsel.ids">9.01b</a>, <a href="ids/04-9.01c-Projectadres-IFC4X3-ADD2.ids">9.01c</a>, <a href="ids/05-9.01d-Perceeladres-IFC4.ids">9.01d</a>, <a href="ids/06-9.01e-Gebouwadres-IFC4.ids">9.01e</a>, <a href="ids/07-9.02-Project.ids">9.02</a>, <a href="ids/09-9.03b-Bouwwerkperceel.ids">9.03b</a>, <a href="ids/10-9.04-Kadastraal-Perceel.ids">9.04</a>, <a href="ids/13-9.06a-Bouwlaag-voorheen-verdieping.ids">9.06a</a>, <a href="ids/15-9.07-Gebruikseenheid-voorheen-eigendom-en-gebruikseenheid.ids">9.07</a>, <a href="ids/16-9.08-Gebruiksfunctie.ids">9.08</a>, <a href="ids/17-9.09-Nevengebruiksfunctie.ids">9.09</a>, <a href="ids/25-9.12a-Functieruimte.ids">9.12a</a>, <a href="ids/26-9.12b-Verblijfsruimte.ids">9.12b</a></td>
+</tr>
+<tr>
+<td>#2</td>
+<td>Maximale bouwhoogte</td>
+<td>OPA</td>
+<td>Omgevingsplan</td>
+<td>ID01</td>
+<td>ja (hoogte, bounding box)</td>
+<td>10</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9</a>, <a href="ids/02-9.01a-Georeferentie.ids">9.01a</a>, <a href="ids/03-9.01b-Coordinatenstelsel.ids">9.01b</a>, <a href="ids/04-9.01c-Projectadres-IFC4X3-ADD2.ids">9.01c</a>, <a href="ids/05-9.01d-Perceeladres-IFC4.ids">9.01d</a>, <a href="ids/06-9.01e-Gebouwadres-IFC4.ids">9.01e</a>, <a href="ids/07-9.02-Project.ids">9.02</a>, <a href="ids/09-9.03b-Bouwwerkperceel.ids">9.03b</a>, <a href="ids/10-9.04-Kadastraal-Perceel.ids">9.04</a>, <a href="ids/13-9.06a-Bouwlaag-voorheen-verdieping.ids">9.06a</a></td>
+</tr>
+<tr>
+<td>#3</td>
+<td>Maximaal bebouwingspercentage</td>
+<td>OPA</td>
+<td>Omgevingsplan</td>
+<td>ID01</td>
+<td>ja (geprojecteerd oppervlak)</td>
+<td>17</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9</a>, <a href="ids/02-9.01a-Georeferentie.ids">9.01a</a>, <a href="ids/03-9.01b-Coordinatenstelsel.ids">9.01b</a>, <a href="ids/04-9.01c-Projectadres-IFC4X3-ADD2.ids">9.01c</a>, <a href="ids/05-9.01d-Perceeladres-IFC4.ids">9.01d</a>, <a href="ids/06-9.01e-Gebouwadres-IFC4.ids">9.01e</a>, <a href="ids/07-9.02-Project.ids">9.02</a>, <a href="ids/08-9.03a-Perceel.ids">9.03a</a>, <a href="ids/09-9.03b-Bouwwerkperceel.ids">9.03b</a>, <a href="ids/10-9.04-Kadastraal-Perceel.ids">9.04</a>, <a href="ids/11-9.05a-Gebouw.ids">9.05a</a>, <a href="ids/12-9.05b-Gebouwinhoud.ids">9.05b</a>, <a href="ids/13-9.06a-Bouwlaag-voorheen-verdieping.ids">9.06a</a>, <a href="ids/14-9.06b-Bouwlaaginhoud-voorheen-bouwlaagobject.ids">9.06b</a>, <a href="ids/16-9.08-Gebruiksfunctie.ids">9.08</a>, <a href="ids/25-9.12a-Functieruimte.ids">9.12a</a>, <a href="ids/26-9.12b-Verblijfsruimte.ids">9.12b</a></td>
+</tr>
+<tr>
+<td>#4</td>
+<td>Gebruiksfunctie/bestemming beperkt tot x bouwlagen</td>
+<td>OPA</td>
+<td>Omgevingsplan</td>
+<td>ID01</td>
+<td>ja (bouwlagen)</td>
+<td>9</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9</a>, <a href="ids/04-9.01c-Projectadres-IFC4X3-ADD2.ids">9.01c</a>, <a href="ids/05-9.01d-Perceeladres-IFC4.ids">9.01d</a>, <a href="ids/06-9.01e-Gebouwadres-IFC4.ids">9.01e</a>, <a href="ids/07-9.02-Project.ids">9.02</a>, <a href="ids/11-9.05a-Gebouw.ids">9.05a</a>, <a href="ids/13-9.06a-Bouwlaag-voorheen-verdieping.ids">9.06a</a>, <a href="ids/16-9.08-Gebruiksfunctie.ids">9.08</a>, <a href="ids/17-9.09-Nevengebruiksfunctie.ids">9.09</a></td>
+</tr>
+<tr>
+<td>#5</td>
+<td>Beroep aan huis: max. 50% gebruiksoppervlakte</td>
+<td>OPA</td>
+<td>Omgevingsplan</td>
+<td>ID01</td>
+<td>ja (oppervlak)</td>
+<td>17</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9</a>, <a href="ids/02-9.01a-Georeferentie.ids">9.01a</a>, <a href="ids/03-9.01b-Coordinatenstelsel.ids">9.01b</a>, <a href="ids/04-9.01c-Projectadres-IFC4X3-ADD2.ids">9.01c</a>, <a href="ids/05-9.01d-Perceeladres-IFC4.ids">9.01d</a>, <a href="ids/06-9.01e-Gebouwadres-IFC4.ids">9.01e</a>, <a href="ids/07-9.02-Project.ids">9.02</a>, <a href="ids/09-9.03b-Bouwwerkperceel.ids">9.03b</a>, <a href="ids/10-9.04-Kadastraal-Perceel.ids">9.04</a>, <a href="ids/15-9.07-Gebruikseenheid-voorheen-eigendom-en-gebruikseenheid.ids">9.07</a>, <a href="ids/16-9.08-Gebruiksfunctie.ids">9.08</a>, <a href="ids/17-9.09-Nevengebruiksfunctie.ids">9.09</a>, <a href="ids/23-9.10f-Restgebied.ids">9.10f</a>, <a href="ids/25-9.12a-Functieruimte.ids">9.12a</a>, <a href="ids/26-9.12b-Verblijfsruimte.ids">9.12b</a>, <a href="ids/28-9.12d-Restruimte.ids">9.12d</a>, <a href="ids/33-9.17-Tarra-Ruimte.ids">9.17</a></td>
+</tr>
+<tr>
+<td>#6</td>
+<td>Maximum aantal bouwlagen</td>
+<td>OPA</td>
+<td>Omgevingsplan</td>
+<td>ID01</td>
+<td>ja (bouwlagen)</td>
+<td>15</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9</a>, <a href="ids/04-9.01c-Projectadres-IFC4X3-ADD2.ids">9.01c</a>, <a href="ids/05-9.01d-Perceeladres-IFC4.ids">9.01d</a>, <a href="ids/06-9.01e-Gebouwadres-IFC4.ids">9.01e</a>, <a href="ids/07-9.02-Project.ids">9.02</a>, <a href="ids/09-9.03b-Bouwwerkperceel.ids">9.03b</a>, <a href="ids/10-9.04-Kadastraal-Perceel.ids">9.04</a>, <a href="ids/13-9.06a-Bouwlaag-voorheen-verdieping.ids">9.06a</a>, <a href="ids/14-9.06b-Bouwlaaginhoud-voorheen-bouwlaagobject.ids">9.06b</a>, <a href="ids/16-9.08-Gebruiksfunctie.ids">9.08</a>, <a href="ids/23-9.10f-Restgebied.ids">9.10f</a>, <a href="ids/25-9.12a-Functieruimte.ids">9.12a</a>, <a href="ids/26-9.12b-Verblijfsruimte.ids">9.12b</a>, <a href="ids/28-9.12d-Restruimte.ids">9.12d</a>, <a href="ids/33-9.17-Tarra-Ruimte.ids">9.17</a></td>
+</tr>
+<tr>
+<td>#7</td>
+<td>Brandcompartimenten</td>
+<td>TBA</td>
+<td>Bbl</td>
+<td>ID02</td>
+<td>ja (oppervlak compartiment)</td>
+<td>13</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9</a>, <a href="ids/02-9.01a-Georeferentie.ids">9.01a</a>, <a href="ids/03-9.01b-Coordinatenstelsel.ids">9.01b</a>, <a href="ids/07-9.02-Project.ids">9.02</a>, <a href="ids/09-9.03b-Bouwwerkperceel.ids">9.03b</a>, <a href="ids/10-9.04-Kadastraal-Perceel.ids">9.04</a>, <a href="ids/16-9.08-Gebruiksfunctie.ids">9.08</a>, <a href="ids/30-9.16a-Brandcompartiment.ids">9.16a</a>, <a href="ids/35-9.18b-Fysieke-elementen-IfcColumn.ids">9.18b</a>, <a href="ids/37-9.18d-Fysieke-elementen-IfcCurtainWall.ids">9.18d</a>, <a href="ids/38-9.18e-Fysieke-elementen-IfcDoor.ids">9.18e</a>, <a href="ids/40-9.18g-Fysieke-elementen-IfcSlab.ids">9.18g</a>, <a href="ids/41-9.18h-Fysieke-elementen-IfcWall.ids">9.18h</a></td>
+</tr>
+<tr>
+<td>#8</td>
+<td>Brandwerendheid</td>
+<td>TBA</td>
+<td>Bbl</td>
+<td>ID02</td>
+<td>beperkt</td>
+<td>8</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9</a>, <a href="ids/07-9.02-Project.ids">9.02</a>, <a href="ids/30-9.16a-Brandcompartiment.ids">9.16a</a>, <a href="ids/35-9.18b-Fysieke-elementen-IfcColumn.ids">9.18b</a>, <a href="ids/37-9.18d-Fysieke-elementen-IfcCurtainWall.ids">9.18d</a>, <a href="ids/38-9.18e-Fysieke-elementen-IfcDoor.ids">9.18e</a>, <a href="ids/40-9.18g-Fysieke-elementen-IfcSlab.ids">9.18g</a>, <a href="ids/41-9.18h-Fysieke-elementen-IfcWall.ids">9.18h</a></td>
+</tr>
+<tr>
+<td>#9</td>
+<td>Vrije breedte</td>
+<td>TBA</td>
+<td>Bbl</td>
+<td>ID02</td>
+<td>ja (breedte)</td>
+<td>13</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9</a>, <a href="ids/07-9.02-Project.ids">9.02</a>, <a href="ids/13-9.06a-Bouwlaag-voorheen-verdieping.ids">9.06a</a>, <a href="ids/16-9.08-Gebruiksfunctie.ids">9.08</a>, <a href="ids/18-9.10a-Functiegebied.ids">9.10a</a>, <a href="ids/19-9.10b-Verblijfsgebied.ids">9.10b</a>, <a href="ids/21-9.10d-Gebruiksgebied.ids">9.10d</a>, <a href="ids/24-9.11-Buitengebied.ids">9.11</a>, <a href="ids/25-9.12a-Functieruimte.ids">9.12a</a>, <a href="ids/26-9.12b-Verblijfsruimte.ids">9.12b</a>, <a href="ids/29-9.13-Buitenruimte.ids">9.13</a>, <a href="ids/40-9.18g-Fysieke-elementen-IfcSlab.ids">9.18g</a>, <a href="ids/41-9.18h-Fysieke-elementen-IfcWall.ids">9.18h</a></td>
+</tr>
+<tr>
+<td>#10</td>
+<td>Hoogteverschil</td>
+<td>TBA</td>
+<td>Bbl</td>
+<td>ID02</td>
+<td>ja (hoogte)</td>
+<td>15</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9</a>, <a href="ids/02-9.01a-Georeferentie.ids">9.01a</a>, <a href="ids/03-9.01b-Coordinatenstelsel.ids">9.01b</a>, <a href="ids/07-9.02-Project.ids">9.02</a>, <a href="ids/08-9.03a-Perceel.ids">9.03a</a>, <a href="ids/13-9.06a-Bouwlaag-voorheen-verdieping.ids">9.06a</a>, <a href="ids/16-9.08-Gebruiksfunctie.ids">9.08</a>, <a href="ids/18-9.10a-Functiegebied.ids">9.10a</a>, <a href="ids/19-9.10b-Verblijfsgebied.ids">9.10b</a>, <a href="ids/21-9.10d-Gebruiksgebied.ids">9.10d</a>, <a href="ids/24-9.11-Buitengebied.ids">9.11</a>, <a href="ids/25-9.12a-Functieruimte.ids">9.12a</a>, <a href="ids/26-9.12b-Verblijfsruimte.ids">9.12b</a>, <a href="ids/29-9.13-Buitenruimte.ids">9.13</a>, <a href="ids/40-9.18g-Fysieke-elementen-IfcSlab.ids">9.18g</a></td>
+</tr>
+<tr>
+<td>#11</td>
+<td>Rc-waarde</td>
+<td>TBA</td>
+<td>Bbl</td>
+<td>ID02</td>
+<td>nee (eigenschap)</td>
+<td>10</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9</a>, <a href="ids/07-9.02-Project.ids">9.02</a>, <a href="ids/10-9.04-Kadastraal-Perceel.ids">9.04</a>, <a href="ids/16-9.08-Gebruiksfunctie.ids">9.08</a>, <a href="ids/18-9.10a-Functiegebied.ids">9.10a</a>, <a href="ids/19-9.10b-Verblijfsgebied.ids">9.10b</a>, <a href="ids/36-9.18c-Fysieke-elementen-IfcCovering.INSULATION.ids">9.18c</a>, <a href="ids/37-9.18d-Fysieke-elementen-IfcCurtainWall.ids">9.18d</a>, <a href="ids/40-9.18g-Fysieke-elementen-IfcSlab.ids">9.18g</a>, <a href="ids/41-9.18h-Fysieke-elementen-IfcWall.ids">9.18h</a></td>
+</tr>
+<tr>
+<td>#12</td>
+<td>U-waarde</td>
+<td>TBA</td>
+<td>Bbl</td>
+<td>ID02</td>
+<td>nee (eigenschap)</td>
+<td>7</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9</a>, <a href="ids/07-9.02-Project.ids">9.02</a>, <a href="ids/10-9.04-Kadastraal-Perceel.ids">9.04</a>, <a href="ids/16-9.08-Gebruiksfunctie.ids">9.08</a>, <a href="ids/37-9.18d-Fysieke-elementen-IfcCurtainWall.ids">9.18d</a>, <a href="ids/38-9.18e-Fysieke-elementen-IfcDoor.ids">9.18e</a>, <a href="ids/42-9.18i-Fysieke-elementen-Ifcwindow.ids">9.18i</a></td>
+</tr>
+<tr>
+<td>#13</td>
+<td>MPG</td>
+<td>TBA</td>
+<td>Bbl</td>
+<td>ID02</td>
+<td>nee (hoeveelheden)</td>
+<td>7</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9</a>, <a href="ids/07-9.02-Project.ids">9.02</a>, <a href="ids/16-9.08-Gebruiksfunctie.ids">9.08</a>, <a href="ids/25-9.12a-Functieruimte.ids">9.12a</a>, <a href="ids/26-9.12b-Verblijfsruimte.ids">9.12b</a>, <a href="ids/40-9.18g-Fysieke-elementen-IfcSlab.ids">9.18g</a>, <a href="ids/41-9.18h-Fysieke-elementen-IfcWall.ids">9.18h</a></td>
+</tr>
+<tr>
+<td>#14</td>
+<td>Vluchtwegen</td>
+<td>TBA</td>
+<td>Bbl</td>
+<td>ID02</td>
+<td>ja (route)</td>
+<td>11</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9</a>, <a href="ids/07-9.02-Project.ids">9.02</a>, <a href="ids/08-9.03a-Perceel.ids">9.03a</a>, <a href="ids/16-9.08-Gebruiksfunctie.ids">9.08</a>, <a href="ids/21-9.10d-Gebruiksgebied.ids">9.10d</a>, <a href="ids/25-9.12a-Functieruimte.ids">9.12a</a>, <a href="ids/26-9.12b-Verblijfsruimte.ids">9.12b</a>, <a href="ids/30-9.16a-Brandcompartiment.ids">9.16a</a>, <a href="ids/32-9.16c-Vluchtroute.ids">9.16c</a>, <a href="ids/38-9.18e-Fysieke-elementen-IfcDoor.ids">9.18e</a>, <a href="ids/40-9.18g-Fysieke-elementen-IfcSlab.ids">9.18g</a></td>
+</tr>
+<tr>
+<td>#15</td>
+<td>Loopafstand</td>
+<td>TBA</td>
+<td>Bbl</td>
+<td>ID02</td>
+<td>ja (afstand)</td>
+<td>13</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9</a>, <a href="ids/07-9.02-Project.ids">9.02</a>, <a href="ids/16-9.08-Gebruiksfunctie.ids">9.08</a>, <a href="ids/20-9.10c-Verblijfsgebied-met-bezettingsgraad.ids">9.10c</a>, <a href="ids/21-9.10d-Gebruiksgebied.ids">9.10d</a>, <a href="ids/25-9.12a-Functieruimte.ids">9.12a</a>, <a href="ids/26-9.12b-Verblijfsruimte.ids">9.12b</a>, <a href="ids/30-9.16a-Brandcompartiment.ids">9.16a</a>, <a href="ids/31-9.16b-Subbrandcompartiment.ids">9.16b</a>, <a href="ids/32-9.16c-Vluchtroute.ids">9.16c</a>, <a href="ids/33-9.17-Tarra-Ruimte.ids">9.17</a>, <a href="ids/38-9.18e-Fysieke-elementen-IfcDoor.ids">9.18e</a>, <a href="ids/40-9.18g-Fysieke-elementen-IfcSlab.ids">9.18g</a></td>
+</tr>
+<tr>
+<td>#16</td>
+<td>Vluchtbreedte</td>
+<td>TBA</td>
+<td>Bbl</td>
+<td>ID02</td>
+<td>ja (breedte)</td>
+<td>12</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9</a>, <a href="ids/07-9.02-Project.ids">9.02</a>, <a href="ids/13-9.06a-Bouwlaag-voorheen-verdieping.ids">9.06a</a>, <a href="ids/16-9.08-Gebruiksfunctie.ids">9.08</a>, <a href="ids/19-9.10b-Verblijfsgebied.ids">9.10b</a>, <a href="ids/20-9.10c-Verblijfsgebied-met-bezettingsgraad.ids">9.10c</a>, <a href="ids/22-9.10e-Bedgebied.ids">9.10e</a>, <a href="ids/27-9.12c-Bedruimte.ids">9.12c</a>, <a href="ids/32-9.16c-Vluchtroute.ids">9.16c</a>, <a href="ids/38-9.18e-Fysieke-elementen-IfcDoor.ids">9.18e</a>, <a href="ids/40-9.18g-Fysieke-elementen-IfcSlab.ids">9.18g</a>, <a href="ids/41-9.18h-Fysieke-elementen-IfcWall.ids">9.18h</a></td>
+</tr>
+<tr>
+<td>#17</td>
+<td>Daglicht</td>
+<td>TBA</td>
+<td>Bbl</td>
+<td>ID02</td>
+<td>ja (oppervlak)</td>
+<td>15</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9</a>, <a href="ids/02-9.01a-Georeferentie.ids">9.01a</a>, <a href="ids/03-9.01b-Coordinatenstelsel.ids">9.01b</a>, <a href="ids/07-9.02-Project.ids">9.02</a>, <a href="ids/08-9.03a-Perceel.ids">9.03a</a>, <a href="ids/09-9.03b-Bouwwerkperceel.ids">9.03b</a>, <a href="ids/10-9.04-Kadastraal-Perceel.ids">9.04</a>, <a href="ids/11-9.05a-Gebouw.ids">9.05a</a>, <a href="ids/16-9.08-Gebruiksfunctie.ids">9.08</a>, <a href="ids/19-9.10b-Verblijfsgebied.ids">9.10b</a>, <a href="ids/26-9.12b-Verblijfsruimte.ids">9.12b</a>, <a href="ids/37-9.18d-Fysieke-elementen-IfcCurtainWall.ids">9.18d</a>, <a href="ids/38-9.18e-Fysieke-elementen-IfcDoor.ids">9.18e</a>, <a href="ids/41-9.18h-Fysieke-elementen-IfcWall.ids">9.18h</a>, <a href="ids/42-9.18i-Fysieke-elementen-Ifcwindow.ids">9.18i</a></td>
+</tr>
+</tbody></table></div>
+<blockquote>
+<p>De kolom <em>Geometrie nodig</em> geeft aan of de check naast attributen ook afgeleide geometrie (oppervlak, hoogte, afstand) nodig heeft. IDS toetst alleen attributen en eigenschappen; voor de geometrie geldt de aanpak in <a href="#geometrie">Geometrische controle</a>.</p>
+</blockquote>
+<h3 id="vereisten-overzicht-per-specificatie"><span class="num">5.2</span> Overzicht per specificatie</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Nr</th>
+<th>Specificatie</th>
+<th>IFC-versie</th>
+<th>bSDD-klasse</th>
+<th>Checks</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td><a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids">9 ILS voor Ruimten in de omgevingswet</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0">bSDD</a></td>
+<td>#1 #2 #3 #4 #5 #6 #7 #8 #9 #10 #11 #12 #13 #14 #15 #16 #17</td>
+</tr>
+<tr>
+<td>02</td>
+<td><a href="ids/02-9.01a-Georeferentie.ids">9.01a Georeferentie</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Georeferentie">bSDD</a></td>
+<td>#1 #2 #3 #5 #7 #10 #17</td>
+</tr>
+<tr>
+<td>03</td>
+<td><a href="ids/03-9.01b-Coordinatenstelsel.ids">9.01b Coördinatenstelsel</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Coordinatenstelsel">bSDD</a></td>
+<td>#1 #2 #3 #5 #7 #10 #17</td>
+</tr>
+<tr>
+<td>04</td>
+<td><a href="ids/04-9.01c-Projectadres-IFC4X3-ADD2.ids">9.01c Projectadres (IFC4X3_ADD2)</a></td>
+<td>IFC4X3_ADD2</td>
+<td>—</td>
+<td>#1 #2 #3 #4 #5 #6</td>
+</tr>
+<tr>
+<td>05</td>
+<td><a href="ids/05-9.01d-Perceeladres-IFC4.ids">9.01d Perceeladres (IFC4)</a></td>
+<td>IFC4</td>
+<td>—</td>
+<td>#1 #2 #3 #4 #5 #6</td>
+</tr>
+<tr>
+<td>06</td>
+<td><a href="ids/06-9.01e-Gebouwadres-IFC4.ids">9.01e Gebouwadres (IFC4)</a></td>
+<td>IFC4</td>
+<td>—</td>
+<td>#1 #2 #3 #4 #5 #6</td>
+</tr>
+<tr>
+<td>07</td>
+<td><a href="ids/07-9.02-Project.ids">9.02 Project</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Project">bSDD</a></td>
+<td>#1 #2 #3 #4 #5 #6 #7 #8 #9 #10 #11 #12 #13 #14 #15 #16 #17</td>
+</tr>
+<tr>
+<td>08</td>
+<td><a href="ids/08-9.03a-Perceel.ids">9.03a Perceel</a></td>
+<td>IFC4X3_ADD2 IFC4</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Perceel">bSDD</a></td>
+<td>#3 #10 #14 #17</td>
+</tr>
+<tr>
+<td>09</td>
+<td><a href="ids/09-9.03b-Bouwwerkperceel.ids">9.03b Bouwwerkperceel</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwwerkperceel">bSDD</a></td>
+<td>#1 #2 #3 #5 #6 #7 #17</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="ids/10-9.04-Kadastraal-Perceel.ids">9.04 Kadastraal Perceel</a></td>
+<td>IFC4X3_ADD2 IFC4</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Kadastraal-Perceel">bSDD</a></td>
+<td>#1 #2 #3 #5 #6 #7 #11 #12 #17</td>
+</tr>
+<tr>
+<td>11</td>
+<td><a href="ids/11-9.05a-Gebouw.ids">9.05a Gebouw</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebouw">bSDD</a></td>
+<td>#3 #4 #17</td>
+</tr>
+<tr>
+<td>12</td>
+<td><a href="ids/12-9.05b-Gebouwinhoud.ids">9.05b Gebouwinhoud</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebouwinhoud">bSDD</a></td>
+<td>#3</td>
+</tr>
+<tr>
+<td>13</td>
+<td><a href="ids/13-9.06a-Bouwlaag-voorheen-verdieping.ids">9.06a Bouwlaag (voorheen verdieping)</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwlaag">bSDD</a></td>
+<td>#1 #2 #3 #4 #6 #9 #10 #16</td>
+</tr>
+<tr>
+<td>14</td>
+<td><a href="ids/14-9.06b-Bouwlaaginhoud-voorheen-bouwlaagobject.ids">9.06b Bouwlaaginhoud (voorheen bouwlaagobject)</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwlaaginhoud">bSDD</a></td>
+<td>#3 #6</td>
+</tr>
+<tr>
+<td>15</td>
+<td><a href="ids/15-9.07-Gebruikseenheid-voorheen-eigendom-en-gebruikseenheid.ids">9.07 Gebruikseenheid (voorheen eigendom-, en gebruikseenheid)</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruikseenheid">bSDD</a></td>
+<td>#1 #5</td>
+</tr>
+<tr>
+<td>16</td>
+<td><a href="ids/16-9.08-Gebruiksfunctie.ids">9.08 Gebruiksfunctie</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie">bSDD</a></td>
+<td>#1 #3 #4 #5 #6 #7 #9 #10 #11 #12 #13 #14 #15 #16 #17</td>
+</tr>
+<tr>
+<td>17</td>
+<td><a href="ids/17-9.09-Nevengebruiksfunctie.ids">9.09 Nevengebruiksfunctie</a></td>
+<td>IFC4X3_ADD2 IFC4</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Nevengebruiksfunctie">bSDD</a></td>
+<td>#1 #4 #5</td>
+</tr>
+<tr>
+<td>18</td>
+<td><a href="ids/18-9.10a-Functiegebied.ids">9.10a Functiegebied</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Functiegebied">bSDD</a></td>
+<td>#9 #10 #11</td>
+</tr>
+<tr>
+<td>19</td>
+<td><a href="ids/19-9.10b-Verblijfsgebied.ids">9.10b Verblijfsgebied</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsgebied">bSDD</a></td>
+<td>#9 #10 #11 #16 #17</td>
+</tr>
+<tr>
+<td>20</td>
+<td><a href="ids/20-9.10c-Verblijfsgebied-met-bezettingsgraad.ids">9.10c Verblijfsgebied met bezettingsgraad</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsgebied-met-bezettingsgraad">bSDD</a></td>
+<td>#15 #16</td>
+</tr>
+<tr>
+<td>21</td>
+<td><a href="ids/21-9.10d-Gebruiksgebied.ids">9.10d Gebruiksgebied</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksgebied">bSDD</a></td>
+<td>#9 #10 #14 #15</td>
+</tr>
+<tr>
+<td>22</td>
+<td><a href="ids/22-9.10e-Bedgebied.ids">9.10e Bedgebied</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bedgebied">bSDD</a></td>
+<td>#16</td>
+</tr>
+<tr>
+<td>23</td>
+<td><a href="ids/23-9.10f-Restgebied.ids">9.10f Restgebied</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Restgebied">bSDD</a></td>
+<td>#5 #6</td>
+</tr>
+<tr>
+<td>24</td>
+<td><a href="ids/24-9.11-Buitengebied.ids">9.11 Buitengebied</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Buitengebied">bSDD</a></td>
+<td>#9 #10</td>
+</tr>
+<tr>
+<td>25</td>
+<td><a href="ids/25-9.12a-Functieruimte.ids">9.12a Functieruimte</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Functieruimte">bSDD</a></td>
+<td>#1 #3 #5 #6 #9 #10 #13 #14 #15</td>
+</tr>
+<tr>
+<td>26</td>
+<td><a href="ids/26-9.12b-Verblijfsruimte.ids">9.12b Verblijfsruimte</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsruimte">bSDD</a></td>
+<td>#1 #3 #5 #6 #9 #10 #13 #14 #15 #17</td>
+</tr>
+<tr>
+<td>27</td>
+<td><a href="ids/27-9.12c-Bedruimte.ids">9.12c Bedruimte</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bedruimte">bSDD</a></td>
+<td>#16</td>
+</tr>
+<tr>
+<td>28</td>
+<td><a href="ids/28-9.12d-Restruimte.ids">9.12d Restruimte</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Restruimte">bSDD</a></td>
+<td>#5 #6</td>
+</tr>
+<tr>
+<td>29</td>
+<td><a href="ids/29-9.13-Buitenruimte.ids">9.13 Buitenruimte</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Buitenruimte">bSDD</a></td>
+<td>#9 #10</td>
+</tr>
+<tr>
+<td>30</td>
+<td><a href="ids/30-9.16a-Brandcompartiment.ids">9.16a Brandcompartiment</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Brandcompartiment">bSDD</a></td>
+<td>#7 #8 #14 #15</td>
+</tr>
+<tr>
+<td>31</td>
+<td><a href="ids/31-9.16b-Subbrandcompartiment.ids">9.16b Subbrandcompartiment</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Subbrandcompartiment">bSDD</a></td>
+<td>#15</td>
+</tr>
+<tr>
+<td>32</td>
+<td><a href="ids/32-9.16c-Vluchtroute.ids">9.16c Vluchtroute</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vluchtroute">bSDD</a></td>
+<td>#14 #15 #16</td>
+</tr>
+<tr>
+<td>33</td>
+<td><a href="ids/33-9.17-Tarra-Ruimte.ids">9.17 Tarra Ruimte</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Tarra-Ruimte">bSDD</a></td>
+<td>#5 #6 #15</td>
+</tr>
+<tr>
+<td>34</td>
+<td><a href="ids/34-9.18a-Fysieke-elementen-IfcBeam.ids">9.18a Fysieke elementen IfcBeam</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Balk">bSDD</a></td>
+<td>—</td>
+</tr>
+<tr>
+<td>35</td>
+<td><a href="ids/35-9.18b-Fysieke-elementen-IfcColumn.ids">9.18b Fysieke elementen IfcColumn</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Kolom">bSDD</a></td>
+<td>#7 #8</td>
+</tr>
+<tr>
+<td>36</td>
+<td><a href="ids/36-9.18c-Fysieke-elementen-IfcCovering.INSULATION.ids">9.18c Fysieke elementen IfcCovering.INSULATION</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Isolatie">bSDD</a></td>
+<td>#11</td>
+</tr>
+<tr>
+<td>37</td>
+<td><a href="ids/37-9.18d-Fysieke-elementen-IfcCurtainWall.ids">9.18d Fysieke elementen IfcCurtainWall</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vliesgevel">bSDD</a></td>
+<td>#7 #8 #11 #12 #17</td>
+</tr>
+<tr>
+<td>38</td>
+<td><a href="ids/38-9.18e-Fysieke-elementen-IfcDoor.ids">9.18e Fysieke elementen IfcDoor</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Deur">bSDD</a></td>
+<td>#7 #8 #12 #14 #15 #16 #17</td>
+</tr>
+<tr>
+<td>39</td>
+<td><a href="ids/39-9.18f-Fysieke-elementen-IfcSensor.ids">9.18f Fysieke elementen IfcSensor</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Sensor">bSDD</a></td>
+<td>—</td>
+</tr>
+<tr>
+<td>40</td>
+<td><a href="ids/40-9.18g-Fysieke-elementen-IfcSlab.ids">9.18g Fysieke elementen IfcSlab</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vloer">bSDD</a></td>
+<td>#7 #8 #9 #10 #11 #13 #14 #15 #16</td>
+</tr>
+<tr>
+<td>41</td>
+<td><a href="ids/41-9.18h-Fysieke-elementen-IfcWall.ids">9.18h Fysieke elementen IfcWall</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Wand">bSDD</a></td>
+<td>#7 #8 #9 #11 #13 #16 #17</td>
+</tr>
+<tr>
+<td>42</td>
+<td><a href="ids/42-9.18i-Fysieke-elementen-Ifcwindow.ids">9.18i Fysieke elementen Ifcwindow</a></td>
+<td>IFC4 IFC4X3_ADD2</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Raam">bSDD</a></td>
+<td>#12 #17</td>
+</tr>
+</tbody></table></div>
+<p>De volledige koppeltabel staat machineleesbaar in <a href="data/specificaties_checks.csv"><code>data/specificaties_checks.csv</code></a>.</p>
+<p class="note">Specificaties 9.18a (IfcBeam) en 9.18f (IfcSensor) worden door geen van de 17 checks gebruikt. Voorstel: behouden voor toekomstige checks (constructie, monitoring), maar markeren als optioneel in deze ILS.</p>
+</section>
+<section id="loin"><h2><span class="num">6</span> Level of Information Need</h2><p>Het Level of Information Need (LOIN, ISO 7817-1:2024) legt per informatiebehoefte vast welke <strong>alfanumerieke informatie</strong>, <strong>geometrie</strong> en <strong>documentatie</strong> nodig is. In deze ILS is het LOIN opgebouwd uit twee delen:</p>
+<ol>
+<li><strong>Alfanumeriek</strong> — machineleesbaar vastgelegd in 42 IDS-deelspecificaties (IDS 1.0), afgeleid van de <em>ILS voor Ruimten in de Omgevingswet</em> (v0.95). Hieronder per specificatie samengevat.</li>
+<li><strong>Geometrisch</strong> — eisen aan de vorm en kwaliteit van de geometrie, die IDS niet kan toetsen. Zie <a href="#loin-geometrie">Geometrische eisen</a> hieronder en <a href="#geometrie">Geometrische controle</a>.</li>
+<li><strong>Documentatie</strong> — aanvullende bestanden (tekeningen PDF/A, rapportages), zie <a href="#standaard">Informatieproductiestandaard</a>.</li>
+</ol>
+<h3 id="loin-loin-per-informatiebehoefte-samenvatting"><span class="num">6.1</span> LOIN per informatiebehoefte (samenvatting)</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Invulling</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Doel</td>
+<td>Geautomatiseerd toetsen van de aanvraag aan 17 checks (OPA en TBA)</td>
+</tr>
+<tr>
+<td>Mijlpaal</td>
+<td>Vooroverleg, aanvraag omgevingsplanactiviteit, aanvraag technische bouwactiviteit</td>
+</tr>
+<tr>
+<td>Actoren</td>
+<td>Aanvrager/modelleur levert, gemeente (vergunningverlener) toetst</td>
+</tr>
+<tr>
+<td>Objecten</td>
+<td>Ruimtelijke objecten (IfcSpace, IfcSpatialZone, IfcZone), gebouw, bouwlagen, fysieke elementen</td>
+</tr>
+<tr>
+<td>Alfanumeriek</td>
+<td>IDS-deelspecificaties 01–42</td>
+</tr>
+<tr>
+<td>Geometrie</td>
+<td>Volumetrische (solide) ruimten, georeferentie RD/NAP, detailniveau conform tabel hieronder</td>
+</tr>
+<tr>
+<td>Documentatie</td>
+<td>IFC (STEP), PDF/A-tekeningen afgeleid uit het model, IDS-validatierapport (BCF of HTML)</td>
+</tr>
+</tbody></table></div>
+<p><a id="loin-geometrie"></a></p>
+<h3 id="loin-geometrische-eisen"><span class="num">6.2</span> Geometrische eisen</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Eis</th>
+<th>Toelichting</th>
+<th>Nodig voor checks</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>G1 Solide geometrie</td>
+<td>Ruimten en zones zijn gesloten volumes (geen losse vlakken), zodat oppervlakte en inhoud herberekend kunnen worden</td>
+<td>#2 #3 #5 #7 #9 #10 #14–#17</td>
+</tr>
+<tr>
+<td>G2 Georeferentie</td>
+<td>IfcMapConversion + IfcProjectedCRS, EPSG:28992 (RD) / EPSG:7415 (RD+NAP), eenheden in meters</td>
+<td>#1–#6</td>
+</tr>
+<tr>
+<td>G3 Hoogteligging</td>
+<td>Hoogte ten opzichte van NAP; peil en bouwlaaghoogten consistent tussen aspectmodellen</td>
+<td>#2 #4 #6 #10</td>
+</tr>
+<tr>
+<td>G4 Geen doublures</td>
+<td>Geen dubbele of overlappende objecten van hetzelfde type (bijv. vloer opgeknipt bij export telt niet dubbel)</td>
+<td>#3 #5 #7 #13</td>
+</tr>
+<tr>
+<td>G5 Hoeveelheden meegeleverd</td>
+<td>Quantity sets (Qto_…) door de CAD-software berekend en geëxporteerd; de ontvanger herberekent ter controle</td>
+<td>#3 #5 #7 #13 #15 #17</td>
+</tr>
+<tr>
+<td>G6 Meetmethode</td>
+<td>Oppervlakten en inhouden volgens NEN 2580; afwijkingen (schuine daken, dakkapellen) expliciet modelleren</td>
+<td>#3 #5 #7 #17</td>
+</tr>
+</tbody></table></div>
+<h3 id="loin-loin-per-deelspecificatie-alfanumeriek"><span class="num">6.3</span> LOIN per deelspecificatie (alfanumeriek)</h3><p>Per specificatie: op welke objecten de eis van toepassing is (applicability) en welke informatie verplicht (<strong>R</strong>), optioneel (<strong>O</strong>) of verboden (<strong>X</strong>) is.</p>
+<h4 id="loin-9-ils-voor-ruimten-in-de-omgevingswet">9 ILS voor Ruimten in de omgevingswet</h4><p><em>Bestand:</em> <a href="ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids"><code>01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #1 #2 #3 #4 #5 #6 #7 #8 #9 #10 #11 #12 #13 #14 #15 #16 #17</p>
+<p><em>Van toepassing op:</em> IFCSPATIALZONE / IFCSPACE / IFCEXTERNALSPATIALELEMENT</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>attribute</td>
+<td>ObjectPlacement</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Representation</td>
+<td>R</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-01a-georeferentie">9.01a Georeferentie</h4><p><em>Bestand:</em> <a href="ids/02-9.01a-Georeferentie.ids"><code>02-9.01a-Georeferentie.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #1 #2 #3 #5 #7 #10 #17</p>
+<p><em>Van toepassing op:</em> IFCMAPCONVERSION</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Georeferentie</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Eastings</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Northings</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>OrthogonalHeight</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>XAxisAbscissa</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>XAxisOrdinate</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Scale</td>
+<td>R</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-01b-coordinatenstelsel">9.01b Coördinatenstelsel</h4><p><em>Bestand:</em> <a href="ids/03-9.01b-Coordinatenstelsel.ids"><code>03-9.01b-Coordinatenstelsel.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #1 #2 #3 #5 #7 #10 #17</p>
+<p><em>Van toepassing op:</em> IFCPROJECTEDCRS</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>EPSG:7415 | EPSG:28992</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-01c-projectadres-ifc4x3-add2">9.01c Projectadres (IFC4X3_ADD2)</h4><p><em>Bestand:</em> <a href="ids/04-9.01c-Projectadres-IFC4X3-ADD2.ids"><code>04-9.01c-Projectadres-IFC4X3-ADD2.ids</code></a> · <em>IFC:</em> IFC4X3_ADD2 · <em>Checks:</em> #1 #2 #3 #4 #5 #6</p>
+<p><em>Van toepassing op:</em> IFCSITE / IFCBUILDING</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>property</td>
+<td>Pset_Address.AddressLines</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_Address.Country</td>
+<td>R</td>
+<td>NL</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_Address.PostalCode</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_Address.Town</td>
+<td>R</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-01d-perceeladres-ifc4">9.01d Perceeladres (IFC4)</h4><p><em>Bestand:</em> <a href="ids/05-9.01d-Perceeladres-IFC4.ids"><code>05-9.01d-Perceeladres-IFC4.ids</code></a> · <em>IFC:</em> IFC4 · <em>Checks:</em> #1 #2 #3 #4 #5 #6</p>
+<p><em>Van toepassing op:</em> IFCSITE</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>attribute</td>
+<td>SiteAddress</td>
+<td>R</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-01e-gebouwadres-ifc4">9.01e Gebouwadres (IFC4)</h4><p><em>Bestand:</em> <a href="ids/06-9.01e-Gebouwadres-IFC4.ids"><code>06-9.01e-Gebouwadres-IFC4.ids</code></a> · <em>IFC:</em> IFC4 · <em>Checks:</em> #1 #2 #3 #4 #5 #6</p>
+<p><em>Van toepassing op:</em> IFCBUILDING</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>attribute</td>
+<td>BuildingAddress</td>
+<td>R</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-02-project">9.02 Project</h4><p><em>Bestand:</em> <a href="ids/07-9.02-Project.ids"><code>07-9.02-Project.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #1 #2 #3 #4 #5 #6 #7 #8 #9 #10 #11 #12 #13 #14 #15 #16 #17</p>
+<p><em>Van toepassing op:</em> IFCPROJECT</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Project</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Phase</td>
+<td>O</td>
+<td>patroon `01 Initiatief/haalbaarheid</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>UnitsInContext</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_ProjectCommon.ProjectType</td>
+<td>O</td>
+<td>NEWBUILD | MODIFICATION | OPERATIONMAINTENANCE | RENOVATION | REPAIR</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_ProjectCommon.ProjectInvestmentEstimate</td>
+<td>O</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-03a-perceel">9.03a Perceel</h4><p><em>Bestand:</em> <a href="ids/08-9.03a-Perceel.ids"><code>08-9.03a-Perceel.ids</code></a> · <em>IFC:</em> IFC4X3_ADD2 IFC4 · <em>Checks:</em> #3 #10 #14 #17</p>
+<p><em>Van toepassing op:</em> IFCSITE</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Perceel</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>ObjectType</td>
+<td>R</td>
+<td>Perceel</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>ObjectPlacement</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_LandRegistration.IsPermanentID</td>
+<td>R</td>
+<td>true</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_LandRegistration.LandID</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_LandRegistration.LandTitleID</td>
+<td>O</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-03b-bouwwerkperceel">9.03b Bouwwerkperceel</h4><p><em>Bestand:</em> <a href="ids/09-9.03b-Bouwwerkperceel.ids"><code>09-9.03b-Bouwwerkperceel.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #1 #2 #3 #5 #6 #7 #17</p>
+<p><em>Van toepassing op:</em> IFCSPATIALZONE / IFCSPACE / IFCZONE met ObjectType=Bouwwerkperceel</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Bouwwerkperceel</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>Terreinvolume</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-04-kadastraal-perceel">9.04 Kadastraal Perceel</h4><p><em>Bestand:</em> <a href="ids/10-9.04-Kadastraal-Perceel.ids"><code>10-9.04-Kadastraal-Perceel.ids</code></a> · <em>IFC:</em> IFC4X3_ADD2 IFC4 · <em>Checks:</em> #1 #2 #3 #5 #6 #7 #11 #12 #17</p>
+<p><em>Van toepassing op:</em> IFCSPATIALZONE / IFCSPACE / IFCZONE met ObjectType=Kadastraal perceel</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Kadastraalperceel</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>Terreinvolume</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-05a-gebouw">9.05a Gebouw</h4><p><em>Bestand:</em> <a href="ids/11-9.05a-Gebouw.ids"><code>11-9.05a-Gebouw.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #3 #4 #17</p>
+<p><em>Van toepassing op:</em> IFCBUILDING</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>R</td>
+<td>Gebouw</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>ObjectType</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_BuildingCommon.BuildingID</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_BuildingCommon.IsPermanentID</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_BuildingUse.MarketCategory</td>
+<td>R</td>
+<td>patroon `Woongebouw</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_BuildingUse.MarketSubCategory</td>
+<td>O</td>
+<td>patroon `Aanleunwoning</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_BuildingCommon.GrossPlannedArea</td>
+<td>O</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-05b-gebouwinhoud">9.05b Gebouwinhoud</h4><p><em>Bestand:</em> <a href="ids/12-9.05b-Gebouwinhoud.ids"><code>12-9.05b-Gebouwinhoud.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #3</p>
+<p><em>Van toepassing op:</em> IFCSPATIALZONE / IFCSPACE / IFCZONE met ObjectType=Gebouwinhoud</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Gebouwinhoud</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>Bruto Inhoud</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-06a-bouwlaag-voorheen-verdieping">9.06a Bouwlaag (voorheen verdieping)</h4><p><em>Bestand:</em> <a href="ids/13-9.06a-Bouwlaag-voorheen-verdieping.ids"><code>13-9.06a-Bouwlaag-voorheen-verdieping.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #1 #2 #3 #4 #6 #9 #10 #16</p>
+<p><em>Van toepassing op:</em> IFCBUILDINGSTOREY</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Verdieping</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>ObjectType</td>
+<td>R</td>
+<td>Bouwlaag</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>patroon `.*(-9 kelder</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>ObjectPlacement</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_BuildingStoreyCommon.EntranceLevel</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Qto_BuildingStoreyBaseQuantities.GrossFloorArea</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Qto_BuildingStoreyBaseQuantities.GrossHeight</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Qto_BuildingStoreyBaseQuantities.NetFloorArea</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Qto_BuildingStoreyBaseQuantities.NetHeight</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Qto_BuildingStoreyBaseQuantities.NetVolume</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Qto_BuildingStoreyBaseQuantities.GrossVolume</td>
+<td>O</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-06b-bouwlaaginhoud-voorheen-bouwlaagobject">9.06b Bouwlaaginhoud (voorheen bouwlaagobject)</h4><p><em>Bestand:</em> <a href="ids/14-9.06b-Bouwlaaginhoud-voorheen-bouwlaagobject.ids"><code>14-9.06b-Bouwlaaginhoud-voorheen-bouwlaagobject.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #3 #6</p>
+<p><em>Van toepassing op:</em> IFCSPATIALZONE / IFCSPACE / IFCZONE met ObjectType=Bouwlaaginhoud</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Bouwlaaginhoud</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>Bruto Inhoud</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>patroon `.*(-9 kelder</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-07-gebruikseenheid-voorheen-eigendom-en-gebruikseenheid">9.07 Gebruikseenheid (voorheen eigendom-, en gebruikseenheid)</h4><p><em>Bestand:</em> <a href="ids/15-9.07-Gebruikseenheid-voorheen-eigendom-en-gebruikseenheid.ids"><code>15-9.07-Gebruikseenheid-voorheen-eigendom-en-gebruikseenheid.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #1 #5</p>
+<p><em>Van toepassing op:</em> IFCZONE / IFCSPATIALZONE / IFCSPACE met ObjectType=Eigendom- en gebruikseenheid / Gebruikseenheid</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Gebruikseenheid</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>minLength=1</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>Bruto Inhoud</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-08-gebruiksfunctie">9.08 Gebruiksfunctie</h4><p><em>Bestand:</em> <a href="ids/16-9.08-Gebruiksfunctie.ids"><code>16-9.08-Gebruiksfunctie.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #1 #3 #4 #5 #6 #7 #9 #10 #11 #12 #13 #14 #15 #16 #17</p>
+<p><em>Van toepassing op:</em> IFCZONE / IFCSPATIALZONE / IFCSPACE met ObjectType=Gebruiksfunctie</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Gebruiksfunctie</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>patroon `Woonfunctie</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>patroon `Bruto Inhoud</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-09-nevengebruiksfunctie">9.09 Nevengebruiksfunctie</h4><p><em>Bestand:</em> <a href="ids/17-9.09-Nevengebruiksfunctie.ids"><code>17-9.09-Nevengebruiksfunctie.ids</code></a> · <em>IFC:</em> IFC4X3_ADD2 IFC4 · <em>Checks:</em> #1 #4 #5</p>
+<p><em>Van toepassing op:</em> IFCSPATIALZONE / IFCSPACE / IFCZONE met ObjectType=Nevengebruiksfunctie</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>patroon `Woonfunctie</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>patroon `Bruto Inhoud</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-10a-functiegebied">9.10a Functiegebied</h4><p><em>Bestand:</em> <a href="ids/18-9.10a-Functiegebied.ids"><code>18-9.10a-Functiegebied.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #9 #10 #11</p>
+<p><em>Van toepassing op:</em> IFCSPATIALZONE / IFCSPACE / IFCZONE met ObjectType=Functiegebied</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Functiegebied</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>patroon `Bruto Inhoud</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-10b-verblijfsgebied">9.10b Verblijfsgebied</h4><p><em>Bestand:</em> <a href="ids/19-9.10b-Verblijfsgebied.ids"><code>19-9.10b-Verblijfsgebied.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #9 #10 #11 #16 #17</p>
+<p><em>Van toepassing op:</em> IFCSPATIALZONE / IFCSPACE / IFCZONE met ObjectType=Verblijfsgebied</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Verblijfsgebied</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>patroon `Bruto Inhoud</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceOccupancyRequirements.OccupancyType</td>
+<td>R</td>
+<td>patroon `matching the pattern Woonfunctie</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-10c-verblijfsgebied-met-bezettingsgraad">9.10c Verblijfsgebied met bezettingsgraad</h4><p><em>Bestand:</em> <a href="ids/20-9.10c-Verblijfsgebied-met-bezettingsgraad.ids"><code>20-9.10c-Verblijfsgebied-met-bezettingsgraad.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #15 #16</p>
+<p><em>Van toepassing op:</em> IFCSPATIALZONE / IFCSPACE / IFCZONE met ObjectType=Verblijfsgebied</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Verblijfsgebied</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>patroon `Bruto Inhoud</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceOccupancyRequirements.OccupancyNumber</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceOccupancyRequirements.OccupancyNumberPeak</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceOccupancyRequirements.AreaPerOccupant</td>
+<td>R</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-10d-gebruiksgebied">9.10d Gebruiksgebied</h4><p><em>Bestand:</em> <a href="ids/21-9.10d-Gebruiksgebied.ids"><code>21-9.10d-Gebruiksgebied.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #9 #10 #14 #15</p>
+<p><em>Van toepassing op:</em> IFCSPATIALZONE / IFCSPACE / IFCZONE met ObjectType=Gebruiksgebied</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>R</td>
+<td>Gebruiksgebied</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>patroon `Bruto Inhoud</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-10e-bedgebied">9.10e Bedgebied</h4><p><em>Bestand:</em> <a href="ids/22-9.10e-Bedgebied.ids"><code>22-9.10e-Bedgebied.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #16</p>
+<p><em>Van toepassing op:</em> IFCSPATIALZONE / IFCSPACE / IFCZONE met ObjectType=Bedgebied</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>R</td>
+<td>Bedgebied</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>patroon `Bruto Inhoud</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-10f-restgebied">9.10f Restgebied</h4><p><em>Bestand:</em> <a href="ids/23-9.10f-Restgebied.ids"><code>23-9.10f-Restgebied.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #5 #6</p>
+<p><em>Van toepassing op:</em> IFCSPATIALZONE / IFCSPACE / IFCZONE met ObjectType=Restgebied</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>R</td>
+<td>Restgebied</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>patroon `Bruto Inhoud</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-11-buitengebied">9.11 Buitengebied</h4><p><em>Bestand:</em> <a href="ids/24-9.11-Buitengebied.ids"><code>24-9.11-Buitengebied.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #9 #10</p>
+<p><em>Van toepassing op:</em> IFCEXTERNALSPATIALELEMENT / IFCZONE / IFCSPATIALZONE / IFCSPACE met ObjectType=Buitengebied</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Buitengebied</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>patroon `Bebouwd Terreinvolume</td>
+</tr>
+<tr>
+<td>property</td>
+<td>patroon <code>Pset_.*Common</code>.IsExternal</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>patroon <code>Pset_.*Common</code>.PubliclyAccessible</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>patroon <code>Pset_.*Common</code>.HandicapAccessible</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceCommon.IsExternal</td>
+<td>R</td>
+<td>true</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-12a-functieruimte">9.12a Functieruimte</h4><p><em>Bestand:</em> <a href="ids/25-9.12a-Functieruimte.ids"><code>25-9.12a-Functieruimte.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #1 #3 #5 #6 #9 #10 #13 #14 #15</p>
+<p><em>Van toepassing op:</em> IFCSPACE / IFCZONE met ObjectType=Functieruimte</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>R</td>
+<td>Functieruimte</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>patroon `Functioneel Nuttige Inhoud</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-12b-verblijfsruimte">9.12b Verblijfsruimte</h4><p><em>Bestand:</em> <a href="ids/26-9.12b-Verblijfsruimte.ids"><code>26-9.12b-Verblijfsruimte.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #1 #3 #5 #6 #9 #10 #13 #14 #15 #17</p>
+<p><em>Van toepassing op:</em> IFCSPACE / IFCZONE met ObjectType=Verblijfsruimte</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Verblijfsruimte</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>patroon `Functioneel Nuttige Inhoud</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-12c-bedruimte">9.12c Bedruimte</h4><p><em>Bestand:</em> <a href="ids/27-9.12c-Bedruimte.ids"><code>27-9.12c-Bedruimte.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #16</p>
+<p><em>Van toepassing op:</em> IFCSPACE / IFCZONE met ObjectType=Bedruimte</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Bedruimte</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>patroon `Functioneel Nuttige Inhoud</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-12d-restruimte">9.12d Restruimte</h4><p><em>Bestand:</em> <a href="ids/28-9.12d-Restruimte.ids"><code>28-9.12d-Restruimte.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #5 #6</p>
+<p><em>Van toepassing op:</em> IFCSPACE / IFCZONE met ObjectType=Bedruimte</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>R</td>
+<td>Restruimte</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>patroon `Functioneel Nuttige Inhoud</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-13-buitenruimte">9.13 Buitenruimte</h4><p><em>Bestand:</em> <a href="ids/29-9.13-Buitenruimte.ids"><code>29-9.13-Buitenruimte.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #9 #10</p>
+<p><em>Van toepassing op:</em> IFCEXTERNALSPATIALELEMENT / IFCZONE / IFCSPACE met ObjectType=Buitenruimte</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>R</td>
+<td>Buitenruimte</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>patroon `Bebouwd Terreinvolume</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceCommon.IsExternal</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>patroon <code>Pset_.*Common</code>.HandicapAccessible</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>patroon <code>Pset_.*Common</code>.PubliclyAccessible</td>
+<td>R</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-16a-brandcompartiment">9.16a Brandcompartiment</h4><p><em>Bestand:</em> <a href="ids/30-9.16a-Brandcompartiment.ids"><code>30-9.16a-Brandcompartiment.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #7 #8 #14 #15</p>
+<p><em>Van toepassing op:</em> IFCZONE / IFCSPATIALZONE met ObjectType=Brandcompartiment</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Brandcompartiment</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>patroon `Bruto Inhoud</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceFireSafetyRequirements.FireRiskFactor</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceFireSafetyRequirements.FireExit</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceFireSafetyRequirements.FlammableStorage</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceFireSafetyRequirements.SprinklerProtection</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceFireSafetyRequirements.AirPressurization</td>
+<td>O</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-16b-subbrandcompartiment">9.16b Subbrandcompartiment</h4><p><em>Bestand:</em> <a href="ids/31-9.16b-Subbrandcompartiment.ids"><code>31-9.16b-Subbrandcompartiment.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #15</p>
+<p><em>Van toepassing op:</em> IFCZONE / IFCSPATIALZONE met ObjectType=Subbrandcompartiment</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>Subbrandcompartiment</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>patroon `Bruto Inhoud</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceFireSafetyRequirements.FireRiskFactor</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceFireSafetyRequirements.FireExit</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceFireSafetyRequirements.FlammableStorage</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceFireSafetyRequirements.SprinklerProtection</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceFireSafetyRequirements.AirPressurization</td>
+<td>O</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-16c-vluchtroute">9.16c Vluchtroute</h4><p><em>Bestand:</em> <a href="ids/32-9.16c-Vluchtroute.ids"><code>32-9.16c-Vluchtroute.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #14 #15 #16</p>
+<p><em>Van toepassing op:</em> IFCZONE / IFCSPATIALZONE met ObjectType=Vluchtroute</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>R</td>
+<td>Vluchtroute</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>patroon `Bruto Inhoud</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceFireSafetyRequirements.FireRiskFactor</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceFireSafetyRequirements.FireExit</td>
+<td>R</td>
+<td>true</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceFireSafetyRequirements.FlammableStorage</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceFireSafetyRequirements.SprinklerProtection</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SpaceFireSafetyRequirements.AirPressurization</td>
+<td>O</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-17-tarra-ruimte">9.17 Tarra Ruimte</h4><p><em>Bestand:</em> <a href="ids/33-9.17-Tarra-Ruimte.ids"><code>33-9.17-Tarra-Ruimte.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #5 #6 #15</p>
+<p><em>Van toepassing op:</em> IFCSPATIALZONE / IFCZONE met ObjectType=Tarra Ruimte</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>classification</td>
+<td>classificatie Omgevingswet-Ruimten</td>
+<td>O</td>
+<td>TarraRuimte</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Name</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Description</td>
+<td>R</td>
+<td>Tarra Inhoud</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-18a-fysieke-elementen-ifcbeam">9.18a Fysieke elementen IfcBeam</h4><p><em>Bestand:</em> <a href="ids/34-9.18a-Fysieke-elementen-IfcBeam.ids"><code>34-9.18a-Fysieke-elementen-IfcBeam.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> —</p>
+<p><em>Van toepassing op:</em> IFCBEAM</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>property</td>
+<td>Pset_BeamCommon.FireRating</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_BeamCommon.IsExternal</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_BeamCommon.LoadBearing</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_BeamCommon.ThermalTransmittance</td>
+<td>O</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-18b-fysieke-elementen-ifccolumn">9.18b Fysieke elementen IfcColumn</h4><p><em>Bestand:</em> <a href="ids/35-9.18b-Fysieke-elementen-IfcColumn.ids"><code>35-9.18b-Fysieke-elementen-IfcColumn.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #7 #8</p>
+<p><em>Van toepassing op:</em> IFCCOLUMN</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>property</td>
+<td>Pset_ColumnCommon.FireRating</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_ColumnCommon.IsExternal</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_ColumnCommon.LoadBearing</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_ColumnCommon.ThermalTransmittance</td>
+<td>O</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-18c-fysieke-elementen-ifccovering-insulation">9.18c Fysieke elementen IfcCovering.INSULATION</h4><p><em>Bestand:</em> <a href="ids/36-9.18c-Fysieke-elementen-IfcCovering.INSULATION.ids"><code>36-9.18c-Fysieke-elementen-IfcCovering.INSULATION.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #11</p>
+<p><em>Van toepassing op:</em> IFCCOVERING.INSULATION</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>property</td>
+<td>Pset_CoveringCommon.AcousticRating</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_CoveringCommon.Combustible</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_CoveringCommon.FireRating</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_CoveringCommon.FlammabilityRating</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_CoveringCommon.IsExternal</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_CoveringCommon.SurfaceSpreadOfFlame</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_CoveringCommon.ThermalTransmittance</td>
+<td>O</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-18d-fysieke-elementen-ifccurtainwall">9.18d Fysieke elementen IfcCurtainWall</h4><p><em>Bestand:</em> <a href="ids/37-9.18d-Fysieke-elementen-IfcCurtainWall.ids"><code>37-9.18d-Fysieke-elementen-IfcCurtainWall.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #7 #8 #11 #12 #17</p>
+<p><em>Van toepassing op:</em> IFCSLAB</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>property</td>
+<td>Pset_CurtainWallCommon.AcousticRating</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_CurtainWallCommon.Combustible</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_CurtainWallCommon.FireRating</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_CurtainWallCommon.IsExternal</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_CurtainWallCommon.SurfaceSpreadOfFlame</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_CurtainWallCommon.ThermalTransmittance</td>
+<td>O</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-18e-fysieke-elementen-ifcdoor">9.18e Fysieke elementen IfcDoor</h4><p><em>Bestand:</em> <a href="ids/38-9.18e-Fysieke-elementen-IfcDoor.ids"><code>38-9.18e-Fysieke-elementen-IfcDoor.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #7 #8 #12 #14 #15 #16 #17</p>
+<p><em>Van toepassing op:</em> IFCDOOR</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>property</td>
+<td>Pset_DoorCommon.AcousticRating</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_DoorCommon.FireExit</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_DoorCommon.FireRating</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_DoorCommon.HandicapAccessible</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_DoorCommon.IsExternal</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_DoorCommon.SecurityRating</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_DoorCommon.SelfClosing</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_DoorCommon.SmokeStop</td>
+<td>R</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-18f-fysieke-elementen-ifcsensor">9.18f Fysieke elementen IfcSensor</h4><p><em>Bestand:</em> <a href="ids/39-9.18f-Fysieke-elementen-IfcSensor.ids"><code>39-9.18f-Fysieke-elementen-IfcSensor.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> —</p>
+<p><em>Van toepassing op:</em> IFCSENSOR.SMOKESENSOR</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>attribute</td>
+<td>ObjectType</td>
+<td>R</td>
+<td>Rookmelder</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-18g-fysieke-elementen-ifcslab">9.18g Fysieke elementen IfcSlab</h4><p><em>Bestand:</em> <a href="ids/40-9.18g-Fysieke-elementen-IfcSlab.ids"><code>40-9.18g-Fysieke-elementen-IfcSlab.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #7 #8 #9 #10 #11 #13 #14 #15 #16</p>
+<p><em>Van toepassing op:</em> IFCSLAB</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>property</td>
+<td>Pset_SlabCommon.AcousticRating</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SlabCommon.Combustible</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SlabCommon.FireRating</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SlabCommon.IsExternal</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SlabCommon.LoadBearing</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SlabCommon.SurfaceSpreadOfFlame</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_SlabCommon.Thermal Transmittance [ThermalTransmittance]</td>
+<td>O</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-18h-fysieke-elementen-ifcwall">9.18h Fysieke elementen IfcWall</h4><p><em>Bestand:</em> <a href="ids/41-9.18h-Fysieke-elementen-IfcWall.ids"><code>41-9.18h-Fysieke-elementen-IfcWall.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #7 #8 #9 #11 #13 #16 #17</p>
+<p><em>Van toepassing op:</em> IFCWALL</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>property</td>
+<td>Pset_WallCommon.AcousticRating</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_WallCommon.Combustible</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_WallCommon.Compartmentation</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_WallCommon.FireRating</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_WallCommon.IsExternal</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_WallCommon.LoadBearing</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_WallCommon.SurfaceSpreadOfFlame</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_WallCommon.ThermalTransmittance</td>
+<td>O</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="loin-9-18i-fysieke-elementen-ifcwindow">9.18i Fysieke elementen Ifcwindow</h4><p><em>Bestand:</em> <a href="ids/42-9.18i-Fysieke-elementen-Ifcwindow.ids"><code>42-9.18i-Fysieke-elementen-Ifcwindow.ids</code></a> · <em>IFC:</em> IFC4 IFC4X3_ADD2 · <em>Checks:</em> #12 #17</p>
+<p><em>Van toepassing op:</em> IFCWINDOW</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Facet</th>
+<th>Naam</th>
+<th>Card.</th>
+<th>Waarde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>property</td>
+<td>Pset_WindowCommon.AcousticRating</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_WindowCommon.FireExit</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_WindowCommon.FireRating</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_WindowCommon.GlazingAreaFraction</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_WindowCommon.IsExternal</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_WindowCommon.SecurityRating</td>
+<td>O</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_WindowCommon.SmokeStop</td>
+<td>R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>property</td>
+<td>Pset_WindowCommon.ThermalTransmittance</td>
+<td>O</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="acceptatie"><h2><span class="num">7</span> Acceptatiecriteria</h2><p>De acceptatiecriteria bepalen objectief of een aangeleverd informatiemodel <strong>ontvankelijk</strong> is, dus geschikt om de checks op uit te voeren. Of het bouwplan voldoet aan de regels is een tweede vraag; die wordt met de checks beantwoord, niet met de acceptatiecriteria.</p>
+<h3 id="acceptatie-criteria"><span class="num">7.1</span> Criteria</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Criterium</th>
+<th>Toetswijze</th>
+<th>Automatisch?</th>
+<th>Bij afkeur</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>AC1</strong></td>
+<td>Het bestand is geldig IFC 4.3 (of IFC4 ADD2 TC1) in STEP-formaat, maximaal [250] MB per container</td>
+<td>Schemavalidatie (bijv. buildingSMART Validation Service)</td>
+<td>Ja</td>
+<td>Niet ontvankelijk</td>
+</tr>
+<tr>
+<td><strong>AC2</strong></td>
+<td>De <code>#HEADER</code> is gevuld: <code>FILE_NAME</code> met naam, tijdstempel, auteur, organisatie en autorisatie</td>
+<td>Headercontrole</td>
+<td>Ja</td>
+<td>Herstelverzoek</td>
+</tr>
+<tr>
+<td><strong>AC3</strong></td>
+<td>Het model voldoet aan alle IDS-specificaties die bij de mijlpaal horen (zie <a href="#mijlpalen">Mijlpalen</a>)</td>
+<td>IDS-validatie met een IDS 1.0-conforme tool</td>
+<td>Ja</td>
+<td>Herstelverzoek met rapport (BCF/HTML)</td>
+</tr>
+<tr>
+<td><strong>AC4</strong></td>
+<td>Het model is gegeorefereerd in EPSG:28992 of EPSG:7415, en de positie valt binnen de opgegeven kadastrale percelen</td>
+<td>IDS 9.01a/b plus ruimtelijke controle tegen de BRK</td>
+<td>Ja</td>
+<td>Niet ontvankelijk</td>
+</tr>
+<tr>
+<td><strong>AC5</strong></td>
+<td>De geometrie van ruimten en zones is solide en zonder doublures (G1, G4)</td>
+<td>Geometriecontrole</td>
+<td>Deels</td>
+<td>Herstelverzoek</td>
+</tr>
+<tr>
+<td><strong>AC6</strong></td>
+<td>De meegeleverde hoeveelheden (Qto) wijken niet meer dan [x]% af van de herberekende hoeveelheden (G5)</td>
+<td>Tweeledige geometriecontrole, zie <a href="#geometrie">Geometrische controle</a></td>
+<td>Ja (zodra de tooling beschikbaar is)</td>
+<td>Signaal aan de beoordelaar</td>
+</tr>
+<tr>
+<td><strong>AC7</strong></td>
+<td>De bestandsnaam volgt de conventie uit de <a href="#standaard">Informatieproductiestandaard</a></td>
+<td>Patrooncontrole</td>
+<td>Ja</td>
+<td>Signaal</td>
+</tr>
+</tbody></table></div>
+<p>Waarden tussen [ ] kiest de gemeente bij het vaststellen van de ILS. Voorstel: 250 MB en 2%.</p>
+<h3 id="acceptatie-wie-voert-de-controle-uit"><span class="num">7.2</span> Wie voert de controle uit?</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Stap</th>
+<th>Uitvoerder</th>
+<th>Hulpmiddel</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Zelfcontrole vóór indienen</td>
+<td>Aanvrager / modelleur</td>
+<td>IDS-bestanden uit de map <code>ids/</code>, open validatietools</td>
+</tr>
+<tr>
+<td>Controle bij ontvangst</td>
+<td>Gemeente of een door haar aangewezen validatiedienst</td>
+<td>Dezelfde IDS-bestanden, zodat het resultaat gelijk is</td>
+</tr>
+<tr>
+<td>Geometrische herberekening</td>
+<td>Gemeente / checksoftware</td>
+<td>Generieke geometriefuncties (laag 4)</td>
+</tr>
+</tbody></table></div>
+<p>Omdat aanvrager en gemeente <strong>dezelfde</strong> IDS-bestanden gebruiken, weet de aanvrager vooraf of de levering ontvankelijk is. Het resultaat van een IDS-controle hangt nog wel af van de IFC-parser die een tool gebruikt. Daarom verwijst deze ILS naar de buildingSMART-certificering van IDS-tools als referentie. Zie <a href="#open-punten">Open punten</a>.</p>
+<h3 id="acceptatie-acceptatietabel-per-mijlpaal"><span class="num">7.3</span> Acceptatietabel per mijlpaal</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Mijlpaal</th>
+<th>AC1</th>
+<th>AC2</th>
+<th>AC3</th>
+<th>AC4</th>
+<th>AC5</th>
+<th>AC6</th>
+<th>AC7</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>M1 Vooroverleg</td>
+<td class="c">●</td>
+<td class="c">○</td>
+<td>● (beperkte set)</td>
+<td class="c">●</td>
+<td class="c">○</td>
+<td class="c">–</td>
+<td class="c">○</td>
+</tr>
+<tr>
+<td>M2 Aanvraag OPA</td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c">○</td>
+<td class="c">○</td>
+</tr>
+<tr>
+<td>M3 Aanvraag TBA</td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c">●</td>
+<td class="c">○</td>
+</tr>
+</tbody></table></div>
+<p>● = verplicht · ○ = aanbevolen · – = niet van toepassing</p>
+</section>
+<section id="standaard"><h2><span class="num">8</span> Informatieproductiestandaard en -methoden</h2><h3 id="standaard-normen-en-richtlijnen"><span class="num">8.1</span> Normen en richtlijnen</h3><ul>
+<li>NEN-EN ISO 19650-1/-2 (informatiemanagement) en NPR-CEN/TR 17439 / 17654 (Europese implementatiegidsen)</li>
+<li>ISO 7817-1:2024 Level of Information Need</li>
+<li>ISO 16739-1:2024 IFC 4.3</li>
+<li>buildingSMART IDS 1.0</li>
+<li>NEN 2580 (oppervlakten en inhouden), NEN 2699 (investeringskosten), NEN 2767 (conditiemeting)</li>
+<li>BIM basis ILS en ILS Ontwerp en Engineering (digiGO)</li>
+<li>DSGO-afsprakenstelsel (specifieke afspraken, georefereren)</li>
+<li>STB 2025 (BNA/NL Ingenieurs)</li>
+</ul>
+<h3 id="standaard-bestandsnaamgeving-informatiecontainers"><span class="num">8.2</span> Bestandsnaamgeving (informatiecontainers)</h3><p>Er is nog geen landelijke afspraak over bestandsnaamgeving bij vergunningaanvragen. Daarom deze <strong>aanbevolen</strong> conventie, in lijn met ISO 19650-2 (nationale bijlage):</p>
+<pre><code>&lt;Project&gt;[_&lt;Panddeel&gt;]_&lt;Discipline&gt;_&lt;Systeem&gt;_&lt;Type&gt;_&lt;Bouwlaag&gt;[_&lt;Volgnummer&gt;].&lt;ext&gt;
+</code></pre>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Veld</th>
+<th>Waarden</th>
+<th>Voorbeeld</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Project</td>
+<td>Unieke projectcode</td>
+<td><code>18BA</code></td>
+</tr>
+<tr>
+<td>Panddeel (optioneel)</td>
+<td>Deelgebouw</td>
+<td><code>Hoofdgebouw</code>, <code>VleugelA</code></td>
+</tr>
+<tr>
+<td>Discipline</td>
+<td>STB 2025-thema&#39;s: <code>OOG</code> <code>KEU</code> <code>ARC</code> <code>CON</code> <code>INS</code> <code>INS-W</code> <code>INS-E</code> <code>BFY</code> <code>DZH</code> <code>VEI</code> <code>TOE</code> <code>BAG</code> …</td>
+<td><code>ARC</code></td>
+</tr>
+<tr>
+<td>Systeem</td>
+<td><code>XX</code> n.v.t. · <code>ZZ</code> alle</td>
+<td><code>XX</code></td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>M3D</code> 3D-model (IFC) · <code>TEK</code> tekening · <code>BER</code> berekening · <code>POI</code> puntenwolk · <code>SPE</code> specificatie · …</td>
+<td><code>M3D</code></td>
+</tr>
+<tr>
+<td>Bouwlaag</td>
+<td><code>K01</code> kelder · <code>P00</code> begane grond · <code>P01</code> … · <code>D05</code> dak · <code>ZZZ</code> meerdere · <code>XXX</code> n.v.t.</td>
+<td><code>ZZZ</code></td>
+</tr>
+<tr>
+<td>Volgnummer</td>
+<td><code>0001</code>–<code>9999</code></td>
+<td><code>0001</code></td>
+</tr>
+</tbody></table></div>
+<p>Voorbeeld: <code>18BA_Hoofdgebouw_ARC_XX_M3D_ZZZ_0001.ifc</code></p>
+<h3 id="standaard-statuscodering-en-metadata"><span class="num">8.3</span> Statuscodering en metadata</h3><p>Codering volgens ISO 19650 als het CDE daarmee werkt:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Betekenis</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>S0</td>
+<td>Werk in uitvoering</td>
+</tr>
+<tr>
+<td>S1–S4</td>
+<td>Gedeeld binnen het leveringsteam (coördinatie, referentie, commentaar, goedkeuring hoofdopdrachtnemer)</td>
+</tr>
+<tr>
+<td>S5</td>
+<td>Gedeeld voor acceptatie door de opdrachtgever</td>
+</tr>
+<tr>
+<td><strong>S5 → indienen</strong></td>
+<td>Status bij indienen via het Omgevingsloket</td>
+</tr>
+<tr>
+<td>A1, A2 …</td>
+<td>Gepubliceerd en geaccepteerd</td>
+</tr>
+</tbody></table></div>
+<p>Aanbevolen metadata: fase (STB 2025-code), organisatie, status, revisie, classificatie (NL-SfB), omschrijving en datum. Of metadata via het DSO kan worden meegegeven, is nog een open vraag.</p>
+<h3 id="standaard-afspraken-over-het-ifc-model"><span class="num">8.4</span> Afspraken over het IFC-model</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Onderwerp</th>
+<th>Afspraak</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Formaat</td>
+<td>IFC STEP (<code>.ifc</code>), IFC 4.3 (ISO 16739-1:2024). IFC4 ADD2 TC1 is toegestaan zolang de software IFC 4.3 niet ondersteunt</td>
+</tr>
+<tr>
+<td>Header</td>
+<td><code>FILE_NAME</code> volledig gevuld; <code>TimeStamp</code> geldt als versiedatum. De gemeente beoordeelt of de header bij publicatie geanonimiseerd moet worden</td>
+</tr>
+<tr>
+<td>Eenheden</td>
+<td>SI; objecten in millimeters, georeferentie in meters</td>
+</tr>
+<tr>
+<td>Georeferentie</td>
+<td><code>IfcMapConversion</code> + <code>IfcProjectedCRS</code>, EPSG:28992 of EPSG:7415, hoogte ten opzichte van NAP, exporteren met het ware noorden</td>
+</tr>
+<tr>
+<td>Bouwlagen</td>
+<td><code>IfcBuildingStorey.Name</code> = <code>&lt;code&gt;[letter] &lt;omschrijving&gt;</code>, bijv. <code>-1 kelder</code>, <code>00 begane grond</code>, <code>00a tussenverdieping</code>, <code>01 eerste verdieping</code>. Namen en peilen gelijk in alle aspectmodellen</td>
+</tr>
+<tr>
+<td>Entiteiten</td>
+<td>Juiste entiteit gebruiken (geen <code>IfcBuildingElementProxy</code>): netto ruimte = <code>IfcSpace</code>; bruto inhoud en gebieden = <code>IfcSpatialZone</code>; groeperingen (gebruiksfunctie, verblijfsobject, brandcompartiment) = <code>IfcZone</code></td>
+</tr>
+<tr>
+<td>Kadastraal perceel</td>
+<td>Als <code>IfcSpatialZone</code> met <code>Pset_LandRegistration</code>, niet als <code>IfcSite</code></td>
+</tr>
+<tr>
+<td>Attributen</td>
+<td><code>GlobalId</code> verplicht en stabiel tussen versies; <code>Name</code> en <code>ObjectType</code> verplicht; <code>Description</code> en <code>LongName</code> optioneel</td>
+</tr>
+<tr>
+<td>ObjectType</td>
+<td>Geen aanvullende property sets. De betekenis wordt vastgelegd met <code>ObjectType</code> op <code>IfcSpace</code>, <code>IfcSpatialZone</code> en <code>IfcZone</code>, met waarden uit de bSDD-publicatie <em>Omgevingswet-Ruimten</em></td>
+</tr>
+<tr>
+<td>Property sets</td>
+<td>Alleen internationale buildingSMART-Psets en -Qto&#39;s (bijv. <code>Pset_SpaceCommon</code>, <code>Qto_SpaceBaseQuantities</code>, <code>Pset_WallCommon.FireRating</code>, <code>.ThermalTransmittance</code>)</td>
+</tr>
+<tr>
+<td>Classificatie</td>
+<td>NL-SfB tabel 1, 4-cijferig, laatst gepubliceerde versie (2021) via bSDD</td>
+</tr>
+<tr>
+<td>Materiaal</td>
+<td>Naa.K.T. (digiGO, bSDD <code>nkt/naakt/2.4</code>)</td>
+</tr>
+<tr>
+<td>Installaties</td>
+<td>Installatieobjecten groeperen in <code>IfcSystem</code></td>
+</tr>
+<tr>
+<td>Panddelen / verblijfsobjecten</td>
+<td><code>IfcSpatialZone</code> per panddeel (ander bouwjaar/bouwsysteem); <code>IfcZone</code> per verblijfsobject met het BAG-ID. Gemeenschappelijke ruimten horen bij het pand, niet bij een verblijfsobject</td>
+</tr>
+<tr>
+<td>Doublures</td>
+<td>Geen dubbele of overlappende objecten van hetzelfde type</td>
+</tr>
+<tr>
+<td>Gebouw</td>
+<td><code>IfcBuilding</code> met o.a. <code>Pset_BuildingCommon.BuildingID</code> (BAG-pand-ID, of 14× <code>0</code> bij nieuwbouw), <code>NumberOfStoreys</code>, <code>YearOfConstruction</code>, <code>IsLandmarked</code>, <code>GrossPlannedArea</code>, <code>NetPlannedArea</code></td>
+</tr>
+</tbody></table></div>
+<h3 id="standaard-productiemethode-ruimtemodel"><span class="num">8.5</span> Productiemethode: ruimtemodel</h3><p>Het ruimtemodel volgt de <strong>ILS voor Ruimten in de Omgevingswet</strong>:</p>
+<ol>
+<li>Georeferentie, project, percelen en gebouw vastleggen (9.01–9.05).</li>
+<li>Bouwlagen en bouwlaaginhouden modelleren (9.06).</li>
+<li>Gebruikseenheden, gebruiksfuncties en nevengebruiksfuncties als zones (9.07–9.09).</li>
+<li>Gebieden (functie-, verblijfs-, gebruiks-, bed- en restgebied) als <code>IfcSpatialZone</code> (9.10–9.11).</li>
+<li>Ruimten (functie-, verblijfs-, bed- en restruimte, buitenruimte) als <code>IfcSpace</code> (9.12–9.13).</li>
+<li>Brandcompartimenten, subbrandcompartimenten en vluchtroutes (9.16) en tarraruimte (9.17).</li>
+<li>Fysieke elementen met de eigenschappen die de checks nodig hebben (9.18).</li>
+<li>Hoeveelheden (Qto) laten berekenen en exporteren, daarna zelf controleren met de IDS-bestanden.</li>
+</ol>
+<h3 id="standaard-ongestructureerde-informatie"><span class="num">8.6</span> Ongestructureerde informatie</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Soort</th>
+<th>Formaat</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Documenten, niet-bewerkbare tekeningen</td>
+<td>PDF/A (ISO 32000-2:2020)</td>
+</tr>
+<tr>
+<td>Tekeningen uit het model</td>
+<td>PDF/A, plus DXF voor maatvoering. Van elke bouwlaag en elk aanzicht, met projectgegevens uit het model in de titelhoek</td>
+</tr>
+<tr>
+<td>Bewerkbare documenten</td>
+<td>DOCX</td>
+</tr>
+<tr>
+<td>Spreadsheets</td>
+<td>XLSX</td>
+</tr>
+<tr>
+<td>Puntenwolken (bestaande bouw)</td>
+<td>E57</td>
+</tr>
+<tr>
+<td>Issues / terugkoppeling</td>
+<td>BCF 3.0</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="geometrie"><h2><span class="num">9</span> Geometrische controle</h2><h3 id="geometrie-het-probleem"><span class="num">9.1</span> Het probleem</h3><p>IDS toetst alleen <strong>attributen en eigenschappen</strong>, niet de geometrie. Toch hebben de meeste checks geometrie nodig: oppervlakten, hoogten, breedten en afstanden. In de praktijk gaat het vaak mis:</p>
+<ul>
+<li>Verschillende programma&#39;s berekenen uit hetzelfde IFC-model verschillende oppervlakten.</li>
+<li>Bij export wordt één vloer soms in meerdere IFC-objecten opgeknipt. Wie de oppervlakten simpelweg optelt, krijgt dan een verkeerde uitkomst.</li>
+<li>Schuine daken en dakkapellen zijn lastig te interpreteren volgens NEN 2580.</li>
+<li>Regels zoals de maximale goothoogte zijn nog niet softwareonafhankelijk vastgelegd.</li>
+</ul>
+<h3 id="geometrie-aanpak-tweeledige-controle"><span class="num">9.2</span> Aanpak: tweeledige controle</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Stap</th>
+<th>Wie</th>
+<th>Wat</th>
+<th>Waarom</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>1. Aanleveren</strong></td>
+<td>CAD-software van de aanvrager</td>
+<td>Berekent hoeveelheden en exporteert ze in IFC Quantity Sets (<code>Qto_…</code>)</td>
+<td>De bronsoftware kent het model het best</td>
+</tr>
+<tr>
+<td><strong>2. Narekenen</strong></td>
+<td>Ontvangende software van de gemeente</td>
+<td>Berekent de hoeveelheden opnieuw uit de solide geometrie en vergelijkt ze met stap 1</td>
+<td>Exportfouten komen zo aan het licht en het resultaat wordt betrouwbaar</td>
+</tr>
+</tbody></table></div>
+<p>Voorwaarde: het model bevat <strong>solide geometrie</strong> (eis G1 in het <a href="#loin-geometrie">LOIN</a>). Blijft het verschil tussen stap 1 en stap 2 onder de drempel (AC6), dan gebruikt de check de aangeleverde waarde. Ligt het verschil erboven, dan krijgt de beoordelaar een signaal.</p>
+<h3 id="geometrie-technische-opzet-laag-4"><span class="num">9.3</span> Technische opzet (laag 4)</h3><p>De checks zijn in twee lagen opgebouwd, zodat ze niet van één softwarepakket afhangen:</p>
+<pre><code>IFC-bestand
+   │  omzetten
+   ▼
+RDF-grafe (ifcOWL, RDF-vertaling van het IFC EXPRESS-schema)
+   │  filteren
+   ▼
+SPARQL-regel per check  ──aanroep──▶  generieke geometriefuncties
+                                        (calculate_projected_area,
+                                         get_bounding_box, …)
+   │
+   ▼
+Resultaat per check (voldoet / voldoet niet / handmatig beoordelen)
+</code></pre>
+<p><strong>Voorbeeld: goothoogte (verwant aan check #2)</strong></p>
+<ol>
+<li>Een SPARQL-regel selecteert alle dakgeometrie.</li>
+<li>Voor elk dakobject roept de regel <code>get_bounding_box</code> aan.</li>
+<li>Uit de bounding boxes volgen de minimale en maximale hoogte ten opzichte van NAP, en daarmee goothoogte en bouwhoogte.</li>
+<li>De uitkomst wordt vergeleken met de norm uit het omgevingsplan.</li>
+</ol>
+<p><strong>Voorbeeld: bebouwingspercentage (check #3)</strong></p>
+<p><code>calculate_projected_area</code> op de bruto inhoud (9.05b) levert het bebouwde oppervlak. Dat wordt gedeeld door het oppervlak van het bouwwerkperceel (9.03b).</p>
+<p>De SPARQL-regels en generieke functies komen in de gedeelde GitHub-repository (laag 4).</p>
+<h3 id="geometrie-knelpunt-status-van-de-rdf-vertaling-van-ifc"><span class="num">9.4</span> Knelpunt: status van de RDF-vertaling van IFC</h3><p>De aanpak steunt op een RDF-vertaling van IFC. Die vertaling is een open specificatie, maar <strong>geen formeel vastgestelde buildingSMART-standaard</strong> (in tegenstelling tot EXPRESS, het ISO-schema, en XSD, de XML-vertaling). Daardoor ontstaan risico&#39;s:</p>
+<ul>
+<li><strong>Vendor lock-in en versnippering:</strong> commerciële tools ontwikkelen hun eigen ontologieën, waardoor regels niet uitwisselbaar zijn.</li>
+<li><strong>Extra mappinglagen:</strong> domeinontologieën (bijv. uit FireBIM) voegen complexiteit toe.</li>
+</ul>
+<p><strong>Standpunt BM13:</strong> buildingSMART International moet deze ontologie formaliseren. Daarnaast is aansluiting gewenst op de Nederlandse informatiemodellen die basisregistraties en domeinmodellen semantisch verbinden. Dit wordt ingebracht via een strategische notitie aan de digiGO-stuurgroep en via de vragen aan buildingSMART.</p>
+</section>
+<section id="referentie"><h2><span class="num">10</span> Referentie-informatie en gedeelde bronnen</h2><h3 id="referentie-referentie-informatie"><span class="num">10.1</span> Referentie-informatie</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Bron</th>
+<th>Gebruik in deze ILS</th>
+<th>Vindplaats</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>IFC 4.3 (ISO 16739-1:2024)</td>
+<td>Informatiemodel en schema</td>
+<td><a href="https://ifc43-docs.standards.buildingsmart.org/">ifc43-docs.standards.buildingsmart.org</a></td>
+</tr>
+<tr>
+<td>bSDD <em>Omgevingswet-Ruimten</em> 0.3.0</td>
+<td>Klassen en <code>ObjectType</code>-waarden voor ruimtelijke objecten</td>
+<td><a href="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0">identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0</a></td>
+</tr>
+<tr>
+<td>ILS voor Ruimten in de Omgevingswet (digiGO)</td>
+<td>Bron van de IDS-specificaties</td>
+<td>digiGO, <em>ILS&#39;en en richtlijnen</em></td>
+</tr>
+<tr>
+<td>IDS 1.0 (buildingSMART)</td>
+<td>Formaat van de acceptatieregels</td>
+<td><a href="https://github.com/buildingSMART/IDS">github.com/buildingSMART/IDS</a></td>
+</tr>
+<tr>
+<td>NL-SfB tabel 1 (2021)</td>
+<td>Classificatie</td>
+<td>bSDD</td>
+</tr>
+<tr>
+<td>Naa.K.T. 2.4</td>
+<td>Materiaalbenaming</td>
+<td><a href="https://search.bsdd.buildingsmart.org/uri/nkt/naakt/2.4">search.bsdd.buildingsmart.org/uri/nkt/naakt/2.4</a></td>
+</tr>
+<tr>
+<td>BAG, BRK, BGT (Kadaster/PDOK)</td>
+<td>Pand-ID, verblijfsobject-ID, percelen, omgeving</td>
+<td><a href="https://www.pdok.nl/">pdok.nl</a></td>
+</tr>
+<tr>
+<td>Omgevingsplan (Regels op de kaart, DSO)</td>
+<td>Normwaarden voor checks #1–#6</td>
+<td>Omgevingsloket</td>
+</tr>
+<tr>
+<td>Besluit bouwwerken leefomgeving</td>
+<td>Normwaarden voor checks #7–#17</td>
+<td>wetten.nl</td>
+</tr>
+<tr>
+<td>GEMMA processenmodel Omgevingswet (o.a. 013, 015)</td>
+<td>Processen, processtappen en rollen; zie de <a href="#gemma-matrix">GEMMA-matrix</a></td>
+<td><a href="https://www.gemmaonline.nl/">gemmaonline.nl</a></td>
+</tr>
+<tr>
+<td>CHEK DBP-procesmodel en volwassenheidsmatrix</td>
+<td>Volwassenheidsniveau van de gemeente</td>
+<td>CHEK-project (EU Horizon)</td>
+</tr>
+<tr>
+<td>STB 2025</td>
+<td>Fasering en disciplinecodes</td>
+<td>BNA / NL Ingenieurs</td>
+</tr>
+</tbody></table></div>
+<h3 id="referentie-informatiemodel-als-grondslag"><span class="num">10.2</span> Informatiemodel als grondslag</h3><p>Deze ILS gebruikt <strong>IFC</strong> als informatiemodel: een internationaal, ISO-vastgesteld conceptueel én logisch model voor bouwwerken. De Nederlandse begrippen komen uit de bSDD-publicatie <em>Omgevingswet-Ruimten</em>. Voor de procesmatige inbedding sluiten we aan op GEMMA (en NORA).</p>
+<p class="note">Beslisvraag aan digiGO: geldt IFC, eventueel met een bSDD-publicatie, als <em>vastgesteld informatiemodel</em> in de zin van criterium 4.2 van het Toetsingskader? Zie <a href="#open-punten">Open punten</a>.</p><h3 id="referentie-gedeelde-bronnen-bijlagen-in-deze-repository"><span class="num">10.3</span> Gedeelde bronnen (bijlagen in deze repository)</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Map / bestand</th>
+<th>Inhoud</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ids/</code></td>
+<td>42 IDS 1.0-deelspecificaties, één per specificatie</td>
+</tr>
+<tr>
+<td><code>data/specificaties_checks.csv</code></td>
+<td>Koppeling tussen specificaties, bSDD-identifiers en checks</td>
+</tr>
+<tr>
+<td>Checkfiches (repo <code>vergunningcontrole</code>)</td>
+<td>Laag 0–5 per check</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="verantwoordelijkheden"><h2><span class="num">11</span> Verantwoordelijkheidsmatrix</h2><p>Toelichting codes: <strong>V</strong> = verantwoordelijk (<em>responsible</em>) · <strong>E</strong> = eindverantwoordelijk (<em>accountable</em>) · <strong>R</strong> = raadplegen (<em>consulted</em>) · <strong>I</strong> = informeren (<em>informed</em>).</p>
+<h3 id="verantwoordelijkheden-informatiemanagement-sturen"><span class="num">11.1</span> Informatiemanagement (sturen)</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Taak</th>
+<th>Gemeente (bevoegd gezag)</th>
+<th>Richtlijnhouder ILS</th>
+<th>Aanvrager</th>
+<th>Modelleur / adviseur</th>
+<th>Omgevingsloket / softwareleverancier</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ILS vaststellen als indieningsvereiste</td>
+<td>E/V</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>ILS beheren en publiceren</td>
+<td>I</td>
+<td>E/V</td>
+<td>I</td>
+<td>I</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Acceptatiecriteria bepalen (drempelwaarden)</td>
+<td>E/V</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Ontvankelijkheid beoordelen</td>
+<td>E/V</td>
+<td class="c">–</td>
+<td>I</td>
+<td>I</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Checks uitvoeren en beoordelen</td>
+<td>E/V</td>
+<td class="c">–</td>
+<td>I</td>
+<td class="c">–</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Terugkoppeling (BCF / herstelverzoek)</td>
+<td>E/V</td>
+<td class="c">–</td>
+<td>I</td>
+<td>I</td>
+<td class="c">–</td>
+</tr>
+</tbody></table></div>
+<h3 id="verantwoordelijkheden-informatieproductie-leveren"><span class="num">11.2</span> Informatieproductie (leveren)</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Taak</th>
+<th>Gemeente</th>
+<th>Aanvrager</th>
+<th>Modelleur / adviseur</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>BIM-uitvoeringsplan / informatieproductieschema invullen</td>
+<td>I</td>
+<td>E</td>
+<td>V</td>
+</tr>
+<tr>
+<td>Informatiemodel produceren volgens deze ILS</td>
+<td class="c">–</td>
+<td>E</td>
+<td>V</td>
+</tr>
+<tr>
+<td>Zelfcontrole met IDS vóór indienen</td>
+<td>I</td>
+<td>E</td>
+<td>V</td>
+</tr>
+<tr>
+<td>Indienen via het Omgevingsloket</td>
+<td>I</td>
+<td>E/V</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Herstel na terugkoppeling</td>
+<td>I</td>
+<td>E</td>
+<td>V</td>
+</tr>
+</tbody></table></div>
+<h3 id="verantwoordelijkheden-koppeling-met-iso-19650-en-gemma"><span class="num">11.3</span> Koppeling met ISO 19650 en GEMMA</h3><p>De volledige takenlijst uit ISO 19650-2 (<em>information management assignment matrix</em>, taken 1.1.1 en verder) staat in het toetsingsinstrument. In de vergunningsketen zijn vooral de taken rond informatie-eisen (1.3), acceptatiecriteria en levering (5–7) relevant. De rollen sluiten aan op de GEMMA-procesbeschrijving <em>Inhoudelijk behandelen aanvraag</em>. Een uitwerking in IDM-vorm (ISO 29481) met de GEMMA-procesmodellen staat op de <a href="#beheer">ontwikkelagenda</a>.</p>
+<h3 id="verantwoordelijkheden-invulformat-informatieproductieteam"><span class="num">11.4</span> Invulformat informatieproductieteam</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Rol</th>
+<th>Naam</th>
+<th>Organisatie</th>
+<th>Contact</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Contactpersoon gemeente (VTH)</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>Informatiemanager aanvrager</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>Modelleur architectuur</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>Modelleur constructie / installaties</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+</tr>
+<tr>
+<td>Adviseur bouwfysica / brandveiligheid</td>
+<td class="c"></td>
+<td class="c"></td>
+<td class="c"></td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="beheer"><h2><span class="num">12</span> Beheer, versiebeheer en doorontwikkeling</h2><h3 id="beheer-beheerorganisatie"><span class="num">12.1</span> Beheerorganisatie</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Rol</th>
+<th>Invulling (voorstel)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Eigenaar en uitgever</td>
+<td>VNG</td>
+</tr>
+<tr>
+<td>Projectleiding, publicatiebesluit en reviewflow</td>
+<td>Jeroen de Ruig (VNG)</td>
+</tr>
+<tr>
+<td>Opsteller ILS en IDS (laag 2 BIM)</td>
+<td>Lex Ransijn (VDCbase, in opdracht van VNG)</td>
+</tr>
+<tr>
+<td>Afstemming en draagvlak</td>
+<td>Stuurgroep: BNA, NEPROM, NL Ingenieurs, Woningbouwers NL, digiGO, Bouwend Nederland</td>
+</tr>
+<tr>
+<td>Beheer na afloop van BM13</td>
+<td>Nog te bepalen (VNG of digiGO), volgens BOMOS</td>
+</tr>
+</tbody></table></div>
+<p>We scheiden managementverantwoordelijkheden (vaststellen, prioriteren) van productieverantwoordelijkheden (redigeren, IDS onderhouden).</p>
+<h3 id="beheer-wijzigingsprocedure"><span class="num">12.2</span> Wijzigingsprocedure</h3><ol>
+<li><strong>Signaleren:</strong> iedereen kan een GitHub-<em>issue</em> aanmaken met een sjabloon (vraag, fout, wijzigingsvoorstel). Gemeenten zonder GitHub-account melden per e-mail; de redactie zet die meldingen om in een issue.</li>
+<li><strong>Beoordelen:</strong> de redactie labelt het issue (<code>redactioneel</code>, <code>inhoudelijk</code>, <code>ids</code>, <code>beslispunt</code>) en koppelt het aan een release-mijlpaal.</li>
+<li><strong>Uitwerken:</strong> wijzigingen worden in een <em>branch</em> gemaakt en via een <em>pull request</em> ingediend, met ten minste één review door een andere redacteur.</li>
+<li><strong>Besluiten:</strong> redactionele wijzigingen neemt de redactie zelf mee. Inhoudelijke wijzigingen en beslispunten gaan naar het BM13-projectoverleg; wijzigingen met impact op de markt gaan naar digiGO.</li>
+<li><strong>Publiceren:</strong> bij een release wordt een tag gezet, het CHANGELOG bijgewerkt en de ReSpec-pagina opnieuw gegenereerd.</li>
+</ol>
+<h3 id="beheer-versiebeheer"><span class="num">12.3</span> Versiebeheer</h3><ul>
+<li><strong>Semantische versies:</strong> <code>0.x</code> = concept, <code>1.0.0</code> = vastgesteld. <em>Major</em> = niet-compatibele wijziging in de IDS of acceptatiecriteria, <em>minor</em> = nieuwe eisen of checks, <em>patch</em> = redactioneel.</li>
+<li>IDS-bestanden krijgen hetzelfde versienummer als de ILS (<code>ids:info/version</code>).</li>
+<li><strong>Onderliggende normen:</strong> bij een nieuwe versie van IFC, IDS of bSDD <em>Omgevingswet-Ruimten</em> maken we een impactanalyse in een issue. Een oudere IFC-versie blijft minimaal één <em>minor</em>-release toegestaan.</li>
+</ul>
+<h3 id="beheer-iso-19650-transitieplan"><span class="num">12.4</span> ISO 19650-transitieplan</h3><p>De herziene ISO 19650-serie wordt naar verwachting eind 2026 vastgesteld. Zodra dat gebeurt:</p>
+<ol>
+<li>passen we de terminologie aan (EIR → <em>information production requirements</em>);</li>
+<li>controleren we de hoofdstukindeling tegen het ILS-Referentiesjabloon;</li>
+<li>brengen we dit uit als <em>minor</em>-release met een overgangstermijn.</li>
+</ol>
+<h3 id="beheer-community"><span class="num">12.5</span> Community</h3><ul>
+<li>Openbare repository met issues en discussies als laagdrempelig meldpunt.</li>
+<li>Periodiek (voorstel: per kwartaal) een gebruikersoverleg met gemeenten, softwareleveranciers en modelleurs.</li>
+<li>Wijzigingen worden toegelicht in het CHANGELOG en bij grotere releases met een korte video.</li>
+</ul>
+<h3 id="beheer-implementatiepad-voorstel"><span class="num">12.6</span> Implementatiepad (voorstel)</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Periode</th>
+<th>Status van de ILS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pilot</td>
+<td>2026</td>
+<td>Aanbevolen, bij pilotgemeenten</td>
+</tr>
+<tr>
+<td>Opschaling</td>
+<td>2027</td>
+<td>Aanbevolen, opgenomen in het register van digiGO</td>
+</tr>
+<tr>
+<td>Norm</td>
+<td>Nog te bepalen</td>
+<td>Mogelijk verplicht als indieningsvereiste bij digitale 3D-aanvragen</td>
+</tr>
+</tbody></table></div>
+<h3 id="beheer-ontwikkelagenda"><span class="num">12.7</span> Ontwikkelagenda</h3><ul>
+<li>Informatieleveringsprocessen uitwerken volgens IDM (ISO 29481) in samenhang met de GEMMA-procesmodellen.</li>
+<li>Informatieprotocol opstellen (juridische status van het model).</li>
+<li>Welstand (ID11) en BAG-mutaties (ID12) toevoegen.</li>
+<li>Andere gebruiksfuncties dan wonen toevoegen.</li>
+<li>EU-regelgeving verkennen: digitaal productpaspoort (CPR) en digitaal gebouwenlogboek (EPBD).</li>
+</ul>
+</section>
+<section id="toetsing"><h2><span class="num">13</span> Verantwoording volgens het digiGO Toetsingskader ILS</h2><p>Dit hoofdstuk laat per criterium van het Toetsingskader ILS (instrument v1.1) zien waar en hoe deze ILS eraan voldoet. Het is een <strong>zelfbeoordeling</strong> ter voorbereiding op de toetsing. De scores (1–10) geeft de onafhankelijk adviseur.</p>
+<p>Type criterium: <strong>D</strong> = drempel · <strong>Z</strong> = zwaarwegend · <strong>A</strong> = ambitieniveau (signaal, telt niet mee).</p>
+<p>Stand van zaken: ✅ geregeld · 🟡 deels / invulformat · ⬜ nog te doen</p>
+<h3 id="toetsing-4-1-openheid"><span class="num">13.1</span> 4.1 Openheid</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Criterium</th>
+<th>Type</th>
+<th>Stand</th>
+<th>Onderbouwing</th>
+<th>Vindplaats</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Vrije beschikbaarheid</td>
+<td>D</td>
+<td>✅</td>
+<td>Alles wordt openbaar gepubliceerd op GitHub (ReSpec-pagina, IDS-bestanden, CSV), zonder kosten of account</td>
+<td>README, <a href="#referentie">Referentie-informatie</a></td>
+</tr>
+<tr>
+<td>Geen uitsluiting</td>
+<td>D</td>
+<td>✅</td>
+<td>Alleen open standaarden (IFC, IDS, bSDD, BCF); geen voorkeur voor software. Iedereen kan meedoen</td>
+<td><a href="#standaard">Informatieproductiestandaard</a></td>
+</tr>
+<tr>
+<td>Open ontwikkelproces</td>
+<td>Z</td>
+<td>🟡</td>
+<td>BM13 biedt het kader. Inbreng loopt via openbare issues en pull requests en via de consultatie van gemeenten (Word-versie met gerichte vragen)</td>
+<td><a href="#beheer">Beheer</a></td>
+</tr>
+</tbody></table></div>
+<h3 id="toetsing-4-2-ontwerp"><span class="num">13.2</span> 4.2 Ontwerp</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Criterium</th>
+<th>Type</th>
+<th>Stand</th>
+<th>Onderbouwing</th>
+<th>Vindplaats</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Grondslag in een informatiemodel</td>
+<td>A</td>
+<td>🟡</td>
+<td>IFC (ISO 16739-1) als informatiemodel, met bSDD <em>Omgevingswet-Ruimten</em> voor de Nederlandse begrippen; GEMMA/NORA voor de procesmatige inbedding. <strong>Beslisvraag aan digiGO:</strong> telt IFC als informatiemodel?</td>
+<td><a href="#referentie">Referentie-informatie</a></td>
+</tr>
+<tr>
+<td>Traceerbaarheid van de motivatielaag</td>
+<td>Z</td>
+<td>✅</td>
+<td>Herleidbaar van gemeentelijke taak (vergunningverlening, toezicht, inhoudelijke beoordeling, handhaving) via informatiedoelstelling en check naar IDS</td>
+<td><a href="#perspectieven">Perspectieven</a>, <a href="#vereisten">Tabel met vereisten</a></td>
+</tr>
+<tr>
+<td>Perspectieven en doeleinden</td>
+<td>Z</td>
+<td>✅</td>
+<td>17 checks, verdeeld over 2 activiteiten (OPA, TBA), gebouwtype wonen, als onderdeel van het inhoudelijk behandelen van de aanvraag</td>
+<td><a href="#perspectieven">Perspectieven</a></td>
+</tr>
+<tr>
+<td>Management/productie-scheiding</td>
+<td>A</td>
+<td>✅</td>
+<td>De gemeente stuurt; de aanvrager produceert het model</td>
+<td><a href="#perspectieven">Perspectieven</a>, <a href="#verantwoordelijkheden">Verantwoordelijkheden</a></td>
+</tr>
+<tr>
+<td>Informatieproductiemijlpalen</td>
+<td>D</td>
+<td>✅</td>
+<td>M1 vooroverleg, M2 aanvraag OPA, M3 aanvraag TBA, M4 acceptatie; gekoppeld aan STB 2025 en GEMMA, met een invulformat voor het schema</td>
+<td><a href="#mijlpalen">Mijlpalen</a></td>
+</tr>
+<tr>
+<td>Level of Information Need</td>
+<td>Z</td>
+<td>✅</td>
+<td>Opgebouwd uit de IDS (alfanumeriek) plus geometrische eisen G1–G6</td>
+<td><a href="#loin">LOIN</a></td>
+</tr>
+<tr>
+<td>Naamgeving en statuscodering</td>
+<td>Z</td>
+<td>🟡</td>
+<td>Aanbevolen conventie volgens ISO 19650; er is nog geen landelijke afspraak</td>
+<td><a href="#standaard">Informatieproductiestandaard</a></td>
+</tr>
+<tr>
+<td>Aansluiting op ontwerprichtlijnen en -principes</td>
+<td>Z</td>
+<td>🟡</td>
+<td>Uitleg van het criterium: sluit de ILS aan op de tien principes voor gegevensuitwisseling? Hier: machineleesbaar (IDS), open internationale standaarden (IFC), gemeenschappelijke taal (bSDD), eenmalige registratie en meervoudig gebruik (BAG/BRK-ID&#39;s), functie boven techniek. Nog expliciet te toetsen</td>
+<td>Dit hoofdstuk</td>
+</tr>
+<tr>
+<td>Aansluiting op Europese implementatierichtlijnen</td>
+<td>Z</td>
+<td>🟡</td>
+<td>Verwijzing naar NPR-CEN/TR 17654 en 17439 opgenomen; opbouw nog te vergelijken</td>
+<td><a href="#standaard">Informatieproductiestandaard</a></td>
+</tr>
+<tr>
+<td>Acceptatiecriteria</td>
+<td>D</td>
+<td>✅</td>
+<td>AC1–AC7: schema, header, IDS-validatie, georeferentie, geometrie, hoeveelheidscontrole, naamgeving. Afhankelijkheid van de IFC-parser benoemd</td>
+<td><a href="#acceptatie">Acceptatiecriteria</a></td>
+</tr>
+<tr>
+<td>Referentie-informatie en gedeelde bronnen</td>
+<td>Z</td>
+<td>✅</td>
+<td>Officieel IFC-schema, bSDD-publicatie, IDS, NL-SfB, Naa.K.T., basisregistraties</td>
+<td><a href="#referentie">Referentie-informatie</a></td>
+</tr>
+<tr>
+<td>Documentvorm: toelichting en datasjabloon</td>
+<td>Z</td>
+<td>✅</td>
+<td>Toelichting (deze ReSpec-pagina) plus datasjabloon (42 IDS en CSV). Een uitgebreider toelichtingsdeel volgt na afloop</td>
+<td>Map <code>ids/</code>, <code>data/</code></td>
+</tr>
+</tbody></table></div>
+<h3 id="toetsing-4-3-geschiktheid"><span class="num">13.3</span> 4.3 Geschiktheid</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Criterium</th>
+<th>Type</th>
+<th>Stand</th>
+<th>Onderbouwing</th>
+<th>Vindplaats</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Toepassingsgebied</td>
+<td>D</td>
+<td>✅</td>
+<td>Gemeente, OPA/BOPA en technische bouwactiviteit, woonfunctie</td>
+<td><a href="#scope">Toepassingsgebied</a></td>
+</tr>
+<tr>
+<td>Werkingsgebied</td>
+<td>D</td>
+<td>✅</td>
+<td>Rollen volgens GEMMA en ISO 19650, met verantwoordelijkheidsmatrix</td>
+<td><a href="#scope">Toepassingsgebied</a>, <a href="#verantwoordelijkheden">Verantwoordelijkheden</a></td>
+</tr>
+<tr>
+<td>Afstemming met andere ILS&#39;en</td>
+<td>Z</td>
+<td>✅</td>
+<td>Afgestemd met ILS O&amp;E over het gebruik van <code>ObjectType</code>; gesprekken met miniBIM; gedachtegoed van de BIM basis ILS aangehouden; gebaseerd op de ILS voor Ruimten</td>
+<td><a href="#scope">Positionering</a></td>
+</tr>
+<tr>
+<td>Actualiteit</td>
+<td>Z</td>
+<td>✅</td>
+<td>IFC 4.3, IDS 1.0, ISO 7817-1:2024; bouwt voort op de DSGO-afspraken; volgt de herziening van ISO 19650</td>
+<td><a href="#beheer">Beheer</a></td>
+</tr>
+<tr>
+<td>Kwaliteit onderliggend informatiemodel</td>
+<td>Z</td>
+<td>✅</td>
+<td>IFC is ISO-vastgesteld en sectorbreed toegepast; aansluiting op GEMMA</td>
+<td><a href="#referentie">Referentie-informatie</a></td>
+</tr>
+<tr>
+<td>Inhoudelijke dekking</td>
+<td>D</td>
+<td>🟡</td>
+<td>Vanuit de 17 checks voor gemeenten is per categorie duidelijk wat, wie, wanneer en waarom. Het organisatie- en assetperspectief is beschreven, maar de OIR/AIR zelf valt buiten scope</td>
+<td><a href="#vereisten">Tabel met vereisten</a>, <a href="#perspectieven">Perspectieven</a></td>
+</tr>
+</tbody></table></div>
+<h3 id="toetsing-4-4-standaarden-en-interoperabiliteit"><span class="num">13.4</span> 4.4 Standaarden en interoperabiliteit</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Criterium</th>
+<th>Type</th>
+<th>Stand</th>
+<th>Onderbouwing</th>
+<th>Vindplaats</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Internationale Psets</td>
+<td>Z</td>
+<td>✅</td>
+<td>Geen aanvullende Psets. Wel een invulmethode voor attributen: <code>IfcSpace</code>, <code>IfcSpatialZone</code> en <code>IfcZone</code> worden uitgebreid met <code>ObjectType</code>-waarden uit de bSDD</td>
+<td><a href="#standaard">Informatieproductiestandaard</a></td>
+</tr>
+<tr>
+<td>Machineleesbaarheid</td>
+<td>A</td>
+<td>✅</td>
+<td>42 IDS 1.0-bestanden</td>
+<td>Map <code>ids/</code></td>
+</tr>
+<tr>
+<td>IFC-versie</td>
+<td>Z</td>
+<td>✅</td>
+<td>IFC 4.3 (ISO 16739-1:2024); IFC4 ADD2 TC1 tijdelijk toegestaan</td>
+<td><a href="#standaard">Informatieproductiestandaard</a></td>
+</tr>
+<tr>
+<td>Informatieleveringsproces</td>
+<td>A</td>
+<td>⬜</td>
+<td>Gewenst: IDM (ISO 29481) samen met de GEMMA-procesmodellen</td>
+<td><a href="#beheer">Beheer</a></td>
+</tr>
+<tr>
+<td>Voorbereid op EU-regelgeving</td>
+<td>A</td>
+<td>⬜</td>
+<td>Eerst meer informatie nodig (DPP/CPR, digitaal gebouwenlogboek/EPBD)</td>
+<td><a href="#beheer">Beheer</a></td>
+</tr>
+</tbody></table></div>
+<h3 id="toetsing-4-5-ontwikkeling-en-beheer"><span class="num">13.5</span> 4.5 Ontwikkeling en beheer</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Criterium</th>
+<th>Type</th>
+<th>Stand</th>
+<th>Onderbouwing</th>
+<th>Vindplaats</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Beheerorganisatie</td>
+<td>D</td>
+<td>🟡</td>
+<td>VNG is eigenaar en uitgever; de projectleider (Jeroen de Ruig) neemt het publicatiebesluit. Het structurele beheer na BM13 is nog te bepalen</td>
+<td><a href="#beheer">Beheer</a></td>
+</tr>
+<tr>
+<td>Wijzigingsprocedure</td>
+<td>Z</td>
+<td>🟡</td>
+<td>Voorstel uitgewerkt (issues → PR → review → besluit → release)</td>
+<td><a href="#beheer">Beheer</a></td>
+</tr>
+<tr>
+<td>Versiebeheer</td>
+<td>Z</td>
+<td>🟡</td>
+<td>Voorstel: semver, tags, CHANGELOG, impactanalyse bij nieuwe normversies</td>
+<td><a href="#beheer">Beheer</a></td>
+</tr>
+<tr>
+<td>ISO-transitieplan</td>
+<td>A</td>
+<td>🟡</td>
+<td>Voorstel in drie stappen</td>
+<td><a href="#beheer">Beheer</a></td>
+</tr>
+<tr>
+<td>Community-betrokkenheid</td>
+<td>A</td>
+<td>🟡</td>
+<td>Voorstel: issues, discussies en een gebruikersoverleg per kwartaal</td>
+<td><a href="#beheer">Beheer</a></td>
+</tr>
+</tbody></table></div>
+<h3 id="toetsing-4-6-draagvlak-en-adoptie"><span class="num">13.6</span> 4.6 Draagvlak en adoptie</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Criterium</th>
+<th>Type</th>
+<th>Stand</th>
+<th>Onderbouwing</th>
+<th>Vindplaats</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Brancheacceptatie</td>
+<td>Z</td>
+<td>🟡</td>
+<td>Via de stuurgroep, met BNA, NEPROM, NL Ingenieurs, Woningbouwers NL, digiGO en Bouwend Nederland</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Consultatie eindgebruikers</td>
+<td>Z</td>
+<td>🟡</td>
+<td>Consultatie gedaan voor de ILS voor Ruimten; consultatie van gemeenten over de checks loopt</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Implementatiepad</td>
+<td>Z</td>
+<td>🟡</td>
+<td>Voorstel: pilot 2026, opschaling 2027</td>
+<td><a href="#beheer">Beheer</a></td>
+</tr>
+</tbody></table></div>
+<h3 id="toetsing-4-7-aansluiting-op-het-ils-referentiesjabloon"><span class="num">13.7</span> 4.7 Aansluiting op het ILS-Referentiesjabloon</h3><div class="tw"><table>
+<thead>
+<tr>
+<th>Criterium</th>
+<th>Type</th>
+<th>Stand</th>
+<th>Onderbouwing</th>
+<th>Vindplaats</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Positionering t.o.v. aanpalende documenten</td>
+<td>Z</td>
+<td>🟡</td>
+<td>Tabel met aanpalende documenten. Aanbeveling: ook een informatieprotocol, verantwoordelijkheidsmatrix en IDM&#39;s opstellen</td>
+<td><a href="#scope">Positionering</a></td>
+</tr>
+<tr>
+<td>Inhoud/format-onderscheid projectspecifiek</td>
+<td>Z</td>
+<td>✅</td>
+<td>Uitleg van het criterium: projectspecifieke onderdelen niet leeg laten, maar een vast invulformat bieden. Hier gedaan voor projectinformatie, team en mijlpalen</td>
+<td><a href="#mijlpalen">Mijlpalen</a>, <a href="#verantwoordelijkheden">Verantwoordelijkheden</a></td>
+</tr>
+<tr>
+<td>Dekking van de verplichte onderdelen</td>
+<td>D</td>
+<td>✅</td>
+<td>Zie de mapping hieronder</td>
+<td>Dit hoofdstuk</td>
+</tr>
+<tr>
+<td>Inhoudelijke kwaliteit Deel A en B</td>
+<td>Z</td>
+<td>—</td>
+<td>Te beoordelen door een expert (tabblad <em>Inhoudelijke kwaliteit</em>)</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 id="toetsing-mapping-op-het-ils-referentiesjabloon">Mapping op het ILS-Referentiesjabloon</h4><div class="tw"><table>
+<thead>
+<tr>
+<th>Deel</th>
+<th>Onderdeel (sjabloon)</th>
+<th>Status sjabloon</th>
+<th>Hoofdstuk in deze ILS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>Toepassings- en werkingsgebied</td>
+<td>Verplicht</td>
+<td><a href="#scope">Toepassingsgebied</a></td>
+</tr>
+<tr>
+<td>A</td>
+<td>Positionering t.o.v. aanpalende documenten</td>
+<td>Verplicht</td>
+<td><a href="#scope">Toepassingsgebied</a></td>
+</tr>
+<tr>
+<td>A</td>
+<td>Perspectieven en doeleinden</td>
+<td>Verplicht</td>
+<td><a href="#perspectieven">Perspectieven</a></td>
+</tr>
+<tr>
+<td>A</td>
+<td>Acceptatiecriteria</td>
+<td>Verplicht</td>
+<td><a href="#acceptatie">Acceptatiecriteria</a></td>
+</tr>
+<tr>
+<td>A</td>
+<td>Informatieproductiestandaard</td>
+<td>Verplicht</td>
+<td><a href="#standaard">Informatieproductiestandaard</a></td>
+</tr>
+<tr>
+<td>A</td>
+<td>Productiemethoden en -procedures</td>
+<td>Verplicht</td>
+<td><a href="#standaard">Informatieproductiestandaard</a>, <a href="#geometrie">Geometrische controle</a></td>
+</tr>
+<tr>
+<td>A</td>
+<td>Referentie-informatie en gedeelde bronnen</td>
+<td>Verplicht</td>
+<td><a href="#referentie">Referentie-informatie</a></td>
+</tr>
+<tr>
+<td>A</td>
+<td>Informatieproductieteam / verantwoordelijkheidsmatrix</td>
+<td>Verplicht</td>
+<td><a href="#verantwoordelijkheden">Verantwoordelijkheden</a></td>
+</tr>
+<tr>
+<td>A</td>
+<td>Projectinformatie</td>
+<td>Verplicht</td>
+<td><a href="#mijlpalen">Mijlpalen</a> (invulformat)</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Informatieproductiemijlpalen en -schema</td>
+<td>Verplicht</td>
+<td><a href="#mijlpalen">Mijlpalen</a></td>
+</tr>
+<tr>
+<td>A</td>
+<td>Level of Information Need</td>
+<td>Verplicht</td>
+<td><a href="#loin">LOIN</a></td>
+</tr>
+<tr>
+<td>A</td>
+<td>Grondslag in een informatiemodel</td>
+<td>Optioneel</td>
+<td><a href="#referentie">Referentie-informatie</a></td>
+</tr>
+<tr>
+<td>A</td>
+<td>Management/productie-scheiding</td>
+<td>Optioneel</td>
+<td><a href="#perspectieven">Perspectieven</a></td>
+</tr>
+<tr>
+<td>B</td>
+<td>Objecttype-/elementstructuur (OTL)</td>
+<td>Verplicht</td>
+<td>bSDD <em>Omgevingswet-Ruimten</em>; <a href="#loin">LOIN</a></td>
+</tr>
+<tr>
+<td>B</td>
+<td>Parameterlijst per element</td>
+<td>Verplicht</td>
+<td><a href="#loin">LOIN per deelspecificatie</a></td>
+</tr>
+<tr>
+<td>B</td>
+<td>Enumeraties/waardenlijsten</td>
+<td>Verplicht</td>
+<td>In de IDS (<code>xs:enumeration</code>) en de bSDD</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Fasekolommen</td>
+<td>Verplicht</td>
+<td><a href="#mijlpalen">Mijlpalen</a>, kolom <em>Minimale IDS-set</em></td>
+</tr>
+<tr>
+<td>B</td>
+<td>Projectblad / uitvoeringsplan</td>
+<td>Verplicht</td>
+<td><a href="#mijlpalen">Mijlpalen</a> (invulformat)</td>
+</tr>
+<tr>
+<td>B</td>
+<td>IDS-validatiebestand</td>
+<td>Optioneel</td>
+<td>Map <code>ids/</code></td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="open-punten"><h2><span class="num">14</span> Open punten en beslisvragen</h2><div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Onderwerp</th>
+<th>Vraag</th>
+<th>Aan</th>
+<th>Eigenaar</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OP01</td>
+<td>Informatiemodel</td>
+<td>Geldt IFC, met een bSDD-publicatie, als vastgesteld informatiemodel voor de transactie (criterium 4.2)?</td>
+<td>digiGO</td>
+<td>Opsteller</td>
+</tr>
+<tr>
+<td>OP02</td>
+<td>Beheer</td>
+<td>Wie is eigenaar en beheerder: VNG, BM13 of digiGO?</td>
+<td>Stuurgroep</td>
+<td>Projectleider</td>
+</tr>
+<tr>
+<td>OP03</td>
+<td>Bestandsnaamgeving</td>
+<td>Komt er een landelijke afspraak over bestandsnaamgeving, systeem- en bouwlaagcodes bij aanvragen?</td>
+<td>digiGO / DSO</td>
+<td>—</td>
+</tr>
+<tr>
+<td>OP04</td>
+<td>Metadata DSO</td>
+<td>Kan bij het uploaden in het Omgevingsloket metadata worden meegegeven? Gebeurt dat automatisch?</td>
+<td>DSO</td>
+<td>—</td>
+</tr>
+<tr>
+<td>OP05</td>
+<td>Acceptatie</td>
+<td>Drempelwaarden: maximale bestandsgrootte (250 of 1000 MB), toegestane afwijking in hoeveelheden (AC6), termijn voor de ontvankelijkheidstoets</td>
+<td>Gemeenten</td>
+<td>—</td>
+</tr>
+<tr>
+<td>OP06</td>
+<td>Validatie</td>
+<td>Welke IDS-validatietool is de referentie, gezien de afhankelijkheid van de IFC-parser? Is een <em>header checker</em> of validatiedienst nodig?</td>
+<td>buildingSMART / softwareleveranciers</td>
+<td>—</td>
+</tr>
+<tr>
+<td>OP07</td>
+<td>Geometrie</td>
+<td>Formalisering van de RDF-vertaling van IFC door buildingSMART International</td>
+<td>buildingSMART / digiGO-stuurgroep</td>
+<td>Opsteller (strategische notitie)</td>
+</tr>
+<tr>
+<td>OP08</td>
+<td>ISO 19650</td>
+<td>Direct overstappen op de herziene ISO 19650 (IPR-terminologie)?</td>
+<td>Projectoverleg</td>
+<td>—</td>
+</tr>
+<tr>
+<td>OP09</td>
+<td>Informatieprotocol</td>
+<td>Informatieprotocol en IDM&#39;s opstellen naast de ILS?</td>
+<td>Projectoverleg</td>
+<td>—</td>
+</tr>
+<tr>
+<td>OP10</td>
+<td>Specificaties</td>
+<td>9.18a (IfcBeam) en 9.18f (IfcSensor) worden door geen check gebruikt: optioneel maken of verwijderen?</td>
+<td>Redactie</td>
+<td>—</td>
+</tr>
+<tr>
+<td>OP11</td>
+<td>Beslismomenten</td>
+<td>De beslismomenten omzetten naar de GEMMA-beslispunten</td>
+<td>Redactie</td>
+<td>—</td>
+</tr>
+<tr>
+<td>OP12</td>
+<td>Anonimiseren</td>
+<td>Moeten IFC-headergegevens bij openbaarmaking geanonimiseerd worden?</td>
+<td>Gemeenten (privacy)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>OP13</td>
+<td>EU-regelgeving</td>
+<td>Wat betekenen DPP (CPR) en het digitaal gebouwenlogboek (EPBD) voor deze ILS?</td>
+<td>digiGO</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h3 id="open-punten-vragen-voor-de-consultatie-van-gemeenten"><span class="num">14.1</span> Vragen voor de consultatie van gemeenten</h3><ol>
+<li><strong>Referentieniveaus:</strong> welke van de methoden is in de dagelijkse praktijk het meest efficiënt?</li>
+<li><strong>Methoden per check:</strong> zijn de beschreven checkprocedures volledig en juist?</li>
+<li><strong>Juridische verwijzingen:</strong> kloppen de genoemde artikelen?</li>
+<li><strong>Uitvoerbaarheid:</strong> past de aanlevering via deze ILS binnen je huidige vergunningsproces?</li>
+</ol>
+</section>
+<section id="begrippen"><h2><span class="num">15</span> Begrippen en afkortingen</h2><div class="tw"><table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Betekenis</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AIR / OIR</td>
+<td>Asset / Organisational Information Requirements</td>
+</tr>
+<tr>
+<td>BAG / BRK / BGT</td>
+<td>Basisregistratie Adressen en Gebouwen / Kadaster / Grootschalige Topografie</td>
+</tr>
+<tr>
+<td>Bbl</td>
+<td>Besluit bouwwerken leefomgeving</td>
+</tr>
+<tr>
+<td>BCF</td>
+<td>BIM Collaboration Format: uitwisseling van issues</td>
+</tr>
+<tr>
+<td>bSDD</td>
+<td>buildingSMART Data Dictionary</td>
+</tr>
+<tr>
+<td>CDE</td>
+<td>Common Data Environment</td>
+</tr>
+<tr>
+<td>DSO</td>
+<td>Digitaal Stelsel Omgevingswet (Omgevingsloket)</td>
+</tr>
+<tr>
+<td>EIR / IPR</td>
+<td>Exchange Information Requirements / Information Production Requirements (herziene ISO 19650)</td>
+</tr>
+<tr>
+<td>GEMMA</td>
+<td>Gemeentelijke Model Architectuur</td>
+</tr>
+<tr>
+<td>IDM</td>
+<td>Information Delivery Manual (ISO 29481)</td>
+</tr>
+<tr>
+<td>IDS</td>
+<td>Information Delivery Specification (buildingSMART)</td>
+</tr>
+<tr>
+<td>IFC</td>
+<td>Industry Foundation Classes (ISO 16739-1)</td>
+</tr>
+<tr>
+<td>ILS</td>
+<td>Informatieleveringsspecificatie</td>
+</tr>
+<tr>
+<td>LOIN</td>
+<td>Level of Information Need (ISO 7817-1)</td>
+</tr>
+<tr>
+<td>MPG</td>
+<td>Milieuprestatie gebouwen</td>
+</tr>
+<tr>
+<td>OPA / BOPA</td>
+<td>(Buitenplanse) omgevingsplanactiviteit</td>
+</tr>
+<tr>
+<td>Qto</td>
+<td>Quantity set in IFC</td>
+</tr>
+<tr>
+<td>ReSpec</td>
+<td>Hulpmiddel om specificaties als webpagina te publiceren</td>
+</tr>
+<tr>
+<td>SPARQL</td>
+<td>Querytaal voor RDF-gegevens</td>
+</tr>
+<tr>
+<td>STB 2025</td>
+<td>Standaard Taakbeschrijving (BNA/NL Ingenieurs)</td>
+</tr>
+<tr>
+<td>TBA</td>
+<td>Technische bouwactiviteit</td>
+</tr>
+<tr>
+<td>VTH</td>
+<td>Vergunningverlening, toezicht en handhaving</td>
+</tr>
+</tbody></table></div>
+</section>
+
+<footer><p>ILS Omgevingsvergunning v0.1.0 · VNG · Machineleesbare bijlagen: <a href="ids/">ids/</a> · <a href="data/specificaties_checks.csv">data/specificaties_checks.csv</a></p></footer>
+</main></div></body></html>

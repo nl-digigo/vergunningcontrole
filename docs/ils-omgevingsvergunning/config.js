@@ -1,7 +1,9 @@
 // ReSpec-configuratie ILS Omgevingsvergunning
 var respecConfig = {
-  specStatus: "base",
-  shortName: "ils-omgevingsvergunning",
+  specStatus: "DRAFT",
+  license: "cc-by",
+  shortName: "vergunningscontrole/ils-omgevingsvergunning",
+  imprint: "digigo",
   subtitle: "Informatieleveringsspecificatie voor een aanvraag omgevingsvergunning met een 3D-informatiemodel",
   publishDate: "2026-09-17",
   // versie: 0.1.0 (concept)

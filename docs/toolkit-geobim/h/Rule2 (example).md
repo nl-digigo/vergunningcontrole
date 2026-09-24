@@ -24,10 +24,9 @@ This is the normative interpretation layer.
 
 ### Layer 1 — Check & approach
 
-This describes how a VTH officer would conceptually perform the test.
-
+This describes the steps that a vendor will need to proceed the digitalized check in a standarized way: 
 ```
-1. Provide the Check corresponding ID and IDS numbers and files, for the BUilding height : 
+1. Provide the Check corresponding ID and IDS numbers and files, for the BUilding height :  ID01 | ja (hoogte, bounding box) | 10 | [9](ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids), [9.01a](ids/02-9.01a-Georeferentie.ids), [9.01b](ids/03-9.01b-Coordinatenstelsel.ids), [9.01c](ids/04-9.01c-Projectadres-IFC4X3-ADD2.ids), [9.01d](ids/05-9.01d-Perceeladres-IFC4.ids), [9.01e](ids/06-9.01e-Gebouwadres-IFC4.ids), [9.02](ids/07-9.02-Project.ids), [9.03b](ids/09-9.03b-Bouwwerkperceel.ids), [9.04](ids/10-9.04-Kadastraal-Perceel.ids), [9.06a](ids/13-9.06a-Bouwlaag-voorheen-verdieping.ids)
 2. validate the georeferencing of the IFC model : scale 
 2. Determine which maximum-height rule applies there.
 3. Obtain the permitted maximum height.

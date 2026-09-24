@@ -27,7 +27,8 @@ This is the normative interpretation layer.
 This describes how a VTH officer would conceptually perform the test.
 
 ```
-1. Identify the application location.
+1. Provide the Check corresponding ID and IDS numbers and files, for the BUilding height : 
+2. validate the georeferencing of the IFC model : scale 
 2. Determine which maximum-height rule applies there.
 3. Obtain the permitted maximum height.
 4. Determine the applicable reference level.

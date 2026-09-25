@@ -17,7 +17,7 @@ var respecConfig = {
   otherLinks: [
     { key: "Projectleiding", data: [{ value: "Jeroen de Ruig (VNG, projectleider BM13)" }] },
     { key: "In samenwerking met", data: [
-      { value: "Stuurgroep: BNA, NEPROM, NL Ingenieurs, Woningbouwers NL, digiGO, Bouwend Nederland" }
+      { value: "Stuurgroep: d" }
     ] }
   ],
   latestVersion: null,

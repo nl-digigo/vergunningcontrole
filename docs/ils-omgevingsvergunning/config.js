@@ -4,25 +4,29 @@ var respecConfig = {
   license: "cc-by",
   shortName: "vergunningscontrole/ils-omgevingsvergunning",
   imprint: "digigo",
-  subtitle: "Informatieleveringsspecificatie voor een aanvraag omgevingsvergunning met een 3D-informatiemodel",
+  subtitle: "indieningsvereisten voor een aanvraag omgevingsvergunning met een 3D-informatiemodel",
   publishDate: "2026-09-25",
   // versie: 0.1.2 (concept)
   authors: [
     { name: "Vereniging van Nederlandse Gemeenten", company: "VNG", companyURL: "https://vng.nl" }
   ],
-
   editors: [
-    { name: "Lex Ransijn", company: "VDCbase", companyURL: "https://vdcbase.com" },
-    { name: "Menno Mekes", company: "Arons en Gelauff", note: "IDS opzet" },
-    { name: "Jan Brouwer", company: "On-Track", note: "bSDD doorontwikkeling" },
-    { name: "Rien van der Scheur", company: "On-Track", note: "bSDD opzet" },
-    { name: "Pepijn van der Vooren", company: "IMPlace", note: "Test-Cases uitvoeren" },
-    { name: "Arjan Toet", company: "BIMt", note: "Software testen" },
+    { name: "Lex Ransijn", company: "VDCbase", companyURL: "https://vdcbase.com" }, note: "Projectleider en coördinatie", },
   ],
   otherLinks: [
-    { key: "Projectleiding", data: [{ value: "Jeroen de Ruig" }] },
+  { key: "Projectleiding", data: [{ value: "Jeroen de Ruig" }] },
+  { key: "Co-auteurs", data: [
+    { value: "Menno Mekes (Arons en Gelauff) – IDS opzet" },
+    { value: "Jan Brouwer (On-Track) – bSDD doorontwikkeling" }
+    { value: "Rien van der Scheur (On-Track) – bSDD opzet" },
+    { value: "Pepijn van der Vooren (IMPlace) – Test-Cases uitvoeren" },
+    { value: "Arjan Toet (BIMt) – Software testen" }
+  ] },
+  { key: "Reviewers", data: [{ value: "..." }] }
+]
+
     { key: "In samenwerking met", data: [
-      { value: "Deelnemende pilot Gemeenten, Softwareleveranciers, Stuurgroep" }
+      { value: "Deelnemende pilot Gemeenten, Softwareleveranciers, Stuurgroep, Digigo" }
     ] }
   ],
   latestVersion: null,

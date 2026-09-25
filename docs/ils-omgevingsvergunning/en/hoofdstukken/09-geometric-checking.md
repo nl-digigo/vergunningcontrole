@@ -13,14 +13,14 @@ IDS only checks **attributes and properties**, not geometry. Yet most checks nee
 
 | Step | Who | What | Why |
 |---|---|---|---|
-| **1. Deliver** | The applicant's CAD software | Calculates quantities and exports them in IFC Quantity Sets (`Qto_…`) | The source software knows the model best |
+| **1. Deliver** | The applicant's BIM/CAD software | Calculates quantities and exports them in IFC Quantity Sets (`Qto_…`) | The source software knows the model best |
 | **2. Recalculate** | The municipality's receiving software | Recalculates the quantities from the solid geometry and compares them with step 1 | This exposes export errors and makes the result reliable |
 
 Prerequisite: the model contains **solid geometry** (requirement G1 in the [LOIN](#loin-geometrie)). If the difference between step 1 and step 2 stays below the threshold (AC6), the check uses the delivered value. If it exceeds the threshold, the assessor is alerted.
 
 ## Technical set-up (layer 4)
 
-The checks are built in two layers, so that they do not depend on a single software package:
+Example: The checks are built in two layers, so that they do not depend on a single software package:
 
 ```
 IFC file

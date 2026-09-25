@@ -13,11 +13,11 @@
 
 This ILS describes the agreements on delivering data to the VTH domain (*vergunningverlening, toezicht en handhaving*: permitting, supervision and enforcement) when applying for an environmental permit. The document is an **example EIR** (*Exchange Information Requirements*) of a municipality: a generic request that any municipality can adopt and add its own requirements to.
 
-The ILS follows NEN-EN ISO 19650-1/-2. We are closely following the revision of the ISO 19650 series, including the move from EIR to *information production requirements* (IPR). See [Management and version control](#beheer).
+The ILS follows NEN-EN ISO 19650-1/-2. We are actively following the revision of the ISO 19650 series (including the move from EIR to *information production requirements*, IPR). See [Management and version control](#beheer).
 
-## Position in the layer model of the GeoBIM toolkit
+## Position in the layer model of the toolkit
 
-The GeoBIM toolkit describes each check in six layers. This ILS brings together **layer 2** for all 17 checks:
+The toolkit describes each check in six layers. This ILS brings together **layer 2** for all 17 checks:
 
 | Layer | Content | Relation to this ILS |
 |---|---|---|

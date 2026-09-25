@@ -4,16 +4,16 @@ The Level of Information Need (LOIN, ISO 7817-1:2024) sets out, for each informa
 
 1. **Alphanumeric** — recorded in machine-readable form in 42 IDS sub-specifications (IDS 1.0), derived from the *ILS voor Ruimten in de Omgevingswet* (v0.95). Summarised per specification below; the IDS content (names, values) is kept in Dutch.
 2. **Geometric** — requirements on the shape and quality of the geometry, which IDS cannot check. See [Geometric requirements](#loin-geometrie) below and [Geometric checking](#geometrie).
-3. **Documentation** — additional files (PDF/A drawings, reports), see [Information production standard](#standaard).
+3. **Documentation** — additional files as required by the standard submission requirements (PDF/A drawings, reports), see [Information production standard](#standaard).
 
 ## LOIN per information need (summary)
 
 | Aspect | Content |
 |---|---|
 | Purpose | Automated checking of the application against 17 checks (OPA and TBA) |
-| Milestone | Preliminary consultation, zoning plan activity application, technical building activity application |
+| Milestone | Preliminary consultation (*vooroverleg*), *omgevingsplanactiviteit* application, *technische bouwactiviteit* application |
 | Actors | Applicant/modeller delivers, municipality (permit authority) checks |
-| Objects | Spatial objects (IfcSpace, IfcSpatialZone, IfcZone), building, storeys, physical elements |
+| Objects | Spatial objects (IfcSpace, IfcSpatialZone, IfcZone), building, storeys, physical elements (IfcWall, IfcDoor) |
 | Alphanumeric | IDS sub-specifications 01–42 |
 | Geometry | Volumetric (solid) spaces, RD/NAP georeferencing, level of detail as in the table below |
 | Documentation | IFC (STEP), PDF/A drawings derived from the model, IDS validation report (BCF or HTML) |
@@ -28,7 +28,7 @@ The Level of Information Need (LOIN, ISO 7817-1:2024) sets out, for each informa
 | G2 Georeferencing | IfcMapConversion + IfcProjectedCRS, EPSG:28992 (RD) / EPSG:7415 (RD+NAP), units in metres | #1–#6 |
 | G3 Elevation | Height relative to NAP; datum level and storey heights consistent across discipline models | #2 #4 #6 #10 |
 | G4 No duplicates | No duplicate or overlapping objects of the same type (e.g. a slab split on export must not be counted twice) | #3 #5 #7 #13 |
-| G5 Quantities included | Quantity sets (Qto_…) calculated and exported by the CAD software; the recipient recalculates them as a check | #3 #5 #7 #13 #15 #17 |
+| G5 Quantities included | Quantity sets (Qto_…) calculated and exported by the CAD software; the recipient (the municipality) recalculates them as a check | #3 #5 #7 #13 #15 #17 |
 | G6 Measuring method | Areas and volumes according to NEN 2580; model exceptions (pitched roofs, dormers) explicitly | #3 #5 #7 #17 |
 
 ## LOIN per sub-specification (alphanumeric)
@@ -40,6 +40,8 @@ Per specification: which objects the requirement applies to (applicability) and 
 *File:* [`01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids`](../ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #1 #2 #3 #4 #5 #6 #7 #8 #9 #10 #11 #12 #13 #14 #15 #16 #17
 
 *Applies to:* IFCSPATIALZONE / IFCSPACE / IFCEXTERNALSPATIALELEMENT
+
+Note: this is not a usual check. It verifies that every object present in the model also has its own geometry for these parts (an IfcZone has no geometry of its own, because it is a relationship object).
 
 | Facet | Name | Card. | Value |
 |---|---|---|---|
@@ -54,7 +56,6 @@ Per specification: which objects the requirement applies to (applicability) and 
 
 | Facet | Name | Card. | Value |
 |---|---|---|---|
-| classification | classificatie Omgevingswet-Ruimten | O | Georeferentie |
 | attribute | Eastings | R | — |
 | attribute | Northings | R | — |
 | attribute | OrthogonalHeight | R | — |
@@ -78,6 +79,8 @@ Per specification: which objects the requirement applies to (applicability) and 
 
 *Applies to:* IFCSITE / IFCBUILDING
 
+The address is indicative; georeferencing is what the environmental checks are carried out with. 
+
 | Facet | Name | Card. | Value |
 |---|---|---|---|
 | property | Pset_Address.AddressLines | R | — |
@@ -91,6 +94,8 @@ Per specification: which objects the requirement applies to (applicability) and 
 
 *Applies to:* IFCSITE
 
+The address is indicative; georeferencing is what the environmental checks are carried out with. 
+
 | Facet | Name | Card. | Value |
 |---|---|---|---|
 | attribute | SiteAddress | R | — |
@@ -100,6 +105,8 @@ Per specification: which objects the requirement applies to (applicability) and 
 *File:* [`06-9.01e-Gebouwadres-IFC4.ids`](../ids/06-9.01e-Gebouwadres-IFC4.ids) · *IFC:* IFC4 · *Checks:* #1 #2 #3 #4 #5 #6
 
 *Applies to:* IFCBUILDING
+
+The address is indicative; georeferencing is what the environmental checks are carried out with. 
 
 | Facet | Name | Card. | Value |
 |---|---|---|---|
@@ -113,7 +120,6 @@ Per specification: which objects the requirement applies to (applicability) and 
 
 | Facet | Name | Card. | Value |
 |---|---|---|---|
-| classification | classificatie Omgevingswet-Ruimten | O | Project |
 | attribute | Name | R | — |
 | attribute | Description | R | — |
 | attribute | Phase | O | patroon `01 Initiatief/haalbaarheid|02 Projectdefinitie|03 Structuurontwerp|04 Voorontwerp|05 Definitief ontwerp|06 Technisch ontwerp/Bestek|07 Prijs- en Contractvorming|07 Prijs- en contractvorming|08 Uitvoering - Uitvoeringsgereed Ontwerp|09 Uitvoering - Directievoering|10 Gebruik/Exploitatie|1. Initiatief|1.1 Iniatief|INI|1.2 Haalbaarheid|HBH|1.3 Projectdefinitie|PD|2. Ontwerp|2.1 Structuurontwerp|SO|2.2 Voorontwerp|VO|2.3 Definitief Ontwerp|DO|2.4 Omgevingsvergunning|OV|3. Engineering|3.1 Technisch Ontwerp|TO|3.2 Uitvoeringsgereed Ontwerp|UO|4. Realisatie|4.1 Uitvoering|UV|4.2 Oplevering & Overdracht|OO|4.3 Onderhoudstermijn|5. Gebruik` |
@@ -129,7 +135,6 @@ Per specification: which objects the requirement applies to (applicability) and 
 
 | Facet | Name | Card. | Value |
 |---|---|---|---|
-| classification | classificatie Omgevingswet-Ruimten | O | Perceel |
 | attribute | Name | R | — |
 | attribute | ObjectType | R | Perceel |
 | attribute | ObjectPlacement | R | — |
@@ -169,7 +174,6 @@ Per specification: which objects the requirement applies to (applicability) and 
 
 | Facet | Name | Card. | Value |
 |---|---|---|---|
-| classification | classificatie Omgevingswet-Ruimten | R | Gebouw |
 | attribute | Name | R | — |
 | attribute | ObjectType | R | — |
 | property | Pset_BuildingCommon.BuildingID | R | — |
@@ -188,6 +192,7 @@ Per specification: which objects the requirement applies to (applicability) and 
 |---|---|---|---|
 | classification | classificatie Omgevingswet-Ruimten | O | Gebouwinhoud |
 | attribute | Name | R | — |
+| attribute | ObjectType | R | Gebouwinhoud |
 | attribute | Description | R | Bruto Inhoud |
 
 ### 9.06a Bouwlaag (voorheen verdieping)
@@ -196,19 +201,13 @@ Per specification: which objects the requirement applies to (applicability) and 
 
 *Applies to:* IFCBUILDINGSTOREY
 
+NOTE: Qto nog omwisselen met Bouwlaaginhoud
+
 | Facet | Name | Card. | Value |
 |---|---|---|---|
-| classification | classificatie Omgevingswet-Ruimten | O | Verdieping |
 | attribute | ObjectType | R | Bouwlaag |
 | attribute | Name | R | patroon `.*(-9 kelder|-8 kelder|-7 kelder|-6 kelder|-5 kelder|-4 kelder|-3 kelder|-2 kelder|-1 kelder|00 begane grond|01 eerste verdieping|02 tweede verdieping|03 derde verdieping|04 vierde verdieping|05 vijfde verdieping|06 zesde verdieping|07 zevende verdieping|08 achtste verdieping|09 negende verdieping|10 tiende verdieping|11 elfde verdieping|12 twaalfde verdieping|13 dertiende verdieping|14 veertiende verdieping|15 vijftiende verdieping|16 zestiende verdieping|17 zeventiende verdieping|18 achttiende verdieping|19 negentiende verdieping|20 twintigste verdieping|21 eenentwintigste verdieping|22 tweeentwintigste verdieping|23 drieentwintigste verdieping|24 vierentwintigste verdieping|25 vijfentwintigste verdieping|26 zesentwintigste verdieping|27 zevenentwintigste verdieping|28 achtentwintigste verdieping|29 negentwintigste verdieping|30 dertigste verdieping|31 eenendertigste verdieping|32 tweeendertigste verdieping|33 drieendertigste verdieping|34 vierendertigste verdieping|35 vijfendertigste verdieping|36 zesendertigste verdieping|37 zevenendertigste verdieping|38 achtendertigste verdieping|39 negendertigste verdieping|40 veertigste verdieping|01 dak|02 dak|03 dak|04 dak|05 dak|06 dak|07 dak|08 dak|09 dak|10 dak|11 dak|12 dak|13 dak|14 dak|15 dak|16 dak|17 dak|18 dak|19 dak|20 dak|21 dak|22 dak|23 dak|24 dak|25 dak|26 dak|27 dak|28 dak|29 dak|30 dak|31 dak|32 dak|33 dak|34 dak|35 dak|36 dak|37 dak|38 dak|39 dak|40 dak|41 dak).*` |
-| attribute | ObjectPlacement | R | — |
-| property | Pset_BuildingStoreyCommon.EntranceLevel | R | — |
-| property | Qto_BuildingStoreyBaseQuantities.GrossFloorArea | O | — |
-| property | Qto_BuildingStoreyBaseQuantities.GrossHeight | O | — |
-| property | Qto_BuildingStoreyBaseQuantities.NetFloorArea | O | — |
-| property | Qto_BuildingStoreyBaseQuantities.NetHeight | O | — |
-| property | Qto_BuildingStoreyBaseQuantities.NetVolume | O | — |
-| property | Qto_BuildingStoreyBaseQuantities.GrossVolume | O | — |
+
 
 ### 9.06b Bouwlaaginhoud (voorheen bouwlaagobject)
 
@@ -221,12 +220,21 @@ Per specification: which objects the requirement applies to (applicability) and 
 | classification | classificatie Omgevingswet-Ruimten | O | Bouwlaaginhoud |
 | attribute | Description | R | Bruto Inhoud |
 | attribute | Name | R | patroon `.*(-9 kelder|-8 kelder|-7 kelder|-6 kelder|-5 kelder|-4 kelder|-3 kelder|-2 kelder|-1 kelder|00 begane grond|01 eerste verdieping|02 tweede verdieping|03 derde verdieping|04 vierde verdieping|05 vijfde verdieping|06 zesde verdieping|07 zevende verdieping|08 achtste verdieping|09 negende verdieping|10 tiende verdieping|11 elfde verdieping|12 twaalfde verdieping|13 dertiende verdieping|14 veertiende verdieping|15 vijftiende verdieping|16 zestiende verdieping|17 zeventiende verdieping|18 achttiende verdieping|19 negentiende verdieping|20 twintigste verdieping|21 eenentwintigste verdieping|22 tweeentwintigste verdieping|23 drieentwintigste verdieping|24 vierentwintigste verdieping|25 vijfentwintigste verdieping|26 zesentwintigste verdieping|27 zevenentwintigste verdieping|28 achtentwintigste verdieping|29 negentwintigste verdieping|30 dertigste verdieping|31 eenendertigste verdieping|32 tweeendertigste verdieping|33 drieendertigste verdieping|34 vierendertigste verdieping|35 vijfendertigste verdieping|36 zesendertigste verdieping|37 zevenendertigste verdieping|38 achtendertigste verdieping|39 negendertigste verdieping|40 veertigste verdieping|01 dak|02 dak|03 dak|04 dak|05 dak|06 dak|07 dak|08 dak|09 dak|10 dak|11 dak|12 dak|13 dak|14 dak|15 dak|16 dak|17 dak|18 dak|19 dak|20 dak|21 dak|22 dak|23 dak|24 dak|25 dak|26 dak|27 dak|28 dak|29 dak|30 dak|31 dak|32 dak|33 dak|34 dak|35 dak|36 dak|37 dak|38 dak|39 dak|40 dak|41 dak).*` |
+| attribute | ObjectPlacement | R | — |
+| property | Pset_BuildingStoreyCommon.EntranceLevel | R | — |
+| property | Qto_BuildingStoreyBaseQuantities.GrossFloorArea | O | — |
+| property | Qto_BuildingStoreyBaseQuantities.GrossHeight | O | — |
+| property | Qto_BuildingStoreyBaseQuantities.GrossVolume | O | — |
+| property | Qto_BuildingStoreyBaseQuantities.NetFloorArea | O | — |
+| property | Qto_BuildingStoreyBaseQuantities.NetHeight | O | — |
+| property | Qto_BuildingStoreyBaseQuantities.NetVolume | O | — |
+
 
 ### 9.07 Gebruikseenheid (voorheen eigendom-, en gebruikseenheid)
 
 *File:* [`15-9.07-Gebruikseenheid-voorheen-eigendom-en-gebruikseenheid.ids`](../ids/15-9.07-Gebruikseenheid-voorheen-eigendom-en-gebruikseenheid.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #1 #5
 
-*Applies to:* IFCZONE / IFCSPATIALZONE / IFCSPACE with ObjectType=Eigendom- en gebruikseenheid / Gebruikseenheid
+*Applies to:* IFCZONE / IFCSPATIALZONE / IFCSPACE with ObjectType=**Eigendom- en gebruikseenheid** / Gebruikseenheid
 
 | Facet | Name | Card. | Value |
 |---|---|---|---|
@@ -238,7 +246,7 @@ Per specification: which objects the requirement applies to (applicability) and 
 
 *File:* [`16-9.08-Gebruiksfunctie.ids`](../ids/16-9.08-Gebruiksfunctie.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #1 #3 #4 #5 #6 #7 #9 #10 #11 #12 #13 #14 #15 #16 #17
 
-*Applies to:* IFCZONE / IFCSPATIALZONE / IFCSPACE with ObjectType=Gebruiksfunctie
+*Applies to:* IFCZONE / IFCSPATIALZONE / IFCSPACE with ObjectType=**Gebruiksfunctie**
 
 | Facet | Name | Card. | Value |
 |---|---|---|---|
@@ -250,7 +258,7 @@ Per specification: which objects the requirement applies to (applicability) and 
 
 *File:* [`17-9.09-Nevengebruiksfunctie.ids`](../ids/17-9.09-Nevengebruiksfunctie.ids) · *IFC:* IFC4X3_ADD2 IFC4 · *Checks:* #1 #4 #5
 
-*Applies to:* IFCSPATIALZONE / IFCSPACE / IFCZONE with ObjectType=Nevengebruiksfunctie
+*Applies to:* IFCSPATIALZONE / IFCSPACE / IFCZONE with ObjectType=**Nevengebruiksfunctie**
 
 | Facet | Name | Card. | Value |
 |---|---|---|---|
@@ -261,7 +269,7 @@ Per specification: which objects the requirement applies to (applicability) and 
 
 *File:* [`18-9.10a-Functiegebied.ids`](../ids/18-9.10a-Functiegebied.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #9 #10 #11
 
-*Applies to:* IFCSPATIALZONE / IFCSPACE / IFCZONE with ObjectType=Functiegebied
+*Applies to:* IFCSPATIALZONE / IFCSPACE / **IFCZONE** with ObjectType=**Functiegebied**
 
 | Facet | Name | Card. | Value |
 |---|---|---|---|
@@ -273,7 +281,7 @@ Per specification: which objects the requirement applies to (applicability) and 
 
 *File:* [`19-9.10b-Verblijfsgebied.ids`](../ids/19-9.10b-Verblijfsgebied.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #9 #10 #11 #16 #17
 
-*Applies to:* IFCSPATIALZONE / IFCSPACE / IFCZONE with ObjectType=Verblijfsgebied
+*Applies to:* IFCSPATIALZONE / IFCSPACE / IFCZONE with ObjectType=**Verblijfsgebied**
 
 | Facet | Name | Card. | Value |
 |---|---|---|---|
@@ -286,7 +294,7 @@ Per specification: which objects the requirement applies to (applicability) and 
 
 *File:* [`20-9.10c-Verblijfsgebied-met-bezettingsgraad.ids`](../ids/20-9.10c-Verblijfsgebied-met-bezettingsgraad.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #15 #16
 
-*Applies to:* IFCSPATIALZONE / IFCSPACE / IFCZONE with ObjectType=Verblijfsgebied
+*Applies to:* IFCSPATIALZONE / IFCSPACE / IFCZONE with ObjectType=**Verblijfsgebied**
 
 | Facet | Name | Card. | Value |
 |---|---|---|---|
@@ -301,11 +309,11 @@ Per specification: which objects the requirement applies to (applicability) and 
 
 *File:* [`21-9.10d-Gebruiksgebied.ids`](../ids/21-9.10d-Gebruiksgebied.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #9 #10 #14 #15
 
-*Applies to:* IFCSPATIALZONE / IFCSPACE / IFCZONE with ObjectType=Gebruiksgebied
+*Applies to:* IFCSPATIALZONE / IFCSPACE / IFCZONE with ObjectType=**Gebruiksgebied**
 
 | Facet | Name | Card. | Value |
 |---|---|---|---|
-| classification | classificatie Omgevingswet-Ruimten | R | Gebruiksgebied |
+| classification | classificatie Omgevingswet-Ruimten | o | Gebruiksgebied |
 | attribute | Name | R | — |
 | attribute | Description | R | patroon `Bruto Inhoud|Functioneel Nuttige Inhoud|Gebruiksinhoud|Netto Inhoud|Nuttige inhoud|Programma van Eisen inhoud` |
 
@@ -313,11 +321,11 @@ Per specification: which objects the requirement applies to (applicability) and 
 
 *File:* [`22-9.10e-Bedgebied.ids`](../ids/22-9.10e-Bedgebied.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #16
 
-*Applies to:* IFCSPATIALZONE / IFCSPACE / IFCZONE with ObjectType=Bedgebied
+*Applies to:* IFCSPATIALZONE / IFCSPACE / IFCZONE with ObjectType=**Bedgebied**
 
 | Facet | Name | Card. | Value |
 |---|---|---|---|
-| classification | classificatie Omgevingswet-Ruimten | R | Bedgebied |
+| classification | classificatie Omgevingswet-Ruimten | o | Bedgebied |
 | attribute | Name | R | — |
 | attribute | Description | R | patroon `Bruto Inhoud|Functioneel Nuttige Inhoud|Gebruiksinhoud|Netto Inhoud|Nuttige inhoud|Programma van Eisen inhoud` |
 
@@ -325,11 +333,11 @@ Per specification: which objects the requirement applies to (applicability) and 
 
 *File:* [`23-9.10f-Restgebied.ids`](../ids/23-9.10f-Restgebied.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #5 #6
 
-*Applies to:* IFCSPATIALZONE / IFCSPACE / IFCZONE with ObjectType=Restgebied
+*Applies to:* IFCSPATIALZONE / IFCSPACE / IFCZONE with ObjectType=**Restgebied**
 
 | Facet | Name | Card. | Value |
 |---|---|---|---|
-| classification | classificatie Omgevingswet-Ruimten | R | Restgebied |
+| classification | classificatie Omgevingswet-Ruimten | o | Restgebied |
 | attribute | Name | R | — |
 | attribute | Description | R | patroon `Bruto Inhoud|Functioneel Nuttige Inhoud|Gebruiksinhoud|Netto Inhoud|Nuttige inhoud|Programma van Eisen inhoud` |
 

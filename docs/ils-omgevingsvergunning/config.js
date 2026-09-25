@@ -11,7 +11,7 @@ var respecConfig = {
     { name: "Vereniging van Nederlandse Gemeenten", company: "VNG", companyURL: "https://vng.nl" }
   ],
   editors: [
-    { name: "Lex Ransijn", company: "VDCbase", companyURL: "https://vdcbase.com", note: "Projectleider en coördinatie" }
+    { name: "Lex Ransijn", company: "VDCbase", companyURL: "https://vdcbase.com", note: "leider en coördinatie" }
   ],
   otherLinks: [
     { key: "Projectleiding", data: [{ value: "Jeroen de Ruig" }] },

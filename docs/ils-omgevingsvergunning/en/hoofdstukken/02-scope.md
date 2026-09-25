@@ -33,9 +33,9 @@ Note: in the permitting chain the municipality is not an appointing party in a c
 |---|---|---|
 | **This ILS** | What information, format, moment, role, acceptance criteria | — |
 | ILS voor Ruimten in de Omgevingswet (digiGO) | Spatial objects and attributes | Source of the machine-readable part (IDS), extended and split per specification |
-| BIM basis ILS (digiGO) | Generic agreements on IFC exchange | Starting point; this ILS refers to it and does not repeat it |
-| ILS Ontwerp en Engineering (O&E) | Agreements for the design phase | Aligned on the use of `ObjectType` |
+| BIM basis ILS (digiGO) | Generic agreements on IFC exchange | Starting point; this ILS refers to it and does not repeat it, see ## Agreements on the IFC model |
+| ILS Ontwerp en Engineering (O&E) | Agreements for the design phase | Aligned on the use of Nationals `ObjectType` |
 | Information protocol (to be drafted) | Legal status of the model in the application | Recommended addition, see [Open issues](#open-punten) |
 | Applicant's BIM execution plan / information production plan | Project-specific elaboration | Fills in the fill-in formats in this ILS |
-| GeoBIM toolkit check sheets (17 folders) | Method and rules per check | Refer to this ILS for layer 2 |
+| Checks toolkit (17 folders) | Method and rules per check | Refer to this ILS for layer 2 |
 | Submission requirements in the *Omgevingsregeling* | Statutory submission requirements | This ILS is a digital elaboration, not a replacement |

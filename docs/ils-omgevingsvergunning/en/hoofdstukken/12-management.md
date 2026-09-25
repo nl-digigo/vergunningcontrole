@@ -7,8 +7,10 @@
 | Owner and publisher | VNG |
 | Project management, publication decision and review flow | Jeroen de Ruig (VNG) |
 | Author of the ILS and IDS (layer 2 BIM) | Lex Ransijn (VDCbase, on behalf of VNG) |
+| Alignment and support | Pilot municipalities: Nieuwkoop, Apeldoorn, Veenendaal, Eindhoven, Rotterdam, Alkmaar, Sudwest-Fryslan, Groningen, Hengelo, Epe, ODMH, Utrecht
+| Alignment and support | Software vendors: Future Insight, Triply, Struck, D-Studio, BIM-Connected, Avolve, Solibri, Semmtech, IMAGEM
 | Alignment and support | Steering group: BNA, NEPROM, NL Ingenieurs, Woningbouwers NL, digiGO, Bouwend Nederland |
-| Management after BM13 ends | To be decided (VNG or digiGO), according to BOMOS |
+| Management after Beleidsmaatregel 13 (BM13) ends | To be decided: VNG, DSO, digiGO, according to BOMOS |
 
 We separate management responsibilities (adopting, prioritising) from production responsibilities (editing, maintaining the IDS).
 
@@ -23,16 +25,16 @@ We separate management responsibilities (adopting, prioritising) from production
 ## Version control
 
 - **Semantic versioning:** `0.x` = draft, `1.0.0` = adopted. *Major* = incompatible change to the IDS or acceptance criteria, *minor* = new requirements or checks, *patch* = editorial.
-- IDS files get the same version number as the ILS (`ids:info/version`).
+- IDS files get the same version number as the ILS (`ids:info/version`). Note: these may still need to be renumbered, possibly definitively.
 - **Underlying standards:** when a new version of IFC, IDS or the bSDD *Omgevingswet-Ruimten* is released, we carry out an impact analysis in an issue. An older IFC version remains allowed for at least one *minor* release.
 
 ## ISO 19650 transition plan
 
-The revised ISO 19650 series is expected to be adopted at the end of 2026. Once that happens, we will:
+The revised ISO 19650 series is expected to be adopted at the end of 2026. Once that happens:
 
-1. update the terminology (EIR → *information production requirements*);
-2. check the chapter structure against the ILS reference template;
-3. release this as a *minor* release with a transition period.
+1. we adapt the terminology (EIR → IPR *information production requirements*);
+2. we check the chapter structure against the *ILS-Referentiesjabloon* (ILS reference template);
+3. we release this as a *minor* release with a transition period.
 
 ## Community
 
@@ -52,6 +54,6 @@ The revised ISO 19650 series is expected to be adopted at the end of 2026. Once 
 
 - Work out information delivery processes according to IDM (ISO 29481), together with the GEMMA process models.
 - Draft an information protocol (legal status of the model).
-- Add aesthetics review (ID11) and BAG updates (ID12).
+- Add aesthetics review / *welstand* (ID11) and BAG updates (ID12).
 - Add use functions other than residential.
-- Explore EU regulations: Digital Product Passport (CPR) and digital building logbook (EPBD).
+- Explore EU regulations: digital product passport (CPR) and digital building logbook (EPBD).

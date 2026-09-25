@@ -22,16 +22,17 @@ The information objectives (ID) are groups of requirements. **ID01 and ID02 are 
 |---|---|---|
 | **ID01** | **Zoning plan activity for building (OPA): check against the zoning plan (municipal)** | **Mandatory – checks #1–#6** |
 | **ID02** | **Technical building activity (TBA): check against the *Besluit bouwwerken leefomgeving* (national building decree, Bbl)** | **Mandatory – checks #7–#17, including the ID01 information** |
+| option | optional | options |
 | ID03 | Digitising an existing building for VTH processes (surveying, scanning, NEN 2580 report) | Optional – proposal, to be investigated |
 | ID04 | Feeding VTH processes with building information (quantities from the space model and from physical objects) | Optional – proposal, to be investigated |
 | ID05 | Supporting the permitting, supervision and enforcement process (model coordination, issue management via BCF) | Optional – proposal, to be investigated |
 | ID06 | Involving the municipality and local residents in the design (visualisation) | Optional – proposal, to be investigated |
 | ID07 | Sustainability analyses (GWP, WLC; MPG is covered by ID02, check #13) | Optional – proposal, to be investigated |
-| ID08 | Handover and archiving of digital data | Optional – proposal, to be investigated |
+| ID08 | Handover and **archiving** of digital data for the competent authority's file | Optional – proposal, to be investigated |
 | ID09 | Decommissioning 2 Reuse (circularity) | Optional – proposal, to be investigated |
-| ID10 | Building parts and residential/accommodation units (*panddelen* and *verblijfsobjecten*: IfcSpatialZone per building part, IfcZone per accommodation unit) | Optional – proposal, to be investigated (strongly recommended for existing buildings) |
-| ID11 | Check against aesthetics requirements (*welstand*) | Optional – proposal, to be investigated |
-| ID12 | Updating the BAG | Optional – proposal, to be investigated |
+| ID10 | House number decision (*Huisnummerbesluit*), building parts (*Pand(dele)*) and accommodation units (*verblijfsobjecten*) (IFC element per building part, IfcZone per accommodation unit) | Optional – proposal, to be investigated (strongly recommended for existing buildings) |
+| ID11 | Check against aesthetics (*welstand*) requirements for façades and roofs | Optional – proposal, to be investigated |
+| ID12 | Updating the BAG (3D) | Optional – proposal, to be investigated |
 
 ### Delivering the ID01 information again for ID02
 
@@ -43,19 +44,15 @@ The information for ID01 is delivered early in the process: at the preliminary c
 
 In practice: the model at M3 meets **all** IDS specifications of ID01 **and** ID02. The municipality may run checks #1–#6 again at M3 to flag changes compared with M2.
 
-<a id="gemma-matrix"></a>
-
 ## Link to the GEMMA processes
 
 The matrix below links each information objective to the business processes of the [GEMMA-processenmodel Omgevingswet](https://www.gemmaonline.nl/wiki/Bedrijfsprocessen_omgevingswet) (the municipal reference process model). The starting point is the deelproces [015-03 Inhoudelijk behandelen aanvraag](https://www.gemmaonline.nl/wiki?title=Uitwerking_deelproces&proces=Omgevingswet/id-ad8a0931-792a-46c3-b9e9-a9c669fedf59).
-
-GEMMA process names are kept in Dutch.
 
 ● = primary process in which the information is used · ○ = supporting or later use
 
 ### Processes and codes used
 
-| Code | GEMMA process (Dutch name) | Level | Cluster |
+| Code | GEMMA process | Level | Cluster |
 |---|---|---|---|
 | **013** | Verkennen en begeleiden initiatief | Bedrijfsproces | Behandelen aanvraag / melding / informatie |
 | **015** | Behandelen aanvraag | Bedrijfsproces | Behandelen aanvraag / melding / informatie |
@@ -76,7 +73,11 @@ GEMMA process names are kept in Dutch.
 
 \* GEMMA does not number the process steps within a sub-process. The codes 015-03.1 to .4 are this ILS's own coding, in GEMMA's order. Codes without a number (BMI, UC, AB, BIO, MA) are temporary abbreviations: the GEMMA number has not yet been confirmed.
 
+<a id="gemma-matrix"></a>
+
 ### Matrix of information objectives × GEMMA processes
+
+The matrix below still needs to be reviewed together to determine which objective should be linked to which *doelbinding* (purpose link) within the GEMMA processes.
 
 | ID | 013 | 015-02 | 015-03.1 | 015-03.2 | 015-03.3 | 015-03.4 | 015-04 | 015-05 | BMI | UC | 025 | AB | BIO | MA |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -114,14 +115,17 @@ GEMMA process names are kept in Dutch.
 
 ## The 17 checks
 
+[Click here for a link to the detailed checks](https://vng.nl/artikelen/digitale-vergunningverlening-met-bim-building-information-modeling)
+
 | # | Check (English) | Check (Dutch original) | Activity | ID |
 |---|---|---|---|---|
 | 1 | Use function matches the zoning designation | Gebruiksfunctie komt overeen met bestemming | OPA | ID01 |
 | 2 | Maximum building height | Maximale bouwhoogte | OPA | ID01 |
 | 3 | Maximum building coverage percentage | Maximaal bebouwingspercentage | OPA | ID01 |
-| 4 | Use function / designation limited to x storeys | Gebruiksfunctie / bestemming beperkt tot x bouwlagen | OPA | ID01 |
+| 4 | Use function / designation limited to x storeys | Gebruiksfunctie/bestemming beperkt tot x bouwlagen | OPA | ID01 |
 | 5 | Home-based business: max. 50% of usable floor area | Beroep aan huis: maximaal 50% gebruiksoppervlakte | OPA | ID01 |
 | 6 | Maximum number of storeys | Maximum aantal bouwlagen | OPA | ID01 |
+| o | Still to be worked out below | NOG UIT TE WERKEN HIER ONDER | TBD | TBD |
 | 7 | Fire compartments | Brandcompartimenten | TBA | ID02 |
 | 8 | Fire resistance | Brandwerendheid | TBA | ID02 |
 | 9 | Clear width | Vrije breedte | TBA | ID02 |
@@ -139,6 +143,6 @@ GEMMA process names are kept in Dutch.
 | Layer | Who | Artefacts |
 |---|---|---|
 | Information management (steering) | Municipality (competent authority) and guideline owner | This ILS, acceptance criteria, decision on admissibility |
-| Information production (delivering) | Applicant and their modellers | Information model (IFC), BIM execution plan, validation report |
+| Information production (delivering) | Applicant and their modellers | Information model (IFC), (possibly a BIM execution plan), validation report |
 
 Modelling is therefore the applicant's job. The municipality sets requirements and checks them.

@@ -1,6 +1,6 @@
 # Responsibility matrix
 
-Codes: **R** = responsible · **A** = accountable · **C** = consulted · **I** = informed.
+Codes: **R** = responsible (*verantwoordelijk*) · **A** = accountable (*eindverantwoordelijk*) · **C** = consulted (*raadplegen*) · **I** = informed (*informeren*).
 
 ## Information management (steering)
 
@@ -25,14 +25,14 @@ Codes: **R** = responsible · **A** = accountable · **C** = consulted · **I** 
 
 ## Link with ISO 19650 and GEMMA
 
-The full task list from ISO 19650-2 (*information management assignment matrix*, tasks 1.1.1 onwards) is included in the assessment instrument. In the permitting chain, the tasks concerning information requirements (1.3), acceptance criteria and delivery (5–7) are the most relevant. The roles match the GEMMA process description *Inhoudelijk behandelen aanvraag*. Working this out as an IDM (ISO 29481) together with the GEMMA process models is on the [development agenda](#beheer).
+The full task list from ISO 19650-2 (*information management assignment matrix*, tasks 1.1.1 onwards) is included in the assessment instrument. In the permitting chain, the tasks concerning information requirements (1.3), acceptance criteria and delivery (5–7) are the most relevant. The roles match the GEMMA process description *Inhoudelijk behandelen aanvraag*. Working this out as an IDM (ISO 29481) together with the GEMMA process models is on the [development agenda](#beheer). Consideration is being given to setting up a VISI framework that could help with large-scale implementation.
 
 ## Fill-in format: information production team
 
 | Role | Name | Organisation | Contact |
 |---|---|---|---|
-| Municipal contact (VTH) | | | |
-| Applicant's information manager | | | |
-| Architectural modeller | | | |
-| Structural / building services modeller | | | |
-| Building physics / fire safety consultant | | | |
+| Municipal contact (VTH) | Willeke | | |
+| Applicant's information manager | Pim | | |
+| Architectural modeller | Chris | | |
+| Structural / building services modeller | Joran | | |
+| Building physics / fire safety consultant | Martin | | |

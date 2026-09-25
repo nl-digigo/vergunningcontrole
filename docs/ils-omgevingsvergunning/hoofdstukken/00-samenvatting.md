@@ -1,6 +1,6 @@
 Deze Informatieleveringsspecificatie (ILS) Omgevingsvergunning legt vast **welke informatie** een aanvrager in een 3D-informatiemodel (IFC) aanlevert, **in welk formaat**, **op welk moment** en **door wie**, zodat een gemeente de aanvraag voor een omgevingsvergunning voor een groot deel geautomatiseerd kan toetsen.
 
-De ILS is opgesteld binnen het VNG-programma **BM13 – Machineleesbare regels / GeoBIM-toolkit** en volgt de opbouw van het **digiGO Toetsingskader ILS** en het **ILS-Referentiesjabloon** (Deel A: toelichting, Deel B: machineleesbaar datasjabloon).
+De ILS is opgesteld binnen het VNG-programma **BM134** en volgt de opbouw van het **digiGO Toetsingskader ILS** en het **ILS-Referentiesjabloon** (Deel A: toelichting, Deel B: machineleesbaar datasjabloon).
 
 **In het kort**
 

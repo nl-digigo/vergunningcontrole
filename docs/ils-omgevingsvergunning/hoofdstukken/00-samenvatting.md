@@ -13,4 +13,4 @@ De ILS is opgesteld binnen het VNG-programma **BM13** en volgt de opbouw van het
 
 <p class="note">Dit is een <strong>werkversie (0.1)</strong>. Onderdelen die per gemeente of project worden ingevuld staan als <em>invulformat</em> in deze ILS. Openstaande keuzes staan in <a href="#open-punten">Open punten en beslisvragen</a>.</p>
 
-**Colofon.** Uitgegeven door de Vereniging van Nederlandse Gemeenten (VNG). Opgesteld door Lex Ransijn (VDCbase) in opdracht van VNG, onder leiding van projectleider Jeroen de Ruig, in samenwerking met de stuurgroepleden BNA, NEPROM, NL Ingenieurs, Woningbouwers NL, digiGO en Bouwend Nederland.
+**Colofon.** Uitgegeven door de Vereniging van Nederlandse Gemeenten (VNG). Opgesteld door Lex Ransijn (VDCbase) in opdracht van VNG, onder leiding van projectleider Jeroen de Ruig, in samenwerking met de stuurgroepleden.

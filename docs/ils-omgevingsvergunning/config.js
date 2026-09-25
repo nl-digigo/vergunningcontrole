@@ -5,19 +5,27 @@ var respecConfig = {
   shortName: "vergunningscontrole/ils-omgevingsvergunning",
   imprint: "digigo",
   subtitle: "Informatieleveringsspecificatie voor een aanvraag omgevingsvergunning met een 3D-informatiemodel",
-  publishDate: "2026-09-17",
-  // versie: 0.1.0 (concept)
-  editors: [
-    { name: "Lex Ransijn", company: "VDCbase (in opdracht van VNG)", companyURL: "https://vdcbase.com" }
-  ],
+  publishDate: "2026-09-25",
+  // versie: 0.1.2 (concept)
   authors: [
-    { name: "Vereniging van Nederlandse Gemeenten (VNG)", company: "VNG", companyURL: "https://vng.nl" }
+    { name: "Vereniging van Nederlandse Gemeenten", company: "VNG", companyURL: "https://vng.nl" }
   ],
-  formerEditors: [],
+  editors: [
+    { name: "Lex Ransijn", company: "VDCbase", companyURL: "https://vdcbase.com" }
+  ],
+
+  formerEditors: [
+    { name: "Menno Mekes", company: "Arons en Gelauff", companyURL: "https://vdcbase.com" }
+    { name: "Jan Brouwer", company: "On-Track", companyURL: "https://vdcbase.com" }
+    { name: "Rien van der Scheur", company: "On-Track", companyURL: "https://vdcbase.com" }
+    { name: "Pepijn van der Vooren", company: "IMPlace", companyURL: "https://vdcbase.com" }
+    { name: "Arjan Toet", company: "BIMt", companyURL: "https://vdcbase.com" }
+    { name: "Niels Vossebeld", company: "Niels Vossebeld", companyURL: "https://vdcbase.com" }
+  ],
   otherLinks: [
-    { key: "Projectleiding", data: [{ value: "Jeroen de Ruig (VNG, projectleider BM13)" }] },
+    { key: "Projectleiding", data: [{ value: "Jeroen de Ruig" }] },
     { key: "In samenwerking met", data: [
-      { value: "Stuurgroep: BNA, NEPROM, NL Ingenieurs, Woningbouwers NL, digiGO, Bouwend Nederland" }
+      { value: "Deelnemende pilot Gemeenten, Softwarelaveranciers, Stuurgroep" }
     ] }
   ],
   latestVersion: null,

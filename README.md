@@ -2,7 +2,7 @@
 
 Dit is de GitHub-repository voor de vergunningscontroleservice
 
-Zie voor de use case: https://nl-digigo.github.io/vergunningcontrole/ils-omgevingsvergunninge/
+Zie voor de use case: https://nl-digigo.github.io/vergunningcontrole/ils-omgevingsvergunning/
 
 ## Instructies voor redacteurs
 

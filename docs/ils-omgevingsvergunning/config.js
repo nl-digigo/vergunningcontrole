@@ -15,17 +15,17 @@ var respecConfig = {
   ],
 
   formerEditors: [
-    { name: "Menno Mekes", company: "Arons en Gelauff", companyURL: "https://vdcbase.com" }
-    { name: "Jan Brouwer", company: "On-Track", companyURL: "https://vdcbase.com" }
-    { name: "Rien van der Scheur", company: "On-Track", companyURL: "https://vdcbase.com" }
-    { name: "Pepijn van der Vooren", company: "IMPlace", companyURL: "https://vdcbase.com" }
-    { name: "Arjan Toet", company: "BIMt", companyURL: "https://vdcbase.com" }
-    { name: "Niels Vossebeld", company: "Niels Vossebeld", companyURL: "https://vdcbase.com" }
+    { name: "Menno Mekes", company: "Arons en Gelauff" },
+    { name: "Jan Brouwer", company: "On-Track" },
+    { name: "Rien van der Scheur", company: "On-Track" },
+    { name: "Pepijn van der Vooren", company: "IMPlace" },
+    { name: "Arjan Toet", company: "BIMt" },
+    { name: "Niels Vossebeld", company: "Niels Vossebeld" }
   ],
   otherLinks: [
     { key: "Projectleiding", data: [{ value: "Jeroen de Ruig" }] },
     { key: "In samenwerking met", data: [
-      { value: "Deelnemende pilot Gemeenten, Softwarelaveranciers, Stuurgroep" }
+      { value: "Deelnemende pilot Gemeenten, Softwareleveranciers, Stuurgroep" }
     ] }
   ],
   latestVersion: null,

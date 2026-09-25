@@ -18,7 +18,7 @@ var respecConfig = {
     { name: "Rien van der Scheur", company: "On-Track", note: "bSDD opzet" },
     { name: "Pepijn van der Vooren", company: "IMPlace", note: "Test-Cases uitvoeren" },
     { name: "Arjan Toet", company: "BIMt", note: "Software testen" },
-    { name: "Niels Vossebeld", company: "Niels Vossebeld Advies", note: "Proces mapping management" }
+    { name: "Niels Vossebeld", company: "Niels Vossebeld Advies", note: "Proces mapping management - doel binding" }
   ],
   otherLinks: [
     { key: "Projectleiding", data: [{ value: "Jeroen de Ruig" }] },

@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
+  <ids:info>
+    <ids:title>9.10c Verblijfsgebied met bezettingsgraad</ids:title>
+    <ids:copyright>VDCbase,,Gemeente Rotterdam, AECgeeks, VORM, Arons en Gelauff, IMplace, On-Track</ids:copyright>
+    <ids:version>0.95</ids:version>
+    <ids:description>Deelspecificatie 20 van 42 uit 'ILS voor ruimten in de omgevingswet' versie 0.95. Afgesplitst uit het totaalbestand; de specificatie zelf is ongewijzigd.</ids:description>
+    <ids:author>menno@aronsengelauff.nl</ids:author>
+    <ids:date>2026-03-19</ids:date>
+    <ids:purpose>Indieningsvereisten van ruimte-modellering t.b.v. vergunningsaanvraag Omgevings Plan Activiteit (Omgevingsplan) en Technische Activiteit (BLL) voor bouwwerken zijnde Gebouw — BM13-checks: #15, #16 (bron: BM13-regelinventarisatie v0.3, 3-7-2026).</ids:purpose>
+    <ids:milestone>015-03 Inhoudelijk behandelen aanvraag / processtap Toetsen aan regelgeving (GEMMA Omgevingswet, bedrijfsproces 015 Behandelen aanvraag)</ids:milestone>
+  </ids:info>
+  <ids:specifications>
+    <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.10c Verblijfsgebied met bezettingsgraad" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsgebied-met-bezettingsgraad" description="De bezettingsgraag in een Verblijfsgebied als IfcZone, IfcSpatialZone of IfcSpace. " instructions="Alleen bepaalde Gebruiksfuncties hebben een bezettingsgraad. Woon-, Industrie, Sport, Winkel en Overige functies niet.   (Check BBL of dit nog steeds zo is)">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="IFCSPATIALZONE" />
+              <xs:enumeration value="IFCSPACE" />
+              <xs:enumeration value="IFCZONE" />
+            </xs:restriction>
+          </ids:name>
+        </ids:entity>
+        <ids:attribute>
+          <ids:name>
+            <ids:simpleValue>ObjectType</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <ids:simpleValue>Verblijfsgebied</ids:simpleValue>
+          </ids:value>
+        </ids:attribute>
+        <ids:property dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_SpaceOccupancyRequirements</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>OccupancyType</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="matching the pattern Bijeenkomstfunctie|Celfunctie|Gezondheidszorgfunctie|Kantoorfunctie|Logiesfunctie|Onderwijsfunctie|Bouwwerk geen gebouw zijnde|Subgebruikfuncties" />
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Verblijfsgebied" cardinality="optional">
+          <ids:value>
+            <ids:simpleValue>Verblijfsgebied</ids:simpleValue>
+          </ids:value>
+          <ids:system>
+            <ids:simpleValue>Omgevingswet-Ruimten</ids:simpleValue>
+          </ids:system>
+        </ids:classification>
+        <ids:attribute cardinality="required" instructions="Gebruiksfunctie volgens enumeratie BBL">
+          <ids:name>
+            <ids:simpleValue>Name</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+        <ids:attribute cardinality="required">
+          <ids:name>
+            <ids:simpleValue>Description</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="Bruto Inhoud|Functioneel Nuttige Inhoud|Gebruiksinhoud|Netto Inhoud|Nuttige inhoud|Programma van Eisen inhoud" />
+            </xs:restriction>
+          </ids:value>
+        </ids:attribute>
+        <ids:property dataType="IFCCOUNTMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/OccupancyNumber" cardinality="required" instructions="De werkelijke bezettingsgraad van de ruimte.&#10;Een kantoor van 160m² heeft een bezettingsgraad van 160 x 0,05 = 8&#10;&#10;bbl4.66">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_SpaceOccupancyRequirements</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>OccupancyNumber</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCCOUNTMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/OccupancyNumberPeak" cardinality="required" instructions="Er is een maximale bezetting die een ruimte kan hebben op basis van de vluchtdeuren. (Los van of dit wel of niet kan)   &#10;tegen de vluchtrichting in draaiende deuren: &#10;- per deur: 37p&#10;met de vluchtrichting mee draaiende deuren:  &#10;- enkele deur: 110p / m¹ deur&#10;- dubbele deur: 90p / m¹ deur&#10;">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_SpaceOccupancyRequirements</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>OccupancyNumberPeak</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCAREAMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/AreaPerOccupant" cardinality="required" instructions="Het BBL heeft minimale eisen voor sommige gebruiksfuncties.&#10;Bijvoorbeeld een kantoorfunctie is 0,05.&#10;Dit getal is de ten minste aan te houden aantal personen per m² verblijfsgebied.&#10;AreaPerOccupant is 1/eis = 1/0,05">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_SpaceOccupancyRequirements</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>AreaPerOccupant</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+      </ids:requirements>
+    </ids:specification>
+  </ids:specifications>
+</ids:ids>

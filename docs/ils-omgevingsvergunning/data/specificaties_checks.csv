@@ -1,0 +1,43 @@
+nr,bestand,specificatie,ifcVersion,identifier,bm13_checks
+01,01 9 ILS voor Ruimten in de omgevingswet.ids,9 ILS voor Ruimten in de omgevingswet,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0,#1 #2 #3 #4 #5 #6 #7 #8 #9 #10 #11 #12 #13 #14 #15 #16 #17
+02,02 9.01a Georeferentie.ids,9.01a Georeferentie,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Georeferentie,#1 #2 #3 #5 #7 #10 #17
+03,03 9.01b Coördinatenstelsel.ids,9.01b Coördinatenstelsel,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Coordinatenstelsel,#1 #2 #3 #5 #7 #10 #17
+04,04 9.01c Projectadres IFC4X3_ADD2.ids,9.01c Projectadres (IFC4X3_ADD2),IFC4X3_ADD2,9.01c,#1 #2 #3 #4 #5 #6
+05,05 9.01d Perceeladres IFC4.ids,9.01d Perceeladres (IFC4),IFC4,9.01d,#1 #2 #3 #4 #5 #6
+06,06 9.01e Gebouwadres IFC4.ids,9.01e Gebouwadres (IFC4),IFC4,9.01e,#1 #2 #3 #4 #5 #6
+07,07 9.02 Project.ids,9.02 Project,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Project,#1 #2 #3 #4 #5 #6 #7 #8 #9 #10 #11 #12 #13 #14 #15 #16 #17
+08,08 9.03a Perceel.ids,9.03a Perceel,IFC4X3_ADD2 IFC4,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Perceel,#3 #10 #14 #17
+09,09 9.03b Bouwwerkperceel.ids,9.03b Bouwwerkperceel,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwwerkperceel,#1 #2 #3 #5 #6 #7 #17
+10,10 9.04 Kadastraal Perceel.ids,9.04 Kadastraal Perceel,IFC4X3_ADD2 IFC4,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Kadastraal-Perceel,#1 #2 #3 #5 #6 #7 #11 #12 #17
+11,11 9.05a Gebouw.ids,9.05a Gebouw,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebouw,#3 #4 #17
+12,12 9.05b Gebouwinhoud.ids,9.05b Gebouwinhoud,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebouwinhoud,#3
+13,13 9.06a Bouwlaag voorheen verdieping.ids,9.06a Bouwlaag (voorheen verdieping),IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwlaag,#1 #2 #3 #4 #6 #9 #10 #16
+14,14 9.06b Bouwlaaginhoud voorheen bouwlaagobject.ids,9.06b Bouwlaaginhoud (voorheen bouwlaagobject),IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwlaaginhoud,#3 #6
+15,15 9.07 Gebruikseenheid voorheen eigendom- en gebruikseenheid.ids,"9.07 Gebruikseenheid (voorheen eigendom-, en gebruikseenheid)",IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruikseenheid,#1 #5
+16,16 9.08 Gebruiksfunctie.ids,9.08 Gebruiksfunctie,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie,#1 #3 #4 #5 #6 #7 #9 #10 #11 #12 #13 #14 #15 #16 #17
+17,17 9.09 Nevengebruiksfunctie.ids,9.09 Nevengebruiksfunctie,IFC4X3_ADD2 IFC4,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Nevengebruiksfunctie,#1 #4 #5
+18,18 9.10a Functiegebied.ids,9.10a Functiegebied,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Functiegebied,#9 #10 #11
+19,19 9.10b Verblijfsgebied.ids,9.10b Verblijfsgebied,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsgebied,#9 #10 #11 #16 #17
+20,20 9.10c Verblijfsgebied met bezettingsgraad.ids,9.10c Verblijfsgebied met bezettingsgraad,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsgebied-met-bezettingsgraad,#15 #16
+21,21 9.10d Gebruiksgebied.ids,9.10d Gebruiksgebied,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksgebied,#9 #10 #14 #15
+22,22 9.10e Bedgebied.ids,9.10e Bedgebied,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bedgebied,#16
+23,23 9.10f Restgebied.ids,9.10f Restgebied,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Restgebied,#5 #6
+24,24 9.11 Buitengebied.ids,9.11 Buitengebied,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Buitengebied,#9 #10
+25,25 9.12a Functieruimte.ids,9.12a Functieruimte,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Functieruimte,#1 #3 #5 #6 #9 #10 #13 #14 #15
+26,26 9.12b Verblijfsruimte.ids,9.12b Verblijfsruimte,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsruimte,#1 #3 #5 #6 #9 #10 #13 #14 #15 #17
+27,27 9.12c Bedruimte.ids,9.12c Bedruimte,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bedruimte,#16
+28,28 9.12d Restruimte.ids,9.12d Restruimte,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Restruimte,#5 #6
+29,29 9.13 Buitenruimte.ids,9.13 Buitenruimte,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Buitenruimte,#9 #10
+30,30 9.16a Brandcompartiment.ids,9.16a Brandcompartiment,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Brandcompartiment,#7 #8 #14 #15
+31,31 9.16b Subbrandcompartiment.ids,9.16b Subbrandcompartiment,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Subbrandcompartiment,#15
+32,32 9.16c Vluchtroute.ids,9.16c Vluchtroute,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vluchtroute,#14 #15 #16
+33,33 9.17 Tarra Ruimte.ids,9.17 Tarra Ruimte,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Tarra-Ruimte,#5 #6 #15
+34,34 9.18a Fysieke elementen IfcBeam.ids,9.18a Fysieke elementen IfcBeam,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Balk,
+35,35 9.18b Fysieke elementen IfcColumn.ids,9.18b Fysieke elementen IfcColumn,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Kolom,#7 #8
+36,36 9.18c Fysieke elementen IfcCovering.INSULATION.ids,9.18c Fysieke elementen IfcCovering.INSULATION,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Isolatie,#11
+37,37 9.18d Fysieke elementen IfcCurtainWall.ids,9.18d Fysieke elementen IfcCurtainWall,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vliesgevel,#7 #8 #11 #12 #17
+38,38 9.18e Fysieke elementen IfcDoor.ids,9.18e Fysieke elementen IfcDoor,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Deur,#7 #8 #12 #14 #15 #16 #17
+39,39 9.18f Fysieke elementen IfcSensor.ids,9.18f Fysieke elementen IfcSensor,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Sensor,
+40,40 9.18g Fysieke elementen IfcSlab.ids,9.18g Fysieke elementen IfcSlab,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vloer,#7 #8 #9 #10 #11 #13 #14 #15 #16
+41,41 9.18h Fysieke elementen IfcWall.ids,9.18h Fysieke elementen IfcWall,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Wand,#7 #8 #9 #11 #13 #16 #17
+42,42 9.18i Fysieke elementen Ifcwindow.ids,9.18i Fysieke elementen Ifcwindow,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Raam,#12 #17

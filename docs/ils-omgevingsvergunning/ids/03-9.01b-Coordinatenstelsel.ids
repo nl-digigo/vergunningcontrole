@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
+  <ids:info>
+    <ids:title>9.01b Coördinatenstelsel</ids:title>
+    <ids:copyright>VDCbase,,Gemeente Rotterdam, AECgeeks, VORM, Arons en Gelauff, IMplace, On-Track</ids:copyright>
+    <ids:version>0.95</ids:version>
+    <ids:description>Deelspecificatie 03 van 42 uit 'ILS voor ruimten in de omgevingswet' versie 0.95. Afgesplitst uit het totaalbestand; de specificatie zelf is ongewijzigd.</ids:description>
+    <ids:author>menno@aronsengelauff.nl</ids:author>
+    <ids:date>2026-03-19</ids:date>
+    <ids:purpose>Indieningsvereisten van ruimte-modellering t.b.v. vergunningsaanvraag Omgevings Plan Activiteit (Omgevingsplan) en Technische Activiteit (BLL) voor bouwwerken zijnde Gebouw — BM13-checks: #1, #2, #3, #5, #7, #10, #17 (bron: BM13-regelinventarisatie v0.3, 3-7-2026).</ids:purpose>
+    <ids:milestone>015-03 Inhoudelijk behandelen aanvraag / processtap Toetsen aan regelgeving (GEMMA Omgevingswet, bedrijfsproces 015 Behandelen aanvraag)</ids:milestone>
+  </ids:info>
+  <ids:specifications>
+    <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.01b Coördinatenstelsel" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Coordinatenstelsel" description="Coördinatenstelsel op RD of RD=N.A.P. (LoGref50) Het attribuut TargetCRS voor Nederlandse indiening heeft als verplichte waarde een IfcProjectedCRS met attribuut VerticalDatum EPSG:7415 (RD+NAP)of EPSG:28992 (RD) én EPSG:5709 (NAP)   Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren" instructions="Deze CRS-eis geldt alleen voor Nederlandse projecten waarbij de omvang van het project i.c.m. de kromming van de aarde geen probleem oplevert. Als dit niet geldt dan is het ook mogelijk om eventueel IfcGeographicCRS en/of andere EPSG te gebruiken.  IfcProjectedCRS kan geen Classificatie toegekend krijgen. https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Cordinatenstelsel">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCPROJECTEDCRS</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:attribute cardinality="required" instructions="Doel coördinatenstelsel waarin het BIM-model geplaatst wordt. EPSG 7415&#10;Het attribuut TargetCRS voor Nederlandse indiening heeft als verplichte waarde een IfcProjectedCRS met attribuut VerticalDatum EPSG:7415 (RD+NAP)of EPSG:28992 (RD) én EPSG:5709 (NAP)&#10;https://www.opengis.net/def/crs/EPSG/0/28992">
+          <ids:name>
+            <ids:simpleValue>Name</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="EPSG:7415" />
+              <xs:enumeration value="EPSG:28992" />
+            </xs:restriction>
+          </ids:value>
+        </ids:attribute>
+      </ids:requirements>
+    </ids:specification>
+  </ids:specifications>
+</ids:ids>

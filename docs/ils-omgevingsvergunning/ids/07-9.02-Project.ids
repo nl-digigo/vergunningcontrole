@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
+  <ids:info>
+    <ids:title>9.02 Project</ids:title>
+    <ids:copyright>VDCbase,,Gemeente Rotterdam, AECgeeks, VORM, Arons en Gelauff, IMplace, On-Track</ids:copyright>
+    <ids:version>0.95</ids:version>
+    <ids:description>Deelspecificatie 07 van 42 uit 'ILS voor ruimten in de omgevingswet' versie 0.95. Afgesplitst uit het totaalbestand; de specificatie zelf is ongewijzigd.</ids:description>
+    <ids:author>menno@aronsengelauff.nl</ids:author>
+    <ids:date>2026-03-19</ids:date>
+    <ids:purpose>Indieningsvereisten van ruimte-modellering t.b.v. vergunningsaanvraag Omgevings Plan Activiteit (Omgevingsplan) en Technische Activiteit (BLL) voor bouwwerken zijnde Gebouw — BM13-checks: #1, #2, #3, #4, #5, #6, #7, #8, #9, #10, #11, #12, #13, #14, #15, #16, #17 (bron: BM13-regelinventarisatie v0.3, 3-7-2026).</ids:purpose>
+    <ids:milestone>015-03 Inhoudelijk behandelen aanvraag / processtap Toetsen aan regelgeving (GEMMA Omgevingswet, bedrijfsproces 015 Behandelen aanvraag)</ids:milestone>
+  </ids:info>
+  <ids:specifications>
+    <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.02 Project" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Project" description="Een BIM-Model moet de IFCClass IfcProject bevatten zodat men de representationcontext heeft waar men t.o.v. IFfcMapConversion de Local placement gedaan kan worden. Tevens kunnen er een aantal algemene eigenschappen worden ingevuld zoals de fase en het type project.">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCPROJECT</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Project" cardinality="optional">
+          <ids:value>
+            <ids:simpleValue>Project</ids:simpleValue>
+          </ids:value>
+          <ids:system>
+            <ids:simpleValue>Omgevingswet-Ruimten</ids:simpleValue>
+          </ids:system>
+        </ids:classification>
+        <ids:attribute cardinality="required" instructions="Naam&#10;Voorbeeld: Woningbouwproject x, voortgezet onderwijs">
+          <ids:name>
+            <ids:simpleValue>Name</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+        <ids:attribute cardinality="required" instructions="Toelichting&#10;Voorbeeld: Bouw van 5 rijwoningen, basisschool met kinderdagverblijf">
+          <ids:name>
+            <ids:simpleValue>Description</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+        <ids:attribute cardinality="optional" instructions="Fase volgende STB2025: Voorbeeld: 2.3 Definitief ontwerp&#10;Fase volgende STB2025: Voorbeeld: DO&#10;Fase volgende STB2014: Voorbeeld: 05 Definitief ontwerp">
+          <ids:name>
+            <ids:simpleValue>Phase</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="01 Initiatief/haalbaarheid|02 Projectdefinitie|03 Structuurontwerp|04 Voorontwerp|05 Definitief ontwerp|06 Technisch ontwerp/Bestek|07 Prijs- en Contractvorming|07 Prijs- en contractvorming|08 Uitvoering - Uitvoeringsgereed Ontwerp|09 Uitvoering - Directievoering|10 Gebruik/Exploitatie|1. Initiatief|1.1 Iniatief|INI|1.2 Haalbaarheid|HBH|1.3 Projectdefinitie|PD|2. Ontwerp|2.1 Structuurontwerp|SO|2.2 Voorontwerp|VO|2.3 Definitief Ontwerp|DO|2.4 Omgevingsvergunning|OV|3. Engineering|3.1 Technisch Ontwerp|TO|3.2 Uitvoeringsgereed Ontwerp|UO|4. Realisatie|4.1 Uitvoering|UV|4.2 Oplevering &amp; Overdracht|OO|4.3 Onderhoudstermijn|5. Gebruik" />
+            </xs:restriction>
+          </ids:value>
+        </ids:attribute>
+        <ids:attribute cardinality="required" instructions="Eenheden&#10;voorbeeld: m of mm (gebouwen zijn gebruikelijk in mm en de georeferentie in m) er zijn er dus 2 in IFC files.)">
+          <ids:name>
+            <ids:simpleValue>UnitsInContext</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+        <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ProjectType" cardinality="optional">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ProjectCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ProjectType</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="NEWBUILD" />
+              <xs:enumeration value="MODIFICATION" />
+              <xs:enumeration value="OPERATIONMAINTENANCE" />
+              <xs:enumeration value="RENOVATION" />
+              <xs:enumeration value="REPAIR" />
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCCOSTITEMTYPEENUM" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ProjectInvestmentEstimate" cardinality="optional" instructions="Stichtingskosten: NEN2699 Niveau 1 : A t/m G&#10;Voorbeeld: 1000000">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ProjectCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ProjectInvestmentEstimate</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+      </ids:requirements>
+    </ids:specification>
+  </ids:specifications>
+</ids:ids>

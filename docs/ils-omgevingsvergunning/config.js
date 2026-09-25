@@ -10,17 +10,15 @@ var respecConfig = {
   authors: [
     { name: "Vereniging van Nederlandse Gemeenten", company: "VNG", companyURL: "https://vng.nl" }
   ],
-  editors: [
-    { name: "Lex Ransijn", company: "VDCbase", companyURL: "https://vdcbase.com" }
-  ],
 
-  formerEditors: [
-    { name: "Menno Mekes", company: "Arons en Gelauff" },
-    { name: "Jan Brouwer", company: "On-Track" },
-    { name: "Rien van der Scheur", company: "On-Track" },
-    { name: "Pepijn van der Vooren", company: "IMPlace" },
-    { name: "Arjan Toet", company: "BIMt" },
-    { name: "Niels Vossebeld", company: "Niels Vossebeld" }
+  editors: [
+    { name: "Lex Ransijn", company: "VDCbase", companyURL: "https://vdcbase.com" },
+    { name: "Menno Mekes", company: "Arons en Gelauff", note: "IDS opzet" },
+    { name: "Jan Brouwer", company: "On-Track", note: "bSDD doorontwikkeling" },
+    { name: "Rien van der Scheur", company: "On-Track", note: "bSDD opzet" },
+    { name: "Pepijn van der Vooren", company: "IMPlace", note: "Test-Cases uitvoeren" },
+    { name: "Arjan Toet", company: "BIMt", note: "Software testen" },
+    { name: "Niels Vossebeld", company: "Niels Vossebeld Advies", note: "Proces mapping management" }
   ],
   otherLinks: [
     { key: "Projectleiding", data: [{ value: "Jeroen de Ruig" }] },

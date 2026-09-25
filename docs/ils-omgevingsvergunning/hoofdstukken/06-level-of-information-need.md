@@ -18,6 +18,8 @@ Het Level of Information Need (LOIN, ISO 7817-1:2024) legt per informatiebehoeft
 | Geometrie | Volumetrische (solide) ruimten, georeferentie RD/NAP, detailniveau conform tabel hieronder |
 | Documentatie | IFC (STEP), PDF/A-tekeningen afgeleid uit het model, IDS-validatierapport (BCF of HTML) |
 
+<a id="loin-geometrie"></a>
+
 ## Geometrische eisen
 
 | Eis | Toelichting | Nodig voor checks |

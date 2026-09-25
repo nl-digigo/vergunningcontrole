@@ -73,6 +73,8 @@ De matrix hieronder koppelt elke informatiedoelstelling aan de bedrijfsprocessen
 
 \* GEMMA nummert de processtappen binnen een deelproces niet. De codes 015-03.1 tot en met .4 zijn een eigen codering in deze ILS, in de volgorde van GEMMA. Codes zonder nummer (BMI, UC, AB, BIO, MA) zijn tijdelijke afkortingen: het GEMMA-nummer is nog niet bevestigd.
 
+<a id="gemma-matrix"></a>
+
 ### Matrix informatiedoelstellingen × GEMMA-processen
 
 Onderstaande matrix moeten we nog namlop met elkaar welke doelstelling te koppelen is aan doelbinding binnen de Gemma processen.

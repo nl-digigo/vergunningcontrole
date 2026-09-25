@@ -58,6 +58,7 @@
             </xs:restriction>
           </ids:value>
         </ids:attribute>
+        <ids:property dataType="IFCREAL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/GrossFloorArea" cardinality="optional" instructions="Het Bruto Oppervlakte van de bouwlaag kan worden ingevuld indien dit nodig is.&#10;Een gemodeleerd bouwlaagobject heeft de voorkeur.">
           <ids:propertySet>
             <ids:simpleValue>Qto_BuildingStoreyBaseQuantities</ids:simpleValue>
           </ids:propertySet>

@@ -42,6 +42,7 @@ The table styling lives in [`../assets/ils-tables.css`](../assets/ils-tables.css
 | 13 | [Accountability against the Toetsingskader ILS](hoofdstukken/13-assessment-framework.md) | — |
 | 14 | [Open issues and decisions](hoofdstukken/14-open-issues.md) | — |
 | 15 | [Glossary](hoofdstukken/15-glossary.md) | — |
+| 16 | [Sample models](hoofdstukken/16-sample-models.md) | — |
 
 ## Machine-readable part
 
@@ -49,6 +50,7 @@ The machine-readable part is shared with the Dutch version and is in Dutch:
 
 - [`../ids/`](../ids/): 42 IDS 1.0 sub-specifications, derived from the *ILS voor Ruimten in de Omgevingswet* v0.95, with the check numbers and the GEMMA milestone added
 - [`../data/specificaties_checks.csv`](../data/specificaties_checks.csv): link between specifications, bSDD identifiers and checks
+- [`../voorbeeldmodellen/`](../voorbeeldmodellen/): 15 IFC sample models (RottaNova/Kievitsweg project) that meet the specifications; chapter 06 shows an excerpt from them per specification
 
 ## Structure
 

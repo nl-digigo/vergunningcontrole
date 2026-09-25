@@ -62,7 +62,7 @@
             </xs:restriction>
           </ids:value>
         </ids:property>
-        <ids:property dataType="IFCCOSTITEMTYPEENUM" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ProjectInvestmentEstimate" cardinality="optional" instructions="Stichtingskosten: NEN2699 Niveau 1 : A t/m G&#10;Voorbeeld: 1000000">
+        <ids:property dataType="IFCMONETARYMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ProjectInvestmentEstimate" cardinality="optional" instructions="Stichtingskosten: NEN2699 Niveau 1 : A t/m G&#10;Voorbeeld: 1000000">
           <ids:propertySet>
             <ids:simpleValue>Pset_ProjectCommon</ids:simpleValue>
           </ids:propertySet>

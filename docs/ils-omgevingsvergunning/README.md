@@ -41,11 +41,13 @@ De opmaak van de tabellen staat in [`assets/ils-tables.css`](assets/ils-tables.c
 | 13 | [Verantwoording Toetsingskader ILS](hoofdstukken/13-verantwoording-toetsingskader.md) | — |
 | 14 | [Open punten en beslisvragen](hoofdstukken/14-open-punten.md) | — |
 | 15 | [Begrippen](hoofdstukken/15-begrippen.md) | — |
+| 16 | [Voorbeeldmodellen](hoofdstukken/16-voorbeeldmodellen.md) | — |
 
 ## Machineleesbaar deel
 
 - [`ids/`](ids/): 42 IDS 1.0-deelspecificaties, afgeleid van de *ILS voor Ruimten in de Omgevingswet* v0.95, aangevuld met de checknummers en de GEMMA-mijlpaal
 - [`data/specificaties_checks.csv`](data/specificaties_checks.csv): koppeling tussen specificaties, bSDD-identifiers en checks
+- [`voorbeeldmodellen/`](voorbeeldmodellen/): 15 IFC-voorbeeldmodellen (project RottaNova/Kievitsweg) die aan de specificaties voldoen; per specificatie staat een fragment hieruit in hoofdstuk 06
 
 ## Structuur
 
@@ -59,6 +61,7 @@ De opmaak van de tabellen staat in [`assets/ils-tables.css`](assets/ils-tables.c
 ├── en/                     Engelse vertaling (automatisch, NL is leidend)
 ├── ils-omgevingsvergunning-en.html  statische Engelse leesversie
 ├── ids/                    IDS-bestanden
+├── voorbeeldmodellen/      IFC-voorbeeldmodellen + LEESMIJ
 ├── data/                   koppeltabellen
 ├── .github/                controle-workflow en issuesjablonen
 ├── CHANGELOG.md

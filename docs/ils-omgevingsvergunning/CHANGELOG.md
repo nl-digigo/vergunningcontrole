@@ -25,3 +25,15 @@ Dit project volgt [semantische versies](https://semver.org/lang/nl/). `0.x` = co
 - Matrix toegevoegd die de informatiedoelstellingen koppelt aan de GEMMA-processen (013, 015-02 t/m 015-05, toezicht en handhaving, brondatabeheer, evaluatie).
 - GEMMA-verwijzing gecorrigeerd: de toetsing valt onder 015-03 *Inhoudelijk behandelen aanvraag* (niet 015-02). Aangepast in de tekst en in `ids:milestone` van alle 42 IDS-bestanden.
 - Engelse, automatisch vertaalde versie toegevoegd (`en/` en `ils-omgevingsvergunning-en.html`). De Nederlandse versie is leidend; GEMMA-, STB- en IDS-termen zijn Nederlands gebleven.
+
+## [0.1.3] – 2026-09-25
+
+### Toegevoegd
+- Hoofdstuk 16 *Voorbeeldmodellen*: 15 IFC-modellen uit het project RottaNova/Kievitsweg in [`voorbeeldmodellen/`](voorbeeldmodellen/), met herkomst, bestandsoverzicht en de bekende afwijkingen.
+- Per specificatie in hoofdstuk 06 een STEP-fragment uit die modellen, met property sets en classificatieverwijzing (28 van de 42 specificaties; de overige objecttypen komen niet in de modellen voor).
+- Engelse vertaling van hoofdstuk 16 en van de fragmenten.
+
+### Gewijzigd
+- `ids/07-9.02-Project.ids`: `ProjectInvestmentEstimate` had `dataType="IFCCOSTITEMTYPEENUM"`, wat in het IFC-schema een `IfcMonetaryMeasure` is. Gecorrigeerd naar `IFCMONETARYMEASURE`.
+- Voorbeeldmodellen: header geneutraliseerd (auteur, organisatie, autorisatie, exportsysteem en de Revit-regels in `FILE_DESCRIPTION`), `FILE_NAME` gelijk aan de bestandsnaam, tijdstempel `2026-09-25T00:00:01`, en `PredefinedType` = `USERDEFINED` voor ruimtelijke objecten met een `ObjectType` (1.053 `IfcSpace`).
+- Voorbeeldmodellen opgeschoond: niet-schema-eigenschappen uit `Pset_SpaceOccupancyRequirements` verwijderd, SBI-codes in `OccupancyType` in CBS-notatie, `Pset_SpaceHeaterTypeCommon` verwijderd, `Pset_SpaceCommon.Reference` verwijderd, `ProjectInvestmentEstimate` gevuld met een fictieve 10 miljoen euro plus `IfcMonetaryUnit` EUR.

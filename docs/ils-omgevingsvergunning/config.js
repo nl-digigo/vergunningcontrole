@@ -11,20 +11,27 @@ var respecConfig = {
     { name: "Vereniging van Nederlandse Gemeenten", company: "VNG", companyURL: "https://vng.nl" }
   ],
   editors: [
-    { name: "Lex Ransijn", company: "VDCbase", companyURL: "https://vdcbase.com" }, note: "Projectleider en coördinatie", },
+    { name: "Lex Ransijn", company: "VDCbase", companyURL: "https://vdcbase.com", note: "Projectleider en coördinatie" }
   ],
   otherLinks: [
-  { key: "Projectleiding", data: [{ value: "Jeroen de Ruig" }] },
-  { key: "Co-auteurs", data: [
-    { value: "Menno Mekes (Arons en Gelauff) – IDS opzet" },
-    { value: "Jan Brouwer (On-Track) – bSDD doorontwikkeling" }
-    { value: "Rien van der Scheur (On-Track) – bSDD opzet" },
-    { value: "Pepijn van der Vooren (IMPlace) – Test-Cases uitvoeren" },
-    { value: "Arjan Toet (BIMt) – Software testen" }
-  ] },
-  { key: "Reviewers", data: [{ value: "..." }] }
-]
+    { key: "Projectleiding", data: [{ value: "Jeroen de Ruig" }] },
+    { key: "Co-auteurs", data: [
+      { value: "Menno Mekes (Arons en Gelauff) – IDS opzet" },
+      { value: "Jan Brouwer (On-Track) – bSDD doorontwikkeling" },
+      { value: "Rien van der Scheur (On-Track) – bSDD opzet" },
+      { value: "Pepijn van der Vooren (IMPlace) – Test-Cases uitvoeren" },
+      { value: "Arjan Toet (BIMt) – Software testen" }
+    ] },
+    { key: "Reviewers", data: [{ value: "..." },
+      { value: "Rolf Jonker" },
+      { value: "Willeke Wijnen" },
+      { value: "Anne de Ruijtter" },
+      { value: "ntb" },
+      { value: "ntb" },
 
+
+
+    ] },
     { key: "In samenwerking met", data: [
       { value: "Deelnemende pilot Gemeenten, Softwareleveranciers, Stuurgroep, Digigo" }
     ] }

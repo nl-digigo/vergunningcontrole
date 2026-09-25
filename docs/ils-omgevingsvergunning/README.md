@@ -1,8 +1,8 @@
 # ILS Omgevingsvergunning
 
-Informatieleveringsspecificatie (ILS) voor het aanvragen van een omgevingsvergunning met een 3D-informatiemodel (IFC). Opgesteld binnen **VNG BM13 – Machineleesbare regels / GeoBIM-toolkit**, volgens het **digiGO Toetsingskader ILS** en gepubliceerd met **ReSpec**.
+Informatieleveringsspecificatie (ILS) voor het aanvragen van een omgevingsvergunning met een 3D-informatiemodel (IFC). Opgesteld binnen **VNG Beleidsmaatregel 13 – Vergunningverlening met BIM(3D model)**, volgens het **digiGO Toetsingskader ILS** en gepubliceerd met **ReSpec**.
 
-**Versie:** 0.1.0 (concept) · **Datum:** 17 september 2026
+**Versie:** 0.1.1 (concept) · **Datum:** 25 september 2026
 
 ## Colofon
 
@@ -11,7 +11,7 @@ Informatieleveringsspecificatie (ILS) voor het aanvragen van een omgevingsvergun
 | Uitgever | Vereniging van Nederlandse Gemeenten (VNG) |
 | Opsteller | Lex Ransijn, VDCbase (in opdracht van VNG) |
 | Projectleiding | Jeroen de Ruig, VNG (projectleider BM13) |
-| In samenwerking met | Stuurgroepleden BNA, NEPROM, NL Ingenieurs, Woningbouwers NL, digiGO en Bouwend Nederland |
+| In samenwerking met | Stuurgroepleden, Gemeenten, Softwareleveranciers, Standaardisatieinstellingen |
 
 ## Lezen
 

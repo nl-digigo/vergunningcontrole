@@ -22,16 +22,17 @@ De informatiedoelstellingen (ID) zijn groepen eisen. **ID01 en ID02 zijn gekoppe
 |---|---|---|
 | **ID01** | **Omgevingsplanactiviteit bouwen (OPA): controle op het omgevingsplan (gemeentelijk)** | **Verplicht – checks #1–#6** |
 | **ID02** | **Technische bouwactiviteit (TBA): controle op het Besluit bouwwerken leefomgeving (landelijk)** | **Verplicht – checks #7–#17, inclusief de informatie uit ID01** |
-| ID03 | Digitalisering bestaand bouwwerk voor VTH-processen (inmeten, scannen, NEN 2580-rapportage) | Optioneel – voorstel, nog te onderzoeken |
+| optie | optioneel | opties |
+| ID03 | Digitalisering bouwwerk voor VTH-processen (dmv inmeten, scannen, NEN 2580-rapportage) | Optioneel – voorstel, nog te onderzoeken |
 | ID04 | VTH-processen voeden met gebouwinformatie (hoeveelheden uit het ruimtemodel en uit fysieke objecten) | Optioneel – voorstel, nog te onderzoeken |
 | ID05 | Vergunnings-, toezicht- en handhavingsproces ondersteunen (modelcoördinatie, issuebeheer via BCF) | Optioneel – voorstel, nog te onderzoeken |
 | ID06 | Gemeente en omwonenden bij het ontwerp betrekken (visualisatie) | Optioneel – voorstel, nog te onderzoeken |
 | ID07 | Duurzaamheidsanalyses (GWP, WLC; MPG valt onder ID02, check #13) | Optioneel – voorstel, nog te onderzoeken |
-| ID08 | Overdracht en archivering van digitale gegevens | Optioneel – voorstel, nog te onderzoeken |
+| ID08 | Overdracht en **archivering** van digitale gegevens bij dossier bevoegd gezag | Optioneel – voorstel, nog te onderzoeken |
 | ID09 | Decommissioning 2 Reuse (circulariteit) | Optioneel – voorstel, nog te onderzoeken |
-| ID10 | Panddelen en verblijfsobjecten (IfcSpatialZone per panddeel, IfcZone per verblijfsobject) | Optioneel – voorstel, nog te onderzoeken (sterk aanbevolen bij bestaande bouw) |
-| ID11 | Controle op welstandseisen | Optioneel – voorstel, nog te onderzoeken |
-| ID12 | BAG bijwerken | Optioneel – voorstel, nog te onderzoeken |
+| ID10 | Huisnummerbesluit, Pand(dele) en verblijfsobjecten (Ifc onderdeel per panddeel, IfcZone per verblijfsobject) | Optioneel – voorstel, nog te onderzoeken (sterk aanbevolen bij bestaande bouw) |
+| ID11 | Controle op welstandseisen Gevels en daken | Optioneel – voorstel, nog te onderzoeken |
+| ID12 | (3D) BAG bijwerken | Optioneel – voorstel, nog te onderzoeken |
 
 ### ID01-informatie opnieuw meeleveren bij ID02
 
@@ -42,8 +43,6 @@ De informatie voor ID01 wordt vroeg in het traject geleverd: bij het vooroverleg
 - Er is dan één samenhangend model per aanvraag, zonder verwijzing naar een eerder ingediende versie.
 
 Concreet: het model bij M3 voldoet aan **alle** IDS-specificaties van ID01 **én** ID02. De gemeente mag checks #1–#6 bij M3 opnieuw uitvoeren om afwijkingen ten opzichte van M2 te signaleren.
-
-<a id="gemma-matrix"></a>
 
 ## Koppeling met de GEMMA-processen
 
@@ -75,6 +74,8 @@ De matrix hieronder koppelt elke informatiedoelstelling aan de bedrijfsprocessen
 \* GEMMA nummert de processtappen binnen een deelproces niet. De codes 015-03.1 tot en met .4 zijn een eigen codering in deze ILS, in de volgorde van GEMMA. Codes zonder nummer (BMI, UC, AB, BIO, MA) zijn tijdelijke afkortingen: het GEMMA-nummer is nog niet bevestigd.
 
 ### Matrix informatiedoelstellingen × GEMMA-processen
+
+Onderstaande matrix moeten we nog namlop met elkaar welke doelstelling te koppelen is aan doelbinding binnen de Gemma processen.
 
 | ID | 013 | 015-02 | 015-03.1 | 015-03.2 | 015-03.3 | 015-03.4 | 015-04 | 015-05 | BMI | UC | 025 | AB | BIO | MA |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -112,6 +113,8 @@ De matrix hieronder koppelt elke informatiedoelstelling aan de bedrijfsprocessen
 
 ## De 17 checks
 
+[Klik hier voor een link naar de uitgewerkte checks](https://vng.nl/artikelen/digitale-vergunningverlening-met-bim-building-information-modeling)
+
 | # | Check | Activiteit | ID |
 |---|---|---|---|
 | 1 | Gebruiksfunctie komt overeen met bestemming | OPA | ID01 |
@@ -120,6 +123,7 @@ De matrix hieronder koppelt elke informatiedoelstelling aan de bedrijfsprocessen
 | 4 | Gebruiksfunctie/bestemming beperkt tot x bouwlagen | OPA | ID01 |
 | 5 | Beroep aan huis: maximaal 50% gebruiksoppervlakte | OPA | ID01 |
 | 6 | Maximum aantal bouwlagen | OPA | ID01 |
+| o | NOG UIT TE WERKEN HIER ONDER| NTB | NTB |
 | 7 | Brandcompartimenten | TBA | ID02 |
 | 8 | Brandwerendheid | TBA | ID02 |
 | 9 | Vrije breedte | TBA | ID02 |
@@ -137,6 +141,6 @@ De matrix hieronder koppelt elke informatiedoelstelling aan de bedrijfsprocessen
 | Laag | Wie | Artefacten |
 |---|---|---|
 | Informatiemanagement (sturen) | Gemeente (bevoegd gezag) en richtlijnhouder | Deze ILS, acceptatiecriteria, besluit over ontvankelijkheid |
-| Informatieproductie (leveren) | Aanvrager en diens modelleurs | Informatiemodel (IFC), BIM-uitvoeringsplan, validatierapport |
+| Informatieproductie (leveren) | Aanvrager en diens modelleurs | Informatiemodel (IFC), (evt. BIM-uitvoeringsplan), validatierapport |
 
 Het modelleren ligt dus bij de aanvrager. De gemeente stelt eisen en toetst.

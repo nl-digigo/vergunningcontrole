@@ -15,9 +15,9 @@ Deze ILS beschrijft de afspraken voor het aanleveren van gegevens aan het VTH-do
 
 De ILS volgt NEN-EN ISO 19650-1/-2. De herziening van de ISO 19650-serie (onder meer de overgang van EIR naar *information production requirements*, IPR) volgen we actief. Zie [Beheer en versiebeheer](#beheer).
 
-## Positie in het lagenmodel van de GeoBIM-toolkit
+## Positie in het lagenmodel van de toolkit
 
-De GeoBIM-toolkit beschrijft elke check in zes lagen. Deze ILS bundelt **laag 2** voor alle 17 checks:
+De toolkit beschrijft elke check in zes lagen. Deze ILS bundelt **laag 2** voor alle 17 checks:
 
 | Laag | Inhoud | Relatie met deze ILS |
 |---|---|---|

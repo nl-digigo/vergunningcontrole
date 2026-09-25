@@ -20,14 +20,6 @@
         </ids:entity>
       </ids:applicability>
       <ids:requirements>
-        <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Gebouw" cardinality="required">
-          <ids:value>
-            <ids:simpleValue>Gebouw</ids:simpleValue>
-          </ids:value>
-          <ids:system>
-            <ids:simpleValue>Omgevingswet-Ruimten</ids:simpleValue>
-          </ids:system>
-        </ids:classification>
         <ids:attribute cardinality="required">
           <ids:name>
             <ids:simpleValue>Name</ids:simpleValue>

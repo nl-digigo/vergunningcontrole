@@ -7,8 +7,10 @@
 | Eigenaar en uitgever | VNG |
 | Projectleiding, publicatiebesluit en reviewflow | Jeroen de Ruig (VNG) |
 | Opsteller ILS en IDS (laag 2 BIM) | Lex Ransijn (VDCbase, in opdracht van VNG) |
+| Afstemming en draagvlak | Pilot Gemeenten: Nieuwkoop, Apeldoorn, Veenendaal, Eindhoven, Rotterdam, Alkmaar, Sudwest-Fryslan, Groningen, Hengelo, Epe, ODMH, Utrecht
+| Afstemming en draagvlak | Software leveranciers: Future Insight, Triply, Struck, D-Studio, BIM-Connected, Avolve, Solibri, Semmtech, IMAGEM
 | Afstemming en draagvlak | Stuurgroep: BNA, NEPROM, NL Ingenieurs, Woningbouwers NL, digiGO, Bouwend Nederland |
-| Beheer na afloop van BM13 | Nog te bepalen (VNG of digiGO), volgens BOMOS |
+| Beheer na afloop van Beleidsmaatregel 13 | Nog te bepalen VNG, DSO, digiGO, volgens BOMOS |
 
 We scheiden managementverantwoordelijkheden (vaststellen, prioriteren) van productieverantwoordelijkheden (redigeren, IDS onderhouden).
 
@@ -23,14 +25,14 @@ We scheiden managementverantwoordelijkheden (vaststellen, prioriteren) van produ
 ## Versiebeheer
 
 - **Semantische versies:** `0.x` = concept, `1.0.0` = vastgesteld. *Major* = niet-compatibele wijziging in de IDS of acceptatiecriteria, *minor* = nieuwe eisen of checks, *patch* = redactioneel.
-- IDS-bestanden krijgen hetzelfde versienummer als de ILS (`ids:info/version`).
+- IDS-bestanden krijgen hetzelfde versienummer als de ILS (`ids:info/version`). LET op deze moeten nog evt def hernummerd worden.
 - **Onderliggende normen:** bij een nieuwe versie van IFC, IDS of bSDD *Omgevingswet-Ruimten* maken we een impactanalyse in een issue. Een oudere IFC-versie blijft minimaal één *minor*-release toegestaan.
 
 ## ISO 19650-transitieplan
 
 De herziene ISO 19650-serie wordt naar verwachting eind 2026 vastgesteld. Zodra dat gebeurt:
 
-1. passen we de terminologie aan (EIR → *information production requirements*);
+1. passen we de terminologie aan (EIR → IPR *information production requirements*);
 2. controleren we de hoofdstukindeling tegen het ILS-Referentiesjabloon;
 3. brengen we dit uit als *minor*-release met een overgangstermijn.
 

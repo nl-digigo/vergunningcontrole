@@ -20,14 +20,6 @@
         </ids:entity>
       </ids:applicability>
       <ids:requirements>
-        <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Georeferentie" cardinality="optional">
-          <ids:value>
-            <ids:simpleValue>Georeferentie</ids:simpleValue>
-          </ids:value>
-          <ids:system>
-            <ids:simpleValue>Omgevingswet-Ruimten</ids:simpleValue>
-          </ids:system>
-        </ids:classification>
         <ids:attribute cardinality="required" instructions="Verplaatsing in Oostrichting om het BIM-model op de goede plek te krijgen.&#10;Voorbeeld: 92370.710706">
           <ids:name>
             <ids:simpleValue>Eastings</ids:simpleValue>

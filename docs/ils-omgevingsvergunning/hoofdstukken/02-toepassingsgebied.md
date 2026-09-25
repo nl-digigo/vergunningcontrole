@@ -33,9 +33,9 @@ Let op: in de vergunningsketen is de gemeente geen opdrachtgever in contractuele
 |---|---|---|
 | **Deze ILS** | Welke informatie, formaat, moment, rol, acceptatiecriteria | — |
 | ILS voor Ruimten in de Omgevingswet (digiGO) | Ruimtelijke objecten en attributen | Bron van het machineleesbare deel (IDS), aangevuld en gesplitst per specificatie |
-| BIM basis ILS (digiGO) | Generieke afspraken over IFC-uitwisseling | Uitgangspunt; deze ILS verwijst ernaar en herhaalt het niet |
-| ILS Ontwerp en Engineering (O&E) | Afspraken in de ontwerpfase | Afgestemd over het gebruik van `ObjectType` |
+| BIM basis ILS (digiGO) | Generieke afspraken over IFC-uitwisseling | Uitgangspunt; deze ILS verwijst ernaar en herhaalt het niet, zie ## Afspraken over het IFC-model |
+| ILS Ontwerp en Engineering (O&E) | Afspraken in de ontwerpfase | Afgestemd over het gebruik van Nationals `ObjectType` |
 | Informatieprotocol (nog op te stellen) | Juridische status van het model bij de aanvraag | Aanbevolen aanvulling, zie [Open punten](#open-punten) |
 | BIM-uitvoeringsplan / informatieproductieplan van de aanvrager | Projectspecifieke uitwerking | Vult de invulformats in deze ILS in |
-| Checkfiches GeoBIM-toolkit (17 mappen) | Methode en regels per check | Verwijzen naar deze ILS voor laag 2 |
+| Checks toolkit (17 mappen) | Methode en regels per check | Verwijzen naar deze ILS voor laag 2 |
 | Indieningsvereisten Omgevingsregeling | Wettelijke indieningsvereisten | Deze ILS is een digitale invulling, geen vervanging |

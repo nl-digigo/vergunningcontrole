@@ -2,14 +2,16 @@
 
 ## Normen en richtlijnen
 
-- NEN-EN ISO 19650-1/-2 (informatiemanagement) en NPR-CEN/TR 17439 / 17654 (Europese implementatiegidsen)
+- NEN-EN ISO 19650-1/-2 (informatiemanagement)
+- NPR-CEN/TR 17439 / 17654 (Europese implementatiegidsen)
 - ISO 7817-1:2024 Level of Information Need
 - ISO 16739-1:2024 IFC 4.3
 - buildingSMART IDS 1.0
-- NEN 2580 (oppervlakten en inhouden), NEN 2699 (investeringskosten), NEN 2767 (conditiemeting)
-- BIM basis ILS en ILS Ontwerp en Engineering (digiGO)
 - DSGO-afsprakenstelsel (specifieke afspraken, georefereren)
+- BIM basis ILS en ILS Ontwerp en Engineering (digiGO)
 - STB 2025 (BNA/NL Ingenieurs)
+- NEN 2580 (oppervlakten en inhouden), NEN 2699 (investeringskosten), NEN 2767 (conditiemeting)
+
 
 ## Bestandsnaamgeving (informatiecontainers)
 
@@ -21,7 +23,7 @@ Er is nog geen landelijke afspraak over bestandsnaamgeving bij vergunningaanvrag
 
 | Veld | Waarden | Voorbeeld |
 |---|---|---|
-| Project | Unieke projectcode | `18BA` |
+| Project | Unieke projectcode | `1234` |
 | Panddeel (optioneel) | Deelgebouw | `Hoofdgebouw`, `VleugelA` |
 | Discipline | STB 2025-thema's: `OOG` `KEU` `ARC` `CON` `INS` `INS-W` `INS-E` `BFY` `DZH` `VEI` `TOE` `BAG` … | `ARC` |
 | Systeem | `XX` n.v.t. · `ZZ` alle | `XX` |
@@ -29,7 +31,7 @@ Er is nog geen landelijke afspraak over bestandsnaamgeving bij vergunningaanvrag
 | Bouwlaag | `K01` kelder · `P00` begane grond · `P01` … · `D05` dak · `ZZZ` meerdere · `XXX` n.v.t. | `ZZZ` |
 | Volgnummer | `0001`–`9999` | `0001` |
 
-Voorbeeld: `18BA_Hoofdgebouw_ARC_XX_M3D_ZZZ_0001.ifc`
+Voorbeeld: `1234_Hoofdgebouw_ARC_XX_M3D_ZZZ_0001.ifc`
 
 ## Statuscodering en metadata
 
@@ -38,8 +40,11 @@ Codering volgens ISO 19650 als het CDE daarmee werkt:
 | Code | Betekenis |
 |---|---|
 | S0 | Werk in uitvoering |
-| S1–S4 | Gedeeld binnen het leveringsteam (coördinatie, referentie, commentaar, goedkeuring hoofdopdrachtnemer) |
-| S5 | Gedeeld voor acceptatie door de opdrachtgever |
+| S1 | Gedeeld binnen het projectteam initiatiefnemer coördinatie |
+| S2 | Gedeeld binnen het projectteam initiatiefnemer referentie |
+| S3 | Gedeeld binnen het projectteam initiatiefnemer commentaar |
+| S4 | Gedeeld binnen het projectteam initiatiefnemer goedkeuring initatiefnemer |
+| S5 | Gedeeld voor acceptatie door de vergunningverlener |
 | **S5 → indienen** | Status bij indienen via het Omgevingsloket |
 | A1, A2 … | Gepubliceerd en geaccepteerd |
 
@@ -47,22 +52,24 @@ Aanbevolen metadata: fase (STB 2025-code), organisatie, status, revisie, classif
 
 ## Afspraken over het IFC-model
 
+Voor onderstaande punten is een checklict buiten de IDS files om om de modellen te beoordelen op kwaliteit. De BIM basis ILS geeft aan maak afspraken over de onderstaande punten.
+
 | Onderwerp | Afspraak |
 |---|---|
 | Formaat | IFC STEP (`.ifc`), IFC 4.3 (ISO 16739-1:2024). IFC4 ADD2 TC1 is toegestaan zolang de software IFC 4.3 niet ondersteunt |
-| Header | `FILE_NAME` volledig gevuld; `TimeStamp` geldt als versiedatum. De gemeente beoordeelt of de header bij publicatie geanonimiseerd moet worden |
-| Eenheden | SI; objecten in millimeters, georeferentie in meters |
+| Header | `FILE_NAME` volledig gevuld; `TimeStamp` geldt als versiedatum. De gemeente beoordeelt of de header bij publicatie **geanonimiseerd** moet worden. Dit bouwt voort op DUTO-BIM project en zal met Nationaal en Gemeentelijk archif besproken moeten worden. |
+| Eenheden | objecten in millimeters, georeferentie in meters |
 | Georeferentie | `IfcMapConversion` + `IfcProjectedCRS`, EPSG:28992 of EPSG:7415, hoogte ten opzichte van NAP, exporteren met het ware noorden |
 | Bouwlagen | `IfcBuildingStorey.Name` = `<code>[letter] <omschrijving>`, bijv. `-1 kelder`, `00 begane grond`, `00a tussenverdieping`, `01 eerste verdieping`. Namen en peilen gelijk in alle aspectmodellen |
-| Entiteiten | Juiste entiteit gebruiken (geen `IfcBuildingElementProxy`): netto ruimte = `IfcSpace`; bruto inhoud en gebieden = `IfcSpatialZone`; groeperingen (gebruiksfunctie, verblijfsobject, brandcompartiment) = `IfcZone` |
+| Entiteiten | Juiste entiteit gebruiken (geen `IfcBuildingElementProxy`): Bij voorkeur: netto ruimte = `IfcSpace`; bruto inhoud en gebieden = `IfcSpatialZone`; groeperingen (gebruiksfunctie, verblijfsobject, brandcompartiment) = `IfcZone` |
 | Kadastraal perceel | Als `IfcSpatialZone` met `Pset_LandRegistration`, niet als `IfcSite` |
 | Attributen | `GlobalId` verplicht en stabiel tussen versies; `Name` en `ObjectType` verplicht; `Description` en `LongName` optioneel |
 | ObjectType | Geen aanvullende property sets. De betekenis wordt vastgelegd met `ObjectType` op `IfcSpace`, `IfcSpatialZone` en `IfcZone`, met waarden uit de bSDD-publicatie *Omgevingswet-Ruimten* |
 | Property sets | Alleen internationale buildingSMART-Psets en -Qto's (bijv. `Pset_SpaceCommon`, `Qto_SpaceBaseQuantities`, `Pset_WallCommon.FireRating`, `.ThermalTransmittance`) |
-| Classificatie | NL-SfB tabel 1, 4-cijferig, laatst gepubliceerde versie (2021) via bSDD |
-| Materiaal | Naa.K.T. (digiGO, bSDD `nkt/naakt/2.4`) |
+| Classificatie | Optioneel objecten coderen NL-SfB tabel 1, 4-cijferig, laatst gepubliceerde versie (2021) via bSDD (NL-SfB niet noodzakelijk bij toepassing van bovenstaande uitgangspunten) |
+| Materiaal | Naam Kenmerk Toepassing: Naa.K.T. (digiGO, bSDD `nkt/naakt/2.4`) |
 | Installaties | Installatieobjecten groeperen in `IfcSystem` |
-| Panddelen / verblijfsobjecten | `IfcSpatialZone` per panddeel (ander bouwjaar/bouwsysteem); `IfcZone` per verblijfsobject met het BAG-ID. Gemeenschappelijke ruimten horen bij het pand, niet bij een verblijfsobject |
+| Panddelen / verblijfsobjecten | Nog nader te onderzoeken. Bij voorkeur `IfcSpatialZone` per panddeel (ander bouwjaar/bouwsysteem); `IfcZone` per verblijfsobject met het BAG-ID. Gemeenschappelijke ruimten horen bij het pand, niet bij een verblijfsobject |
 | Doublures | Geen dubbele of overlappende objecten van hetzelfde type |
 | Gebouw | `IfcBuilding` met o.a. `Pset_BuildingCommon.BuildingID` (BAG-pand-ID, of 14× `0` bij nieuwbouw), `NumberOfStoreys`, `YearOfConstruction`, `IsLandmarked`, `GrossPlannedArea`, `NetPlannedArea` |
 
@@ -71,7 +78,7 @@ Aanbevolen metadata: fase (STB 2025-code), organisatie, status, revisie, classif
 Het ruimtemodel volgt de **ILS voor Ruimten in de Omgevingswet**:
 
 1. Georeferentie, project, percelen en gebouw vastleggen (9.01–9.05).
-2. Bouwlagen en bouwlaaginhouden modelleren (9.06).
+2. Bouwlagen en bouwlaaginhoud (9.06).
 3. Gebruikseenheden, gebruiksfuncties en nevengebruiksfuncties als zones (9.07–9.09).
 4. Gebieden (functie-, verblijfs-, gebruiks-, bed- en restgebied) als `IfcSpatialZone` (9.10–9.11).
 5. Ruimten (functie-, verblijfs-, bed- en restruimte, buitenruimte) als `IfcSpace` (9.12–9.13).

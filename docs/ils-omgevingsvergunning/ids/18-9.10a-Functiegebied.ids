@@ -32,7 +32,7 @@
         </ids:attribute>
       </ids:applicability>
       <ids:requirements>
-        <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Functiegebied" cardinality="optional">
+        <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Functiegebied" cardinality="optional">
           <ids:value>
             <ids:simpleValue>Functiegebied</ids:simpleValue>
           </ids:value>

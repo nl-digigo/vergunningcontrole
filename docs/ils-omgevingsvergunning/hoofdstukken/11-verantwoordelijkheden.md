@@ -25,14 +25,14 @@ Toelichting codes: **V** = verantwoordelijk (*responsible*) · **E** = eindveran
 
 ## Koppeling met ISO 19650 en GEMMA
 
-De volledige takenlijst uit ISO 19650-2 (*information management assignment matrix*, taken 1.1.1 en verder) staat in het toetsingsinstrument. In de vergunningsketen zijn vooral de taken rond informatie-eisen (1.3), acceptatiecriteria en levering (5–7) relevant. De rollen sluiten aan op de GEMMA-procesbeschrijving *Inhoudelijk behandelen aanvraag*. Een uitwerking in IDM-vorm (ISO 29481) met de GEMMA-procesmodellen staat op de [ontwikkelagenda](#beheer).
+De volledige takenlijst uit ISO 19650-2 (*information management assignment matrix*, taken 1.1.1 en verder) staat in het toetsingsinstrument. In de vergunningsketen zijn vooral de taken rond informatie-eisen (1.3), acceptatiecriteria en levering (5–7) relevant. De rollen sluiten aan op de GEMMA-procesbeschrijving *Inhoudelijk behandelen aanvraag*. Een uitwerking in IDM-vorm (ISO 29481) met de GEMMA-procesmodellen staat op de [ontwikkelagenda](#beheer). Gekeken wordt naa het opzetten van een VISI raamwerk wat zou kunnen helpen bij grootschalige implementatie.
 
 ## Invulformat informatieproductieteam
 
 | Rol | Naam | Organisatie | Contact |
 |---|---|---|---|
-| Contactpersoon gemeente (VTH) | | | |
-| Informatiemanager aanvrager | | | |
-| Modelleur architectuur | | | |
-| Modelleur constructie / installaties | | | |
-| Adviseur bouwfysica / brandveiligheid | | | |
+| Contactpersoon gemeente (VTH) | Willeke | | |
+| Informatiemanager aanvrager | Pim | | |
+| Modelleur architectuur | Chris | | |
+| Modelleur constructie / installaties | Joran | | |
+| Adviseur bouwfysica / brandveiligheid | Martin | | |

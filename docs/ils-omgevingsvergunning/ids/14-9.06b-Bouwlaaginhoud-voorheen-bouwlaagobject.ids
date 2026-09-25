@@ -32,7 +32,7 @@
         </ids:attribute>
       </ids:applicability>
       <ids:requirements>
-        <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Bouwlaaginhoud" cardinality="optional">
+        <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwlaaginhoud" cardinality="optional">
           <ids:value>
             <ids:simpleValue>Bouwlaaginhoud</ids:simpleValue>
           </ids:value>
@@ -58,6 +58,53 @@
             </xs:restriction>
           </ids:value>
         </ids:attribute>
+          <ids:propertySet>
+            <ids:simpleValue>Qto_BuildingStoreyBaseQuantities</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>GrossFloorArea</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCLENGTHMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/GrossHeight" cardinality="optional" instructions="De Bruto hoogte van de bouwlaag geeft aan wat de afstand is van bk. afgewerkte vloer van deze bouwlaag to bk. afgewerkte loer vna de hierboven gelegen ">
+          <ids:propertySet>
+            <ids:simpleValue>Qto_BuildingStoreyBaseQuantities</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>GrossHeight</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCREAL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/NetFloorArea" cardinality="optional">
+          <ids:propertySet>
+            <ids:simpleValue>Qto_BuildingStoreyBaseQuantities</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetFloorArea</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCLENGTHMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/NetHeight" cardinality="optional">
+          <ids:propertySet>
+            <ids:simpleValue>Qto_BuildingStoreyBaseQuantities</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetHeight</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCREAL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/NetVolume" cardinality="optional">
+          <ids:propertySet>
+            <ids:simpleValue>Qto_BuildingStoreyBaseQuantities</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetVolume</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCREAL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/GrossVolume" cardinality="optional">
+          <ids:propertySet>
+            <ids:simpleValue>Qto_BuildingStoreyBaseQuantities</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>GrossVolume</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
       </ids:requirements>
     </ids:specification>
   </ids:specifications>

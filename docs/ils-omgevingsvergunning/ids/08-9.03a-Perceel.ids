@@ -20,14 +20,6 @@
         </ids:entity>
       </ids:applicability>
       <ids:requirements>
-        <ids:classification cardinality="optional">
-          <ids:value>
-            <ids:simpleValue>Perceel</ids:simpleValue>
-          </ids:value>
-          <ids:system>
-            <ids:simpleValue>Omgevingswet-Ruimten</ids:simpleValue>
-          </ids:system>
-        </ids:classification>
         <ids:attribute cardinality="required">
           <ids:name>
             <ids:simpleValue>Name</ids:simpleValue>

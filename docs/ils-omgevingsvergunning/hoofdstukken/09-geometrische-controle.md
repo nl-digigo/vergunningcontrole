@@ -13,14 +13,14 @@ IDS toetst alleen **attributen en eigenschappen**, niet de geometrie. Toch hebbe
 
 | Stap | Wie | Wat | Waarom |
 |---|---|---|---|
-| **1. Aanleveren** | CAD-software van de aanvrager | Berekent hoeveelheden en exporteert ze in IFC Quantity Sets (`Qto_…`) | De bronsoftware kent het model het best |
+| **1. Aanleveren** | BIM/CAD-software van de aanvrager | Berekent hoeveelheden en exporteert ze in IFC Quantity Sets (`Qto_…`) | De bronsoftware kent het model het best |
 | **2. Narekenen** | Ontvangende software van de gemeente | Berekent de hoeveelheden opnieuw uit de solide geometrie en vergelijkt ze met stap 1 | Exportfouten komen zo aan het licht en het resultaat wordt betrouwbaar |
 
 Voorwaarde: het model bevat **solide geometrie** (eis G1 in het [LOIN](#loin-geometrie)). Blijft het verschil tussen stap 1 en stap 2 onder de drempel (AC6), dan gebruikt de check de aangeleverde waarde. Ligt het verschil erboven, dan krijgt de beoordelaar een signaal.
 
 ## Technische opzet (laag 4)
 
-De checks zijn in twee lagen opgebouwd, zodat ze niet van één softwarepakket afhangen:
+Voorbeeld: De checks zijn in twee lagen opgebouwd, zodat ze niet van één softwarepakket afhangen:
 
 ```
 IFC-bestand

@@ -1,6 +1,6 @@
 # Verantwoording volgens het digiGO Toetsingskader ILS
 
-Dit hoofdstuk laat per criterium van het Toetsingskader ILS (instrument v1.1) zien waar en hoe deze ILS eraan voldoet. Het is een **zelfbeoordeling** ter voorbereiding op de toetsing. De scores (1–10) geeft de onafhankelijk adviseur.
+Dit hoofdstuk laat per criterium van het digiGO Toetsingskader ILS (instrument v1.1) zien waar en hoe deze ILS eraan voldoet. Het is een **zelfbeoordeling** ter voorbereiding op de toetsing. De scores (1–10) geeft de onafhankelijk adviseur.
 
 Type criterium: **D** = drempel · **Z** = zwaarwegend · **A** = ambitieniveau (signaal, telt niet mee).
 
@@ -12,7 +12,7 @@ Stand van zaken: ✅ geregeld · 🟡 deels / invulformat · ⬜ nog te doen
 |---|---|---|---|---|
 | Vrije beschikbaarheid | D | ✅ | Alles wordt openbaar gepubliceerd op GitHub (ReSpec-pagina, IDS-bestanden, CSV), zonder kosten of account | README, [Referentie-informatie](#referentie) |
 | Geen uitsluiting | D | ✅ | Alleen open standaarden (IFC, IDS, bSDD, BCF); geen voorkeur voor software. Iedereen kan meedoen | [Informatieproductiestandaard](#standaard) |
-| Open ontwikkelproces | Z | 🟡 | BM13 biedt het kader. Inbreng loopt via openbare issues en pull requests en via de consultatie van gemeenten (Word-versie met gerichte vragen) | [Beheer](#beheer) |
+| Open ontwikkelproces | Z | 🟡 | BM13 biedt het kader. Inbreng loopt via openbare issues en pull requests en via de consultatie van gemeenten | [Beheer](#beheer) |
 
 ## 4.2 Ontwerp
 
@@ -49,24 +49,25 @@ Stand van zaken: ✅ geregeld · 🟡 deels / invulformat · ⬜ nog te doen
 | Internationale Psets | Z | ✅ | Geen aanvullende Psets. Wel een invulmethode voor attributen: `IfcSpace`, `IfcSpatialZone` en `IfcZone` worden uitgebreid met `ObjectType`-waarden uit de bSDD | [Informatieproductiestandaard](#standaard) |
 | Machineleesbaarheid | A | ✅ | 42 IDS 1.0-bestanden | Map `ids/` |
 | IFC-versie | Z | ✅ | IFC 4.3 (ISO 16739-1:2024); IFC4 ADD2 TC1 tijdelijk toegestaan | [Informatieproductiestandaard](#standaard) |
-| Informatieleveringsproces | A | ⬜ | Gewenst: IDM (ISO 29481) samen met de GEMMA-procesmodellen | [Beheer](#beheer) |
-| Voorbereid op EU-regelgeving | A | ⬜ | Eerst meer informatie nodig (DPP/CPR, digitaal gebouwenlogboek/EPBD) | [Beheer](#beheer) |
+| Informatieleveringsproces | A | ⬜ | Gewenst: IDM (ISO 29481) samen met de GEMMA-procesmodellen mogelijk met VISI | [Beheer](#beheer) |
+| Voorbereid op EU-regelgeving | A | ⬜ | Eerst meer informatie nodig (DPP/CPR, digitaal gebouwenlogboek/EPBD) loopt via EU BIM Taskgroup en buildingSMART Regulatory room VNG participeerd actief hierin | [Beheer](#beheer) |
 
 ## 4.5 Ontwikkeling en beheer
 
 | Criterium | Type | Stand | Onderbouwing | Vindplaats |
 |---|---|---|---|---|
-| Beheerorganisatie | D | 🟡 | VNG is eigenaar en uitgever; de projectleider (Jeroen de Ruig) neemt het publicatiebesluit. Het structurele beheer na BM13 is nog te bepalen | [Beheer](#beheer) |
+| Beheerorganisatie | D | 🟡 | VNG is eigenaar en uitgever; de projectleider (Jeroen de Ruig) neemt het publicatiebesluit. Het structurele beheer na Beleidsmaatregel 13 is nog te bepalen | [Beheer](#beheer) |
 | Wijzigingsprocedure | Z | 🟡 | Voorstel uitgewerkt (issues → PR → review → besluit → release) | [Beheer](#beheer) |
 | Versiebeheer | Z | 🟡 | Voorstel: semver, tags, CHANGELOG, impactanalyse bij nieuwe normversies | [Beheer](#beheer) |
 | ISO-transitieplan | A | 🟡 | Voorstel in drie stappen | [Beheer](#beheer) |
-| Community-betrokkenheid | A | 🟡 | Voorstel: issues, discussies en een gebruikersoverleg per kwartaal | [Beheer](#beheer) |
+| Community-betrokkenheid | A | 🟡 | Voorstel: issues, discussies en een gebruikersoverleg (Gemeenten, Software, Stuurgroep) per kwartaal | [Beheer](#beheer) |
 
 ## 4.6 Draagvlak en adoptie
 
 | Criterium | Type | Stand | Onderbouwing | Vindplaats |
 |---|---|---|---|---|
 | Brancheacceptatie | Z | 🟡 | Via de stuurgroep, met BNA, NEPROM, NL Ingenieurs, Woningbouwers NL, digiGO en Bouwend Nederland | — |
+| Internationaal | Z | 🟡 | Via EU-BIM Taskgroup, buildingSMART Regulatory en EU4DBP Congress 2027 netwerk | — |
 | Consultatie eindgebruikers | Z | 🟡 | Consultatie gedaan voor de ILS voor Ruimten; consultatie van gemeenten over de checks loopt | — |
 | Implementatiepad | Z | 🟡 | Voorstel: pilot 2026, opschaling 2027 | [Beheer](#beheer) |
 
@@ -77,7 +78,7 @@ Stand van zaken: ✅ geregeld · 🟡 deels / invulformat · ⬜ nog te doen
 | Positionering t.o.v. aanpalende documenten | Z | 🟡 | Tabel met aanpalende documenten. Aanbeveling: ook een informatieprotocol, verantwoordelijkheidsmatrix en IDM's opstellen | [Positionering](#scope) |
 | Inhoud/format-onderscheid projectspecifiek | Z | ✅ | Uitleg van het criterium: projectspecifieke onderdelen niet leeg laten, maar een vast invulformat bieden. Hier gedaan voor projectinformatie, team en mijlpalen | [Mijlpalen](#mijlpalen), [Verantwoordelijkheden](#verantwoordelijkheden) |
 | Dekking van de verplichte onderdelen | D | ✅ | Zie de mapping hieronder | Dit hoofdstuk |
-| Inhoudelijke kwaliteit Deel A en B | Z | — | Te beoordelen door een expert (tabblad *Inhoudelijke kwaliteit*) | — |
+| Inhoudelijke kwaliteit Deel A en B | Z | — | Te beoordelen door een expert  (tabblad *Inhoudelijke kwaliteit*) | — |
 
 ### Mapping op het ILS-Referentiesjabloon
 

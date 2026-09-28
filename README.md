@@ -2,7 +2,7 @@
 
 Dit is de GitHub-repository voor de vergunningscontroleservice
 
-Zie voor de use case: [https://nl-digigo.github.io/vergunningcontrole/usecase/](https://nl-digigo.github.io/vergunningcontrole/toolkit-geobim/)
+Zie voor de use case: [[https://nl-digigo.github.io/vergunningcontrole/usecase/](https://nl-digigo.github.io/vergunningcontrole/toolkit-geobim/)](https://nl-digigo.github.io/vergunningcontrole/toolkit-geobim/#toc)
 
 ## Instructies voor redacteurs
 

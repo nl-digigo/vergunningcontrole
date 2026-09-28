@@ -24,6 +24,8 @@ var respecConfig = {
       note: "redactie",
     },
     {
+       name: "Lex Ransijn",
+      note: "VDCbase, VNG",
       name: "Gerlof de Haan",
       note: "VNG",
     },

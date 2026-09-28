@@ -19,13 +19,13 @@ var respecConfig = {
   editors: [
     {
       name: "Siham El Yamani",
-      company: "VNG",
+      company: "UrbanIQ, VNG",
       companyURL: "https://vng.nl",
       note: "redactie",
     },
     {
       name: "Gerlof de Haan",
-      note: "de 17 checks",
+      note: "VNG",
     },
   ],
 
@@ -38,18 +38,18 @@ var respecConfig = {
     },
     {
       name: "Lex Ransijn",
-      company: "VDCbase",
+      company: "VDCbase, VNG",
       companyURL: "https://vdcbase.com",
       note: "ILS en IDS",
     },
     {
       name: "Peter Bonsma",
-      company: "RDF Ltd.",
+      company: "RDF Ltd., VNG",
       note: "technisch beheer",
     },
     {
       name: "Willeke Wijnen",
-      note: "gemeenten en community",
+      note: "VNG",
     },
   ],
 

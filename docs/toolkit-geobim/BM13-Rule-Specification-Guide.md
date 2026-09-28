@@ -1,6 +1,5 @@
 # BM13 Rule Specification Guide for Software Vendors
 
-Siham El Yamani — VNG, Beleidsmaatregel 13 · draft v0.3 · 28 September 2026
 
 ## Contents
 

@@ -36,31 +36,67 @@ let respecConfig = {
   //previousMaturity: "wv",
 
   editors: [
-    {
-      name: "Siham El Yamani",
+    name: "Siham El Yamani",
       company: "VNG",
       companyURL: "https://vng.nl",
+      note: "editor",
+    },
+    {
+      name: "Gerlof de Haan",
+      note: "the 17 checks",
     },
   ],
-
+ 
   authors: [
     {
-      name: "Projectteam Beleidsmaatregel 13",
+      name: "Jeroen de Ruig",
       company: "VNG",
       companyURL: "https://vng.nl",
+      note: "project lead BM13",
+    },
+    {
+      name: "Lex Ransijn",
+      company: "VDCbase",
+      companyURL: "https://vdcbase.com",
+      note: "ILS and IDS",
+    },
+    {
+      name: "Peter Bonsma",
+      company: "RDF Ltd.",
+      note: "technical management",
+    },
+    {
+      name: "Willeke Wijnen",
+      note: "municipalities and community",
     },
   ],
-
+ 
   otherLinks: [
     {
-      key: "Projectleiding",
+      key: "Project lead",
       data: [{ value: "Jeroen de Ruig (VNG)" }],
     },
     {
-      key: "Andere taal",
-      data: [{ value: "English version", href: "en/" }],
+      key: "In cooperation with",
+      data: [
+        { value: "Participating front-runner municipalities" },
+        { value: "Software vendors" },
+        { value: "Steering group: BNA, NEPROM, NL Ingenieurs, Woningbouwers NL, digiGO, Bouwend Nederland" },
+      ],
+    },
+    {
+      key: "With thanks to",
+      data: [
+        { value: "Elisabeth de Vries (digiGO)" },
+        { value: "Rolf Jonker (digiGO)" },
+      ],
+    },
+    {
+      key: "Other language",
+      data: [{ value: "Nederlandse versie", href: "../" }],
     },
   ],
+ 
 
   github: "https://github.com/nl-digigo/vergunningcontrole",
 

@@ -1,12 +1,12 @@
 # Toolkit Vergunningverlening met GeoBIM
 
-ReSpec-document volgens het [Geonovum NL-ReSpec-template](https://github.com/Geonovum/NL-ReSpec-template), in het Nederlands en het Engels.
+ReSpec-document in de **digiGO-huisstijl** (zelfde engine en opmaak als de ILS Omgevingsvergunning), uitgegeven door VNG, in het Nederlands en het Engels.
 
 | | |
 |---|---|
-| **Status** | Werkversie (`specStatus: "wv"`) |
-| **Type** | Handreiking (`specType: "HR"`) |
-| **pubDomain / shortName** | `dsgo` / `toolkit-geobim` |
+| **Status** | Werkversie (`specStatus: "DRAFT"`) |
+| **Type** | Handreiking (`specType: "handreiking"`) |
+| **Huisstijl** | digiGO (`imprint: "digigo"`) |
 | **Licentie** | CC BY 4.0 voor de tekst |
 | **Redactie** | Siham El Yamani (VNG) |
 
@@ -18,7 +18,7 @@ docs/toolkit-geobim/
 ├── js/
 │   ├── config.js         ← titel, status, type, redacteuren (NL)
 │   └── biblio.js         ← bronnenlijst, gedeeld door NL en EN
-├── css/toolkit-geobim.css← opmaak voor "In het kort", leesniveaus, buiten-scope
+├── css/toolkit-geobim.css ← extra opmaak voor "In het kort", leesniveaus, buiten-scope
 ├── abstract.md           ← samenvatting
 ├── ch01-…md … ch12-…md   ← hoofdstukken, één bestand per hoofdstuk
 ├── bijlage-a-…md …       ← bijlagen
@@ -57,12 +57,11 @@ In `js/config.js` (en `en/js/config.js`):
 
 | Onze status | `specStatus` |
 |---|---|
-| Werk in uitvoering | `wv` — werkversie |
-| Gedeeld (ter consultatie) | `cv` — consultatieversie |
-| Ter vaststelling | `vv` — versie ter vaststelling |
-| Definitief | `def` — vastgestelde versie |
+| Werk in uitvoering | `DRAFT` |
+| Gedeeld (ter review) | `IR` of `PR` |
+| Definitief | `DEF` |
 
-Bij `cv`, `vv` en `def` ook `publishDate` bijwerken en, zodra er een eerdere versie is, `previousPublishDate` en `previousMaturity` invullen. Zet bij elke release een **tag** in GitHub.
+Bij een formele versie ook `publishDate` bijwerken en, zodra er een eerdere versie is, `previousPublishDate` en `previousMaturity` invullen. Zet bij elke release een **tag** in GitHub.
 
 ## Vertaalstatus Engelse versie
 

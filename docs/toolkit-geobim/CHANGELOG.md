@@ -1,5 +1,10 @@
 # Wijzigingslog — Toolkit GeoBIM
 
+## Werkversie — 2026-09-28
+
+- Huisstijl omgezet naar **digiGO** (zelfde ReSpec-engine als de ILS Omgevingsvergunning); VNG als uitgever op het voorblad.
+- Volledig projectteam op het voorblad (NL en EN).
+
 ## Werkversie — 2026-09-25
 
 ### Structuur

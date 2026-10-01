@@ -5,7 +5,7 @@
 | Dimensie | Afbakening in versie 0.1 |
 |---|---|
 | Domein | Vergunningverlening in het kader van de Omgevingswet (VTH) |
-| Proces | GEMMA 015 *Behandelen aanvraag* → 015-03 *Inhoudelijk behandelen aanvraag* → processtap *Toetsen aan regelgeving* (activiteiten *Controleren indieningsvereisten* en *Uitvoeren inhoudelijke toetsing*). Zie de [GEMMA-matrix](#gemma-matrix) voor de overige processen |
+| Proces | [GEMMA 015-00 *Behandelen aanvraag*](https://www.gemmaonline.nl/wiki/Omgevingswet/id-ad3cac40-1755-4253-bb7c-68e556d0ea9e) → processtap [015-020 *Inhoudelijk behandelen aanvraag*](https://www.gemmaonline.nl/wiki/Omgevingswet/id-ad8a0931-792a-46c3-b9e9-a9c669fedf59) → processtap [GEMMA 015-020-010 *Toetsen aan regelgeving*](https://www.gemmaonline.nl/wiki/Omgevingswet/id-cc0a44a4-a4bb-420f-9278-128e1250be2c) → processtap [GEMMA 015-020-010-030  *Controleren indieningsvereisten*](https://www.gemmaonline.nl/wiki/Omgevingswet/id-2600d398-3877-40d2-bedc-5158f99c0920) → processtap [015-020-010-035 Advies indieningsvereisten](https://www.gemmaonline.nl/wiki/Omgevingswet/id-e3c42fbb-36e4-4b51-93fe-444829b18b5d) en [GEMMA 015-020-010-080 *Uitvoeren inhoudelijke toetsing*](https://www.gemmaonline.nl/wiki/Omgevingswet/id-fb038899-8a50-402e-9423-1409a3d42a73). Zie de [GEMMA-matrix](#gemma-matrix) voor de overige processen |
 | Activiteiten | Omgevingsplanactiviteit bouwen (OPA, ook *buitenplanse OPA*, BOPA) en technische bouwactiviteit (TBA) |
 | Fasen | Vooroverleg, aanvraag OPA, aanvraag TBA (zie [Mijlpalen](#mijlpalen)) |
 | Type bouwwerk | Gebouw, in principe met **woonfunctie** (nieuwbouw en verbouw) |

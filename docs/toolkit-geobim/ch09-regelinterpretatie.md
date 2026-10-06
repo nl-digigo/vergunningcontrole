@@ -64,9 +64,10 @@ Sommige checks zijn niet te automatiseren en vragen om een handmatige toets. Dat
 
 #### In relatie tot begrippen Geo-standaarden en beeldmateriaal
 
-- Perceelgrens: BRK – Digitale Kadastrale Kaart
+- (Kadastraal) Perceel: BRK – Digitale Kadastrale Kaart
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_KadastraleGrens>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fb9fd1c65-1d17-4129-a237-3d00a1667312
+  
 ### Regelgeving en normen
 
 Regels op de Kaart: Vigerend (onherroepelijk) omgevingsplan met aanwijzing zonering voor gebruiksfunctie / bestemming (eventueel beperkt tot aantal bouwlagen).
@@ -129,9 +130,10 @@ De hoogte wordt gemeten vanaf referentiepeil = 0 (meestal bovenkant begane grond
 
 #### In relatie tot begrippen Geo-standaarden en beeldmateriaal
 
-- Perceelgrens: BRK – Digitale Kadastrale Kaart
+- (Kadastraal) Perceel: BRK – Digitale Kadastrale Kaart
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_KadastraleGrens>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fb9fd1c65-1d17-4129-a237-3d00a1667312
+  >
 
 - Referentiepeil: AHN / ingemeten terreinmodel
 
@@ -221,15 +223,17 @@ Sommige checks zijn niet te automatiseren en vragen om een handmatige toets. Dat
 
 #### In relatie tot begrippen Geo-standaarden en beeldmateriaal
 
-- BGT Pand
+- BAG Pand
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGregistratie_entiteit_Pand>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2Ff31b46a2-b6b3-48d1-bfd3-a624bb2757c6
+  
 
 <!-- -->
 
 - BGT Overig bouwwerk
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Overig%2520bouwwerk>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F333255c2-7038-434f-a137-7467ef8f5af4
+  
 
 <!-- -->
 
@@ -237,13 +241,14 @@ Sommige checks zijn niet te automatiseren en vragen om een handmatige toets. Dat
 
   - <https://www.beeldmateriaal.nl/producten>
 
-- Perceelgrens: BRK – Digitale Kadastrale Kaart
+- (Kadastraal) Perceel: BRK – Digitale Kadastrale Kaart
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_KadastraleGrens>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fb9fd1c65-1d17-4129-a237-3d00a1667312
+  
 
 - Referentiepeil: AHN / ingemeten terreinmodel
 
-  - <https://www.ahn.nl/producten>
+  - https://www.ahn.nl/producten
 
 Nb. We verwijzen hier naar de jaarlijkse landsdekkende luchtfoto's en het landsdekkende hoogtebestand van respectievelijk Beeldmateriaal Nederland en Algemeen Hoogtebestand Nederland. Sommige gemeenten hebben daarnaast nog eigen luchtfoto's en soms ook nog eigen hoogtebestanden.
 
@@ -403,23 +408,30 @@ Nb. Omgevingsdata is waarschijnlijk alleen in een bepaalde zone / buffer rond he
 
 - Perceelgrens: BRK – Digitale Kadastrale Kaart
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_KadastraleGrens>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fb9fd1c65-1d17-4129-a237-3d00a1667312
+  
 
 - Bestaande bebouwing + status: BAG Pand
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGregistratie_entiteit_Pand>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2Ff31b46a2-b6b3-48d1-bfd3-a624bb2757c6
+  
 
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGkenmerk_status-pand>
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F9ba0e95d-5be3-4c08-9c46-4e98286392bd
+  
 
 - Bestaande bebouwing: BAG VBO + status + Gebruiksdoel + Gebruiksoppervlakte
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGregistratie_entiteit_Verblijfsobject>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fdb6aad7d-d1e2-441a-a6fc-16b99b12cb28
+  
 
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGkenmerk_status-verblijfsobject>
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F6ad4108e-b958-47ca-a0a0-abb836f2722e
+  
 
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGkenmerk_gebruiksdoel-verblijfsobject>
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F3b4f790f-1bf3-47f5-9160-d181e2a155d8
+  
 
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGkenmerk_oppervlakte-verblijfsobject>
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F55c06ea8-feb7-4392-89ba-a251a4606c5a
+   
 
 
 ### Regelgeving
@@ -592,75 +604,102 @@ Nb. Omgevingsdata is waarschijnlijk alleen in een bepaalde zone / buffer rond he
 
 #### In relatie tot begrippen Geo-standaarden en beeldmateriaal
 
-- Perceelgrens: BRK – Digitale Kadastrale Kaart
+- (Kadastraal) Perceel: BRK – Digitale Kadastrale Kaart
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_KadastraleGrens>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fb9fd1c65-1d17-4129-a237-3d00a1667312
+  
 
-- Belanghebbende / eigenaar: BRK – Zakelijke recht + Natuurlijk of Niet natuurlijk Persoon
+- Belanghebbende / eigenaar: BRK – Tenaamstelling + Naam eigenaar
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_ZakelijkRecht>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2F8a8cbe3b-00a1-486d-a5c5-0a4888374985
+  
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_NatuurlijkPersoon>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fbf2d680a-fd4f-4b37-bd71-1dea25f3eddd
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_NietNatuurlijkPersoon>
-
+  
 - Bestaande bebouwing + status: BAG Pand
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGregistratie_entiteit_Pand>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2Ff31b46a2-b6b3-48d1-bfd3-a624bb2757c6
 
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGkenmerk_status-pand>
+
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F9ba0e95d-5be3-4c08-9c46-4e98286392bd
+
 
 - Bestaande bebouwing: BAG VBO + status + Gebruiksdoel
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGregistratie_entiteit_Verblijfsobject>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fdb6aad7d-d1e2-441a-a6fc-16b99b12cb28
 
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGkenmerk_status-verblijfsobject>
 
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGkenmerk_gebruiksdoel-verblijfsobject>
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F6ad4108e-b958-47ca-a0a0-abb836f2722e
+
+
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F3b4f790f-1bf3-47f5-9160-d181e2a155d8
+
+- BGT Overig bouwwerk
+
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F333255c2-7038-434f-a137-7467ef8f5af4
+
 
 - Vitale infrastructuur: BGT Kunstwerk (Overbruggingsdeel + Tunnel deel + Kunstwerk deel)
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Overbruggingsdeel>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F961e56ec-619d-46d0-a864-ef02e1d15761
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Tunneldeel>
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Kunstwerkdeel>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Ff69a331d-d799-4804-a379-1d1b2df429fd
 
-- Weg: BGT Wegdeel en BGT Ondersteunen Wegdeel (+ classificatie Functie)
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Wegdeel>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Feab060de-e74b-4530-895e-a0fcaeabe2fe
+  
 
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_functie-wegdeel>
+- Openbaar toegankelijk wegen (Weg): BGT Wegdeel en BGT Ondersteunen Wegdeel (+ classificatie Functie)
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Ondersteunend%2520wegdeel>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fa1cd188f-1eac-43e3-bfcc-067fb38ebc44
 
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_functie-ondersteunend-wegdeel>
+
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fa6f9e868-e0bc-4c1e-85da-014db2f05062
+
+
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fd1f6d762-5df4-4fa6-82b7-f60dc7347ea9
+
+
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F3908183e-1608-434e-8135-9984b3dbf9d1
+
 
 - Spoor: BGT Spoor (+ classificatie Functie)
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Spoor>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F3fdd1dc1-c2be-4ac3-abff-7feed7118fb2
 
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_functie-spoor>
 
-- Openbaar groen: BGT Begroeid Terreindeel en BGT Onbegroeid Terreindeel (+ classificatie Fysiek voorkomen)
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F79d479b5-e5fc-4387-97db-391006fca169
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Begroeid%2520terreindeel>
 
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_plus-fysiek-voorkomen-begroeid-terreindeel>
+- Openbaar toegankelijke ruimte: BGT Begroeid Terreindeel en BGT Onbegroeid Terreindeel (+ classificatie Fysiek voorkomen)
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Onbegroeid%2520terreindeel>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fe6726ca4-d166-4331-96f5-a6b6c823b145
 
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_fysiek-voorkomen-onbegroeid-terreindeel>
+
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F1b6baa04-8873-4687-a1c8-421763ab8084
+
+
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F373bea25-2ca2-42b6-92c6-fc0867ec8182
+
+
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F1b6baa04-8873-4687-a1c8-421763ab8084
+
 
 - Water: BGT Waterdeel en BGT Ondersteunend Waterdeel (+ classificatie Type)
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Waterdeel>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fd27277eb-91cf-48f9-b4dd-17d5bea401fb
 
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_type-waterdeel>
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Ondersteunend%2520waterdeel>
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F2d729345-0f93-4f2b-8126-481f160d0fc6
+  
 
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_type-ondersteunend-waterdeel>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F9515c15e-bb4e-4359-9059-cca1d527fe8c
+
+
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F0d98b138-1321-4f3c-8236-aab9e7316625
+
 
 ### Regelgeving
 
@@ -957,27 +996,33 @@ In principe geen. Tenzij het gebouw direct grenst aan de openbare buitenruimte. 
 
 - Referentiepeil: AHN / ingemeten terreinmodel
 
-  - <https://www.ahn.nl/producten>
+  - https://www.ahn.nl/producten
 
-- Weg: BGT Wegdeel en BGT Ondersteunen Wegdeel (+ classificatie Functie)
+- Openbaar toegankelijk wegen (Weg): BGT Wegdeel en BGT Ondersteunen Wegdeel (+ classificatie Functie)
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Wegdeel>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fa1cd188f-1eac-43e3-bfcc-067fb38ebc44
 
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_functie-wegdeel>
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Ondersteunend%2520wegdeel>
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fa6f9e868-e0bc-4c1e-85da-014db2f05062
 
-  - [https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_functie-ondersteunend-wegdeel](https://opendata.stelselcatalogus.nl/bgt/doc/gegevenselement/functie-ondersteunend_wegdeel)
 
-- Openbaar groen: BGT Begroeid Terreindeel en BGT Onbegroeid Terreindeel (+ classificatie Fysiek voorkomen)
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fd1f6d762-5df4-4fa6-82b7-f60dc7347ea9
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Begroeid%2520terreindeel>
 
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_plus-fysiek-voorkomen-begroeid-terreindeel>
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F3908183e-1608-434e-8135-9984b3dbf9d1
 
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Onbegroeid%2520terreindeel>
+- Openbaar toegankelijke ruimte: BGT Begroeid Terreindeel en BGT Onbegroeid Terreindeel (+ classificatie Fysiek voorkomen)
 
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_fysiek-voorkomen-onbegroeid-terreindeel>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fe6726ca4-d166-4331-96f5-a6b6c823b145
+
+
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F1b6baa04-8873-4687-a1c8-421763ab8084
+
+
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F373bea25-2ca2-42b6-92c6-fc0867ec8182
+
+
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F1b6baa04-8873-4687-a1c8-421763ab8084
 
 ### Regelgeving
 
@@ -1072,9 +1117,10 @@ Controle op RC waarde van wanden, daken en vloeren.
 
 - Bestaande bebouwing + status: BAG Pand
 
-  - <https://opendata.stelselcatalogus.nl/bag/doc/begrip/pand>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2Ff31b46a2-b6b3-48d1-bfd3-a624bb2757c6
 
-  - <https://opendata.stelselcatalogus.nl/bag/doc/gegevenselement/status-pand>
+
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F9ba0e95d-5be3-4c08-9c46-4e98286392bd
 
 ### Regelgeving
 
@@ -1143,7 +1189,7 @@ Controle op U waarde van ramen, deuren en kozijnen
 
 #### Omgevingsdata
 
-Geen omgevingsdata nodig
+Geen omgevingsdata nodig.
 
 ### Regelgeving
 
@@ -1153,7 +1199,7 @@ NTA8800
 
 ### Tijd (huidige situatie)
 
-Niet beschreven
+Niet beschreven.
 
 ### Opmerkingen
 
@@ -1224,7 +1270,7 @@ Noot: verliesoppervlakte = het totaal van de oppervlakten van alle uitwendige sc
 
 #### Omgevingsdata
 
-Geen omgevingsdata nodig
+Geen omgevingsdata nodig.
 
 ### Regelgeving
 
@@ -1306,15 +1352,18 @@ Noot: Met een vluchtroute bedoelt het Besluit bouwwerken leefomgeving (Bbl): *ee
 
 #### In relatie tot begrippen Geo-standaarden en beeldmateriaal
 
-- Weg: BGT Wegdeel en BGT Ondersteunen Wegdeel (+ classificatie Functie)
+- Openbaar toegankelijk wegen (Weg): BGT Wegdeel en BGT Ondersteunen Wegdeel (+ classificatie Functie)
 
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/begrip/wegdeel>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fa1cd188f-1eac-43e3-bfcc-067fb38ebc44
 
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/gegevenselement/functie-wegdeel>
 
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/begrip/ondersteunend_wegdeel>
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fa6f9e868-e0bc-4c1e-85da-014db2f05062
 
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/gegevenselement/functie-ondersteunend_wegdeel>
+
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fd1f6d762-5df4-4fa6-82b7-f60dc7347ea9
+
+
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F3908183e-1608-434e-8135-9984b3dbf9d1
 
 ### Regelgeving
 
@@ -1620,59 +1669,68 @@ Window, Door, Curtain Wall – netto glas oppervlakte
 
 #### In relatie tot begrippen Geo-standaarden en beeldmateriaal
 
-- Perceelgrens: BRK – Digitale Kadastrale Kaart
+- (Kadastraal) Perceel: BRK – Digitale Kadastrale Kaart
 
-  - <https://opendata.stelselcatalogus.nl/brk/doc/begrip/kadastralegrens>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fb9fd1c65-1d17-4129-a237-3d00a1667312
+  
 
-- Belanghebbende / eigenaar: BRK – Zakelijke recht + Natuurlijk of Niet natuurlijk Persoon
+- Belanghebbende / eigenaar: BRK – Tenaamstelling + Naam eigenaar
 
-  - <https://opendata.stelselcatalogus.nl/brk/doc/begrip/zakelijkrecht>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2F8a8cbe3b-00a1-486d-a5c5-0a4888374985
+  
 
-  - <https://opendata.stelselcatalogus.nl/brk/doc/begrip/natuurlijkpersoon>
-
-  - <https://opendata.stelselcatalogus.nl/brk/doc/begrip/nietnatuurlijkpersoon>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fbf2d680a-fd4f-4b37-bd71-1dea25f3eddd
 
 - Bestaande bebouwing + status: BAG Pand
 
-  - <https://opendata.stelselcatalogus.nl/bag/doc/begrip/pand>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2Ff31b46a2-b6b3-48d1-bfd3-a624bb2757c6
 
-  - <https://opendata.stelselcatalogus.nl/bag/doc/gegevenselement/status-pand>
 
-- Weg: BGT Wegdeel en BGT Ondersteunen Wegdeel (+ classificatie Functie)
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F9ba0e95d-5be3-4c08-9c46-4e98286392bd
 
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/begrip/wegdeel>
 
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/gegevenselement/functie-wegdeel>
+- Openbaar toegankelijk wegen (Weg): BGT Wegdeel en BGT Ondersteunen Wegdeel (+ classificatie Functie)
 
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/begrip/ondersteunend_wegdeel>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fa1cd188f-1eac-43e3-bfcc-067fb38ebc44
 
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/gegevenselement/functie-ondersteunend_wegdeel>
+
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fa6f9e868-e0bc-4c1e-85da-014db2f05062
+
+
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fd1f6d762-5df4-4fa6-82b7-f60dc7347ea9
+
+
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F3908183e-1608-434e-8135-9984b3dbf9d1
+
 
 - Spoor: BGT Spoor (+ classificatie Functie)
 
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/begrip/spoor>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F3fdd1dc1-c2be-4ac3-abff-7feed7118fb2
 
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/gegevenselement/functie-spoor>
 
-- Openbaar groen: BGT Begroeid Terreindeel en BGT Onbegroeid Terreindeel (+ classificatie Fysiek voorkomen)
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F79d479b5-e5fc-4387-97db-391006fca169
 
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/begrip/begroeid_terreindeel>
 
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/gegevenselement/fysiek_voorkomen-begroeid_terreindeel>
+- Openbaar toegankelijke ruimte: BGT Begroeid Terreindeel en BGT Onbegroeid Terreindeel (+ classificatie Fysiek voorkomen)
 
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/begrip/onbegroeid_terreindeel>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fe6726ca4-d166-4331-96f5-a6b6c823b145
 
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/gegevenselement/fysiek_voorkomen-onbegroeid_terreindeel>
+
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F1b6baa04-8873-4687-a1c8-421763ab8084
+
+
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F373bea25-2ca2-42b6-92c6-fc0867ec8182
+
+
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F1b6baa04-8873-4687-a1c8-421763ab8084
+
 
 - Water: BGT Waterdeel en BGT Ondersteunend Waterdeel (+ classificatie Type)
 
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/begrip/waterdeel>
+  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fd27277eb-91cf-48f9-b4dd-17d5bea401fb
 
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/gegevenselement/type-waterdeel>
 
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/begrip/ondersteunend_waterdeel>
-
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/gegevenselement/type-ondersteunend_waterdeel>
+  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F2d729345-0f93-4f2b-8126-481f160d0fc6
 
 ### Regelgeving
 

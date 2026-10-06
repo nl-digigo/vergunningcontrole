@@ -6,11 +6,7 @@
 
 > Deze inventarisatie beschrijft per regel: de toets, de werkwijze, de regelgevingsbron, de informatiebehoefte, de huidige toetstijd en opmerkingen. Regels #1–#6 betreffen het omgevingsplan (OPA) (ook: de Omgevingsplantoets, regels #7–#17 het Besluit bouwwerken leefomgeving (Bbl) (ook: de Technische toets)
 
-> <img alt="" src="media/omgevingsplanregels.png" />
-
-> <img alt="" src="media/bbl-regels.png" />
-
-*Afbeelding aanpassen: nummering en omschrijving checks als hieronder.*
+> <img alt="" src="media/overzicht-checks.png" />
 
 
 ## Regel #1: Gebruiksfunctie komt overeen met bestemming {#regel-1}

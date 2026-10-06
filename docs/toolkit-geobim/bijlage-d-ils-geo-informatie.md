@@ -1,4 +1,16 @@
+# ILS voor geo-informatie — specificaties {#ils-geo-informatie}
+
+Informatiebehoefte vereisten voor geo-informatie bij een omgevingsvergunningaanvraag.
+| | |
+|---|---|
+| **Bron** | `BM13 Minimale data vereisten - GEO-v13 (6 oktober 2026)` — 31 specificaties |
+| **Begrippen** | Stelselcatalogus: https://stelselcatalogus.nl/ |
+| **Processtap** | GEMMA 015-02 Inhoudelijk behandelen vergunningaanvraag / 015-02-02 Toetsen activiteiten aan regelgeving |
+| **Checks** | 17 regels uit de BM13-regelinventarisatie v0.3, 3-7-2026 |
+
 ## Overzicht per check
+
+De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#6 betreffen het omgevingsplan (OPA), regels #7–#17 het Besluit bouwwerken leefomgeving (Bbl).
 
 | Check | Onderwerp | Specificaties |
 |---------|---------|---------|
@@ -55,3 +67,20 @@
 | 29 | 1.13b BGT - type waterdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
 | 30 | 1.13c BGT - ondersteunend waterdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
 | 31 | 1.13d BGT - type ondersteunend waterdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
+
+
+Elke specificatie is onderstaand als volgt beschreven.
+
+| Term | Omschrijving |
+|---------|---------|
+| Begrip | Begrip conform Stelselcatalogus |
+| CityGML 2.0 | Objectklasse conform CityGML 2.0 |
+| CityGML 3.0 | Objectklasse conform CityGML 3.0 |
+| Definitie | Herkomst definitie volgens Stelselcatalogus |
+| Dimensie | 2D of 3D |
+| Open Data | Als open data beschikbaar ja / nee |
+| Datakwaliteit | Specificaties datakwaliteit |
+| Metadata | Vindplaats meta-informatie
+| Toegangspunt | Landelijk toegangspunt voor toegang tot data |
+
+Voor de onderstaande databronnen gelden (wettelijke) richtlijnen voor de te hanteren datakwaliteit. Validatie vindt plaats bij de bron.

@@ -119,13 +119,13 @@ Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datak
 <tr><td><strong>Informatiemodel</strong></td><td>GeoTIFF</td></tr>
 <tr><td><strong>Dataformaat</strong></td><td>GeoTiff</td></tr>
 <tr><td><strong>Metadata</strong></td><td>https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/7b424340-25c5-4c95-8dbf-bf1d87888566</td></tr>
-<tr><td><strong>Toegangspunt</strong></td><td><em>niet beschikbaar</em></td></tr>
+<tr><td><strong>Toegangspunt</strong></td><td><em>https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?request=GetCapabilities&service=wms</em></td></tr>
 </table>
 
 ### 04 - 1.03a (Kadastraal) Perceel
 
 <table>
-<tr><td><strong>Begrip</strong></td><td>Digitale kadastrale kaart (DKK)</td></tr>
+<tr><td><strong>Begrip</strong></td><td>BRK - Perceel</td></tr>
 <tr><td><strong>Databron</strong></td><td>Basisregistratie Kadaster (BRK)</td></tr>
 <tr><td><strong>CityGML 2.0</strong></td><td>GenericCityObject</td></tr>
 <tr><td><strong>CityGML 3.0</strong></td><td>GenericLogicalSpace</td></tr>

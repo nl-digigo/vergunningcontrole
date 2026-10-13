@@ -8,9 +8,21 @@ Informatiebehoefte vereisten voor geo-informatie bij een omgevingsvergunningaanv
 | **Processtap** | GEMMA 015-02 Inhoudelijk behandelen vergunningaanvraag / 015-02-02 Toetsen activiteiten aan regelgeving |
 | **Checks** | 17 regels uit de BM13-regelinventarisatie v0.3, 3-7-2026 |
 
-## Overzicht per check
+## Overzicht per Informatiebehoefte 
 
-De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#6 betreffen het omgevingsplan (OPA), regels #7–#17 het Besluit bouwwerken leefomgeving (Bbl).
+De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#6 betreffen het omgevingsplan (OPA), regels #7–#17 het Besluit bouwwerken leefomgeving (Bbl). Voor deze 17 checks zijn de volgende informatiebehoefte vereisten voor geo-informatie gedefinieerd.
+
+| Informatiebehoefte id | Informatiebehoefte |  Specificatie iD |
+|---------|---------|---------|
+| DR-GEO-02 | Kadastrale situatie | 4, 5, 6 |
+| DR-GEO-04 | Hoogtegegevens (referentiepeil) | 1, 2 |
+| DR-GEO-05 | Beeldmateriaal | 3 |
+| DR-GEO-06 | Bestaande bebouwing | 7, 8, 9, 10, 11, 12, 14 |
+| DR-GEO-07 | Openbare ruimte (wegen, water, groen) | 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 |
+| DR-GEO-08 | Bestaande bebouwing (3D hoogte) | 13 |
+| DR-GEO-09 | Vitale infrastructuur (tunnels, bruggen) | 15, 16, 17 |
+
+## Overzicht per check
 
 | Check | Onderwerp | Specificaties |
 |---------|---------|---------|
@@ -72,7 +84,6 @@ De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#
 ## Beschrijving per specificatie
 Alle specificaties betreffen Open Data, die via Landelijke voorzieningen beschikbaar is.
 Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datakwaliteit. Kwaliteitseisen zijn vastgelegd per databron. Validatie van de vereiste kwaliteit vindt plaats bij de bron.
-
 
 ### 01 - 1.01a Terreinmodel
 
@@ -219,8 +230,6 @@ Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datak
 <tr><td><strong>Metadata</strong></td><td>https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/aa3b5e6e-7baa-40c0-8972-3353e927ec2f</td></tr>
 <tr><td><strong>Toegangspunt</strong></td><td>https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/</td></tr>
 </table>
-
----
 
 ### 11 - 1.05c BAG - gebruiksdoel verblijfsobject
 

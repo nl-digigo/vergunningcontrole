@@ -6,6 +6,8 @@ Bouwwerk Informatie Modellen (BIM) vormen een waardevolle bron voor digitaal ond
 
 Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van een gebruiksgebied? En dat tussenmuurtje en de ruimte onder de trap? De ene rekent het wel mee en de ander niet. Dit levert problemen. De NEN2580 is een richtlijn om de oppervlakten en inhoud van onroerende zaken eenduidig en objectief te meten en bepalen. De norm is omarmd door de vastgoedsector. De norm stelt niet wat een ruimte is, maar wel hoe men deze bepaalt. Concepten als “BVO” “NVO” zijn bepalingsmethodes, geen oppervlaktes.  
 
+### Bepalingsmethode
+
 <br> 
 
 |                       |                                       |
@@ -14,6 +16,51 @@ Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van e
 | **definitie**        | Een vastgelegde werkwijze met regels en uitgangspunten waarmee de waarde of omvang van een bepaalde eigenschap of grootheid wordt vastgesteld. |
 
 <br> 
+
+### Bruto Vloer Oppervlak
+
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Bruto Vloer Oppervlak</dfn></td>
+    <td rowspan="8" style="vertical-align: top; width: 320px;">
+      <figure id="fig-bvo">
+        <img src="./afbeeldingen/Bruto_Vloer_Oppervlak_van_een_eigendoms_en_gebruikseenheid.png"
+             alt="Een conform Bruto Inhoud bepaalde eigendoms- en gebruikseenheid"
+             width="300">
+        <figcaption>Voorbeeld van een conform Bruto Vloer Oppervlak bepaalde eigendoms- en gebruikseenheid</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>BVO</td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>Gross Floor Area</td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>GFA</td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bepalingsmethode</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Het bruto vloer oppervlak van een ruimte of van een groep van ruimten is de oppervlakte, gemeten op vloerniveau langs de buitenomtrek van de opgaande scheidingsconstructies, die de desbetreffende ruimte of groep van ruimten omhullen.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://example.org/source/nen2580">https://example.org/source/nen2580</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>— indien een binnenruimte aan een andere binnenruimte grenst, moet worden gemeten tot het hart van de desbetreffende scheidingsconstructie; — indien een gebouwgebonden buitenruimte aan een binnenruimte grenst, moet het grondvlak van de scheidingsconstructie volledig worden toegerekend aan de BVO van de binnenruimte. — BVO wordt bepaald voor de aanwezige vloeren op iedere verdieping. Bij meerdere verdiepingen worden deze oppervlakken bij elkaar opgeteld. Een videopening zelf wordt niet meegerekend als vloeroppervlak.</td>
+  </tr>
+</table>
 
 |                       |                                       |
 |-----------------------|---------------------------------------|
@@ -37,6 +84,8 @@ Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van e
 
 <br> 
 
+### Bruto Inhoud
+
 |                       |                                       |
 |-----------------------|---------------------------------------|
 | **voorkeursterm**   | <dfn>Bruto Inhoud</dfn> |
@@ -59,6 +108,7 @@ Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van e
 
 <br> 
 
+### Netto Vloer Oppervlak
 
 |                       |                                       |
 |-----------------------|---------------------------------------|
@@ -82,6 +132,8 @@ Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van e
 
 <br> 
 
+### Netto Inhoud
+
 |                       |                                       |
 |-----------------------|---------------------------------------|
 | **voorkeursterm**   | <dfn>Netto Inhoud</dfn> |
@@ -103,6 +155,8 @@ Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van e
 </figure>
 
 <br> 
+
+### Tarra Oppervlak
 
 |                       |                                       |
 |-----------------------|---------------------------------------|
@@ -126,6 +180,7 @@ Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van e
 
 <br> 
 
+### Tarra Inhoud
 
 |                       |                                       |
 |-----------------------|---------------------------------------|
@@ -149,6 +204,8 @@ Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van e
 
 <br> 
 
+### Gebruiks Oppervlak
+
 |                       |                                       |
 |-----------------------|---------------------------------------|
 | **voorkeursterm**   | <dfn>Gebruiks Oppervlak</dfn> |
@@ -169,6 +226,7 @@ Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van e
 
 <br> 
 
+### Gebruiks Inhoud
 
 |                       |                                       |
 |-----------------------|---------------------------------------|
@@ -190,6 +248,8 @@ Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van e
 
 <br> 
 
+### Verhuurbaar VloerOppervlak
+
 |                       |                                       |
 |-----------------------|---------------------------------------|
 | **voorkeursterm**   | <dfn>Verhuurbaar Vloeroppervlak</dfn> |
@@ -209,6 +269,8 @@ Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van e
 </figure>
 
 </br> 
+
+### Verhuurbare Inhoud
 
 |                       |                                       |
 |-----------------------|---------------------------------------|
@@ -230,6 +292,8 @@ Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van e
 
 </br> 
 
+### Gebruiksbevoegdvolume
+
 |                       |                                       |
 |-----------------------|---------------------------------------|
 | **voorkeursterm**   | <dfn>Gebruiksbevoegdheidvolume</dfn> |
@@ -249,6 +313,8 @@ Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van e
 </figure>
 
 </br> 
+
+### GebruiksbevoegdOppervlak
 
 |                       |                                       |
 |-----------------------|---------------------------------------|
@@ -271,6 +337,8 @@ Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van e
 
 <br> 
 
+### Ruimtelijk gebied
+
 |                       |                                       |
 |-----------------------|---------------------------------------|
 | **voorkeursterm**   | <dfn>Ruimtelijk gebied</dfn> |
@@ -279,6 +347,7 @@ Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van e
 
 <br> 
 
+### Gebruiksfunctie
 
 |                       |                                       |
 |-----------------------|---------------------------------------|
@@ -295,6 +364,192 @@ Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van e
        width="300">
   <figcaption>Twee gebruiksfunctieruimten, woonfunctie (in oranje) en overige gebruiksfunctie (in blauw), conform bepalingsmethode gebruiksinhoud</figcaption>
 </figure>
+
+### Nevengebruiksfunctie
+
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Nevengebruiksfunctie</dfn> |
+| **is specialisatie van** | Ruimtelijk gebied |
+| **definitie**        | Gebruiksfunctie die ten dienste staat van een andere gebruiksfunctie; |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | Een nevengebruiksfunctie is dus zelf ook een gebruiksfunctie. Maar is als het ware bedoeld voor een andere gebruiksfunctie (‘ten dienste van’). Voorbeelden van nevengebruiksfuncties zijn een:
+- garage of buitenberging (overige gebruiksfunctie) bij een woning (woonfunctie)
+- kantoor (kantoorfunctie) aan huis (woonfunctie)
+- kantine (bijeenkomstfunctie) in een kantoor (kantoorfunctie)
+- fietsenstalling (overige gebruiksfunctie) bij een kantoor (kantoorfunctie)
+- werkplaats (industriefunctie) in een gevangeniscomplex (celfunctie)
+- liftschacht (overige gebruiksfunctie) bij een tunnel (bouwwerk geen gebouw zijnde)
+Een gebruiksfunctie en de nevengebruiksfunctie die daaraan ten dienste is, kunnen in hetzelfde bouwwerk liggen. Maar dat hoeft niet per se. |
+
+<br>
+
+<figure id="fig-nevengebruiksfuncties">
+  <img src="./afbeeldingen/Nevengebruiksfunctie.png"
+       alt="Een woonfunctie met twee nevengebruiksfuncties; overige gebruiksfunctie (de garage)en een kantoorfunctie (kantoor aan huis)"
+       width="300">
+  <figcaption>TEen woonfunctie met twee nevengebruiksfuncties; overige gebruiksfunctie (de garage)en een kantoorfunctie (kantoor aan huis)</figcaption>
+</figure>
+
+
+### Gebruiksgebied
+
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Gebruiksgebied</dfn> |
+| **is specialisatie van** | Ruimtelijk gebied |
+| **definitie**        | Vrij indeelbaar gedeelte van een gebruiksfunctie waar voor de gebruiksfunctie kenmerkende activiteiten plaatsvinden, dat bestaat uit een of meer op dezelfde bouwlaag gelegen ruimten gelegen in een brandcompartiment die niet door een dragende scheidingsconstructie van elkaar zijn gescheiden en die geen toiletruimte, badruimte, technische ruimte of verkeersruimte zijn, tenzij die ruimte zelf een functieruimte is; |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | Een voorbeeld van een ruimte die functieruimte is gelegen in een functiegebied, is een toilet (functieruimte) in het sanitair gebied (functiegebied). Een gebruiksfunctie wordt opgedeeld in gebruiksgebied en in restgebied. Het gebruiksgebied is een aggregatie van alles wat verblijfsgebied of functiegebied is, eventueel met tarra ruimte.  
+
+- moeten in een brandcompartiment liggen
+- mogen niet door een dragende scheidingsconstructie van elkaar zijn gescheiden (lichte of verplaatsbare wand mag wel)
+- mogen geen toiletruimte, badruimte, technische ruimte of verkeersruimte zijn (behalve als deze ruimte zelf een functieruimte is)
+|
+
+<figure id="fig-gebruiksgebied">
+  <img src="./afbeeldingen/Gebruiksgebied.png"
+       alt="Een voorbeeld van een woning met 5 gebruiksgebieden."
+       width="300">
+  <figcaption>Een voorbeeld van een woning met 5 gebruiksgebieden.</figcaption>
+</figure>
+
+
+### Restgebied
+
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Restgebied</dfn> |
+| **is specialisatie van** | Ruimtelijk gebied |
+| **definitie**        | Vrij indeelbaar gedeelte van een gebruiksfunctie waar niet voor de gebruiksfunctie kenmerkende activiteiten plaatsvinden, dat bestaat uit een of meer op dezelfde bouwlaag gelegen ruimten die niet door een dragende scheidingsconstructie van elkaar zijn gescheiden.  |
+| **heeft bron** | https://iplo.nl/regelgeving/regels-voor-activiteiten/technische-bouwactiviteit/nieuwbouw/rijksregels/vrije-indeelbaarheid/#h123cffef-59e1-4d07-904c-a5a72287c0e4 |
+| **toelichting** | Toiletruimten, badruimten, technische ruimten en verkeersruimten zijn geen onderdeel van een gebruiksgebied, want deze ruimten zijn niet kenmerkend voor de gebruiksfunctie. Daardoor zijn ze onderdeel van het restgebied. Behalve als het gaat om een op zichzelf staand gebouw met deze voorzieningen. Bijvoorbeeld een sanitairgebouw op een camping. Een restgebied ligt binnen een gebruiksfunctie maar buiten een gebruiksgebied. |
+
+<figure id="fig-Restgebied">
+  <img src="./afbeeldingen/Restgebied.png"
+       alt="Een voorbeeld van een woning met 2 restgebieden"
+       width="300">
+  <figcaption>Een voorbeeld van een woning met 2 restgebieden.</figcaption>
+</figure>
+
+### Restruimte of onbenoemde ruimte
+
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Restruimte</dfn> |
+| **alternatieve term**   | Onbenoemde ruimte |
+| **is specialisatie van** | Ruimtelijk gebied |
+| **definitie**        | Ruimte binnen een gebruiksfunctie zonder specifiek gebruik of waar niet voor de gebruiksfunctie kenmerkende activiteiten plaatsvinden.   |
+| **heeft bron** | https://iplo.nl/regelgeving/regels-voor-activiteiten/technische-bouwactiviteit/nieuwbouw/rijksregels/vrije-indeelbaarheid/#h123cffef-59e1-4d07-904c-a5a72287c0e4 |
+| **toelichting** | Naast functieruimten en verblijfsruimten, kunnen er nog andere ruimten zijn. Zoals een opbergruimte. Het Bbl biedt de mogelijkheid om (delen van) deze andere ruimten buiten het gebruiksgebied als onbenoemde ruimten aan te wijzen. Dit zijn bijvoorbeeld zolders in woningen die in eerste instantie niet specifiek gebruikt worden. Zolang deze ruimten niet voor een bepaald gebruik in gebruik genomen worden, hoeven ze niet te voldoen aan de eisen voor verblijfsgebieden of functiegebieden. |
+
+
+<figure id="fig-Restruimte">
+  <img src="./afbeeldingen/Restruimte.png"
+       alt="Een voorbeeld van een woning met 4 restruimten"
+       width="300">
+  <figcaption>Een voorbeeld van een woning met 4 restruimten.</figcaption>
+</figure>
+
+### Verblijfsgebied
+
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Verblijfsgebied</dfn> |
+| **is specialisatie van** | Ruimtelijk gebied |
+| **definitie**        | Gebruiksgebied of een gedeelte daarvan voor het verblijven van personen.  |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | Een verblijfsgebied bestaat uit 1 of meer ruimten waarin personen verblijven. Een verblijfsruimte ligt dus altijd in een verblijfsgebied.
+
+De regels voor een verblijfsgebied en een verblijfsruimte zijn afgestemd op de kenmerkende activiteiten voor het verblijven van personen. Zoals wonen, het bewerken of verhandelen van materialen of goederen, het verlenen van diensten en het beoefenen van sport.
+
+Met het stellen van eisen aan een verblijfsgebied, is een minimumniveau voor de verblijfsruimte gewaarborgd. Op deze manier wordt ook zoveel mogelijk recht gedaan aan de vrije indeelbaarheid van het verblijfsgebied.
+
+Verblijfsgebieden kunnen naast verblijfsruimten, ook bestaan uit een bedgebied met bedruimte of andere ruimten, waaronder onbenoemde ruimten. |
+
+<figure id="fig-Verblijfsgebied">
+  <img src="./afbeeldingen/Verblijfsgebied.png"
+       alt="Een voorbeeld van een woning met 4 verblijfsgebieden"
+       width="300">
+  <figcaption>Een voorbeeld van een woning met 4 verblijfsgebieden.</figcaption>
+</figure>
+
+### Verblijfsruimte
+
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Verblijfsruimte</dfn> |
+| **is specialisatie van** | Ruimtelijk gebied |
+| **definitie**        | in een verblijfsgebied gelegen ruimte voor het verblijven van personen.  |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | Bij bijvoorbeeld een kantoorfunctie moeten de werkvertrekken voor administratieve werkzaamheden als verblijfsruimten worden aangemerkt. En bij een school de klaslokalen. |
+
+<figure id="fig-Verblijfsruimte">
+  <img src="./afbeeldingen/Verblijfsruimte.png"
+       alt="Een voorbeeld van een woning met 6 verblijfsruimten"
+       width="300">
+  <figcaption>Een voorbeeld van een woning met 6 verblijfsruimten.</figcaption>
+</figure>
+
+
+### Functiegebied
+
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Functiegebied</dfn> |
+| **is specialisatie van** | Ruimtelijk gebied |
+| **definitie**        |  gebruiksgebied of een gedeelte daarvan, waar de voor die gebruiksfunctie kenmerkende activiteiten anders dan het verblijven van personen plaatsvinden;  |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | Voorbeelden van een functiegebied zijn: 
+- een sanitairgebouw
+- een gebied van een garage
+- een gebied met opslagruimte(n)
+- Een gebied met technische ruimte(n)
+- een gebied met productieruimte(n)
+ Functiegebieden kunnen worden onderverdeeld in functieruimten of andere ruimten. In het voorbeeld van een sanitairgebouw kan dit toilet- en doucheruimten zijn. |
+
+<figure id="fig-Functiegebied">
+  <img src="./afbeeldingen/Functiegebied.png"
+       alt="Een voorbeeld van een woning met 1 functiegebied bestaande uit 1 functieruimte"
+       width="300">
+  <figcaption>Een voorbeeld van een woning met 1 functiegebied bestaande uit 1 functieruimte.</figcaption>
+</figure>
+
+
+### Functieruimte
+
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Functieruimte</dfn> |
+| **is specialisatie van** | Ruimtelijk gebied |
+| **definitie**        |   in een functiegebied gelegen ruimte |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | Voorbeelden van een functieruimte zijn:
+- de toiletruimte binnen een sanitairgebouw
+- een garage
+- een opslagruimte
+- een technische ruimte
+ |
+
+ <figure id="fig-Functieruimte">
+  <img src="./afbeeldingen/Functieruimte.png"
+       alt="Een voorbeeld van een woning met 1 functieruimte, een garage"
+       width="300">
+  <figcaption>Een voorbeeld van een woning met 1 functieruimte, een garage.</figcaption>
+</figure>
+
+### Bedgebied
+(bbl concept)
+
+### Bedruimte
+(bbl concept)
+
+### Verkeersruimte
+
+
+### Verkeersroute
+
+
 
 
 ## Bronnen (dct:source)

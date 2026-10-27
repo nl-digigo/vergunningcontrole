@@ -374,13 +374,13 @@ Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van e
 | **definitie**        | Gebruiksfunctie die ten dienste staat van een andere gebruiksfunctie; |
 | **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
 | **toelichting** | Een nevengebruiksfunctie is dus zelf ook een gebruiksfunctie. Maar is als het ware bedoeld voor een andere gebruiksfunctie (‘ten dienste van’). Voorbeelden van nevengebruiksfuncties zijn een:
-- garage of buitenberging (overige gebruiksfunctie) bij een woning (woonfunctie)
-- kantoor (kantoorfunctie) aan huis (woonfunctie)
-- kantine (bijeenkomstfunctie) in een kantoor (kantoorfunctie)
-- fietsenstalling (overige gebruiksfunctie) bij een kantoor (kantoorfunctie)
-- werkplaats (industriefunctie) in een gevangeniscomplex (celfunctie)
-- liftschacht (overige gebruiksfunctie) bij een tunnel (bouwwerk geen gebouw zijnde)
-Een gebruiksfunctie en de nevengebruiksfunctie die daaraan ten dienste is, kunnen in hetzelfde bouwwerk liggen. Maar dat hoeft niet per se. |
+<ul><li>garage of buitenberging (overige gebruiksfunctie) bij een woning (woonfunctie)</li>
+<li>kantoor (kantoorfunctie) aan huis (woonfunctie)</li>
+<li>kantine (bijeenkomstfunctie) in een kantoor (kantoorfunctie)</li>
+<li>fietsenstalling (overige gebruiksfunctie) bij een kantoor (kantoorfunctie)</li>
+<li>werkplaats (industriefunctie) in een gevangeniscomplex (celfunctie)</li>
+<li>liftschacht (overige gebruiksfunctie) bij een tunnel (bouwwerk geen gebouw zijnde)
+Een gebruiksfunctie en de nevengebruiksfunctie die daaraan ten dienste is, kunnen in hetzelfde bouwwerk liggen. Maar dat hoeft niet per se. </li></ul>|
 
 <br>
 
@@ -402,9 +402,9 @@ Een gebruiksfunctie en de nevengebruiksfunctie die daaraan ten dienste is, kunne
 | **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
 | **toelichting** | Een voorbeeld van een ruimte die functieruimte is gelegen in een functiegebied, is een toilet (functieruimte) in het sanitair gebied (functiegebied). Een gebruiksfunctie wordt opgedeeld in gebruiksgebied en in restgebied. Het gebruiksgebied is een aggregatie van alles wat verblijfsgebied of functiegebied is, eventueel met tarra ruimte.  
 
-- moeten in een brandcompartiment liggen
-- mogen niet door een dragende scheidingsconstructie van elkaar zijn gescheiden (lichte of verplaatsbare wand mag wel)
-- mogen geen toiletruimte, badruimte, technische ruimte of verkeersruimte zijn (behalve als deze ruimte zelf een functieruimte is)
+<li>moeten in een brandcompartiment liggen</li>
+<li>mogen niet door een dragende scheidingsconstructie van elkaar zijn gescheiden (lichte of verplaatsbare wand mag wel)</li>
+<li>mogen geen toiletruimte, badruimte, technische ruimte of verkeersruimte zijn (behalve als deze ruimte zelf een functieruimte is)</li>
 |
 
 <figure id="fig-gebruiksgebied">
@@ -501,12 +501,13 @@ Verblijfsgebieden kunnen naast verblijfsruimten, ook bestaan uit een bedgebied m
 | **definitie**        |  gebruiksgebied of een gedeelte daarvan, waar de voor die gebruiksfunctie kenmerkende activiteiten anders dan het verblijven van personen plaatsvinden;  |
 | **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
 | **toelichting** | Voorbeelden van een functiegebied zijn: 
-- een sanitairgebouw
-- een gebied van een garage
-- een gebied met opslagruimte(n)
-- Een gebied met technische ruimte(n)
-- een gebied met productieruimte(n)
- Functiegebieden kunnen worden onderverdeeld in functieruimten of andere ruimten. In het voorbeeld van een sanitairgebouw kan dit toilet- en doucheruimten zijn. |
+<ul><li>een sanitairgebouw</li>
+<li>een gebied van een garage</li>
+<li>een gebied met opslagruimte(n)
+</li>
+<li>Een gebied met technische ruimte(n)</li>
+<li>een gebied met productieruimte(n)</li></ul>
+ Functiegebieden kunnen worden onderverdeeld in functieruimten of andere ruimten. In het voorbeeld van een sanitairgebouw kan dit toilet- en doucheruimten zijn.|
 
 <figure id="fig-Functiegebied">
   <img src="./afbeeldingen/Functiegebied.png"
@@ -524,11 +525,11 @@ Verblijfsgebieden kunnen naast verblijfsruimten, ook bestaan uit een bedgebied m
 | **is specialisatie van** | Ruimtelijk gebied |
 | **definitie**        |   in een functiegebied gelegen ruimte |
 | **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
-| **toelichting** | Voorbeelden van een functieruimte zijn:
-- de toiletruimte binnen een sanitairgebouw
-- een garage
-- een opslagruimte
-- een technische ruimte
+| **toelichting** | Voorbeelden van een functieruimte zijn: 
+<ul><li> de toiletruimte binnen een sanitairgebouw </li> 
+ <li> een garage </li>
+ <li> een opslagruimte </li>
+ <li>een technische ruimte </li></ul>
  |
 
  <figure id="fig-Functieruimte">
@@ -539,17 +540,116 @@ Verblijfsgebieden kunnen naast verblijfsruimten, ook bestaan uit een bedgebied m
 </figure>
 
 ### Bedgebied
-(bbl concept)
+
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Bedgebied</dfn> |
+| **is specialisatie van** | Verblijfsgebied |
+| **definitie**        |   Verblijfsgebied met een of meer bedruimten; |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | Ook bedgebieden zijn bestemd voor het verblijven van personen. Maar voor deze gebieden geldt specifiek dat personen normaal gesproken in bed verblijven, waardoor andere eisen gelden. In een bedgebied ligt minstens 1 bedruimte. Maar er mogen ook andere verblijfsruimten of andere ruimten liggen. Bijvoorbeeld een zusterverblijf of spoelkamer in een bedgebied van een ziekenhuis. Of een speelruimte in een bedgebied van een kinderopvang.
+ |
+
+<figure id="fig-Bedgebied">
+  <img src="./afbeeldingen/Verblijfsgebied.png"
+       alt="Een voorbeeld van een woning met 6 verblijfsruimten"
+       width="300">
+  <figcaption>Een voorbeeld van bedgebied (hetzelfde voorbeeld als verblijfsgebied) .</figcaption>
+</figure>
+
+
+### Bedgebied voor niet-bedgebonden personen
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Bedgebied voor niet-bedgebonden personen</dfn> |
+| **is specialisatie van** | Bedgebied |
+| **definitie**        |   Bedgebied bedoeld voor niet-bedgebonden personen |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | Vooral voor gebouwen met de gebruiksfunctie gezondheidszorg is dit van belang. Deze bedgebieden kunnen ook weer ingedeeld worden: in bedruimten voor bedgebonden personen en bedruimten voor niet-bedgebonden personen. In woningen zijn bedgebieden over het algemeen voor niet-bedgebonden personen. Voor bedgebieden en bedruimten voor het verblijf van bedgebonden personen, gelden zwaardere brandveiligheidseisen. Bedgebonden personen kunnen zich namelijk bij brand niet zonder hulp in veiligheid brengen. Het gaat dan bijvoorbeeld om patiënten die nog onder narcose liggen na een operatie. Of patiënten die vastliggen aan allerlei medische apparatuur.
+ |
+
+### Bedgebied voor bedgebonden personen
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Bedgebied voor bedgebonden personen</dfn> |
+| **is specialisatie van** | Bedgebied |
+| **definitie**        |   Bedgebied bedoeld voor bedgebonden personen |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | Vooral voor gebouwen met de gebruiksfunctie gezondheidszorg is dit van belang. Deze bedgebieden kunnen ook weer ingedeeld worden: in bedruimten voor bedgebonden personen en bedruimten voor niet-bedgebonden personen. In woningen zijn bedgebieden over het algemeen voor niet-bedgebonden personen. Voor bedgebieden en bedruimten voor het verblijf van bedgebonden personen, gelden zwaardere brandveiligheidseisen. Bedgebonden personen kunnen zich namelijk bij brand niet zonder hulp in veiligheid brengen. Het gaat dan bijvoorbeeld om patiënten die nog onder narcose liggen na een operatie. Of patiënten die vastliggen aan allerlei medische apparatuur.
+ |
 
 ### Bedruimte
-(bbl concept)
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Bedruimte</dfn> |
+| **is specialisatie van** | Verblijfsruimte |
+| **definitie**        |   verblijfsruimte bestemd voor een of meer bedden bestemd voor slapen of voor het verblijf van bedgebonden patiënten in die ruimte; |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | Met een bedruimte bedoelt het Bbl een verblijfsruimte voor 1 of meer bedden om te slapen, of voor het verblijf van aan bed gebonden personen in deze ruimte. Denk aan een slaapruimte in een crèche, hotelkamer of verpleegruimte in een ziekenhuis. Het gaat dus níét om bijvoorbeeld een ruimte voor de opslag van bedden. Ook niet om een ruimte met een rustbed voor een middagslaapje, of een behandel- of operatieruimte in een ziekenhuis.
+ |
+
+### Bedruimte voor niet-bedgebonden personen
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Bedruimte voor niet-bedgebonden personen</dfn> |
+| **is specialisatie van** | Bedruimte |
+| **definitie**        |   Bedruimte bestemd voor een of meer bedden bestemd voor slapen van niet- bedgebonden personen; |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | Met een bedruimte bedoelt het Bbl een verblijfsruimte voor 1 of meer bedden om te slapen, of voor het verblijf van aan bed gebonden personen in deze ruimte. Denk aan een slaapruimte in een crèche, hotelkamer of verpleegruimte in een ziekenhuis. Het gaat dus níét om bijvoorbeeld een ruimte voor de opslag van bedden. Ook niet om een ruimte met een rustbed voor een middagslaapje, of een behandel- of operatieruimte in een ziekenhuis.
+ |
+
+### Bedruimte voor bedgebonden personen
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Bedruimte voor bedgebonden personen</dfn> |
+| **is specialisatie van** | Bedruimte |
+| **definitie**        |   Bedruimte bestemd voor het verblijf van bedgebonden personen in die ruimte; |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | Met een bedruimte voor bedgebonden personen bedoelt het Bbl een verblijfsruimte voor 1 of meer bedden voor het verblijf van aan bed gebonden personen in deze ruimte. Het gaat niet om een ruimte met een rustbed voor een middagslaapje, of een behandel- of operatieruimte in een ziekenhuis.
+ |
 
 ### Verkeersruimte
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Verkeersruimte</dfn> |
+| **is specialisatie van** | ruimte voor het bereiken van een andere ruimte, die niet ligt in een verblijfsgebied of in een functiegebied, een toiletruimte, een badruimte of een technische ruimte; |
+| **definitie**        |   Bedruimte bestemd voor het verblijf van bedgebonden personen in die ruimte; |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | Denk bijvoorbeeld aan een hal, gang, overloop, trappenhuis of galerij. Onder verkeersruimte valt niet een: <ul><li> ruimte in een verblijfsgebied of een functiegebied</li>
+<li>toiletruimte </li>
+<li>badruimte  </li>
+<li>technische ruimte </li></ul>
+Als een verkeersroute door zo’n ruimte loopt, dan is er geen sprake van een verkeersruimte (wel van een 'ruimte waardoor een verkeersroute voert'). De exacte definitie staat in bijlage I onder A van het Bbl. |
 
 
 ### Verkeersroute
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Verkeersroute</dfn> |
+| **is specialisatie van** | Ruimte |
+| **definitie**        |   route die begint bij een doorgang van een ruimte, alleen voert over vloeren, trappen of hellingbanen en eindigt bij de doorgang van een andere ruimte; |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | ... |
 
 
+### Vluchtroute
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Verkeersroute</dfn> |
+| **is specialisatie van** | Ruimte |
+| **definitie**        |   route die begint bij een doorgang van een ruimte, alleen voert over vloeren, trappen of hellingbanen en eindigt bij de doorgang van een andere ruimte; |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | ... |
+
+
+### Ruimte waardoor een verkeersroute voert
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Ruimte waardoor een verkeersroute voert</dfn> |
+| **is specialisatie van** | Ruimte |
+| **definitie**        |   ... |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | ... |
 
 
 ## Bronnen (dct:source)

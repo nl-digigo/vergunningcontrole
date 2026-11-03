@@ -2,7 +2,9 @@
 
 ## Aanleiding {#aanleiding}
 
-Gemeenten staan voor een grote opgave. De woningbouw moet versnellen, terwijl de druk op vergunningverlening toeneemt en de arbeidsmarkt krap blijft. Verdere digitalisering kan helpen om vergunningaanvragen sneller, transparanter en zorgvuldiger te behandelen.
+**Gemeenten staan voor een grote opgave. De woningbouw moet versnellen, terwijl de druk op vergunningverlening toeneemt en de arbeidsmarkt krap blijft. Verdere digitalisering kan helpen om vergunningaanvragen sneller, transparanter en zorgvuldiger te behandelen.**
+
+Daarom werkt de VNG samen met gemeenten, softwareleveranciers en andere ketenpartners aan digitale vergunningverlening met BIM (Building Information Modeling). Dit project komt voort uit afspraken die zijn gemaakt tijdens de Woontop 2024 en maakt onderdeel uit van Beleidsmaatregel 13 van het Bestuursakkoord 2027.
 
 Beleidsmaatregel 13 van de VNG werkt aan een oplossing: regels **machineleesbaar** maken (software kan ze lezen) en **machine-uitvoerbaar** (software kan ze toepassen op een BIM-model en op geodata). Dan wordt een deel van de toets automatisch, herhaalbaar en voor iedereen gelijk.
 

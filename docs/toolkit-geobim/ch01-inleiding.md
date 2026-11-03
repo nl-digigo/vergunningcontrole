@@ -2,7 +2,7 @@
 
 ## Aanleiding {#aanleiding}
 
-Bouwregels staan vandaag in juridische teksten: het omgevingsplan van de gemeente en het Besluit bouwwerken leefomgeving (Bbl). Software kan die teksten niet lezen of toepassen. Daardoor is het toetsen van een bouwaanvraag handwerk: een vergunningverlener interpreteert de regel, zoekt de juiste gegevens op in tekeningen en kaarten en rekent zelf. Dat is traag, verschilt per gemeente en schaalt niet.
+Gemeenten staan voor een grote opgave. De woningbouw moet versnellen, terwijl de druk op vergunningverlening toeneemt en de arbeidsmarkt krap blijft. Verdere digitalisering kan helpen om vergunningaanvragen sneller, transparanter en zorgvuldiger te behandelen.
 
 Beleidsmaatregel 13 van de VNG werkt aan een oplossing: regels **machineleesbaar** maken (software kan ze lezen) en **machine-uitvoerbaar** (software kan ze toepassen op een BIM-model en op geodata). Dan wordt een deel van de toets automatisch, herhaalbaar en voor iedereen gelijk.
 

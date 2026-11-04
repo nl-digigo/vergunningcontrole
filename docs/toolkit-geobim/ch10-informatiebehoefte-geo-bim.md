@@ -6,6 +6,11 @@
 
 > Deze inventarisatie beschrijft per regel: de informatiebehoefte (gebouwdata, mapping naar [ILS Ruimte / bsDD](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) en omgevingsdata/geodata) Regels #1–#6 betreffen het omgevingsplan (OPA) (ook: Omgevingsplantoets), regels #7–#17 het Besluit bouwwerken leefomgeving (Bbl) (ook: de Technische toets).
 
+| Check | Id | Minimum requirement | Level | Kind |
+|---------|---------|---------|---------|---------|
+| #1 | BM13-R01 | Het werkingsgebied van de regel | Must | GEO |
+
+
 
 ## Regel #1: Gebruiksfunctie komt overeen met bestemming
 

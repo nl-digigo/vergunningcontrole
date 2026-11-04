@@ -10,7 +10,7 @@ Informatiebehoefte vereisten voor geo-informatie bij een omgevingsvergunningaanv
 
 ## Overzicht per Informatiebehoefte 
 
-De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#6 betreffen het omgevingsplan (OPA), regels #7–#17 het Besluit bouwwerken leefomgeving (Bbl). Voor deze 17 checks zijn de volgende informatiebehoefte vereisten voor geo-informatie gedefinieerd.
+De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#6 betreffen het omgevingsplan (OPA), regels #7–#17 het Besluit bouwwerken leefomgeving (Bbl). Voor deze 17 checks zijn de volgende informatiebehoefte vereisten (DR-GEO-xx) voor geo-informatie gedefinieerd. Deze zijn uitgesplitst naar afzonderlijke dataspecificaties (#id).
 
 | Informatiebehoefte id | Informatiebehoefte |  Specificatie iD |
 |---------|---------|---------|
@@ -23,6 +23,8 @@ De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#
 | DR-GEO-09 | Vitale infrastructuur (tunnels, bruggen) | 15, 16, 17 |
 
 ## Overzicht per check
+
+De dataspecificaties per informatiebehoefte zijn als volgt gekoppeld aan de 17 checks:
 
 | Check | Onderwerp | Specificaties |
 |---------|---------|---------|

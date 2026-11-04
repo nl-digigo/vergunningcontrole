@@ -4,7 +4,7 @@
 
 Dit hoofdstuk beschrijft hoe een check machineleesbaar wordt vastgelegd: de formele weergave van een regel die software kan lezen en uitvoeren. Het is laag 4 in het [[[#regellagen]]].
 
-Een volledig uitgewerkt voorbeeld voor regel #2 (maximale bouwhoogte), met SHACL- en SPARQL-voorbeelden, staat in [[[#voorbeeld-regel-2]]].
+Een volledig uitgewerkt voorbeeld voor regel #2 (maximale bouwhoogte), met SHACL- en SPARQL-voorbeelden, staat in [[[#voorbeeld-regel-2]]]. Test
 
 <div class="issue" title="Hoofdstuk in opbouw">
 

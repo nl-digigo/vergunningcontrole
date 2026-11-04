@@ -26,27 +26,29 @@ De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#
 
 De dataspecificaties per informatiebehoefte zijn als volgt gekoppeld aan de 17 checks:
 
-| Check | Onderwerp | Specificaties |
-|---------|---------|---------|
-| #1 | Gebruiksfunctie komt overeen met bestemming | 4 |
-| #2 | Maximale bouwhoogte | 1, 2, 4 |
-| #3 | Maximaal bebouwingspercentage | 1, 2, 3, 4, 7, 13, 14 |
-| #4 | Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen | — |
-| #5 | Beroep aan huis: max. 50% gebruiksoppervlakte | 4, 7, 8, 9, 10, 11, 12, 13 |
-| #6 | Maximum aantal bouwlagen | — |
-| #7 | Brandcompartimenten | 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 |
-| #8 | Brandwerendheid | 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 |
-| #9 | Vrije breedte | — |
-| #10 | Hoogteverschil | 1, 2, 18, 19, 20, 21, 24, 25, 26, 27 |
-| #11 | Rc-waarde | 7, 8, 13 |
-| #12 | U-waarde | — |
-| #13 | MPG | — |
-| #14 | Vluchtwegen | 18, 19, 20, 21 |
-| #15 | Loopafstand | — |
-| #16 | Vluchtbreedte | — |
-| #17 | Daglicht | 4, 5, 6, 7, 8, 13, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 |
+| Check | Id | Onderwerp | Specificaties |
+|---------|---------|---------|---------|
+| #1 | BM13-R01 | Gebruiksfunctie komt overeen met bestemming | 4 |
+| #2 | BM13-R02 |Maximale bouwhoogte | 1, 2, 4 |
+| #3 | BM13-R03 |Maximaal bebouwingspercentage | 1, 2, 3, 4, 7, 13, 14 |
+| #4 | BM13-R04 |Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen | — |
+| #5 | BM13-R05 |Beroep aan huis: max. 50% gebruiksoppervlakte | 4, 7, 8, 9, 10, 11, 12, 13 |
+| #6 | BM13-R06 |Maximum aantal bouwlagen | — |
+| #7 | BM13-R07 |Brandcompartimenten | 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 |
+| #8 | BM13-R08 |Brandwerendheid | 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 |
+| #9 | BM13-R09 |Vrije breedte | — |
+| #10 | BM13-R10 |Hoogteverschil | 1, 2, 18, 19, 20, 21, 24, 25, 26, 27 |
+| #11 | BM13-R11 |Rc-waarde | 7, 8, 13 |
+| #12 | BM13-R12 |U-waarde | — |
+| #13 | BM13-R13 |MPG | — |
+| #14 | BM13-R14 |Vluchtwegen | 18, 19, 20, 21 |
+| #15 | BM13-R15 |Loopafstand | — |
+| #16 | BM13-R16 |Vluchtbreedte | — |
+| #17 | BM13-R17 |Daglicht | 4, 5, 6, 7, 8, 13, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 |
 
 ## Overzicht per specificatie
+
+De volgende dataspecificaties zijn gedefinieerd:
 
 | Nr | Specificatie | Databron | BM13-checks |
 |-----|-----|-----|-----|

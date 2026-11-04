@@ -1,17 +1,12 @@
 # Informatiebehoefte: geo- en BIM-data {#informatiebehoefte-geo-bim}
 
-**Project:** VNG Beleidsmaatregel 13 — Vergunningverlening met BIM
-**Versie:** 0.3 (3 juli 2026) — *onder bewerking*
-**Status:** Resultaat van fysieke sessies met deelnemende gemeenten, 7 april 2026 en 8 juni 2026, Zoetermeer
+Dit hoofdstuk geeft een overzicht van de uitgewerkte en gecombineerde informatiebehoefte voor de 17 checks. De specificaties zijn terug te vinden in bijlage c (ILS omgevingsvergunning) en bijlage d (ILS Geo-informatie). 
 
-> Deze inventarisatie beschrijft per regel: de informatiebehoefte (gebouwdata, mapping naar [ILS Ruimte / bsDD](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) en omgevingsdata/geodata) Regels #1–#6 betreffen het omgevingsplan (OPA) (ook: Omgevingsplantoets), regels #7–#17 het Besluit bouwwerken leefomgeving (Bbl) (ook: de Technische toets).
-
-| Check | Id | Minimum requirement | Level | Kind |
-|---------|---------|---------|---------|---------|
-| #1 | BM13-R01 | Het werkingsgebied van de regel | Must | GEO |
-
-
-
+| Check Id | Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
+|---------|---------|---------|---------|---------|---------|---------|
+| BM13-R01 | MO1 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | Must | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| BM13-R01 | MO2 | Constructieonderdelen met gesloten geometrie per bouwlaag | Must | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| volgt |  |  |  |  |  |  |
 ## Regel #1: Gebruiksfunctie komt overeen met bestemming
 
 ### Informatiebehoefte

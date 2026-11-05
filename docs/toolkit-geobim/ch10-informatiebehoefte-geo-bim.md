@@ -2,12 +2,14 @@
 
 Dit hoofdstuk geeft een overzicht van de uitgewerkte en gecombineerde informatiebehoefte voor de 17 checks. De specificaties zijn terug te vinden in bijlage c (ILS omgevingsvergunning) en bijlage d (ILS Geo-informatie). 
 
-| Check Id | Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
-|---------|---------|---------|---------|---------|---------|---------|
-| BM13-R01 | MO1 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | Must | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
-| BM13-R01 | MO2 | Constructieonderdelen met gesloten geometrie per bouwlaag | Must | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
-| volgt |  |  |  |  |  |  |
-## Regel #1: Gebruiksfunctie komt overeen met bestemming
+## Regel #1: BM13-R01 Gebruiksfunctie komt overeen met bestemming
+
+| Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
+|---------|---------|---------|---------|---------|---------|
+| MO1 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | Must | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| MO2 | Constructieonderdelen met gesloten geometrie per bouwlaag | Must | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| volgt |  |  |  |  |  |
+
 
 ### Informatiebehoefte
 

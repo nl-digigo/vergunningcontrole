@@ -1,4 +1,4 @@
-# Begrippen {#begrippen}
+# Aanpak
 
 <p class="leesniveau tactisch">Tactisch</p>
 

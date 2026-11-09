@@ -1,0 +1,12 @@
+						
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geom: <https://vng.nl/geometry/>
+
+SELECT ?globalIdValue ?base64Data
+WHERE {
+    VALUES ?globalIdValue { ###GLOBAL_IDS_LIST### }
+    GRAPH <https://vng.nl/geometries/> {
+    ?geometry   geom:globalId	?globalIdValue ;
+                geom:base64Data	?base64Data .
+    }
+}

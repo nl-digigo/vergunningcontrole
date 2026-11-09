@@ -1,0 +1,14 @@
+# Verwacht SHACL-validatierapport als een wand buiten het bestemmingsvlak Wonen ligt.
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix bm13: <https://example.org/bm13/> .
+@prefix geom: <https://rdf.bg/geometry/> .
+
+[ a sh:ValidationReport ;
+  sh:conforms false ;
+  sh:result [
+      a sh:ValidationResult ;
+      sh:focusNode      geom:IfcWall_63599 ;
+      sh:resultMessage  "BM13-R01: element 1rMUAck_9AwBoilNJA$Dtt is OVERLAPS the permitted Wonen area." ;
+      sh:resultSeverity sh:Violation ;
+      sh:sourceShape    bm13:R01_Shape ;
+      sh:value          "OVERLAPS" ] ] .

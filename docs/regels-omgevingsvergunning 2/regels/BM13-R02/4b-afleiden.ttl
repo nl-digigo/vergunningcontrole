@@ -1,0 +1,22 @@
+PREFIX bm13: <https://example.org/bm13/>
+
+INSERT { GRAPH <urn:bm13:derived> {
+    ?check a bm13:HeightCheck ;
+           bm13:case                   ?case ;
+           bm13:heightArea             ?area ;
+           bm13:buildingHeight         ?measured ;
+           bm13:maximumPermittedHeight ?allowed ;
+           bm13:heightTolerance        ?tol ;
+           bm13:highestElement         ?element .
+} }
+WHERE {
+  ?case a bm13:BuildingPermitCase ;
+        bm13:referenceLevel ?peil ;
+        bm13:partInHeightArea [ bm13:heightArea   ?area ;
+                                bm13:highestPoint ?top ;
+                                bm13:highestElement ?element ] .
+  ?area bm13:normValue ?allowed .
+  bm13:R02_MaximumBuildingHeight bm13:tolerance ?tol .
+  BIND (?top - ?peil AS ?measured)
+  BIND (IRI(CONCAT(STR(?case), "/R02/", STRAFTER(STR(?area), "#"))) AS ?check)
+}

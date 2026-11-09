@@ -1,0 +1,32 @@
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix bm13: <https://example.org/bm13/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+bm13:R02_Shape
+    a sh:NodeShape ;
+    sh:targetClass bm13:HeightCheck ;
+    # completeness: every check must carry the numbers
+    sh:property [ sh:path bm13:buildingHeight ;         sh:minCount 1 ; sh:severity sh:Violation ;
+                  sh:message "BM13-R02: building height could not be derived." ] ;
+    sh:property [ sh:path bm13:maximumPermittedHeight ; sh:minCount 1 ; sh:severity sh:Violation ;
+                  sh:message "BM13-R02: no permitted height for this area." ] ;
+    # compliance
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:prefixes bm13:prefixes ;
+        sh:message "BM13-R02: height {?measured} m exceeds permitted {?allowed} m (+{?tol} m tolerance) in area {?area}." ;
+        sh:select """
+            SELECT $this ?measured ?allowed ?tol ?area
+            WHERE {
+                $this bm13:buildingHeight         ?measured ;
+                      bm13:maximumPermittedHeight ?allowed ;
+                      bm13:heightTolerance        ?tol ;
+                      bm13:heightArea             ?area .
+                FILTER (?measured > (?allowed + ?tol))
+            }
+        """ ;
+    ] ;
+    sh:severity sh:Violation .
+
+bm13:prefixes sh:declare
+    [ sh:prefix "bm13" ; sh:namespace "https://example.org/bm13/"^^xsd:anyURI ] .

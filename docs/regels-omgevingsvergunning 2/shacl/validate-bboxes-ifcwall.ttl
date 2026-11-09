@@ -1,0 +1,41 @@
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix geom: <https://vng.nl/geometry/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix ifc:  <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL#> .
+
+geom:GeometryShape
+    a sh:NodeShape ;
+	sh:targetClass ifc:IfcWall ;
+
+    sh:sparql [
+        sh:prefixes [
+            sh:declare [
+                sh:prefix "geom" ;
+                sh:namespace "https://vng.nl/geometry/"^^xsd:anyURI
+            ]
+        ] ;
+        sh:select """
+            SELECT $this ?globalId ?deltaX ?deltaY ?deltaZ
+            WHERE {
+                $this   geom:globalId   ?globalId ;
+                        geom:bboxMinX   ?minX ;
+                        geom:bboxMaxX   ?maxX ;
+                        geom:bboxMinY   ?minY ;
+                        geom:bboxMaxY   ?maxY ;
+                        geom:bboxMinZ   ?minZ ;
+                        geom:bboxMaxZ   ?maxZ .
+                BIND((?maxX - ?minX) AS ?deltaX)
+                BIND((?maxY - ?minY) AS ?deltaY)
+                BIND((?maxZ - ?minZ) AS ?deltaZ)
+
+                FILTER(
+                    ?deltaX < 1 || ?deltaX > 100 ||
+                    ?deltaY < 1 || ?deltaY > 100 ||
+                    ?deltaZ < 1 || ?deltaZ > 100
+                )
+            }
+        """ ;
+        sh:message "BBox violation for GlobalId=[{?globalId}]: deltaX={?deltaX}, deltaY={?deltaY}, deltaZ={?deltaZ}. All axis deltas must be in [1, 100]." ;
+    ] ;
+    sh:severity sh:Violation .

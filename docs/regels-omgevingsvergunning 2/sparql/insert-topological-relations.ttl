@@ -1,0 +1,47 @@
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ifc:     <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL#>
+PREFIX express: <https://w3id.org/express#>
+PREFIX geom:    <https://vng.nl/geometry/>
+PREFIX dso:     <http://vng.nl/areas/>
+PREFIX vng:     <http://vng.nl/geometry-ext.ttl#>
+
+DELETE {
+    GRAPH <https://vng.nl/geometries/> {
+        ?geometry geom:topologicalRelation ?oldRelation .
+    }
+}
+INSERT {
+    GRAPH <https://vng.nl/geometries/> {
+        ?geometry geom:topologicalRelation ?topologicalRelation .
+    }
+}
+WHERE {
+    ?ifcElement     rdf:type                    ?ifcType ;
+                    ifc:globalId_IfcRoot        ?globalIdNode .
+    ?globalIdNode   rdf:type                    ifc:IfcGloballyUniqueId ;
+                    express:hasString           ?globalIdValue .
+
+    GRAPH <https://vng.nl/geometries/> {
+        ?geometry   geom:globalId               ?globalIdValue ;
+                    geom:projectionBase64Data   ?base64Data1 .
+    }
+
+    {
+        SELECT (GROUP_CONCAT(?base64Data2; SEPARATOR="|") AS ?allBase64)
+        WHERE {
+            GRAPH <areas.ttl> {
+                [] a             dso:area ;
+                    dso:group     "wonen" ;
+            		dso:geometry  ?base64Data2 .
+            }
+        }
+    }
+
+    BIND(vng:gmTopology(?base64Data1, ?allBase64) AS ?topologicalRelation)
+
+    OPTIONAL {
+        GRAPH <https://vng.nl/geometries/> {
+            ?geometry geom:topologicalRelation ?oldRelation .
+        }
+    }
+}

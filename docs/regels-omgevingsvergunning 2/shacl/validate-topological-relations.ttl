@@ -1,0 +1,31 @@
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix geom: <https://vng.nl/geometry/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+geom:GeometryShape
+    a sh:NodeShape ;
+	sh:targetSubjectsOf geom:globalId ;
+
+    sh:sparql [
+        sh:prefixes [
+            sh:declare [
+                sh:prefix "geom" ;
+                sh:namespace "https://vng.nl/geometry/"^^xsd:anyURI
+            ] ;
+            sh:declare [
+                sh:prefix "rdf" ;
+                sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI
+            ]
+        ] ;
+        sh:select """
+            SELECT $this ?value ?globalId
+            WHERE {
+                $this geom:globalId            ?globalId ;
+                        geom:topologicalRelation ?value .
+                FILTER(?value != "CONTAINED BY")
+            }
+        """ ;
+        sh:message "geom:topologicalRelation is NOT 'CONTAINED BY'. GlobalId: {?globalId}" ;
+    ] ;
+    sh:severity sh:Violation .

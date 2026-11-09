@@ -1,0 +1,21 @@
+PREFIX bm13: <https://example.org/bm13/>
+
+CONSTRUCT {
+    ?check bm13:checkResult ?result .
+    ?result a bm13:RuleCheckResult ;
+            bm13:rule          bm13:R02_MaximumBuildingHeight ;
+            bm13:status        ?status ;
+            bm13:measuredValue ?measured ;
+            bm13:allowedValue  ?allowed ;
+            bm13:tolerance     ?tol ;
+            bm13:evidence      ?element .
+}
+WHERE {
+    ?check a bm13:HeightCheck ;
+           bm13:buildingHeight ?measured ;
+           bm13:maximumPermittedHeight ?allowed ;
+           bm13:heightTolerance ?tol ;
+           bm13:highestElement ?element .
+    BIND (IF(?measured <= ?allowed + ?tol, bm13:Compliant, bm13:NonCompliant) AS ?status)
+    BIND (IRI(CONCAT(STR(?check), "/result")) AS ?result)
+}

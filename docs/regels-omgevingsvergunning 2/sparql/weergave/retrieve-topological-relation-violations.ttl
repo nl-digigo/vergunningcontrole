@@ -1,0 +1,24 @@
+						
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ifc:     <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL#>
+PREFIX express: <https://w3id.org/express#>
+PREFIX geom:    <https://vng.nl/geometry/>
+
+SELECT ?ifcElement ?globalIdValue ?base64Data ?topologicalRelation
+WHERE {
+        VALUES ?ifcType { ifc:IfcWall }
+
+        ?ifcElement     rdf:type               		?ifcType ;
+                        ifc:globalId_IfcRoot   		?globalIdNode .
+        ?globalIdNode   rdf:type               		ifc:IfcGloballyUniqueId ;
+                        express:hasString      		?globalIdValue .
+
+        GRAPH <https://vng.nl/geometries/> {
+        ?geometry       rdf:type               		?ifcType ;
+                        geom:globalId          		?globalIdValue ;
+            		    geom:base64Data				?base64Data ;
+                        geom:topologicalRelation    ?topologicalRelation .
+        FILTER(?topologicalRelation != "CONTAINED BY")
+    }
+}
+ORDER BY ?ifcElement

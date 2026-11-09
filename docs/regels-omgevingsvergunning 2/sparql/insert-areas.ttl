@@ -1,0 +1,32 @@
+PREFIX ifc:     <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX express: <https://w3id.org/express#>
+PREFIX vng:     <http://vng.nl/geometry-ext.ttl#>
+PREFIX dso:     <http://vng.nl/areas/>
+
+DROP SILENT GRAPH <areas.ttl>
+	;
+
+	INSERT {
+	GRAPH <areas.ttl> {
+    ?areaUri  a dso:area ;
+                dso:id    		?id ;
+                dso:name		?name ;
+            	dso:group		?group ;
+            	dso:type		?type ;
+            	dso:geometry 	?geometry .
+    }
+}
+WHERE {
+    {
+    SELECT ?e ?n WHERE {
+        ?mc rdf:type                          ifc:IfcMapConversion ;
+            ifc:eastings_IfcMapConversion     ?le ;
+            ifc:northings_IfcMapConversion    ?ln .
+        ?le express:hasDouble                 ?e .
+        ?ln express:hasDouble                 ?n .
+    } LIMIT 1
+    }
+    (?e ?n 400 'wonen, gemengd') vng:dsoArea (?id ?name ?group ?type ?geometry) .
+    BIND(IRI(CONCAT(STR(dso:), ?id)) AS ?areaUri)
+}

@@ -1,0 +1,24 @@
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ifc:     <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL#>
+PREFIX ifcowl:  <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#>
+PREFIX express: <https://w3id.org/express#>
+PREFIX geom:    <https://vng.nl/geometry/>
+
+SELECT DISTINCT ?ifcElement ?globalIdValue ?base64Data
+WHERE {
+  GRAPH <https://vng.nl/ontologies/ifc4add2> {
+    ?ontType rdfs:subClassOf* ifcowl:IfcBuildingElement .
+  }
+  BIND(IRI(CONCAT(STR(ifc:), STRAFTER(STR(?ontType), "#"))) AS ?type)
+
+  ?ifcElement      rdf:type              ?type ;
+                   ifc:globalId_IfcRoot  ?globalIdNode .
+  ?globalIdNode    express:hasString     ?globalIdValue .
+
+  GRAPH <https://vng.nl/geometries/> {
+    ?geometry      geom:globalId         ?globalIdValue ;
+                   geom:base64Data       ?base64Data .
+  }
+}
+ORDER BY ?ifcElement

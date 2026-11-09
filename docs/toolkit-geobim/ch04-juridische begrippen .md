@@ -1,4 +1,4 @@
-# Organisatielaag {#organisatielaag}
+# juridische begrippen {#juridische begrippen}
 
 <p class="leesniveau bestuurlijk">Bestuurlijk</p>
 

@@ -1,9 +1,9 @@
 # ILS voor geo-informatie — specificaties {#ils-geo-informatie}
 
-Informatiebehoefte vereisten voor geo-informatie bij een omgevingsvergunningaanvraag.
+Dit hoofdstuk beschrijft de informatiebehoefte vereisten voor geo-informatie bij een omgevingsvergunningaanvraag.
 | | |
 |---|---|
-| **Bron** | `BM13 Minimale data vereisten - GEO-v13 (6 oktober 2026)` — 31 specificaties |
+| **Bron** | `BM13 Minimale data vereisten - GEO-v13 (6 oktober 2026)` — 28 specificaties |
 | **Begrippen** | Stelselcatalogus: https://stelselcatalogus.nl/ |
 | **Processtap** | GEMMA 015-02 Inhoudelijk behandelen vergunningaanvraag / 015-02-02 Toetsen activiteiten aan regelgeving |
 | **Checks** | 17 regels uit de BM13-regelinventarisatie v0.3, 3-7-2026 |
@@ -14,13 +14,16 @@ De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#
 
 | Informatiebehoefte id | Informatiebehoefte |  Specificatie iD |
 |---------|---------|---------|
+| DR-GEO-01 | Werkingsgebied type gebiedsaanwijzing / functie | 29 |
 | DR-GEO-02 | Kadastrale situatie | 4, 5, 6 |
+| DR-GEO-03 | Werkingsgebied omgevingsnorm  / bebouwingshoogte | 30 |
 | DR-GEO-04 | Hoogtegegevens (referentiepeil) | 1, 2 |
 | DR-GEO-05 | Beeldmateriaal | 3 |
 | DR-GEO-06 | Bestaande bebouwing | 7, 8, 9, 10, 11, 12, 14 |
-| DR-GEO-07 | Openbare ruimte (wegen, water, groen) | 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 |
+| DR-GEO-07 | Openbare ruimte (wegen, water, groen) | 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28 |
 | DR-GEO-08 | Bestaande bebouwing (3D hoogte) | 13 |
-| DR-GEO-09 | Vitale infrastructuur (tunnels, bruggen) | 15, 16, 17 |
+| DR-GEO-09 | Werkingsgebied omgevingsnorm  / bebouwingspercentage | 31 |
+| DR-GEO-10 | Werkingsgebied omgevingsnorm  / aantal bouwlagen | 32 |
 
 ## Overzicht per check
 
@@ -28,23 +31,23 @@ De dataspecificaties per informatiebehoefte zijn als volgt gekoppeld aan de 17 c
 
 | Check | Id | Onderwerp | Specificaties |
 |---------|---------|---------|---------|
-| #1 | BM13-R01 | Gebruiksfunctie komt overeen met bestemming | 4 |
-| #2 | BM13-R02 |Maximale bouwhoogte | 1, 2, 4 |
-| #3 | BM13-R03 |Maximaal bebouwingspercentage | 1, 2, 3, 4, 7, 13, 14 |
-| #4 | BM13-R04 |Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen | — |
-| #5 | BM13-R05 |Beroep aan huis: max. 50% gebruiksoppervlakte | 4, 7, 8, 9, 10, 11, 12, 13 |
-| #6 | BM13-R06 |Maximum aantal bouwlagen | — |
-| #7 | BM13-R07 |Brandcompartimenten | 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 |
-| #8 | BM13-R08 |Brandwerendheid | 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 |
+| #1 | BM13-R01 |Gebruiksfunctie komt overeen met bestemming | 4, 29 |
+| #2 | BM13-R02 |Maximale bouwhoogte | 1, 2, 4, 30 |
+| #3 | BM13-R03 |Maximaal bebouwingspercentage | 1, 2, 3, 4, 7, 13, 14, 31 |
+| #4 | BM13-R04 |Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen | 29 |
+| #5 | BM13-R05 |Beroep aan huis: max. 50% gebruiksoppervlakte | 4, 7, 8, 9, 10, 11, 12, 13, 29 |
+| #6 | BM13-R06 |Maximum aantal bouwlagen | 32 |
+| #7 | BM13-R07 |Brandcompartimenten | 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28 |
+| #8 | BM13-R08 |Brandwerendheid | 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28 |
 | #9 | BM13-R09 |Vrije breedte | — |
-| #10 | BM13-R10 |Hoogteverschil | 1, 2, 18, 19, 20, 21, 24, 25, 26, 27 |
+| #10 | BM13-R10 |Hoogteverschil | 1, 2, 15, 16, 17, 18, 19, 20, 21, 24 |
 | #11 | BM13-R11 |Rc-waarde | 7, 8, 13 |
 | #12 | BM13-R12 |U-waarde | — |
 | #13 | BM13-R13 |MPG | — |
-| #14 | BM13-R14 |Vluchtwegen | 18, 19, 20, 21 |
+| #14 | BM13-R14 |Vluchtwegen | 15, 16,  17, 18 |
 | #15 | BM13-R15 |Loopafstand | — |
 | #16 | BM13-R16 |Vluchtbreedte | — |
-| #17 | BM13-R17 |Daglicht | 4, 5, 6, 7, 8, 13, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 |
+| #17 | BM13-R17 |Daglicht | 4, 5, 6, 7, 8, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28 |
 
 ## Overzicht per specificatie
 
@@ -66,23 +69,24 @@ De volgende dataspecificaties zijn gedefinieerd:
 | 12 | 1.05d BAG - gebruiksoppervlakte verblijfsobject | Basisregistratie Adressen en Gebouwen (BAG) | #5 |
 | 13 | 1.06 Bestaande bebouwing (Gebouwen) - 2 | 3D BAG | #3, #5, #7, #8, #11, #17 |
 | 14 | 1.07 Overige bouwwerken | Basisregistratie Grootschalige Topografie (BGT) | #3, #7, #8 |
-| 15 | 1.08a Vitale infrastructuur | Basisregistratie Grootschalige Topografie (BGT) | #7, #8,|
-| 16 | 1.08b BGT - tunneldeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8 |
-| 17 | 1.08c BGT - kunstwerkdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8 |
-| 18 | 1.09a Openbaar toegankelijke wegen (Weg) | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #10, #14, #17 |
-| 19 | 1.09b BGT - functie wegdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #10, #14, #17 |
-| 20 | 1.09c BGT - ondersteunend wegdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #10, #14, #17 |
-| 21 | 1.09d BGT - functie ondersteunend wegdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #10, #14, #17 |
-| 22 | 1.10a Spoor | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
-| 23 | 1.10b BGT - functie spoor | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
-| 24 | 1.11a Openbaar toegankelijke ruimte | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #10, #17 |
-| 25 | 1.11b BGT - fysiek voorkomen begroeid terreindeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #10, #17 |
-| 26 | 1.12a BGT - onbegroeid terreindeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #10, #17 |
-| 27 | 1.12b BGT - fysiek voorkomen onbegroeid terreindeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #10, #17 |
-| 28 | 1.13a Water | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
-| 29 | 1.13b BGT - type waterdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
-| 30 | 1.13c BGT - ondersteunend waterdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
-| 31 | 1.13d BGT - type ondersteunend waterdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
+| 15 | 1.08a Openbaar toegankelijke wegen (Weg) | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #10, #14, #17 |
+| 16 | 1.08b BGT - functie wegdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #10, #14, #17 |
+| 17 | 1.08c BGT - ondersteunend wegdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #10, #14, #17 |
+| 18 | 1.08d BGT - functie ondersteunend wegdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #10, #14, #17 |
+| 19 | 1.09a Spoor | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
+| 20 | 1.09b BGT - functie spoor | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
+| 21 | 1.10a Openbaar toegankelijke ruimte | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #10, #17 |
+| 22 | 1.10b BGT - fysiek voorkomen begroeid terreindeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #10, #17 |
+| 23 | 1.11a BGT - onbegroeid terreindeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #10, #17 |
+| 24 | 1.11b BGT - fysiek voorkomen onbegroeid terreindeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #10, #17 |
+| 25 | 1.12a Water | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
+| 26 | 1.12b BGT - type waterdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
+| 27 | 1.12c BGT - ondersteunend waterdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
+| 28 | 2.12d BGT - type ondersteunend waterdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
+| 29 | 2.01a Werkingsgebied type gebiedsaanwijzing / functie | Digitaal Stelsel Omgevingswet | #1, #4, #5 |
+| 30 | 2.01b Werkingsgebied omgevingsnorm  / bebouwingshoogte | Digitaal Stelsel Omgevingswet | #2 |
+| 31 | 2.01c Werkingsgebied omgevingsnorm  / bebouwingspercentage | Digitaal Stelsel Omgevingswet | #3 |
+| 32 | 2.01d Werkingsgebied omgevingsnorm  / aantal bouwlagen | Digitaal Stelsel Omgevingswet | #6 |
 
 
 ## Beschrijving per specificatie
@@ -295,55 +299,7 @@ Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datak
 <tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
 </table>
 
-### 15 - 1.08a Vitale infrastructuur
-
-<table>
-<tr><td><strong>Begrip</strong></td><td>BGT - overbruggingsdeel</td></tr>
-<tr><td><strong>Databron</strong></td><td>Basisregistratie Grootschalige Topografie (BGT)</td></tr>
-<tr><td><strong>CityGML 2.0</strong></td><td>BridgePart</td></tr>
-<tr><td><strong>CityGML 3.0</strong></td><td>BridgePart</td></tr>
-<tr><td><strong>Definitie</strong></td><td>https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F961e56ec-619d-46d0-a864-ef02e1d15761</td></tr>
-<tr><td><strong>Dimensie</strong></td><td>2D</td></tr>
-<tr><td><strong>Coordinatenstelsel (CRS)</strong></td><td>RD (EPSG:28992)</td></tr>
-<tr><td><strong>Informatiemodel</strong></td><td>IMGEO (CityGML)</td></tr>
-<tr><td><strong>Dataformaat</strong></td><td>GML (WFS), GeoJSON, JSON-FG en VectorTiles</td></tr>
-<tr><td><strong>Metadata</strong></td><td>https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/2cb4769c-b56e-48fa-8685-c48f61b9a319</td></tr>
-<tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
-</table>
-
-### 16 - 1.08b BGT - tunneldeel
-
-<table>
-<tr><td><strong>Begrip</strong></td><td>BGT - tunneldeel</td></tr>
-<tr><td><strong>Databron</strong></td><td>Basisregistratie Grootschalige Topografie (BGT)</td></tr>
-<tr><td><strong>CityGML 2.0</strong></td><td>TunnelPart</td></tr>
-<tr><td><strong>CityGML 3.0</strong></td><td>TunnelPart</td></tr>
-<tr><td><strong>Definitie</strong></td><td>https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Ff69a331d-d799-4804-a379-1d1b2df429fd</td></tr>
-<tr><td><strong>Dimensie</strong></td><td>2D</td></tr>
-<tr><td><strong>Coordinatenstelsel (CRS)</strong></td><td>RD (EPSG:28992)</td></tr>
-<tr><td><strong>Informatiemodel</strong></td><td>IMGEO (CityGML)</td></tr>
-<tr><td><strong>Dataformaat</strong></td><td>GML (WFS), GeoJSON, JSON-FG en VectorTiles</td></tr>
-<tr><td><strong>Metadata</strong></td><td>https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/2cb4769c-b56e-48fa-8685-c48f61b9a319</td></tr>
-<tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
-</table>
-
-### 17 - 1.08c BGT - kunstwerkdeel
-
-<table>
-<tr><td><strong>Begrip</strong></td><td>BGT - kunstwerkdeel</td></tr>
-<tr><td><strong>Databron</strong></td><td>Basisregistratie Grootschalige Topografie (BGT)</td></tr>
-<tr><td><strong>CityGML 2.0</strong></td><td>OtherConstruction / BridgePart</td></tr>
-<tr><td><strong>CityGML 3.0</strong></td><td>OtherConstruction / BridgePart</td></tr>
-<tr><td><strong>Definitie</strong></td><td>https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Feab060de-e74b-4530-895e-a0fcaeabe2fe</td></tr>
-<tr><td><strong>Dimensie</strong></td><td>2D</td></tr>
-<tr><td><strong>Coordinatenstelsel (CRS)</strong></td><td>RD (EPSG:28992)</td></tr>
-<tr><td><strong>Informatiemodel</strong></td><td>IMGEO (CityGML)</td></tr>
-<tr><td><strong>Dataformaat</strong></td><td>GML (WFS), GeoJSON, JSON-FG en VectorTiles</td></tr>
-<tr><td><strong>Metadata</strong></td><td>https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/2cb4769c-b56e-48fa-8685-c48f61b9a319</td></tr>
-<tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
-</table>
-
-### 18 - 1.09a Openbaar toegankelijke wegen (Weg)
+### 15 - 1.08a Openbaar toegankelijke wegen (Weg)
 
 <table>
 <tr><td><strong>Begrip</strong></td><td>BGT - wegdeel</td></tr>
@@ -359,7 +315,7 @@ Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datak
 <tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
 </table>
 
-### 19 - 1.09b BGT - functie wegdeel
+### 16 - 1.08b BGT - functie wegdeel
 
 <table>
 <tr><td><strong>Begrip</strong></td><td>BGT - functie wegdeel</td></tr>
@@ -373,7 +329,7 @@ Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datak
 <tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
 </table>
 
-### 20 - 1.09c BGT - ondersteunend wegdeel
+### 17 1.08c BGT - ondersteunend wegdeel
 
 <table>
 <tr><td><strong>Begrip</strong></td><td>BGT - ondersteunend wegdeel</td></tr>
@@ -387,7 +343,7 @@ Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datak
 <tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
 </table>
 
-### 21 - 1.09d BGT - functie ondersteunend wegdeel
+### 18 - 1.08d BGT - functie ondersteunend wegdeel
 
 <table>
 <tr><td><strong>Begrip</strong></td><td>BGT - functie ondersteunend wegdeel</td></tr>
@@ -401,7 +357,7 @@ Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datak
 <tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
 </table>
 
-### 22 - 1.10a Spoor
+### 19 - 1.09a Spoor
 
 <table>
 <tr><td><strong>Begrip</strong></td><td>BGT - spoor</td></tr>
@@ -417,7 +373,7 @@ Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datak
 <tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
 </table>
 
-### 23 - 1.10b BGT - functie spoor
+### 20 - 1.09b BGT - functie spoor
 
 <table>
 <tr><td><strong>Begrip</strong></td><td>BGT - functie spoor</td></tr>
@@ -431,7 +387,7 @@ Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datak
 <tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
 </table>
 
-### 24 - 1.11a Openbaar toegankelijke ruimte
+### 21 - 1.10a Openbaar toegankelijke ruimte
 
 <table>
 <tr><td><strong>Begrip</strong></td><td>BGT - begroeid terreindeel</td></tr>
@@ -447,7 +403,7 @@ Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datak
 <tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
 </table>
 
-### 25 - 1.11b BGT - fysiek voorkomen begroeid terreindeel
+### 22 - 1.10b BGT - fysiek voorkomen begroeid terreindeel
 
 <table>
 <tr><td><strong>Begrip</strong></td><td>BGT - fysiek voorkomen begroeid terreindeel</td></tr>
@@ -461,7 +417,7 @@ Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datak
 <tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
 </table>
 
-### 26 - 1.12a BGT - onbegroeid terreindeel
+### 23 - 1.11a BGT - onbegroeid terreindeel
 
 <table>
 <tr><td><strong>Begrip</strong></td><td>BGT - onbegroeid terreindeel</td></tr>
@@ -477,7 +433,7 @@ Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datak
 <tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
 </table>
 
-### 27 - 1.12b BGT - fysiek voorkomen onbegroeid terreindeel
+### 24 - 1.11b BGT - fysiek voorkomen onbegroeid terreindeel
 
 <table>
 <tr><td><strong>Begrip</strong></td><td>BGT - fysiek voorkomen onbegroeid terreindeel</td></tr>
@@ -491,7 +447,7 @@ Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datak
 <tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
 </table>
 
-### 28 - 1.13a Water
+### 25 - 1.12a Water
 
 <table>
 <tr><td><strong>Begrip</strong></td><td>BGT - waterdeel</td></tr>
@@ -507,7 +463,7 @@ Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datak
 <tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
 </table>
 
-### 29 - 1.13b BGT - type waterdeel
+### 26 - 1.12b BGT - type waterdeel
 
 <table>
 <tr><td><strong>Begrip</strong></td><td>BGT - type waterdeel</td></tr>
@@ -521,7 +477,7 @@ Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datak
 <tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
 </table>
 
-### 30 - 1.13c BGT - ondersteunend waterdeel
+### 27 - 1.12c BGT - ondersteunend waterdeel
 
 <table>
 <tr><td><strong>Begrip</strong></td><td>BGT - ondersteunend waterdeel</td></tr>
@@ -535,7 +491,7 @@ Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datak
 <tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
 </table>
 
-### 31 - 1.13d BGT - type ondersteunend waterdeel
+### 28 - 1.12d BGT - type ondersteunend waterdeel
 
 <table>
 <tr><td><strong>Begrip</strong></td><td>BGT - type ondersteunend waterdeel</td></tr>
@@ -548,3 +504,64 @@ Voor elke specificatie gelden (wettelijke) richtlijnen voor de te hanteren datak
 <tr><td><strong>Metadata</strong></td><td>https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/2cb4769c-b56e-48fa-8685-c48f61b9a319</td></tr>
 <tr><td><strong>Toegangspunt</strong></td><td>https://api.pdok.nl/lv/bgt/ogc/v1</td></tr>
 </table>
+
+### 29 - 2.01a Omgevingsplan - Werkingsgebied type gebiedsaanwijzing / functie
+
+<table>
+<tr><td><strong>Begrip</strong></td><td>Werkingsgebied type gebiedsaanwijzing / functie</td></tr>
+<tr><td><strong>Databron</strong></td><td>Toepassingsprofielen Omgevingswet (TPOD)</td></tr>
+<tr><td><strong>Definitie</strong></td><td>http://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/id/concept/Functie</td></tr>
+<tr><td><strong>Dimensie</strong></td><td>2D</td></tr>
+<tr><td><strong>Coordinatenstelsel (CRS)</strong></td><td><em>RD (EPSG:28992)</em></td></tr>
+<tr><td><strong>Informatiemodel</strong></td><td>IMOW</td></tr>
+<tr><td><strong>Dataformaat</strong></td><td>GML (bron) en GeoJson (Api bevraging)</td></tr>
+<tr><td><strong>Metadata</strong></td><td>https://standaarden.omgevingswet.overheid.nl/typegebiedsaanwijzing/doc/20241014000000/concept/Functie</td></tr>
+<tr><td><strong>Toegangspunt</strong></td><td>https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/geometrieopvragen/v1/</td></tr>
+</table>
+
+### 30 - 2.01b Omgevingsplan - Werkingsgebied omgevingsnorm / bebouwingshoogte
+
+<table>
+<tr><td><strong>Begrip</strong></td><td>Werkingsgebied omgevingsnorm / hoogte</td></tr>
+<tr><td><strong>Databron</strong></td><td>Toepassingsprofielen Omgevingswet (TPOD)</td></tr>
+<tr><td><strong>Definitie</strong></td><td>http://standaarden.omgevingswet.overheid.nl/typenorm/id/concept/Hoogte</td></tr>
+<tr><td><strong>Dimensie</strong></td><td>2D</td></tr>
+<tr><td><strong>Coordinatenstelsel (CRS)</strong></td><td><em>RD (EPSG:28992)</em></td></tr>
+<tr><td><strong>Informatiemodel</strong></td><td>IMOW</td></tr>
+<tr><td><strong>Dataformaat</strong></td><td>GML (bron) en GeoJson (Api bevraging)</td></tr>
+<tr><td><strong>Metadata</strong></td><td>https://standaarden.omgevingswet.overheid.nl/typenorm/doc/20241014000000/concept/Hoogte</td></tr>
+<tr><td><strong>Toegangspunt</strong></td><td>https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/geometrieopvragen/v1/</td></tr>
+</table>
+
+### 31 - 2.01c Omgevingsplan - Werkingsgebied omgevingsnorm / bebouwingspercentage
+
+<table>
+<tr><td><strong>Begrip</strong></td><td>Werkingsgebied omgevingsnorm / bebouwingspercentage</td></tr>
+<tr><td><strong>Databron</strong></td><td>Toepassingsprofielen Omgevingswet (TPOD)</td></tr>
+<tr><td><strong>Definitie</strong></td><td>http://standaarden.omgevingswet.overheid.nl/typenorm/id/concept/Bebouwingspercentage</td></tr>
+<tr><td><strong>Dimensie</strong></td><td>2D</td></tr>
+<tr><td><strong>Coordinatenstelsel (CRS)</strong></td><td><em>RD (EPSG:28992)</em></td></tr>
+<tr><td><strong>Informatiemodel</strong></td><td>IMOW</td></tr>
+<tr><td><strong>Dataformaat</strong></td><td>GML (bron) en GeoJson (Api bevraging)</td></tr>
+<tr><td><strong>Metadata</strong></td><td>https://standaarden.omgevingswet.overheid.nl/typenorm/doc/20241014000000/concept/Bebouwingspercentage</td></tr>
+<tr><td><strong>Toegangspunt</strong></td><td>https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/geometrieopvragen/v1/</td></tr>
+</table>
+
+### 32 - 2.01d Omgevingsplan - Werkingsgebied omgevingsnorm / aantal bouwlagen
+
+<table>
+<tr><td><strong>Begrip</strong></td><td>Werkingsgebied omgevingsnorm / aantal bouwlagen</td></tr>
+<tr><td><strong>Databron</strong></td><td>Toepassingsprofielen Omgevingswet (TPOD)</td></tr>
+<tr><td><strong>Definitie</strong></td><td>http://standaarden.omgevingswet.overheid.nl/typenorm/id/concept/AantalBouwlagen</td></tr>
+<tr><td><strong>Dimensie</strong></td><td>2D</td></tr>
+<tr><td><strong>Coordinatenstelsel (CRS)</strong></td><td><em>RD (EPSG:28992)</em></td></tr>
+<tr><td><strong>Informatiemodel</strong></td><td>IMOW</td></tr>
+<tr><td><strong>Dataformaat</strong></td><td>GML (bron) en GeoJson (Api bevraging)</td></tr>
+<tr><td><strong>Metadata</strong></td><td>https://standaarden.omgevingswet.overheid.nl/typenorm/doc/20241014000000/concept/AantalBouwlagen</td></tr>
+<tr><td><strong>Toegangspunt</strong></td><td>https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/geometrieopvragen/v1/</td></tr>
+</table>
+
+
+#### Ad #29 t/m #32 :
+Een geometrie identificatie op zich heeft geen functionele betekenis. De geometrie is gekoppeld aan locaties en werkingsgebieden van juridische regels in een Omgevingsplan. Voordat er gericht kan worden bevraagd op de geometrie van specifieke werkingsgebieden van regelgeving en omgevingsnormen uit een Omgevingsplan is de identificatie van het brondocument (Omgevingsplan) op die locatie nodig en een overzicht van alle identificaties van de in dat brondocument opgenomen locaties en werkgebieden van juridische regels.
+Het opvragen van de locaties binnen een omgevingsplan kan via de volgende API: https://service.omgevingswet.overheid.nl/publiek/omgevingsdocumenten/api/toepasbaaropvragen/v7/

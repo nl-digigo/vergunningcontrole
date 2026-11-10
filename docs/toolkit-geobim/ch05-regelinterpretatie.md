@@ -42,27 +42,10 @@ Sommige checks zijn niet te automatiseren en vragen om een handmatige toets. Dat
 
 - Gebruiksfunctie per ruimten per bouwlaag
 
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Bouwwerkperceel: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
 #### Omgevingsdata / geodata
 
 - Perceelgrenzen
 
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- (Kadastraal) Perceel: BRK – Digitale Kadastrale Kaart
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fb9fd1c65-1d17-4129-a237-3d00a1667312
   
 ### Regelgeving en normen
 
@@ -108,14 +91,6 @@ De hoogte wordt gemeten vanaf referentiepeil = 0 (meestal bovenkant begane grond
 
 - Dakvorm
 
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Bouwwerkperceel: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
 - *Hoogte van het gebouw is geen begrip in ILS ruimte*
 
 #### Omgevingsdata / geodata
@@ -124,18 +99,6 @@ De hoogte wordt gemeten vanaf referentiepeil = 0 (meestal bovenkant begane grond
 
 - Referentiepeil (door gemeente bepaald)
 
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- (Kadastraal) Perceel: BRK – Digitale Kadastrale Kaart
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fb9fd1c65-1d17-4129-a237-3d00a1667312
-  >
-
-- Referentiepeil: AHN / ingemeten terreinmodel
-
-  - <https://www.ahn.nl/producten>
-
-Nb. We verwijzen hier naar de jaarlijkse landsdekkende luchtfoto's en het landsdekkende hoogtebestand van respectievelijk Beeldmateriaal Nederland en Algemeen Hoogtebestand Nederland. Sommige gemeenten hebben daarnaast nog eigen luchtfoto's en soms ook nog eigen hoogtebestanden.
 ### Regelgeving
 
 Regels op de Kaart: Vigerend (onherroepelijk) omgevingsplan met zonering (of bouwvlak) en normen voor maximale bouwhoogte.
@@ -193,19 +156,6 @@ Sommige checks zijn niet te automatiseren en vragen om een handmatige toets. Dat
 
 - Bruto oppervlakte per begane grond laag
 
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Bouwwerkperceel: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-- Gebouwtype: IfcBuilding (MarketCategory en MarketSubCategory)
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
 
 #### Omgevingsdata / geodata
 
@@ -214,37 +164,6 @@ Sommige checks zijn niet te automatiseren en vragen om een handmatige toets. Dat
 - Luchtfoto
 
 - Perceelgrenzen
-
-- Referentiepeil (door gemeente bepaald)
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- BAG Pand
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2Ff31b46a2-b6b3-48d1-bfd3-a624bb2757c6
-  
-
-<!-- -->
-
-- BGT Overig bouwwerk
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F333255c2-7038-434f-a137-7467ef8f5af4
-  
-
-<!-- -->
-
-- Luchtfoto
-
-  - <https://www.beeldmateriaal.nl/producten>
-
-- (Kadastraal) Perceel: BRK – Digitale Kadastrale Kaart
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fb9fd1c65-1d17-4129-a237-3d00a1667312
-  
-
-- Referentiepeil: AHN / ingemeten terreinmodel
-
-  - https://www.ahn.nl/producten
 
 Nb. We verwijzen hier naar de jaarlijkse landsdekkende luchtfoto's en het landsdekkende hoogtebestand van respectievelijk Beeldmateriaal Nederland en Algemeen Hoogtebestand Nederland. Sommige gemeenten hebben daarnaast nog eigen luchtfoto's en soms ook nog eigen hoogtebestanden.
 
@@ -305,15 +224,6 @@ Sommige checks zijn niet te automatiseren en vragen om een handmatige toets. Dat
 
 - Gebruiksfunctie per ruimten per bouwlaag
 
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Gebouwtype: IfcBuilding (MarketCategory en MarketSubCategory)
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
 
 #### Omgevingsdata / geodata
 
@@ -380,17 +290,6 @@ Sommige SBI-coderingen zijn vergunningsvrij.
 
 - SBI-codering kantoor Beroep aan huis
 
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Bouwwerkperceel: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-- BVO per Ruimte: Bepalingsmethode BVO (= Netto + Tarra oppervlakte)
 
 #### Omgevingsdata / geodata
 
@@ -399,35 +298,6 @@ Nb. Omgevingsdata is waarschijnlijk alleen in een bepaalde zone / buffer rond he
 - Perceelgrenzen
 
 - Bestaande bebouwing
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- Perceelgrens: BRK – Digitale Kadastrale Kaart
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fb9fd1c65-1d17-4129-a237-3d00a1667312
-  
-
-- Bestaande bebouwing + status: BAG Pand
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2Ff31b46a2-b6b3-48d1-bfd3-a624bb2757c6
-  
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F9ba0e95d-5be3-4c08-9c46-4e98286392bd
-  
-
-- Bestaande bebouwing: BAG VBO + status + Gebruiksdoel + Gebruiksoppervlakte
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fdb6aad7d-d1e2-441a-a6fc-16b99b12cb28
-  
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F6ad4108e-b958-47ca-a0a0-abb836f2722e
-  
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F3b4f790f-1bf3-47f5-9160-d181e2a155d8
-  
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F55c06ea8-feb7-4392-89ba-a251a4606c5a
-   
 
 
 ### Regelgeving
@@ -479,20 +349,6 @@ Tussen NEN2580 en Bbl zitten interpretatieverschillen.
 
 - Dakvorm
 
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Bouwwerkperceel: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-- BVO per Ruimte: Bepalingsmethode BVO (= Netto + Tarra oppervlakte)
-
 #### Omgevingsdata / geodata
 
 Geen
@@ -542,7 +398,8 @@ aanwezigheid en maximale omvang (gebruiksoppervlakte) van brandcompartimenten pe
 Nb. Het gaat hier om de onderlinge afstand tussen de gebouwen op hetzelfde perceel. Voor gebouwen op aangrenzende percelen wordt gewerkt volgens het zogenaamde “spiegelsymmetrie”. Het nieuw te bouwen gebouw wordt gespiegeld op de perceelsgrens en de noodzakelijke brandoverslag maatregelen worden bepaald op basis van de afstand tussen nieuwbouw en gespiegeld gebouw.  
 Voor gebouwen die grenzen aan openbaar groen, wegen of water vindt de spiegeling plaats op de hartlijn van dat openbaar groen, wegen of water.
 
-Toets op gelijkwaardigheden (NEN 6060 / 6079). In het geval de brandcompartimenten groter zijn (in m2 GO) dan rechtstreeks toegestaan volgens het Bbl is een gelijkwaardigheidsbeoordeling nodig. De gevolgen voor de omgeving worden dan meegewogen in de gelijkwaardigheidsbeoordeling. Gebouweigenschappen, gebruiksfuncties in omliggende panden, vitale infrastructuur en inzet van de brandweer bepalen mede of de gelijkwaardigheid kan worden goedgekeurd.
+Toets op gelijkwaardigheden (NEN 6060 / 6079). In het geval de brandcompartimenten groter zijn (in m2 GO) dan rechtstreeks toegestaan volgens het Bbl is een gelijkwaardigheidsbeoordeling nodig. De gevolgen voor de omgeving worden dan meegewogen in de gelijkwaardigheidsbeoordeling. Gebouweigenschappen, gebruiksfuncties in omliggende panden, vitale infrastructuur en inzet van de brandweer bepalen mede of de gelijkwaardigheid kan worden goedgekeurd. 
+De (ingewikkelde) berekening voor de gelijkwaardigheidsbeoordeling is voor de uitwerking van deze check voorlopig buiten beschouwing gelaten.
 
 ### Informatiebehoefte
 
@@ -564,22 +421,6 @@ Toets op gelijkwaardigheden (NEN 6060 / 6079). In het geval de brandcompartiment
 
 - Rapportage gelijkwaardigheden
 
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Bouwwerkperceel: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Brandcompartiment: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- BVO per Brandcompartiment: Bepalingsmethode BVO (= Netto + Tarra oppervlakte)
-
-- WBDO (Brandwerendheid constructie): IfcWall of IfcSlab (maar IfcZone of IfcSpatialzone, IfcSpace mag ook worden gebruikt).
-
-- Brandwerende constructieonderdelen: IfcDoor, IfcWall, IfcColumn, IfcCurtainWall, IfcSlab
-
 #### Omgevingsdata / geodata
 
 Nb. Omgevingsdata is waarschijnlijk alleen in een bepaalde zone / buffer rond het bouwplan gewenst. In principe alleen direct aangrenzende percelen. Waarbij de ligging van de grens essentieel is. Waarbij een aangrenzend perceel met dezelfde eigenaar als het te bebouwen perceel als hetzelfde perceel beschouw kan worden. En de situatietekening met perceelsgrenzen die afwijken van de BRK, leidend is, uitgaande van een later te verkavelen perceel.
@@ -592,109 +433,9 @@ Nb. Omgevingsdata is waarschijnlijk alleen in een bepaalde zone / buffer rond he
 
 - Typering gebruiksdoel / gebruiksfunctie bestaande bebouwing
 
-- Vitale infrastructuur
-
-- Openbare toegankelijke ruimte (bosgebied, water, groenstrook etc.)
+- - Openbare toegankelijke ruimte (bosgebied, water, groenstrook etc.)
 
 - Openbare toegankelijke wegen (en spoor)
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- (Kadastraal) Perceel: BRK – Digitale Kadastrale Kaart
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fb9fd1c65-1d17-4129-a237-3d00a1667312
-  
-
-- Belanghebbende / eigenaar: BRK – Tenaamstelling + Naam eigenaar
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2F8a8cbe3b-00a1-486d-a5c5-0a4888374985
-  
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fbf2d680a-fd4f-4b37-bd71-1dea25f3eddd
-
-  
-- Bestaande bebouwing + status: BAG Pand
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2Ff31b46a2-b6b3-48d1-bfd3-a624bb2757c6
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F9ba0e95d-5be3-4c08-9c46-4e98286392bd
-
-
-- Bestaande bebouwing: BAG VBO + status + Gebruiksdoel
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fdb6aad7d-d1e2-441a-a6fc-16b99b12cb28
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F6ad4108e-b958-47ca-a0a0-abb836f2722e
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F3b4f790f-1bf3-47f5-9160-d181e2a155d8
-
-- BGT Overig bouwwerk
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F333255c2-7038-434f-a137-7467ef8f5af4
-
-
-- Vitale infrastructuur: BGT Kunstwerk (Overbruggingsdeel + Tunnel deel + Kunstwerk deel)
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F961e56ec-619d-46d0-a864-ef02e1d15761
-
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Ff69a331d-d799-4804-a379-1d1b2df429fd
-
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Feab060de-e74b-4530-895e-a0fcaeabe2fe
-  
-
-- Openbaar toegankelijk wegen (Weg): BGT Wegdeel en BGT Ondersteunen Wegdeel (+ classificatie Functie)
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fa1cd188f-1eac-43e3-bfcc-067fb38ebc44
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fa6f9e868-e0bc-4c1e-85da-014db2f05062
-
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fd1f6d762-5df4-4fa6-82b7-f60dc7347ea9
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F3908183e-1608-434e-8135-9984b3dbf9d1
-
-
-- Spoor: BGT Spoor (+ classificatie Functie)
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F3fdd1dc1-c2be-4ac3-abff-7feed7118fb2
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F79d479b5-e5fc-4387-97db-391006fca169
-
-
-- Openbaar toegankelijke ruimte: BGT Begroeid Terreindeel en BGT Onbegroeid Terreindeel (+ classificatie Fysiek voorkomen)
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fe6726ca4-d166-4331-96f5-a6b6c823b145
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F1b6baa04-8873-4687-a1c8-421763ab8084
-
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F373bea25-2ca2-42b6-92c6-fc0867ec8182
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F1b6baa04-8873-4687-a1c8-421763ab8084
-
-
-- Water: BGT Waterdeel en BGT Ondersteunend Waterdeel (+ classificatie Type)
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fd27277eb-91cf-48f9-b4dd-17d5bea401fb
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F2d729345-0f93-4f2b-8126-481f160d0fc6
-  
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F9515c15e-bb4e-4359-9059-cca1d527fe8c
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F0d98b138-1321-4f3c-8236-aab9e7316625
 
 
 ### Regelgeving
@@ -751,12 +492,6 @@ Alles onder de Check op Brandcompartimenten.
 Alles wat genoemd is onder de Regel Brandcompartimenten
 
 - Constructie onderdelen
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Constructie onderdelen: IfcWall, IfcColumn, IfcCurtainWall, IfcSlab
-
-- Brandcompartiment
 
 #### Omgevingsdata
 
@@ -830,19 +565,6 @@ Nb. Voor het berekenen van vrije breedte, vrije hoogte en oppervlakte wordt in h
 
 - Vrije breedte, vrije hoogte, oppervlakte
 
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie>
-
-- VerblijfsRuimte of Functieruimte, toiletruimte, badruimte, bergruimte, buitenruimte, gemeenschappelijke verkeersruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-- Verkeersroute: IfcZone
-
-- Wanden, vloeren, dak (voor berekening breedte, hoogte en oppervlakte): IfcWall, IfcFloor, IfcRoof
 
 #### Omgevingsdata
 
@@ -940,45 +662,6 @@ Voor het bepalen van de regenwering wordt verwezen naar NEN 2778.
 
 - Toegang tot buitengebied
 
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-1.  Het veilig kunnen overbruggen van hoogteverschillen (in het kader van veiligheid):
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie>
-
-- VerblijfsRuimte of Functieruimte, toiletruimte, badruimte, bergruimte, buitenruimte, gemeenschappelijke verkeersruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-- Buitenberging:
-
-- Verkeersroute: IfcZone
-
-- Vloeren: IfcFloor
-
-- Onbebouwde ruimte: IfcSite
-
-3.  Het overbruggen van hoogteverschillen (in het kader van bereikbaarheid algemeen)
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie>
-
-- Woonfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte, toiletruimte, badruimte, bergruimte, buitenruimte, gemeenschappelijke verkeersruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-- Buitenberging:
-
-- Verkeersroute: IfcZone
-
-- Vloeren: IfcFloor
-
-- Onbebouwde ruimte: IfcSite
 
 #### Omgevingsdata
 
@@ -987,38 +670,6 @@ In principe geen. Tenzij het gebouw direct grenst aan de openbare buitenruimte. 
 - Openbare weg
 
 - Openbaar groen
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- Referentiepeil: AHN / ingemeten terreinmodel
-
-  - https://www.ahn.nl/producten
-
-- Openbaar toegankelijk wegen (Weg): BGT Wegdeel en BGT Ondersteunen Wegdeel (+ classificatie Functie)
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fa1cd188f-1eac-43e3-bfcc-067fb38ebc44
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fa6f9e868-e0bc-4c1e-85da-014db2f05062
-
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fd1f6d762-5df4-4fa6-82b7-f60dc7347ea9
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F3908183e-1608-434e-8135-9984b3dbf9d1
-
-- Openbaar toegankelijke ruimte: BGT Begroeid Terreindeel en BGT Onbegroeid Terreindeel (+ classificatie Fysiek voorkomen)
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fe6726ca4-d166-4331-96f5-a6b6c823b145
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F1b6baa04-8873-4687-a1c8-421763ab8084
-
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F373bea25-2ca2-42b6-92c6-fc0867ec8182
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F1b6baa04-8873-4687-a1c8-421763ab8084
 
 ### Regelgeving
 
@@ -1079,44 +730,10 @@ Controle op RC waarde van wanden, daken en vloeren.
 
 - Bepalingsmethode volgens de NTA8800 (beng)
 
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Kadastraal-Perceel>
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie>
-
-- Wand ThermalTransmittance IfcWall,
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Wand>
-
-- Vloer ThermalTransmittance IfcSlab
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vloer>
-
-- Dak IfcRoof ThermalTransmittance
-
-- Bsdd ntb
-
-- Vliesgevel ThermalTransmittance IfcCurtainWall
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vliesgevel>
 
 #### Omgevingsdata
 
 - Aangrenzende gebouwen (rijwoningen hebben bijvoorbeeld in de scheiding geen warmte isolatie)
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- Bestaande bebouwing + status: BAG Pand
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2Ff31b46a2-b6b3-48d1-bfd3-a624bb2757c6
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F9ba0e95d-5be3-4c08-9c46-4e98286392bd
 
 ### Regelgeving
 
@@ -1168,20 +785,6 @@ Controle op U waarde van ramen, deuren en kozijnen
 - Oppervlakte ramen, deuren en kozijnen individueel en gesommeerd
 
 - Bepalingsmethode volgens de NTA8800 (beng)
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Deur ThermalTransmittance IfcDoor,
-
-- Raam ThermalTransmittance IfcWindow
-
-- Vliesgevel ThermalTransmittance IfcCurtainWall
-
-- <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vliesgevel>
 
 #### Omgevingsdata
 
@@ -1254,15 +857,6 @@ Noot: verliesoppervlakte = het totaal van de oppervlakten van alle uitwendige sc
 
 - Buitenmuren, daken en vloeren (die aan de buitenlucht grenzen)
 
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-- Muren, daken, vloeren: IfcWall, IfcRoof, IfcFloor
-
-- GO per Ruimte: Bepalingsmethode GO
 
 #### Omgevingsdata
 
@@ -1330,36 +924,9 @@ Noot: Met een vluchtroute bedoelt het Besluit bouwwerken leefomgeving (Bbl): *ee
 
 - Deuren
 
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-- Terrein behorende bij gebouw: IfcSite
-
-- Brandcompartimenten: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Deuren en vloeren: IfcDoor en IfcFloor
-
 #### Omgevingsdata
 
 - Openbare weg
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- Openbaar toegankelijk wegen (Weg): BGT Wegdeel en BGT Ondersteunen Wegdeel (+ classificatie Functie)
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fa1cd188f-1eac-43e3-bfcc-067fb38ebc44
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fa6f9e868-e0bc-4c1e-85da-014db2f05062
-
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fd1f6d762-5df4-4fa6-82b7-f60dc7347ea9
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F3908183e-1608-434e-8135-9984b3dbf9d1
 
 ### Regelgeving
 
@@ -1431,18 +998,6 @@ De loopafstand is de afstand tussen een meest verwijderd punt in een niet nader 
 - Deuren
 
 - Bezettingsgraad (personeel)
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-- Brandcompartimenten: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Deuren en vloeren: IfcDoor en IfcFloor
-
-- GO per Ruimte: Bepalingsmethode GO
 
 #### Omgevingsdata
 
@@ -1536,45 +1091,6 @@ Als gemeente kun je kiezen om het volledig na te rekenen of steekproefsgewijs te
 
 - Bezettingsgraad per verblijfsgebied en vluchtroute
 
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-1.  Vrije doorgang vluchtroutes
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie>
-
-- Verblijfsgebied, bedruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-- Buitenberging:
-
-- Vluchtroute: IfcZone
-
-- Trap: IfcStairs
-
-- Wanden, Vloeren, daken: IfcWall, IfcFloor, IfcRoof
-
-2.  Doorstroomcapaciteit
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie>
-
-- Verblijfsgebied, bedruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-- Buitenberging:
-
-- Vluchtroute: IfcZone
-
-- Trap: IfcStairs
-
-- Wanden, Vloeren, daken: IfcWall, IfcFloor, IfcRoof
-
-- Deuren: IfcDoor
 
 #### Omgevingsdata
 
@@ -1643,16 +1159,6 @@ Een bouwwerk is zodanig dat daglicht in voldoende mate kan toetreden.
 
 - Nieuwe perceelsgrenzen (Bouwwerkperceel)
 
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-Verblijfsruimten
-
-Verblijfsgebieden
-
-<https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebouw>
-
-Window, Door, Curtain Wall – netto glas oppervlakte
-
 #### Omgevingsdata
 
 - Afstand gevel gebouw tot de perceelsgrens
@@ -1662,71 +1168,6 @@ Window, Door, Curtain Wall – netto glas oppervlakte
 - Huidige en toekomstige veranderingen van de omgeving
 
 - Eigendom belendende percelen
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- (Kadastraal) Perceel: BRK – Digitale Kadastrale Kaart
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fb9fd1c65-1d17-4129-a237-3d00a1667312
-  
-
-- Belanghebbende / eigenaar: BRK – Tenaamstelling + Naam eigenaar
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2F8a8cbe3b-00a1-486d-a5c5-0a4888374985
-  
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbrk%2Fbf2d680a-fd4f-4b37-bd71-1dea25f3eddd
-
-- Bestaande bebouwing + status: BAG Pand
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2Ff31b46a2-b6b3-48d1-bfd3-a624bb2757c6
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbag%2F9ba0e95d-5be3-4c08-9c46-4e98286392bd
-
-
-- Openbaar toegankelijk wegen (Weg): BGT Wegdeel en BGT Ondersteunen Wegdeel (+ classificatie Functie)
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fa1cd188f-1eac-43e3-bfcc-067fb38ebc44
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fa6f9e868-e0bc-4c1e-85da-014db2f05062
-
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fd1f6d762-5df4-4fa6-82b7-f60dc7347ea9
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F3908183e-1608-434e-8135-9984b3dbf9d1
-
-
-- Spoor: BGT Spoor (+ classificatie Functie)
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F3fdd1dc1-c2be-4ac3-abff-7feed7118fb2
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F79d479b5-e5fc-4387-97db-391006fca169
-
-
-- Openbaar toegankelijke ruimte: BGT Begroeid Terreindeel en BGT Onbegroeid Terreindeel (+ classificatie Fysiek voorkomen)
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fe6726ca4-d166-4331-96f5-a6b6c823b145
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F1b6baa04-8873-4687-a1c8-421763ab8084
-
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F373bea25-2ca2-42b6-92c6-fc0867ec8182
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F1b6baa04-8873-4687-a1c8-421763ab8084
-
-
-- Water: BGT Waterdeel en BGT Ondersteunend Waterdeel (+ classificatie Type)
-
-  - https://stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2Fd27277eb-91cf-48f9-b4dd-17d5bea401fb
-
-
-  - https://stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fmkg%2Fbgt%2F2d729345-0f93-4f2b-8126-481f160d0fc6
 
 ### Regelgeving
 

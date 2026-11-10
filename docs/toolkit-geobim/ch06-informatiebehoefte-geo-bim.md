@@ -1,153 +1,67 @@
 # Informatiebehoefte: geo- en BIM-data {#informatiebehoefte-geo-bim}
 
-Dit hoofdstuk geeft een overzicht van de uitgewerkte en gecombineerde informatiebehoefte voor de 17 checks. De specificaties zijn terug te vinden in bijlage c (ILS omgevingsvergunning) en bijlage d (ILS Geo-informatie). 
+Dit hoofdstuk geeft een overzicht van de uitgewerkte en gecombineerde informatiebehoefte voor de 17 checks. De gedetailleerde specificaties zijn terug te vinden in bijlage c (ILS omgevingsvergunning) en bijlage d (ILS Geo-informatie). 
+
+| | |
+|---|---|
+| **Bron** | BM13-tracker, tabbladen *Datarequirements* |
+| **Checks** | 17 checks, één tabel met informatiebehoefte (minimale vereiste) per check |
+
 
 ## Regel #1: BM13-R01 Gebruiksfunctie komt overeen met bestemming
 
 | Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
 |---------|---------|---------|---------|---------|---------|
-| MO1 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | Must | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
-| MO2 | Constructieonderdelen met gesloten geometrie per bouwlaag | Must | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
-| volgt |  |  |  |  |  |
+| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | Must | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | Must | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| M03 | Georeferentie in RD New / NAP met de juiste schaling, BIM geplaatst op de vergunning locatie | Must | BIM  | IfcMapConversion (Eastings, Northings, OrthogonalHeight, rotation, Scale), IfcProjectedCRS | -  |
+| M04 | De gebruiksfuncties in het gebouw | Must | BIM  | IfcZone with ObjectType = Gebruiksfunctie; Name = use function (e.g. Woonfunctie) | -  |
+| M05 | Gebruikseenheden, nevenfuncties and ruimten | SHOULD | BIM  | IfcZone Gebruikseenheid, Nevengebruiksfunctie; IfcSpace Functieruimte, Verblijfsruimte | -  |
+| M06 | Externe gebouwdelen (balkon, luifel etc.) | SHOULD | BIM  | IfcSlab PredefinedType; Pset_SlabCommon.IsExternal | -  |
+| M07 | Adres, bouwwerkperceel en kadastraal perceel (in model) | SHOULD | BIM  | Pset_Address, SiteAddress, BuildingAddress; IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
+| M08 | De toegestande (gebruiks-) functie op de locatie | MUST | GEO  | - | Werkingsgebied gebiedsaanwijzing / functie |
+| M09 | Kadastrale perceelsgrenzen | MUST | GEO  | - | Perceelgrens  |
 
-
-### Informatiebehoefte
-
-#### Gebouwdata
-
-- Bouwaanvraag /Plattegrond/ bouwtekening
-
-- Gebruiksfunctie per ruimten per bouwlaag
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Bouwwerkperceel: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-#### Omgevingsdata / geodata
-
-- Perceelgrenzen
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- Perceelgrens: BRK – Digitale Kadastrale Kaart
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_KadastraleGrens>
 
 ## Regel #2: Maximale bouwhoogte
 
-### Informatiebehoefte
+| Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
+|---------|---------|---------|---------|---------|---------|
+| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | Must | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | Must | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| M03 | Georeferentie in RD New / NAP met de juiste schaling, BIM geplaatst op de vergunning locatie | Must | BIM  | IfcMapConversion (Eastings, Northings, OrthogonalHeight, rotation, Scale), IfcProjectedCRS | -  |
+| M04 | Het dak herkenbaar als dak | Must | BIM  | IfcRoof, or IfcSlab PredefinedType ROOF, with Representation | -  |
+| M05 | Gebouwinstallaties (schoorstenen, lift, dakrailing etc.) | SHOULD | BIM  | IfcChimney, IfcTransportElement with Representation | -  |
+| M06 | De NAP hoogte van de hoofdtoegang tot het gebouw op de begane grond (referentiepeil methode 2) | MUST (voor locaties met referentiepeil methode 2) | BIM  | IfcBuildingStorey with EntranceLevel = true and Elevation; IfcSite.RefElevation (cross-check) | -  |
+| M07 | De hoogte van de dichtstbijzijnde openbare weg (referentiepeil methode 1) | MUST (voor locaties met referentiepeil methode 1)| GEO | - | Algemeen Hoogtebestand Nederland (DTM) |
+| M08 | De maximale bebouwingshoogte op de locatie | MUST | GEO  | - | Werkingsgebied omgevingsnorm / bebouwingshoogte |
+| M09 | Kadastrale perceelsgrenzen van de locatie | MUST | GEO  | - | Perceelgrens  |
+| M10 | Adres, bouwwerkperceel en kadastraal perceel (in model) | SHOULD | BIM  | Pset_Address, SiteAddress, BuildingAddress; IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
 
-#### Gebouwdata
-
-- Bouwaanvraag /Plattegrond / bouwtekening
-
-- Dakvorm
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Bouwwerkperceel: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- *Hoogte van het gebouw is geen begrip in ILS ruimte*
-
-#### Omgevingsdata / geodata
-
-- Perceelgrenzen
-
-- Referentiepeil (door gemeente bepaald)
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- Perceelgrens: BRK – Digitale Kadastrale Kaart
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_KadastraleGrens>
-
-- Referentiepeil: AHN / ingemeten terreinmodel
-
-  - <https://www.ahn.nl/producten>
-
-Nb. We verwijzen hier naar de jaarlijkse landsdekkende luchtfoto's en het landsdekkende hoogtebestand van respectievelijk Beeldmateriaal Nederland en Algemeen Hoogtebestand Nederland. Sommige gemeenten hebben daarnaast nog eigen luchtfoto's en soms ook nog eigen hoogtebestanden.
+#### Ad M07: 
+We verwijzen hier naar het terreinmodel op basis van het landsdekkende Hoogtebestand Nederland (AHN). Sommige gemeenten hebben daarnaast nog terreinmodel op basis van eigen hoogtebestanden.
 
 ## Regel #3: Maximaal bebouwingspercentage
 
-### Informatiebehoefte
+| Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
+|---------|---------|---------|---------|---------|---------|
+| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | Must | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | Must | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| M03 | Georeferentie in RD New / NAP met de juiste schaling, BIM geplaatst op de vergunning locatie | Must | BIM  | IfcMapConversion (Eastings, Northings, OrthogonalHeight, rotation, Scale), IfcProjectedCRS | - |
+| M04 | Gebouwinhoud als een gesloten geometrisch volume | Must | BIM  | IfcSpatialZone ObjectType = Gebouwinhoud, closed Representation | - |
+| M05 | Berekende hoeveelheden (bruto inhoud, oppervlakte, m2, m3) door de ontwerpsoftware | MUST | BIM  | Qto_…BaseQuantities (gross / footprint area)| - |
+| M06 | Oppervlaktes bepaald volgens NEN2580 | SHOULD | BIM  | Qto_…BaseQuantities (gross / footprint area) | - |
+| M07 | Kadastrale perceelsgrenzen van de locatie| MUST | GEO  | - | Perceelgrens  |
+| M08 | De bestaande bebouwing op de locatie | MUST | GEO  | - | BAG - panden en BGT overige bouwwerken |
+| M09 | De luchtfoto van de locatie | SHOULD | GEO  | - | Luchtfoto |
+| M10 | Het maximale bebouwingspercentage op de locatie | MUST | GEO  | - | Werkingsgebied omgevingsnorm / bebouwingspercentage  |
 
-#### Gebouwdata
 
-- Bouwaanvraag /Plattegrond / bouwtekening/situatietekening
-
-- Gebouwtype
-
-- Gebruiksfunctie
-
-- Plattegrond op maaiveld / begane grond
-
-- Bruto oppervlakte per begane grond laag
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Bouwwerkperceel: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-- Gebouwtype: IfcBuilding (MarketCategory en MarketSubCategory)
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-#### Omgevingsdata / geodata
-
-- Bestaande bebouwing
-
-- Luchtfoto
-
-- Perceelgrenzen
-
-- Referentiepeil (door gemeente bepaald)
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- BGT Pand
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGregistratie_entiteit_Pand>
-
-<!-- -->
-
-- BGT Overig bouwwerk
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Overig%2520bouwwerk>
-
-<!-- -->
-
-- Luchtfoto
-
-  - <https://www.beeldmateriaal.nl/producten>
-
-- Perceelgrens: BRK – Digitale Kadastrale Kaart
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_KadastraleGrens>
-
-- Referentiepeil: AHN / ingemeten terreinmodel
-
-  - <https://www.ahn.nl/producten>
-
-Nb. We verwijzen hier naar de jaarlijkse landsdekkende luchtfoto's en het landsdekkende hoogtebestand van respectievelijk Beeldmateriaal Nederland en Algemeen Hoogtebestand Nederland. Sommige gemeenten hebben daarnaast nog eigen luchtfoto's en soms ook nog eigen hoogtebestanden.
+#### Ad M09
+Nb. We verwijzen hier naar de jaarlijkse landsdekkende luchtfoto's Beeldmateriaal Nederland. Sommige gemeenten hebben daarnaast nog eigen luchtfoto's.
 
 ## Regel #4: Gebruiksfunctie / Bestemming beperkt tot x aantal bouwlagen
+
 
 ### Informatiebehoefte
 

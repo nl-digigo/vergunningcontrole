@@ -12,553 +12,212 @@ Dit hoofdstuk geeft een overzicht van de uitgewerkte en gecombineerde informatie
 
 | Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
 |---------|---------|---------|---------|---------|---------|
-| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | Must | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
-| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | Must | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
-| M03 | Georeferentie in RD New / NAP met de juiste schaling, BIM geplaatst op de vergunning locatie | Must | BIM  | IfcMapConversion (Eastings, Northings, OrthogonalHeight, rotation, Scale), IfcProjectedCRS | -  |
-| M04 | De gebruiksfuncties in het gebouw | Must | BIM  | IfcZone with ObjectType = Gebruiksfunctie; Name = use function (e.g. Woonfunctie) | -  |
+| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | MUST | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | MUST | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| M03 | Georeferentie in RD New / NAP met de juiste schaling, BIM geplaatst op de vergunning locatie | MUST | BIM  | IfcMapConversion (Eastings, Northings, OrthogonalHeight, rotation, Scale), IfcProjectedCRS | -  |
+| M04 | De gebruiksfuncties in het gebouw | MUST | BIM  | IfcZone with ObjectType = Gebruiksfunctie; Name = use function (e.g. Woonfunctie) | -  |
 | M05 | Gebruikseenheden, nevenfuncties and ruimten | SHOULD | BIM  | IfcZone Gebruikseenheid, Nevengebruiksfunctie; IfcSpace Functieruimte, Verblijfsruimte | -  |
 | M06 | Externe gebouwdelen (balkon, luifel etc.) | SHOULD | BIM  | IfcSlab PredefinedType; Pset_SlabCommon.IsExternal | -  |
 | M07 | Adres, bouwwerkperceel en kadastraal perceel (in model) | SHOULD | BIM  | Pset_Address, SiteAddress, BuildingAddress; IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
-| M08 | De toegestande (gebruiks-) functie op de locatie | MUST | GEO  | - | Werkingsgebied gebiedsaanwijzing / functie |
-| M09 | Kadastrale perceelsgrenzen | MUST | GEO  | - | Perceelgrens  |
+| M08 | De toegestane (gebruiks-) functie op de locatie | MUST | GEO  | - | Werkingsgebied gebiedsaanwijzing / functie (STOP/TPOD) of Enkelbestemming (IMRO) |
+| M10 | Kadastrale perceelsgrenzen | MUST | GEO  | - | Perceelgrens  |
+
 
 
 ## Regel #2: Maximale bouwhoogte
 
 | Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
 |---------|---------|---------|---------|---------|---------|
-| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | Must | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
-| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | Must | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | MUST | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | MUST | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
 | M03 | Georeferentie in RD New / NAP met de juiste schaling, BIM geplaatst op de vergunning locatie | Must | BIM  | IfcMapConversion (Eastings, Northings, OrthogonalHeight, rotation, Scale), IfcProjectedCRS | -  |
-| M04 | Het dak herkenbaar als dak | Must | BIM  | IfcRoof, or IfcSlab PredefinedType ROOF, with Representation | -  |
+| M04 | Het dak herkenbaar als dak | MUST | BIM  | IfcRoof, or IfcSlab PredefinedType ROOF, with Representation | -  |
 | M05 | Gebouwinstallaties (schoorstenen, lift, dakrailing etc.) | SHOULD | BIM  | IfcChimney, IfcTransportElement with Representation | -  |
 | M06 | De NAP hoogte van de hoofdtoegang tot het gebouw op de begane grond (referentiepeil methode 2) | MUST (voor locaties met referentiepeil methode 2) | BIM  | IfcBuildingStorey with EntranceLevel = true and Elevation; IfcSite.RefElevation (cross-check) | -  |
 | M07 | De hoogte van de dichtstbijzijnde openbare weg (referentiepeil methode 1) | MUST (voor locaties met referentiepeil methode 1)| GEO | - | Algemeen Hoogtebestand Nederland (DTM) |
-| M08 | De maximale bebouwingshoogte op de locatie | MUST | GEO  | - | Werkingsgebied omgevingsnorm / bebouwingshoogte |
-| M09 | Kadastrale perceelsgrenzen van de locatie | MUST | GEO  | - | Perceelgrens  |
+| M08 | De maximale bebouwingshoogte op de locatie | MUST | GEO  | - | Werkingsgebied omgevingsnorm / bebouwingshoogte (STOP/TPOD) of Maatvoering maximale bouwhoogte (IMRO) |
 | M10 | Adres, bouwwerkperceel en kadastraal perceel (in model) | SHOULD | BIM  | Pset_Address, SiteAddress, BuildingAddress; IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
+| M11 | Kadastrale perceelsgrenzen van de locatie | MUST | GEO  | - | Perceelgrens  |
 
-#### Ad M07: 
+### Ad M07: 
 We verwijzen hier naar het terreinmodel op basis van het landsdekkende Hoogtebestand Nederland (AHN). Sommige gemeenten hebben daarnaast nog terreinmodel op basis van eigen hoogtebestanden.
+
 
 ## Regel #3: Maximaal bebouwingspercentage
 
 | Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
 |---------|---------|---------|---------|---------|---------|
-| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | Must | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
-| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | Must | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
-| M03 | Georeferentie in RD New / NAP met de juiste schaling, BIM geplaatst op de vergunning locatie | Must | BIM  | IfcMapConversion (Eastings, Northings, OrthogonalHeight, rotation, Scale), IfcProjectedCRS | - |
-| M04 | Gebouwinhoud als een gesloten geometrisch volume | Must | BIM  | IfcSpatialZone ObjectType = Gebouwinhoud, closed Representation | - |
+| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | MUST | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | MUST | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| M03 | Georeferentie in RD New / NAP met de juiste schaling, BIM geplaatst op de vergunning locatie | MUST | BIM  | IfcMapConversion (Eastings, Northings, OrthogonalHeight, rotation, Scale), IfcProjectedCRS | - |
+| M04 | Gebouwinhoud als een gesloten geometrisch volume | MUST | BIM  | IfcSpatialZone ObjectType = Gebouwinhoud, closed Representation | - |
 | M05 | Berekende hoeveelheden (bruto inhoud, oppervlakte, m2, m3) door de ontwerpsoftware | MUST | BIM  | Qto_…BaseQuantities (gross / footprint area)| - |
 | M06 | Oppervlaktes bepaald volgens NEN2580 | SHOULD | BIM  | Qto_…BaseQuantities (gross / footprint area) | - |
 | M07 | Kadastrale perceelsgrenzen van de locatie| MUST | GEO  | - | Perceelgrens  |
 | M08 | De bestaande bebouwing op de locatie | MUST | GEO  | - | BAG - panden en BGT overige bouwwerken |
-| M09 | De luchtfoto van de locatie | SHOULD | GEO  | - | Luchtfoto |
-| M10 | Het maximale bebouwingspercentage op de locatie | MUST | GEO  | - | Werkingsgebied omgevingsnorm / bebouwingspercentage  |
+| M10 | Het maximale bebouwingspercentage op de locatie | MUST | GEO  | - | Werkingsgebied omgevingsnorm / bebouwingspercentage (STOP/TPOD) of maatvoering maximum bebouwingspercentage (IMRO)|
+| M12 | Adressen, perceelsaanduiding, bouwwerkperceel, bouwlagen, gebruiksfuncties en ruimten in het model | SHOULD | BIM  | Pset_Address; IfcSpatialZone Perceel, Bouwwerkperceel, Kadastraal perceel, Bouwlaaginhoud; IfcBuilding; IfcZone Gebruiksfunctie; IfcSpace Functieruimte, Verblijfsruimte | - |
+| M13 | De luchtfoto van de locatie | SHOULD | GEO  | - | Luchtfoto |
 
-
-#### Ad M09
+### Ad M09
 Nb. We verwijzen hier naar de jaarlijkse landsdekkende luchtfoto's Beeldmateriaal Nederland. Sommige gemeenten hebben daarnaast nog eigen luchtfoto's.
+
 
 ## Regel #4: Gebruiksfunctie / Bestemming beperkt tot x aantal bouwlagen
 
+| Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
+|---------|---------|---------|---------|---------|---------|
+| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | MUST | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | MUST | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| M03 | Gebruiksfuncties per bouwlaag | MUST | BIM  | IfcZone ObjectType = Gebruiksfunctie, Name = Bbl use function; spaces per storey | - |
+| M04 | Neven gebruiksfuncties | SHOULD | BIM  | IfcZone ObjectType = Nevengebruiksfunctie | - |
+| M05 | Het gebouw en zijn (BAG-)pandidenticatie (indien beschikbaar) | SHOULD | BIM  | IfcBuilding, Pset_BuildingCommon.BuildingID | - |
+| M07 | Toegestane gebruiksfuncties (en beperkingen) per bouwlaag op de locatie| MUST | GEO  | - | Werkingsgebied gebiedsaanwijzing / functie met bouwlaagnorm(STOP/TPOD) of Aanduiding (IMRO) |  |
+| M09 | Adres (-sen) van het gebouw | SHOULD | BIM  | Pset_Address, SiteAddress, BuildingAddress = VBO-adres (BAG) |  |
+| M10 | Georeferentie in RD New / NAP met de juiste schaling, BIM geplaatst op de vergunning locatie | MUST | BIM  | IfcMapConversion (Eastings, Northings, OrthogonalHeight, rotation, Scale), IfcProjectedCRS | - |
 
-### Informatiebehoefte
-
-#### Gebouwdata
-
-- Bouwaanvraag /Plattegrond / bouwtekening
-
-- Gebouwtype
-
-- Gebruiksfunctie per ruimten per bouwlaag
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Gebouwtype: IfcBuilding (MarketCategory en MarketSubCategory)
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-#### Omgevingsdata / geodata
-
-Geen.
 
 ## Regel #5: Beroep aan huis: maximaal 50% gebruiksoppervlakte bedrijfsgebonden kantoor
 
-### Informatiebehoefte
+| Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
+|---------|---------|---------|---------|---------|---------|
+| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | MUST | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | MUST | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| M03 | Georeferentie in RD New / NAP met de juiste schaling, BIM geplaatst op de vergunning locatie | MUST | BIM  | IfcMapConversion (Eastings, Northings, OrthogonalHeight, rotation, Scale), IfcProjectedCRS | - |
+| M04 | De gebruiksfuncties in het gebouw | MUST | BIM  | IfcZone with ObjectType = Gebruiksfunctie; Name = use function (e.g. Woonfunctie) | -  |
+| M05 | Neven gebruiksfuncties | SHOULD | BIM  | IfcZone ObjectType = Nevengebruiksfunctie | - |
+| M06 | De gebruikseenheden in het gebouw | MUST | BIM  | IfcZone ObjectType = Gebruikseenheid | - |
+| M07 | Berekende hoeveelheden (bruto inhoud, oppervlakte, m2, m3) door de ontwerpsoftware | MUST | BIM  | Qto_…BaseQuantities (gross / footprint area)| - |
+| M08 | Oppervlaktes bepaald volgens NEN2580 | SHOULD | BIM  | Qto_…BaseQuantities (gross / footprint area) | - |
+| M09 | Ruimten, functies en oppervlaktes| SHOULD | BIM  | IfcSpace Functieruimte, Verblijfsruimte, Restruimte, Tarra ruimte; IfcSpatialZone Restgebied | - |
+| M11 | Maximale gebruiksoppervlakte en aandeel beroep aan huis op de locatie | MUST | GEO  | - | Werkingsgebied gebiedsaanwijzing / omgevingsnorm voor beroep aan huis (STOP/TPOD), aanwijzing (IMRO) |
+| M13 | Adres, bouwwerkperceel en kadastraal perceel (in model) | SHOULD | BIM  | Pset_Address, SiteAddress, BuildingAddress; IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
 
-#### Gebouwdata
-
-- Bouwaanvraag /Plattegrond / bouwtekening
-
-- Gebruiksfunctie
-
-- Bruto oppervlakte ruimten per gebruiksfunctie
-
-- Situatietekening (bouwwerkperceel + kadastraal perceel + belendende percelen en bouwwerken)
-
-- SBI-codering kantoor Beroep aan huis
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Bouwwerkperceel: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-- BVO per Ruimte: Bepalingsmethode BVO (= Netto + Tarra oppervlakte)
-
-#### Omgevingsdata / geodata
-
-Nb. Omgevingsdata is waarschijnlijk alleen in een bepaalde zone / buffer rond het bouwplan gewenst.
-
-- Perceelgrenzen
-
-- Bestaande bebouwing
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- Perceelgrens: BRK – Digitale Kadastrale Kaart
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_KadastraleGrens>
-
-- Bestaande bebouwing + status: BAG Pand
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGregistratie_entiteit_Pand>
-
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGkenmerk_status-pand>
-
-- Bestaande bebouwing: BAG VBO + status + Gebruiksdoel + Gebruiksoppervlakte
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGregistratie_entiteit_Verblijfsobject>
-
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGkenmerk_status-verblijfsobject>
-
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGkenmerk_gebruiksdoel-verblijfsobject>
-
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGkenmerk_oppervlakte-verblijfsobject>
 
 ## Regel #6: Maximum aantal bouwlagen
 
-### Informatiebehoefte
+| Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
+|---------|---------|---------|---------|---------|---------|
+| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | MUST | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | MUST | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| M03 | Bouwlagen als geometrisch volume | MUST | BIM  | IfcSpatialZone ObjectType = Bouwlaaginhoud, closed Representation | - |
+| M04 | Ruimten, functies en oppervlaktes| SHOULD | BIM  | IfcSpace Functieruimte, Verblijfsruimte, Restruimte, Tarra ruimte; IfcSpatialZone Restgebied | - |
+| M06 | Maximum aantal bouwlagen op de locatie | MUST | GEO  | - | Werkingsgebied gebiedsaanwijzing / omgevingsnorm voor maximum aantal bouwlagen (STOP/TPOD), maatvoering (IMRO) |
+| M07 | De NAP hoogte van de hoofdtoegang tot het gebouw op de begane grond (referentiepeil methode 2) | MUST (voor locaties met referentiepeil methode 2) | BIM  | IfcBuildingStorey with EntranceLevel = true and Elevation; IfcSite.RefElevation (cross-check) | -  |
+| M08 | De hoogte van de dichtstbijzijnde openbare weg (referentiepeil methode 1) | MUST (voor locaties met referentiepeil methode 1)| GEO | - | Algemeen Hoogtebestand Nederland (DTM) |
+| M10 | Adres, bouwwerkperceel en kadastraal perceel (in model) | SHOULD | BIM  | Pset_Address, SiteAddress, BuildingAddress; IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
+| M11 | Georeferentie in RD New / NAP met de juiste schaling, BIM geplaatst op de vergunning locatie | MUST | BIM  | IfcMapConversion (Eastings, Northings, OrthogonalHeight, rotation, Scale), IfcProjectedCRS | - |
 
-#### Gebouwdata
+### Ad M08: 
+We verwijzen hier naar het terreinmodel op basis van het landsdekkende Hoogtebestand Nederland (AHN). Sommige gemeenten hebben daarnaast nog terreinmodel op basis van eigen hoogtebestanden.
 
-- Bouwaanvraag /Plattegrond / bouwtekening
-
-- Aanwezigheid kelder
-
-- Dakvorm
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Bouwwerkperceel: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-- BVO per Ruimte: Bepalingsmethode BVO (= Netto + Tarra oppervlakte)
-
-#### Omgevingsdata / geodata
-
-Geen
 
 ## Regel #7: Brandcompartimenten
 
-### Informatiebehoefte
+| Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
+|---------|---------|---------|---------|---------|---------|
+| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | MUST | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | MUST | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| M03 | Bouwlagen als geometrisch volume | MUST | BIM  | IfcSpatialZone ObjectType = Bouwlaaginhoud, closed Representation | - |
+| M04 | De gebruiksfuncties in het gebouw | MUST | BIM  | IfcZone with ObjectType = Gebruiksfunctie; Name = use function (e.g. Woonfunctie) | -  |
+| M05 | De brandcompartimenten als geometrisch volume | MUST | BIM  | IfcZone / IfcSpatialZone Brandcompartiment | -  |
+| M06 | Berekende hoeveelheden (bruto inhoud, oppervlakte, m2, m3) door de ontwerpsoftware | MUST | BIM  | Qto_…BaseQuantities (gross / footprint area)| - |
+| M07 | Ruimten en begrenzing op bouwlaag 2 | MUST | BIM  | IfcRelSpaceBoundary (second level) | - |
+| M08 | Brandwerendheid van wanden, vloeren, kolommen, deuren en vliesgevels | SHOULD | BIM  | IfcColumn, IfcCurtainWall, IfcDoor, IfcSlab, IfcWall; Pset_…Common.FireRating | - |
+| M09 | De bestaande bebouwing op de locatie | SHOULD | GEO  | - | BAG - panden en BGT overige bouwwerken |
+| M10 | De openbare ruimte (wegen / spoor, water en groen) | SHOULD | GEO  | - | BGT openbare ruimte (wegen, spoor, water en groen) |
+| M14 | Adres, bouwwerkperceel en kadastraal perceel (in model) | SHOULD | BIM  | Pset_Address, SiteAddress, BuildingAddress; IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
+| M15 | Georeferentie in RD New / NAP met de juiste schaling, BIM geplaatst op de vergunning locatie | MUST | BIM  | IfcMapConversion (Eastings, Northings, OrthogonalHeight, rotation, Scale), IfcProjectedCRS | - |
 
-#### Gebouwdata (als onderdeel van de ingediende vergunningaanvraag):
+### Ad M9 en M10
+Omgevingsdata is waarschijnlijk alleen in een bepaalde zone / buffer rond het bouwplan gewenst. In principe alleen direct aangrenzende percelen. Waarbij de ligging van de grens essentieel is. Waarbij een aangrenzend perceel met dezelfde eigenaar als het te bebouwen perceel als hetzelfde perceel beschouw kan worden. En de situatietekening met perceelsgrenzen die afwijken van de BRK, leidend is, uitgaande van een later te verkavelen perceel.
 
-- Bouwaanvraag /Plattegrond / doorsneden
-
-- Gebruiksfunctie
-
-- Situatietekening (bouwwerkperceel + kadastraal perceel + belendende percelen en bouwwerken)
-
-- Brandcompartimenten (aanduiding + contouren)
-
-- BVO per brandcompartiment
-
-- Brandwerende constructieonderdelen met specificatie en certificaat (behalve aantoonbare brandwerende constructieonderdelen zoals beton of steen)
-
-- Gevel nieuw te bouwen gebouw met specificatie en certificaat (behalve aantoonbare brandwerende constructieonderdelen zoals beton of steen)
-
-- Rapportage gelijkwaardigheden
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Bouwwerkperceel: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Brandcompartiment: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- BVO per Brandcompartiment: Bepalingsmethode BVO (= Netto + Tarra oppervlakte)
-
-- WBDO (Brandwerendheid constructie): IfcWall of IfcSlab (maar IfcZone of IfcSpatialzone, IfcSpace mag ook worden gebruikt).
-
-- Brandwerende constructieonderdelen: IfcDoor, IfcWall, IfcColumn, IfcCurtainWall, IfcSlab
-
-#### Omgevingsdata / geodata
-
-Nb. Omgevingsdata is waarschijnlijk alleen in een bepaalde zone / buffer rond het bouwplan gewenst. In principe alleen direct aangrenzende percelen. Waarbij de ligging van de grens essentieel is. Waarbij een aangrenzend perceel met dezelfde eigenaar als het te bebouwen perceel als hetzelfde perceel beschouw kan worden. En de situatietekening met perceelsgrenzen die afwijken van de BRK, leidend is, uitgaande van een later te verkavelen perceel.
-
-- Perceelgrenzen
-
-- Belanghebbende / eigenaar
-
-- Bestaande bebouwing
-
-- Typering gebruiksdoel / gebruiksfunctie bestaande bebouwing
-
-- Vitale infrastructuur
-
-- Openbare toegankelijke ruimte (bosgebied, water, groenstrook etc.)
-
-- Openbare toegankelijke wegen (en spoor)
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- Perceelgrens: BRK – Digitale Kadastrale Kaart
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_KadastraleGrens>
-
-- Belanghebbende / eigenaar: BRK – Zakelijke recht + Natuurlijk of Niet natuurlijk Persoon
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_ZakelijkRecht>
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_NatuurlijkPersoon>
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBRKregistratie_entiteit_NietNatuurlijkPersoon>
-
-- Bestaande bebouwing + status: BAG Pand
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGregistratie_entiteit_Pand>
-
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGkenmerk_status-pand>
-
-- Bestaande bebouwing: BAG VBO + status + Gebruiksdoel
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGregistratie_entiteit_Verblijfsobject>
-
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGkenmerk_status-verblijfsobject>
-
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBAGkenmerk_gebruiksdoel-verblijfsobject>
-
-- Vitale infrastructuur: BGT Kunstwerk (Overbruggingsdeel + Tunnel deel + Kunstwerk deel)
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Overbruggingsdeel>
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Tunneldeel>
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Kunstwerkdeel>
-
-- Weg: BGT Wegdeel en BGT Ondersteunen Wegdeel (+ classificatie Functie)
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Wegdeel>
-
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_functie-wegdeel>
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Ondersteunend%2520wegdeel>
-
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_functie-ondersteunend-wegdeel>
-
-- Spoor: BGT Spoor (+ classificatie Functie)
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Spoor>
-
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_functie-spoor>
-
-- Openbaar groen: BGT Begroeid Terreindeel en BGT Onbegroeid Terreindeel (+ classificatie Fysiek voorkomen)
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Begroeid%2520terreindeel>
-
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_plus-fysiek-voorkomen-begroeid-terreindeel>
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Onbegroeid%2520terreindeel>
-
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_fysiek-voorkomen-onbegroeid-terreindeel>
-
-- Water: BGT Waterdeel en BGT Ondersteunend Waterdeel (+ classificatie Type)
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Waterdeel>
-
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_type-waterdeel>
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Ondersteunend%2520waterdeel>
-
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_type-ondersteunend-waterdeel>
 
 ## Regel #8: Brandwerendheid
 
-### Informatiebehoefte
+| Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
+|---------|---------|---------|---------|---------|---------|
+| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | MUST | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | MUST | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| M03 | De gebruiksfuncties in het gebouw | MUST | BIM  | IfcZone with ObjectType = Gebruiksfunctie; Name = use function (e.g. Woonfunctie) | -  |
+| M04 | De brandcompartimenten als geometrisch volume | MUST | BIM  | IfcZone / IfcSpatialZone Brandcompartiment | -  |
+| M05 | Ruimten en begrenzing op bouwlaag 2 | MUST | BIM  | IfcRelSpaceBoundary (second level) | - |
+| M06 | Brandwerendheid van wanden, vloeren, kolommen, deuren en vliesgevels | SHOULD | BIM  | IfcColumn, IfcCurtainWall, IfcDoor, IfcSlab, IfcWall; Pset_…Common.FireRating | - |
+| M07 | Wanden, vloeren, kolommen, deuren en vliesgevels als fysieke onderdelen | SHOULD | BIM  | IfcColumn, IfcCurtainWall, IfcDoor, IfcSlab, IfcWall | - |
+| M11 | Georeferentie in RD New / NAP met de juiste schaling, BIM geplaatst op de vergunning locatie | MUST | BIM  | IfcMapConversion (Eastings, Northings, OrthogonalHeight, rotation, Scale), IfcProjectedCRS | - |
 
-#### Gebouwdata (als onderdeel van de ingediende vergunningaanvraag):
-
-Alles wat genoemd is onder de Regel Brandcompartimenten
-
-- Constructie onderdelen
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Constructie onderdelen: IfcWall, IfcColumn, IfcCurtainWall, IfcSlab
-
-- Brandcompartiment
-
-#### Omgevingsdata
-
-Alles onder de Regel Brandcompartimenten.
 
 ## Regel #9: Vrije breedte
 
-### Informatiebehoefte
+| Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
+|---------|---------|---------|---------|---------|---------|
+| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | MUST | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | MUST | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| M03 | De gebruiksfuncties in het gebouw | MUST | BIM  | IfcZone with ObjectType = Gebruiksfunctie; Name = use function (e.g. Woonfunctie) | -  |
+| M04 | Woonruimten, gebruiksruimten en functieruimten | MUST | BIM  | IfcSpatialZone Verblijfsgebied, Gebruiksgebied; IfcSpace Functieruimte, Verblijfsruimte | -  |
+| M05 | Functieruimten en (gebouwgebonden) buitenruimte | MUST | BIM  | IfcSpatialZone Functiegebied, Buitengebied; IfcSpace Buitenruimte | -  |
+| M06 | Breedte en hoogte deuren | MUST | BIM  | IfcDoor.OverallWidth, OverallHeight| - |
+| M07 | Lift als apart onderdeel met geometrie | MUST | BIM  | IfcTransportElement PredefinedType ELEVATOR, with Representation | - |
+| M08 | Ruimten en begrenzing op bouwlaag 2 | MUST | BIM  | IfcRelSpaceBoundary (second level) | - |
+| M09 | Wanden, vloeren als fysieke onderdelen | SHOULD | BIM  |  IfcSlab, IfcWall | - |
+| M08 | Brandwerendheid van wanden, vloeren, kolommen, deuren en vliesgevels | SHOULD | BIM  | IfcColumn, IfcCurtainWall, IfcDoor, IfcSlab, IfcWall; Pset_…Common.FireRating | - |
+| M09 | De bestaande bebouwing op de locatie | SHOULD | GEO  | - | BAG - panden en BGT overige bouwwerken |
+| M10 | De openbare ruimte (wegen / spoor, water en groen) | SHOULD | GEO  | - | BGT openbare ruimte (wegen, spoor, water en groen) |
+| M11 | Adres, bouwwerkperceel en kadastraal perceel (in model) | SHOULD | BIM  | Pset_Address, SiteAddress, BuildingAddress; IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
 
-#### Gebouwdata (als onderdeel van de ingediende vergunningaanvraag):
-
-- Gebruiksfunctie
-
-- Type ruimte namelijk verblijfsgebied, functiegebied, badruimte, toiletruimte, bergruimte, buitenruimte, gemeenschappelijke verkeersruimte
-
-- Verkeersroute
-
-- Vrije breedte, vrije hoogte, oppervlakte
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie>
-
-- VerblijfsRuimte of Functieruimte, toiletruimte, badruimte, bergruimte, buitenruimte, gemeenschappelijke verkeersruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-- Verkeersroute: IfcZone
-
-- Wanden, vloeren, dak (voor berekening breedte, hoogte en oppervlakte): IfcWall, IfcFloor, IfcRoof
-
-#### Omgevingsdata
-
-Geen omgevingsdata nodig
 
 ## Regel #10: Hoogteverschil
-### Informatiebehoefte
+| Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
+|---------|---------|---------|---------|---------|---------|
+| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | MUST | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | MUST | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| M03 | Georeferentie in RD New / NAP met de juiste schaling, BIM geplaatst op de vergunning locatie | MUST | BIM  | IfcMapConversion (Eastings, Northings, OrthogonalHeight, rotation, Scale), IfcProjectedCRS | - |
+| M04 | De gebruiksfuncties in het gebouw | MUST | BIM  | IfcZone with ObjectType = Gebruiksfunctie; Name = use function (e.g. Woonfunctie) | -  |
+| M05| Woonruimten, gebruiksruimten en functieruimten | MUST | BIM  | IfcSpatialZone Verblijfsgebied, Gebruiksgebied; IfcSpace Functieruimte, Verblijfsruimte | -  |
+| M06 | Functieruimten en (gebouwgebonden) buitenruimte | MUST | BIM  | IfcSpatialZone Functiegebied, Buitengebied; IfcSpace Buitenruimte | -  |
+| M07 | Trappen en hellingbaan (helling, breedte, traptredenafmeting etc.) als apart onderdeel met geometrie | MUST | BIM  | IfcStair / IfcRamp with flights; Pset_StairFlightCommon (RiserHeight, TreadLength, ClearWidth); Pset_RampFlightCommon (Slope, ClearWidth) | - |
+| M08 | Lift als apart onderdeel met geometrie | MUST | BIM  | IfcTransportElement PredefinedType ELEVATOR, with Representation | - |
+| M09 | Ruimten en begrenzing op bouwlaag 2 | MUST | BIM  | IfcRelSpaceBoundary (second level) | - |
+| M10 | Wanden als fysieke onderdelen | SHOULD | BIM  |  IfcSlab | - |
+| M11 | Kadastraal perceel (in model) | SHOULD | BIM  |  IfcSpatialZone Kadastraal perceel + Pset_LandRegistration | -  |
+| M12 | De hoogte van het terrein / maaiveld | MUST (voor locaties met referentiepeil methode 1)| GEO | - | Algemeen Hoogtebestand Nederland (DTM) |
+| M13 | De openbare ruimte (wegen / spoor, water en groen) | SHOULD | GEO  | - | BGT openbare ruimte (wegen, spoor, water en groen) |
 
-#### Gebouwdata (als onderdeel van de ingediende vergunningaanvraag):
+### Ad M12 en M13
+Indien het gebouw direct grenst aan de openbare buitenruimte. In dat geval is de toegang tot de openbare weg / openbare ruimte en het referentiepeil / maaiveld van belang.
+We verwijzen hier naar het terreinmodel op basis van het landsdekkende Hoogtebestand Nederland (AHN). Sommige gemeenten hebben daarnaast nog terreinmodel op basis van eigen hoogtebestanden.
 
-- Gebruiksfunctie, woonfunctie
-
-- Type ruimte namelijk verblijfsgebied, functiegebied, badruimte, toiletruimte, bergruimte, buitenruimte, gemeenschappelijke verkeersruimte
-
-- Verkeersroute
-
-- Trap, hellingbaan, trapbordes, hellingbaanbordes
-
-- Vloeren voor berekening hoogteverschillen
-
-- Toegang tot buitengebied
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-1.  Het veilig kunnen overbruggen van hoogteverschillen (in het kader van veiligheid):
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie>
-
-- VerblijfsRuimte of Functieruimte, toiletruimte, badruimte, bergruimte, buitenruimte, gemeenschappelijke verkeersruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-- Buitenberging:
-
-- Verkeersroute: IfcZone
-
-- Vloeren: IfcFloor
-
-- Onbebouwde ruimte: IfcSite
-
-3.  Het overbruggen van hoogteverschillen (in het kader van bereikbaarheid algemeen)
-
-- Bouwlaag: IfcBuildingStorey (conform BIM Basis ILS)
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie>
-
-- Woonfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte, toiletruimte, badruimte, bergruimte, buitenruimte, gemeenschappelijke verkeersruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-- Buitenberging:
-
-- Verkeersroute: IfcZone
-
-- Vloeren: IfcFloor
-
-- Onbebouwde ruimte: IfcSite
-
-#### Omgevingsdata
-
-In principe geen. Tenzij het gebouw direct grenst aan de openbare buitenruimte. In dat geval is de toegang tot de openbare weg / openbare ruimte en het referentiepeil / maaiveld van belang:
-
-- Openbare weg
-
-- Openbaar groen
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- Referentiepeil: AHN / ingemeten terreinmodel
-
-  - <https://www.ahn.nl/producten>
-
-- Weg: BGT Wegdeel en BGT Ondersteunen Wegdeel (+ classificatie Functie)
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Wegdeel>
-
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_functie-wegdeel>
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Ondersteunend%2520wegdeel>
-
-  - [https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_functie-ondersteunend-wegdeel](https://opendata.stelselcatalogus.nl/bgt/doc/gegevenselement/functie-ondersteunend_wegdeel)
-
-- Openbaar groen: BGT Begroeid Terreindeel en BGT Onbegroeid Terreindeel (+ classificatie Fysiek voorkomen)
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Begroeid%2520terreindeel>
-
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_plus-fysiek-voorkomen-begroeid-terreindeel>
-
-  - <https://www.stelselcatalogus.nl/detail/objecttype?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTregistratie_entiteit_Onbegroeid%2520terreindeel>
-
-  - <https://www.stelselcatalogus.nl/detail/attribuutsoort?id=https:%2F%2Fpurl.stelselcatalogus.nl%2Fid%2Fmkg%2FBGTkenmerk_fysiek-voorkomen-onbegroeid-terreindeel>
 
 ## Regel #11: Rc-waarde
 
-### Informatiebehoefte
+| Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
+|---------|---------|---------|---------|---------|---------|
+| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | MUST | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | MUST | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| M03 | De gebruiksfuncties in het gebouw | MUST | BIM  | IfcZone with ObjectType = Gebruiksfunctie; Name = use function (e.g. Woonfunctie) | -  |
+| M04 Woonruimten, gebruiksruimten en functieruimten | MUST | BIM  | IfcSpatialZone Verblijfsgebied, Gebruiksgebied; IfcSpace Functieruimte, Verblijfsruimte | -  |
+| M05 | Ruimten en begrenzing op bouwlaag 2 | MUST | BIM  | IfcRelSpaceBoundary (second level) | - |
+| M06 | Isolatiewaarden op alle buitenmuren, dak, vloer, ramen en deuren (grenzend aan buiten) | SHOULD | BIM  | Pset_…Common.ThermalTransmittance, Pset_…Common.IsExternal | - |
+| M07 | Geisoleerde constructiedelen (muren, vloeren en vliesgevel)als aparte objecten | SHOULD | BIM  |  IfcCovering PredefinedType INSULATION, IfcCurtainWall, IfcSlab, IfcWall | - |
+IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
+| M11 | Kadastraal perceel (in model) | MAY | BIM  |  IfcSpatialZone Kadastraal perceel + Pset_LandRegistration | -  |
 
-#### Gebouwdata (als onderdeel van de ingediende vergunningaanvraag):
-
-- Type ruimte namelijk verblijfsgebied, functiegebied, badruimte, toiletruimte
-
-- Verticale scheidingsconstructies: wanden, vloeren en daken
-
-- Oppervlakte verticale scheidingsconstructies
-
-- Gebruiksoppervlakte
-
-- Bepalingsmethode volgens de NTA8800 (beng)
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Kadastraal-Perceel>
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie>
-
-- Wand ThermalTransmittance IfcWall,
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Wand>
-
-- Vloer ThermalTransmittance IfcSlab
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vloer>
-
-- Dak IfcRoof ThermalTransmittance
-
-- Bsdd ntb
-
-- Vliesgevel ThermalTransmittance IfcCurtainWall
-
-  - <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vliesgevel>
-
-#### Omgevingsdata
-
-- Aangrenzende gebouwen (rijwoningen hebben bijvoorbeeld in de scheiding geen warmte isolatie)
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- Bestaande bebouwing + status: BAG Pand
-
-  - <https://opendata.stelselcatalogus.nl/bag/doc/begrip/pand>
-
-  - <https://opendata.stelselcatalogus.nl/bag/doc/gegevenselement/status-pand>
 
 ## Regel #12: U-waarde
 
-### Informatiebehoefte
+| Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
+|---------|---------|---------|---------|---------|---------|
+| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | MUST | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | MUST | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| M03 | De gebruiksfuncties in het gebouw | MUST | BIM  | IfcZone with ObjectType = Gebruiksfunctie; Name = use function (e.g. Woonfunctie) | -  |
+| M04 | Isolatiewaarden op alle buitenmuren, ramen en deuren (grenzend aan buiten) | SHOULD | BIM  | Pset_…Common.ThermalTransmittance, Pset_…Common.IsExternal | - |
+| M05 | Vliesgevel, deuren en ramen als aparte objecten | SHOULD | BIM  |  IfcCurtainWall, IfcDoor, IfcWindow | - |
+| M06 | Ruimten en begrenzing op bouwlaag 2 | MUST | BIM  | IfcRelSpaceBoundary (second level) | - |
+IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
+| M10 | Kadastraal perceel (in model) | SHOULD | BIM  |  IfcSpatialZone Kadastraal perceel + Pset_LandRegistration | -  |
+| M11 | Verwarmde ruimten (verblijfsruimten en functieruimten) | MUST | BIM  | IfcSpatialZone Functiegebied, Verblijfsgebied | - |
+IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
 
-#### Gebouwdata (als onderdel van de ingediende vergunningaanvraag):
-
-- Type ruimte namelijk verblijfsgebied, badruimte, toiletruimte
-
-- Ramen, deuren en kozijnen
-
-- Oppervlakte ramen, deuren en kozijnen individueel en gesommeerd
-
-- Bepalingsmethode volgens de NTA8800 (beng)
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Kadastraalperceel: IfcZone (of IfcSpatialzone, IfcSpace) Nb.tevens Omgevingsdata
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Deur ThermalTransmittance IfcDoor,
-
-- Raam ThermalTransmittance IfcWindow
-
-- Vliesgevel ThermalTransmittance IfcCurtainWall
-
-- <https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vliesgevel>
-
-#### Omgevingsdata
-
-Geen omgevingsdata nodig
-
-## Regel #13: MPG
-
-### Informatiebehoefte
-
-#### Gebouwdata (als onderdeel van de ingediende vergunningaanvraag):
-
-- Ruimten
-
-- Gebruiksfunctie
-
-- Gebruiksoppervlakte
-
-- Buitenmuren, daken en vloeren (die aan de buitenlucht grenzen)
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-- Muren, daken, vloeren: IfcWall, IfcRoof, IfcFloor
-
-- GO per Ruimte: Bepalingsmethode GO
-
-#### Omgevingsdata
-
-Geen omgevingsdata nodig
 
 ## Regel #14: Vluchtwegen
 

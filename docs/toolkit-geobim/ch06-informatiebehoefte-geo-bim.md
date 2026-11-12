@@ -218,54 +218,35 @@ IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  
 | M11 | Verwarmde ruimten (verblijfsruimten en functieruimten) | MUST | BIM  | IfcSpatialZone Functiegebied, Verblijfsgebied | - |
 IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
 
+## Regel #13: MPG
+
+| Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
+|---------|---------|---------|---------|---------|---------|
+| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | MUST | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | MUST | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| M03 | De gebruiksfuncties in het gebouw | MUST | BIM  | IfcZone with ObjectType = Gebruiksfunctie; Name = use function (e.g. Woonfunctie) | -  |
+| M04 | Berekende hoeveelheden (bruto inhoud, oppervlakte, m2, m3) door de ontwerpsoftware | MUST | BIM  | Qto_…BaseQuantities (gross / footprint area)| - |
+| M06 | Woonruimten, gebruiksruimten en functieruimten | MUST | BIM  | IfcSpatialZone Verblijfsgebied, Gebruiksgebied; IfcSpace Functieruimte, Verblijfsruimte | -  |
+| M07 | Vloeren en wanden als aparte objecten | SHOULD | BIM  |  IfcSlab, IfcWall with IsExternal | - |
+
+
 
 ## Regel #14: Vluchtwegen
 
-### Informatiebehoefte
+| Minimum requirement | Informatiebehoefte | Level | Type | IFC entiteit / property | Geo begrippen |
+|---------|---------|---------|---------|---------|---------|
+| M01 | Een valide gebouwmodel met projectdata en bouwlagen (hoogte en toegangsniveau) | MUST | BIM | IfcProject; one IfcBuilding; IfcBuildingStorey Name, Elevation, Pset_BuildingStoreyCommon.EntranceLevel | - |
+| M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | MUST | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
+| M03 | De gebruiksfuncties in het gebouw | MUST | BIM  | IfcZone with ObjectType = Gebruiksfunctie; Name = use function (e.g. Woonfunctie) | -  |
+| M04 | Gebruiksruimten, functieruimten en woonruimten | MUST | BIM  | IfcSpatialZone Verblijfsgebied, Gebruiksgebied; IfcSpace Functieruimte, Verblijfsruimte | -  |
+| M05 | De brandcompartimenten als geometrisch volume | MUST | BIM  | IfcZone / IfcSpatialZone Brandcompartiment | -  |
+| M06 | De vluchtroute (gemodelleerd) | MUST | BIM  | IfcZone / IfcSpatialZone Vluchtroute | -  |
+| M07 | Ruimten en begrenzing op bouwlaag 2 | MUST | BIM  | IfcRelSpaceBoundary (second level) | - |
+| M08 | Deuren, vloeren, trappen en hellingbanen als aparte objecten2 | SHOULD | BIM  | IfcDoor, IfcSlab; IfcStair / IfcRamp with flights | - |
+| M09 | Kadastraal perceel (in model) | SHOULD | BIM  |  IfcSpatialZone Kadastraal perceel + Pset_LandRegistration | -  |
+| M12 | Openbare weg | SHOULD | GEO  | - | BGT Weg  |
 
-#### Gebouwdata (als onderdeel van de ingediende vergunningaanvraag):
 
-- Ruimten
-
-- Gebruiksgebieden
-
-- Terrein behorende bij gebouw
-
-- Gebruiksfunctie
-
-- Brandcompartimenten
-
-- Vloeren
-
-- Deuren
-
-#### In relatie tot ILS Ruimte ([data dictionary](https://search.bsdd.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) )
-
-- Gebruiksfunctie: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- VerblijfsRuimte of Functieruimte: IfcSpace (of IfcZone, IfcSpatialzone)
-
-- Terrein behorende bij gebouw: IfcSite
-
-- Brandcompartimenten: IfcZone (of IfcSpatialzone, IfcSpace)
-
-- Deuren en vloeren: IfcDoor en IfcFloor
-
-#### Omgevingsdata
-
-- Openbare weg
-
-#### In relatie tot begrippen Geo-standaarden en beeldmateriaal
-
-- Weg: BGT Wegdeel en BGT Ondersteunen Wegdeel (+ classificatie Functie)
-
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/begrip/wegdeel>
-
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/gegevenselement/functie-wegdeel>
-
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/begrip/ondersteunend_wegdeel>
-
-  - <https://opendata.stelselcatalogus.nl/bgt/doc/gegevenselement/functie-ondersteunend_wegdeel>
 
 ## Regel #15: Loopafstand
 

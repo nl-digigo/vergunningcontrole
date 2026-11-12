@@ -1204,7 +1204,6 @@ Zou goed zijn als wetgeving de waarde naar U-waarde zou aanpassen.
 Voor de vergunningaanvraag is een voorlopige BENG berekening nodig. Na uitvoering van het project een definitieve gecertificeerde berekening nodig
 
 ## Regel #13: MPG {#regel-13}
-*[afbeelding: zie brondocument]*
 
 ### Toets
 

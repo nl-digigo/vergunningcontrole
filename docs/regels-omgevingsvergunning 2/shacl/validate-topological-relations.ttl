@@ -2,10 +2,12 @@
 @prefix geom: <https://vng.nl/geometry/> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix ifc:  <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL#> .
 
 geom:GeometryShape
     a sh:NodeShape ;
-	sh:targetSubjectsOf geom:globalId ;
+	sh:targetClass ifc:IfcWall, ifc:IfcRoof ;
+    sh:targetSubjectsOf geom:globalId ;
 
     sh:sparql [
         sh:prefixes [

@@ -20,7 +20,7 @@ De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#
 | DR-GEO-04 | Hoogtegegevens (referentiepeil) | 1, 2 |
 | DR-GEO-05 | Beeldmateriaal | 3 |
 | DR-GEO-06 | Bestaande bebouwing | 7, 8, 9, 10, 11, 12, 14 |
-| DR-GEO-07 | Openbare ruimte (wegen, water, groen) | 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28 |
+| DR-GEO-07 | Openbare ruimte (wegen, spoor, water, groen) | 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28 |
 | DR-GEO-08 | Bestaande bebouwing (3D hoogte) | 13 |
 | DR-GEO-09 | Werkingsgebied omgevingsnorm  / bebouwingspercentage | 31 |
 | DR-GEO-10 | Werkingsgebied omgevingsnorm  / aantal bouwlagen | 32 |

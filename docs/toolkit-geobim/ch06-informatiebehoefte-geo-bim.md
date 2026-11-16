@@ -19,8 +19,8 @@ Dit hoofdstuk geeft een overzicht van de uitgewerkte en gecombineerde informatie
 | M05 | Gebruikseenheden, nevenfuncties and ruimten | SHOULD | BIM  | IfcZone Gebruikseenheid, Nevengebruiksfunctie; IfcSpace Functieruimte, Verblijfsruimte | -  |
 | M06 | Externe gebouwdelen (balkon, luifel etc.) | SHOULD | BIM  | IfcSlab PredefinedType; Pset_SlabCommon.IsExternal | -  |
 | M07 | Adres, bouwwerkperceel en kadastraal perceel (in model) | SHOULD | BIM  | Pset_Address, SiteAddress, BuildingAddress; IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
-| M08 | De toegestane (gebruiks-) functie op de locatie | MUST | GEO  | - | Werkingsgebied gebiedsaanwijzing / functie (STOP/TPOD) of Enkelbestemming (IMRO) |
-| M10 | Kadastrale perceelsgrenzen | MUST | GEO  | - | Perceelgrens  |
+| M08 | De toegestane (gebruiks-) functie op de locatie | MUST | GEO  | - | Werkingsgebied gebiedsaanwijzing / functie (STOP/TPOD) of Enkelbestemming (IMRO) / DR-GEO-01 |
+| M10 | Kadastrale perceelsgrenzen | MUST | GEO  | - | Perceelgrens / DR-GEO-02  |
 
 
 
@@ -34,10 +34,10 @@ Dit hoofdstuk geeft een overzicht van de uitgewerkte en gecombineerde informatie
 | M04 | Het dak herkenbaar als dak | MUST | BIM  | IfcRoof, or IfcSlab PredefinedType ROOF, with Representation | -  |
 | M05 | Gebouwinstallaties (schoorstenen, lift, dakrailing etc.) | SHOULD | BIM  | IfcChimney, IfcTransportElement with Representation | -  |
 | M06 | De NAP hoogte van de hoofdtoegang tot het gebouw op de begane grond (referentiepeil methode 2) | MUST (voor locaties met referentiepeil methode 2) | BIM  | IfcBuildingStorey with EntranceLevel = true and Elevation; IfcSite.RefElevation (cross-check) | -  |
-| M07 | De hoogte van de dichtstbijzijnde openbare weg (referentiepeil methode 1) | MUST (voor locaties met referentiepeil methode 1)| GEO | - | Algemeen Hoogtebestand Nederland (DTM) |
-| M08 | De maximale bebouwingshoogte op de locatie | MUST | GEO  | - | Werkingsgebied omgevingsnorm / bebouwingshoogte (STOP/TPOD) of Maatvoering maximale bouwhoogte (IMRO) |
+| M07 | De hoogte van de dichtstbijzijnde openbare weg (referentiepeil methode 1) | MUST (voor locaties met referentiepeil methode 1)| GEO | - | Algemeen Hoogtebestand Nederland (DTM) / DR-GEO-04 |
+| M08 | De maximale bebouwingshoogte op de locatie | MUST | GEO  | - | Werkingsgebied omgevingsnorm / bebouwingshoogte (STOP/TPOD) of Maatvoering maximale bouwhoogte (IMRO) / DR-GEO-03 |
 | M10 | Adres, bouwwerkperceel en kadastraal perceel (in model) | SHOULD | BIM  | Pset_Address, SiteAddress, BuildingAddress; IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
-| M11 | Kadastrale perceelsgrenzen van de locatie | MUST | GEO  | - | Perceelgrens  |
+| M11 | Kadastrale perceelsgrenzen van de locatie | MUST | GEO  | - | Perceelgrens / DR-GEO-02  |
 
 ### Ad M07: 
 We verwijzen hier naar het terreinmodel op basis van het landsdekkende Hoogtebestand Nederland (AHN). Sommige gemeenten hebben daarnaast nog terreinmodel op basis van eigen hoogtebestanden.
@@ -53,11 +53,11 @@ We verwijzen hier naar het terreinmodel op basis van het landsdekkende Hoogtebes
 | M04 | Gebouwinhoud als een gesloten geometrisch volume | MUST | BIM  | IfcSpatialZone ObjectType = Gebouwinhoud, closed Representation | - |
 | M05 | Berekende hoeveelheden (bruto inhoud, oppervlakte, m2, m3) door de ontwerpsoftware | MUST | BIM  | Qto_…BaseQuantities (gross / footprint area)| - |
 | M06 | Oppervlaktes bepaald volgens NEN2580 | SHOULD | BIM  | Qto_…BaseQuantities (gross / footprint area) | - |
-| M07 | Kadastrale perceelsgrenzen van de locatie| MUST | GEO  | - | Perceelgrens  |
-| M08 | De bestaande bebouwing op de locatie | MUST | GEO  | - | BAG - panden en BGT overige bouwwerken |
-| M10 | Het maximale bebouwingspercentage op de locatie | MUST | GEO  | - | Werkingsgebied omgevingsnorm / bebouwingspercentage (STOP/TPOD) of maatvoering maximum bebouwingspercentage (IMRO)|
+| M07 | Kadastrale perceelsgrenzen van de locatie| MUST | GEO  | - | Perceelgrens / DR-GEO-02 |
+| M08 | De bestaande bebouwing op de locatie | MUST | GEO  | - | BAG - panden en BGT overige bouwwerken / DR-GEO-06 |
+| M10 | Het maximale bebouwingspercentage op de locatie | MUST | GEO  | - | Werkingsgebied omgevingsnorm / bebouwingspercentage (STOP/TPOD) of maatvoering maximum bebouwingspercentage (IMRO) / DR-GEO-09| 
 | M12 | Adressen, perceelsaanduiding, bouwwerkperceel, bouwlagen, gebruiksfuncties en ruimten in het model | SHOULD | BIM  | Pset_Address; IfcSpatialZone Perceel, Bouwwerkperceel, Kadastraal perceel, Bouwlaaginhoud; IfcBuilding; IfcZone Gebruiksfunctie; IfcSpace Functieruimte, Verblijfsruimte | - |
-| M13 | De luchtfoto van de locatie | SHOULD | GEO  | - | Luchtfoto |
+| M13 | De luchtfoto van de locatie | SHOULD | GEO  | - | Luchtfoto / DR-GEO-05 |
 
 ### Ad M09
 Nb. We verwijzen hier naar de jaarlijkse landsdekkende luchtfoto's Beeldmateriaal Nederland. Sommige gemeenten hebben daarnaast nog eigen luchtfoto's.
@@ -72,7 +72,7 @@ Nb. We verwijzen hier naar de jaarlijkse landsdekkende luchtfoto's Beeldmateriaa
 | M03 | Gebruiksfuncties per bouwlaag | MUST | BIM  | IfcZone ObjectType = Gebruiksfunctie, Name = Bbl use function; spaces per storey | - |
 | M04 | Neven gebruiksfuncties | SHOULD | BIM  | IfcZone ObjectType = Nevengebruiksfunctie | - |
 | M05 | Het gebouw en zijn (BAG-)pandidenticatie (indien beschikbaar) | SHOULD | BIM  | IfcBuilding, Pset_BuildingCommon.BuildingID | - |
-| M07 | Toegestane gebruiksfuncties (en beperkingen) per bouwlaag op de locatie| MUST | GEO  | - | Werkingsgebied gebiedsaanwijzing / functie met bouwlaagnorm(STOP/TPOD) of Aanduiding (IMRO) |  |
+| M07 | Toegestane gebruiksfuncties (en beperkingen) per bouwlaag op de locatie| MUST | GEO  | - | Werkingsgebied gebiedsaanwijzing / functie met bouwlaagnorm(STOP/TPOD) of Aanduiding (IMRO) / DR-GEO-09 |  |
 | M09 | Adres (-sen) van het gebouw | SHOULD | BIM  | Pset_Address, SiteAddress, BuildingAddress = VBO-adres (BAG) |  |
 | M10 | Georeferentie in RD New / NAP met de juiste schaling, BIM geplaatst op de vergunning locatie | MUST | BIM  | IfcMapConversion (Eastings, Northings, OrthogonalHeight, rotation, Scale), IfcProjectedCRS | - |
 
@@ -90,7 +90,7 @@ Nb. We verwijzen hier naar de jaarlijkse landsdekkende luchtfoto's Beeldmateriaa
 | M07 | Berekende hoeveelheden (bruto inhoud, oppervlakte, m2, m3) door de ontwerpsoftware | MUST | BIM  | Qto_…BaseQuantities (gross / footprint area)| - |
 | M08 | Oppervlaktes bepaald volgens NEN2580 | SHOULD | BIM  | Qto_…BaseQuantities (gross / footprint area) | - |
 | M09 | Ruimten, functies en oppervlaktes| SHOULD | BIM  | IfcSpace Functieruimte, Verblijfsruimte, Restruimte, Tarra ruimte; IfcSpatialZone Restgebied | - |
-| M11 | Maximale gebruiksoppervlakte en aandeel beroep aan huis op de locatie | MUST | GEO  | - | Werkingsgebied gebiedsaanwijzing / omgevingsnorm voor beroep aan huis (STOP/TPOD), aanwijzing (IMRO) |
+| M11 | Maximale gebruiksoppervlakte en aandeel beroep aan huis op de locatie | MUST | GEO  | - | Werkingsgebied gebiedsaanwijzing / omgevingsnorm voor beroep aan huis (STOP/TPOD), aanwijzing (IMRO) / DR-GEO-09 |
 | M13 | Adres, bouwwerkperceel en kadastraal perceel (in model) | SHOULD | BIM  | Pset_Address, SiteAddress, BuildingAddress; IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
 
 
@@ -102,9 +102,9 @@ Nb. We verwijzen hier naar de jaarlijkse landsdekkende luchtfoto's Beeldmateriaa
 | M02 | Constructieonderdelen met gesloten geometrie per bouwlaag | MUST | BIM | IfcWall, IfcSlab, IfcRoof, IfcColumn, … Representation; IfcRelContainedInSpatialStructure | - |
 | M03 | Bouwlagen als geometrisch volume | MUST | BIM  | IfcSpatialZone ObjectType = Bouwlaaginhoud, closed Representation | - |
 | M04 | Ruimten, functies en oppervlaktes| SHOULD | BIM  | IfcSpace Functieruimte, Verblijfsruimte, Restruimte, Tarra ruimte; IfcSpatialZone Restgebied | - |
-| M06 | Maximum aantal bouwlagen op de locatie | MUST | GEO  | - | Werkingsgebied gebiedsaanwijzing / omgevingsnorm voor maximum aantal bouwlagen (STOP/TPOD), maatvoering (IMRO) |
+| M06 | Maximum aantal bouwlagen op de locatie | MUST | GEO  | - | Werkingsgebied gebiedsaanwijzing / omgevingsnorm voor maximum aantal bouwlagen (STOP/TPOD), maatvoering (IMRO) / DR-GEO-09|
 | M07 | De NAP hoogte van de hoofdtoegang tot het gebouw op de begane grond (referentiepeil methode 2) | MUST (voor locaties met referentiepeil methode 2) | BIM  | IfcBuildingStorey with EntranceLevel = true and Elevation; IfcSite.RefElevation (cross-check) | -  |
-| M08 | De hoogte van de dichtstbijzijnde openbare weg (referentiepeil methode 1) | MUST (voor locaties met referentiepeil methode 1)| GEO | - | Algemeen Hoogtebestand Nederland (DTM) |
+| M08 | De hoogte van de dichtstbijzijnde openbare weg (referentiepeil methode 1) | MUST (voor locaties met referentiepeil methode 1)| GEO | - | Algemeen Hoogtebestand Nederland (DTM) / DR-GEO-04|
 | M10 | Adres, bouwwerkperceel en kadastraal perceel (in model) | SHOULD | BIM  | Pset_Address, SiteAddress, BuildingAddress; IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
 | M11 | Georeferentie in RD New / NAP met de juiste schaling, BIM geplaatst op de vergunning locatie | MUST | BIM  | IfcMapConversion (Eastings, Northings, OrthogonalHeight, rotation, Scale), IfcProjectedCRS | - |
 
@@ -124,8 +124,8 @@ We verwijzen hier naar het terreinmodel op basis van het landsdekkende Hoogtebes
 | M06 | Berekende hoeveelheden (bruto inhoud, oppervlakte, m2, m3) door de ontwerpsoftware | MUST | BIM  | Qto_…BaseQuantities (gross / footprint area)| - |
 | M07 | Ruimten en begrenzing op bouwlaag 2 | MUST | BIM  | IfcRelSpaceBoundary (second level) | - |
 | M08 | Brandwerendheid van wanden, vloeren, kolommen, deuren en vliesgevels | SHOULD | BIM  | IfcColumn, IfcCurtainWall, IfcDoor, IfcSlab, IfcWall; Pset_…Common.FireRating | - |
-| M09 | De bestaande bebouwing op de locatie | SHOULD | GEO  | - | BAG - panden en BGT overige bouwwerken |
-| M10 | De openbare ruimte (wegen / spoor, water en groen) | SHOULD | GEO  | - | BGT openbare ruimte (wegen, spoor, water en terrein) |
+| M09 | De bestaande bebouwing op de locatie | SHOULD | GEO  | - | BAG - panden en BGT overige bouwwerken / DR-GEO-06 |
+| M10 | De openbare ruimte (wegen / spoor, water en groen) | SHOULD | GEO  | - | BGT openbare ruimte (wegen, spoor, water en terrein) / DR-GEO-07 |
 | M14 | Adres, bouwwerkperceel en kadastraal perceel (in model) | SHOULD | BIM  | Pset_Address, SiteAddress, BuildingAddress; IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
 | M15 | Georeferentie in RD New / NAP met de juiste schaling, BIM geplaatst op de vergunning locatie | MUST | BIM  | IfcMapConversion (Eastings, Northings, OrthogonalHeight, rotation, Scale), IfcProjectedCRS | - |
 
@@ -161,8 +161,8 @@ Omgevingsdata is waarschijnlijk alleen in een bepaalde zone / buffer rond het bo
 | M08 | Ruimten en begrenzing op bouwlaag 2 | MUST | BIM  | IfcRelSpaceBoundary (second level) | - |
 | M09 | Wanden, vloeren als fysieke onderdelen | SHOULD | BIM  |  IfcSlab, IfcWall | - |
 | M08 | Brandwerendheid van wanden, vloeren, kolommen, deuren en vliesgevels | SHOULD | BIM  | IfcColumn, IfcCurtainWall, IfcDoor, IfcSlab, IfcWall; Pset_…Common.FireRating | - |
-| M09 | De bestaande bebouwing op de locatie | SHOULD | GEO  | - | BAG - panden en BGT overige bouwwerken |
-| M10 | De openbare ruimte (wegen / spoor, water en groen) | SHOULD | GEO  | - | BGT openbare ruimte (wegen, spoor, water en terrein) |
+| M09 | De bestaande bebouwing op de locatie | SHOULD | GEO  | - | BAG - panden en BGT overige bouwwerken / DR-GEO-06 |
+| M10 | De openbare ruimte (wegen / spoor, water en groen) | SHOULD | GEO  | - | BGT openbare ruimte (wegen, spoor, water en terrein) / DR-GEO-07 |
 | M11 | Adres, bouwwerkperceel en kadastraal perceel (in model) | SHOULD | BIM  | Pset_Address, SiteAddress, BuildingAddress; IfcSpatialZone Bouwwerkperceel, Kadastraal perceel + Pset_LandRegistration | -  |
 
 
@@ -181,7 +181,7 @@ Omgevingsdata is waarschijnlijk alleen in een bepaalde zone / buffer rond het bo
 | M10 | Wanden als fysieke onderdelen | SHOULD | BIM  |  IfcSlab | - |
 | M11 | Kadastraal perceel (in model) | SHOULD | BIM  |  IfcSpatialZone Kadastraal perceel + Pset_LandRegistration | -  |
 | M12 | De hoogte van het terrein / maaiveld | MUST (voor locaties met referentiepeil methode 1)| GEO | - | Algemeen Hoogtebestand Nederland (DTM) |
-| M13 | De openbare ruimte (wegen / spoor, water en terrein) | SHOULD | GEO  | - | BGT openbare ruimte (wegen, spoor, water en groen) |
+| M13 | De openbare ruimte (wegen / spoor, water en terrein) | SHOULD | GEO  | - | BGT openbare ruimte (wegen, spoor, water en groen) / DR-GEO-07|
 
 ### Ad M12 en M13
 Indien het gebouw direct grenst aan de openbare buitenruimte. In dat geval is de toegang tot de openbare weg / openbare ruimte en het referentiepeil / maaiveld van belang.
@@ -242,7 +242,7 @@ We verwijzen hier naar het terreinmodel op basis van het landsdekkende Hoogtebes
 | M07 | Ruimten en begrenzing op bouwlaag 2 | MUST | BIM  | IfcRelSpaceBoundary (second level) | - |
 | M08 | Deuren, vloeren, trappen en hellingbanen als aparte objecten2 | SHOULD | BIM  | IfcDoor, IfcSlab; IfcStair / IfcRamp with flights | - |
 | M09 | Kadastraal perceel (in model) | SHOULD | BIM  |  IfcSpatialZone Kadastraal perceel + Pset_LandRegistration | -  |
-| M12 | Openbare weg | SHOULD | GEO  | - | BGT Weg  |
+| M12 | Openbare weg | SHOULD | GEO  | - | BGT Weg / DR-GEO-07 |
 
 
 
@@ -292,7 +292,7 @@ We verwijzen hier naar het terreinmodel op basis van het landsdekkende Hoogtebes
 | M08 | Vliesgevels, deuren en wanden als aparte objecten | SHOULD | BIM  | IfcCurtainWall, IfcDoor, IfcWall | - |
 | M09 | Gebouw, kadastraal perceel en bouwwerkperceel in het model | SHOULD | BIM  | IfcBuilding; IfcSpatialZone Perceel, Bouwwerkperceel, Kadastraal perceel | - |
 | M10 | Oppervlaktes bepaald volgens NEN2580 | SHOULD | BIM  | Qto_…BaseQuantities (gross / footprint area) | - |
-| M11 | Bestaande bebouwing met hoogte | SHOULD | GEO  | - | 3D BAG |
+| M11 | Bestaande bebouwing met hoogte | SHOULD | GEO  | - | 3D BAG / DR-GEO-08 |
 | M12 | Ruimten en begrenzing op bouwlaag 2 | SHOULD | BIM  | IfcRelSpaceBoundary (second level) | - |
-| M15 | Openbare ruimte | SHOULD | GEO  | - | BGT Terrein |
+| M15 | Openbare ruimte | SHOULD | GEO  | - | BGT Terrein / DR-GEO-07 |
 

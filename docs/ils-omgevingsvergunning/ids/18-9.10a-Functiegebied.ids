@@ -2,11 +2,11 @@
 <ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
   <ids:info>
     <ids:title>9.10a Functiegebied</ids:title>
-    <ids:copyright>VDCbase,,Gemeente Rotterdam, AECgeeks, VORM, Arons en Gelauff, IMplace, On-Track</ids:copyright>
-    <ids:version>0.95</ids:version>
-    <ids:description>Deelspecificatie 18 van 42 uit 'ILS voor ruimten in de omgevingswet' versie 0.95. Afgesplitst uit het totaalbestand; de specificatie zelf is ongewijzigd.</ids:description>
-    <ids:author>menno@aronsengelauff.nl</ids:author>
-    <ids:date>2026-03-19</ids:date>
+    <ids:copyright>Vereniging Nederlandse Gemeenten</ids:copyright>
+    <ids:version>0.96</ids:version>
+    <ids:description>Deelspecificatie 18 van 42 uit 'ILS Omgevingsvergunning' versie 0.96. Afgesplitst uit het totaalbestand; de specificatie zelf is ongewijzigd.</ids:description>
+    <ids:author>lex.ransijn@vng.nl</ids:author>
+    <ids:date>2026-11-16</ids:date>
     <ids:purpose>Indieningsvereisten van ruimte-modellering t.b.v. vergunningsaanvraag Omgevings Plan Activiteit (Omgevingsplan) en Technische Activiteit (BLL) voor bouwwerken zijnde Gebouw — BM13-checks: #9, #10, #11 (bron: BM13-regelinventarisatie v0.3, 3-7-2026).</ids:purpose>
     <ids:milestone>015-03 Inhoudelijk behandelen aanvraag / processtap Toetsen aan regelgeving (GEMMA Omgevingswet, bedrijfsproces 015 Behandelen aanvraag)</ids:milestone>
   </ids:info>

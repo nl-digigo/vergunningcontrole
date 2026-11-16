@@ -35,9 +35,11 @@ Het Level of Information Need (LOIN, ISO 7817-1:2024) legt per informatiebehoeft
 
 Per specificatie: op welke objecten de eis van toepassing is (applicability) en welke informatie verplicht (**R**), optioneel (**O**) of verboden (**X**) is.
 
-### 9 ILS voor Ruimten in de omgevingswet
+> De STEP-snapshots gebruiken waar mogelijk [BM13_SPA_XX_M3D_ZZZ.ifc](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc). Voor objecttypen die in dit standaardmodel ontbreken, zijn de bestaande fragmenten uit de Kievitsweg-modellen behouden.
 
-*Bestand:* [`01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids`](ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #1 #2 #3 #4 #5 #6 #7 #8 #9 #10 #11 #12 #13 #14 #15 #16 #17
+### 9 ILS Omgevingsvergunning
+
+*Bestand:* [`01-9.00-ILS-Omgevingsvergunning.ids`](ids/01-9.00-ILS-Omgevingsvergunning.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #1 #2 #3 #4 #5 #6 #7 #8 #9 #10 #11 #12 #13 #14 #15 #16 #17
 
 *Van toepassing op:* IFCSPATIALZONE / IFCSPACE / IFCEXTERNALSPATIALELEMENT
 
@@ -48,18 +50,14 @@ Let op dit is geen gebruikelijke check, deze check kijkt of elk in het model aan
 | attribute | ObjectPlacement | R | — |
 | attribute | Representation | R | — |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcSpace` uit [`Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc`](../voorbeeldmodellen/Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc) (352 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcSpace` (30 objecten in het model):
 
 ```step
-#321=IFCSPACE('2_NwwkeBjBhgaaExdI61Ab',#18,'BVO gemeenschappelijk 00 begane grond','Bruto Inhoud','Bouwlaaginhoud',#312,#320,'BVO 000',.ELEMENT.,.USERDEFINED.,$)
-#325=IFCPROPERTYSET('2bMD2XzRJiW3xJVLy0kK51',#18,'Pset_SpaceCommon',$,(#324))
-#324=IFCPROPERTYSINGLEVALUE('IsExternal',$,IFCBOOLEAN(.F.),$)
-#334=IFCELEMENTQUANTITY('1728IGoH6iAaGvsd64JAWO',#18,'Qto_SpaceBaseQuantities',$,$,(#329,#330,#331,#332))
-#329=IFCQUANTITYLENGTH('Height','',$,2999.9999999990991,$)
-#330=IFCQUANTITYAREA('GrossFloorArea','',$,30.813460020409657,$)
-#331=IFCQUANTITYAREA('NetFloorArea','',$,30.813460020409657,$)
-#332=IFCQUANTITYAREA('GrossCeilingArea','',$,30.813460020409657,$)
-#174972=IFCCLASSIFICATIONREFERENCE('https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Bouwlaaginhoud','Bouwlaaginhoud','Bouwlaaginhoud',#170339,$,$)
+#135=IFCSPACE('3fkWy0pSzEHfnVjDYMlHkY',#19,'Hal','Netto Inhoud','Functieruimte',#90,#127,'Hal',.ELEMENT.,.USERDEFINED.,$);
+#144=IFCRELDEFINESBYPROPERTIES('3PNBBSwAYL4o2s7qg$G3G4',#19,$,$,(#135),#140);
+#140=IFCPROPERTYSET('0bktNuTMSGyKErqKRTq5$A',#19,'Pset_SpaceCommon',$,(#83,#137,#138,#139));
+#2781=IFCRELASSOCIATESCLASSIFICATION('3l6ScGRYfhhYdwDM3Vdgqp',#19,'Functieruimte',':Functieruimte',(#135,#172,#291,#544,#622,#690,#985,#1035,#1085,#1108,#1158,#1341,#1432,#1485,#1568,#1591),#148);
+#148=IFCCLASSIFICATIONREFERENCE($,'Functieruimte',$,#147,$,$);
 ```
 
 ### 9.01a Georeferentie
@@ -77,11 +75,11 @@ Let op dit is geen gebruikelijke check, deze check kijkt of elk in het model aan
 | attribute | XAxisOrdinate | R | — |
 | attribute | Scale | R | — |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcMapConversion` uit [`Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc`](../voorbeeldmodellen/Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc) (1 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcMapConversion` (1 object in het model):
 
 ```step
-#29=IFCMAPCONVERSION(#22,#28,100702.33770000002,432643.96139999991,-1.2,1.,6.123233995736766E-17,0.001)
-#28=IFCPROJECTEDCRS('EPSG:28992','Netherlands, Amersfoort datum, New System','Amersfoort/b','EPSG:5709',$,$,#27)
+#32=IFCMAPCONVERSION(#25,#31,146996.00000000012,451444.00000000059,4.0000000000000009,1.,6.123233995736766E-017,0.001);
+#31=IFCPROJECTEDCRS('EPSG:7415','Netherlands, Amersfoort datum, New System','Amersfoort/b',$,$,$,#30);
 ```
 
 ### 9.01b Coördinatenstelsel
@@ -94,10 +92,10 @@ Let op dit is geen gebruikelijke check, deze check kijkt of elk in het model aan
 |---|---|---|---|
 | attribute | Name | R | EPSG:7415 \| EPSG:28992 |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcProjectedCRS` uit [`Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc`](../voorbeeldmodellen/Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc) (1 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcProjectedCRS` (1 object in het model):
 
 ```step
-#28=IFCPROJECTEDCRS('EPSG:28992','Netherlands, Amersfoort datum, New System','Amersfoort/b','EPSG:5709',$,$,#27)
+#31=IFCPROJECTEDCRS('EPSG:7415','Netherlands, Amersfoort datum, New System','Amersfoort/b',$,$,$,#30);
 ```
 
 ### 9.01c Projectadres (IFC4X3_ADD2)
@@ -115,16 +113,10 @@ Adres is indicatief, Georeferentie wordtgebruikt voor het uitvoeren van de omgev
 | property | Pset_Address.PostalCode | R | — |
 | property | Pset_Address.Town | R | — |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcSite` uit [`Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc`](../voorbeeldmodellen/Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc) (2 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcSite` (1 object in het model):
 
 ```step
-#57=IFCSITE('1BpW9zAR1AhAgLLMB_5$ac',#18,'Default',$,'Perceel',#56,$,$,.ELEMENT.,(0,0,0,0),(0,0,0,0),0.,$,#170345)
-#170347=IFCPROPERTYSET('0KPKjrDqbCCP_6iONx7Po8',#170346,'Pset_Address',$,(#170350,#170351,#170352,#170353))
-#170350=IFCPROPERTYSINGLEVALUE('AddressLines',$,IFCLABEL('Kievitsweg ONBEKEND'),$)
-#170351=IFCPROPERTYSINGLEVALUE('Town',$,IFCLABEL('ONBEKEND'),$)
-#170352=IFCPROPERTYSINGLEVALUE('PostalCode',$,IFCLABEL('ONBEKEND'),$)
-#170353=IFCPROPERTYSINGLEVALUE('Country',$,IFCLABEL('NL'),$)
-#174966=IFCCLASSIFICATIONREFERENCE('https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Perceel','Perceel','Perceel',#170339,$,$)
+#71=IFCSITE('1W5FQV6hz2U80I8tmdGso8',#19,'Wildbaan','Utrechtse Heuvelrug','Perceel',#70,$,'Driebergen-Rijsenburg',.ELEMENT.,(52,3,4,501647),(5,16,13,857307),4.0000000000000009,$,$);
 ```
 
 ### 9.01d Perceeladres (IFC4)
@@ -139,13 +131,10 @@ Adres is indicatief, Georeferentie wordtgebruikt voor het uitvoeren van de omgev
 |---|---|---|---|
 | attribute | SiteAddress | R | — |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcSite` uit [`Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc`](../voorbeeldmodellen/Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc) (1 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcSite` (1 object in het model):
 
 ```step
-#57=IFCSITE('1BpW9zAR1AhAgLLMB_5$ac',#18,'Default',$,'Perceel',#56,$,$,.ELEMENT.,(0,0,0,0),(0,0,0,0),0.,$,#170345)
-#61=IFCPROPERTYSET('2fwhKilC1l8sjRMCZlwk_9',#18,'Pset_SiteCommon',$,(#60))
-#60=IFCPROPERTYSINGLEVALUE('Reference',$,IFCIDENTIFIER('Project Information'),$)
-#174966=IFCCLASSIFICATIONREFERENCE('https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Perceel','Perceel','Perceel',#170339,$,$)
+#71=IFCSITE('1W5FQV6hz2U80I8tmdGso8',#19,'Wildbaan','Utrechtse Heuvelrug','Perceel',#70,$,'Driebergen-Rijsenburg',.ELEMENT.,(52,3,4,501647),(5,16,13,857307),4.0000000000000009,$,$);
 ```
 
 ### 9.01e Gebouwadres (IFC4)
@@ -160,25 +149,10 @@ Adres is indicatief, Georeferentie wordtgebruikt voor het uitvoeren van de omgev
 |---|---|---|---|
 | attribute | BuildingAddress | R | — |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcBuilding` uit [`Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc`](../voorbeeldmodellen/Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc) (1 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcBuilding` (1 object in het model):
 
 ```step
-#37=IFCBUILDING('1BpW9zAR1AhAgLLMB_5$ab',#18,'RottaNova',$,'Gebouw',#35,$,'RottaNova',.ELEMENT.,$,$,#36)
-#166475=IFCPROPERTYSET('2fMJu1RoRs3aAdUoxLCh6g',#18,'Pset_BuildingCommon',$,(#58,#60,#166472,#166473,#166474))
-#58=IFCPROPERTYSINGLEVALUE('IsPermanentID',$,IFCBOOLEAN(.T.),$)
-#60=IFCPROPERTYSINGLEVALUE('Reference',$,IFCIDENTIFIER('Project Information'),$)
-#166472=IFCPROPERTYSINGLEVALUE('BuildingID',$,IFCIDENTIFIER('003100000122684'),$)
-#166473=IFCPROPERTYSINGLEVALUE('NumberOfStoreys',$,IFCINTEGER(4),$)
-#166474=IFCPROPERTYSINGLEVALUE('IsLandmarked',$,IFCLOGICAL(.U.),$)
-#166476=IFCPROPERTYSET('3qAZmJCnu0s5SyefglL3qF',#18,'Pset_BuildingElementProxyCommon',$,(#60,#324))
-#60=IFCPROPERTYSINGLEVALUE('Reference',$,IFCIDENTIFIER('Project Information'),$)
-#324=IFCPROPERTYSINGLEVALUE('IsExternal',$,IFCBOOLEAN(.F.),$)
-#166477=IFCPROPERTYSET('1vvlnGK4gBObS$Wh2PX_IN',#18,'Pset_BuildingStoreyCommon',$,(#60,#166451))
-#60=IFCPROPERTYSINGLEVALUE('Reference',$,IFCIDENTIFIER('Project Information'),$)
-#166451=IFCPROPERTYSINGLEVALUE('AboveGround',$,IFCLOGICAL(.U.),$)
-#166478=IFCPROPERTYSET('2YpVL1spxNBVVd4uniblbG',#18,'Pset_BuildingSystemCommon',$,(#60))
-#60=IFCPROPERTYSINGLEVALUE('Reference',$,IFCIDENTIFIER('Project Information'),$)
-#174968=IFCCLASSIFICATIONREFERENCE('https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Gebouw','Gebouw','Gebouw',#170339,$,$)
+#41=IFCBUILDING('1W5FQV6hz2U80I8tmdGsoB',#19,'gezins tussen woning',$,$,#39,$,'gezins tussen woning',.ELEMENT.,$,$,#40);
 ```
 
 ### 9.02 Project
@@ -196,14 +170,10 @@ Adres is indicatief, Georeferentie wordtgebruikt voor het uitvoeren van de omgev
 | property | Pset_ProjectCommon.ProjectType | O | NEWBUILD \| MODIFICATION \| OPERATIONMAINTENANCE \| RENOVATION \| REPAIR |
 | property | Pset_ProjectCommon.ProjectInvestmentEstimate | O | — |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcProject` uit [`Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc`](../voorbeeldmodellen/Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc) (1 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcProject` (1 object in het model):
 
 ```step
-#32=IFCPROJECT('1BpW9zAR1AhAgLLMB_5$aa',#18,'AR123-4','Bruto Inhoud','Pand','RottaNove, appartementencomplex','05 Definitief ontwerp',(#22,#30),#170332)
-#170341=IFCPROPERTYSET('3nG9sWyIjAWOPy0cZ$k$Na',#170340,'Pset_ProjectCommon',$,(#170344,#174994))
-#170344=IFCPROPERTYSINGLEVALUE('ProjectType',$,IFCLABEL('NEWBUILD'),$)
-#174994=IFCPROPERTYSINGLEVALUE('ProjectInvestmentEstimate',$,IFCMONETARYMEASURE(10000000.),$)
-#174964=IFCCLASSIFICATIONREFERENCE('https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Project','Project','Project',#170339,$,$)
+#33=IFCPROJECT('1W5FQV6hz2U80I8tmdGsoA',#19,'3583269901',$,$,'woning fam. B','5. Gebruik',(#25),#2794);
 ```
 
 ### 9.03a Perceel
@@ -221,13 +191,10 @@ Adres is indicatief, Georeferentie wordtgebruikt voor het uitvoeren van de omgev
 | property | Pset_LandRegistration.LandID | O | — |
 | property | Pset_LandRegistration.LandTitleID | O | — |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcSite` uit [`Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc`](../voorbeeldmodellen/Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc) (1 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcSite` (1 object in het model):
 
 ```step
-#57=IFCSITE('1BpW9zAR1AhAgLLMB_5$ac',#18,'Default',$,'Perceel',#56,$,$,.ELEMENT.,(0,0,0,0),(0,0,0,0),0.,$,#170345)
-#59=IFCPROPERTYSET('3jAdEneQaMgfLg1iw0A5pm',#18,'Pset_LandRegistration',$,(#58))
-#58=IFCPROPERTYSINGLEVALUE('IsPermanentID',$,IFCBOOLEAN(.T.),$)
-#174966=IFCCLASSIFICATIONREFERENCE('https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Perceel','Perceel','Perceel',#170339,$,$)
+#71=IFCSITE('1W5FQV6hz2U80I8tmdGso8',#19,'Wildbaan','Utrechtse Heuvelrug','Perceel',#70,$,'Driebergen-Rijsenburg',.ELEMENT.,(52,3,4,501647),(5,16,13,857307),4.0000000000000009,$,$);
 ```
 
 ### 9.03b Bouwwerkperceel
@@ -242,11 +209,12 @@ Adres is indicatief, Georeferentie wordtgebruikt voor het uitvoeren van de omgev
 | attribute | Name | R | — |
 | attribute | Description | R | Terreinvolume |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcZone` uit [`Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc`](../voorbeeldmodellen/Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc) (1 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcSpatialZone met ObjectType=Bouwwerkperceel` (1 object in het model):
 
 ```step
-#167384=IFCZONE('0qfoyTSoGYxcVghrwRHItK',#18,'Terreinvolume B5319','Terreinvolume','Bouwwerkperceel','')
-#174990=IFCCLASSIFICATIONREFERENCE('https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Bouwwerkperceel','Bouwwerkperceel','Bouwwerkperceel',#170339,$,$)
+#1709=IFCSPATIALZONE('2nSP8tGs98Tv7GL2eZsOvx',#19,'Tussenwoning project x','Terreinvolume','Bouwwerkperceel',#1701,#1708,$,.USERDEFINED.);
+#2788=IFCRELASSOCIATESCLASSIFICATION('2sEN8Dbz5hirbs0$SdVm2U',#19,'Bouwwerkperceel',':Bouwwerkperceel',(#1709),#1717);
+#1717=IFCCLASSIFICATIONREFERENCE($,'Bouwwerkperceel',$,#147,$,$);
 ```
 
 ### 9.04 Kadastraal Perceel
@@ -261,13 +229,12 @@ Adres is indicatief, Georeferentie wordtgebruikt voor het uitvoeren van de omgev
 | attribute | Name | R | — |
 | attribute | Description | R | Terreinvolume |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcSpace` uit [`Kievitsweg_R23_ILS_Spaces_update.ifc`](../voorbeeldmodellen/Kievitsweg_R23_ILS_Spaces_update.ifc) (1 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcSpatialZone met ObjectType=Kadastraal perceel` (1 object in het model):
 
 ```step
-#8974=IFCSPACE('0Lv4Vd2sHAZO08EfBEh$xm',#18,'Woningbouwprojectperceel X','Terreinvolume','Kadastraal perceel',#8965,#8973,'1',.ELEMENT.,.USERDEFINED.,$)
-#8977=IFCPROPERTYSET('36vgPyd$HK9W1V3rFsfcIh',#18,'Pset_SpaceCommon',$,(#121))
-#121=IFCPROPERTYSINGLEVALUE('IsExternal',$,IFCBOOLEAN(.F.),$)
-#299682=IFCCLASSIFICATIONREFERENCE('https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Kadastraalperceel','Kadastraalperceel','Kadastraalperceel',#293216,$,$)
+#1691=IFCSPATIALZONE('2nSP8tGs98Tv7GL2eZsOxf',#19,'Tussenwoning project x','Terreinvolume','Kadastraal perceel',#1683,#1690,$,.USERDEFINED.);
+#2787=IFCRELASSOCIATESCLASSIFICATION('2bH2Y$N8ziB5Qb5ULhmbaM',#19,'Kadastraalperceel',':Kadastraalperceel',(#1691),#1699);
+#1699=IFCCLASSIFICATIONREFERENCE($,'Kadastraalperceel',$,#147,$,$);
 ```
 
 ### 9.05a Gebouw
@@ -286,20 +253,10 @@ Adres is indicatief, Georeferentie wordtgebruikt voor het uitvoeren van de omgev
 | property | Pset_BuildingUse.MarketSubCategory | O | patroon `Aanleunwoning|Aireywoning|Ambtswoning|Apotheek|Appartement|Arbeiderswoning|Bejaardenwoning|Bel-etagewoning|Benedenwoning|Berging inpandig|Berging uitpandig|Bioscoop|Boerderij|Bovenwoning|Bungalow|Bunker|Café|Cafetaria|Cellenkantoor|Drive-inwoning|Duplexwoning|Energiecentrale|Fabriek|Fabrieksschoorsteen|Fietsenstalling inpandig|Fietsenstalling uitpandig|Flexibel verhuurkantoor|Fort|Friendswoning|Garage|Garage inpandig|Garage uitpandig|Gemaalgebouw|Gevangenis|Grachtenpand|Hangar|Herenhuis|Hoekwoning|Hoogbouwkantoor|Hotel|Huisartsenpraktijk|Huiskamer|Kantine|Kantoor|Kantoortuin|Kas|Kasteel|Kazerne|Kinderdagverblijf|Klokkentoren|Loft|Loods|Maatschappelijke dienstverlening|Maisonette|Medisch centrum|Molen|Paalwoning|Parkeergarage niet-openbaar|Parkeergarage openbaar|Parkeergarage stalling|Pastorie|Patiowoning|Portiekwoning|Representatief werkpaleis|Restaurant|Retail|Schakelwoning|Schuur|Short stay|Sportgebouw|Stal|Stalling inpandig|Stalling uitpandig|Supermarkt|Techniekruimte|Theater|Tussenwoning|Twee-onder-één-kap|Twee-onder-een-kapwoning|Verkeersruimte|Voertuigenstalling|Vrijstaand|Vrijstaand huis|Vuurtoren|Watertoren|Winkel|Wooneenheid|Woonoppervlak|Woontoren` |
 | property | Pset_BuildingCommon.GrossPlannedArea | O | — |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcBuilding` uit [`Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc`](../voorbeeldmodellen/Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc) (1 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcBuilding` (1 object in het model):
 
 ```step
-#37=IFCBUILDING('1BpW9zAR1AhAgLLMB_5$ab',#18,'RottaNova',$,'Gebouw',#35,$,'RottaNova',.ELEMENT.,$,$,#36)
-#166475=IFCPROPERTYSET('2fMJu1RoRs3aAdUoxLCh6g',#18,'Pset_BuildingCommon',$,(#58,#60,#166472,#166473,#166474))
-#58=IFCPROPERTYSINGLEVALUE('IsPermanentID',$,IFCBOOLEAN(.T.),$)
-#60=IFCPROPERTYSINGLEVALUE('Reference',$,IFCIDENTIFIER('Project Information'),$)
-#166472=IFCPROPERTYSINGLEVALUE('BuildingID',$,IFCIDENTIFIER('003100000122684'),$)
-#166473=IFCPROPERTYSINGLEVALUE('NumberOfStoreys',$,IFCINTEGER(4),$)
-#166474=IFCPROPERTYSINGLEVALUE('IsLandmarked',$,IFCLOGICAL(.U.),$)
-#166481=IFCPROPERTYSET('1xFW6TwXUHq_rgmfjvpag7',#18,'Pset_BuildingUse',$,(#166479,#166480))
-#166479=IFCPROPERTYSINGLEVALUE('MarketCategory',$,IFCLABEL('Woongebouw'),$)
-#166480=IFCPROPERTYSINGLEVALUE('MarketSubCategory',$,IFCLABEL('Appartement'),$)
-#174968=IFCCLASSIFICATIONREFERENCE('https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Gebouw','Gebouw','Gebouw',#170339,$,$)
+#41=IFCBUILDING('1W5FQV6hz2U80I8tmdGsoB',#19,'gezins tussen woning',$,$,#39,$,'gezins tussen woning',.ELEMENT.,$,$,#40);
 ```
 
 ### 9.05b Gebouwinhoud
@@ -315,16 +272,17 @@ Adres is indicatief, Georeferentie wordtgebruikt voor het uitvoeren van de omgev
 | attribute | ObjectType | R | Gebouwinhoud |
 | attribute | Description | R | Bruto Inhoud |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcZone` uit [`Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc`](../voorbeeldmodellen/Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc) (1 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcSpatialZone met ObjectType=Gebouwinhoud` (2 objecten in het model):
 
 ```step
-#170363=IFCZONE('2NsleY4eb17QShv6rwcLwR',#170362,'Gebouwinhoud','Bruto Inhoud','Gebouwinhoud',$)
-#174992=IFCCLASSIFICATIONREFERENCE('https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Gebouwinhoud','Gebouwinhoud','Gebouwinhoud',#170339,$,$)
+#2137=IFCSPATIALZONE('2zqiD1tzn6SuTN7QZ92jeD',#19,'01','Bruto Inhoud','Gebouwinhoud',#2136,#2130,$,.USERDEFINED.);
+#2790=IFCRELASSOCIATESCLASSIFICATION('055kmQm$PkBvBz21pa1m3O',#19,'Gebouwinhoud',':Gebouwinhoud',(#2137,#2170),#2143);
+#2143=IFCCLASSIFICATIONREFERENCE($,'Gebouwinhoud',$,#147,$,$);
 ```
 
 ### 9.06a Bouwlaag (voorheen verdieping)
 
-*Bestand:* [`13-9.06a-Bouwlaag-voorheen-verdieping.ids`](ids/13-9.06a-Bouwlaag-voorheen-verdieping.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #1 #2 #3 #4 #6 #9 #10 #16
+*Bestand:* [`13-9.06a Bouwlaag kenmerk.ids`](ids/13-9.06a%20Bouwlaag%20kenmerk.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #1 #2 #3 #4 #6 #9 #10 #16
 
 *Van toepassing op:* IFCBUILDINGSTOREY
 
@@ -335,20 +293,15 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 | attribute | ObjectType | R | Bouwlaag |
 | attribute | Name | R | patroon `.*(-9 kelder|-8 kelder|-7 kelder|-6 kelder|-5 kelder|-4 kelder|-3 kelder|-2 kelder|-1 kelder|00 begane grond|01 eerste verdieping|02 tweede verdieping|03 derde verdieping|04 vierde verdieping|05 vijfde verdieping|06 zesde verdieping|07 zevende verdieping|08 achtste verdieping|09 negende verdieping|10 tiende verdieping|11 elfde verdieping|12 twaalfde verdieping|13 dertiende verdieping|14 veertiende verdieping|15 vijftiende verdieping|16 zestiende verdieping|17 zeventiende verdieping|18 achttiende verdieping|19 negentiende verdieping|20 twintigste verdieping|21 eenentwintigste verdieping|22 tweeentwintigste verdieping|23 drieentwintigste verdieping|24 vierentwintigste verdieping|25 vijfentwintigste verdieping|26 zesentwintigste verdieping|27 zevenentwintigste verdieping|28 achtentwintigste verdieping|29 negentwintigste verdieping|30 dertigste verdieping|31 eenendertigste verdieping|32 tweeendertigste verdieping|33 drieendertigste verdieping|34 vierendertigste verdieping|35 vijfendertigste verdieping|36 zesendertigste verdieping|37 zevenendertigste verdieping|38 achtendertigste verdieping|39 negendertigste verdieping|40 veertigste verdieping|01 dak|02 dak|03 dak|04 dak|05 dak|06 dak|07 dak|08 dak|09 dak|10 dak|11 dak|12 dak|13 dak|14 dak|15 dak|16 dak|17 dak|18 dak|19 dak|20 dak|21 dak|22 dak|23 dak|24 dak|25 dak|26 dak|27 dak|28 dak|29 dak|30 dak|31 dak|32 dak|33 dak|34 dak|35 dak|36 dak|37 dak|38 dak|39 dak|40 dak|41 dak).*` |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcBuildingStorey` uit [`Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc`](../voorbeeldmodellen/Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc) (4 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcBuildingStorey` (6 objecten in het model, inclusief NAP):
 
 ```step
-#40=IFCBUILDINGSTOREY('1BpW9zAR1AhAgLLM81w0VZ',#18,'00 begane grond','Bruto-Inhoud','Bouwlaag',#39,$,'00 begane grond',.ELEMENT.,0.)
-#166452=IFCPROPERTYSET('2kARTUojMYRNJUWhlgPREs',#18,'Pset_BuildingStoreyCommon',$,(#166449,#166450,#166451))
-#166449=IFCPROPERTYSINGLEVALUE('Reference',$,IFCIDENTIFIER('Level:BuildingLevel'),$)
-#166450=IFCPROPERTYSINGLEVALUE('EntranceLevel',$,IFCBOOLEAN(.T.),$)
-#166451=IFCPROPERTYSINGLEVALUE('AboveGround',$,IFCLOGICAL(.U.),$)
-#174970=IFCCLASSIFICATIONREFERENCE('https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Verdieping','Verdieping','Verdieping',#170339,$,$)
+#54=IFCBUILDINGSTOREY('2JF4e6axWHqu3u0C1FZlmi',#19,'00 begane grond',$,'Bouwlaag',#53,$,'L1',.ELEMENT.,4000.0000000000009);
 ```
 
 ### 9.06b Bouwlaaginhoud (voorheen bouwlaagobject)
 
-*Bestand:* [`14-9.06b-Bouwlaaginhoud-voorheen-bouwlaagobject.ids`](ids/14-9.06b-Bouwlaaginhoud-voorheen-bouwlaagobject.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #3 #6
+*Bestand:* [`14-9.06b-Bouwlaaginhoud object.ids`](ids/14-9.06b-Bouwlaaginhoud%20object.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #3 #6
 
 *Van toepassing op:* IFCSPATIALZONE / IFCSPACE / IFCZONE met ObjectType=Bouwlaaginhoud
 
@@ -366,17 +319,15 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 | property | Qto_BuildingStoreyBaseQuantities.NetHeight | O | — |
 | property | Qto_BuildingStoreyBaseQuantities.NetVolume | O | — |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcSpace` uit [`Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc`](../voorbeeldmodellen/Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc) (37 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcSpatialZone met ObjectType=Bouwlaaginhoud` (4 objecten in het model):
 
 ```step
-#321=IFCSPACE('2_NwwkeBjBhgaaExdI61Ab',#18,'BVO gemeenschappelijk 00 begane grond','Bruto Inhoud','Bouwlaaginhoud',#312,#320,'BVO 000',.ELEMENT.,.USERDEFINED.,$)
-#334=IFCELEMENTQUANTITY('1728IGoH6iAaGvsd64JAWO',#18,'Qto_SpaceBaseQuantities',$,$,(#329,#330,#331,#332))
-#329=IFCQUANTITYLENGTH('Height','',$,2999.9999999990991,$)
-#330=IFCQUANTITYAREA('GrossFloorArea','',$,30.813460020409657,$)
-#331=IFCQUANTITYAREA('NetFloorArea','',$,30.813460020409657,$)
-#332=IFCQUANTITYAREA('GrossCeilingArea','',$,30.813460020409657,$)
-#174972=IFCCLASSIFICATIONREFERENCE('https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Bouwlaaginhoud','Bouwlaaginhoud','Bouwlaaginhoud',#170339,$,$)
+#1640=IFCSPATIALZONE('1z8c0Rt$P1juhD14cpfraR',#19,'00 begane grond','Bruto Inhoud','Bouwlaaginhoud',#1627,#1639,$,.USERDEFINED.);
+#1647=IFCRELDEFINESBYPROPERTIES('2pDVMzJecPwJQtaFANArkG',#19,$,$,(#1640),#1645);
+#1645=IFCPROPERTYSET('1HtIbLnvvWpwuf$FsFbA13',#19,'Pset_SpaceCommon',$,(#83,#1644));
 ```
+
+> De standaardvariant van het model bevat geen `IfcElementQuantity`; dit fragment toont daarom de ruimtelijke objectgegevens.
 
 ### 9.07 Gebruikseenheid (voorheen eigendom-, en gebruikseenheid)
 
@@ -390,11 +341,10 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 | attribute | Name | R | minLength=1 |
 | attribute | Description | R | Bruto Inhoud |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcZone` uit [`Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc`](../voorbeeldmodellen/Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc) (46 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcZone met ObjectType=Eigendom- en gebruikseenheid` (2 objecten in het model):
 
 ```step
-#167422=IFCZONE('0jVpICnFSEB5Z5OZceKwz9',#18,'Unit 0.1','Bruto Inhoud','Gebruikseenheid','')
-#174986=IFCCLASSIFICATIONREFERENCE('https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Gebruikseenheid','Gebruikseenheid','Gebruikseenheid',#170339,$,$)
+#2755=IFCZONE('2CH63veOF2Vi2W2Y7gpUBN',#19,'123456','Netto Inhoud','Eigendom- en gebruikseenheid','<long name 2>');
 ```
 
 ### 9.08 Gebruiksfunctie
@@ -409,11 +359,12 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 | attribute | Name | R | patroon `Woonfunctie|Bijeenkomstfunctie|Celfunctie|Gezondheidszorgfunctie|Industriefunctie|Kantoorfunctie|Logiesfunctie|Onderwijsfunctie|Sportfunctie|Winkelfunctie|Overige gebruiksfunctie|Bouwwerk geen gebouw zijnde|Subgebruikfuncties` |
 | attribute | Description | R | patroon `Bruto Inhoud|Functioneel Nuttige Inhoud|Gebruiksinhoud|Netto Inhoud|Nuttige inhoud|Programma van Eisen inhoud` |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcZone` uit [`Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc`](../voorbeeldmodellen/Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc) (41 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcSpatialZone met ObjectType=Gebruiksfunctie` (4 objecten in het model):
 
 ```step
-#167396=IFCZONE('0XwVnv4IoIW4I_mBB_Zqxb',#18,'Kantoorfunctie','Gebruiksinhoud','Gebruiksfunctie','Unit 0.1')
-#174982=IFCCLASSIFICATIONREFERENCE('https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Gebruiksfunctie','Gebruiksfunctie','Gebruiksfunctie',#170339,$,$)
+#2043=IFCSPATIALZONE('1$7yMFpWX8dA7$wAWHtXmI',#19,'Woonfunctie','Bruto Inhoud','Gebruiksfunctie',#2030,#2042,$,.USERDEFINED.);
+#2789=IFCRELASSOCIATESCLASSIFICATION('2MCGFkL3zeiHIrwNXaM5Nz',#19,'Gebruiksfunctie',':Gebruiksfunctie',(#2043,#2065,#2081,#2097),#2050);
+#2050=IFCCLASSIFICATIONREFERENCE($,'Gebruiksfunctie',$,#147,$,$);
 ```
 
 ### 9.09 Nevengebruiksfunctie
@@ -453,7 +404,11 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 | attribute | Name | R | — |
 | attribute | Description | R | patroon `Bruto Inhoud|Functioneel Nuttige Inhoud|Gebruiksinhoud|Netto Inhoud|Nuttige inhoud|Programma van Eisen inhoud` |
 
-> Dit objecttype komt (nog) niet voor in de voorbeeldmodellen.
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcZone met ObjectType=Functiegebied` (1 object in het model):
+
+```step
+#2757=IFCZONE('3KbFT4QU1U0tb$EQShahy6',#19,'F1','','Functiegebied','<long name 3>');
+```
 
 ### 9.10b Verblijfsgebied
 
@@ -468,7 +423,13 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 | attribute | Description | R | patroon `Bruto Inhoud|Functioneel Nuttige Inhoud|Gebruiksinhoud|Netto Inhoud|Nuttige inhoud|Programma van Eisen inhoud` |
 | property | Pset_SpaceOccupancyRequirements.OccupancyType | R | patroon `matching the pattern Woonfunctie|Bijeenkomstfunctie|Celfunctie|Gezondheidszorgfunctie|Industriefunctie|Kantoorfunctie|Logiesfunctie|Onderwijsfunctie|Sportfunctie|Winkelfunctie|Overige gebruiksfunctie|Bouwwerk geen gebouw zijnde|Subgebruikfuncties` |
 
-> Dit objecttype komt (nog) niet voor in de voorbeeldmodellen.
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcZone met ObjectType=Verblijfsgebied` (1 object in het model):
+
+```step
+#2759=IFCZONE('3ZKnaZOntWbQC$q1k1gslS',#19,'V1','','Verblijfsgebied','<long name 3>');
+```
+
+> Het objecttype is aanwezig, maar dit model bevat geen `Pset_SpaceOccupancyRequirements`-gegevens voor deze zone.
 
 ### 9.10c Verblijfsgebied met bezettingsgraad
 
@@ -485,7 +446,13 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 | property | Pset_SpaceOccupancyRequirements.OccupancyNumberPeak | R | — |
 | property | Pset_SpaceOccupancyRequirements.AreaPerOccupant | R | — |
 
-> Dit objecttype komt (nog) niet voor in de voorbeeldmodellen.
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcZone met ObjectType=Verblijfsgebied` (1 object in het model):
+
+```step
+#2759=IFCZONE('3ZKnaZOntWbQC$q1k1gslS',#19,'V1','','Verblijfsgebied','<long name 3>');
+```
+
+> Dit snapshot toont alleen de zone; de vereiste bezettingsgegevens (`OccupancyNumber`, `OccupancyNumberPeak` en `AreaPerOccupant`) ontbreken in het standaardmodel.
 
 ### 9.10d Gebruiksgebied
 
@@ -525,7 +492,11 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 | attribute | Name | R | — |
 | attribute | Description | R | patroon `Bruto Inhoud|Functioneel Nuttige Inhoud|Gebruiksinhoud|Netto Inhoud|Nuttige inhoud|Programma van Eisen inhoud` |
 
-> Dit objecttype komt (nog) niet voor in de voorbeeldmodellen.
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcZone met ObjectType=Bedgebied` (1 object in het model):
+
+```step
+#2761=IFCZONE('3bAhetpnYI9nypvWySNTvR',#19,'B1','','Bedgebied','<long name 3>');
+```
 
 ### 9.10f Restgebied
 
@@ -539,18 +510,10 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 | attribute | Name | R | — |
 | attribute | Description | R | patroon `Bruto Inhoud|Functioneel Nuttige Inhoud|Gebruiksinhoud|Netto Inhoud|Nuttige inhoud|Programma van Eisen inhoud` |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcSpace` uit [`Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc`](../voorbeeldmodellen/Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc) (82 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcZone met ObjectType=Restgebied` (1 object in het model):
 
 ```step
-#3250=IFCSPACE('38iTKxc2jD1A3sRO8kaa9S',#18,'Gang','Gebruiksinhoud','Restgebied',#3241,#3249,'Unit 1.4',.ELEMENT.,.USERDEFINED.,$)
-#3253=IFCPROPERTYSET('1SZ4tFTVrvIOn70HHBDdbP',#18,'Pset_SpaceCommon',$,(#324))
-#324=IFCPROPERTYSINGLEVALUE('IsExternal',$,IFCBOOLEAN(.F.),$)
-#3261=IFCELEMENTQUANTITY('0e3JqVOeoAJ4GypHbtp5b9',#18,'Qto_SpaceBaseQuantities',$,$,(#3257,#3258,#3259,#3260))
-#3257=IFCQUANTITYLENGTH('Height','',$,3000.0000000001442,$)
-#3258=IFCQUANTITYAREA('GrossFloorArea','',$,17.448741999955029,$)
-#3259=IFCQUANTITYAREA('NetFloorArea','',$,17.448741999955029,$)
-#3260=IFCQUANTITYAREA('GrossCeilingArea','',$,17.448741999955029,$)
-#174988=IFCCLASSIFICATIONREFERENCE('https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Restgebied','Restgebied','Restgebied',#170339,$,$)
+#2763=IFCZONE('0nwXJ1EHCckmuV3ZUGaLwX',#19,'R1','','Restgebied','<long name 3>');
 ```
 
 ### 9.11 Buitengebied
@@ -569,7 +532,11 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 | property | patroon `Pset_.*Common`.HandicapAccessible | R | — |
 | property | Pset_SpaceCommon.IsExternal | R | true |
 
-> Dit objecttype komt (nog) niet voor in de voorbeeldmodellen.
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcZone met ObjectType=Buitengebied` (1 object in het model):
+
+```step
+#2773=IFCZONE('2w3JdRGKSnfixuKEA8WqZ$',#19,'B0','','Buitengebied','<long name 3>');
+```
 
 ### 9.12a Functieruimte
 
@@ -583,7 +550,11 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 | attribute | Name | R | — |
 | attribute | Description | R | patroon `Functioneel Nuttige Inhoud|Netto Inhoud|Nuttige inhoud|Programma van Eisen inhoud` |
 
-> Dit objecttype komt (nog) niet voor in de voorbeeldmodellen.
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcSpace met ObjectType=Functieruimte` (16 objecten in het model):
+
+```step
+#135=IFCSPACE('3fkWy0pSzEHfnVjDYMlHkY',#19,'Hal','Netto Inhoud','Functieruimte',#90,#127,'Hal',.ELEMENT.,.USERDEFINED.,$);
+```
 
 ### 9.12b Verblijfsruimte
 
@@ -597,18 +568,12 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 | attribute | Name | R | — |
 | attribute | Description | R | patroon `Functioneel Nuttige Inhoud|Netto Inhoud|Nuttige inhoud|Programma van Eisen inhoud` |
 
-**Voorbeeld uit het voorbeeldmodel** — `IfcSpace` uit [`Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc`](../voorbeeldmodellen/Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc) (44 objecten van dit type in dat model):
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcSpace met ObjectType=Verblijfsruimte` (2 objecten in het model):
 
 ```step
-#724=IFCSPACE('1pfVRwvVr8lAFON85LaJsX',#18,'Kantoorruimte','Netto Inhoud','Verblijfsruimte',#715,#723,'Unit 0.1',.ELEMENT.,.USERDEFINED.,$)
-#727=IFCPROPERTYSET('2raBtM_sZ5A4FxGH_fvMsa',#18,'Pset_SpaceCommon',$,(#324))
-#324=IFCPROPERTYSINGLEVALUE('IsExternal',$,IFCBOOLEAN(.F.),$)
-#735=IFCELEMENTQUANTITY('2WlonQODz2LVlPlbpj$fkp',#18,'Qto_SpaceBaseQuantities',$,$,(#731,#732,#733,#734))
-#731=IFCQUANTITYLENGTH('Height','',$,2999.9999999990991,$)
-#732=IFCQUANTITYAREA('GrossFloorArea','',$,130.01609501956449,$)
-#733=IFCQUANTITYAREA('NetFloorArea','',$,130.01609501956449,$)
-#734=IFCQUANTITYAREA('GrossCeilingArea','',$,130.01609501956449,$)
-#174974=IFCCLASSIFICATIONREFERENCE('https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Verblijfsruimte','Verblijfsruimte','Verblijfsruimte',#170339,$,$)
+#391=IFCSPACE('3fkWy0pSzEHfnVjDYMlHkv',#19,'Woonkamer','Netto Inhoud','Verblijfsruimte',#302,#379,'Woonkamer',.ELEMENT.,.USERDEFINED.,$);
+#2782=IFCRELASSOCIATESCLASSIFICATION('0zM_wBwBtvFdnetjKQVc6g',#19,'Verblijfsruimte',':Verblijfsruimte',(#391,#454),#401);
+#401=IFCCLASSIFICATIONREFERENCE($,'Verblijfsruimte',$,#147,$,$);
 ```
 
 ### 9.12c Bedruimte
@@ -623,7 +588,11 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 | attribute | Name | R | — |
 | attribute | Description | R | patroon `Functioneel Nuttige Inhoud|Netto Inhoud|Nuttige inhoud|Programma van Eisen inhoud` |
 
-> Dit objecttype komt (nog) niet voor in de voorbeeldmodellen.
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcSpace met ObjectType=Bedruimte` (4 objecten in het model):
+
+```step
+#786=IFCSPACE('3fkWy0pSzEHfnVjDYMlHWr',#19,'Slaapkamer','Netto Inhoud','Bedruimte',#701,#774,'Slaapkamer',.ELEMENT.,.USERDEFINED.,$);
+```
 
 ### 9.12d Restruimte
 
@@ -637,7 +606,11 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 | attribute | Name | R | — |
 | attribute | Description | R | patroon `Functioneel Nuttige Inhoud|Netto Inhoud|Nuttige inhoud|Programma van Eisen inhoud` |
 
-> Dit objecttype komt (nog) niet voor in de voorbeeldmodellen.
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcSpace met ObjectType=Restruimte` (4 objecten in het model):
+
+```step
+#1249=IFCSPACE('3fkWy0pSzEHfnVjDYMlHWG',#19,'Techniek','Netto Inhoud','Restruimte',#1169,#1236,'Techniek',.ELEMENT.,.USERDEFINED.,$);
+```
 
 ### 9.13 Buitenruimte
 
@@ -654,7 +627,11 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 | property | patroon `Pset_.*Common`.HandicapAccessible | R | — |
 | property | patroon `Pset_.*Common`.PubliclyAccessible | R | — |
 
-> Dit objecttype komt (nog) niet voor in de voorbeeldmodellen.
+**Voorbeeld uit het standaardmodel** - [`BM13_SPA_XX_M3D_ZZZ.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ.ifc): `IfcSpace met ObjectType=Buitenruimte` (4 objecten in het model):
+
+```step
+#1614=IFCSPACE('0IvSXyEiX0d8ITjWoHxU$I',#19,'Overdekte buitenruimten','Overbouwd Terreinvolume','Buitenruimte',#1602,#1613,'Overdekte buitenruimten',.ELEMENT.,.USERDEFINED.,$);
+```
 
 ### 9.16a Brandcompartiment
 
@@ -978,7 +955,7 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 
 ### 9.18i Fysieke elementen Ifcwindow
 
-*Bestand:* [`42-9.18i-Fysieke-elementen-Ifcwindow.ids`](ids/42-9.18i-Fysieke-elementen-Ifcwindow.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #12 #17
+*Bestand:* [`42-9.18i-Fysieke-elementen-IfcWindow.ids`](ids/42-9.18i-Fysieke-elementen-IfcWindow.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #12 #17
 
 *Van toepassing op:* IFCWINDOW
 

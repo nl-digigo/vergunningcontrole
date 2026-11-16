@@ -1,11 +1,11 @@
 /* ==========================================================================
    Tabelverrijking ILS Omgevingsvergunning
-   Hoort bij assets/ils-tables.css. Het script laat de inhoud ongemoeid en
-   voegt alleen structuur toe die met CSS niet te maken is:
+   Hoort bij assets/ils-tables.css.    Het script laat de tekstinhoud ongemoeid en voegt presentatiestructuur toe:
      - een omhulsel waarin brede tabellen horizontaal scrollen (met randschaduw)
      - een plakkende kop en, bij brede tabellen, een plakkende eerste kolom
      - kolomtypen: getal, korte waarde, vrije tekst
      - labels voor IDS-verwijzingen, checknummers, kardinaliteit (R/O/X) en ja/nee
+     - syntaxkleuren voor IFC STEP-fragmenten
    Draait zowel op de ReSpec-pagina's als op de statische leesversies.
    ========================================================================== */
 
@@ -33,6 +33,7 @@
   var RE_NO = /^(nee|nej|no)\b/i;
   var RE_PARTIAL = /^(beperkt|deels|limited|partly|partial)\b/i;
   var RE_EMPTY = /^(—|-|–|n\.v\.t\.|n\/a)$/;
+  var RE_STEP_TOKEN = /'(?:''|[^'])*'|#\d+|\bIFC[A-Z0-9_]+\b|\.[A-Z][A-Z0-9_]*\.|[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:E[+-]?\d+)?|\$|\*/g;
 
   function text(el) {
     return (el.textContent || "").trim();
@@ -129,6 +130,37 @@
     addClass(cell, "ils-flag");
     addClass(cell, "ils-flag--" + kind);
     return true;
+  }
+
+  function escapeHtml(value) {
+    return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  function stepTokenClass(token) {
+    if (token.charAt(0) === "'") return "ils-step-string";
+    if (token.charAt(0) === "#") return "ils-step-id";
+    if (token.charAt(0) === ".") return "ils-step-enum";
+    if (token === "$" || token === "*") return "ils-step-null";
+    if (/^IFC/.test(token)) return "ils-step-type";
+    return "ils-step-number";
+  }
+
+  function highlightStep(code) {
+    if (code.querySelector(".ils-step-token")) return;
+    var source = code.textContent || "";
+    var html = "";
+    var last = 0;
+    var match;
+
+    RE_STEP_TOKEN.lastIndex = 0;
+    while ((match = RE_STEP_TOKEN.exec(source))) {
+      html += escapeHtml(source.slice(last, match.index));
+      html += '<span class="ils-step-token ' + stepTokenClass(match[0]) + '">' + escapeHtml(match[0]) + "</span>";
+      last = RE_STEP_TOKEN.lastIndex;
+    }
+    html += escapeHtml(source.slice(last));
+    code.innerHTML = html;
+    addClass(code.parentNode, "ils-step-block");
   }
 
   /* ---- kolommen ------------------------------------------------------ */
@@ -232,9 +264,87 @@
     watchScroll(wrap, scroller);
   }
 
+  function isIdsFacetTable(table) {
+    var row = table.tHead && table.tHead.rows.length
+      ? table.tHead.rows[0]
+      : table.rows[0];
+    if (!row || row.cells.length < 4) return false;
+    return text(row.cells[0]).toLowerCase() === "facet"
+      && text(row.cells[1]).toLowerCase() === "naam"
+      && text(row.cells[2]).toLowerCase() === "card."
+      && text(row.cells[3]).toLowerCase() === "waarde";
+  }
+
+  function decorateIdsFacet(table) {
+    var rows = table.tBodies.length ? table.tBodies[0].rows : [];
+    for (var i = 0; i < rows.length; i++) {
+      var facet = rows[i].cells[0];
+      if (!facet) continue;
+      var kind = text(facet).toLowerCase();
+      if (kind === "attribute" || kind === "property" || kind === "classification") {
+        facet.setAttribute("data-ids-facet", kind);
+      }
+    }
+  }
+
+  function enhanceIdsBoxes() {
+    var tables = document.querySelectorAll("table[data-ils-table]");
+    for (var i = 0; i < tables.length; i++) {
+      var table = tables[i];
+      if (!isIdsFacetTable(table)) continue;
+      var section = table.closest("section");
+      if (!section || section.hasAttribute("data-ils-ids-box")) continue;
+
+      var children = Array.prototype.slice.call(section.children);
+      var meta = null;
+      var applicability = null;
+      for (var j = 0; j < children.length; j++) {
+        if (children[j].tagName !== "P") continue;
+        var value = text(children[j]);
+        if (!meta && value.indexOf("Bestand:") === 0) meta = children[j];
+        if (!applicability && value.indexOf("Van toepassing op:") === 0) applicability = children[j];
+      }
+      var tableWrap = table.closest(".ils-table");
+      var heading = section.querySelector(".header-wrapper h4");
+      if (!meta || !applicability || !tableWrap || !heading) continue;
+
+      var sectionNumber = heading.querySelector(".secno");
+      var title = text(heading);
+      if (sectionNumber) title = title.replace(text(sectionNumber), "").trim();
+
+      var box = document.createElement("div");
+      box.className = "ils-ids-box";
+      var header = document.createElement("div");
+      header.className = "ils-ids-box__header";
+      var titleEl = document.createElement("strong");
+      titleEl.className = "ils-ids-box__title";
+      titleEl.textContent = title;
+      var version = document.createElement("span");
+      version.className = "ils-ids-box__version";
+      version.textContent = "VNG · IDS 0.96 · 2026-11-16";
+      header.appendChild(titleEl);
+      header.appendChild(version);
+
+      section.insertBefore(box, meta);
+      box.appendChild(header);
+      meta.classList.add("ils-ids-box__meta");
+      applicability.classList.add("ils-ids-box__applicability");
+      box.appendChild(meta);
+      box.appendChild(applicability);
+      box.appendChild(tableWrap);
+      table.classList.add("ils-ids-table");
+      decorateIdsFacet(table);
+      section.setAttribute("data-ils-ids-box", "");
+    }
+  }
+
   function run() {
     var tables = document.querySelectorAll("table:not([data-ils-table])");
     for (var i = 0; i < tables.length; i++) enhance(tables[i]);
+
+    var stepBlocks = document.querySelectorAll("pre > code.language-step, pre > code.step");
+    for (var j = 0; j < stepBlocks.length; j++) highlightStep(stepBlocks[j]);
+    enhanceIdsBoxes();
   }
 
   function start() {

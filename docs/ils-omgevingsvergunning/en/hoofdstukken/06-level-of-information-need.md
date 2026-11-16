@@ -35,9 +35,9 @@ The Level of Information Need (LOIN, ISO 7817-1:2024) sets out, for each informa
 
 Per specification: which objects the requirement applies to (applicability) and which information is required (**R**), optional (**O**) or prohibited (**X**). Specification names and values are the original Dutch IDS content.
 
-### 9 ILS voor Ruimten in de omgevingswet
+### 9 ILS Omgevingsvergunning
 
-*File:* [`01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids`](../ids/01-9-ILS-voor-Ruimten-in-de-omgevingswet.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #1 #2 #3 #4 #5 #6 #7 #8 #9 #10 #11 #12 #13 #14 #15 #16 #17
+*File:* [`01-9.00-ILS-Omgevingsvergunning.ids`](../ids/01-9.00-ILS-Omgevingsvergunning.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #1 #2 #3 #4 #5 #6 #7 #8 #9 #10 #11 #12 #13 #14 #15 #16 #17
 
 *Applies to:* IFCSPATIALZONE / IFCSPACE / IFCEXTERNALSPATIALELEMENT
 
@@ -324,7 +324,7 @@ The address is indicative; georeferencing is what the environmental checks are c
 
 ### 9.06a Bouwlaag (voorheen verdieping)
 
-*File:* [`13-9.06a-Bouwlaag-voorheen-verdieping.ids`](../ids/13-9.06a-Bouwlaag-voorheen-verdieping.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #1 #2 #3 #4 #6 #9 #10 #16
+*File:* [`13-9.06a Bouwlaag kenmerk.ids`](../ids/13-9.06a%20Bouwlaag%20kenmerk.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #1 #2 #3 #4 #6 #9 #10 #16
 
 *Applies to:* IFCBUILDINGSTOREY
 
@@ -348,7 +348,7 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 
 ### 9.06b Bouwlaaginhoud (voorheen bouwlaagobject)
 
-*File:* [`14-9.06b-Bouwlaaginhoud-voorheen-bouwlaagobject.ids`](../ids/14-9.06b-Bouwlaaginhoud-voorheen-bouwlaagobject.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #3 #6
+*File:* [`14-9.06b-Bouwlaaginhoud object.ids`](../ids/14-9.06b-Bouwlaaginhoud%20object.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #3 #6
 
 *Applies to:* IFCSPATIALZONE / IFCSPACE / IFCZONE with ObjectType=Bouwlaaginhoud
 
@@ -978,7 +978,7 @@ NOTE: Qto nog omwisselen met Bouwlaaginhoud
 
 ### 9.18i Fysieke elementen Ifcwindow
 
-*File:* [`42-9.18i-Fysieke-elementen-Ifcwindow.ids`](../ids/42-9.18i-Fysieke-elementen-Ifcwindow.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #12 #17
+*File:* [`42-9.18i-Fysieke-elementen-IfcWindow.ids`](../ids/42-9.18i-Fysieke-elementen-IfcWindow.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #12 #17
 
 *Applies to:* IFCWINDOW
 

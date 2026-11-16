@@ -1,6 +1,17 @@
 # Regelcodering (laag 4) {#regelcodering}
 
----
+<p class="leesniveau bestuurlijk">Bestuurlijk</p>
+
+De regelcodering beschrijft de SPARQL queries en SHACL statements welke in de juiste volgorde een regel volledig automatisch kunnen valideren. Onderdelen welke complexe operaties vergen en niet in SPARQL en/of SHACL uitgedrukt kunnen worden zijn beschreven in functies.
+
+<div class="in-het-kort laag-4">
+
+**In het kort**
+
+- SPARQL-query's worden gebruikt om nieuwe, afgeleide datastructuren te creëren op basis van bestaande gegevens (in de kern: de geconverteerde IFC-inhoud, inclusief geometrie, en aanwezige GIS-gegevens voor de betreffende locatie).
+- SHACL-statements valideren of de verstrekte en afgeleide informatie leiden tot een antwoord met betrekking tot de te toetsen regel.
+- Functies maken de integratie mogelijk van complexe functionaliteit die niet binnen SPARQL en/of SHACL kan worden weergegeven.
+</div>
 
 ## Overzicht per check
 

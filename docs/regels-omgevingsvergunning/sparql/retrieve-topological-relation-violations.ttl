@@ -1,4 +1,3 @@
-						
 PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX ifc:     <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL#>
 PREFIX express: <https://w3id.org/express#>

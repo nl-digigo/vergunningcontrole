@@ -2,7 +2,7 @@
 
 Het Level of Information Need (LOIN, ISO 7817-1:2024) legt per informatiebehoefte vast welke **alfanumerieke informatie**, **geometrie** en **documentatie** nodig is. In deze ILS is het LOIN opgebouwd uit twee delen:
 
-1. **Alfanumeriek** — machineleesbaar vastgelegd in 42 IDS-deelspecificaties (IDS 1.0), afgeleid van de *ILS voor Ruimten in de Omgevingswet* (v0.95). Hieronder per specificatie samengevat.
+1. **Alfanumeriek** — machineleesbaar vastgelegd in 42 IDS-deelspecificaties (IDS 1.0), afgeleid van de *ILS Omgevingsvergunning* (v0.96). Hieronder per specificatie samengevat.
 2. **Geometrisch** — eisen aan de vorm en kwaliteit van de geometrie, die IDS niet kan toetsen. Zie [Geometrische eisen](#loin-geometrie) hieronder en [Geometrische controle](#geometrie).
 3. **Documentatie** — aanvullende bestanden conform de stanaard indieningsvereiste (tekeningen PDF/A, rapportages), zie [Informatieproductiestandaard](#standaard).
 

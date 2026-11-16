@@ -75,7 +75,7 @@ Voor onderstaande punten is een checklict buiten de IDS files om om de modellen 
 
 ## Productiemethode: ruimtemodel
 
-Het ruimtemodel volgt de **ILS voor Ruimten in de Omgevingswet**:
+Het ruimtemodel volgt de **ILS Omgevingsvergunning**:
 
 1. Georeferentie, project, percelen en gebouw vastleggen (9.01–9.05).
 2. Bouwlagen en bouwlaaginhoud (9.06).

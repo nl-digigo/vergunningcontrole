@@ -19,8 +19,8 @@ De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#
 
 | Check | Onderwerp | Bestanden |
 |-------|-----------|-----------|
-| **#1** | Gebruiksfunctie komt overeen met bestemming | 01, 02, 03, 04, 05, 08, 10, 11, 16, 17, 18, 19 |
-| **#2** | Maximale bouwhoogte | 01, 02, 03, 04, 05, 08, 09, 20, 21, 22, 23 |
+| **#1** | Gebruiksfunctie komt overeen met bestemming | 01, 02, 03, 04, 05, 08, 10, 11 |
+| **#2** | Maximale bouwhoogte | 01, 02, 03, 04, 05, 08, 09 |
 | **#3** | Maximaal bebouwingspercentage | te doen |
 | **#4** | Gebruiksfunctie / Bestemming beperkt tot x aantal bouwlagen | te doen |
 | **#5** | Beroep aan huis: maximaal 50% gebruiksoppervlakte bedrijfsgebonden kantoor | te doen |

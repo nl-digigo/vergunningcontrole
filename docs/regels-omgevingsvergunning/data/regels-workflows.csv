@@ -1,0 +1,18 @@
+regel,naam,workflow_vng_portaal,sparql,shacl,concept_tracker
+BM13-R01,Gebruiksfunctie komt overeen met bestemming,vng_workflow_embedded-1.xml,insert-ifc4-add2-ontology.ttl insert-areas.ttl insert-bboxes.ttl insert-projections.ttl insert-topological-relations.ttl,validate-topological-relations.ttl validate-bboxes-ifcwall.ttl validate-model-bboxes.ttl,regels/BM13-R01/
+BM13-R02,Maximale bouwhoogte,vng_workflow_embedded-2.xml,insert-ifc4-add2-ontology.ttl insert-areas.ttl insert-bboxes.ttl insert-projections.ttl insert-topological-relations.ttl,validate-topological-relations.ttl validate-height.ttl,regels/BM13-R02/
+BM13-R03,Maximaal bebouwingspercentage,vng_workflow_embedded-3.xml,,,
+BM13-R04,Gebruiksfunctie / Bestemming beperkt tot x aantal bouwlagen,vng_workflow_embedded-4.xml,,,
+BM13-R05,Beroep aan huis: maximaal 50% gebruiksoppervlakte bedrijfsgebonden kantoor,vng_workflow_embedded-5.xml,,,
+BM13-R06,Maximum aantal bouwlagen,vng_workflow_embedded-6.xml,,,
+BM13-R07,Brandcompartimenten,vng_workflow_embedded-7.xml,,,
+BM13-R08,Brandwerendheid,vng_workflow_embedded-8.xml,,,
+BM13-R09,Vrije breedte,vng_workflow_embedded-9.xml,,,
+BM13-R10,Hoogteverschil,vng_workflow_embedded-10.xml,,,
+BM13-R11,Rc-waarde,vng_workflow_embedded-11.xml,,,
+BM13-R12,U-waarde,vng_workflow_embedded-12.xml,,,
+BM13-R13,MPG,vng_workflow_embedded-13.xml,,,
+BM13-R14,Vluchtwegen,vng_workflow_embedded-14.xml,,,
+BM13-R15,Loopafstand,vng_workflow_embedded-15.xml,,,
+BM13-R16,Vluchtbreedte,vng_workflow_embedded-16.xml,,,
+BM13-R17,Daglicht,vng_workflow_embedded-17.xml,,,

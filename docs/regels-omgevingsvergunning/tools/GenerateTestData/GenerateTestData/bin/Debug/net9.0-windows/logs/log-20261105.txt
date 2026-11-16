@@ -1,0 +1,216 @@
+17:58:11 [INF] : Starting GenerateTestData
+18:01:20 [INF] GenerateTestData.GenerateTestData: Generating test data for location: Amsterdam (X: 121096, Y: 487315)
+18:01:20 [INF] GenerateTestData.GenerateTestData: Executing insert into dataset 'test1' with query: PREFIX ifc:     <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL#>
+PREFIX express: <https://w3id.org/express#>
+PREFIX vng:     <http://vng.nl/geometry-ext.ttl#>
+PREFIX dso:     <http://vng.nl/areas/>
+
+DROP SILENT GRAPH <test-data-living-areas.ttl> ;
+
+INSERT {
+    GRAPH <test-data-living-areas.ttl> {
+        ?areaUri	a	dso:area ;
+			            dso:id       ?id ;
+			            dso:name     ?name ;
+			            dso:group    ?group ;
+			            dso:type     ?type ;
+			            dso:geometry ?geometry .
+    }
+}
+WHERE {    
+    (121096 487315 400 'wonen, gemengd') vng:dsoArea (?id ?name ?group ?type ?geometry) .
+    BIND(IRI(CONCAT(STR(dso:), ?id)) AS ?areaUri)
+}
+18:01:24 [ERR] GenerateTestData.GenerateTestData: Exception occurred while inserting into dataset 'test1'
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:3030)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at GenerateTestData.SPARQL.Server.ExecuteInsertAsync(String datasetName, String query) in D:\SvilenGit\CONTENT\VNG\Tools\GenerateTestData\GenerateTestData\SPARQL\Server.cs:line 202
+18:01:24 [ERR] GenerateTestData.GenerateTestData: An error occurred while generating test data.
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:3030)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at GenerateTestData.SPARQL.Server.ExecuteInsertAsync(String datasetName, String query) in D:\SvilenGit\CONTENT\VNG\Tools\GenerateTestData\GenerateTestData\SPARQL\Server.cs:line 202
+   at GenerateTestData.GenerateTestData._buttonRun_Click(Object sender, EventArgs e) in D:\SvilenGit\CONTENT\VNG\Tools\GenerateTestData\GenerateTestData\GenerateTestData.cs:line 126
+18:16:38 [INF] GenerateTestData.GenerateTestData: Generating test data for location: Amsterdam (X: 121096, Y: 487315)
+18:16:38 [INF] GenerateTestData.GenerateTestData: Executing insert into dataset 'test1' with query: PREFIX ifc:     <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL#>
+PREFIX express: <https://w3id.org/express#>
+PREFIX vng:     <http://vng.nl/geometry-ext.ttl#>
+PREFIX dso:     <http://vng.nl/areas/>
+
+DROP SILENT GRAPH <test-data-living-areas.ttl> ;
+
+INSERT {
+    GRAPH <test-data-living-areas.ttl> {
+        ?areaUri	a	dso:area ;
+			            dso:id       ?id ;
+			            dso:name     ?name ;
+			            dso:group    ?group ;
+			            dso:type     ?type ;
+			            dso:geometry ?geometry .
+    }
+}
+WHERE {    
+    (121096 487315 400 'wonen, gemengd') vng:dsoArea (?id ?name ?group ?type ?geometry) .
+    BIND(IRI(CONCAT(STR(dso:), ?id)) AS ?areaUri)
+}
+18:16:41 [INF] GenerateTestData.GenerateTestData: Generating test data for location: Amsterdam (X: 121096, Y: 487315)
+18:16:41 [INF] GenerateTestData.GenerateTestData: Executing insert into dataset 'test1' with query: PREFIX ifc:     <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL#>
+PREFIX express: <https://w3id.org/express#>
+PREFIX vng:     <http://vng.nl/geometry-ext.ttl#>
+PREFIX dso:     <http://vng.nl/areas/>
+
+DROP SILENT GRAPH <test-data-living-areas.ttl> ;
+
+INSERT {
+    GRAPH <test-data-living-areas.ttl> {
+        ?areaUri	a	dso:area ;
+			            dso:id       ?id ;
+			            dso:name     ?name ;
+			            dso:group    ?group ;
+			            dso:type     ?type ;
+			            dso:geometry ?geometry .
+    }
+}
+WHERE {    
+    (121096 487315 400 'wonen, gemengd') vng:dsoArea (?id ?name ?group ?type ?geometry) .
+    BIND(IRI(CONCAT(STR(dso:), ?id)) AS ?areaUri)
+}
+18:16:43 [ERR] GenerateTestData.GenerateTestData: Exception occurred while inserting into dataset 'test1'
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:3030)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at GenerateTestData.SPARQL.Server.ExecuteInsertAsync(String datasetName, String query) in D:\SvilenGit\CONTENT\VNG\Tools\GenerateTestData\GenerateTestData\SPARQL\Server.cs:line 202
+18:16:43 [ERR] GenerateTestData.GenerateTestData: An error occurred while generating test data.
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:3030)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at GenerateTestData.SPARQL.Server.ExecuteInsertAsync(String datasetName, String query) in D:\SvilenGit\CONTENT\VNG\Tools\GenerateTestData\GenerateTestData\SPARQL\Server.cs:line 202
+   at GenerateTestData.GenerateTestData._buttonRun_Click(Object sender, EventArgs e) in D:\SvilenGit\CONTENT\VNG\Tools\GenerateTestData\GenerateTestData\GenerateTestData.cs:line 126
+18:16:45 [ERR] GenerateTestData.GenerateTestData: Exception occurred while inserting into dataset 'test1'
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:3030)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at GenerateTestData.SPARQL.Server.ExecuteInsertAsync(String datasetName, String query) in D:\SvilenGit\CONTENT\VNG\Tools\GenerateTestData\GenerateTestData\SPARQL\Server.cs:line 202
+18:16:45 [ERR] GenerateTestData.GenerateTestData: An error occurred while generating test data.
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:3030)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at GenerateTestData.SPARQL.Server.ExecuteInsertAsync(String datasetName, String query) in D:\SvilenGit\CONTENT\VNG\Tools\GenerateTestData\GenerateTestData\SPARQL\Server.cs:line 202
+   at GenerateTestData.GenerateTestData._buttonRun_Click(Object sender, EventArgs e) in D:\SvilenGit\CONTENT\VNG\Tools\GenerateTestData\GenerateTestData\GenerateTestData.cs:line 126
+18:16:50 [INF] : Shutting down GenerateTestData
+18:20:52 [INF] : Starting GenerateTestData
+18:21:17 [INF] GenerateTestData.GenerateTestData: Generating test data for location: Amsterdam (X: 121096, Y: 487315)
+18:21:17 [INF] GenerateTestData.GenerateTestData: Executing insert into dataset 'test1' with query: PREFIX ifc:     <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL#>
+PREFIX express: <https://w3id.org/express#>
+PREFIX vng:     <http://vng.nl/geometry-ext.ttl#>
+PREFIX dso:     <http://vng.nl/areas/>
+
+DROP SILENT GRAPH <test-data-living-areas.ttl> ;
+
+INSERT {
+    GRAPH <test-data-living-areas.ttl> {
+        ?areaUri	a	dso:area ;
+			            dso:id       ?id ;
+			            dso:name     ?name ;
+			            dso:group    ?group ;
+			            dso:type     ?type ;
+			            dso:geometry ?geometry .
+    }
+}
+WHERE {    
+    (121096 487315 400 'wonen, gemengd') vng:dsoArea (?id ?name ?group ?type ?geometry) .
+    BIND(IRI(CONCAT(STR(dso:), ?id)) AS ?areaUri)
+}
+18:21:19 [ERR] GenerateTestData.GenerateTestData: Exception occurred while inserting into dataset 'test1'
+System.Exception: Insert failed. Status code: NotFound, Response: 
+   at GenerateTestData.SPARQL.Server.ExecuteInsertAsync(String datasetName, String query) in D:\SvilenGit\CONTENT\VNG\Tools\GenerateTestData\GenerateTestData\SPARQL\Server.cs:line 212
+18:21:19 [ERR] GenerateTestData.GenerateTestData: An error occurred while generating test data.
+System.Exception: Insert failed. Status code: NotFound, Response: 
+   at GenerateTestData.SPARQL.Server.ExecuteInsertAsync(String datasetName, String query) in D:\SvilenGit\CONTENT\VNG\Tools\GenerateTestData\GenerateTestData\SPARQL\Server.cs:line 212
+   at GenerateTestData.GenerateTestData._buttonRun_Click(Object sender, EventArgs e) in D:\SvilenGit\CONTENT\VNG\Tools\GenerateTestData\GenerateTestData\GenerateTestData.cs:line 126
+18:22:13 [INF] : Shutting down GenerateTestData

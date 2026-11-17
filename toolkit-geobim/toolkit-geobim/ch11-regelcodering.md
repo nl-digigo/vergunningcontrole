@@ -85,6 +85,11 @@ De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#
 | 13 | [gmColor] | http://vng.nl/geometry-ext.ttl#gmColor | Assignment of color to any 2D or 3D geometry |
 | 14 | [gmCollection] | http://vng.nl/geometry-ext.ttl#gmCollection | Collection of N geometries, either 2D or 3D  |
 | 15 | [gmContent] | http://vng.nl/geometry-ext.ttl#gmContent | Returns the type of geemtry embedded within a Base64 geometry string |
+| 16 | [gmArea] | http://vng.nl/geometry-ext.ttl#gmArea | The area of a 2D or 3D geometrical representation |
+| 17 | [gmBoundingBox] | http://vng.nl/geometry-ext.ttl#gmBoundingBox | The AABB Bounding Box of a 2D or 3D geometrical representatio |
+| 18 | [gmDistance] | http://vng.nl/geometry-ext.ttl#gmDistance | The distance between two 2D or 3D geometrical representations |
+| 19 | [gmLength] | http://vng.nl/geometry-ext.ttl#gmLength | The length of a polygon |
+| 20 | [gmVolume] | http://vng.nl/geometry-ext.ttl#gmVolume | The volume of a 3D geometrical representation |
 
 ## 01 — dsoAreas
 
@@ -235,3 +240,53 @@ De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#
 | **Services** | Returns the type of geemtry embedded within a Base64 geometry string |
 | **Input** | Geometry (Base64 Data) |
 | **Output** | "2D" (string) <br> "3D" (string) |
+
+## 16 — gmArea
+
+| | |
+|---|---|
+| **Portaal-id** | `gmArea` |
+| **Soort** | SPARQL Extension Function |
+| **Services** | The area of a 2D or 3D geometrical representation |
+| **Input** | Geometry (Base64 Data) |
+| **Output** | area (double) |
+
+## 17 — gmBoundingBox
+
+| | |
+|---|---|
+| **Portaal-id** | `gmBoundingBox` |
+| **Soort** | SPARQL Extension Function |
+| **Services** | The AABB Bounding Box of a 2D or 3D geometrical representatio |
+| **Input** | Geometry (Base64 Data) |
+| **Output** | minX (double) <br>minY (double) <br> minZ (double) <br> maxX (double) <br> maxY (double) <br> maxZ (double) <br> |
+
+## 18 — gmDistance
+
+| | |
+|---|---|
+| **Portaal-id** | `gmDistance` |
+| **Soort** | SPARQL Extension Function |
+| **Services** | The distance between two 2D or 3D geometrical representations |
+| **Input** | FirstGeometry (Base64 Data) <br> SecondGeometry (Base64 Data) |
+| **Output** | distance (double) |
+
+## 19 — gmLength
+
+| | |
+|---|---|
+| **Portaal-id** | `gmLength` |
+| **Soort** | SPARQL Extension Function |
+| **Services** | The length of a polygon |
+| **Input** | Geometry (Base64 Data) |
+| **Output** | length (double) |
+
+## 20 — gmVolume
+
+| | |
+|---|---|
+| **Portaal-id** | `gmVolume` |
+| **Soort** | SPARQL Extension Function |
+| **Services** | The volume of a 3D geometrical representation |
+| **Input** | Geometry (Base64 Data) |
+| **Output** | volume (double) |

@@ -2,7 +2,7 @@
 
 ## Scope
 
-| Dimension | Boundaries in version 0.1 |
+| Dimension | Boundaries in this version |
 |---|---|
 | Domain | Permitting under the Environment and Planning Act (*Omgevingswet*, VTH) |
 | Process | GEMMA 015 *Behandelen aanvraag* → 015-03 *Inhoudelijk behandelen aanvraag* → processtap *Toetsen aan regelgeving* (activities *Controleren indieningsvereisten* and *Uitvoeren inhoudelijke toetsing*). See the [GEMMA matrix](#gemma-matrix) for the other processes |

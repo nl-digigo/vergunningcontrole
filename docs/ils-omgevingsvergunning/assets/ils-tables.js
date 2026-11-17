@@ -17,6 +17,16 @@
   var TXT = {
     more: NL ? "Toon alle %d specificaties" : "Show all %d specifications",
     less: NL ? "Toon minder" : "Show less",
+    applicability: NL ? "Applicability in IDS" : "Applicability in IDS",
+    requirements: NL ? "Requirements" : "Requirements",
+    showXml: NL ? "Toon IDS-XML" : "Show IDS XML",
+    hideXml: NL ? "Verberg IDS-XML" : "Hide IDS XML",
+    copyXml: NL ? "Kopieer XML" : "Copy XML",
+    loadingXml: NL ? "IDS-XML laden..." : "Loading IDS XML...",
+    loadedXml: NL ? "IDS-XML geladen." : "IDS XML loaded.",
+    copiedXml: NL ? "XML gekopieerd." : "XML copied.",
+    copyFailed: NL ? "Kopiëren is niet gelukt. Selecteer de XML-tekst om deze handmatig te kopiëren." : "Copy failed. Select the XML text to copy it manually.",
+    loadFailed: NL ? "IDS-XML kon niet worden geladen. Probeer het opnieuw." : "Could not load IDS XML. Try again.",
     card: NL
       ? { R: "verplicht", O: "optioneel", X: "verboden" }
       : { R: "required", O: "optional", X: "prohibited" }
@@ -269,10 +279,12 @@
       ? table.tHead.rows[0]
       : table.rows[0];
     if (!row || row.cells.length < 4) return false;
+    var name = text(row.cells[1]).toLowerCase();
+    var value = text(row.cells[3]).toLowerCase();
     return text(row.cells[0]).toLowerCase() === "facet"
-      && text(row.cells[1]).toLowerCase() === "naam"
+      && (name === "naam" || name === "name")
       && text(row.cells[2]).toLowerCase() === "card."
-      && text(row.cells[3]).toLowerCase() === "waarde";
+      && (value === "waarde" || value === "value");
   }
 
   function decorateIdsFacet(table) {
@@ -285,6 +297,94 @@
         facet.setAttribute("data-ids-facet", kind);
       }
     }
+  }
+
+  function addIdsXmlControls(box, meta) {
+    var fileLink = meta.querySelector('a[href$=".ids"]');
+    if (!fileLink) return;
+
+    var actions = document.createElement("div");
+    actions.className = "ils-ids-actions";
+    var toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "ils-ids-button";
+    toggle.textContent = TXT.showXml;
+    toggle.setAttribute("aria-expanded", "false");
+
+    var panel = document.createElement("div");
+    panel.className = "ils-ids-xml";
+    panel.hidden = true;
+    var copy = document.createElement("button");
+    copy.type = "button";
+    copy.className = "ils-ids-button ils-ids-button--copy";
+    copy.textContent = TXT.copyXml;
+    copy.disabled = true;
+    var status = document.createElement("span");
+    status.className = "ils-ids-xml__status";
+    status.setAttribute("aria-live", "polite");
+    var pre = document.createElement("pre");
+    pre.className = "ils-ids-xml__code";
+    var code = document.createElement("code");
+    pre.appendChild(code);
+    panel.appendChild(copy);
+    panel.appendChild(status);
+    panel.appendChild(pre);
+    actions.appendChild(toggle);
+    box.appendChild(actions);
+    box.appendChild(panel);
+
+    var xml = null;
+    toggle.addEventListener("click", function () {
+      var isOpen = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
+      toggle.textContent = isOpen ? TXT.showXml : TXT.hideXml;
+      panel.hidden = isOpen;
+      if (isOpen || xml !== null || status.textContent === TXT.loadingXml) return;
+
+      status.textContent = TXT.loadingXml;
+      fetch(fileLink.href).then(function (response) {
+        if (!response.ok) throw new Error("IDS request failed: " + response.status);
+        return response.text();
+      }).then(function (source) {
+        xml = source;
+        code.textContent = source;
+        copy.disabled = false;
+        status.textContent = TXT.loadedXml;
+      }).catch(function (error) {
+        console.error("Could not load IDS XML:", error);
+        status.textContent = TXT.loadFailed;
+      });
+    });
+
+    copy.addEventListener("click", function () {
+      if (xml === null) return;
+      var copied = false;
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(xml).then(function () {
+          status.textContent = TXT.copiedXml;
+        }).catch(function (error) {
+          console.error("Could not copy IDS XML:", error);
+          status.textContent = TXT.copyFailed;
+        });
+        return;
+      }
+
+      var selection = document.createElement("textarea");
+      selection.value = xml;
+      selection.setAttribute("readonly", "");
+      selection.className = "ils-ids-copy-buffer";
+      document.body.appendChild(selection);
+      selection.select();
+      try {
+        copied = document.execCommand("copy");
+      } catch (error) {
+        console.error("Could not copy IDS XML:", error);
+      } finally {
+        document.body.removeChild(selection);
+      }
+      if (copied) status.textContent = TXT.copiedXml;
+      else status.textContent = TXT.copyFailed;
+    });
   }
 
   function enhanceIdsBoxes() {
@@ -301,8 +401,8 @@
       for (var j = 0; j < children.length; j++) {
         if (children[j].tagName !== "P") continue;
         var value = text(children[j]);
-        if (!meta && value.indexOf("Bestand:") === 0) meta = children[j];
-        if (!applicability && value.indexOf("Van toepassing op:") === 0) applicability = children[j];
+        if (!meta && (value.indexOf("Bestand:") === 0 || value.indexOf("File:") === 0)) meta = children[j];
+        if (!applicability && (value.indexOf("Van toepassing op:") === 0 || value.indexOf("Applies to:") === 0)) applicability = children[j];
       }
       var tableWrap = table.closest(".ils-table");
       var heading = section.querySelector(".header-wrapper h4");
@@ -331,7 +431,22 @@
       applicability.classList.add("ils-ids-box__applicability");
       box.appendChild(meta);
       box.appendChild(applicability);
-      box.appendChild(tableWrap);
+
+      var applicabilityHeading = document.createElement("h5");
+      applicabilityHeading.className = "ils-ids-box__section-title ils-ids-box__section-title--applicability";
+      applicabilityHeading.textContent = TXT.applicability;
+      box.insertBefore(applicabilityHeading, applicability);
+
+      addIdsXmlControls(box, meta);
+
+      var requirements = document.createElement("div");
+      requirements.className = "ils-ids-requirements";
+      var requirementsHeading = document.createElement("h5");
+      requirementsHeading.className = "ils-ids-box__section-title ils-ids-box__section-title--requirements";
+      requirementsHeading.textContent = TXT.requirements;
+      requirements.appendChild(requirementsHeading);
+      requirements.appendChild(tableWrap);
+      box.appendChild(requirements);
       table.classList.add("ils-ids-table");
       decorateIdsFacet(table);
       section.setAttribute("data-ils-ids-box", "");

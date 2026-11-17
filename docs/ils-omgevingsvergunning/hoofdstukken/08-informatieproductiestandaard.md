@@ -58,31 +58,34 @@ Voor onderstaande punten is een checklict buiten de IDS files om om de modellen 
 |---|---|
 | Formaat | IFC STEP (`.ifc`), IFC 4.3 (ISO 16739-1:2024). IFC4 ADD2 TC1 is toegestaan zolang de software IFC 4.3 niet ondersteunt |
 | Header | `FILE_NAME` volledig gevuld; `TimeStamp` geldt als versiedatum. De gemeente beoordeelt of de header bij publicatie **geanonimiseerd** moet worden. Dit bouwt voort op DUTO-BIM project en zal met Nationaal en Gemeentelijk archif besproken moeten worden. |
-| Eenheden | objecten in millimeters, georeferentie in meters |
-| Georeferentie | `IfcMapConversion` + `IfcProjectedCRS`, EPSG:28992 of EPSG:7415, hoogte ten opzichte van NAP, exporteren met het ware noorden |
-| Bouwlagen | `IfcBuildingStorey.Name` = `<code>[letter] <omschrijving>`, bijv. `-1 kelder`, `00 begane grond`, `00a tussenverdieping`, `01 eerste verdieping`. Namen en peilen gelijk in alle aspectmodellen |
+| Eenheden | objecten in millimeters, georeferentie in meters. Deze eis wordt niet met de IDS gecontroleerd |
+| Georeferentie | `IfcMapConversion` of `IfcMapConversionScaled` + `IfcProjectedCRS` (in IFC4.3 is `IfcMapConversionScaled` de aanbevolen route voor RD met NAP), EPSG:28992 of EPSG:7415, hoogte ten opzichte van NAP, exporteren met het ware noorden. `MapUnit` van `IfcProjectedCRS` is ingevuld en is de meter (niet met de IDS gecontroleerd; een IDS kan alleen de aanwezigheid toetsen) |
+| Adres | Het projectadres (`Pset_Address`, 9.01c) is optioneel. Invullen bij een gebouw met een postadres; leeg laten bij meerdere gebouwen of functies. De georeferentie bepaalt de locatie. De adresattributen van `IfcSite` en `IfcBuilding` worden niet gevraagd |
+| Bouwlagen | `IfcBuildingStorey.Name` = `<code>[letter] <omschrijving>`, bijv. `-1 kelder`, `00 begane grond`, `00a tussenverdieping`, `01 eerste verdieping`. Namen en peilen gelijk in alle aspectmodellen. `Pset_BuildingStoreyCommon.EntranceLevel` is verplicht; `.AboveGround` is optioneel |
+| Perceel, gebouw en bouwlaag | `IfcSite`, `IfcBuilding` en `IfcBuildingStorey` hoeven geen eigen geometrie of plaatsing te hebben |
 | Entiteiten | Juiste entiteit gebruiken (geen `IfcBuildingElementProxy`): Bij voorkeur: netto ruimte = `IfcSpace`; bruto inhoud en gebieden = `IfcSpatialZone`; groeperingen (gebruiksfunctie, verblijfsobject, brandcompartiment) = `IfcZone` |
-| Kadastraal perceel | Als `IfcSpatialZone` met `Pset_LandRegistration`, niet als `IfcSite` |
+| Kadastraal Perceel | Het getekende perceel: een eigen `IfcSpatialZone` met ObjectType `Kadastraal Perceel`, niet als `IfcSite`. De perceelgegevens (`Pset_LandRegistration`) staan op de `IfcSite` (9.03a) |
 | Attributen | `GlobalId` verplicht en stabiel tussen versies; `Name` en `ObjectType` verplicht; `Description` en `LongName` optioneel |
 | ObjectType | Geen aanvullende property sets. De betekenis wordt vastgelegd met `ObjectType` op `IfcSpace`, `IfcSpatialZone` en `IfcZone`, met waarden uit de bSDD-publicatie *Omgevingswet-Ruimten* |
 | Property sets | Alleen internationale buildingSMART-Psets en -Qto's (bijv. `Pset_SpaceCommon`, `Qto_SpaceBaseQuantities`, `Pset_WallCommon.FireRating`, `.ThermalTransmittance`) |
+| Brandeigenschappen | Zones (9.16): `Pset_SpaceFireSafetyRequirements`, onder meer `SprinklerProtection` en `SprinklerProtectionAutomatic` (optioneel); vluchtroute `FireExit` = true (verplicht). Fysieke elementen (9.18): `LoadBearing` bij balk, kolom, vloer en wand (verplicht); `Compartmentation` bij vloer en wand; `FireExit` en `SmokeStop` bij deur en raam en `SelfClosing` bij deur (optioneel). `FireRating` (optioneel) volgens NEN-EN 13501-2: klasse en tijd in minuten, bijvoorbeeld `REI 60` of `EI2 30-Sa`. Bij isolatie `SurfaceSpreadOfFlame` (optioneel) volgens NEN-EN 13501-1, bijvoorbeeld `B-s1,d0`, nog zonder de klassen voor vloeren (fl) en leidingisolatie (L); `FlammabilityRating` optioneel. **De waardelijsten zijn voorlopig:** besluit van de gemeentelijke werkgroep van 3 november 2026, onder voorbehoud van afstemming met de BIM basis ILS via digiGO |
 | Classificatie | Optioneel objecten coderen NL-SfB tabel 1, 4-cijferig, laatst gepubliceerde versie (2021) via bSDD (NL-SfB niet noodzakelijk bij toepassing van bovenstaande uitgangspunten) |
 | Materiaal | Naam Kenmerk Toepassing: Naa.K.T. (digiGO, bSDD `nkt/naakt/2.4`) |
 | Installaties | Installatieobjecten groeperen in `IfcSystem` |
 | Panddelen / verblijfsobjecten | Nog nader te onderzoeken. Bij voorkeur `IfcSpatialZone` per panddeel (ander bouwjaar/bouwsysteem); `IfcZone` per verblijfsobject met het BAG-ID. Gemeenschappelijke ruimten horen bij het pand, niet bij een verblijfsobject |
 | Doublures | Geen dubbele of overlappende objecten van hetzelfde type |
-| Gebouw | `IfcBuilding` met o.a. `Pset_BuildingCommon.BuildingID` (BAG-pand-ID, of 14× `0` bij nieuwbouw), `NumberOfStoreys`, `YearOfConstruction`, `IsLandmarked`, `GrossPlannedArea`, `NetPlannedArea` |
+| Gebouw | `IfcBuilding` met ObjectType `Gebouw` en o.a. `Pset_BuildingCommon.BuildingID` (BAG-pand-ID, of 14× `0` bij nieuwbouw), `NumberOfStoreys`, `YearOfConstruction`, `IsLandmarked`, `GrossPlannedArea`, `NetPlannedArea` |
 
 ## Productiemethode: ruimtemodel
 
-Het ruimtemodel volgt de **ILS Omgevingsvergunning**:
+Het ruimtemodel volgt de **ILS Omgevingsvergunning**. De stappen volgen de nummering van de specificaties; de volgorde van modelleren staat in de [Werkwijze](#werkwijze) van de modelleerrichtlijn.
 
 1. Georeferentie, project, percelen en gebouw vastleggen (9.01–9.05).
 2. Bouwlagen en bouwlaaginhoud (9.06).
 3. Gebruikseenheden, gebruiksfuncties en nevengebruiksfuncties als zones (9.07–9.09).
 4. Gebieden (functie-, verblijfs-, gebruiks-, bed- en restgebied) als `IfcSpatialZone` (9.10–9.11).
 5. Ruimten (functie-, verblijfs-, bed- en restruimte, buitenruimte) als `IfcSpace` (9.12–9.13).
-6. Brandcompartimenten, subbrandcompartimenten en vluchtroutes (9.16) en tarraruimte (9.17).
+6. Brandcompartimenten, subbrandcompartimenten, beschermde subbrandcompartimenten en vluchtroutes (9.16) en tarraruimte (9.17).
 7. Fysieke elementen met de eigenschappen die de checks nodig hebben (9.18).
 8. Hoeveelheden (Qto) laten berekenen en exporteren, daarna zelf controleren met de IDS-bestanden.
 

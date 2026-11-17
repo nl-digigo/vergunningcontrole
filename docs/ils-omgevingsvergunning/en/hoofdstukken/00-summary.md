@@ -13,10 +13,10 @@ The ILS was drafted within the VNG programme **Beleidsmaatregel 13 – Vergunnin
 - **Purpose:** 17 checks that municipalities carry out when *substantively assessing the application* (GEMMA bedrijfsproces 015 *Behandelen aanvraag*, deelproces 015-03 *Inhoudelijk behandelen aanvraag*, processtap *Toetsen aan regelgeving*).
 - **Activities:** the zoning plan activity for building (*omgevingsplanactiviteit bouwen*, checks #1–#6) and the technical building activity (*technische bouwactiviteit*, checks #7–#17).
 - **Building type:** in this version, in principle the **residential function** (*woonfunctie*).
-- **Machine-readable part:** 42 IDS 1.0 sub-specifications, derived from the *ILS voor Ruimten in de Omgevingswet* (bSDD `bsnl/Omgevingswet-Ruimten/0.3.0`).
+- **Machine-readable part:** 41 IDS 1.0 sub-specifications, derived from the *ILS voor Ruimten in de Omgevingswet* (bSDD `bsnl/Omgevingswet-Ruimten/0.3.0`).
 - **Information model:** IFC 4.3 (ISO 16739-1:2024); IFC4 ADD2 TC1 is allowed as long as software does not yet support IFC 4.3.
 - **Geometry:** IDS does not check geometry. This ILS therefore sets additional geometric requirements and describes a two-part check: the BIM/CAD software delivers the quantities, and the receiving software recalculates them.
 
-<p class="note">This is a <strong>working version (0.1.2)</strong>. Parts that are filled in per municipality or project are included in this ILS as a <em>fill-in format</em>. Open choices are listed under <a href="#open-punten">Open issues and decisions</a>.</p>
+<p class="note">This is a <strong>working version (0.2.0)</strong>. Parts that are filled in per municipality or project are included in this ILS as a <em>fill-in format</em>. Open choices are listed under <a href="#open-punten">Open issues and decisions</a>.</p>
 
 **Colophon.** Published by the Association of Netherlands Municipalities (VNG). Drafted by Lex Ransijn (VDCbase) on behalf of VNG.

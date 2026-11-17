@@ -18,7 +18,7 @@ The information objectives (ID) are groups of requirements. **ID01 and ID02 are 
 
 **ID03 to ID12 are optional.** They are proposals to include as objectives. They fall outside the 17 checks and have not yet been investigated. We do expect municipalities to use the model information for these purposes as well. A municipality can already request them, but they are not a condition for an admissible application.
 
-| ID | Objective | Status in v0.1 |
+| ID | Objective | Status in this version |
 |---|---|---|
 | **ID01** | **Zoning plan activity for building (OPA): check against the zoning plan (municipal)** | **Mandatory – checks #1–#6** |
 | **ID02** | **Technical building activity (TBA): check against the *Besluit bouwwerken leefomgeving* (national building decree, Bbl)** | **Mandatory – checks #7–#17, including the ID01 information** |

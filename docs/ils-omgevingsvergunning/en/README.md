@@ -4,7 +4,7 @@
 
 Information Delivery Specification (ILS) for applying for an environmental permit (*omgevingsvergunning*) with a 3D information model (IFC). Drafted within **VNG Beleidsmaatregel 13 – Vergunningverlening met BIM (3D model)**, following the **digiGO Toetsingskader ILS** and published with **ReSpec**.
 
-**Version:** 0.1.2 (draft), translated from the Dutch 0.1.2 · **Date:** 25 September 2026
+**Version:** 0.2.0 (draft), translated from the Dutch 0.2.0 · **Date:** 17 November 2026
 
 ## Colophon
 
@@ -48,9 +48,9 @@ The table styling lives in [`../assets/ils-tables.css`](../assets/ils-tables.css
 
 The machine-readable part is shared with the Dutch version and is in Dutch:
 
-- [`../ids/`](../ids/): 42 IDS 1.0 sub-specifications, derived from the *ILS voor Ruimten in de Omgevingswet* v0.95, with the check numbers and the GEMMA milestone added
+- [`../ids/`](../ids/): 41 IDS 1.0 sub-specifications, derived from the *ILS voor Ruimten in de Omgevingswet* v0.95, with the check numbers and the GEMMA milestone added
 - [`../data/specificaties_checks.csv`](../data/specificaties_checks.csv): link between specifications, bSDD identifiers and checks
-- [`../voorbeeldmodellen/`](../voorbeeldmodellen/): 15 IFC sample models (RottaNova/Kievitsweg project) that meet the specifications; chapter 06 shows an excerpt from them per specification
+- [`../voorbeeldmodellen/`](../voorbeeldmodellen/): the IFC sample model `BM13_SPA_XX_M3D_ZZZ_Qto.ifc` (terraced house, IFC4X3_ADD2); chapter 06 shows an excerpt from it per specification
 
 ## Structure
 

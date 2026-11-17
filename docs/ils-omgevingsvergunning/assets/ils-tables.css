@@ -321,8 +321,9 @@ a.ils-chip:hover {
   text-align: center;
 }
 
-.ils-card--r { color: var(--ils-accent); background: var(--ils-accent-soft); }
-.ils-card--o { color: var(--ils-muted); border-color: var(--ils-line-strong); }
+/* R en O zonder kleur: de letter zelf is genoeg. */
+.ils-card--r,
+.ils-card--o { color: inherit; background: none; border-color: transparent; }
 .ils-card--x { color: var(--ils-no); background: var(--ils-no-soft); }
 
 /* Ja / nee met een rustig statusbolletje. */
@@ -374,15 +375,16 @@ pre.ils-step-block > code {
 .ils-step-number { color: #fdba74; }
 .ils-step-null { color: #94a3b8; font-style: italic; }
 
-/* IDS-facetten als compacte, leesbare kaart naast de IFC-snapshots. */
+/* IDS-specificaties gebruiken een lichte, neutrale stijl om ze te onderscheiden
+   van de donkere IFC STEP-fragmenten. */
 .ils-ids-box {
   margin: 1.2em 0 1.6em;
   overflow: hidden;
-  border: 1px solid #29384d;
+  border: 1px solid #c9c6bc;
   border-radius: 12px;
-  background: #0b0f14;
-  box-shadow: 0 4px 16px rgba(16, 24, 40, .12);
-  color: #e2e8f0;
+  background: #fffefa;
+  box-shadow: 0 2px 10px rgba(39, 38, 32, .08);
+  color: #292a27;
 }
 
 .ils-ids-box__header {
@@ -392,22 +394,22 @@ pre.ils-step-block > code {
   justify-content: space-between;
   gap: .55em 1em;
   padding: .8em 1em;
-  border-bottom: 1px solid #29384d;
-  background: #141c27;
+  border-bottom: 1px solid #d8d5ca;
+  background: #f3f1e9;
 }
 
 .ils-ids-box__title {
-  color: #f1f5f9;
+  color: #292a27;
   font-size: 1rem;
   font-weight: 700;
 }
 
 .ils-ids-box__version {
   padding: .2em .65em;
-  border: 1px solid #285477;
+  border: 1px solid #c9c6bc;
   border-radius: 99px;
-  background: #122638;
-  color: #8bd5ff;
+  background: #fffefa;
+  color: #5b5b54;
   font-size: .73rem;
   font-weight: 700;
   letter-spacing: .03em;
@@ -418,31 +420,112 @@ pre.ils-step-block > code {
 .ils-ids-box__applicability {
   margin: 0;
   padding: .7em 1em;
-  border-bottom: 1px solid #263242;
-  color: #b6c2d1;
+  border-bottom: 1px solid #dedcd4;
+  color: #55564f;
   font-size: .82rem;
 }
 
 .ils-ids-box__meta a {
-  color: #7dd3fc;
-  text-decoration-color: #426782;
+  color: #464943;
+  text-decoration-color: #9c9b91;
 }
 
-.ils-ids-box__meta a:hover { color: #bae6fd; }
+.ils-ids-box__meta a:hover { color: #161714; }
+
+.ils-ids-box__section-title {
+  margin: 0;
+  padding: .65em 1em .2em;
+  color: #44453f;
+  font-size: .74rem;
+  font-weight: 750;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.ils-ids-box__section-title--applicability {
+  padding-top: .8em;
+  background: #eceeea;
+}
 
 .ils-ids-box__applicability {
-  color: #e2e8f0;
-  background: #101721;
+  border-bottom: 1px solid #d4d7d1;
+  background: #eceeea;
+  color: #292a27;
 }
 
-.ils-ids-box__applicability em {
-  margin-right: .55em;
-  color: #7dd3fc;
-  font-size: .72rem;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: .06em;
-  text-transform: uppercase;
+.ils-ids-actions {
+  padding: .65em 1em;
+  border-bottom: 1px solid #dedcd4;
+  background: #fffefa;
+}
+
+.ils-ids-button {
+  appearance: none;
+  padding: .4em .8em;
+  border: 1px solid #77776d;
+  border-radius: 5px;
+  background: #fffefa;
+  color: #292a27;
+  font: inherit;
+  font-size: .82rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.ils-ids-button:hover {
+  background: #f0efe9;
+  border-color: #464740;
+}
+
+.ils-ids-button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.ils-ids-button:focus-visible {
+  outline: 2px solid #55564f;
+  outline-offset: 2px;
+}
+
+.ils-ids-xml {
+  padding: .75em 1em;
+  border-bottom: 1px solid #dedcd4;
+  background: #f7f6f1;
+}
+
+.ils-ids-xml[hidden] { display: none; }
+
+.ils-ids-xml__status {
+  margin-left: .75em;
+  color: #55564f;
+  font-size: .8rem;
+}
+
+.ils-ids-xml__code {
+  max-height: 28rem;
+  margin: .75em 0 0;
+  padding: .9em;
+  overflow: auto;
+  border: 1px solid #d8d5ca;
+  border-radius: 5px;
+  background: #fffefa;
+  color: #292a27;
+  font-size: .78rem;
+}
+
+.ils-ids-copy-buffer {
+  position: fixed;
+  top: -10000px;
+  left: -10000px;
+}
+
+.ils-ids-requirements {
+  background: #f7f4ec;
+}
+
+.ils-ids-box__section-title--requirements {
+  padding-top: .9em;
+  color: #4a483f;
 }
 
 .ils-ids-box .ils-table { margin: 0; }
@@ -450,59 +533,55 @@ pre.ils-step-block > code {
 .ils-ids-box .ils-table__scroll {
   border: 0;
   border-radius: 0;
-  background: #0b0f14;
+  background: #f7f4ec;
   box-shadow: none;
 }
 
 .ils-ids-box .ils-table table {
-  color: #d7e0eb;
+  color: #292a27;
   font-size: .86rem;
 }
 
 .ils-ids-box .ils-table th,
-.ils-ids-box .ils-table td { border-bottom-color: #263242; }
+.ils-ids-box .ils-table td { border-bottom-color: #ded9cc; }
 
 .ils-ids-box .ils-table thead th {
-  background: #151e2b;
-  border-bottom-color: #36465b;
-  color: #aab9cc;
+  background: #eeeae0;
+  border-bottom-color: #d3cebf;
+  color: #55534a;
 }
 
-.ils-ids-box .ils-table tbody tr { background: #0b0f14; }
-.ils-ids-box .ils-table tbody tr:nth-child(even) { background: #101721; }
-.ils-ids-box .ils-table tbody tr:hover { background: #182332; }
+.ils-ids-box .ils-table tbody tr { background: #fffefa; }
+.ils-ids-box .ils-table tbody tr:nth-child(even) { background: #f7f4ec; }
+.ils-ids-box .ils-table tbody tr:hover { background: #efede5; }
 
+/* Soort facet in kleur; de legenda staat boven de eerste tabel in hoofdstuk 06. */
 .ils-ids-box td[data-ids-facet="attribute"] {
-  color: #7dd3fc;
+  color: #0b5c8a;
   font-weight: 700;
 }
 
 .ils-ids-box td[data-ids-facet="property"] {
-  color: #86efac;
+  color: #1f6b46;
   font-weight: 700;
 }
 
 .ils-ids-box td[data-ids-facet="classification"] {
-  color: #c4b5fd;
+  color: #6b3fa0;
   font-weight: 700;
 }
 
-.ils-ids-box .ils-card--r {
-  border-color: #286044;
-  background: #123226;
-  color: #86efac;
-}
-
+.ils-ids-box .ils-card--r,
 .ils-ids-box .ils-card--o {
-  border-color: #6b542b;
-  background: #2b2314;
-  color: #fcd34d;
+  border-color: transparent;
+  background: none;
+  color: inherit;
 }
 
 .ils-ids-box .ils-card--x {
-  border-color: #71343b;
-  background: #32191d;
-  color: #fda4af;
+  border-color: #706f67;
+  background: #d8d7d0;
+  color: #292a27;
 }
 
 /* --------------------------------------------------------------------------

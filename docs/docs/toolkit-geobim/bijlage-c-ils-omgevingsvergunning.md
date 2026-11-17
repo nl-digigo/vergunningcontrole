@@ -4,10 +4,10 @@ Machineleesbare indieningsvereisten voor ruimtemodellering bij een omgevingsverg
 
 | | |
 |---|---|
-| **Bron** | `ILS voor omgevingsvergunning` v0.1 — 42 specificaties |
+| **Bron** | `ILS Omgevingsvergunning` v0.2.0 — 41 specificaties |
 | **IFC-schema** | IFC4 en IFC4X3_ADD2 |
 | **Begrippen** | bSDD-dictionary [Omgevingswet Ruimten](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) 0.3.0 (`bsnl`, nl-NL) |
-| **Processtap** | GEMMA 015-02 Inhoudelijk behandelen vergunningaanvraag / 015-02-02 Toetsen activiteiten aan regelgeving |
+| **Processtap** | GEMMA 015-03 Inhoudelijk behandelen aanvraag / processtap Toetsen aan regelgeving |
 | **Checks** | 17 regels uit de BM13-regelinventarisatie v0.3, 3-7-2026 |
 
 Elke specificatie is ook beschikbaar als afzonderlijk `.ids`-bestand, genummerd in dezelfde volgorde. De XML-blokken hieronder tonen alleen het `ids:specification`-element; een los bestand bevat daarnaast het `ids:info`-blok — met de checknummers in `purpose` en de GEMMA-processtap in `milestone` — en is daarmee zelfstandig valideerbaar.
@@ -18,21 +18,21 @@ De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#
 
 | Check | Onderwerp | Specificaties |
 |-------|-----------|---------------|
-| **#1** | Gebruiksfunctie komt overeen met bestemming | 01, 02, 03, 04, 05, 06, 07, 09, 10, 13, 15, 16, 17, 25, 26 |
-| **#2** | Maximale bouwhoogte | 01, 02, 03, 04, 05, 06, 07, 09, 10, 13 |
-| **#3** | Maximaal bebouwingspercentage | 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 16, 25, 26 |
-| **#4** | Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen | 01, 04, 05, 06, 07, 11, 13, 16, 17 |
-| **#5** | Beroep aan huis: max. 50% gebruiksoppervlakte | 01, 02, 03, 04, 05, 06, 07, 09, 10, 15, 16, 17, 23, 25, 26, 28, 33 |
-| **#6** | Maximum aantal bouwlagen | 01, 04, 05, 06, 07, 09, 10, 13, 14, 16, 23, 25, 26, 28, 33 |
-| **#7** | Brandcompartimenten | 01, 02, 03, 07, 09, 10, 16, 30, 35, 37, 38, 40, 41 |
-| **#8** | Brandwerendheid | 01, 07, 30, 35, 37, 38, 40, 41 |
+| **#1** | Gebruiksfunctie komt overeen met bestemming | 01, 02, 03, 04, 07, 09, 10, 13, 15, 16, 17, 25, 26 |
+| **#2** | Maximale bouwhoogte | 01, 02, 03, 04, 07, 09, 10, 13, 44 |
+| **#3** | Maximaal bebouwingspercentage | 01, 02, 03, 04, 07, 08, 09, 10, 11, 12, 13, 14, 16, 25, 26 |
+| **#4** | Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen | 01, 02, 03, 04, 07, 11, 13, 16, 17, 44 |
+| **#5** | Beroep aan huis: max. 50% gebruiksoppervlakte | 01, 02, 03, 04, 07, 09, 10, 15, 16, 17, 23, 25, 26, 28, 33 |
+| **#6** | Maximum aantal bouwlagen | 01, 02, 03, 04, 07, 09, 10, 13, 14, 16, 23, 25, 26, 28, 33, 44 |
+| **#7** | Brandcompartimenten | 01, 02, 03, 07, 09, 10, 16, 30, 34, 35, 37, 38, 40, 41 |
+| **#8** | Brandwerendheid | 01, 07, 30, 34, 35, 37, 38, 40, 41 |
 | **#9** | Vrije breedte | 01, 07, 13, 16, 18, 19, 21, 24, 25, 26, 29, 40, 41 |
-| **#10** | Hoogteverschil | 01, 02, 03, 07, 08, 13, 16, 18, 19, 21, 24, 25, 26, 29, 40 |
+| **#10** | Hoogteverschil | 01, 02, 03, 07, 08, 13, 16, 18, 19, 21, 24, 25, 26, 29, 40, 44 |
 | **#11** | Rc-waarde | 01, 07, 10, 16, 18, 19, 36, 37, 40, 41 |
 | **#12** | U-waarde | 01, 07, 10, 16, 37, 38, 42 |
 | **#13** | MPG | 01, 07, 16, 25, 26, 40, 41 |
 | **#14** | Vluchtwegen | 01, 07, 08, 16, 21, 25, 26, 30, 32, 38, 40 |
-| **#15** | Loopafstand | 01, 07, 16, 20, 21, 25, 26, 30, 31, 32, 33, 38, 40 |
+| **#15** | Loopafstand | 01, 07, 16, 20, 21, 25, 26, 30, 31, 32, 33, 38, 40, 43 |
 | **#16** | Vluchtbreedte | 01, 07, 13, 16, 19, 20, 22, 27, 32, 38, 40, 41 |
 | **#17** | Daglicht | 01, 02, 03, 07, 08, 09, 10, 11, 16, 19, 26, 37, 38, 41, 42 |
 
@@ -42,12 +42,10 @@ De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#
 
 | Nr | Specificatie | ifcVersion | BM13-checks |
 |----|--------------|------------|-------------|
-| 01 | [9 ILS voor Ruimten in de omgevingswet](#01-9-ils-voor-ruimten-in-de-omgevingswet) | IFC4 IFC4X3_ADD2 | #1, #2, #3, #4, #5, #6, #7, #8, #9, #10, #11, #12, #13, #14, #15, #16, #17 |
-| 02 | [9.01a Georeferentie](#02-901a-georeferentie) | IFC4 IFC4X3_ADD2 | #1, #2, #3, #5, #7, #10, #17 |
-| 03 | [9.01b Coördinatenstelsel](#03-901b-coordinatenstelsel) | IFC4 IFC4X3_ADD2 | #1, #2, #3, #5, #7, #10, #17 |
+| 01 | [9 ILS Omgevingsvergunning](#01-9-ils-voor-ruimten-in-de-omgevingswet) | IFC4 IFC4X3_ADD2 | #1, #2, #3, #4, #5, #6, #7, #8, #9, #10, #11, #12, #13, #14, #15, #16, #17 |
+| 02 | [9.01a Georeferentie](#02-901a-georeferentie) | IFC4 IFC4X3_ADD2 | #1, #2, #3, #4, #5, #6, #7, #10, #17 |
+| 03 | [9.01b Coördinatenstelsel](#03-901b-coordinatenstelsel) | IFC4 IFC4X3_ADD2 | #1, #2, #3, #4, #5, #6, #7, #10, #17 |
 | 04 | [9.01c Projectadres (IFC4X3_ADD2)](#04-901c-projectadres-ifc4x3_add2) | IFC4X3_ADD2 | #1, #2, #3, #4, #5, #6 |
-| 05 | [9.01d Perceeladres (IFC4)](#05-901d-perceeladres-ifc4) | IFC4 | #1, #2, #3, #4, #5, #6 |
-| 06 | [9.01e Gebouwadres (IFC4)](#06-901e-gebouwadres-ifc4) | IFC4 | #1, #2, #3, #4, #5, #6 |
 | 07 | [9.02 Project](#07-902-project) | IFC4 IFC4X3_ADD2 | #1, #2, #3, #4, #5, #6, #7, #8, #9, #10, #11, #12, #13, #14, #15, #16, #17 |
 | 08 | [9.03a Perceel](#08-903a-perceel) | IFC4X3_ADD2 IFC4 | #3, #10, #14, #17 |
 | 09 | [9.03b Bouwwerkperceel](#09-903b-bouwwerkperceel) | IFC4 IFC4X3_ADD2 | #1, #2, #3, #5, #6, #7, #17 |
@@ -75,33 +73,34 @@ De 17 checks komen uit de BM13-regelinventarisatie v0.3, 3-7-2026. Regels #1–#
 | 31 | [9.16b Subbrandcompartiment](#31-916b-subbrandcompartiment) | IFC4 IFC4X3_ADD2 | #15 |
 | 32 | [9.16c Vluchtroute](#32-916c-vluchtroute) | IFC4 IFC4X3_ADD2 | #14, #15, #16 |
 | 33 | [9.17 Tarra Ruimte](#33-917-tarra-ruimte) | IFC4 IFC4X3_ADD2 | #5, #6, #15 |
-| 34 | [9.18a Fysieke elementen IfcBeam](#34-918a-fysieke-elementen-ifcbeam) | IFC4 IFC4X3_ADD2 | — |
+| 34 | [9.18a Fysieke elementen IfcBeam](#34-918a-fysieke-elementen-ifcbeam) | IFC4 IFC4X3_ADD2 | #7, #8 |
 | 35 | [9.18b Fysieke elementen IfcColumn](#35-918b-fysieke-elementen-ifccolumn) | IFC4 IFC4X3_ADD2 | #7, #8 |
 | 36 | [9.18c Fysieke elementen IfcCovering.INSULATION](#36-918c-fysieke-elementen-ifccoveringinsulation) | IFC4 IFC4X3_ADD2 | #11 |
 | 37 | [9.18d Fysieke elementen IfcCurtainWall](#37-918d-fysieke-elementen-ifccurtainwall) | IFC4 IFC4X3_ADD2 | #7, #8, #11, #12, #17 |
 | 38 | [9.18e Fysieke elementen IfcDoor](#38-918e-fysieke-elementen-ifcdoor) | IFC4 IFC4X3_ADD2 | #7, #8, #12, #14, #15, #16, #17 |
-| 39 | [9.18f Fysieke elementen IfcSensor](#39-918f-fysieke-elementen-ifcsensor) | IFC4 IFC4X3_ADD2 | — |
 | 40 | [9.18g Fysieke elementen IfcSlab](#40-918g-fysieke-elementen-ifcslab) | IFC4 IFC4X3_ADD2 | #7, #8, #9, #10, #11, #13, #14, #15, #16 |
 | 41 | [9.18h Fysieke elementen IfcWall](#41-918h-fysieke-elementen-ifcwall) | IFC4 IFC4X3_ADD2 | #7, #8, #9, #11, #13, #16, #17 |
 | 42 | [9.18i Fysieke elementen Ifcwindow](#42-918i-fysieke-elementen-ifcwindow) | IFC4 IFC4X3_ADD2 | #12, #17 |
+| 43 | [9.16d Beschermd subbrandcompartiment](#43-916d-beschermd-subbrandcompartiment) | IFC4 IFC4X3_ADD2 | #15 |
+| 44 | [9.01f Verticaal datum (NAP)](#44-901f-verticaal-datum-nap) | IFC4 IFC4X3_ADD2 | #2, #4, #6, #10 |
 
 
 
-## 01 — 9 ILS voor Ruimten in de omgevingswet {#01-9-ils-voor-ruimten-in-de-omgevingswet}
+## 01 — 9 ILS Omgevingsvergunning {#01-9-ils-voor-ruimten-in-de-omgevingswet}
 
 | | |
 |---|---|
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#1** Gebruiksfunctie komt overeen met bestemming, **#2** Maximale bouwhoogte, **#3** Maximaal bebouwingspercentage, **#4** Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen, **#5** Beroep aan huis: max. 50% gebruiksoppervlakte, **#6** Maximum aantal bouwlagen, **#7** Brandcompartimenten, **#8** Brandwerendheid, **#9** Vrije breedte, **#10** Hoogteverschil, **#11** Rc-waarde, **#12** U-waarde, **#13** MPG, **#14** Vluchtwegen, **#15** Loopafstand, **#16** Vluchtbreedte, **#17** Daglicht |
-| **Bestand** | `01 9 ILS voor Ruimten in de omgevingswet.ids` |
+| **Bestand** | `01-9.00-ILS-Omgevingsvergunning.ids` |
 
 Om het aantal specificaties te beperken worden in deze specificatie vereisten benoemd die wel in IfcSpatialZone, IfcSpace en IfcExternalSpatialElement voorkomen maar niet in IfcZone.
 
-*Koppeling:* Generieke eis (plaatsing en representatie) op elke ruimtelijke entiteit; randvoorwaarde voor iedere check die op ruimten leunt.
+*Koppeling:* Generieke eis (identificatie en naam) op elke ruimtelijke entiteit; randvoorwaarde voor iedere check die op ruimten leunt.
 
 ```xml
-<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9 ILS voor Ruimten in de omgevingswet" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0" description="Om het aantal specificaties te beperken worden in deze specificatie vereisten benoemd die wel in IfcSpatialZone, IfcSpace en IfcExternalSpatialElement voorkomen maar niet in IfcZone.">
+<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9 ILS Omgevingsvergunning" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0" description="Om het aantal specificaties te beperken worden in deze specificatie vereisten benoemd die wel in IfcSpatialZone, IfcSpace en IfcExternalSpatialElement voorkomen maar niet in IfcZone.">
   <ids:applicability minOccurs="1" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
@@ -109,6 +108,7 @@ Om het aantal specificaties te beperken worden in deze specificatie vereisten be
           <xs:enumeration value="IFCSPATIALZONE" />
           <xs:enumeration value="IFCSPACE" />
           <xs:enumeration value="IFCEXTERNALSPATIALELEMENT" />
+          <xs:enumeration value="IFCZONE" />
         </xs:restriction>
       </ids:name>
     </ids:entity>
@@ -116,12 +116,12 @@ Om het aantal specificaties te beperken worden in deze specificatie vereisten be
   <ids:requirements>
     <ids:attribute cardinality="required">
       <ids:name>
-        <ids:simpleValue>ObjectPlacement</ids:simpleValue>
+        <ids:simpleValue>GlobalId</ids:simpleValue>
       </ids:name>
     </ids:attribute>
     <ids:attribute cardinality="required">
       <ids:name>
-        <ids:simpleValue>Representation</ids:simpleValue>
+        <ids:simpleValue>Name</ids:simpleValue>
       </ids:name>
     </ids:attribute>
   </ids:requirements>
@@ -134,31 +134,26 @@ Om het aantal specificaties te beperken worden in deze specificatie vereisten be
 |---|---|
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Georeferentie`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Georeferentie) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
-| **BM13-checks** | **#1** Gebruiksfunctie komt overeen met bestemming, **#2** Maximale bouwhoogte, **#3** Maximaal bebouwingspercentage, **#5** Beroep aan huis: max. 50% gebruiksoppervlakte, **#7** Brandcompartimenten, **#10** Hoogteverschil, **#17** Daglicht |
-| **Bestand** | `02 9.01a Georeferentie.ids` |
+| **BM13-checks** | **#1** Gebruiksfunctie komt overeen met bestemming, **#2** Maximale bouwhoogte, **#3** Maximaal bebouwingspercentage, **#4** Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen, **#5** Beroep aan huis: max. 50% gebruiksoppervlakte, **#6** Maximum aantal bouwlagen, **#7** Brandcompartimenten, **#10** Hoogteverschil, **#17** Daglicht |
+| **Bestand** | `02-9.01a-Georeferentie.ids` |
 
-Georeferentie met IfcMapConversion. (LoGref50) Een BIM-Model moet de IFCClass IFCMAPCONVERSION bevatten met de attributen Easting, Northing, OrthogonalHeight, XAxisAbscissa, XAxisOrdinate en Scale ingevuld. Het model dient een SourceCRS en TargetCRS te hebben. Dit is echter niet te valideren d.m.v. IDS. Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren
+Georeferentie met IfcMapConversion of IfcMapConversionScaled. (LoGref50) Een BIM-Model moet de IFCClass IFCMAPCONVERSION of IFCMAPCONVERSIONSCALED bevatten; IFCMAPCONVERSIONSCALED bestaat alleen in IFC4X3 en is daar de aanbevolen route voor RD met NAP. De klasse heeft de attributen Easting, Northing, OrthogonalHeight, XAxisAbscissa, XAxisOrdinate en Scale ingevuld. Het model dient een SourceCRS en TargetCRS te hebben. Dit is echter niet te valideren d.m.v. IDS. Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren
 
 *Koppeling:* Preconditie voor alle checks; expliciet vereist waar het model tegen omgevingsdata wordt gelegd (perceelgrens, referentiepeil, belending).
 
 ```xml
-<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.01a Georeferentie" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Georeferentie" description="Georeferentie met IfcMapConversion. (LoGref50) Een BIM-Model moet de IFCClass IFCMAPCONVERSION bevatten met de attributen Easting, Northing, OrthogonalHeight, XAxisAbscissa, XAxisOrdinate en Scale ingevuld. Het model dient een SourceCRS en TargetCRS te hebben. Dit is echter niet te valideren d.m.v. IDS. Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren">
+<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.01a Georeferentie" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Georeferentie" description="Georeferentie met IfcMapConversion of IfcMapConversionScaled. (LoGref50) Een BIM-Model moet de IFCClass IFCMAPCONVERSION of IFCMAPCONVERSIONSCALED bevatten; IFCMAPCONVERSIONSCALED bestaat alleen in IFC4X3 en is daar de aanbevolen route voor RD met NAP. De klasse heeft de attributen Easting, Northing, OrthogonalHeight, XAxisAbscissa, XAxisOrdinate en Scale ingevuld. Het model dient een SourceCRS en TargetCRS te hebben. Dit is echter niet te valideren d.m.v. IDS. Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren">
   <ids:applicability minOccurs="1" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
-        <ids:simpleValue>IFCMAPCONVERSION</ids:simpleValue>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="IFCMAPCONVERSION" />
+          <xs:enumeration value="IFCMAPCONVERSIONSCALED" />
+        </xs:restriction>
       </ids:name>
     </ids:entity>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Georeferentie" cardinality="optional">
-      <ids:value>
-        <ids:simpleValue>Georeferentie</ids:simpleValue>
-      </ids:value>
-      <ids:system>
-        <ids:simpleValue>Omgevingswet-Ruimten</ids:simpleValue>
-      </ids:system>
-    </ids:classification>
     <ids:attribute cardinality="required" instructions="Verplaatsing in Oostrichting om het BIM-model op de goede plek te krijgen.&#10;Voorbeeld: 92370.710706">
       <ids:name>
         <ids:simpleValue>Eastings</ids:simpleValue>
@@ -179,7 +174,7 @@ Georeferentie met IfcMapConversion. (LoGref50) Een BIM-Model moet de IFCClass IF
         <ids:simpleValue>XAxisAbscissa</ids:simpleValue>
       </ids:name>
     </ids:attribute>
-    <ids:attribute cardinality="required" instructions="Specificeert de waarde langs de oostelijke as van het eindpunt van een vector die de positie van de lokale x-as van het engineering coördinaatreferentiesysteem aangeeft.&#10;Voorbeeld: 0.1">
+    <ids:attribute cardinality="required" instructions="Specificeert de waarde langs de noordelijke as van het eindpunt van een vector die de positie van de lokale x-as van het engineering coördinaatreferentiesysteem aangeeft.&#10;Voorbeeld: 0.1">
       <ids:name>
         <ids:simpleValue>XAxisOrdinate</ids:simpleValue>
       </ids:name>
@@ -199,17 +194,17 @@ Georeferentie met IfcMapConversion. (LoGref50) Een BIM-Model moet de IFCClass IF
 |---|---|
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Coordinatenstelsel`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Coordinatenstelsel) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
-| **BM13-checks** | **#1** Gebruiksfunctie komt overeen met bestemming, **#2** Maximale bouwhoogte, **#3** Maximaal bebouwingspercentage, **#5** Beroep aan huis: max. 50% gebruiksoppervlakte, **#7** Brandcompartimenten, **#10** Hoogteverschil, **#17** Daglicht |
-| **Bestand** | `03 9.01b Coördinatenstelsel.ids` |
+| **BM13-checks** | **#1** Gebruiksfunctie komt overeen met bestemming, **#2** Maximale bouwhoogte, **#3** Maximaal bebouwingspercentage, **#4** Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen, **#5** Beroep aan huis: max. 50% gebruiksoppervlakte, **#6** Maximum aantal bouwlagen, **#7** Brandcompartimenten, **#10** Hoogteverschil, **#17** Daglicht |
+| **Bestand** | `03-9.01b-Coordinatenstelsel.ids` |
 
-Coördinatenstelsel op RD of RD=N.A.P. (LoGref50) Het attribuut TargetCRS voor Nederlandse indiening heeft als verplichte waarde een IfcProjectedCRS met attribuut VerticalDatum EPSG:7415 (RD+NAP)of EPSG:28992 (RD) én EPSG:5709 (NAP)   Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren
+Coördinatenstelsel op RD of RD+NAP (LoGref50). Het attribuut TargetCRS voor Nederlandse indiening is een IfcProjectedCRS met in Name EPSG:7415 (RD+NAP) of EPSG:28992 (RD). Bij EPSG:28992 is VerticalDatum EPSG:5709 (NAP); zie 9.01f. Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren
 
 *Koppeling:* Idem 9.01a; RD/NAP is voorwaarde voor het combineren met BRK, BGT en AHN.
 
 > **Toelichting voor de modelleur.** Deze CRS-eis geldt alleen voor Nederlandse projecten waarbij de omvang van het project i.c.m. de kromming van de aarde geen probleem oplevert. Als dit niet geldt dan is het ook mogelijk om eventueel IfcGeographicCRS en/of andere EPSG te gebruiken.  IfcProjectedCRS kan geen Classificatie toegekend krijgen. https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Cordinatenstelsel
 
 ```xml
-<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.01b Coördinatenstelsel" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Coordinatenstelsel" description="Coördinatenstelsel op RD of RD=N.A.P. (LoGref50) Het attribuut TargetCRS voor Nederlandse indiening heeft als verplichte waarde een IfcProjectedCRS met attribuut VerticalDatum EPSG:7415 (RD+NAP)of EPSG:28992 (RD) én EPSG:5709 (NAP)   Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren" instructions="Deze CRS-eis geldt alleen voor Nederlandse projecten waarbij de omvang van het project i.c.m. de kromming van de aarde geen probleem oplevert. Als dit niet geldt dan is het ook mogelijk om eventueel IfcGeographicCRS en/of andere EPSG te gebruiken.  IfcProjectedCRS kan geen Classificatie toegekend krijgen. https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Cordinatenstelsel">
+<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.01b Coördinatenstelsel" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Coordinatenstelsel" description="Coördinatenstelsel op RD of RD+NAP (LoGref50). Het attribuut TargetCRS voor Nederlandse indiening is een IfcProjectedCRS met in Name EPSG:7415 (RD+NAP) of EPSG:28992 (RD). Bij EPSG:28992 is VerticalDatum EPSG:5709 (NAP); zie 9.01f. Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren" instructions="Deze CRS-eis geldt alleen voor Nederlandse projecten waarbij de omvang van het project i.c.m. de kromming van de aarde geen probleem oplevert. Als dit niet geldt dan is het ook mogelijk om eventueel IfcGeographicCRS en/of andere EPSG te gebruiken.  IfcProjectedCRS kan geen Classificatie toegekend krijgen. https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Cordinatenstelsel">
   <ids:applicability minOccurs="1" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
@@ -218,7 +213,7 @@ Coördinatenstelsel op RD of RD=N.A.P. (LoGref50) Het attribuut TargetCRS voor N
     </ids:entity>
   </ids:applicability>
   <ids:requirements>
-    <ids:attribute cardinality="required" instructions="Doel coördinatenstelsel waarin het BIM-model geplaatst wordt. EPSG 7415&#10;Het attribuut TargetCRS voor Nederlandse indiening heeft als verplichte waarde een IfcProjectedCRS met attribuut VerticalDatum EPSG:7415 (RD+NAP)of EPSG:28992 (RD) én EPSG:5709 (NAP)&#10;https://www.opengis.net/def/crs/EPSG/0/28992">
+    <ids:attribute cardinality="required" instructions="Doel-coördinatenstelsel waarin het BIM-model geplaatst wordt, bij voorkeur EPSG:7415.&#10;Name is EPSG:7415 (RD+NAP) of EPSG:28992 (RD). Bij EPSG:28992 is VerticalDatum EPSG:5709 (NAP); zie 9.01f.&#10;https://www.opengis.net/def/crs/EPSG/0/28992">
       <ids:name>
         <ids:simpleValue>Name</ids:simpleValue>
       </ids:name>
@@ -240,16 +235,16 @@ Coördinatenstelsel op RD of RD=N.A.P. (LoGref50) Het attribuut TargetCRS voor N
 | **Identifier** | `9.01c` |
 | **ifcVersion** | `IFC4X3_ADD2` |
 | **BM13-checks** | **#1** Gebruiksfunctie komt overeen met bestemming, **#2** Maximale bouwhoogte, **#3** Maximaal bebouwingspercentage, **#4** Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen, **#5** Beroep aan huis: max. 50% gebruiksoppervlakte, **#6** Maximum aantal bouwlagen |
-| **Bestand** | `04 9.01c Projectadres IFC4X3_ADD2.ids` |
+| **Bestand** | `04-9.01c-Projectadres-IFC4X3-ADD2.ids` |
 
-Projectadres in IFC4X3_ADD2 (LoGref10) Vul ook het adres in. Dit is aanvullend op de georeferentie op RD. Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren
+Projectadres in IFC4X3_ADD2 (LoGref10). Optioneel: vul het adres in bij een gebouw met een postadres; laat het leeg bij meerdere gebouwen of functies. De georeferentie op RD bepaalt de locatie. Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren
 
-*Koppeling:* Adres is de ingang voor Regels op de Kaart bij de omgevingsplantoetsen.
+*Koppeling:* Optioneel. De locatie voor Regels op de Kaart volgt uit de georeferentie, niet uit het adres.
 
-> **Toelichting voor de modelleur.** Pset_Address bestaat vanaf Ifc4x3 In Ifc4 is SiteAddress een Attribute van IfcSite
+> **Toelichting voor de modelleur.** Pset_Address bestaat vanaf IFC4X3. De adresattributen SiteAddress (IfcSite) en BuildingAddress (IfcBuilding) worden niet gevraagd.
 
 ```xml
-<ids:specification ifcVersion="IFC4X3_ADD2" name="9.01c Projectadres (IFC4X3_ADD2)" identifier="9.01c" description="Projectadres in IFC4X3_ADD2 (LoGref10) Vul ook het adres in. Dit is aanvullend op de georeferentie op RD. Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren" instructions="Pset_Address bestaat vanaf Ifc4x3 In Ifc4 is SiteAddress een Attribute van IfcSite">
+<ids:specification ifcVersion="IFC4X3_ADD2" name="9.01c Projectadres (IFC4X3_ADD2)" identifier="9.01c" description="Projectadres in IFC4X3_ADD2 (LoGref10). Optioneel: vul het adres in bij een gebouw met een postadres; laat het leeg bij meerdere gebouwen of functies. De georeferentie op RD bepaalt de locatie. Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren" instructions="Pset_Address bestaat vanaf IFC4X3. De adresattributen SiteAddress (IfcSite) en BuildingAddress (IfcBuilding) worden niet gevraagd.">
   <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
@@ -261,7 +256,7 @@ Projectadres in IFC4X3_ADD2 (LoGref10) Vul ook het adres in. Dit is aanvullend o
     </ids:entity>
   </ids:applicability>
   <ids:requirements>
-    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/AddressLines" cardinality="required">
+    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/AddressLines" cardinality="optional">
       <ids:propertySet>
         <ids:simpleValue>Pset_Address</ids:simpleValue>
       </ids:propertySet>
@@ -269,7 +264,7 @@ Projectadres in IFC4X3_ADD2 (LoGref10) Vul ook het adres in. Dit is aanvullend o
         <ids:simpleValue>AddressLines</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/Country" cardinality="required">
+    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/Country" cardinality="optional">
       <ids:propertySet>
         <ids:simpleValue>Pset_Address</ids:simpleValue>
       </ids:propertySet>
@@ -280,7 +275,7 @@ Projectadres in IFC4X3_ADD2 (LoGref10) Vul ook het adres in. Dit is aanvullend o
         <ids:simpleValue>NL</ids:simpleValue>
       </ids:value>
     </ids:property>
-    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/PostalCode" cardinality="required">
+    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/PostalCode" cardinality="optional">
       <ids:propertySet>
         <ids:simpleValue>Pset_Address</ids:simpleValue>
       </ids:propertySet>
@@ -288,7 +283,7 @@ Projectadres in IFC4X3_ADD2 (LoGref10) Vul ook het adres in. Dit is aanvullend o
         <ids:simpleValue>PostalCode</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/Town" cardinality="required">
+    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/Town" cardinality="optional">
       <ids:propertySet>
         <ids:simpleValue>Pset_Address</ids:simpleValue>
       </ids:propertySet>
@@ -300,74 +295,6 @@ Projectadres in IFC4X3_ADD2 (LoGref10) Vul ook het adres in. Dit is aanvullend o
 </ids:specification>
 ```
 
-## 05 — 9.01d Perceeladres (IFC4) {#05-901d-perceeladres-ifc4}
-
-| | |
-|---|---|
-| **Identifier** | `9.01d` |
-| **ifcVersion** | `IFC4` |
-| **BM13-checks** | **#1** Gebruiksfunctie komt overeen met bestemming, **#2** Maximale bouwhoogte, **#3** Maximaal bebouwingspercentage, **#4** Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen, **#5** Beroep aan huis: max. 50% gebruiksoppervlakte, **#6** Maximum aantal bouwlagen |
-| **Bestand** | `05 9.01d Perceeladres IFC4.ids` |
-
-Projectadres in IFC4X3_ADD2 (LoGref10) Vul ook het adres in. Dit is aanvullend op de georeferentie op RD. Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren
-
-*Koppeling:* Idem 9.01c, voor IFC4.
-
-> **Toelichting voor de modelleur.** Pset_Address bestaat vanaf Ifc4x3 In Ifc4 is SiteAddress een Attribute van IfcSite
-
-```xml
-<ids:specification ifcVersion="IFC4" name="9.01d Perceeladres (IFC4)" identifier="9.01d" description="Projectadres in IFC4X3_ADD2 (LoGref10) Vul ook het adres in. Dit is aanvullend op de georeferentie op RD. Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren" instructions="Pset_Address bestaat vanaf Ifc4x3 In Ifc4 is SiteAddress een Attribute van IfcSite">
-  <ids:applicability minOccurs="0" maxOccurs="unbounded">
-    <ids:entity>
-      <ids:name>
-        <ids:simpleValue>IFCSITE</ids:simpleValue>
-      </ids:name>
-    </ids:entity>
-  </ids:applicability>
-  <ids:requirements>
-    <ids:attribute cardinality="required">
-      <ids:name>
-        <ids:simpleValue>SiteAddress</ids:simpleValue>
-      </ids:name>
-    </ids:attribute>
-  </ids:requirements>
-</ids:specification>
-```
-
-## 06 — 9.01e Gebouwadres (IFC4) {#06-901e-gebouwadres-ifc4}
-
-| | |
-|---|---|
-| **Identifier** | `9.01e` |
-| **ifcVersion** | `IFC4` |
-| **BM13-checks** | **#1** Gebruiksfunctie komt overeen met bestemming, **#2** Maximale bouwhoogte, **#3** Maximaal bebouwingspercentage, **#4** Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen, **#5** Beroep aan huis: max. 50% gebruiksoppervlakte, **#6** Maximum aantal bouwlagen |
-| **Bestand** | `06 9.01e Gebouwadres IFC4.ids` |
-
-Projectadres in IFC4X3_ADD2 (LoGref10) Vul ook het adres in. Dit is aanvullend op de georeferentie op RD. Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren
-
-*Koppeling:* Idem 9.01c, voor IFC4.
-
-> **Toelichting voor de modelleur.** Pset_Address bestaat vanaf Ifc4x3 In Ifc4 is BuildingAddress een Attribute van IfcBuilding
-
-```xml
-<ids:specification ifcVersion="IFC4" name="9.01e Gebouwadres (IFC4)" identifier="9.01e" description="Projectadres in IFC4X3_ADD2 (LoGref10) Vul ook het adres in. Dit is aanvullend op de georeferentie op RD. Meer informatie over Georefereren: https://geonovum.github.io/GeoBIM_Georefereren" instructions="Pset_Address bestaat vanaf Ifc4x3 In Ifc4 is BuildingAddress een Attribute van IfcBuilding">
-  <ids:applicability minOccurs="0" maxOccurs="unbounded">
-    <ids:entity>
-      <ids:name>
-        <ids:simpleValue>IFCBUILDING</ids:simpleValue>
-      </ids:name>
-    </ids:entity>
-  </ids:applicability>
-  <ids:requirements>
-    <ids:attribute cardinality="required">
-      <ids:name>
-        <ids:simpleValue>BuildingAddress</ids:simpleValue>
-      </ids:name>
-    </ids:attribute>
-  </ids:requirements>
-</ids:specification>
-```
-
 ## 07 — 9.02 Project {#07-902-project}
 
 | | |
@@ -375,14 +302,14 @@ Projectadres in IFC4X3_ADD2 (LoGref10) Vul ook het adres in. Dit is aanvullend o
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Project`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Project) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#1** Gebruiksfunctie komt overeen met bestemming, **#2** Maximale bouwhoogte, **#3** Maximaal bebouwingspercentage, **#4** Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen, **#5** Beroep aan huis: max. 50% gebruiksoppervlakte, **#6** Maximum aantal bouwlagen, **#7** Brandcompartimenten, **#8** Brandwerendheid, **#9** Vrije breedte, **#10** Hoogteverschil, **#11** Rc-waarde, **#12** U-waarde, **#13** MPG, **#14** Vluchtwegen, **#15** Loopafstand, **#16** Vluchtbreedte, **#17** Daglicht |
-| **Bestand** | `07 9.02 Project.ids` |
+| **Bestand** | `07-9.02-Project.ids` |
 
-Een BIM-Model moet de IFCClass IfcProject bevatten zodat men de representationcontext heeft waar men t.o.v. IFfcMapConversion de Local placement gedaan kan worden. Tevens kunnen er een aantal algemene eigenschappen worden ingevuld zoals de fase en het type project.
+Een BIM-Model moet de IFCClass IfcProject bevatten zodat men de representationcontext heeft waar men t.o.v. IfcMapConversion de Local placement gedaan kan worden. Tevens kunnen er een aantal algemene eigenschappen worden ingevuld zoals de fase en het type project.
 
 *Koppeling:* Administratieve context van de levering; niet checkspecifiek.
 
 ```xml
-<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.02 Project" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Project" description="Een BIM-Model moet de IFCClass IfcProject bevatten zodat men de representationcontext heeft waar men t.o.v. IFfcMapConversion de Local placement gedaan kan worden. Tevens kunnen er een aantal algemene eigenschappen worden ingevuld zoals de fase en het type project.">
+<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.02 Project" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Project" description="Een BIM-Model moet de IFCClass IfcProject bevatten zodat men de representationcontext heeft waar men t.o.v. IfcMapConversion de Local placement gedaan kan worden. Tevens kunnen er een aantal algemene eigenschappen worden ingevuld zoals de fase en het type project.">
   <ids:applicability minOccurs="1" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
@@ -391,14 +318,6 @@ Een BIM-Model moet de IFCClass IfcProject bevatten zodat men de representationco
     </ids:entity>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Project" cardinality="optional">
-      <ids:value>
-        <ids:simpleValue>Project</ids:simpleValue>
-      </ids:value>
-      <ids:system>
-        <ids:simpleValue>Omgevingswet-Ruimten</ids:simpleValue>
-      </ids:system>
-    </ids:classification>
     <ids:attribute cardinality="required" instructions="Naam&#10;Voorbeeld: Woningbouwproject x, voortgezet onderwijs">
       <ids:name>
         <ids:simpleValue>Name</ids:simpleValue>
@@ -409,7 +328,7 @@ Een BIM-Model moet de IFCClass IfcProject bevatten zodat men de representationco
         <ids:simpleValue>Description</ids:simpleValue>
       </ids:name>
     </ids:attribute>
-    <ids:attribute cardinality="optional" instructions="Fase volgende STB2025: Voorbeeld: 2.3 Definitief ontwerp&#10;Fase volgende STB2025: Voorbeeld: DO&#10;Fase volgende STB2014: Voorbeeld: 05 Definitief ontwerp">
+    <ids:attribute cardinality="optional" instructions="Fase volgens STB2025: Voorbeeld: 2.3 Definitief ontwerp&#10;Fase volgens STB2025: Voorbeeld: DO&#10;Fase volgens STB2014: Voorbeeld: 05 Definitief ontwerp">
       <ids:name>
         <ids:simpleValue>Phase</ids:simpleValue>
       </ids:name>
@@ -418,11 +337,6 @@ Een BIM-Model moet de IFCClass IfcProject bevatten zodat men de representationco
           <xs:pattern value="01 Initiatief/haalbaarheid|02 Projectdefinitie|03 Structuurontwerp|04 Voorontwerp|05 Definitief ontwerp|06 Technisch ontwerp/Bestek|07 Prijs- en Contractvorming|07 Prijs- en contractvorming|08 Uitvoering - Uitvoeringsgereed Ontwerp|09 Uitvoering - Directievoering|10 Gebruik/Exploitatie|1. Initiatief|1.1 Iniatief|INI|1.2 Haalbaarheid|HBH|1.3 Projectdefinitie|PD|2. Ontwerp|2.1 Structuurontwerp|SO|2.2 Voorontwerp|VO|2.3 Definitief Ontwerp|DO|2.4 Omgevingsvergunning|OV|3. Engineering|3.1 Technisch Ontwerp|TO|3.2 Uitvoeringsgereed Ontwerp|UO|4. Realisatie|4.1 Uitvoering|UV|4.2 Oplevering &amp; Overdracht|OO|4.3 Onderhoudstermijn|5. Gebruik" />
         </xs:restriction>
       </ids:value>
-    </ids:attribute>
-    <ids:attribute cardinality="required" instructions="Eenheden&#10;voorbeeld: m of mm (gebouwen zijn gebruikelijk in mm en de georeferentie in m) er zijn er dus 2 in IFC files.)">
-      <ids:name>
-        <ids:simpleValue>UnitsInContext</ids:simpleValue>
-      </ids:name>
     </ids:attribute>
     <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ProjectType" cardinality="optional">
       <ids:propertySet>
@@ -441,7 +355,7 @@ Een BIM-Model moet de IFCClass IfcProject bevatten zodat men de representationco
         </xs:restriction>
       </ids:value>
     </ids:property>
-    <ids:property dataType="IFCCOSTITEMTYPEENUM" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ProjectInvestmentEstimate" cardinality="optional" instructions="Stichtingskosten: NEN2699 Niveau 1 : A t/m G&#10;Voorbeeld: 1000000">
+    <ids:property dataType="IFCMONETARYMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ProjectInvestmentEstimate" cardinality="optional" instructions="Stichtingskosten: NEN2699 Niveau 1 : A t/m G&#10;Voorbeeld: 1000000">
       <ids:propertySet>
         <ids:simpleValue>Pset_ProjectCommon</ids:simpleValue>
       </ids:propertySet>
@@ -460,16 +374,16 @@ Een BIM-Model moet de IFCClass IfcProject bevatten zodat men de representationco
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Perceel`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Perceel) |
 | **ifcVersion** | `IFC4X3_ADD2 IFC4` |
 | **BM13-checks** | **#3** Maximaal bebouwingspercentage, **#10** Hoogteverschil, **#14** Vluchtwegen, **#17** Daglicht |
-| **Bestand** | `08 9.03a Perceel.ids` |
+| **Bestand** | `08-9.03a-Perceel.ids` |
 
-Perceel als IfcSite. IfcSite is onderdeel van de ruimtelijke hierarchie in het IfcSchema. Dit is een administratief component en kan geen geometrie bevatten.
+Perceel als IfcSite. IfcSite is onderdeel van de ruimtelijke hiërarchie in het IfcSchema. Dit is een administratief component en kan geen geometrie bevatten.
 
 *Koppeling:* IfcSite als onbebouwde ruimte en als terrein bij het gebouw; nodig voor bebouwingspercentage, aansluitend terrein en afstand tot de perceelsgrens.
 
 > **Toelichting voor de modelleur.** Indien het project een Kadastraal Perceel bevat zijn de eigenschappen in Pset_LandRegistration verplicht.
 
 ```xml
-<ids:specification ifcVersion="IFC4X3_ADD2 IFC4" name="9.03a Perceel" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Perceel" description="Perceel als IfcSite. IfcSite is onderdeel van de ruimtelijke hierarchie in het IfcSchema. Dit is een administratief component en kan geen geometrie bevatten." instructions="Indien het project een Kadastraal Perceel bevat zijn de eigenschappen in Pset_LandRegistration verplicht.">
+<ids:specification ifcVersion="IFC4X3_ADD2 IFC4" name="9.03a Perceel" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Perceel" description="Perceel als IfcSite. IfcSite is onderdeel van de ruimtelijke hiërarchie in het IfcSchema. Dit is een administratief component en kan geen geometrie bevatten." instructions="Indien het project een Kadastraal Perceel bevat zijn de eigenschappen in Pset_LandRegistration verplicht.">
   <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
@@ -478,14 +392,6 @@ Perceel als IfcSite. IfcSite is onderdeel van de ruimtelijke hierarchie in het I
     </ids:entity>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification cardinality="optional">
-      <ids:value>
-        <ids:simpleValue>Perceel</ids:simpleValue>
-      </ids:value>
-      <ids:system>
-        <ids:simpleValue>Omgevingswet-Ruimten</ids:simpleValue>
-      </ids:system>
-    </ids:classification>
     <ids:attribute cardinality="required">
       <ids:name>
         <ids:simpleValue>Name</ids:simpleValue>
@@ -498,11 +404,6 @@ Perceel als IfcSite. IfcSite is onderdeel van de ruimtelijke hierarchie in het I
       <ids:value>
         <ids:simpleValue>Perceel</ids:simpleValue>
       </ids:value>
-    </ids:attribute>
-    <ids:attribute cardinality="required">
-      <ids:name>
-        <ids:simpleValue>ObjectPlacement</ids:simpleValue>
-      </ids:name>
     </ids:attribute>
     <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/IsPermanentID" cardinality="required">
       <ids:propertySet>
@@ -542,7 +443,7 @@ Perceel als IfcSite. IfcSite is onderdeel van de ruimtelijke hierarchie in het I
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwwerkperceel`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwwerkperceel) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#1** Gebruiksfunctie komt overeen met bestemming, **#2** Maximale bouwhoogte, **#3** Maximaal bebouwingspercentage, **#5** Beroep aan huis: max. 50% gebruiksoppervlakte, **#6** Maximum aantal bouwlagen, **#7** Brandcompartimenten, **#17** Daglicht |
-| **Bestand** | `09 9.03b Bouwwerkperceel.ids` |
+| **Bestand** | `09-9.03b-Bouwwerkperceel.ids` |
 
 Bouwwerkperceel als IfcZone, IfcSpace of IfcSpatialZone.
 
@@ -552,7 +453,7 @@ Bouwwerkperceel als IfcZone, IfcSpace of IfcSpatialZone.
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.03b Bouwwerkperceel" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwwerkperceel" description="Bouwwerkperceel als IfcZone, IfcSpace of IfcSpatialZone." instructions="Een IfcSpace of IfcSpatialZone is gemodelleerd. Een IfcZone is een container die één of meerdere IfcSpaces of IfcSpatialZones bevat. Op deze manier kan één geometrie zowel het Bouwwerkperceel als het Kadastraal Perceel representeren.">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -572,7 +473,7 @@ Bouwwerkperceel als IfcZone, IfcSpace of IfcSpatialZone.
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Bouwwerkperceel" cardinality="optional">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwwerkperceel" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Bouwwerkperceel</ids:simpleValue>
       </ids:value>
@@ -604,16 +505,16 @@ Bouwwerkperceel als IfcZone, IfcSpace of IfcSpatialZone.
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Kadastraal-Perceel`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Kadastraal-Perceel) |
 | **ifcVersion** | `IFC4X3_ADD2 IFC4` |
 | **BM13-checks** | **#1** Gebruiksfunctie komt overeen met bestemming, **#2** Maximale bouwhoogte, **#3** Maximaal bebouwingspercentage, **#5** Beroep aan huis: max. 50% gebruiksoppervlakte, **#6** Maximum aantal bouwlagen, **#7** Brandcompartimenten, **#11** Rc-waarde, **#12** U-waarde, **#17** Daglicht |
-| **Bestand** | `10 9.04 Kadastraal Perceel.ids` |
+| **Bestand** | `10-9.04-Kadastraal-Perceel.ids` |
 
-Kadastraalperceel als IfcZone, IfcSpace of IfcSpatialZone.
+Kadastraal Perceel als IfcZone, IfcSpace of IfcSpatialZone.
 
 *Koppeling:* Expliciet genoemd als benodigde gebouwdata; tevens omgevingsdata (BRK).
 
 > **Toelichting voor de modelleur.** Een IfcSpace of IfcSpatialZone is gemodelleerd. Een IfcZone is een container die één of meerdere IfcSpaces of IfcSpatialZones bevat. Op deze manier kan één geometrie zowel het Bouwwerkperceel als het Kadastraal Perceel representeren.
 
 ```xml
-<ids:specification ifcVersion="IFC4X3_ADD2 IFC4" name="9.04 Kadastraal Perceel" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Kadastraal-Perceel" description="Kadastraalperceel als IfcZone, IfcSpace of IfcSpatialZone." instructions="Een IfcSpace of IfcSpatialZone is gemodelleerd. Een IfcZone is een container die één of meerdere IfcSpaces of IfcSpatialZones bevat. Op deze manier kan één geometrie zowel het Bouwwerkperceel als het Kadastraal Perceel representeren.">
+<ids:specification ifcVersion="IFC4X3_ADD2 IFC4" name="9.04 Kadastraal Perceel" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Kadastraal-Perceel" description="Kadastraal Perceel als IfcZone, IfcSpace of IfcSpatialZone." instructions="Een IfcSpace of IfcSpatialZone is gemodelleerd. Een IfcZone is een container die één of meerdere IfcSpaces of IfcSpatialZones bevat. Op deze manier kan één geometrie zowel het Bouwwerkperceel als het Kadastraal Perceel representeren.">
   <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
@@ -629,12 +530,12 @@ Kadastraalperceel als IfcZone, IfcSpace of IfcSpatialZone.
         <ids:simpleValue>ObjectType</ids:simpleValue>
       </ids:name>
       <ids:value>
-        <ids:simpleValue>Kadastraal perceel</ids:simpleValue>
+        <ids:simpleValue>Kadastraal Perceel</ids:simpleValue>
       </ids:value>
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Kadastraalperceel" cardinality="optional">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Kadastraal-Perceel" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Kadastraalperceel</ids:simpleValue>
       </ids:value>
@@ -666,14 +567,14 @@ Kadastraalperceel als IfcZone, IfcSpace of IfcSpatialZone.
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebouw`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebouw) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#3** Maximaal bebouwingspercentage, **#4** Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen, **#17** Daglicht |
-| **Bestand** | `11 9.05a Gebouw.ids` |
+| **Bestand** | `11-9.05a-Gebouw.ids` |
 
-Gebouw als IfcBuilding IfcBuilding is onderdeel van de ruimtelijke hierarchie in het IfcSchema. Dit is een administratief component en kan geen geometrie bevatten.
+Gebouw als IfcBuilding IfcBuilding is onderdeel van de ruimtelijke hiërarchie in het IfcSchema. Dit is een administratief component en kan geen geometrie bevatten.
 
 *Koppeling:* Gebouwtype via IfcBuilding (MarketCategory) bij #3 en #4; gebouwbegrip bij #17.
 
 ```xml
-<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.05a Gebouw" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebouw" description="Gebouw als IfcBuilding IfcBuilding is onderdeel van de ruimtelijke hierarchie in het IfcSchema. Dit is een administratief component en kan geen geometrie bevatten.">
+<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.05a Gebouw" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebouw" description="Gebouw als IfcBuilding IfcBuilding is onderdeel van de ruimtelijke hiërarchie in het IfcSchema. Dit is een administratief component en kan geen geometrie bevatten.">
   <ids:applicability minOccurs="1" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
@@ -682,25 +583,20 @@ Gebouw als IfcBuilding IfcBuilding is onderdeel van de ruimtelijke hierarchie in
     </ids:entity>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Gebouw" cardinality="required">
-      <ids:value>
-        <ids:simpleValue>Gebouw</ids:simpleValue>
-      </ids:value>
-      <ids:system>
-        <ids:simpleValue>Omgevingswet-Ruimten</ids:simpleValue>
-      </ids:system>
-    </ids:classification>
     <ids:attribute cardinality="required">
       <ids:name>
         <ids:simpleValue>Name</ids:simpleValue>
       </ids:name>
     </ids:attribute>
-    <ids:attribute cardinality="required" instructions="Beschrijving van het soort IfcBuilding&#10;Voorbeeld: Pand, Rijwoning, Appartement">
+    <ids:attribute cardinality="required" instructions="ObjectType is altijd Gebouw. Het soort gebouw staat in Pset_BuildingUse.MarketCategory.">
       <ids:name>
         <ids:simpleValue>ObjectType</ids:simpleValue>
       </ids:name>
+      <ids:value>
+        <ids:simpleValue>Gebouw</ids:simpleValue>
+      </ids:value>
     </ids:attribute>
-    <ids:property dataType="IFCIDENTIFIER" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/BuildingID" cardinality="required" instructions="Gebouw-werk-ID of BAG-Pand-ID wanneer beschikbaar (Uit pset_buildingCommon) &#10;voorbeeld: 003100000122684&#10;Als dit een BAGPAND ID is dan staat de  IsPermanentID op True, zo niet  dan False">
+    <ids:property dataType="IFCIDENTIFIER" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/BuildingID" cardinality="required" instructions="Gebouw-werk-ID of BAG-Pand-ID wanneer beschikbaar (uit Pset_BuildingCommon) &#10;voorbeeld: 003100000122684&#10;Als dit een BAGPAND ID is dan staat de  IsPermanentID op True, zo niet  dan False">
       <ids:propertySet>
         <ids:simpleValue>Pset_BuildingCommon</ids:simpleValue>
       </ids:propertySet>
@@ -716,7 +612,7 @@ Gebouw als IfcBuilding IfcBuilding is onderdeel van de ruimtelijke hierarchie in
         <ids:simpleValue>IsPermanentID</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/MarketCategory" cardinality="required" instructions="Duiding van soort gebouw zie enumeratie (gebouwtype) &gt; zie ennummeratie gebouwtype&#10;Voorbeeld: Woongebouw&#10;Bron: Geonovum.github.io/disgeo-inhoud-2/#-gebouw&#10;Kantoor op basis van: kantorengebouwn-in-nl-1945-2015">
+    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/MarketCategory" cardinality="required" instructions="Duiding van soort gebouw zie enumeratie (gebouwtype) &gt; zie enumeratie gebouwtype&#10;Voorbeeld: Woongebouw&#10;Bron: Geonovum.github.io/disgeo-inhoud-2/#-gebouw&#10;Kantoor op basis van: kantoorgebouwen-in-nl-1945-2015">
       <ids:propertySet>
         <ids:simpleValue>Pset_BuildingUse</ids:simpleValue>
       </ids:propertySet>
@@ -742,7 +638,7 @@ Gebouw als IfcBuilding IfcBuilding is onderdeel van de ruimtelijke hierarchie in
         </xs:restriction>
       </ids:value>
     </ids:property>
-    <ids:property dataType="IFCREAL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/GrossPlannedArea" cardinality="optional" instructions="Het BVO van het gebouw is een optioneel in te vullen waarde die niet door geometrie is bepaald.&#10;GrossPlannedArea is een eigenschap in de Pset_BuildingCommon en geen hoeveelheid in een QuantitySet.">
+    <ids:property dataType="IFCAREAMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/GrossPlannedArea" cardinality="optional" instructions="Het BVO van het gebouw is een optioneel in te vullen waarde die niet door geometrie is bepaald.&#10;GrossPlannedArea is een eigenschap in de Pset_BuildingCommon en geen hoeveelheid in een QuantitySet.">
       <ids:propertySet>
         <ids:simpleValue>Pset_BuildingCommon</ids:simpleValue>
       </ids:propertySet>
@@ -761,7 +657,7 @@ Gebouw als IfcBuilding IfcBuilding is onderdeel van de ruimtelijke hierarchie in
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebouwinhoud`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebouwinhoud) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#3** Maximaal bebouwingspercentage |
-| **Bestand** | `12 9.05b Gebouwinhoud.ids` |
+| **Bestand** | `12-9.05b-Gebouwinhoud.ids` |
 
 Gebouwinhoud als IfcZone, IfcSpatialZone of IfcSpace
 
@@ -769,7 +665,7 @@ Gebouwinhoud als IfcZone, IfcSpatialZone of IfcSpace
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.05b Gebouwinhoud" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebouwinhoud" description="Gebouwinhoud als IfcZone, IfcSpatialZone of IfcSpace">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -821,16 +717,16 @@ Gebouwinhoud als IfcZone, IfcSpatialZone of IfcSpace
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwlaag`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwlaag) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#1** Gebruiksfunctie komt overeen met bestemming, **#2** Maximale bouwhoogte, **#3** Maximaal bebouwingspercentage, **#4** Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen, **#6** Maximum aantal bouwlagen, **#9** Vrije breedte, **#10** Hoogteverschil, **#16** Vluchtbreedte |
-| **Bestand** | `13 9.06a Bouwlaag voorheen verdieping.ids` |
+| **Bestand** | `13-9.06a Bouwlaag kenmerk.ids` |
 
-Bouwlaag als IfcBuildingStorey Een BIM-Model voor de activiteit “Nieuw gebouw bouwen” dient minimaal 1 IFCClass IFCBuildingStorey te hebben.
+Bouwlaag als IfcBuildingStorey Een BIM-Model voor de activiteit “Nieuw gebouw bouwen” dient minimaal 1 IFCClass IfcBuildingStorey te hebben.
 
 *Koppeling:* IfcBuildingStorey conform BIM Basis ILS; expliciet genoemd bij deze checks.
 
-> **Toelichting voor de modelleur.** IfcBuildingStorey is onderdeel van de ruimtelijke hierarchie in het IfcSchema. Dit is een administratief component en kan geen geometrie bevatten.
+> **Toelichting voor de modelleur.** IfcBuildingStorey is onderdeel van de ruimtelijke hiërarchie in het IfcSchema. Dit is een administratief component en kan geen geometrie bevatten.
 
 ```xml
-<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.06a Bouwlaag (voorheen verdieping)" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwlaag" description="Bouwlaag als IfcBuildingStorey Een BIM-Model voor de activiteit “Nieuw gebouw bouwen” dient minimaal 1 IFCClass IFCBuildingStorey te hebben." instructions="IfcBuildingStorey is onderdeel van de ruimtelijke hierarchie in het IfcSchema. Dit is een administratief component en kan geen geometrie bevatten.">
+<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.06a Bouwlaag (voorheen verdieping)" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwlaag" description="Bouwlaag als IfcBuildingStorey Een BIM-Model voor de activiteit “Nieuw gebouw bouwen” dient minimaal 1 IFCClass IfcBuildingStorey te hebben." instructions="IfcBuildingStorey is onderdeel van de ruimtelijke hiërarchie in het IfcSchema. Dit is een administratief component en kan geen geometrie bevatten.">
   <ids:applicability minOccurs="1" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
@@ -839,15 +735,7 @@ Bouwlaag als IfcBuildingStorey Een BIM-Model voor de activiteit “Nieuw gebouw 
     </ids:entity>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Verdieping" cardinality="optional">
-      <ids:value>
-        <ids:simpleValue>Verdieping</ids:simpleValue>
-      </ids:value>
-      <ids:system>
-        <ids:simpleValue>Omgevingswet-Ruimten</ids:simpleValue>
-      </ids:system>
-    </ids:classification>
-    <ids:attribute cardinality="required" instructions="Beschrijving van het soort IfcBuildingStorey&#10;Voorbeeld: Entree">
+    <ids:attribute cardinality="required" instructions="ObjectType is altijd Bouwlaag. Of de bouwlaag een entreeniveau is, staat in Pset_BuildingStoreyCommon.EntranceLevel.">
       <ids:name>
         <ids:simpleValue>ObjectType</ids:simpleValue>
       </ids:name>
@@ -855,7 +743,7 @@ Bouwlaag als IfcBuildingStorey Een BIM-Model voor de activiteit “Nieuw gebouw 
         <ids:simpleValue>Bouwlaag</ids:simpleValue>
       </ids:value>
     </ids:attribute>
-    <ids:attribute cardinality="required" instructions="conform lijst BIM basis ILS - later invullen lex bijvoorbeeld  00 begane grond, 01 eerste verdieping&#10;https://www.digigo.nu/ilsen-en-richtlijnen/bim-basis-ils/3-3-bouwlaagindeling-en-naamgeving/&#10;&#10;RegEx waar de waarden in de bouwlaagbenaming voorkomen">
+    <ids:attribute cardinality="required" instructions="conform lijst BIM basis ILS, bijvoorbeeld 00 begane grond, 01 eerste verdieping&#10;https://www.digigo.nu/ilsen-en-richtlijnen/bim-basis-ils/3-3-bouwlaagindeling-en-naamgeving/&#10;&#10;RegEx waar de waarden in de bouwlaagbenaming voorkomen">
       <ids:name>
         <ids:simpleValue>Name</ids:simpleValue>
       </ids:name>
@@ -865,11 +753,6 @@ Bouwlaag als IfcBuildingStorey Een BIM-Model voor de activiteit “Nieuw gebouw 
         </xs:restriction>
       </ids:value>
     </ids:attribute>
-    <ids:attribute cardinality="required">
-      <ids:name>
-        <ids:simpleValue>ObjectPlacement</ids:simpleValue>
-      </ids:name>
-    </ids:attribute>
     <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/EntranceLevel" cardinality="required">
       <ids:propertySet>
         <ids:simpleValue>Pset_BuildingStoreyCommon</ids:simpleValue>
@@ -878,52 +761,12 @@ Bouwlaag als IfcBuildingStorey Een BIM-Model voor de activiteit “Nieuw gebouw 
         <ids:simpleValue>EntranceLevel</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCREAL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/GrossFloorArea" cardinality="optional" instructions="Het Bruto Oppervlakte van de bouwlaag kan worden ingevuld indien dit nodig is.&#10;Een gemodeleerd bouwlaagobject heeft de voorkeur.">
+    <ids:property dataType="IFCLOGICAL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/AboveGround" cardinality="optional" instructions="Optioneel tot de check is benoemd die deze eigenschap gebruikt. TRUE: de bouwlaag ligt geheel boven het maaiveld; FALSE: geheel eronder; UNKNOWN: deels erboven en deels eronder.">
       <ids:propertySet>
-        <ids:simpleValue>Qto_BuildingStoreyBaseQuantities</ids:simpleValue>
+        <ids:simpleValue>Pset_BuildingStoreyCommon</ids:simpleValue>
       </ids:propertySet>
       <ids:baseName>
-        <ids:simpleValue>GrossFloorArea</ids:simpleValue>
-      </ids:baseName>
-    </ids:property>
-    <ids:property dataType="IFCLENGTHMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/GrossHeight" cardinality="optional" instructions="De Bruto hoogte van de bouwlaag geeft aan wat de afstand is van bk. afgewerkte vloer van deze bouwlaag to bk. afgewerkte loer vna de hierboven gelegen ">
-      <ids:propertySet>
-        <ids:simpleValue>Qto_BuildingStoreyBaseQuantities</ids:simpleValue>
-      </ids:propertySet>
-      <ids:baseName>
-        <ids:simpleValue>GrossHeight</ids:simpleValue>
-      </ids:baseName>
-    </ids:property>
-    <ids:property dataType="IFCREAL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/NetFloorArea" cardinality="optional">
-      <ids:propertySet>
-        <ids:simpleValue>Qto_BuildingStoreyBaseQuantities</ids:simpleValue>
-      </ids:propertySet>
-      <ids:baseName>
-        <ids:simpleValue>NetFloorArea</ids:simpleValue>
-      </ids:baseName>
-    </ids:property>
-    <ids:property dataType="IFCLENGTHMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/NetHeight" cardinality="optional">
-      <ids:propertySet>
-        <ids:simpleValue>Qto_BuildingStoreyBaseQuantities</ids:simpleValue>
-      </ids:propertySet>
-      <ids:baseName>
-        <ids:simpleValue>NetHeight</ids:simpleValue>
-      </ids:baseName>
-    </ids:property>
-    <ids:property dataType="IFCREAL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/NetVolume" cardinality="optional">
-      <ids:propertySet>
-        <ids:simpleValue>Qto_BuildingStoreyBaseQuantities</ids:simpleValue>
-      </ids:propertySet>
-      <ids:baseName>
-        <ids:simpleValue>NetVolume</ids:simpleValue>
-      </ids:baseName>
-    </ids:property>
-    <ids:property dataType="IFCREAL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/GrossVolume" cardinality="optional">
-      <ids:propertySet>
-        <ids:simpleValue>Qto_BuildingStoreyBaseQuantities</ids:simpleValue>
-      </ids:propertySet>
-      <ids:baseName>
-        <ids:simpleValue>GrossVolume</ids:simpleValue>
+        <ids:simpleValue>AboveGround</ids:simpleValue>
       </ids:baseName>
     </ids:property>
   </ids:requirements>
@@ -937,7 +780,7 @@ Bouwlaag als IfcBuildingStorey Een BIM-Model voor de activiteit “Nieuw gebouw 
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwlaaginhoud`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwlaaginhoud) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#3** Maximaal bebouwingspercentage, **#6** Maximum aantal bouwlagen |
-| **Bestand** | `14 9.06b Bouwlaaginhoud voorheen bouwlaagobject.ids` |
+| **Bestand** | `14-9.06b-Bouwlaaginhoud object.ids` |
 
 Bouwlaaginhoud als IfcZone, IfcSpatialZone of IfcSpace.
 
@@ -947,7 +790,7 @@ Bouwlaaginhoud als IfcZone, IfcSpatialZone of IfcSpace.
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.06b Bouwlaaginhoud (voorheen bouwlaagobject)" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwlaaginhoud" description="Bouwlaaginhoud als IfcZone, IfcSpatialZone of IfcSpace." instructions="Bouwlaaginhoud als IfcZone is een aggregatie van het totaal van alle Bruto Inhoudsobjecten op de bouwlaag.">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -967,7 +810,7 @@ Bouwlaaginhoud als IfcZone, IfcSpatialZone of IfcSpace.
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Bouwlaaginhoud" cardinality="optional">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bouwlaaginhoud" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Bouwlaaginhoud</ids:simpleValue>
       </ids:value>
@@ -1004,15 +847,15 @@ Bouwlaaginhoud als IfcZone, IfcSpatialZone of IfcSpace.
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruikseenheid`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruikseenheid) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#1** Gebruiksfunctie komt overeen met bestemming, **#5** Beroep aan huis: max. 50% gebruiksoppervlakte |
-| **Bestand** | `15 9.07 Gebruikseenheid voorheen eigendom- en gebruikseenheid.ids` |
+| **Bestand** | `15-9.07-Gebruikseenheid-voorheen-eigendom-en-gebruikseenheid.ids` |
 
-Gebruikseenheid als IfcZone, IfcSpatialZone of IfcSpace. Voor het modelleren van een Gebruikseenheid is bepalingsmethode Bruto Inhoud gewenst zodat hier geen speculatie over kan bestaan. De gebruikseenheid is een administratief type dat betrekking heeft op objecten i.r.t. splitsingsakten en kadastrale gegevens. In het geval van een woning omvat de gebuikseenheid ook een schuur en/of een parkeerplaats.
+Gebruikseenheid als IfcZone, IfcSpatialZone of IfcSpace. Voor het modelleren van een Gebruikseenheid is bepalingsmethode Bruto Inhoud gewenst zodat hier geen speculatie over kan bestaan. De gebruikseenheid is een administratief type dat betrekking heeft op objecten i.r.t. splitsingsakten en kadastrale gegevens. In het geval van een woning omvat de gebruikseenheid ook een schuur en/of een parkeerplaats.
 
 *Koppeling:* Afbakening van de eenheid waarbinnen het aandeel beroep aan huis geldt.
 
 ```xml
-<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.07 Gebruikseenheid (voorheen eigendom-, en gebruikseenheid)" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruikseenheid" description="Gebruikseenheid als IfcZone, IfcSpatialZone of IfcSpace. Voor het modelleren van een Gebruikseenheid is bepalingsmethode Bruto Inhoud gewenst zodat hier geen speculatie over kan bestaan. De gebruikseenheid is een administratief type dat betrekking heeft op objecten i.r.t. splitsingsakten en kadastrale gegevens. In het geval van een woning omvat de gebuikseenheid ook een schuur en/of een parkeerplaats.">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.07 Gebruikseenheid (voorheen eigendom-, en gebruikseenheid)" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruikseenheid" description="Gebruikseenheid als IfcZone, IfcSpatialZone of IfcSpace. Voor het modelleren van een Gebruikseenheid is bepalingsmethode Bruto Inhoud gewenst zodat hier geen speculatie over kan bestaan. De gebruikseenheid is een administratief type dat betrekking heeft op objecten i.r.t. splitsingsakten en kadastrale gegevens. In het geval van een woning omvat de gebruikseenheid ook een schuur en/of een parkeerplaats.">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -1027,15 +870,12 @@ Gebruikseenheid als IfcZone, IfcSpatialZone of IfcSpace. Voor het modelleren van
         <ids:simpleValue>ObjectType</ids:simpleValue>
       </ids:name>
       <ids:value>
-        <xs:restriction base="xs:string">
-          <xs:enumeration value="Eigendom- en gebruikseenheid" />
-          <xs:enumeration value="Gebruikseenheid" />
-        </xs:restriction>
+        <ids:simpleValue>Gebruikseenheid</ids:simpleValue>
       </ids:value>
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Gebruikseenheid" cardinality="optional">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruikseenheid" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Gebruikseenheid</ids:simpleValue>
       </ids:value>
@@ -1053,7 +893,7 @@ Gebruikseenheid als IfcZone, IfcSpatialZone of IfcSpace. Voor het modelleren van
         </xs:restriction>
       </ids:value>
     </ids:attribute>
-    <ids:attribute cardinality="required" instructions="Bepalingsmethode: (enum geldt ook voor alle situaties waar bepalingsmetihdd&#10;Voorbeeld: Bruto-Inhoud etc. enummeratie (Terrein-volume, Onbebouwdterrein-volume, Bebouwdterrein-volume, Bruto-inhoud, Netto-inhoud, Tarra-inhoud, Gebruiks-inhoud, Verhuurbare-inhoud, Kadastrale-inhoud">
+    <ids:attribute cardinality="required" instructions="Bepalingsmethode: (enum geldt ook voor alle situaties waar bepalingsmethode&#10;Voorbeeld: Bruto-Inhoud etc. enumeratie (Terrein-volume, Onbebouwdterrein-volume, Bebouwdterrein-volume, Bruto-inhoud, Netto-inhoud, Tarra-inhoud, Gebruiks-inhoud, Verhuurbare-inhoud, Kadastrale-inhoud">
       <ids:name>
         <ids:simpleValue>Description</ids:simpleValue>
       </ids:name>
@@ -1072,15 +912,15 @@ Gebruikseenheid als IfcZone, IfcSpatialZone of IfcSpace. Voor het modelleren van
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#1** Gebruiksfunctie komt overeen met bestemming, **#3** Maximaal bebouwingspercentage, **#4** Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen, **#5** Beroep aan huis: max. 50% gebruiksoppervlakte, **#6** Maximum aantal bouwlagen, **#7** Brandcompartimenten, **#9** Vrije breedte, **#10** Hoogteverschil, **#11** Rc-waarde, **#12** U-waarde, **#13** MPG, **#14** Vluchtwegen, **#15** Loopafstand, **#16** Vluchtbreedte, **#17** Daglicht |
-| **Bestand** | `16 9.08 Gebruiksfunctie.ids` |
+| **Bestand** | `16-9.08-Gebruiksfunctie.ids` |
 
 Gebruiksfunctie als IfcZone, IfcSpatialZone of IfcSpace.
 
 *Koppeling:* Het meest gebruikte begrip: elke check begint met het bepalen van de (hoofd)gebruiksfunctie voor de aansturingstabel of de planregel.
 
 ```xml
-<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.08 Gebruiksfunctie" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie" description="Gebruiksfunctie als IfcZone, IfcSpatialZone of IfcSpace.">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="16-9.08 Gebruiksfunctie" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie" description="Gebruiksfunctie als IfcZone, IfcSpatialZone of IfcSpace.">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -1100,7 +940,7 @@ Gebruiksfunctie als IfcZone, IfcSpatialZone of IfcSpace.
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Gebruiksfunctie" cardinality="optional" instructions="Deze classificatie verwijst naar de dictionary waarin de definitie van dit objecttytpe wordt beschreven">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie" cardinality="optional" instructions="Deze classificatie verwijst naar de dictionary waarin de definitie van dit objecttype wordt beschreven">
       <ids:value>
         <ids:simpleValue>Gebruiksfunctie</ids:simpleValue>
       </ids:value>
@@ -1139,7 +979,7 @@ Gebruiksfunctie als IfcZone, IfcSpatialZone of IfcSpace.
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Nevengebruiksfunctie`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Nevengebruiksfunctie) |
 | **ifcVersion** | `IFC4X3_ADD2 IFC4` |
 | **BM13-checks** | **#1** Gebruiksfunctie komt overeen met bestemming, **#4** Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen, **#5** Beroep aan huis: max. 50% gebruiksoppervlakte |
-| **Bestand** | `17 9.09 Nevengebruiksfunctie.ids` |
+| **Bestand** | `17-9.09-Nevengebruiksfunctie.ids` |
 
 Nevengebruiksfunctie als IfcZone, IfcSpatialZone of IfcSpace.
 
@@ -1147,7 +987,7 @@ Nevengebruiksfunctie als IfcZone, IfcSpatialZone of IfcSpace.
 
 ```xml
 <ids:specification ifcVersion="IFC4X3_ADD2 IFC4" name="9.09 Nevengebruiksfunctie" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Nevengebruiksfunctie" description="Nevengebruiksfunctie als IfcZone, IfcSpatialZone of IfcSpace.">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -1198,7 +1038,7 @@ Nevengebruiksfunctie als IfcZone, IfcSpatialZone of IfcSpace.
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Functiegebied`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Functiegebied) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#9** Vrije breedte, **#10** Hoogteverschil, **#11** Rc-waarde |
-| **Bestand** | `18 9.10a Functiegebied.ids` |
+| **Bestand** | `18-9.10a-Functiegebied.ids` |
 
 Functiegebied als IfcZone, IfcSpatialZone of IfcSpace.
 
@@ -1206,7 +1046,7 @@ Functiegebied als IfcZone, IfcSpatialZone of IfcSpace.
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.10a Functiegebied" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Functiegebied" description="Functiegebied als IfcZone, IfcSpatialZone of IfcSpace.">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -1226,7 +1066,7 @@ Functiegebied als IfcZone, IfcSpatialZone of IfcSpace.
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Functiegebied" cardinality="optional">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Functiegebied" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Functiegebied</ids:simpleValue>
       </ids:value>
@@ -1260,7 +1100,7 @@ Functiegebied als IfcZone, IfcSpatialZone of IfcSpace.
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsgebied`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsgebied) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#9** Vrije breedte, **#10** Hoogteverschil, **#11** Rc-waarde, **#16** Vluchtbreedte, **#17** Daglicht |
-| **Bestand** | `19 9.10b Verblijfsgebied.ids` |
+| **Bestand** | `19-9.10b-Verblijfsgebied.ids` |
 
 Verblijfsgebied als IfcZone, IfcSpatialZone of IfcSpace.
 
@@ -1268,7 +1108,7 @@ Verblijfsgebied als IfcZone, IfcSpatialZone of IfcSpace.
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.10b Verblijfsgebied" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsgebied" description="Verblijfsgebied als IfcZone, IfcSpatialZone of IfcSpace.">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -1288,7 +1128,7 @@ Verblijfsgebied als IfcZone, IfcSpatialZone of IfcSpace.
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Verblijfsgebied" cardinality="optional">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsgebied" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Verblijfsgebied</ids:simpleValue>
       </ids:value>
@@ -1320,7 +1160,7 @@ Verblijfsgebied als IfcZone, IfcSpatialZone of IfcSpace.
       </ids:baseName>
       <ids:value>
         <xs:restriction base="xs:string">
-          <xs:pattern value="matching the pattern Woonfunctie|Bijeenkomstfunctie|Celfunctie|Gezondheidszorgfunctie|Industriefunctie|Kantoorfunctie|Logiesfunctie|Onderwijsfunctie|Sportfunctie|Winkelfunctie|Overige gebruiksfunctie|Bouwwerk geen gebouw zijnde|Subgebruikfuncties" />
+          <xs:pattern value="Woonfunctie|Bijeenkomstfunctie|Celfunctie|Gezondheidszorgfunctie|Industriefunctie|Kantoorfunctie|Logiesfunctie|Onderwijsfunctie|Sportfunctie|Winkelfunctie|Overige gebruiksfunctie|Bouwwerk geen gebouw zijnde|Subgebruikfuncties" />
         </xs:restriction>
       </ids:value>
     </ids:property>
@@ -1335,17 +1175,17 @@ Verblijfsgebied als IfcZone, IfcSpatialZone of IfcSpace.
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsgebied-met-bezettingsgraad`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsgebied-met-bezettingsgraad) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#15** Loopafstand, **#16** Vluchtbreedte |
-| **Bestand** | `20 9.10c Verblijfsgebied met bezettingsgraad.ids` |
+| **Bestand** | `20-9.10c-Verblijfsgebied-met-bezettingsgraad.ids` |
 
-De bezettingsgraag in een Verblijfsgebied als IfcZone, IfcSpatialZone of IfcSpace.
+De bezettingsgraad in een Verblijfsgebied als IfcZone, IfcSpatialZone of IfcSpace.
 
 *Koppeling:* Bezetting per gebruiksoppervlakte is invoer voor loopafstand en doorstroomcapaciteit.
 
-> **Toelichting voor de modelleur.** Alleen bepaalde Gebruiksfuncties hebben een bezettingsgraad. Woon-, Industrie, Sport, Winkel en Overige functies niet.   (Check BBL of dit nog steeds zo is)
+> **Toelichting voor de modelleur.** Alleen bepaalde Gebruiksfuncties hebben een bezettingsgraad. Woon-, Industrie, Sport, Winkel en Overige functies niet.
 
 ```xml
-<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.10c Verblijfsgebied met bezettingsgraad" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsgebied-met-bezettingsgraad" description="De bezettingsgraag in een Verblijfsgebied als IfcZone, IfcSpatialZone of IfcSpace. " instructions="Alleen bepaalde Gebruiksfuncties hebben een bezettingsgraad. Woon-, Industrie, Sport, Winkel en Overige functies niet.   (Check BBL of dit nog steeds zo is)">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.10c Verblijfsgebied met bezettingsgraad" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsgebied-met-bezettingsgraad" description="De bezettingsgraad in een Verblijfsgebied als IfcZone, IfcSpatialZone of IfcSpace. " instructions="Alleen bepaalde Gebruiksfuncties hebben een bezettingsgraad. Woon-, Industrie, Sport, Winkel en Overige functies niet.">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -1372,13 +1212,13 @@ De bezettingsgraag in een Verblijfsgebied als IfcZone, IfcSpatialZone of IfcSpac
       </ids:baseName>
       <ids:value>
         <xs:restriction base="xs:string">
-          <xs:pattern value="matching the pattern Bijeenkomstfunctie|Celfunctie|Gezondheidszorgfunctie|Kantoorfunctie|Logiesfunctie|Onderwijsfunctie|Bouwwerk geen gebouw zijnde|Subgebruikfuncties" />
+          <xs:pattern value="Bijeenkomstfunctie|Celfunctie|Gezondheidszorgfunctie|Kantoorfunctie|Logiesfunctie|Onderwijsfunctie|Bouwwerk geen gebouw zijnde|Subgebruikfuncties" />
         </xs:restriction>
       </ids:value>
     </ids:property>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Verblijfsgebied" cardinality="optional">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsgebied-met-bezettingsgraad" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Verblijfsgebied</ids:simpleValue>
       </ids:value>
@@ -1436,7 +1276,7 @@ De bezettingsgraag in een Verblijfsgebied als IfcZone, IfcSpatialZone of IfcSpac
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksgebied`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksgebied) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#9** Vrije breedte, **#10** Hoogteverschil, **#14** Vluchtwegen, **#15** Loopafstand |
-| **Bestand** | `21 9.10d Gebruiksgebied.ids` |
+| **Bestand** | `21-9.10d-Gebruiksgebied.ids` |
 
 Gebruiksgebied als IfcZone, IfcSpatialZone of IfcSpace.
 
@@ -1444,7 +1284,7 @@ Gebruiksgebied als IfcZone, IfcSpatialZone of IfcSpace.
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.10d Gebruiksgebied" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksgebied" description="Gebruiksgebied als IfcZone, IfcSpatialZone of IfcSpace.">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -1464,7 +1304,7 @@ Gebruiksgebied als IfcZone, IfcSpatialZone of IfcSpace.
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Gebruiksgebied" cardinality="required">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksgebied" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Gebruiksgebied</ids:simpleValue>
       </ids:value>
@@ -1498,7 +1338,7 @@ Gebruiksgebied als IfcZone, IfcSpatialZone of IfcSpace.
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Bedgebied`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bedgebied) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#16** Vluchtbreedte |
-| **Bestand** | `22 9.10e Bedgebied.ids` |
+| **Bestand** | `22-9.10e-Bedgebied.ids` |
 
 Bedgebied als IfcZone, IfcSpatialZone of IfcSpace.
 
@@ -1506,7 +1346,7 @@ Bedgebied als IfcZone, IfcSpatialZone of IfcSpace.
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.10e Bedgebied" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bedgebied" description="Bedgebied als IfcZone, IfcSpatialZone of IfcSpace.">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -1526,7 +1366,7 @@ Bedgebied als IfcZone, IfcSpatialZone of IfcSpace.
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Bedgebied" cardinality="required">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bedgebied" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Bedgebied</ids:simpleValue>
       </ids:value>
@@ -1560,7 +1400,7 @@ Bedgebied als IfcZone, IfcSpatialZone of IfcSpace.
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Restgebied`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Restgebied) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#5** Beroep aan huis: max. 50% gebruiksoppervlakte, **#6** Maximum aantal bouwlagen |
-| **Bestand** | `23 9.10f Restgebied.ids` |
+| **Bestand** | `23-9.10f-Restgebied.ids` |
 
 Restgebied als IfcZone, IfcSpatialZone of IfcSpace.
 
@@ -1568,7 +1408,7 @@ Restgebied als IfcZone, IfcSpatialZone of IfcSpace.
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.10f Restgebied" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Restgebied" description="Restgebied als IfcZone, IfcSpatialZone of IfcSpace.">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -1588,7 +1428,7 @@ Restgebied als IfcZone, IfcSpatialZone of IfcSpace.
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Restgebied" cardinality="required">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Restgebied" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Restgebied</ids:simpleValue>
       </ids:value>
@@ -1622,7 +1462,7 @@ Restgebied als IfcZone, IfcSpatialZone of IfcSpace.
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Buitengebied`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Buitengebied) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#9** Vrije breedte, **#10** Hoogteverschil |
-| **Bestand** | `24 9.11 Buitengebied.ids` |
+| **Bestand** | `24-9.11-Buitengebied.ids` |
 
 Buitengebied als IfcExternalSpatialElement, IfcZone, IfcSpatialZone of IfcSpace.
 
@@ -1630,7 +1470,7 @@ Buitengebied als IfcExternalSpatialElement, IfcZone, IfcSpatialZone of IfcSpace.
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.11 Buitengebied" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Buitengebied" description="Buitengebied als IfcExternalSpatialElement, IfcZone, IfcSpatialZone of IfcSpace.">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -1651,7 +1491,7 @@ Buitengebied als IfcExternalSpatialElement, IfcZone, IfcSpatialZone of IfcSpace.
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Buitengebied" cardinality="optional">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Buitengebied" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Buitengebied</ids:simpleValue>
       </ids:value>
@@ -1726,15 +1566,15 @@ Buitengebied als IfcExternalSpatialElement, IfcZone, IfcSpatialZone of IfcSpace.
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Functieruimte`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Functieruimte) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#1** Gebruiksfunctie komt overeen met bestemming, **#3** Maximaal bebouwingspercentage, **#5** Beroep aan huis: max. 50% gebruiksoppervlakte, **#6** Maximum aantal bouwlagen, **#9** Vrije breedte, **#10** Hoogteverschil, **#13** MPG, **#14** Vluchtwegen, **#15** Loopafstand |
-| **Bestand** | `25 9.12a Functieruimte.ids` |
+| **Bestand** | `25-9.12a-Functieruimte.ids` |
 
-Functieruimte als IFcSpace of IfcZone
+Functieruimte als IfcSpace of IfcZone
 
 *Koppeling:* Genoemd als 'VerblijfsRuimte of Functieruimte' in de informatiebehoefte.
 
 ```xml
-<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.12a Functieruimte" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Functieruimte" description="Functieruimte als IFcSpace of IfcZone">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.12a Functieruimte" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Functieruimte" description="Functieruimte als IfcSpace of IfcZone">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -1753,7 +1593,7 @@ Functieruimte als IFcSpace of IfcZone
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Functieruimte" cardinality="required">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Functieruimte" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Functieruimte</ids:simpleValue>
       </ids:value>
@@ -1787,15 +1627,15 @@ Functieruimte als IFcSpace of IfcZone
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsruimte`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsruimte) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#1** Gebruiksfunctie komt overeen met bestemming, **#3** Maximaal bebouwingspercentage, **#5** Beroep aan huis: max. 50% gebruiksoppervlakte, **#6** Maximum aantal bouwlagen, **#9** Vrije breedte, **#10** Hoogteverschil, **#13** MPG, **#14** Vluchtwegen, **#15** Loopafstand, **#17** Daglicht |
-| **Bestand** | `26 9.12b Verblijfsruimte.ids` |
+| **Bestand** | `26-9.12b-Verblijfsruimte.ids` |
 
-Verblijfsruimte als IFcSpace of IfcZone
+Verblijfsruimte als IfcSpace of IfcZone
 
 *Koppeling:* Genoemd als 'VerblijfsRuimte of Functieruimte'; bij #17 als te toetsen ruimte.
 
 ```xml
-<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.12b Verblijfsruimte" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsruimte" description="Verblijfsruimte als IFcSpace of IfcZone">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.12b Verblijfsruimte" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsruimte" description="Verblijfsruimte als IfcSpace of IfcZone">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -1814,7 +1654,7 @@ Verblijfsruimte als IFcSpace of IfcZone
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Verblijfsruimte" cardinality="optional">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Verblijfsruimte" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Verblijfsruimte</ids:simpleValue>
       </ids:value>
@@ -1848,7 +1688,7 @@ Verblijfsruimte als IFcSpace of IfcZone
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Bedruimte`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bedruimte) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#16** Vluchtbreedte |
-| **Bestand** | `27 9.12c Bedruimte.ids` |
+| **Bestand** | `27-9.12c-Bedruimte.ids` |
 
 Bedruimte
 
@@ -1856,7 +1696,7 @@ Bedruimte
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.12c Bedruimte" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bedruimte" description="Bedruimte">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -1875,7 +1715,7 @@ Bedruimte
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Bedruimte" cardinality="optional">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Bedruimte" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Bedruimte</ids:simpleValue>
       </ids:value>
@@ -1909,7 +1749,7 @@ Bedruimte
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Restruimte`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Restruimte) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#5** Beroep aan huis: max. 50% gebruiksoppervlakte, **#6** Maximum aantal bouwlagen |
-| **Bestand** | `28 9.12d Restruimte.ids` |
+| **Bestand** | `28-9.12d-Restruimte.ids` |
 
 Restruimte
 
@@ -1917,7 +1757,7 @@ Restruimte
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.12d Restruimte" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Restruimte" description="Restruimte">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -1931,12 +1771,12 @@ Restruimte
         <ids:simpleValue>ObjectType</ids:simpleValue>
       </ids:name>
       <ids:value>
-        <ids:simpleValue>Bedruimte</ids:simpleValue>
+        <ids:simpleValue>Restruimte</ids:simpleValue>
       </ids:value>
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Restruimte" cardinality="required">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Restruimte" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Restruimte</ids:simpleValue>
       </ids:value>
@@ -1970,7 +1810,7 @@ Restruimte
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Buitenruimte`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Buitenruimte) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#9** Vrije breedte, **#10** Hoogteverschil |
-| **Bestand** | `29 9.13 Buitenruimte.ids` |
+| **Bestand** | `29-9.13-Buitenruimte.ids` |
 
 Buitenruimte als IfcExternalSpatialElement, IfcZone of IfcSpace
 
@@ -1978,7 +1818,7 @@ Buitenruimte als IfcExternalSpatialElement, IfcZone of IfcSpace
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.13 Buitenruimte" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Buitenruimte" description="Buitenruimte als IfcExternalSpatialElement, IfcZone of IfcSpace">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -2011,7 +1851,7 @@ Buitenruimte als IfcExternalSpatialElement, IfcZone of IfcSpace
     </ids:property>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Buitenruimte" cardinality="required">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Buitenruimte" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Buitenruimte</ids:simpleValue>
       </ids:value>
@@ -2073,7 +1913,7 @@ Buitenruimte als IfcExternalSpatialElement, IfcZone of IfcSpace
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Brandcompartiment`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Brandcompartiment) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#7** Brandcompartimenten, **#8** Brandwerendheid, **#14** Vluchtwegen, **#15** Loopafstand |
-| **Bestand** | `30 9.16a Brandcompartiment.ids` |
+| **Bestand** | `30-9.16a-Brandcompartiment.ids` |
 
 Brandcompartiment als IfcZone of IfcSpatialZone
 
@@ -2081,7 +1921,7 @@ Brandcompartiment als IfcZone of IfcSpatialZone
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.16a Brandcompartiment" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Brandcompartiment" description="Brandcompartiment als IfcZone of IfcSpatialZone">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -2100,7 +1940,7 @@ Brandcompartiment als IfcZone of IfcSpatialZone
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Brandcompartiment" cardinality="optional">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Brandcompartiment" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Brandcompartiment</ids:simpleValue>
       </ids:value>
@@ -2153,6 +1993,14 @@ Brandcompartiment als IfcZone of IfcSpatialZone
       </ids:propertySet>
       <ids:baseName>
         <ids:simpleValue>SprinklerProtection</ids:simpleValue>
+      </ids:baseName>
+    </ids:property>
+    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/SprinklerProtectionAutomatic" cardinality="optional">
+      <ids:propertySet>
+        <ids:simpleValue>Pset_SpaceFireSafetyRequirements</ids:simpleValue>
+      </ids:propertySet>
+      <ids:baseName>
+        <ids:simpleValue>SprinklerProtectionAutomatic</ids:simpleValue>
       </ids:baseName>
     </ids:property>
     <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/AirPressurization" cardinality="optional">
@@ -2174,15 +2022,15 @@ Brandcompartiment als IfcZone of IfcSpatialZone
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Subbrandcompartiment`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Subbrandcompartiment) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#15** Loopafstand |
-| **Bestand** | `31 9.16b Subbrandcompartiment.ids` |
+| **Bestand** | `31-9.16b-Subbrandcompartiment.ids` |
 
-Subbrandcompartiment  als IfcZone of IfcSpatialZone
+Subbrandcompartiment als IfcZone of IfcSpatialZone
 
 *Koppeling:* Artikel 4.66 rekent de loopafstand tot een uitgang van het subbrandcompartiment.
 
 ```xml
-<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.16b Subbrandcompartiment" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Subbrandcompartiment" description="Subbrandcompartiment  als IfcZone of IfcSpatialZone">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.16b Subbrandcompartiment" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Subbrandcompartiment" description="Subbrandcompartiment als IfcZone of IfcSpatialZone">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -2201,7 +2049,7 @@ Subbrandcompartiment  als IfcZone of IfcSpatialZone
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Subbrandcompartiment" cardinality="optional">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Subbrandcompartiment" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Subbrandcompartiment</ids:simpleValue>
       </ids:value>
@@ -2256,6 +2104,14 @@ Subbrandcompartiment  als IfcZone of IfcSpatialZone
         <ids:simpleValue>SprinklerProtection</ids:simpleValue>
       </ids:baseName>
     </ids:property>
+    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/SprinklerProtectionAutomatic" cardinality="optional">
+      <ids:propertySet>
+        <ids:simpleValue>Pset_SpaceFireSafetyRequirements</ids:simpleValue>
+      </ids:propertySet>
+      <ids:baseName>
+        <ids:simpleValue>SprinklerProtectionAutomatic</ids:simpleValue>
+      </ids:baseName>
+    </ids:property>
     <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/AirPressurization" cardinality="optional">
       <ids:propertySet>
         <ids:simpleValue>Pset_SpaceFireSafetyRequirements</ids:simpleValue>
@@ -2275,15 +2131,15 @@ Subbrandcompartiment  als IfcZone of IfcSpatialZone
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Vluchtroute`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vluchtroute) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#14** Vluchtwegen, **#15** Loopafstand, **#16** Vluchtbreedte |
-| **Bestand** | `32 9.16c Vluchtroute.ids` |
+| **Bestand** | `32-9.16c-Vluchtroute.ids` |
 
-Vluchtroute  als IfcZone of IfcSpatialZone
+Vluchtroute als IfcZone of IfcSpatialZone
 
 *Koppeling:* Kernbegrip van de vluchtroutechecks.
 
 ```xml
-<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.16c Vluchtroute" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vluchtroute" description="Vluchtroute  als IfcZone of IfcSpatialZone">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.16c Vluchtroute" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vluchtroute" description="Vluchtroute als IfcZone of IfcSpatialZone">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -2302,7 +2158,7 @@ Vluchtroute  als IfcZone of IfcSpatialZone
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/Vluchtroute" cardinality="required">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vluchtroute" cardinality="optional">
       <ids:value>
         <ids:simpleValue>Vluchtroute</ids:simpleValue>
       </ids:value>
@@ -2379,15 +2235,15 @@ Vluchtroute  als IfcZone of IfcSpatialZone
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Tarra-Ruimte`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Tarra-Ruimte) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#5** Beroep aan huis: max. 50% gebruiksoppervlakte, **#6** Maximum aantal bouwlagen, **#15** Loopafstand |
-| **Bestand** | `33 9.17 Tarra Ruimte.ids` |
+| **Bestand** | `33-9.17-Tarra-Ruimte.ids` |
 
-Tarra Ruimte  als IfcZone of IfcSpatialZone
+Tarra Ruimte als IfcZone of IfcSpatialZone
 
 *Koppeling:* BVO = netto + tarra; nodig voor de oppervlaktebepalingen.
 
 ```xml
-<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.17 Tarra Ruimte" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Tarra-Ruimte" description="Tarra Ruimte  als IfcZone of IfcSpatialZone">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.17 Tarra Ruimte" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Tarra-Ruimte" description="Tarra Ruimte als IfcZone of IfcSpatialZone">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <xs:restriction base="xs:string">
@@ -2406,7 +2262,7 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
     </ids:attribute>
   </ids:applicability>
   <ids:requirements>
-    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.2.0/class/TarraRuimte" cardinality="optional">
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Tarra-Ruimte" cardinality="optional">
       <ids:value>
         <ids:simpleValue>TarraRuimte</ids:simpleValue>
       </ids:value>
@@ -2437,14 +2293,14 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
 |---|---|
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Balk`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Balk) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
-| **BM13-checks** | _geen directe koppeling_ |
-| **Bestand** | `34 9.18a Fysieke elementen IfcBeam.ids` |
+| **BM13-checks** | **#7** Brandcompartimenten, **#8** Brandwerendheid |
+| **Bestand** | `34-9.18a-Fysieke-elementen-IfcBeam.ids` |
 
-*Koppeling:* Niet expliciet genoemd in de regelinventarisatie v0.3; ondersteunend.
+*Koppeling:* Gekoppeld aan #7 en #8, net als 9.18b Kolom (besluit redactie 0.2.0); niet expliciet genoemd in de regelinventarisatie v0.3.
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.18a Fysieke elementen IfcBeam" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Balk">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <ids:simpleValue>IFCBEAM</ids:simpleValue>
@@ -2452,13 +2308,18 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
     </ids:entity>
   </ids:applicability>
   <ids:requirements>
-    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="optional">
+    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="optional" instructions="Brandwerendheid volgens NEN-EN 13501-2: klasse en tijd in minuten met een spatie ertussen, eventueel met achtervoegsel, bijvoorbeeld REI 60 of EI2 30-Sa. Voorlopige waardelijst: besluit van de gemeentelijke werkgroep van 3 november 2026, onder voorbehoud van afstemming met de BIM basis ILS via digiGO.">
       <ids:propertySet>
         <ids:simpleValue>Pset_BeamCommon</ids:simpleValue>
       </ids:propertySet>
       <ids:baseName>
         <ids:simpleValue>FireRating</ids:simpleValue>
       </ids:baseName>
+      <ids:value>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*" />
+        </xs:restriction>
+      </ids:value>
     </ids:property>
     <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/IsExternal" cardinality="optional">
       <ids:propertySet>
@@ -2476,7 +2337,7 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
         <ids:simpleValue>LoadBearing</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCREAL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ThermalTransmittance" cardinality="optional">
+    <ids:property dataType="IFCTHERMALTRANSMITTANCEMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ThermalTransmittance" cardinality="optional">
       <ids:propertySet>
         <ids:simpleValue>Pset_BeamCommon</ids:simpleValue>
       </ids:propertySet>
@@ -2495,13 +2356,13 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Kolom`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Kolom) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#7** Brandcompartimenten, **#8** Brandwerendheid |
-| **Bestand** | `35 9.18b Fysieke elementen IfcColumn.ids` |
+| **Bestand** | `35-9.18b-Fysieke-elementen-IfcColumn.ids` |
 
 *Koppeling:* Genoemd als brandwerend constructieonderdeel.
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.18b Fysieke elementen IfcColumn" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Kolom">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <ids:simpleValue>IFCCOLUMN</ids:simpleValue>
@@ -2509,13 +2370,18 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
     </ids:entity>
   </ids:applicability>
   <ids:requirements>
-    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="optional">
+    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="optional" instructions="Brandwerendheid volgens NEN-EN 13501-2: klasse en tijd in minuten met een spatie ertussen, eventueel met achtervoegsel, bijvoorbeeld REI 60 of EI2 30-Sa. Voorlopige waardelijst: besluit van de gemeentelijke werkgroep van 3 november 2026, onder voorbehoud van afstemming met de BIM basis ILS via digiGO.">
       <ids:propertySet>
         <ids:simpleValue>Pset_ColumnCommon</ids:simpleValue>
       </ids:propertySet>
       <ids:baseName>
         <ids:simpleValue>FireRating</ids:simpleValue>
       </ids:baseName>
+      <ids:value>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*" />
+        </xs:restriction>
+      </ids:value>
     </ids:property>
     <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/IsExternal" cardinality="optional">
       <ids:propertySet>
@@ -2533,7 +2399,7 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
         <ids:simpleValue>LoadBearing</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCREAL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ThermalTransmittance" cardinality="optional">
+    <ids:property dataType="IFCTHERMALTRANSMITTANCEMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ThermalTransmittance" cardinality="optional">
       <ids:propertySet>
         <ids:simpleValue>Pset_ColumnCommon</ids:simpleValue>
       </ids:propertySet>
@@ -2552,13 +2418,13 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Isolatie`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Isolatie) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#11** Rc-waarde |
-| **Bestand** | `36 9.18c Fysieke elementen IfcCovering.INSULATION.ids` |
+| **Bestand** | `36-9.18c-Fysieke-elementen-IfcCovering.INSULATION.ids` |
 
 *Koppeling:* Isolatie als onderdeel van de scheidingsconstructie bij de Rc-bepaling.
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.18c Fysieke elementen IfcCovering.INSULATION" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Isolatie">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <ids:simpleValue>IFCCOVERING</ids:simpleValue>
@@ -2585,15 +2451,20 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
         <ids:simpleValue>Combustible</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="required">
+    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="optional" instructions="Brandwerendheid volgens NEN-EN 13501-2: klasse en tijd in minuten met een spatie ertussen, eventueel met achtervoegsel, bijvoorbeeld REI 60 of EI2 30-Sa. Voorlopige waardelijst: besluit van de gemeentelijke werkgroep van 3 november 2026, onder voorbehoud van afstemming met de BIM basis ILS via digiGO.">
       <ids:propertySet>
         <ids:simpleValue>Pset_CoveringCommon</ids:simpleValue>
       </ids:propertySet>
       <ids:baseName>
         <ids:simpleValue>FireRating</ids:simpleValue>
       </ids:baseName>
+      <ids:value>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*" />
+        </xs:restriction>
+      </ids:value>
     </ids:property>
-    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FlammabilityRating" cardinality="required">
+    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FlammabilityRating" cardinality="optional">
       <ids:propertySet>
         <ids:simpleValue>Pset_CoveringCommon</ids:simpleValue>
       </ids:propertySet>
@@ -2609,13 +2480,18 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
         <ids:simpleValue>IsExternal</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/SurfaceSpreadOfFlame" cardinality="required">
+    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/SurfaceSpreadOfFlame" cardinality="optional" instructions="Brandklasse volgens NEN-EN 13501-1, bijvoorbeeld B-s1,d0. De klassen voor vloeren (fl) en leidingisolatie (L) zitten er nog niet in. Voorlopige waardelijst: besluit van de gemeentelijke werkgroep van 3 november 2026, onder voorbehoud van afstemming met de BIM basis ILS via digiGO.">
       <ids:propertySet>
         <ids:simpleValue>Pset_CoveringCommon</ids:simpleValue>
       </ids:propertySet>
       <ids:baseName>
         <ids:simpleValue>SurfaceSpreadOfFlame</ids:simpleValue>
       </ids:baseName>
+      <ids:value>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(A1|A2|B|C|D|E|F)(-s[1-3])?(,d[0-2])?" />
+        </xs:restriction>
+      </ids:value>
     </ids:property>
     <ids:property dataType="IFCTHERMALTRANSMITTANCEMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ThermalTransmittance" cardinality="optional">
       <ids:propertySet>
@@ -2636,16 +2512,16 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Vliesgevel`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vliesgevel) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#7** Brandcompartimenten, **#8** Brandwerendheid, **#11** Rc-waarde, **#12** U-waarde, **#17** Daglicht |
-| **Bestand** | `37 9.18d Fysieke elementen IfcCurtainWall.ids` |
+| **Bestand** | `37-9.18d-Fysieke-elementen-IfcCurtainWall.ids` |
 
 *Koppeling:* Vliesgevel: brandwerend constructieonderdeel, Rc/U-waarde en daglichtopening.
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.18d Fysieke elementen IfcCurtainWall" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vliesgevel">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
-        <ids:simpleValue>IFCSLAB</ids:simpleValue>
+        <ids:simpleValue>IFCCURTAINWALL</ids:simpleValue>
       </ids:name>
     </ids:entity>
   </ids:applicability>
@@ -2666,13 +2542,18 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
         <ids:simpleValue>Combustible</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="optional">
+    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="optional" instructions="Brandwerendheid volgens NEN-EN 13501-2: klasse en tijd in minuten met een spatie ertussen, eventueel met achtervoegsel, bijvoorbeeld REI 60 of EI2 30-Sa. Voorlopige waardelijst: besluit van de gemeentelijke werkgroep van 3 november 2026, onder voorbehoud van afstemming met de BIM basis ILS via digiGO.">
       <ids:propertySet>
         <ids:simpleValue>Pset_CurtainWallCommon</ids:simpleValue>
       </ids:propertySet>
       <ids:baseName>
         <ids:simpleValue>FireRating</ids:simpleValue>
       </ids:baseName>
+      <ids:value>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*" />
+        </xs:restriction>
+      </ids:value>
     </ids:property>
     <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/IsExternal" cardinality="optional">
       <ids:propertySet>
@@ -2690,7 +2571,7 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
         <ids:simpleValue>SurfaceSpreadOfFlame</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCREAL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ThermalTransmittance" cardinality="optional">
+    <ids:property dataType="IFCTHERMALTRANSMITTANCEMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ThermalTransmittance" cardinality="optional">
       <ids:propertySet>
         <ids:simpleValue>Pset_CurtainWallCommon</ids:simpleValue>
       </ids:propertySet>
@@ -2709,13 +2590,13 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Deur`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Deur) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#7** Brandcompartimenten, **#8** Brandwerendheid, **#12** U-waarde, **#14** Vluchtwegen, **#15** Loopafstand, **#16** Vluchtbreedte, **#17** Daglicht |
-| **Bestand** | `38 9.18e Fysieke elementen IfcDoor.ids` |
+| **Bestand** | `38-9.18e-Fysieke-elementen-IfcDoor.ids` |
 
 *Koppeling:* Deur: brandwerend onderdeel, U-waarde, vluchtroute, doorstroomcapaciteit, daglicht.
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.18e Fysieke elementen IfcDoor" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Deur">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <ids:simpleValue>IFCDOOR</ids:simpleValue>
@@ -2731,7 +2612,7 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
         <ids:simpleValue>AcousticRating</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireExit" cardinality="required">
+    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireExit" cardinality="optional">
       <ids:propertySet>
         <ids:simpleValue>Pset_DoorCommon</ids:simpleValue>
       </ids:propertySet>
@@ -2739,13 +2620,18 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
         <ids:simpleValue>FireExit</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="required">
+    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="optional" instructions="Brandwerendheid volgens NEN-EN 13501-2: klasse en tijd in minuten met een spatie ertussen, eventueel met achtervoegsel, bijvoorbeeld REI 60 of EI2 30-Sa. Voorlopige waardelijst: besluit van de gemeentelijke werkgroep van 3 november 2026, onder voorbehoud van afstemming met de BIM basis ILS via digiGO.">
       <ids:propertySet>
         <ids:simpleValue>Pset_DoorCommon</ids:simpleValue>
       </ids:propertySet>
       <ids:baseName>
         <ids:simpleValue>FireRating</ids:simpleValue>
       </ids:baseName>
+      <ids:value>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*" />
+        </xs:restriction>
+      </ids:value>
     </ids:property>
     <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/HandicapAccessible" cardinality="optional">
       <ids:propertySet>
@@ -2771,7 +2657,7 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
         <ids:simpleValue>SecurityRating</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/SelfClosing" cardinality="required">
+    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/SelfClosing" cardinality="optional">
       <ids:propertySet>
         <ids:simpleValue>Pset_DoorCommon</ids:simpleValue>
       </ids:propertySet>
@@ -2779,7 +2665,7 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
         <ids:simpleValue>SelfClosing</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/SmokeStop" cardinality="required">
+    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/SmokeStop" cardinality="optional">
       <ids:propertySet>
         <ids:simpleValue>Pset_DoorCommon</ids:simpleValue>
       </ids:propertySet>
@@ -2791,42 +2677,6 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
 </ids:specification>
 ```
 
-## 39 — 9.18f Fysieke elementen IfcSensor {#39-918f-fysieke-elementen-ifcsensor}
-
-| | |
-|---|---|
-| **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Sensor`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Sensor) |
-| **ifcVersion** | `IFC4 IFC4X3_ADD2` |
-| **BM13-checks** | _geen directe koppeling_ |
-| **Bestand** | `39 9.18f Fysieke elementen IfcSensor.ids` |
-
-*Koppeling:* Niet expliciet genoemd in de regelinventarisatie v0.3; ondersteunend.
-
-```xml
-<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.18f Fysieke elementen IfcSensor" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Sensor">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
-    <ids:entity>
-      <ids:name>
-        <ids:simpleValue>IFCSENSOR</ids:simpleValue>
-      </ids:name>
-      <ids:predefinedType>
-        <ids:simpleValue>SMOKESENSOR</ids:simpleValue>
-      </ids:predefinedType>
-    </ids:entity>
-  </ids:applicability>
-  <ids:requirements>
-    <ids:attribute cardinality="required">
-      <ids:name>
-        <ids:simpleValue>ObjectType</ids:simpleValue>
-      </ids:name>
-      <ids:value>
-        <ids:simpleValue>Rookmelder</ids:simpleValue>
-      </ids:value>
-    </ids:attribute>
-  </ids:requirements>
-</ids:specification>
-```
-
 ## 40 — 9.18g Fysieke elementen IfcSlab {#40-918g-fysieke-elementen-ifcslab}
 
 | | |
@@ -2834,13 +2684,13 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Vloer`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vloer) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#7** Brandcompartimenten, **#8** Brandwerendheid, **#9** Vrije breedte, **#10** Hoogteverschil, **#11** Rc-waarde, **#13** MPG, **#14** Vluchtwegen, **#15** Loopafstand, **#16** Vluchtbreedte |
-| **Bestand** | `40 9.18g Fysieke elementen IfcSlab.ids` |
+| **Bestand** | `40-9.18g-Fysieke-elementen-IfcSlab.ids` |
 
 *Koppeling:* Vloer/dak: brandwerendheid, hoogteverschil, Rc, milieuprestatie en vluchtroutes.
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.18g Fysieke elementen IfcSlab" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vloer">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <ids:simpleValue>IFCSLAB</ids:simpleValue>
@@ -2864,13 +2714,26 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
         <ids:simpleValue>Combustible</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="optional">
+    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/Compartmentation" cardinality="optional">
+      <ids:propertySet>
+        <ids:simpleValue>Pset_SlabCommon</ids:simpleValue>
+      </ids:propertySet>
+      <ids:baseName>
+        <ids:simpleValue>Compartmentation</ids:simpleValue>
+      </ids:baseName>
+    </ids:property>
+    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="optional" instructions="Brandwerendheid volgens NEN-EN 13501-2: klasse en tijd in minuten met een spatie ertussen, eventueel met achtervoegsel, bijvoorbeeld REI 60 of EI2 30-Sa. Voorlopige waardelijst: besluit van de gemeentelijke werkgroep van 3 november 2026, onder voorbehoud van afstemming met de BIM basis ILS via digiGO.">
       <ids:propertySet>
         <ids:simpleValue>Pset_SlabCommon</ids:simpleValue>
       </ids:propertySet>
       <ids:baseName>
         <ids:simpleValue>FireRating</ids:simpleValue>
       </ids:baseName>
+      <ids:value>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*" />
+        </xs:restriction>
+      </ids:value>
     </ids:property>
     <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/IsExternal" cardinality="optional">
       <ids:propertySet>
@@ -2896,12 +2759,12 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
         <ids:simpleValue>SurfaceSpreadOfFlame</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCREAL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ThermalTransmittance" cardinality="optional">
+    <ids:property dataType="IFCTHERMALTRANSMITTANCEMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ThermalTransmittance" cardinality="optional">
       <ids:propertySet>
         <ids:simpleValue>Pset_SlabCommon</ids:simpleValue>
       </ids:propertySet>
       <ids:baseName>
-        <ids:simpleValue>Thermal Transmittance [ThermalTransmittance]</ids:simpleValue>
+        <ids:simpleValue>ThermalTransmittance</ids:simpleValue>
       </ids:baseName>
     </ids:property>
   </ids:requirements>
@@ -2915,13 +2778,13 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Wand`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Wand) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#7** Brandcompartimenten, **#8** Brandwerendheid, **#9** Vrije breedte, **#11** Rc-waarde, **#13** MPG, **#16** Vluchtbreedte, **#17** Daglicht |
-| **Bestand** | `41 9.18h Fysieke elementen IfcWall.ids` |
+| **Bestand** | `41-9.18h-Fysieke-elementen-IfcWall.ids` |
 
 *Koppeling:* Wand: brandwerendheid, vrije breedte, Rc-waarde, milieuprestatie, daglicht.
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.18h Fysieke elementen IfcWall" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Wand">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <ids:simpleValue>IFCWALL</ids:simpleValue>
@@ -2953,13 +2816,18 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
         <ids:simpleValue>Compartmentation</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="optional" instructions="Indicatie van het aantal minuten van&#10;brandwerendheid (WBDBO) 60&#10;Check hier nog even de europese eisen bijvoorbeeld EI60 etc?&gt;???">
+    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="optional" instructions="Brandwerendheid volgens NEN-EN 13501-2: klasse en tijd in minuten met een spatie ertussen, eventueel met achtervoegsel, bijvoorbeeld REI 60 of EI2 30-Sa. Voorlopige waardelijst: besluit van de gemeentelijke werkgroep van 3 november 2026, onder voorbehoud van afstemming met de BIM basis ILS via digiGO.">
       <ids:propertySet>
         <ids:simpleValue>Pset_WallCommon</ids:simpleValue>
       </ids:propertySet>
       <ids:baseName>
         <ids:simpleValue>FireRating</ids:simpleValue>
       </ids:baseName>
+      <ids:value>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*" />
+        </xs:restriction>
+      </ids:value>
     </ids:property>
     <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/IsExternal" cardinality="optional" instructions="Indicatie of de muur een externe muur is">
       <ids:propertySet>
@@ -2985,7 +2853,7 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
         <ids:simpleValue>SurfaceSpreadOfFlame</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCREAL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ThermalTransmittance" cardinality="optional">
+    <ids:property dataType="IFCTHERMALTRANSMITTANCEMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ThermalTransmittance" cardinality="optional">
       <ids:propertySet>
         <ids:simpleValue>Pset_WallCommon</ids:simpleValue>
       </ids:propertySet>
@@ -3004,13 +2872,13 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
 | **Identifier** | [`bsnl/Omgevingswet-Ruimten/0.3.0/class/Raam`](https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Raam) |
 | **ifcVersion** | `IFC4 IFC4X3_ADD2` |
 | **BM13-checks** | **#12** U-waarde, **#17** Daglicht |
-| **Bestand** | `42 9.18i Fysieke elementen Ifcwindow.ids` |
+| **Bestand** | `42-9.18i-Fysieke-elementen-IfcWindow.ids` |
 
 *Koppeling:* Raam: U-waarde en equivalente daglichtoppervlakte.
 
 ```xml
 <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.18i Fysieke elementen Ifcwindow" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Raam">
-  <ids:applicability minOccurs="1" maxOccurs="unbounded">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
     <ids:entity>
       <ids:name>
         <ids:simpleValue>IFCWINDOW</ids:simpleValue>
@@ -3026,7 +2894,7 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
         <ids:simpleValue>AcousticRating</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireExit" cardinality="required">
+    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireExit" cardinality="optional">
       <ids:propertySet>
         <ids:simpleValue>Pset_WindowCommon</ids:simpleValue>
       </ids:propertySet>
@@ -3034,15 +2902,20 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
         <ids:simpleValue>FireExit</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="required">
+    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="optional" instructions="Brandwerendheid volgens NEN-EN 13501-2: klasse en tijd in minuten met een spatie ertussen, eventueel met achtervoegsel, bijvoorbeeld REI 60 of EI2 30-Sa. Voorlopige waardelijst: besluit van de gemeentelijke werkgroep van 3 november 2026, onder voorbehoud van afstemming met de BIM basis ILS via digiGO.">
       <ids:propertySet>
         <ids:simpleValue>Pset_WindowCommon</ids:simpleValue>
       </ids:propertySet>
       <ids:baseName>
         <ids:simpleValue>FireRating</ids:simpleValue>
       </ids:baseName>
+      <ids:value>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*" />
+        </xs:restriction>
+      </ids:value>
     </ids:property>
-    <ids:property dataType="IFCREAL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/GlazingAreaFraction" cardinality="optional">
+    <ids:property dataType="IFCPOSITIVERATIOMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/GlazingAreaFraction" cardinality="optional">
       <ids:propertySet>
         <ids:simpleValue>Pset_WindowCommon</ids:simpleValue>
       </ids:propertySet>
@@ -3066,7 +2939,7 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
         <ids:simpleValue>SecurityRating</ids:simpleValue>
       </ids:baseName>
     </ids:property>
-    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/SmokeStop" cardinality="required">
+    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/SmokeStop" cardinality="optional">
       <ids:propertySet>
         <ids:simpleValue>Pset_WindowCommon</ids:simpleValue>
       </ids:propertySet>
@@ -3086,3 +2959,156 @@ Tarra Ruimte  als IfcZone of IfcSpatialZone
 </ids:specification>
 ```
 
+## 43 — 9.16d Beschermd subbrandcompartiment {#43-916d-beschermd-subbrandcompartiment}
+
+| | |
+|---|---|
+| **Identifier** | `9.16d` |
+| **ifcVersion** | `IFC4 IFC4X3_ADD2` |
+| **BM13-checks** | **#15** Loopafstand |
+| **Bestand** | `43-9.16d-Beschermd-subbrandcompartiment.ids` |
+
+Beschermd subbrandcompartiment als IfcZone of IfcSpatialZone
+
+*Koppeling:* Als 9.16b: artikel 4.66 rekent de loopafstand tot een uitgang van het subbrandcompartiment.
+
+```xml
+<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.16d Beschermd subbrandcompartiment" identifier="9.16d" description="Beschermd subbrandcompartiment als IfcZone of IfcSpatialZone">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
+    <ids:entity>
+      <ids:name>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="IFCZONE" />
+          <xs:enumeration value="IFCSPATIALZONE" />
+        </xs:restriction>
+      </ids:name>
+    </ids:entity>
+    <ids:attribute>
+      <ids:name>
+        <ids:simpleValue>ObjectType</ids:simpleValue>
+      </ids:name>
+      <ids:value>
+        <ids:simpleValue>Beschermd subbrandcompartiment</ids:simpleValue>
+      </ids:value>
+    </ids:attribute>
+  </ids:applicability>
+  <ids:requirements>
+    <ids:classification uri="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Subbrandcompartiment" cardinality="optional">
+      <ids:value>
+        <ids:simpleValue>Subbrandcompartiment</ids:simpleValue>
+      </ids:value>
+      <ids:system>
+        <ids:simpleValue>Omgevingswet-Ruimten</ids:simpleValue>
+      </ids:system>
+    </ids:classification>
+    <ids:attribute cardinality="required">
+      <ids:name>
+        <ids:simpleValue>Name</ids:simpleValue>
+      </ids:name>
+    </ids:attribute>
+    <ids:attribute cardinality="required">
+      <ids:name>
+        <ids:simpleValue>Description</ids:simpleValue>
+      </ids:name>
+      <ids:value>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="Bruto Inhoud|Gebruiksinhoud|Netto Inhoud" />
+        </xs:restriction>
+      </ids:value>
+    </ids:attribute>
+    <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRiskFactor" cardinality="optional">
+      <ids:propertySet>
+        <ids:simpleValue>Pset_SpaceFireSafetyRequirements</ids:simpleValue>
+      </ids:propertySet>
+      <ids:baseName>
+        <ids:simpleValue>FireRiskFactor</ids:simpleValue>
+      </ids:baseName>
+    </ids:property>
+    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireExit" cardinality="optional">
+      <ids:propertySet>
+        <ids:simpleValue>Pset_SpaceFireSafetyRequirements</ids:simpleValue>
+      </ids:propertySet>
+      <ids:baseName>
+        <ids:simpleValue>FireExit</ids:simpleValue>
+      </ids:baseName>
+    </ids:property>
+    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FlammableStorage" cardinality="optional">
+      <ids:propertySet>
+        <ids:simpleValue>Pset_SpaceFireSafetyRequirements</ids:simpleValue>
+      </ids:propertySet>
+      <ids:baseName>
+        <ids:simpleValue>FlammableStorage</ids:simpleValue>
+      </ids:baseName>
+    </ids:property>
+    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/SprinklerProtection" cardinality="optional">
+      <ids:propertySet>
+        <ids:simpleValue>Pset_SpaceFireSafetyRequirements</ids:simpleValue>
+      </ids:propertySet>
+      <ids:baseName>
+        <ids:simpleValue>SprinklerProtection</ids:simpleValue>
+      </ids:baseName>
+    </ids:property>
+    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/SprinklerProtectionAutomatic" cardinality="optional">
+      <ids:propertySet>
+        <ids:simpleValue>Pset_SpaceFireSafetyRequirements</ids:simpleValue>
+      </ids:propertySet>
+      <ids:baseName>
+        <ids:simpleValue>SprinklerProtectionAutomatic</ids:simpleValue>
+      </ids:baseName>
+    </ids:property>
+    <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/AirPressurization" cardinality="optional">
+      <ids:propertySet>
+        <ids:simpleValue>Pset_SpaceFireSafetyRequirements</ids:simpleValue>
+      </ids:propertySet>
+      <ids:baseName>
+        <ids:simpleValue>AirPressurization</ids:simpleValue>
+      </ids:baseName>
+    </ids:property>
+  </ids:requirements>
+</ids:specification>
+```
+
+## 44 — 9.01f Verticaal datum (NAP) {#44-901f-verticaal-datum-nap}
+
+| | |
+|---|---|
+| **Identifier** | `9.01f` |
+| **ifcVersion** | `IFC4 IFC4X3_ADD2` |
+| **BM13-checks** | **#2** Maximale bouwhoogte, **#4** Gebruiksfunctie/bestemming beperkt tot x aantal bouwlagen, **#6** Maximum aantal bouwlagen, **#10** Hoogteverschil |
+| **Bestand** | `44-9.01f-Verticaal-datum.ids` |
+
+Is de doel-CRS EPSG:28992 (RD zonder hoogtecomponent), dan is het verticale datum EPSG:5709 (NAP). De specificatie geldt alleen voor modellen met EPSG:28992.
+
+*Koppeling:* Voorwaarde voor de hoogtechecks #2, #4, #6 en #10 bij EPSG:28992: hoogten ten opzichte van NAP.
+
+> **Toelichting voor de modelleur.** Gebruik bij voorkeur EPSG:7415; die bevat de hoogtecomponent (NAP) al.
+
+```xml
+<ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.01f Verticaal datum (NAP)" identifier="9.01f" description="Is de doel-CRS EPSG:28992 (RD zonder hoogtecomponent), dan is het verticale datum EPSG:5709 (NAP). De specificatie geldt alleen voor modellen met EPSG:28992." instructions="Gebruik bij voorkeur EPSG:7415; die bevat de hoogtecomponent (NAP) al.">
+  <ids:applicability minOccurs="0" maxOccurs="unbounded">
+    <ids:entity>
+      <ids:name>
+        <ids:simpleValue>IFCPROJECTEDCRS</ids:simpleValue>
+      </ids:name>
+    </ids:entity>
+    <ids:attribute>
+      <ids:name>
+        <ids:simpleValue>Name</ids:simpleValue>
+      </ids:name>
+      <ids:value>
+        <ids:simpleValue>EPSG:28992</ids:simpleValue>
+      </ids:value>
+    </ids:attribute>
+  </ids:applicability>
+  <ids:requirements>
+    <ids:attribute cardinality="required">
+      <ids:name>
+        <ids:simpleValue>VerticalDatum</ids:simpleValue>
+      </ids:name>
+      <ids:value>
+        <ids:simpleValue>EPSG:5709</ids:simpleValue>
+      </ids:value>
+    </ids:attribute>
+  </ids:requirements>
+</ids:specification>
+```

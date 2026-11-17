@@ -1,62 +1,70 @@
 # Sample models
 
-This ILS comes with a set of **sample models in IFC**. They are in the folder [`voorbeeldmodellen/`](../../voorbeeldmodellen/) next to the IDS files, so that modellers, software vendors and municipalities can see what the specifications look like in a real file.
+This ILS comes with a **sample model in IFC**: [`BM13_SPA_XX_M3D_ZZZ_Qto.ifc`](../voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ_Qto.ifc), in the folder `voorbeeldmodellen/` next to the IDS files. Modellers, software vendors and municipalities can use it to see what the specifications look like in a real file.
 
-Every specification in [Level of Information Need](#loin) carries an excerpt from these models: the STEP lines of an object that meets that specification, with its property sets and its classification reference. This shows, per specification, how the properties end up in the IFC file.
+Every specification in [Level of Information Need](#loin) carries an excerpt from this model: the STEP lines of an object that belongs to that specification, with the requested property sets, the quantities, the classification reference and, for zones, the grouping. Where the model does not yet meet the specification, this is stated below the excerpt.
 
 ## Origin and status
 
-The models come from the **RottaNova / Kievitsweg** project (Kuiper Compagnons), an apartment building with residential and office functions. They are **practice models**, not a submitted application:
+The model is a **terraced house** (*Woning fam. B*, Driebergen-Rijsenburg) in its existing structural state. It was modelled in Revit 2026 and exported to IFC on 17 November 2026.
 
-- The spatial objects have been updated to the names and *bepalingsmethoden* (measuring methods) of this ILS, and carry the *Omgevingswet-Ruimten* classification.
-- Where data was missing in the source model, a **placeholder** was inserted. Every object with a placeholder carries a property set `BM13_Placeholders` listing the properties concerned. These are mainly fire properties of doors and windows (`FireRating` = `ONBEKEND`, `FireExit`/`SelfClosing`/`SmokeStop` = `false`) and the address data.
-- The investment in `Pset_ProjectCommon.ProjectInvestmentEstimate` (10 million euro) is a fictitious amount, included to show the data type and the currency.
+- **Schema:** IFC4X3_ADD2 (ISO 16739-1:2024).
+- **Georeferencing:** `IfcMapConversion` with `IfcProjectedCRS` EPSG:7415 (RD + NAP); `Scale` is 0.001, because the length unit is the millimetre. Areas are in m², volumes in m³.
+- **Quantities:** the spaces and areas carry `Qto_SpaceBaseQuantities` or `Qto_SpatialZoneBaseQuantities`. The ILS does not require quantities in the model; they are included as material for checking.
+- **Classification:** the spatial objects refer to the *Omgevingswet-Ruimten* classification.
 
-<p class="note">Use these models to learn and to test, not as evidence of a correct application. In a real application the placeholders must be replaced by actual values.</p>
+<p class="note">This is a practice model, not a submitted application. Use it to learn and to test, not as evidence of a correct application.</p>
 
-## The files
+## What the model contains
 
-One combined model (two export versions) and thirteen partial models, each with one kind of object, handy for testing a single specification.
-
-| File | MB | Objects | Main ObjectTypes |
+| Entity | ObjectType | Number | Specification |
 |---|---|---|---|
-| `Kievitsweg_R23_ILS_Spaces_update.ifc` | 17.4 | 4,486 | Restruimte (90), Restgebied (70), Verblijfsruimte (43), Gebruiksfunctie (41) |
-| `Kievitsweg_R25_ILS_Spaces_20250815_LoGeoRef50.ifc` | 14.4 | 4,205 | Restruimte (91), Restgebied (82), Gebruikseenheid (46), Verblijfsruimte (44) |
-| `Kievitsweg_Brandcompartiment.ifc` | 11.1 | 56 | Gebruikseenheid (35), Brandcompartiment (23) |
-| `Kievitsweg_Eigendom-_en_gebruikseenheid.ifc` | 11.1 | 33 | Gebruikseenheid (35) |
-| `Kievitsweg_Gebruiksfunctie.ifc` | 11.2 | 48 | Gebruiksfunctie (41), Bouwlaaginhoud (9), Gebouwinhoud (1) |
-| `Kievitsweg_Gebruiksgebied.ifc` | 11.1 | 37 | Gebruiksgebied (29) |
-| `Kievitsweg_Nevengebruiksfunctie.ifc` | 11.1 | 8 | Nevengebruiksfunctie (4) |
-| `Kievitsweg_Restgebied.ifc` | 11.2 | 78 | Restgebied (70) |
-| `Kievitsweg_Restruimte.ifc` | 11.2 | 98 | Restruimte (90) |
-| `Kievitsweg_Verblijfsruimte.ifc` | 11.1 | 51 | Verblijfsruimte (43) |
-| `Kievitsweg_Terreinvolume.ifc` | 11.1 | 12 | Bouwwerkperceel, Kadastraal perceel, Bebouwd and Onbebouwd Terrein |
-| `Kievitsweg_IsExternalTrue_LoadBearingTrue.ifc` | 11.1 | 25 | physical elements: external walls, load-bearing |
-| `Kievitsweg_IsExternalTrue_LoadBearingFalse.ifc` | 12.3 | 670 | physical elements: external walls, non-load-bearing |
-| `Kievitsweg_IsExternalFalse_LoadBearingTrue.ifc` | 11.3 | 125 | physical elements: internal walls, load-bearing |
-| `Kievitsweg_IsExternalFalse_LoadBearingFalse.ifc` | 11.7 | 476 | physical elements: internal walls, non-load-bearing |
+| `IfcProject` | — | 1 | 9.02 |
+| `IfcSite` | Perceel | 1 | 9.03a |
+| `IfcBuilding` | (empty) | 1 | 9.05a |
+| `IfcBuildingStorey` | Bouwlaag | 5 | 9.06a |
+| `IfcBuildingStorey` | NAP | 1 | — (reference level) |
+| `IfcSpace` | Functieruimte | 16 | 9.12a |
+| `IfcSpace` | Verblijfsruimte | 2 | 9.12b |
+| `IfcSpace` | Bedruimte | 4 | 9.12c |
+| `IfcSpace` | Restruimte | 4 | 9.12d |
+| `IfcSpace`, `IfcExternalSpatialElement` | Buitenruimte | 1 + 3 | 9.13 |
+| `IfcSpatialZone` | Bouwwerkperceel | 1 | 9.03b |
+| `IfcSpatialZone` | Kadastraal Perceel | 1 | 9.04 |
+| `IfcSpatialZone` | Bouwlaaginhoud | 4 | 9.06b |
+| `IfcSpatialZone` | Gebruiksfunctie | 5 | 9.08 |
+| `IfcSpatialZone` | (empty) | 2 | — |
+| `IfcZone` | Eigendom- en gebruikseenheid | 1 | 9.07 |
+| `IfcZone` | Functiegebied, Verblijfgebied, Gebruiksgebied, Bedgebied, Restgebied | 1 of each | 9.10a–f |
+| `IfcZone` | Buitengebied | 1 | 9.11 |
+| `IfcZone` | Brandcompartiment, Subbrandcompartiment, Beschermd-subbrandcompartiment, Vluchtroute | 1 of each | 9.16a–d |
+| `IfcZone` | Gebouweenheid (2), Terreineenheid (1) | 3 | — |
 
-All models are IFC4, georeferenced in EPSG:28992 with `VerticalDatum` EPSG:5709, and `IfcMapConversion.Scale` is set explicitly to 0.001 (millimetres to metres).
+Physical elements (walls, doors, windows, slabs) are not in this model.
 
-## Checking them yourself
+## Checking it yourself
 
-The models and the IDS files belong together. With an IDS 1.0-compliant validator (for example IfcTester from IfcOpenShell, or the buildingSMART Validation Service) you can check a model against the specifications in [`ids/`](../../ids/):
+The model and the IDS files belong together. With an IDS 1.0-compliant validator (for example IfcTester from IfcOpenShell, or the buildingSMART Validation Service) you can check the model against the specifications in [`ids/`](../ids/):
 
 ```bash
 pip install ifcopenshell ifctester
-python -m ifctester ids/26-9.12b-Verblijfsruimte.ids voorbeeldmodellen/Kievitsweg_Verblijfsruimte.ifc
+python -m ifctester ids/26-9.12b-Verblijfsruimte.ids voorbeeldmodellen/BM13_SPA_XX_M3D_ZZZ_Qto.ifc
 ```
 
-All 15 models pass the specifications that apply to them.
+## What is not yet correct
 
-## What is deliberately still wrong
+When the excerpts were made, the model was compared with the IDS. These points deviate:
 
-These points were left in, because they call for a decision or for modelling work. They are usable as practice material:
+- **9.05a Gebouw:** ObjectType is empty; the IDS requires `Gebouw`. `BuildingID` and `IsPermanentID` are missing from `Pset_BuildingCommon`.
+- **9.05b Gebouwinhoud:** the two `IfcSpatialZone` objects '01' and '02' (Bruto Inhoud) have no ObjectType, so the IDS does not recognise a building volume.
+- **9.06b Bouwlaaginhoud:** the zone '1 kleder' does not follow the storey naming (`-1 kelder`).
+- **9.07 Gebruikseenheid:** ObjectType is `Eigendom- en gebruikseenheid` and `Description` is empty; the IDS requires `Gebruikseenheid` and `Bruto Inhoud`.
+- **9.10b and 9.10c Verblijfsgebied:** ObjectType is `Verblijfgebied` (without the s). `OccupancyType` and the occupancy data are missing.
+- **9.11 Buitengebied:** `Description` is `Bruto Inhoud` instead of a terrain volume; `IsExternal`, `PubliclyAccessible` and `HandicapAccessible` are missing.
+- **9.16a–d fire safety:** `Description` describes the purpose of the zone instead of a measuring method (`Bruto Inhoud`, `Gebruiksinhoud` or `Netto Inhoud`). `FireExit` is missing for 9.16c; for 9.16d the ObjectType is `Beschermd-subbrandcompartiment` (with a hyphen).
+- **Not in the model:** 9.09 Nevengebruiksfunctie, 9.17 Tarra Ruimte and all physical elements (9.18).
+- **Zones without a specification:** `Gebouweenheid` and `Terreineenheid` do not occur in this ILS.
 
-- **Fire compartments are `IfcSpace`**, while specification 9.16a only checks `IfcZone` and `IfcSpatialZone`. According to the [modelling guideline](#modelleerrichtlijn) a compartment should be a zone.
-- **Areas are `IfcSpace`** instead of the recommended `IfcSpatialZone`.
-- **Duplicate `Pset_DoorCommon`**: besides the standard set, the export delivers a second set with the same name and its own properties (`Geluidwering`, `Brandweer_ingang`). This is visible in the excerpt at specification 9.18e.
-- **Tarraruimte and tarra volume are missing**, as are quantities (volume) on the storeys.
-- **The cadastral parcel is an `IfcSpace`**, while the ILS prescribes `IfcSpatialZone`.
+## Archive
 
-A full description of what was changed and what is still open is in `voorbeeldmodellen/LEESMIJ.md`.
+The previous standard model `BM13_SPA_XX_M3D_ZZZ.ifc` is in `archief/`. The fifteen Kievitsweg models have been removed from the repository; they can be found in the git history. Their description (readme and change lists) is in `archief/voorbeeldmodellen-kievitsweg/`.

@@ -5,8 +5,8 @@ var respecConfig = {
   shortName: "vergunningscontrole/ils-omgevingsvergunning-en",
   imprint: "digigo",
   subtitle: "submission requirements for an environmental permit application with a 3D information model (machine-translated; the Dutch version is authoritative)",
-  publishDate: "2026-09-25",
-  // version: 0.1.2 (draft) — translation of the Dutch 0.1.2
+  publishDate: "2026-11-17",
+  // version: 0.2.0 (draft) — translation of the Dutch 0.2.0
   authors: [
     { name: "Vereniging van Nederlandse Gemeenten", company: "VNG", companyURL: "https://vng.nl" }
   ],

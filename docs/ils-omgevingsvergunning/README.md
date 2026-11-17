@@ -2,7 +2,7 @@
 
 Informatieleveringsspecificatie (ILS) voor het aanvragen van een omgevingsvergunning met een 3D-informatiemodel (IFC). Opgesteld binnen **VNG Beleidsmaatregel 13 – Vergunningverlening met BIM(3D model)**, volgens het **digiGO Toetsingskader ILS** en gepubliceerd met **ReSpec**.
 
-**Versie:** 0.1.1 (concept) · **Datum:** 25 september 2026
+**Versie:** 0.2.0 (concept) · **Datum:** 17 november 2026
 
 ## Colofon
 
@@ -45,9 +45,9 @@ De opmaak van de tabellen staat in [`assets/ils-tables.css`](assets/ils-tables.c
 
 ## Machineleesbaar deel
 
-- [`ids/`](ids/): 42 IDS 1.0-deelspecificaties, afgeleid van de *ILS voor Ruimten in de Omgevingswet* v0.95, aangevuld met de checknummers en de GEMMA-mijlpaal
+- [`ids/`](ids/): 41 IDS 1.0-deelspecificaties, afgeleid van de *ILS voor Ruimten in de Omgevingswet* v0.95, aangevuld met de checknummers en de GEMMA-mijlpaal
 - [`data/specificaties_checks.csv`](data/specificaties_checks.csv): koppeling tussen specificaties, bSDD-identifiers en checks
-- [`voorbeeldmodellen/`](voorbeeldmodellen/): 15 IFC-voorbeeldmodellen (project RottaNova/Kievitsweg) die aan de specificaties voldoen; per specificatie staat een fragment hieruit in hoofdstuk 06
+- [`voorbeeldmodellen/`](voorbeeldmodellen/): het IFC-voorbeeldmodel `BM13_SPA_XX_M3D_ZZZ_Qto.ifc` (tussenwoning, IFC4X3_ADD2); per specificatie staat een fragment hieruit in hoofdstuk 06
 
 ## Structuur
 

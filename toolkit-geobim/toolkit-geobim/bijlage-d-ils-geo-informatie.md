@@ -82,7 +82,7 @@ De volgende dataspecificaties zijn gedefinieerd:
 | 25 | 1.12a Water | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
 | 26 | 1.12b BGT - type waterdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
 | 27 | 1.12c BGT - ondersteunend waterdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
-| 28 | 2.12d BGT - type ondersteunend waterdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
+| 28 | 1.12d BGT - type ondersteunend waterdeel | Basisregistratie Grootschalige Topografie (BGT) | #7, #8, #17 |
 | 29 | 2.01a Werkingsgebied type gebiedsaanwijzing / functie | Digitaal Stelsel Omgevingswet | #1, #4, #5 |
 | 30 | 2.01b Werkingsgebied omgevingsnorm  / bebouwingshoogte | Digitaal Stelsel Omgevingswet | #2 |
 | 31 | 2.01c Werkingsgebied omgevingsnorm  / bebouwingspercentage | Digitaal Stelsel Omgevingswet | #3 |

@@ -40,3 +40,8 @@ nr,bestand,specificatie,ifcVersion,identifier,bm13_checks,M1,M2,M3,Voorwaarde
 42,42-9.18i-Fysieke-elementen-IfcWindow.ids,9.18i Fysieke elementen Ifcwindow,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Raam,#12 #17,O,O,V,
 43,43-9.16d-Beschermd-subbrandcompartiment.ids,9.16d Beschermd subbrandcompartiment,IFC4 IFC4X3_ADD2,9.16d,#15,O,O,V,
 44,44-9.01f-Verticaal-datum.ids,9.01f Verticaal datum (NAP),IFC4 IFC4X3_ADD2,9.01f,#2 #4 #6 #10,V,V,V,alleen bij EPSG:28992
+45,45-9.18j-Fysieke-elementen-IfcRoof.ids,9.18j Fysieke elementen IfcRoof,IFC4 IFC4X3_ADD2,9.18j,#2 #6 #9 #11 #13 #16,O,O,V,
+46,46-9.18k-Fysieke-elementen-IfcStair.ids,9.18k Fysieke elementen IfcStair,IFC4 IFC4X3_ADD2,9.18k,#10 #16,O,O,V,
+47,47-9.18l-Fysieke-elementen-IfcRamp.ids,9.18l Fysieke elementen IfcRamp,IFC4 IFC4X3_ADD2,9.18l,#10,O,O,V,
+48,48-9.18m-Fysieke-elementen-IfcTransportElement.ELEVATOR.ids,9.18m Fysieke elementen IfcTransportElement.ELEVATOR,IFC4 IFC4X3_ADD2,9.18m,#9 #10,O,O,V,
+49,49-9.18n-Fysieke-elementen-IfcRailing.ids,9.18n Fysieke elementen IfcRailing,IFC4 IFC4X3_ADD2,9.18n,#10,O,O,V,

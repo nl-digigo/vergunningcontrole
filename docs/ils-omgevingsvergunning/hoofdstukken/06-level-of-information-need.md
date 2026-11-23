@@ -2,7 +2,7 @@
 
 Het Level of Information Need (LOIN, ISO 7817-1:2024) legt per informatiebehoefte vast welke **alfanumerieke informatie**, **geometrie** en **documentatie** nodig is. In deze ILS is het LOIN opgebouwd uit twee delen:
 
-1. **Alfanumeriek** — machineleesbaar vastgelegd in 41 IDS-deelspecificaties (IDS 1.0), afgeleid van de IDS-bestanden van de ILS Omgevingsvergunning 0.2.0. Hieronder per specificatie samengevat.
+1. **Alfanumeriek** — machineleesbaar vastgelegd in 46 IDS-deelspecificaties (IDS 1.0): 41 uit de ILS Omgevingsvergunning 0.2.0 en vijf nieuwe concept-specificaties 45–49. Hieronder per specificatie samengevat.
 2. **Geometrisch** — eisen aan de vorm en kwaliteit van de geometrie, die IDS niet kan toetsen. Zie [Geometrische eisen](#loin-geometrie) hieronder en [Geometrische controle](#geometrie).
 3. **Documentatie** — aanvullende bestanden conform de stanaard indieningsvereiste (tekeningen PDF/A, rapportages), zie [Informatieproductiestandaard](#standaard).
 
@@ -13,8 +13,8 @@ Het Level of Information Need (LOIN, ISO 7817-1:2024) legt per informatiebehoeft
 | Doel | Geautomatiseerd toetsen van de aanvraag aan 17 checks (OPA en TBA) |
 | Mijlpaal | Vooroverleg, aanvraag omgevingsplanactiviteit, aanvraag technische bouwactiviteit; welke specificaties per mijlpaal verplicht zijn, staat in de [matrix per mijlpaal](#mijlpalenmatrix) |
 | Actoren | Aanvrager/modelleur levert, gemeente (vergunningverlener) toetst |
-| Objecten | Ruimtelijke objecten (IfcSpace, IfcSpatialZone, IfcZone), gebouw, bouwlagen, fysieke elementen (IfcWall, IfcDoor)) |
-| Alfanumeriek | IDS-deelspecificaties 01–44 (05, 06 en 39 vervallen) |
+| Objecten | Ruimtelijke objecten (IfcSpace, IfcSpatialZone, IfcZone), gebouw, bouwlagen, fysieke elementen (IfcWall, IfcDoor, IfcRoof, IfcStair, IfcRamp, IfcTransportElement, IfcRailing) |
+| Alfanumeriek | IDS-deelspecificaties 01–49 (05, 06 en 39 vervallen) |
 | Geometrie | Volumetrische (solide) ruimten, georeferentie RD/NAP, detailniveau conform tabel hieronder |
 | Documentatie | IFC (STEP), PDF/A-tekeningen afgeleid uit het model, IDS-validatierapport (BCF of HTML) |
 
@@ -993,5 +993,87 @@ Een beschermd subbrandcompartiment heeft dezelfde eisen als een subbrandcomparti
 | property | Pset_WindowCommon.SecurityRating | O | — |
 | property | Pset_WindowCommon.SmokeStop | O | — |
 | property | Pset_WindowCommon.ThermalTransmittance | O | — |
+
+> Dit objecttype komt (nog) niet voor in het voorbeeldmodel.
+
+### 9.18j Fysieke elementen IfcRoof
+
+*Bestand:* [`45-9.18j-Fysieke-elementen-IfcRoof.ids`](ids/45-9.18j-Fysieke-elementen-IfcRoof.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #2 #6 #9 #11 #13 #16
+
+*Van toepassing op:* IfcRoof
+
+| Facet | Naam | Card. | Waarde |
+|---|---|---|---|
+| property | Pset_RoofCommon.AcousticRating | O | — |
+| property | Pset_RoofCommon.FireRating | O | patroon `(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*` |
+| property | Pset_RoofCommon.IsExternal | O | — |
+| property | Pset_RoofCommon.ThermalTransmittance | O | — |
+
+> Dit objecttype komt (nog) niet voor in het voorbeeldmodel.
+
+### 9.18k Fysieke elementen IfcStair
+
+*Bestand:* [`46-9.18k-Fysieke-elementen-IfcStair.ids`](ids/46-9.18k-Fysieke-elementen-IfcStair.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #10 #16
+
+*Van toepassing op:* IfcStair
+
+| Facet | Naam | Card. | Waarde |
+|---|---|---|---|
+| property | Pset_StairCommon.NumberOfRiser | O | — |
+| property | Pset_StairCommon.NumberOfTreads | O | — |
+| property | Pset_StairCommon.RiserHeight | O | — |
+| property | Pset_StairCommon.TreadLength | O | — |
+| property | Pset_StairCommon.RequiredHeadroom | O | — |
+| property | Pset_StairCommon.HandicapAccessible | O | — |
+| property | Pset_StairCommon.FireExit | O | — |
+| property | Pset_StairCommon.FireRating | O | patroon `(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*` |
+| property | Pset_StairCommon.IsExternal | O | — |
+
+> Dit objecttype komt (nog) niet voor in het voorbeeldmodel.
+
+### 9.18l Fysieke elementen IfcRamp
+
+*Bestand:* [`47-9.18l-Fysieke-elementen-IfcRamp.ids`](ids/47-9.18l-Fysieke-elementen-IfcRamp.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #10
+
+*Van toepassing op:* IfcRamp
+
+| Facet | Naam | Card. | Waarde |
+|---|---|---|---|
+| property | Pset_RampCommon.RequiredSlope | O | — |
+| property | Pset_RampCommon.RequiredHeadroom | O | — |
+| property | Pset_RampCommon.HandicapAccessible | O | — |
+| property | Pset_RampCommon.FireExit | O | — |
+| property | Pset_RampCommon.FireRating | O | patroon `(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*` |
+| property | Pset_RampCommon.IsExternal | O | — |
+
+> Dit objecttype komt (nog) niet voor in het voorbeeldmodel.
+
+### 9.18m Fysieke elementen IfcTransportElement.ELEVATOR
+
+*Bestand:* [`48-9.18m-Fysieke-elementen-IfcTransportElement.ELEVATOR.ids`](ids/48-9.18m-Fysieke-elementen-IfcTransportElement.ELEVATOR.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #9 #10
+
+*Van toepassing op:* IfcTransportElement (PredefinedType ELEVATOR)
+
+| Facet | Naam | Card. | Waarde |
+|---|---|---|---|
+| property | Pset_TransportElementElevator.ClearWidth | O | — |
+| property | Pset_TransportElementElevator.ClearDepth | O | — |
+| property | Pset_TransportElementElevator.ClearHeight | O | — |
+| property | Pset_TransportElementElevator.FireFightingLift | O | — |
+| property | Pset_TransportElementCommon.CapacityPeople | O | — |
+| property | Pset_TransportElementCommon.FireExit | O | — |
+
+> Dit objecttype komt (nog) niet voor in het voorbeeldmodel.
+
+### 9.18n Fysieke elementen IfcRailing
+
+*Bestand:* [`49-9.18n-Fysieke-elementen-IfcRailing.ids`](ids/49-9.18n-Fysieke-elementen-IfcRailing.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #10
+
+*Van toepassing op:* IfcRailing
+
+| Facet | Naam | Card. | Waarde |
+|---|---|---|---|
+| property | Pset_RailingCommon.Height | O | — |
+| property | Pset_RailingCommon.IsExternal | O | — |
 
 > Dit objecttype komt (nog) niet voor in het voorbeeldmodel.

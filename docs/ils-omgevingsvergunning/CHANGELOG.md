@@ -4,7 +4,15 @@ Dit project volgt [semantische versies](https://semver.org/lang/nl/). `0.x` = co
 
 ## [Niet uitgebracht]
 
+### Toegevoegd
+- Specificatie 9.18j *Fysieke elementen IfcRoof* (`ids/45-9.18j-Fysieke-elementen-IfcRoof.ids`), gekoppeld aan checks #2, #6, #9, #11, #13 en #16.
+- Specificatie 9.18k *Fysieke elementen IfcStair* (`ids/46-9.18k-Fysieke-elementen-IfcStair.ids`), gekoppeld aan checks #10 en #16.
+- Specificatie 9.18l *Fysieke elementen IfcRamp* (`ids/47-9.18l-Fysieke-elementen-IfcRamp.ids`), gekoppeld aan check #10.
+- Specificatie 9.18m *Fysieke elementen IfcTransportElement.ELEVATOR* (`ids/48-9.18m-Fysieke-elementen-IfcTransportElement.ELEVATOR.ids`), gekoppeld aan checks #9 en #10.
+- Specificatie 9.18n *Fysieke elementen IfcRailing* (`ids/49-9.18n-Fysieke-elementen-IfcRailing.ids`), gekoppeld aan check #10.
+
 ### Gewijzigd
+- Hoofdstuk 05, hoofdstuk 06 en `data/specificaties_checks.csv` (NL en EN voor de hoofdstukken) bijgewerkt vanuit de IDS; het totaal is nu 46 specificaties: 41 uit versie 0.2.0 en vijf nieuwe concept-specificaties.
 - Nieuwe tabelstijl voor de hele ILS (`assets/ils-tables.css` en `assets/ils-tables.js`): brede tabellen scrollen horizontaal met een meelopende eerste kolom, de kolomkop blijft staan, IDS-verwijzingen en checknummers worden als label getoond, kardinaliteit R/O/X als badge en ja/nee met een statusbolletje. De inhoud van de hoofdstukken is niet gewijzigd.
 - De statische leesversies bevatten dezelfde stijl; `tools/inline-tabelstijl.py` zet die er opnieuw in na een wijziging in `assets/`.
 

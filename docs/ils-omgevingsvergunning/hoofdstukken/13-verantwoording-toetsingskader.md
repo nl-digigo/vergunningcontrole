@@ -29,7 +29,7 @@ Stand van zaken: ✅ geregeld · 🟡 deels / invulformat · ⬜ nog te doen
 | Aansluiting op Europese implementatierichtlijnen | Z | 🟡 | Verwijzing naar NPR-CEN/TR 17654 en 17439 opgenomen; opbouw nog te vergelijken | [Informatieproductiestandaard](#standaard) |
 | Acceptatiecriteria | D | ✅ | AC1–AC7: schema, header, IDS-validatie, georeferentie, geometrie, hoeveelheidscontrole, naamgeving. Afhankelijkheid van de IFC-parser benoemd | [Acceptatiecriteria](#acceptatie) |
 | Referentie-informatie en gedeelde bronnen | Z | ✅ | Officieel IFC-schema, bSDD-publicatie, IDS, NL-SfB, Naa.K.T., basisregistraties | [Referentie-informatie](#referentie) |
-| Documentvorm: toelichting en datasjabloon | Z | ✅ | Toelichting (deze ReSpec-pagina) plus datasjabloon (41 IDS en CSV). Een uitgebreider toelichtingsdeel volgt na afloop | Map `ids/`, `data/` |
+| Documentvorm: toelichting en datasjabloon | Z | ✅ | Toelichting (deze ReSpec-pagina) plus datasjabloon (46 IDS en CSV). Een uitgebreider toelichtingsdeel volgt na afloop | Map `ids/`, `data/` |
 
 ## 4.3 Geschiktheid
 
@@ -47,7 +47,7 @@ Stand van zaken: ✅ geregeld · 🟡 deels / invulformat · ⬜ nog te doen
 | Criterium | Type | Stand | Onderbouwing | Vindplaats |
 |---|---|---|---|---|
 | Internationale Psets | Z | ✅ | Geen aanvullende Psets. Wel een invulmethode voor attributen: `IfcSpace`, `IfcSpatialZone` en `IfcZone` worden uitgebreid met `ObjectType`-waarden uit de bSDD | [Informatieproductiestandaard](#standaard) |
-| Machineleesbaarheid | A | ✅ | 41 IDS 1.0-bestanden | Map `ids/` |
+| Machineleesbaarheid | A | ✅ | 46 IDS 1.0-bestanden | Map `ids/` |
 | IFC-versie | Z | ✅ | IFC 4.3 (ISO 16739-1:2024); IFC4 ADD2 TC1 tijdelijk toegestaan | [Informatieproductiestandaard](#standaard) |
 | Informatieleveringsproces | A | ⬜ | Gewenst: IDM (ISO 29481) samen met de GEMMA-procesmodellen mogelijk met VISI | [Beheer](#beheer) |
 | Voorbereid op EU-regelgeving | A | ⬜ | Eerst meer informatie nodig (DPP/CPR, digitaal gebouwenlogboek/EPBD) loopt via EU BIM Taskgroup en buildingSMART Regulatory room VNG participeerd actief hierin | [Beheer](#beheer) |

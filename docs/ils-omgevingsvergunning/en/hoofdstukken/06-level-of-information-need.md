@@ -2,7 +2,7 @@
 
 The Level of Information Need (LOIN, ISO 7817-1:2024) sets out, for each information need, which **alphanumeric information**, **geometry** and **documentation** is required. In this ILS, the LOIN is made up of the following parts:
 
-1. **Alphanumeric** — recorded in machine-readable form in 41 IDS sub-specifications (IDS 1.0), derived from the IDS files of the ILS Omgevingsvergunning 0.2.0. Summarised per specification below; the IDS content (names, values) is kept in Dutch.
+1. **Alphanumeric** — recorded in machine-readable form in 46 IDS sub-specifications (IDS 1.0): 41 from the ILS Omgevingsvergunning 0.2.0 and five new concept specifications 45–49. Summarised per specification below; the IDS content (names, values) is kept in Dutch.
 2. **Geometric** — requirements on the shape and quality of the geometry, which IDS cannot check. See [Geometric requirements](#loin-geometrie) below and [Geometric checking](#geometrie).
 3. **Documentation** — additional files as required by the standard submission requirements (PDF/A drawings, reports), see [Information production standard](#standaard).
 
@@ -13,8 +13,8 @@ The Level of Information Need (LOIN, ISO 7817-1:2024) sets out, for each informa
 | Purpose | Automated checking of the application against 17 checks (OPA and TBA) |
 | Milestone | Preliminary consultation (*vooroverleg*), *omgevingsplanactiviteit* application, *technische bouwactiviteit* application; which specifications are mandatory per milestone is shown in the [matrix per milestone](#mijlpalenmatrix) |
 | Actors | Applicant/modeller delivers, municipality (permit authority) checks |
-| Objects | Spatial objects (IfcSpace, IfcSpatialZone, IfcZone), building, storeys, physical elements (IfcWall, IfcDoor) |
-| Alphanumeric | IDS sub-specifications 01–44 (05, 06 and 39 withdrawn) |
+| Objects | Spatial objects (IfcSpace, IfcSpatialZone, IfcZone), building, storeys, physical elements (IfcWall, IfcDoor, IfcRoof, IfcStair, IfcRamp, IfcTransportElement, IfcRailing) |
+| Alphanumeric | IDS sub-specifications 01–49 (05, 06 and 39 withdrawn) |
 | Geometry | Volumetric (solid) spaces, RD/NAP georeferencing, level of detail as in the table below |
 | Documentation | IFC (STEP), PDF/A drawings derived from the model, IDS validation report (BCF or HTML) |
 
@@ -993,5 +993,87 @@ A protected sub-fire compartment (*beschermd subbrandcompartiment*) has the same
 | property | Pset_WindowCommon.SecurityRating | O | — |
 | property | Pset_WindowCommon.SmokeStop | O | — |
 | property | Pset_WindowCommon.ThermalTransmittance | O | — |
+
+> This object type does not (yet) occur in the sample model.
+
+### 9.18j Fysieke elementen IfcRoof
+
+*File:* [`45-9.18j-Fysieke-elementen-IfcRoof.ids`](../ids/45-9.18j-Fysieke-elementen-IfcRoof.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #2 #6 #9 #11 #13 #16
+
+*Applies to:* IfcRoof
+
+| Facet | Name | Card. | Value |
+|---|---|---|---|
+| property | Pset_RoofCommon.AcousticRating | O | — |
+| property | Pset_RoofCommon.FireRating | O | pattern `(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*` |
+| property | Pset_RoofCommon.IsExternal | O | — |
+| property | Pset_RoofCommon.ThermalTransmittance | O | — |
+
+> This object type does not (yet) occur in the sample model.
+
+### 9.18k Fysieke elementen IfcStair
+
+*File:* [`46-9.18k-Fysieke-elementen-IfcStair.ids`](../ids/46-9.18k-Fysieke-elementen-IfcStair.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #10 #16
+
+*Applies to:* IfcStair
+
+| Facet | Name | Card. | Value |
+|---|---|---|---|
+| property | Pset_StairCommon.NumberOfRiser | O | — |
+| property | Pset_StairCommon.NumberOfTreads | O | — |
+| property | Pset_StairCommon.RiserHeight | O | — |
+| property | Pset_StairCommon.TreadLength | O | — |
+| property | Pset_StairCommon.RequiredHeadroom | O | — |
+| property | Pset_StairCommon.HandicapAccessible | O | — |
+| property | Pset_StairCommon.FireExit | O | — |
+| property | Pset_StairCommon.FireRating | O | pattern `(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*` |
+| property | Pset_StairCommon.IsExternal | O | — |
+
+> This object type does not (yet) occur in the sample model.
+
+### 9.18l Fysieke elementen IfcRamp
+
+*File:* [`47-9.18l-Fysieke-elementen-IfcRamp.ids`](../ids/47-9.18l-Fysieke-elementen-IfcRamp.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #10
+
+*Applies to:* IfcRamp
+
+| Facet | Name | Card. | Value |
+|---|---|---|---|
+| property | Pset_RampCommon.RequiredSlope | O | — |
+| property | Pset_RampCommon.RequiredHeadroom | O | — |
+| property | Pset_RampCommon.HandicapAccessible | O | — |
+| property | Pset_RampCommon.FireExit | O | — |
+| property | Pset_RampCommon.FireRating | O | pattern `(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*` |
+| property | Pset_RampCommon.IsExternal | O | — |
+
+> This object type does not (yet) occur in the sample model.
+
+### 9.18m Fysieke elementen IfcTransportElement.ELEVATOR
+
+*File:* [`48-9.18m-Fysieke-elementen-IfcTransportElement.ELEVATOR.ids`](../ids/48-9.18m-Fysieke-elementen-IfcTransportElement.ELEVATOR.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #9 #10
+
+*Applies to:* IfcTransportElement (PredefinedType ELEVATOR)
+
+| Facet | Name | Card. | Value |
+|---|---|---|---|
+| property | Pset_TransportElementElevator.ClearWidth | O | — |
+| property | Pset_TransportElementElevator.ClearDepth | O | — |
+| property | Pset_TransportElementElevator.ClearHeight | O | — |
+| property | Pset_TransportElementElevator.FireFightingLift | O | — |
+| property | Pset_TransportElementCommon.CapacityPeople | O | — |
+| property | Pset_TransportElementCommon.FireExit | O | — |
+
+> This object type does not (yet) occur in the sample model.
+
+### 9.18n Fysieke elementen IfcRailing
+
+*File:* [`49-9.18n-Fysieke-elementen-IfcRailing.ids`](../ids/49-9.18n-Fysieke-elementen-IfcRailing.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #10
+
+*Applies to:* IfcRailing
+
+| Facet | Name | Card. | Value |
+|---|---|---|---|
+| property | Pset_RailingCommon.Height | O | — |
+| property | Pset_RailingCommon.IsExternal | O | — |
 
 > This object type does not (yet) occur in the sample model.

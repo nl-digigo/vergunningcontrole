@@ -11,7 +11,7 @@ De ILS is opgesteld binnen het VNG-programma **Beleidsmaatregel 13 - Vergunningv
 - **Doel:** 17 checks die gemeenten uitvoeren bij het *inhoudelijk behandelen van de aanvraag* (GEMMA bedrijfsproces 015 *Behandelen aanvraag*, deelproces 015-03 *Inhoudelijk behandelen aanvraag*, processtap *Toetsen aan regelgeving*).
 - **Activiteiten:** omgevingsplanactiviteit bouwen (checks #1–#6) en technische bouwactiviteit (checks #7–#17).
 - **Gebouwtype:** in deze versie in principe **woonfunctie**.
-- **Machineleesbaar deel:** 41 IDS 1.0-deelspecificaties, afgeleid van de (bSDD `bsnl/Omgevingswet-Ruimten/0.3.0`).
+- **Machineleesbaar deel:** 46 IDS 1.0-deelspecificaties (41 uit versie 0.2.0 en vijf nieuwe concept-specificaties 45–49), gebaseerd op de bSDD `bsnl/Omgevingswet-Ruimten/0.3.0`.
 - **Informatiemodel:** IFC 4.3 (ISO 16739-1:2024); IFC4 ADD2 TC1 toegestaan zolang software IFC 4.3 nog niet ondersteunt.
 - **Geometrie:** IDS toetst geen geometrie. Deze ILS stelt daarom aanvullende geometrische eisen en beschrijft een tweeledige controle: de BIM/CAD-software levert hoeveelheden aan, de ontvangende software rekent ze na.
 

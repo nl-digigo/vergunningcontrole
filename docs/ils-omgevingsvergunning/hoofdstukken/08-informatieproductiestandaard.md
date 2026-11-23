@@ -85,7 +85,7 @@ Het ruimtemodel volgt de **ILS Omgevingsvergunning**. De stappen volgen de numme
 3. Gebruikseenheden, gebruiksfuncties en nevengebruiksfuncties als zones (9.07–9.09).
 4. Gebieden (functie-, verblijfs-, gebruiks-, bed- en restgebied) als `IfcSpatialZone` (9.10–9.11).
 5. Ruimten (functie-, verblijfs-, bed- en restruimte, buitenruimte) als `IfcSpace` (9.12–9.13).
-6. Brandcompartimenten, subbrandcompartimenten, beschermde subbrandcompartimenten en vluchtroutes (9.16) en tarraruimte (9.17).
+6. Brandcompartimenten, subbrandcompartimenten, beschermde subbrandcompartimenten en vluchtroutes (9.16). Tarra Ruimte (9.17) hoeft niet te worden gemodelleerd; als een check tarra nodig heeft, wordt die berekend als bruto inhoud minus netto inhoud.
 7. Fysieke elementen met de eigenschappen die de checks nodig hebben (9.18).
 8. Hoeveelheden (Qto) laten berekenen en exporteren, daarna zelf controleren met de IDS-bestanden.
 

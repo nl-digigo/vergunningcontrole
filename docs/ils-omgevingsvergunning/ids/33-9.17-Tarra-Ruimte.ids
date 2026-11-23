@@ -7,11 +7,11 @@
     <ids:description>Deelspecificatie 33 van de ILS Omgevingsvergunning 0.2.0.</ids:description>
     <ids:author>lex.ransijn@vng.nl</ids:author>
     <ids:date>2026-11-17</ids:date>
-    <ids:purpose>Indieningsvereisten van ruimte-modellering t.b.v. vergunningsaanvraag Omgevings Plan Activiteit (Omgevingsplan) en Technische Activiteit (Bbl) voor bouwwerken zijnde Gebouw — BM13-checks: #5, #6, #15 (bron: BM13-regelinventarisatie v0.3, 3-7-2026).</ids:purpose>
+    <ids:purpose>Tarra Ruimte is vervallen als modeleereis. De tarra voor checks #5, #6 en #15 wordt berekend uit het verschil tussen bruto en netto inhoud.</ids:purpose>
     <ids:milestone>015-03 Inhoudelijk behandelen aanvraag / processtap Toetsen aan regelgeving (GEMMA Omgevingswet, bedrijfsproces 015 Behandelen aanvraag)</ids:milestone>
   </ids:info>
   <ids:specifications>
-    <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.17 Tarra Ruimte" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Tarra-Ruimte" description="Tarra Ruimte als IfcZone of IfcSpatialZone">
+    <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.17 Tarra Ruimte" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Tarra-Ruimte" description="Vervallen per 0.2.1; Tarra Ruimte hoeft niet te worden gemodelleerd. Deze specificatie blijft behouden om bestaande modellen ongewijzigd te toetsen." instructions="Vervallen per 0.2.1. Heeft een check de tarra nodig, dan wordt die berekend uit het model (het verschil tussen de bruto en de netto inhoud) en niet uitgevraagd. De eisen hieronder blijven ongewijzigd van toepassing als Tarra Ruimte in het model voorkomt.">
       <ids:applicability minOccurs="0" maxOccurs="unbounded">
         <ids:entity>
           <ids:name>

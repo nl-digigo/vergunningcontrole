@@ -48,7 +48,7 @@ The table styling lives in [`../assets/ils-tables.css`](../assets/ils-tables.css
 
 The machine-readable part is shared with the Dutch version and is in Dutch:
 
-- [`../ids/`](../ids/): 46 IDS 1.0 sub-specifications (41 from version 0.2.0 and five new concept specifications 45–49), derived from the *ILS voor Ruimten in de Omgevingswet* v0.95, with the check numbers and the GEMMA milestone added
+- [`../ids/`](../ids/): 46 IDS 1.0 sub-specifications (45 current modelling requirements; 9.17 is withdrawn but retained for compatibility; 41 from version 0.2.0 and five new concept specifications 45–49), derived from the *ILS voor Ruimten in de Omgevingswet* v0.95, with check numbers and the GEMMA milestone added
 - [`../data/specificaties_checks.csv`](../data/specificaties_checks.csv): link between specifications, bSDD identifiers and checks
 - [`../voorbeeldmodellen/`](../voorbeeldmodellen/): the IFC sample model `BM13_SPA_XX_M3D_ZZZ_Qto.ifc` (terraced house, IFC4X3_ADD2); chapter 06 shows an excerpt from it per specification
 

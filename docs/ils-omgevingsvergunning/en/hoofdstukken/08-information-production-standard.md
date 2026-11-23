@@ -85,7 +85,7 @@ The space model follows the **ILS voor Ruimten in de Omgevingswet**. The steps f
 3. Use units, use functions and secondary use functions as zones (9.07–9.09).
 4. Areas (*functie-, verblijfs-, gebruiks-, bed- en restgebied*) as `IfcSpatialZone` (9.10–9.11).
 5. Spaces (*functie-, verblijfs-, bed- en restruimte, buitenruimte*) as `IfcSpace` (9.12–9.13).
-6. Fire compartments, sub-fire compartments, protected sub-fire compartments and escape routes (9.16) and *tarraruimte* (9.17).
+6. Fire compartments, sub-fire compartments, protected sub-fire compartments and escape routes (9.16). Tarra Ruimte (9.17) does not need to be modelled; if a check needs the tarra, it is calculated as gross volume minus net volume.
 7. Physical elements with the properties the checks need (9.18).
 8. Have the quantities (Qto) calculated and exported, then check them yourself with the IDS files.
 

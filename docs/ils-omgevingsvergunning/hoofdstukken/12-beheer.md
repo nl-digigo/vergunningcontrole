@@ -60,5 +60,5 @@ De herziene ISO 19650-serie wordt naar verwachting eind 2026 vastgesteld. Zodra 
 
 ### Achterstand
 
-- [ ] BM13 deel A (`mapping-rir/BM13_ILS_RIR_gecombineerd.ids`) opnieuw afleiden uit de IDS, inclusief specificaties 45–49.
-- [ ] Bijlage C van de toolkit GeoBIM (NL en EN, bron- en gepubliceerde kopieën) opnieuw afleiden uit de IDS, inclusief specificaties 45–49.
+- [ ] BM13 deel A (`mapping-rir/BM13_ILS_RIR_gecombineerd.ids`) opnieuw afleiden uit de IDS na de wijzigingen van 0.2.1 (concept), inclusief specificaties 45–49, de nieuwe deur- en bouwlaageisen en de vervallen status van 9.17.
+- [ ] Bijlage C van de toolkit GeoBIM (NL en EN, bron- en gepubliceerde kopieën) opnieuw afleiden uit de IDS na de wijzigingen van 0.2.1 (concept), inclusief specificaties 45–49, de nieuwe deur- en bouwlaageisen en de vervallen status van 9.17.

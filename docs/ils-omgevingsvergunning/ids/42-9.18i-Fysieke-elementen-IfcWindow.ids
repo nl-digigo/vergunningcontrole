@@ -11,7 +11,7 @@
     <ids:milestone>015-03 Inhoudelijk behandelen aanvraag / processtap Toetsen aan regelgeving (GEMMA Omgevingswet, bedrijfsproces 015 Behandelen aanvraag)</ids:milestone>
   </ids:info>
   <ids:specifications>
-    <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.18i Fysieke elementen Ifcwindow" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Raam">
+    <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.18i Fysieke elementen IfcWindow" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Raam">
       <ids:applicability minOccurs="0" maxOccurs="unbounded">
         <ids:entity>
           <ids:name>

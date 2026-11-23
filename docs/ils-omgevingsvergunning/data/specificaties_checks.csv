@@ -29,7 +29,7 @@ nr,bestand,specificatie,ifcVersion,identifier,bm13_checks,M1,M2,M3,Voorwaarde
 30,30-9.16a-Brandcompartiment.ids,9.16a Brandcompartiment,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Brandcompartiment,#7 #8 #14 #15,O,O,V,
 31,31-9.16b-Subbrandcompartiment.ids,9.16b Subbrandcompartiment,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Subbrandcompartiment,#15,O,O,V,
 32,32-9.16c-Vluchtroute.ids,9.16c Vluchtroute,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vluchtroute,#14 #15 #16,O,O,V,
-33,33-9.17-Tarra-Ruimte.ids,9.17 Tarra Ruimte,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Tarra-Ruimte,#5 #6 #15,O,V,V,
+33,33-9.17-Tarra-Ruimte.ids,9.17 Tarra Ruimte,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Tarra-Ruimte,,—,—,—,Vervallen per 0.2.1; wordt berekend
 34,34-9.18a-Fysieke-elementen-IfcBeam.ids,9.18a Fysieke elementen IfcBeam,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Balk,#7 #8,O,O,V,
 35,35-9.18b-Fysieke-elementen-IfcColumn.ids,9.18b Fysieke elementen IfcColumn,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Kolom,#7 #8,O,O,V,
 36,36-9.18c-Fysieke-elementen-IfcCovering.INSULATION.ids,9.18c Fysieke elementen IfcCovering.INSULATION,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Isolatie,#11,O,O,V,
@@ -37,7 +37,7 @@ nr,bestand,specificatie,ifcVersion,identifier,bm13_checks,M1,M2,M3,Voorwaarde
 38,38-9.18e-Fysieke-elementen-IfcDoor.ids,9.18e Fysieke elementen IfcDoor,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Deur,#7 #8 #12 #14 #15 #16 #17,O,O,V,
 40,40-9.18g-Fysieke-elementen-IfcSlab.ids,9.18g Fysieke elementen IfcSlab,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vloer,#7 #8 #9 #10 #11 #13 #14 #15 #16,O,O,V,
 41,41-9.18h-Fysieke-elementen-IfcWall.ids,9.18h Fysieke elementen IfcWall,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Wand,#7 #8 #9 #11 #13 #16 #17,O,O,V,
-42,42-9.18i-Fysieke-elementen-IfcWindow.ids,9.18i Fysieke elementen Ifcwindow,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Raam,#12 #17,O,O,V,
+42,42-9.18i-Fysieke-elementen-IfcWindow.ids,9.18i Fysieke elementen IfcWindow,IFC4 IFC4X3_ADD2,https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Raam,#12 #17,O,O,V,
 43,43-9.16d-Beschermd-subbrandcompartiment.ids,9.16d Beschermd subbrandcompartiment,IFC4 IFC4X3_ADD2,9.16d,#15,O,O,V,
 44,44-9.01f-Verticaal-datum.ids,9.01f Verticaal datum (NAP),IFC4 IFC4X3_ADD2,9.01f,#2 #4 #6 #10,V,V,V,alleen bij EPSG:28992
 45,45-9.18j-Fysieke-elementen-IfcRoof.ids,9.18j Fysieke elementen IfcRoof,IFC4 IFC4X3_ADD2,9.18j,#2 #6 #9 #11 #13 #16,O,O,V,

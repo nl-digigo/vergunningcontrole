@@ -45,7 +45,7 @@ De opmaak van de tabellen staat in [`assets/ils-tables.css`](assets/ils-tables.c
 
 ## Machineleesbaar deel
 
-- [`ids/`](ids/): 46 IDS 1.0-deelspecificaties (41 uit versie 0.2.0 en vijf nieuwe concept-specificaties 45–49), afgeleid van de *ILS voor Ruimten in de Omgevingswet* v0.95, aangevuld met de checknummers en de GEMMA-mijlpaal
+- [`ids/`](ids/): 46 IDS 1.0-deelspecificaties (45 actuele modeleereisen; 9.17 is vervallen maar blijft behouden voor compatibiliteit; 41 uit versie 0.2.0 en vijf nieuwe concept-specificaties 45–49), afgeleid van de *ILS voor Ruimten in de Omgevingswet* v0.95, aangevuld met checknummers en de GEMMA-mijlpaal
 - [`data/specificaties_checks.csv`](data/specificaties_checks.csv): koppeling tussen specificaties, bSDD-identifiers en checks
 - [`voorbeeldmodellen/`](voorbeeldmodellen/): het IFC-voorbeeldmodel `BM13_SPA_XX_M3D_ZZZ_Qto.ifc` (tussenwoning, IFC4X3_ADD2); per specificatie staat een fragment hieruit in hoofdstuk 06
 

@@ -20,6 +20,16 @@
         </ids:entity>
       </ids:applicability>
       <ids:requirements>
+        <ids:attribute cardinality="optional">
+          <ids:name>
+            <ids:simpleValue>OverallHeight</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+        <ids:attribute cardinality="optional">
+          <ids:name>
+            <ids:simpleValue>OverallWidth</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
         <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/AcousticRating" cardinality="optional">
           <ids:propertySet>
             <ids:simpleValue>Pset_DoorCommon</ids:simpleValue>
@@ -48,6 +58,14 @@
               <xs:pattern value="(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*" />
             </xs:restriction>
           </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCPOSITIVERATIOMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/GlazingAreaFraction" cardinality="optional">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_DoorCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>GlazingAreaFraction</ids:simpleValue>
+          </ids:baseName>
         </ids:property>
         <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/HandicapAccessible" cardinality="optional">
           <ids:propertySet>
@@ -87,6 +105,14 @@
           </ids:propertySet>
           <ids:baseName>
             <ids:simpleValue>SmokeStop</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCTHERMALTRANSMITTANCEMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ThermalTransmittance" cardinality="optional">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_DoorCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ThermalTransmittance</ids:simpleValue>
           </ids:baseName>
         </ids:property>
       </ids:requirements>

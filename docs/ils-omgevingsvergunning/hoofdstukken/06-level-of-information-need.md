@@ -2,7 +2,7 @@
 
 Het Level of Information Need (LOIN, ISO 7817-1:2024) legt per informatiebehoefte vast welke **alfanumerieke informatie**, **geometrie** en **documentatie** nodig is. In deze ILS is het LOIN opgebouwd uit twee delen:
 
-1. **Alfanumeriek** — machineleesbaar vastgelegd in 46 IDS-deelspecificaties (IDS 1.0): 41 uit de ILS Omgevingsvergunning 0.2.0 en vijf nieuwe concept-specificaties 45–49. Hieronder per specificatie samengevat.
+1. **Alfanumeriek** — machineleesbaar vastgelegd in 46 IDS-deelspecificaties (IDS 1.0): 45 actuele modeleereisen; 9.17 is vervallen maar blijft behouden voor compatibiliteit. Hieronder per specificatie samengevat.
 2. **Geometrisch** — eisen aan de vorm en kwaliteit van de geometrie, die IDS niet kan toetsen. Zie [Geometrische eisen](#loin-geometrie) hieronder en [Geometrische controle](#geometrie).
 3. **Documentatie** — aanvullende bestanden conform de stanaard indieningsvereiste (tekeningen PDF/A, rapportages), zie [Informatieproductiestandaard](#standaard).
 
@@ -300,6 +300,7 @@ Een `IfcBuildingStorey` hoeft geen eigen geometrie of plaatsing te hebben. `Entr
 |---|---|---|---|
 | attribute | ObjectType | R | Bouwlaag |
 | attribute | Name | R | patroon `.*(-9 kelder|-8 kelder|-7 kelder|-6 kelder|-5 kelder|-4 kelder|-3 kelder|-2 kelder|-1 kelder|00 begane grond|01 eerste verdieping|02 tweede verdieping|03 derde verdieping|04 vierde verdieping|05 vijfde verdieping|06 zesde verdieping|07 zevende verdieping|08 achtste verdieping|09 negende verdieping|10 tiende verdieping|11 elfde verdieping|12 twaalfde verdieping|13 dertiende verdieping|14 veertiende verdieping|15 vijftiende verdieping|16 zestiende verdieping|17 zeventiende verdieping|18 achttiende verdieping|19 negentiende verdieping|20 twintigste verdieping|21 eenentwintigste verdieping|22 tweeentwintigste verdieping|23 drieentwintigste verdieping|24 vierentwintigste verdieping|25 vijfentwintigste verdieping|26 zesentwintigste verdieping|27 zevenentwintigste verdieping|28 achtentwintigste verdieping|29 negentwintigste verdieping|30 dertigste verdieping|31 eenendertigste verdieping|32 tweeendertigste verdieping|33 drieendertigste verdieping|34 vierendertigste verdieping|35 vijfendertigste verdieping|36 zesendertigste verdieping|37 zevenendertigste verdieping|38 achtendertigste verdieping|39 negendertigste verdieping|40 veertigste verdieping|01 dak|02 dak|03 dak|04 dak|05 dak|06 dak|07 dak|08 dak|09 dak|10 dak|11 dak|12 dak|13 dak|14 dak|15 dak|16 dak|17 dak|18 dak|19 dak|20 dak|21 dak|22 dak|23 dak|24 dak|25 dak|26 dak|27 dak|28 dak|29 dak|30 dak|31 dak|32 dak|33 dak|34 dak|35 dak|36 dak|37 dak|38 dak|39 dak|40 dak|41 dak).*` |
+| attribute | Elevation | O | — |
 | property | Pset_BuildingStoreyCommon.EntranceLevel | R | — |
 | property | Pset_BuildingStoreyCommon.AboveGround | O | — |
 
@@ -842,7 +843,9 @@ Een beschermd subbrandcompartiment heeft dezelfde eisen als een subbrandcomparti
 
 ### 9.17 Tarra Ruimte
 
-*Bestand:* [`33-9.17-Tarra-Ruimte.ids`](ids/33-9.17-Tarra-Ruimte.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #5 #6 #15
+> Vervallen per 0.2.1. De modelleur hoeft geen Tarra Ruimte te modelleren. Heeft een check de tarra nodig, dan wordt die berekend uit het model (het verschil tussen de bruto en de netto inhoud) en niet uitgevraagd.
+
+*Bestand:* [`33-9.17-Tarra-Ruimte.ids`](ids/33-9.17-Tarra-Ruimte.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Status:* eisen blijven behouden voor compatibiliteit.
 
 *Van toepassing op:* IfcZone of IfcSpatialZone, elk met ObjectType
 
@@ -853,7 +856,7 @@ Een beschermd subbrandcompartiment heeft dezelfde eisen als een subbrandcomparti
 | attribute | Name | R | — |
 | attribute | Description | R | Tarra Inhoud |
 
-> Dit objecttype komt (nog) niet voor in het voorbeeldmodel.
+> Correct: het voorbeeldmodel bevat geen Tarra Ruimte; deze is vervallen als modeleis.
 
 ### 9.18a Fysieke elementen IfcBeam
 
@@ -928,14 +931,18 @@ Een beschermd subbrandcompartiment heeft dezelfde eisen als een subbrandcomparti
 
 | Facet | Naam | Card. | Waarde |
 |---|---|---|---|
+| attribute | OverallHeight | O | — |
+| attribute | OverallWidth | O | — |
 | property | Pset_DoorCommon.AcousticRating | O | — |
 | property | Pset_DoorCommon.FireExit | O | — |
 | property | Pset_DoorCommon.FireRating | O | patroon `(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*` |
+| property | Pset_DoorCommon.GlazingAreaFraction | O | — |
 | property | Pset_DoorCommon.HandicapAccessible | O | — |
 | property | Pset_DoorCommon.IsExternal | O | — |
 | property | Pset_DoorCommon.SecurityRating | O | — |
 | property | Pset_DoorCommon.SelfClosing | O | — |
 | property | Pset_DoorCommon.SmokeStop | O | — |
+| property | Pset_DoorCommon.ThermalTransmittance | O | — |
 
 > Dit objecttype komt (nog) niet voor in het voorbeeldmodel.
 
@@ -977,7 +984,7 @@ Een beschermd subbrandcompartiment heeft dezelfde eisen als een subbrandcomparti
 
 > Dit objecttype komt (nog) niet voor in het voorbeeldmodel.
 
-### 9.18i Fysieke elementen Ifcwindow
+### 9.18i Fysieke elementen IfcWindow
 
 *Bestand:* [`42-9.18i-Fysieke-elementen-IfcWindow.ids`](ids/42-9.18i-Fysieke-elementen-IfcWindow.ids) · *IFC:* IFC4 IFC4X3_ADD2 · *Checks:* #12 #17
 

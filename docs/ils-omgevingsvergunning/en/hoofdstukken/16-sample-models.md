@@ -62,7 +62,7 @@ When the excerpts were made, the model was compared with the IDS. These points d
 - **9.10b and 9.10c Verblijfsgebied:** ObjectType is `Verblijfgebied` (without the s). `OccupancyType` and the occupancy data are missing.
 - **9.11 Buitengebied:** `Description` is `Bruto Inhoud` instead of a terrain volume; `IsExternal`, `PubliclyAccessible` and `HandicapAccessible` are missing.
 - **9.16a–d fire safety:** `Description` describes the purpose of the zone instead of a measuring method (`Bruto Inhoud`, `Gebruiksinhoud` or `Netto Inhoud`). `FireExit` is missing for 9.16c; for 9.16d the ObjectType is `Beschermd-subbrandcompartiment` (with a hyphen).
-- **Not in the model:** 9.09 Nevengebruiksfunctie, 9.17 Tarra Ruimte and all physical elements (9.18).
+- **Not in the model:** 9.09 Nevengebruiksfunctie and all physical elements (9.18). Tarra Ruimte (9.17) does not need to be modelled as an object; if a check needs the tarra, it is calculated as gross volume minus net volume.
 - **Zones without a specification:** `Gebouweenheid` and `Terreineenheid` do not occur in this ILS.
 
 ## Archive

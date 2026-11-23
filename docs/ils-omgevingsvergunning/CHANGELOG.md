@@ -12,9 +12,18 @@ Dit project volgt [semantische versies](https://semver.org/lang/nl/). `0.x` = co
 - Specificatie 9.18n *Fysieke elementen IfcRailing* (`ids/49-9.18n-Fysieke-elementen-IfcRailing.ids`), gekoppeld aan check #10.
 
 ### Gewijzigd
-- Hoofdstuk 05, hoofdstuk 06 en `data/specificaties_checks.csv` (NL en EN voor de hoofdstukken) bijgewerkt vanuit de IDS; het totaal is nu 46 specificaties: 41 uit versie 0.2.0 en vijf nieuwe concept-specificaties.
+- Hoofdstuk 05, hoofdstuk 06 en `data/specificaties_checks.csv` (NL en EN voor de hoofdstukken) bijgewerkt vanuit de IDS; het totaal is 46 specificaties: 45 actuele modeleereisen en 9.17, vervallen maar behouden voor compatibiliteit (41 uit versie 0.2.0 en vijf nieuwe concept-specificaties).
 - Nieuwe tabelstijl voor de hele ILS (`assets/ils-tables.css` en `assets/ils-tables.js`): brede tabellen scrollen horizontaal met een meelopende eerste kolom, de kolomkop blijft staan, IDS-verwijzingen en checknummers worden als label getoond, kardinaliteit R/O/X als badge en ja/nee met een statusbolletje. De inhoud van de hoofdstukken is niet gewijzigd.
 - De statische leesversies bevatten dezelfde stijl; `tools/inline-tabelstijl.py` zet die er opnieuw in na een wijziging in `assets/`.
+
+### 0.2.1 (concept)
+
+#### Gewijzigd
+- `ids/42-9.18i-Fysieke-elementen-IfcWindow.ids`: bestandsnaam met hoofdletter W; verwijzingen in de ILS gecontroleerd en de naam in de tabellen gelijkgetrokken.
+- `ids/16-9.08-Gebruiksfunctie.ids`: titel en specificatienaam gecorrigeerd naar `9.08 Gebruiksfunctie`.
+- `ids/38-9.18e-Fysieke-elementen-IfcDoor.ids`: optionele eigenschappen `ThermalTransmittance` en `GlazingAreaFraction` en attributen `OverallWidth` en `OverallHeight` toegevoegd; hoofdstuk 06 bijgewerkt (NL en EN).
+- `ids/13-9.06a Bouwlaag kenmerk.ids`: attribuut `Elevation` optioneel toegevoegd; hoofdstuk 06 bijgewerkt (NL en EN).
+- 9.17 Tarra Ruimte is vervallen als modeleereis, maar IDS en paragraaf blijven behouden. De requirements in de IDS zijn ongewijzigd; hoofdstukken 05, 06, 08 en 16, CSV en telling verduidelijken dat tarra wordt berekend uit bruto minus netto inhoud. De IDS-versienummers blijven 0.2.0. BM13 deel A en toolkit-bijlage C (NL en EN, beide kopieën) blijven op de achterstandslijst.
 
 ## [0.2.0] – 2026-11-17
 

@@ -38,6 +38,11 @@
             </xs:restriction>
           </ids:value>
         </ids:attribute>
+        <ids:attribute cardinality="optional">
+          <ids:name>
+            <ids:simpleValue>Elevation</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
         <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/EntranceLevel" cardinality="required">
           <ids:propertySet>
             <ids:simpleValue>Pset_BuildingStoreyCommon</ids:simpleValue>

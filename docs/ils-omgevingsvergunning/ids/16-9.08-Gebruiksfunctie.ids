@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
   <ids:info>
-    <ids:title>16-9.08 Gebruiksfunctie</ids:title>
+    <ids:title>9.08 Gebruiksfunctie</ids:title>
     <ids:copyright>Vereniging Nederlandse Gemeenten</ids:copyright>
     <ids:version>0.2.0</ids:version>
     <ids:description>Deelspecificatie 16 van de ILS Omgevingsvergunning 0.2.0.</ids:description>
@@ -11,7 +11,7 @@
     <ids:milestone>015-03 Inhoudelijk behandelen aanvraag / processtap Toetsen aan regelgeving (GEMMA Omgevingswet, bedrijfsproces 015 Behandelen aanvraag)</ids:milestone>
   </ids:info>
   <ids:specifications>
-    <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="16-9.08 Gebruiksfunctie" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie" description="Gebruiksfunctie als IfcZone, IfcSpatialZone of IfcSpace.">
+    <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.08 Gebruiksfunctie" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Gebruiksfunctie" description="Gebruiksfunctie als IfcZone, IfcSpatialZone of IfcSpace.">
       <ids:applicability minOccurs="0" maxOccurs="unbounded">
         <ids:entity>
           <ids:name>

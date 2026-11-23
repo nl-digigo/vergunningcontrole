@@ -27,6 +27,6 @@ Deze ILS gebruikt **IFC** als informatiemodel: een internationaal, ISO-vastgeste
 
 | Map / bestand | Inhoud |
 |---|---|
-| `ids/` | 46 IDS 1.0-deelspecificaties, één per specificatie |
+| `ids/` | 46 IDS 1.0-deelspecificaties; 45 actuele modeleereisen, met 9.17 behouden voor compatibiliteit |
 | `data/specificaties_checks.csv` | Koppeling tussen specificaties, bSDD-identifiers en checks |
 | Checks (repo `vergunningcontrole`) | Laag 0–5 per check |

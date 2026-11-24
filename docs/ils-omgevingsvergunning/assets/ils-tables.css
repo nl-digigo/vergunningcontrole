@@ -321,8 +321,9 @@ a.ils-chip:hover {
   text-align: center;
 }
 
-.ils-card--r { color: var(--ils-accent); background: var(--ils-accent-soft); }
-.ils-card--o { color: var(--ils-muted); border-color: var(--ils-line-strong); }
+/* R en O zonder kleur: de letter zelf is genoeg. */
+.ils-card--r,
+.ils-card--o { color: inherit; background: none; border-color: transparent; }
 .ils-card--x { color: var(--ils-no); background: var(--ils-no-soft); }
 
 /* Ja / nee met een rustig statusbolletje. */
@@ -343,6 +344,245 @@ a.ils-chip:hover {
 
 .ils-table td code,
 .ils-table th code { font-size: .88em; }
+
+/* IFC STEP-fragmenten in hoofdstuk 06. */
+pre.ils-step-block {
+  margin: 1.2em 0 1.6em;
+  padding: 1.1em 1.25em;
+  overflow-x: auto;
+  border: 1px solid #29384d;
+  border-left: 4px solid #4d9de0;
+  border-radius: 10px;
+  background: #101827;
+  box-shadow: 0 4px 16px rgba(16, 24, 40, .12);
+  color: #e2e8f0;
+  font-size: .88em;
+  line-height: 1.65;
+  tab-size: 2;
+}
+
+pre.ils-step-block > code {
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  white-space: pre;
+}
+
+.ils-step-id { color: #7dd3fc; font-weight: 600; }
+.ils-step-type { color: #fbbf24; font-weight: 700; }
+.ils-step-string { color: #86efac; }
+.ils-step-enum { color: #c4b5fd; }
+.ils-step-number { color: #fdba74; }
+.ils-step-null { color: #94a3b8; font-style: italic; }
+
+/* IDS-specificaties gebruiken een lichte, neutrale stijl om ze te onderscheiden
+   van de donkere IFC STEP-fragmenten. */
+.ils-ids-box {
+  margin: 1.2em 0 1.6em;
+  overflow: hidden;
+  border: 1px solid #c9c6bc;
+  border-radius: 12px;
+  background: #fffefa;
+  box-shadow: 0 2px 10px rgba(39, 38, 32, .08);
+  color: #292a27;
+}
+
+.ils-ids-box__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .55em 1em;
+  padding: .8em 1em;
+  border-bottom: 1px solid #d8d5ca;
+  background: #f3f1e9;
+}
+
+.ils-ids-box__title {
+  color: #292a27;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.ils-ids-box__version {
+  padding: .2em .65em;
+  border: 1px solid #c9c6bc;
+  border-radius: 99px;
+  background: #fffefa;
+  color: #5b5b54;
+  font-size: .73rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  white-space: nowrap;
+}
+
+.ils-ids-box__meta,
+.ils-ids-box__applicability {
+  margin: 0;
+  padding: .7em 1em;
+  border-bottom: 1px solid #dedcd4;
+  color: #55564f;
+  font-size: .82rem;
+}
+
+.ils-ids-box__meta a {
+  color: #464943;
+  text-decoration-color: #9c9b91;
+}
+
+.ils-ids-box__meta a:hover { color: #161714; }
+
+.ils-ids-box__section-title {
+  margin: 0;
+  padding: .65em 1em .2em;
+  color: #44453f;
+  font-size: .74rem;
+  font-weight: 750;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.ils-ids-box__section-title--applicability {
+  padding-top: .8em;
+  background: #eceeea;
+}
+
+.ils-ids-box__applicability {
+  border-bottom: 1px solid #d4d7d1;
+  background: #eceeea;
+  color: #292a27;
+}
+
+.ils-ids-actions {
+  padding: .65em 1em;
+  border-bottom: 1px solid #dedcd4;
+  background: #fffefa;
+}
+
+.ils-ids-button {
+  appearance: none;
+  padding: .4em .8em;
+  border: 1px solid #77776d;
+  border-radius: 5px;
+  background: #fffefa;
+  color: #292a27;
+  font: inherit;
+  font-size: .82rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.ils-ids-button:hover {
+  background: #f0efe9;
+  border-color: #464740;
+}
+
+.ils-ids-button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.ils-ids-button:focus-visible {
+  outline: 2px solid #55564f;
+  outline-offset: 2px;
+}
+
+.ils-ids-xml {
+  padding: .75em 1em;
+  border-bottom: 1px solid #dedcd4;
+  background: #f7f6f1;
+}
+
+.ils-ids-xml[hidden] { display: none; }
+
+.ils-ids-xml__status {
+  margin-left: .75em;
+  color: #55564f;
+  font-size: .8rem;
+}
+
+.ils-ids-xml__code {
+  max-height: 28rem;
+  margin: .75em 0 0;
+  padding: .9em;
+  overflow: auto;
+  border: 1px solid #d8d5ca;
+  border-radius: 5px;
+  background: #fffefa;
+  color: #292a27;
+  font-size: .78rem;
+}
+
+.ils-ids-copy-buffer {
+  position: fixed;
+  top: -10000px;
+  left: -10000px;
+}
+
+.ils-ids-requirements {
+  background: #f7f4ec;
+}
+
+.ils-ids-box__section-title--requirements {
+  padding-top: .9em;
+  color: #4a483f;
+}
+
+.ils-ids-box .ils-table { margin: 0; }
+
+.ils-ids-box .ils-table__scroll {
+  border: 0;
+  border-radius: 0;
+  background: #f7f4ec;
+  box-shadow: none;
+}
+
+.ils-ids-box .ils-table table {
+  color: #292a27;
+  font-size: .86rem;
+}
+
+.ils-ids-box .ils-table th,
+.ils-ids-box .ils-table td { border-bottom-color: #ded9cc; }
+
+.ils-ids-box .ils-table thead th {
+  background: #eeeae0;
+  border-bottom-color: #d3cebf;
+  color: #55534a;
+}
+
+.ils-ids-box .ils-table tbody tr { background: #fffefa; }
+.ils-ids-box .ils-table tbody tr:nth-child(even) { background: #f7f4ec; }
+.ils-ids-box .ils-table tbody tr:hover { background: #efede5; }
+
+/* Soort facet in kleur; de legenda staat boven de eerste tabel in hoofdstuk 06. */
+.ils-ids-box td[data-ids-facet="attribute"] {
+  color: #0b5c8a;
+  font-weight: 700;
+}
+
+.ils-ids-box td[data-ids-facet="property"] {
+  color: #1f6b46;
+  font-weight: 700;
+}
+
+.ils-ids-box td[data-ids-facet="classification"] {
+  color: #6b3fa0;
+  font-weight: 700;
+}
+
+.ils-ids-box .ils-card--r,
+.ils-ids-box .ils-card--o {
+  border-color: transparent;
+  background: none;
+  color: inherit;
+}
+
+.ils-ids-box .ils-card--x {
+  border-color: #706f67;
+  background: #d8d7d0;
+  color: #292a27;
+}
 
 /* --------------------------------------------------------------------------
    6. Klein scherm en afdrukken

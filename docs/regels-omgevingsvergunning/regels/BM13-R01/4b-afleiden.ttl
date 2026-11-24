@@ -1,0 +1,24 @@
+PREFIX bm13: <https://example.org/bm13/>
+PREFIX geom: <https://rdf.bg/geometry/>
+PREFIX dso:  <http://rdf.bg/areas/>
+PREFIX ext:  <http://rdf.bg/geometry-ext.ttl#>
+
+INSERT { GRAPH <urn:bm13:derived> {
+    ?element bm13:designationRelation ?relation ;
+             bm13:checkedAgainst      bm13:R01_BestemmingWonen .
+} }
+WHERE {
+  # union of all allowed designation areas (DER-12)
+  { SELECT (ext:union(?areaGeom) AS ?allowedArea) WHERE {
+      bm13:R01_BestemmingWonen bm13:allowedDesignation ?allowed .
+      GRAPH <urn:bm13:areas> { ?area dso:name ?allowed ; dso:geometry ?areaGeom . }
+  } }
+  bm13:R01_BestemmingWonen bm13:boundaryTolerance ?tol .
+  # relevant elements only (F10), already transformed and projected (F09 + F07)
+  GRAPH <https://rdf.bg/geometries/> {
+    ?element a geom:Geometry ;
+             bm13:inProfile bm13:BUILDING_VOLUME ;
+             geom:projectionBase64Data ?footprint .
+  }
+  BIND(ext:topologicalRelation(?footprint, ?allowedArea, ?tol) AS ?relation)
+}

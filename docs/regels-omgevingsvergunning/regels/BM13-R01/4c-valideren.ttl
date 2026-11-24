@@ -1,0 +1,26 @@
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix bm13: <https://example.org/bm13/> .
+@prefix geom: <https://rdf.bg/geometry/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+bm13:R01_Shape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf bm13:designationRelation ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:prefixes bm13:prefixes ;
+        sh:message "BM13-R01: element {?globalId} is {?relation} the permitted Wonen area." ;
+        sh:select """
+            SELECT $this ?globalId ?relation
+            WHERE {
+                $this bm13:designationRelation ?relation ;
+                      geom:globalId ?globalId .
+                FILTER (?relation NOT IN ("WITHIN", "COVERED_BY", "EQUALS"))
+            }
+        """ ;
+    ] ;
+    sh:severity sh:Violation .
+
+bm13:prefixes sh:declare
+    [ sh:prefix "bm13" ; sh:namespace "https://example.org/bm13/"^^xsd:anyURI ] ,
+    [ sh:prefix "geom" ; sh:namespace "https://rdf.bg/geometry/"^^xsd:anyURI ] .

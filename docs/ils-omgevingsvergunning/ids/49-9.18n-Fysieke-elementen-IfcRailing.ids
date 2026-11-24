@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
+  <ids:info>
+    <ids:title>9.18n Fysieke elementen IfcRailing</ids:title>
+    <ids:copyright>Vereniging Nederlandse Gemeenten</ids:copyright>
+    <ids:version>0.3.0-concept</ids:version>
+    <ids:description>Concept-deelspecificatie 49 voor de ILS Omgevingsvergunning. Nieuw voorgesteld op 23 november 2026; nog niet opgenomen in versie 0.2.0.</ids:description>
+    <ids:author>lex.ransijn@vng.nl</ids:author>
+    <ids:date>2026-11-23</ids:date>
+    <ids:purpose>Indieningsvereisten van ruimte-modellering t.b.v. vergunningsaanvraag Omgevings Plan Activiteit (Omgevingsplan) en Technische Activiteit (Bbl) voor bouwwerken zijnde Gebouw — BM13-checks: #10 (bron: BM13-regelinventarisatie v0.3, 3-7-2026).</ids:purpose>
+    <ids:milestone>015-03 Inhoudelijk behandelen aanvraag / processtap Toetsen aan regelgeving (GEMMA Omgevingswet, bedrijfsproces 015 Behandelen aanvraag)</ids:milestone>
+  </ids:info>
+  <ids:specifications>
+    <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.18n Fysieke elementen IfcRailing" identifier="9.18n" instructions="De leuning of vloerafscheiding als IfcRailing. Leg het soort vast met het PredefinedType (HANDRAIL, GUARDRAIL of BALUSTRADE). De hoogte is nodig voor de toets aan artikel 4.28 van het Bbl (leuning).">
+      <ids:applicability minOccurs="0" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCRAILING</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:property dataType="IFCPOSITIVELENGTHMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/Height" cardinality="optional" instructions="Hoogte van de leuning of afscheiding, gemeten vanaf de vloer of de voorkant van de trede.">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_RailingCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Height</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/IsExternal" cardinality="optional">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_RailingCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>IsExternal</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+      </ids:requirements>
+    </ids:specification>
+  </ids:specifications>
+</ids:ids>

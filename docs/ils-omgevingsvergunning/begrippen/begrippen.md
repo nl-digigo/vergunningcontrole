@@ -1118,6 +1118,17 @@ Een samenvatting van de grenzen van alle bepalingsmethoden in één detaildoorsn
 <br> 
 
 ### Verkeersruimte
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Verkeersruimte</dfn> |
+| **is specialisatie van** | ruimte voor het bereiken van een andere ruimte, die niet ligt in een verblijfsgebied of in een functiegebied, een toiletruimte, een badruimte of een technische ruimte; |
+| **definitie**        |   Bedruimte bestemd voor het verblijf van bedgebonden personen in die ruimte; |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | Denk bijvoorbeeld aan een hal, gang, overloop, trappenhuis of galerij. Onder verkeersruimte valt niet een: <ul><li> ruimte in een verblijfsgebied of een functiegebied</li>
+<li>toiletruimte </li>
+<li>badruimte  </li>
+<li>technische ruimte </li></ul>
+Als een verkeersroute door zo’n ruimte loopt, dan is er geen sprake van een verkeersruimte (wel van een 'ruimte waardoor een verkeersroute voert'). De exacte definitie staat in bijlage I onder A van het Bbl. |
 
 <table>
   <tr>
@@ -1145,6 +1156,13 @@ Een samenvatting van de grenzen van alle bepalingsmethoden in één detaildoorsn
 <br> 
 
 ### Verkeersroute
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **voorkeursterm**   | <dfn>Verkeersroute</dfn> |
+| **is specialisatie van** | Ruimte |
+| **definitie**        |   route die begint bij een doorgang van een ruimte, alleen voert over vloeren, trappen of hellingbanen en eindigt bij de doorgang van een andere ruimte; |
+| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
+| **toelichting** | ... |
 
 <table>
   <tr>

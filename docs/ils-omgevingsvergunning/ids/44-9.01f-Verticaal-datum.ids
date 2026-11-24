@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
+  <ids:info>
+    <ids:title>9.01f Verticaal datum (NAP)</ids:title>
+    <ids:copyright>Vereniging Nederlandse Gemeenten</ids:copyright>
+    <ids:version>0.2.0</ids:version>
+    <ids:description>Deelspecificatie 44 van de ILS Omgevingsvergunning 0.2.0. Nieuw in 0.2.0; opgezet naar het voorbeeld GEO-02b uit de praktijkrichtlijn BIM naar GEO.</ids:description>
+    <ids:author>lex.ransijn@vng.nl</ids:author>
+    <ids:date>2026-11-17</ids:date>
+    <ids:purpose>Indieningsvereisten van ruimte-modellering t.b.v. vergunningsaanvraag Omgevings Plan Activiteit (Omgevingsplan) en Technische Activiteit (Bbl) voor bouwwerken zijnde Gebouw — BM13-checks: #2, #4, #6, #10 (bron: BM13-regelinventarisatie v0.3, 3-7-2026).</ids:purpose>
+    <ids:milestone>015-03 Inhoudelijk behandelen aanvraag / processtap Toetsen aan regelgeving (GEMMA Omgevingswet, bedrijfsproces 015 Behandelen aanvraag)</ids:milestone>
+  </ids:info>
+  <ids:specifications>
+    <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.01f Verticaal datum (NAP)" identifier="9.01f" description="Is de doel-CRS EPSG:28992 (RD zonder hoogtecomponent), dan is het verticale datum EPSG:5709 (NAP). De specificatie geldt alleen voor modellen met EPSG:28992." instructions="Gebruik bij voorkeur EPSG:7415; die bevat de hoogtecomponent (NAP) al.">
+      <ids:applicability minOccurs="0" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCPROJECTEDCRS</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+        <ids:attribute>
+          <ids:name>
+            <ids:simpleValue>Name</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <ids:simpleValue>EPSG:28992</ids:simpleValue>
+          </ids:value>
+        </ids:attribute>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:attribute cardinality="required">
+          <ids:name>
+            <ids:simpleValue>VerticalDatum</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <ids:simpleValue>EPSG:5709</ids:simpleValue>
+          </ids:value>
+        </ids:attribute>
+      </ids:requirements>
+    </ids:specification>
+  </ids:specifications>
+</ids:ids>

@@ -1,0 +1,379 @@
+/* ==========================================================================
+   Tabelstijl regels Omgevingsvergunning
+   Gebruikt door index.html (ReSpec, NL) en en/index.html (ReSpec, EN), en
+   ingevoegd in de statische leesversies. Werkt samen met assets/regels-tables.js,
+   dat tabellen van een scroll-omhulsel en herkenbare kolomtypen voorziet.
+   ========================================================================== */
+
+:root {
+  --regels-fg: #1d2330;
+  --regels-muted: #5b6475;
+  --regels-line: #e4e8ef;
+  --regels-line-strong: #c9d1de;
+  --regels-surface: #ffffff;
+  --regels-head-bg: #f3f6fa;
+  --regels-zebra: #fafbfd;
+  --regels-hover: #eef4fb;
+  --regels-accent: #0b4f8a;
+  --regels-accent-soft: #e6eef7;
+  --regels-ok: #1f6b46;
+  --regels-ok-soft: #e4f2ea;
+  --regels-warn: #7d5600;
+  --regels-warn-soft: #fbf0d9;
+  --regels-no: #8a3c3c;
+  --regels-no-soft: #f8e9e9;
+  --regels-radius: 10px;
+  --regels-shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 1px 12px rgba(16, 24, 40, .05);
+}
+
+/* Donkere modus alleen waar de pagina daarop is voorbereid: de statische
+   leesversies zetten data-regels-dark op <html>. */
+@media (prefers-color-scheme: dark) {
+  :root[data-regels-dark]:not([data-theme="light"]) {
+    --regels-fg: #e4e7ed;
+    --regels-muted: #9aa3b2;
+    --regels-line: #2c323d;
+    --regels-line-strong: #3d4552;
+    --regels-surface: #161a21;
+    --regels-head-bg: #1c222b;
+    --regels-zebra: #191e26;
+    --regels-hover: #1e2836;
+    --regels-accent: #7fb4e8;
+    --regels-accent-soft: #1b2a3a;
+    --regels-ok: #7fc9a2;
+    --regels-ok-soft: #172a20;
+    --regels-warn: #d8b25e;
+    --regels-warn-soft: #2a2415;
+    --regels-no: #e29a9a;
+    --regels-no-soft: #2e1d1d;
+    --regels-shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 1px 12px rgba(0, 0, 0, .35);
+  }
+}
+
+:root[data-theme="dark"] {
+  --regels-fg: #e4e7ed;
+  --regels-muted: #9aa3b2;
+  --regels-line: #2c323d;
+  --regels-line-strong: #3d4552;
+  --regels-surface: #161a21;
+  --regels-head-bg: #1c222b;
+  --regels-zebra: #191e26;
+  --regels-hover: #1e2836;
+  --regels-accent: #7fb4e8;
+  --regels-accent-soft: #1b2a3a;
+  --regels-ok: #7fc9a2;
+  --regels-ok-soft: #172a20;
+  --regels-warn: #d8b25e;
+  --regels-warn-soft: #2a2415;
+  --regels-no: #e29a9a;
+  --regels-no-soft: #2e1d1d;
+  --regels-shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 1px 12px rgba(0, 0, 0, .35);
+}
+
+/* --------------------------------------------------------------------------
+   1. Omhulsel: horizontaal scrollen met randschaduw zodra er meer kolommen zijn
+   -------------------------------------------------------------------------- */
+
+.regels-table {
+  position: relative;
+  margin: 1.25em 0 1.75em;
+}
+
+.regels-table__scroll {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  border: 1px solid var(--regels-line);
+  border-radius: var(--regels-radius);
+  background: var(--regels-surface);
+  box-shadow: var(--regels-shadow);
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Lange tabellen scrollen binnen een venster, zodat de kop in beeld blijft. */
+.regels-table--tall .regels-table__scroll {
+  max-height: min(72vh, 780px);
+  overflow-y: auto;
+}
+
+.regels-table::before,
+.regels-table::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 28px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .18s ease;
+  border-radius: var(--regels-radius);
+  z-index: 3;
+}
+
+.regels-table::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(16, 24, 40, .13), rgba(16, 24, 40, 0));
+}
+
+.regels-table::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(16, 24, 40, .13), rgba(16, 24, 40, 0));
+}
+
+.regels-table.is-scrolled-left::before,
+.regels-table.is-scrollable-right::after { opacity: 1; }
+
+/* Bij een plakkende eerste kolom werpt die kolom zelf de schaduw. */
+.regels-table--wide.is-scrollable.is-scrolled-left::before { opacity: 0; }
+
+/* --------------------------------------------------------------------------
+   2. Basis
+   -------------------------------------------------------------------------- */
+
+.regels-table table {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-collapse: separate; /* nodig voor een plakkende kop met randen */
+  border-spacing: 0;
+  font-size: .92rem;
+  line-height: 1.45;
+  color: var(--regels-fg);
+  background: transparent;
+}
+
+.regels-table th,
+.regels-table td {
+  padding: .62em .9em;
+  border: 0;
+  border-bottom: 1px solid var(--regels-line);
+  text-align: left;
+  vertical-align: top;
+  background-clip: padding-box;
+  hyphens: none;   /* geen afbreekstreepjes en geen woorden die middenin breken */
+  overflow-wrap: normal;
+}
+
+.regels-table tbody tr:last-child > * { border-bottom: 0; }
+
+.regels-table tbody tr { background: var(--regels-surface); }
+.regels-table tbody tr:nth-child(even) { background: var(--regels-zebra); }
+.regels-table tbody tr:hover { background: var(--regels-hover); }
+
+/* --------------------------------------------------------------------------
+   3. Kop
+   -------------------------------------------------------------------------- */
+
+.regels-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--regels-head-bg);
+  border-bottom: 1px solid var(--regels-line-strong);
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--regels-muted);
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+/* Sleutel-waardetabellen zonder kopteksten tonen geen kop. */
+.regels-table--headless thead { display: none; }
+
+/* --------------------------------------------------------------------------
+   4. Kolomtypen (gezet door assets/regels-tables.js)
+   -------------------------------------------------------------------------- */
+
+.regels-table .regels-col-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.regels-table .regels-col-short {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.regels-table .regels-col-nowrap { white-space: nowrap; }
+
+/* Eerste kolom blijft staan zolang er horizontaal gescrold kan worden. */
+.regels-table--wide.is-scrollable .regels-col-sticky {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: inherit;
+  font-weight: 600;
+  box-shadow: 1px 0 0 var(--regels-line);
+}
+
+.regels-table--wide.is-scrollable thead .regels-col-sticky {
+  z-index: 3;
+  background: var(--regels-head-bg);
+}
+
+.regels-table--wide.is-scrollable.is-scrolled-left .regels-col-sticky {
+  box-shadow: 1px 0 0 var(--regels-line), 8px 0 10px -8px rgba(16, 24, 40, .45);
+}
+
+/* Sleutel-waardetabellen: eerste kolom als label. */
+.regels-table--pairs td:first-child,
+.regels-table--pairs th[scope="row"] {
+  width: 30%;
+  min-width: 11rem;
+  font-weight: 600;
+  color: var(--regels-fg);
+}
+
+/* Veel kolommen: compacter zetten. */
+.regels-table--wide table { font-size: .86rem; }
+.regels-table--wide th,
+.regels-table--wide td { padding: .5em .72em; }
+
+/* Lege waarde (streepje) rustig houden. */
+.regels-table .regels-empty { color: var(--regels-muted); }
+
+/* --------------------------------------------------------------------------
+   5. Labels in cellen
+   -------------------------------------------------------------------------- */
+
+.regels-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: .1em .5em;
+  border: 1px solid var(--regels-line-strong);
+  border-radius: 99px;
+  background: var(--regels-surface);
+  font-size: .82em;
+  line-height: 1.5;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+a.regels-chip {
+  color: var(--regels-accent);
+  border-color: var(--regels-accent-soft);
+  background: var(--regels-accent-soft);
+}
+
+a.regels-chip:hover {
+  border-color: var(--regels-accent);
+  text-decoration: none;
+}
+
+.regels-chip--check {
+  color: var(--regels-accent);
+  background: var(--regels-accent-soft);
+  border-color: transparent;
+  font-variant-numeric: tabular-nums;
+}
+
+/* De labels staan in een span binnen de cel: een <td> mag geen flexbox worden,
+   dat haalt de tabelopmaak uit elkaar. */
+.regels-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3em;
+  align-items: flex-start;
+}
+
+.regels-col-short .regels-tags,
+.regels-col-num .regels-tags { justify-content: center; }
+
+/* Een cel vol verwijzingen krijgt ruimte, zodat de tekstkolommen ernaast
+   niet tot enkele woorden worden samengeknepen. */
+.regels-table td.regels-cell-tags { min-width: 12rem; }
+.regels-table td.regels-cell-tags.regels-col-short { min-width: 0; }
+
+.regels-tags .regels-rest { display: contents; }
+
+.regels-tags[data-collapsed="true"] .regels-rest { display: none; }
+
+.regels-more {
+  appearance: none;
+  padding: .1em .55em;
+  border: 1px dashed var(--regels-line-strong);
+  border-radius: 99px;
+  background: transparent;
+  color: var(--regels-muted);
+  font: inherit;
+  font-size: .82em;
+  line-height: 1.5;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.regels-more:hover {
+  color: var(--regels-accent);
+  border-color: var(--regels-accent);
+}
+
+/* Kardinaliteit R / O / X uit de IDS-tabellen. */
+.regels-card {
+  display: inline-block;
+  min-width: 1.6em;
+  padding: .05em .45em;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  font-size: .82em;
+  text-align: center;
+}
+
+.regels-card--r { color: var(--regels-accent); background: var(--regels-accent-soft); }
+.regels-card--o { color: var(--regels-muted); border-color: var(--regels-line-strong); }
+.regels-card--x { color: var(--regels-no); background: var(--regels-no-soft); }
+
+/* Ja / nee met een rustig statusbolletje. */
+.regels-flag::before {
+  content: "";
+  display: inline-block;
+  width: .5em;
+  height: .5em;
+  margin-right: .45em;
+  border-radius: 50%;
+  vertical-align: .08em;
+  background: currentColor;
+}
+
+.regels-flag--yes { color: var(--regels-ok); }
+.regels-flag--no { color: var(--regels-muted); }
+.regels-flag--partial { color: var(--regels-warn); }
+
+.regels-table td code,
+.regels-table th code { font-size: .88em; }
+
+/* --------------------------------------------------------------------------
+   6. Klein scherm en afdrukken
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+  .regels-table table { font-size: .85rem; }
+  .regels-table th,
+  .regels-table td { padding: .5em .65em; }
+  .regels-table--pairs td:first-child { min-width: 8rem; }
+}
+
+@media print {
+  .regels-table__scroll,
+  .regels-table--tall .regels-table__scroll {
+    max-height: none;
+    overflow: visible;
+    box-shadow: none;
+    border-color: #bbb;
+  }
+  .regels-table::before,
+  .regels-table::after { display: none; }
+  .regels-table thead { display: table-header-group; }
+  .regels-table thead th { position: static; background: #f2f2f2; color: #333; }
+  .regels-table tr { break-inside: avoid; }
+  .regels-table--wide.is-scrollable .regels-col-sticky { position: static; box-shadow: none; }
+  .regels-tags[data-collapsed="true"] .regels-rest { display: contents; }
+  .regels-more { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .regels-table::before,
+  .regels-table::after { transition: none; }
+}

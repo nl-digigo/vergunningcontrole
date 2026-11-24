@@ -29,7 +29,7 @@ Status: ✅ in place · 🟡 partly / fill-in format · ⬜ still to do
 | Alignment with European implementation guidelines | Z | 🟡 | Reference to NPR-CEN/TR 17654 and 17439 included; structure still to be compared | [Information production standard](#standaard) |
 | Acceptance criteria | D | ✅ | AC1–AC7: schema, header, IDS validation, georeferencing, geometry, quantity check, naming. Dependency on the IFC parser noted | [Acceptance criteria](#acceptatie) |
 | Reference information and shared resources | Z | ✅ | Official IFC schema, bSDD publication, IDS, NL-SfB, Naa.K.T., base registers | [Reference information](#referentie) |
-| Document form: explanation and data template | Z | ✅ | Explanation (this ReSpec page) plus data template (42 IDS files and CSV). A more extensive explanatory part will follow | Folders `ids/`, `data/` |
+| Document form: explanation and data template | Z | ✅ | Explanation (this ReSpec page) plus data template (46 IDS files: 45 current modelling requirements; 9.17 retained for compatibility, and CSV). A more extensive explanatory part will follow | Folders `ids/`, `data/` |
 
 ## 4.3 Suitability
 
@@ -47,7 +47,7 @@ Status: ✅ in place · 🟡 partly / fill-in format · ⬜ still to do
 | Criterion | Type | Status | Justification | Location |
 |---|---|---|---|---|
 | International Psets | Z | ✅ | No additional Psets. There is a method for filling in attributes: `IfcSpace`, `IfcSpatialZone` and `IfcZone` are extended with `ObjectType` values from the bSDD | [Information production standard](#standaard) |
-| Machine readability | A | ✅ | 42 IDS 1.0 files | Folder `ids/` |
+| Machine readability | A | ✅ | 46 IDS 1.0 files: 45 current modelling requirements; 9.17 retained for compatibility | Folder `ids/` |
 | IFC version | Z | ✅ | IFC 4.3 (ISO 16739-1:2024); IFC4 ADD2 TC1 temporarily allowed | [Information production standard](#standaard) |
 | Information delivery process | A | ⬜ | Desired: IDM (ISO 29481) together with the GEMMA process models, possibly with VISI | [Management](#beheer) |
 | Prepared for EU regulations | A | ⬜ | More information needed first (DPP/CPR, digital building logbook/EPBD); this runs via the EU BIM Taskgroup and the buildingSMART Regulatory Room, in which VNG participates actively | [Management](#beheer) |

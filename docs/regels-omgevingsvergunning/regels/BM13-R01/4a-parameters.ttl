@@ -1,0 +1,16 @@
+@prefix bm13: <https://example.org/bm13/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+bm13:R01_BestemmingWonen
+    a bm13:PermitRule ;
+    bm13:ruleId              "BM13-R01" ;
+    bm13:ruleVersion         "0.1" ;
+    bm13:ruleType            bm13:FunctionalDesignation ;
+    bm13:checkedUse          "woonfunctie" ;
+    bm13:allowedDesignation  "Wonen" ;          # repeat for "Gemengd" etc. if allowed
+    bm13:areaType            bm13:Function ;
+    bm13:elementProfile      bm13:BUILDING_VOLUME ;
+    bm13:includeBelowGround  false ;
+    bm13:boundaryTolerance   "0.01"^^xsd:decimal ;  # metres
+    bm13:partialOverlapPolicy bm13:NonCompliant ;
+    bm13:searchRadius        "50"^^xsd:decimal .

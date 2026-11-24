@@ -5,8 +5,10 @@ var respecConfig = {
   shortName: "vergunningscontrole/ils-omgevingsvergunning",
   imprint: "digigo",
   subtitle: "indieningsvereisten voor een aanvraag omgevingsvergunning met een 3D-informatiemodel",
-  publishDate: "2026-09-25",
-  // versie: 0.1.2 (concept)
+  publishDate: "2026-11-17",
+  hypothesisComments: false,
+  reviewDateEnd: "2026-12-03",
+  // versie: 0.2.0 (concept)
   authors: [
     { name: "Vereniging van Nederlandse Gemeenten", company: "VNG", companyURL: "https://vng.nl" }
   ],

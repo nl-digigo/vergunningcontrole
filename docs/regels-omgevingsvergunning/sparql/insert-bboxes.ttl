@@ -1,0 +1,20 @@
+PREFIX geom:    <https://vng.nl/geometry/>
+PREFIX vng:     <http://vng.nl/geometry-ext.ttl#>
+
+INSERT {
+	GRAPH <https://vng.nl/geometries/> {
+		?instance   geom:bboxMinX	?minX ;
+					geom:bboxMinY	?minY ;
+					geom:bboxMinZ	?minZ ;
+					geom:bboxMaxX	?maxX ;
+					geom:bboxMaxY	?maxY ;
+					geom:bboxMaxZ	?maxZ .
+	}
+}
+WHERE {
+	GRAPH <https://vng.nl/geometries/> {
+		?instance	geom:base64Data	?base64Data .
+	FILTER NOT EXISTS { ?instance geom:bboxMinX ?any }
+	}
+	(?minX ?minY ?minZ ?maxX ?maxY ?maxZ) vng:gmBoundingBox ?base64Data .
+}

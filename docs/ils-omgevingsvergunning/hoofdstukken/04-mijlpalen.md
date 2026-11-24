@@ -22,9 +22,9 @@ We volgen de fasering van de **STB 2025** [BNA/NL Ingenieurs](https://bna.nl/ver
 
 | Mijlpaal | Moment | GEMMA-stap | Wat wordt geleverd | Checks | Minimale IDS-set |
 |---|---|---|---|---|---|
-| **M1 Vooroverleg** | Voorontwerp, vóór de formele aanvraag | Vooroverleg / 21.090 Verzorgen aanvraag | Massamodel met georeferentie, gebouw, bouwlagen en gebruiksfuncties | #1–#6 (indicatief) | 9.01a–e, 9.02, 9.03, 9.04, 9.05a, 9.06a, 9.08 |
-| **M2 Aanvraag OPA** | Definitief ontwerp | 21.130 Indienen bescheiden t.b.v. toetsing aan omgevingsplan | Ruimtemodel met bruto/netto inhouden en gebruiksfuncties | #1–#6 | Alle specificaties met #1–#6 in de [Tabel met vereisten](#vereisten) |
-| **M3 Aanvraag TBA** | Definitief of technisch ontwerp | Indienen bescheiden technische bouwactiviteit | Volledig ruimtemodel plus fysieke elementen met eigenschappen, **inclusief de bijgewerkte ID01-informatie** | #1–#17 (#1–#6 als controle op wijzigingen) | Alle specificaties met #1–#17 |
+| **M1 Vooroverleg** | Voorontwerp, vóór de formele aanvraag | Vooroverleg / 21.090 Verzorgen aanvraag | Massamodel met georeferentie, gebouw, bouwlagen en gebruiksfuncties | #1–#6 (indicatief) | 9, 9.01a, 9.01b, 9.02, 9.03a, 9.03b, 9.04, 9.05a, 9.05b, 9.06a, 9.06b, 9.08 |
+| **M2 Aanvraag OPA** | Definitief ontwerp | 21.130 Indienen bescheiden t.b.v. toetsing aan omgevingsplan | Ruimtemodel met bruto/netto inhouden en gebruiksfuncties | #1–#6 | Zie de [matrix per mijlpaal](#mijlpalenmatrix) |
+| **M3 Aanvraag TBA** | Definitief of technisch ontwerp | Indienen bescheiden technische bouwactiviteit | Volledig ruimtemodel plus fysieke elementen met eigenschappen, **inclusief de bijgewerkte ID01-informatie** | #1–#17 (#1–#6 als controle op wijzigingen) | Zie de [matrix per mijlpaal](#mijlpalenmatrix) |
 | M4 Acceptatie | Na elke levering | 015-02 Uitvoeren intake aanvraag / 015-03 Toetsen aan regelgeving (*Controleren indieningsvereisten*) | Validatierapport, eventueel BCF-issues terug naar de aanvrager | — | — |
 
 De gemeente neemt na elke levering **[invullen, voorstel: 10] werkdagen** om de ontvankelijkheid van het informatiemodel te bevestigen (acceptatiecriteria AC1–AC4). Dit valt binnen de wettelijke beslistermijn en staat daar niet los van.

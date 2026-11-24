@@ -1,0 +1,19 @@
+@prefix bm13: <https://example.org/bm13/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+bm13:R02_MaximumBuildingHeight
+    a bm13:PermitRule ;
+    bm13:ruleId                    "BM13-R02" ;
+    bm13:ruleVersion               "0.1" ;
+    bm13:ruleType                  bm13:MaximumBuildingHeight ;
+    bm13:areaType                  bm13:MaximumBuildingHeight ;   # value comes from the area
+    bm13:unit                      "m" ;
+    bm13:tolerance                 "0.05"^^xsd:decimal ;
+    bm13:referenceLevelMethod      bm13:AverageRoadElevation ;    # or bm13:DesignElevation — set per zone
+    bm13:referenceLevelSource      bm13:MunicipalHeightData ;
+    bm13:fallbackReferenceSource   bm13:AHN ;
+    bm13:elementProfile            bm13:HEIGHT_RELEVANT ;
+    bm13:exemptClass               "IfcChimney" , "IfcTransportElement" ;
+    bm13:exemptMaxExtraHeight      "1.5"^^xsd:decimal ;
+    bm13:searchRadius              "50"^^xsd:decimal ;
+    bm13:resultProperty            bm13:buildingHeight .

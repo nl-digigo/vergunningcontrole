@@ -1,0 +1,2 @@
+LOAD <https://raw.githubusercontent.com/openBIMstandards/ifcOWL/master/IFC4_ADD2.ttl>
+INTO GRAPH <https://vng.nl/ontologies/ifc4add2>

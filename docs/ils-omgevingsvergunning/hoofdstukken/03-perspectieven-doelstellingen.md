@@ -18,7 +18,7 @@ De informatiedoelstellingen (ID) zijn groepen eisen. **ID01 en ID02 zijn gekoppe
 
 **ID03 tot en met ID12 zijn optioneel.** Het zijn voorstellen om als doelstelling op te nemen. Ze vallen buiten de 17 checks en zijn nog niet onderzocht. De verwachting is wel dat gemeenten de informatie uit het model ook hiervoor gaan gebruiken. Een gemeente kan ze nu al uitvragen, maar ze zijn geen voorwaarde voor een ontvankelijke aanvraag.
 
-| ID | Doelstelling | Status in v0.1 |
+| ID | Doelstelling | Status in deze versie |
 |---|---|---|
 | **ID01** | **Omgevingsplanactiviteit bouwen (OPA): controle op het omgevingsplan (gemeentelijk)** | **Verplicht – checks #1–#6** |
 | **ID02** | **Technische bouwactiviteit (TBA): controle op het Besluit bouwwerken leefomgeving (landelijk)** | **Verplicht – checks #7–#17, inclusief de informatie uit ID01** |

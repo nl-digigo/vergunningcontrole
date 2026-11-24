@@ -1,5 +1,15 @@
 # Wijzigingslog — Toolkit GeoBIM
 
+## Werkversie — 2026-11-17
+
+### Inhoud
+- Bijlage C (NL en EN) gelijk gemaakt aan de ILS Omgevingsvergunning v0.2: de IDS-XML van alle specificaties komt nu overeen met de bestanden in `docs/ils-omgevingsvergunning/ids/`, en de bestandsnamen in de tabellen zijn die van die bestanden. Nieuw is specificatie 43, *9.16d Beschermd subbrandcompartiment* (check #15).
+- Bijlage C: het projectadres is optioneel; de adresattributen van `IfcSite` en `IfcBuilding`, `UnitsInContext` en `ObjectPlacement` op `IfcSite` en `IfcBuildingStorey` vervallen, net als de eisen op `Qto_BuildingStoreyBaseQuantities`. De beschrijving, de koppeling en de toelichting bij 9.01c–e en 01 zijn daarop aangepast.
+- Bijlage C: de verschillen met de ILS die al vóór deze wijziging bestonden, zijn mee rechtgezet: de classificatie-eisen bij 9.01a, 9.02, 9.03a, 9.05a en 9.06a vervallen, en de kardinaliteit van de classificaties bij 9.10d–f, 9.12a, 9.12d, 9.13 en 9.16c is optioneel, zoals in de IDS.
+- Bijlage C: processtap bijgewerkt naar GEMMA 015-03, gelijk aan `ids:milestone` in de IDS.
+- Bijlage B (BIM-viewers) bijgewerkt (X3) en bijlage C opnieuw afgeleid uit de ILS Omgevingsvergunning 0.2.0, 41 specificaties (X1, X7).
+- Bijlage A (NL en EN): de bestandslijst in het promptvoorbeeld bij regel 2 gelijk gemaakt aan de huidige IDS-bestanden van de ILS Omgevingsvergunning 0.2.0. Bijlage C: de bron heet nu v0.2.0, en de typefouten en werknotities die in de ILS zijn verbeterd, zijn mee overgenomen (X10–X12).
+
 ## Werkversie — 2026-09-25
 
 ### Structuur

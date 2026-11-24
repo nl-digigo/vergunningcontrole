@@ -27,6 +27,6 @@ This ILS uses **IFC** as its information model: an international, ISO-adopted co
 
 | Folder / file | Content |
 |---|---|
-| `ids/` | 42 IDS 1.0 sub-specifications, one per specification |
+| `ids/` | 46 IDS 1.0 sub-specifications; 45 current modelling requirements, with 9.17 retained for compatibility |
 | `data/specificaties_checks.csv` | Link between specifications, bSDD identifiers and checks |
 | Check sheets (repo `vergunningcontrole`) | Layers 0–5 per check |

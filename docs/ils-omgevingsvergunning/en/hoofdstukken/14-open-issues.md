@@ -11,10 +11,12 @@
 | OP07 | Geometry | Formalisation of the RDF translation of IFC by buildingSMART International | buildingSMART / digiGO steering group | Author (strategic note) |
 | OP08 | ISO 19650 | Switch directly to the revised ISO 19650 (IPR terminology)? | Project meeting | Author |
 | OP09 | Information protocol | Draft an information protocol and IDMs alongside the ILS? | Project meeting | DSO? |
-| OP10 | Specifications | 9.18a (IfcBeam) and 9.18f (IfcSensor) are not used by any check: make them optional or remove them? | Editors | Author |
+| OP10 | Specifications | **Closed in 0.2.0.** 9.18f (IfcSensor) has been withdrawn and is reserved for the check "Timely detection of fire" (X6). 9.18a (IfcBeam) has been linked to checks #7 and #8 (X5). | Editors | Author |
 | OP11 | Decision points | Convert the decision points to the GEMMA decision points | Editors | — |
 | OP12 | Anonymisation | Must IFC header data be anonymised when made public? | Municipalities (privacy) | — |
 | OP13 | EU regulations | What do the DPP (CPR) and the digital building logbook (EPBD) mean for this ILS? | digiGO | — |
+| OP14 | Storey names | The list of storey names for `Name` in 9.06a Storey (according to the BIM basis ILS, storey layout and naming) still needs to be filled in and agreed. | Editors | Author |
+| OP15 | Occupancy rate | 9.10c: is it still the case under the Bbl that the residential, industrial, sports, retail and other use functions have no occupancy rate? | Editors | Author |
 
 ## Questions for the consultation of municipalities
 

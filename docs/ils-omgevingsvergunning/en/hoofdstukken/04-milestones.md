@@ -22,9 +22,9 @@ We follow the phasing of the **STB 2025** [BNA/NL Ingenieurs](https://bna.nl/ver
 
 | Milestone | Moment | GEMMA step | What is delivered | Checks | Minimum IDS set |
 |---|---|---|---|---|---|
-| **M1 Preliminary consultation** | Voorontwerp, before the formal application | Vooroverleg / 21.090 Verzorgen aanvraag | Massing model with georeferencing, building, storeys and use functions | #1–#6 (indicative) | 9.01a–e, 9.02, 9.03, 9.04, 9.05a, 9.06a, 9.08 |
-| **M2 OPA application** | Definitief ontwerp | 21.130 Indienen bescheiden t.b.v. toetsing aan omgevingsplan | Space model with gross/net volumes and use functions | #1–#6 | All specifications marked #1–#6 in the [Table of requirements](#vereisten) |
-| **M3 TBA application** | Definitief of technisch ontwerp | Indienen bescheiden technische bouwactiviteit | Complete space model plus physical elements with properties, **including the updated ID01 information** | #1–#17 (#1–#6 to check for changes) | All specifications marked #1–#17 |
+| **M1 Preliminary consultation** | Voorontwerp, before the formal application | Vooroverleg / 21.090 Verzorgen aanvraag | Massing model with georeferencing, building, storeys and use functions | #1–#6 (indicative) | 9, 9.01a, 9.01b, 9.02, 9.03a, 9.03b, 9.04, 9.05a, 9.05b, 9.06a, 9.06b, 9.08 |
+| **M2 OPA application** | Definitief ontwerp | 21.130 Indienen bescheiden t.b.v. toetsing aan omgevingsplan | Space model with gross/net volumes and use functions | #1–#6 | See the [matrix per milestone](#mijlpalenmatrix) |
+| **M3 TBA application** | Definitief of technisch ontwerp | Indienen bescheiden technische bouwactiviteit | Complete space model plus physical elements with properties, **including the updated ID01 information** | #1–#17 (#1–#6 to check for changes) | See the [matrix per milestone](#mijlpalenmatrix) |
 | M4 Acceptance | After each delivery | 015-02 Uitvoeren intake aanvraag / 015-03 Toetsen aan regelgeving (*Controleren indieningsvereisten*) | Validation report, possibly BCF issues back to the applicant | — | — |
 
 After each delivery, the municipality takes **[to be filled in, proposal: 10] working days** to confirm the admissibility of the information model (acceptance criteria AC1–AC4). This falls within the statutory decision period and is not separate from it.

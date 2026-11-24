@@ -11,10 +11,12 @@
 | OP07 | Geometrie | Formalisering van de RDF-vertaling van IFC door buildingSMART International | buildingSMART / digiGO-stuurgroep | Opsteller (strategische notitie) |
 | OP08 | ISO 19650 | Direct overstappen op de herziene ISO 19650 (IPR-terminologie)? | Projectoverleg | Opsteller |
 | OP09 | Informatieprotocol | Informatieprotocol en IDM's opstellen naast de ILS? | Projectoverleg | DSO? |
-| OP10 | Specificaties | 9.18a (IfcBeam) en 9.18f (IfcSensor) worden door geen check gebruikt: optioneel maken of verwijderen? | Redactie | Opsteller |
+| OP10 | Specificaties | **Gesloten in 0.2.0.** 9.18f (IfcSensor) is vervallen en gereserveerd voor de check "Tijdig vaststellen van brand" (X6). 9.18a (IfcBeam) is gekoppeld aan de checks #7 en #8 (X5). | Redactie | Opsteller |
 | OP11 | Beslismomenten | De beslismomenten omzetten naar de GEMMA-beslispunten | Redactie | — |
 | OP12 | Anonimiseren | Moeten IFC-headergegevens bij openbaarmaking geanonimiseerd worden? | Gemeenten (privacy) | — |
 | OP13 | EU-regelgeving | Wat betekenen DPP (CPR) en het digitaal gebouwenlogboek (EPBD) voor deze ILS? | digiGO | — |
+| OP14 | Bouwlaagnamen | De lijst met bouwlaagnamen voor `Name` in 9.06a Bouwlaag (conform de BIM basis ILS, bouwlaagindeling en -naamgeving) moet nog worden ingevuld en afgestemd. | Redactie | Opsteller |
+| OP15 | Bezettingsgraad | 9.10c: hebben de woon-, industrie-, sport-, winkel- en overige gebruiksfuncties volgens het Bbl nog steeds geen bezettingsgraad? | Redactie | Opsteller |
 
 ## Vragen voor de consultatie van gemeenten
 

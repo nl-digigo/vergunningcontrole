@@ -1,18 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
   <ids:info>
     <ids:title>9.18g Fysieke elementen IfcSlab</ids:title>
-    <ids:copyright>VDCbase,,Gemeente Rotterdam, AECgeeks, VORM, Arons en Gelauff, IMplace, On-Track</ids:copyright>
-    <ids:version>0.95</ids:version>
-    <ids:description>Deelspecificatie 40 van 42 uit 'ILS voor ruimten in de omgevingswet' versie 0.95. Afgesplitst uit het totaalbestand; de specificatie zelf is ongewijzigd.</ids:description>
-    <ids:author>menno@aronsengelauff.nl</ids:author>
-    <ids:date>2026-03-19</ids:date>
-    <ids:purpose>Indieningsvereisten van ruimte-modellering t.b.v. vergunningsaanvraag Omgevings Plan Activiteit (Omgevingsplan) en Technische Activiteit (BLL) voor bouwwerken zijnde Gebouw — BM13-checks: #7, #8, #9, #10, #11, #13, #14, #15, #16 (bron: BM13-regelinventarisatie v0.3, 3-7-2026).</ids:purpose>
+    <ids:copyright>Vereniging Nederlandse Gemeenten</ids:copyright>
+    <ids:version>0.2.0</ids:version>
+    <ids:description>Deelspecificatie 40 van de ILS Omgevingsvergunning 0.2.0.</ids:description>
+    <ids:author>lex.ransijn@vng.nl</ids:author>
+    <ids:date>2026-11-17</ids:date>
+    <ids:purpose>Indieningsvereisten van ruimte-modellering t.b.v. vergunningsaanvraag Omgevings Plan Activiteit (Omgevingsplan) en Technische Activiteit (Bbl) voor bouwwerken zijnde Gebouw — BM13-checks: #7, #8, #9, #10, #11, #13, #14, #15, #16 (bron: BM13-regelinventarisatie v0.3, 3-7-2026).</ids:purpose>
     <ids:milestone>015-03 Inhoudelijk behandelen aanvraag / processtap Toetsen aan regelgeving (GEMMA Omgevingswet, bedrijfsproces 015 Behandelen aanvraag)</ids:milestone>
   </ids:info>
   <ids:specifications>
     <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.18g Fysieke elementen IfcSlab" identifier="https://identifier.buildingsmart.org/uri/bsnl/Omgevingswet-Ruimten/0.3.0/class/Vloer">
-      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+      <ids:applicability minOccurs="0" maxOccurs="unbounded">
         <ids:entity>
           <ids:name>
             <ids:simpleValue>IFCSLAB</ids:simpleValue>
@@ -36,13 +36,26 @@
             <ids:simpleValue>Combustible</ids:simpleValue>
           </ids:baseName>
         </ids:property>
-        <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="optional">
+        <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/Compartmentation" cardinality="optional">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_SlabCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Compartmentation</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="optional" instructions="Brandwerendheid volgens NEN-EN 13501-2: klasse en tijd in minuten met een spatie ertussen, eventueel met achtervoegsel, bijvoorbeeld REI 60 of EI2 30-Sa. Voorlopige waardelijst: besluit van de gemeentelijke werkgroep van 3 november 2026, onder voorbehoud van afstemming met de BIM basis ILS via digiGO.">
           <ids:propertySet>
             <ids:simpleValue>Pset_SlabCommon</ids:simpleValue>
           </ids:propertySet>
           <ids:baseName>
             <ids:simpleValue>FireRating</ids:simpleValue>
           </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*" />
+            </xs:restriction>
+          </ids:value>
         </ids:property>
         <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/IsExternal" cardinality="optional">
           <ids:propertySet>
@@ -68,12 +81,12 @@
             <ids:simpleValue>SurfaceSpreadOfFlame</ids:simpleValue>
           </ids:baseName>
         </ids:property>
-        <ids:property dataType="IFCREAL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ThermalTransmittance" cardinality="optional">
+        <ids:property dataType="IFCTHERMALTRANSMITTANCEMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/ThermalTransmittance" cardinality="optional">
           <ids:propertySet>
             <ids:simpleValue>Pset_SlabCommon</ids:simpleValue>
           </ids:propertySet>
           <ids:baseName>
-            <ids:simpleValue>Thermal Transmittance [ThermalTransmittance]</ids:simpleValue>
+            <ids:simpleValue>ThermalTransmittance</ids:simpleValue>
           </ids:baseName>
         </ids:property>
       </ids:requirements>

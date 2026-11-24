@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
+  <ids:info>
+    <ids:title>9.18k Fysieke elementen IfcStair</ids:title>
+    <ids:copyright>Vereniging Nederlandse Gemeenten</ids:copyright>
+    <ids:version>0.3.0-concept</ids:version>
+    <ids:description>Concept-deelspecificatie 46 voor de ILS Omgevingsvergunning. Nieuw voorgesteld op 23 november 2026; nog niet opgenomen in versie 0.2.0.</ids:description>
+    <ids:author>lex.ransijn@vng.nl</ids:author>
+    <ids:date>2026-11-23</ids:date>
+    <ids:purpose>Indieningsvereisten van ruimte-modellering t.b.v. vergunningsaanvraag Omgevings Plan Activiteit (Omgevingsplan) en Technische Activiteit (Bbl) voor bouwwerken zijnde Gebouw — BM13-checks: #10, #16 (bron: BM13-regelinventarisatie v0.3, 3-7-2026).</ids:purpose>
+    <ids:milestone>015-03 Inhoudelijk behandelen aanvraag / processtap Toetsen aan regelgeving (GEMMA Omgevingswet, bedrijfsproces 015 Behandelen aanvraag)</ids:milestone>
+  </ids:info>
+  <ids:specifications>
+    <ids:specification ifcVersion="IFC4 IFC4X3_ADD2" name="9.18k Fysieke elementen IfcStair" identifier="9.18k" instructions="De trap als IfcStair. De afmetingen zijn nodig voor de toets aan tabel 4.26 van het Bbl (afmetingen trap). Een bordes dat als IfcSlab met type LANDING is gemodelleerd, valt onder 9.18g.">
+      <ids:applicability minOccurs="0" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCSTAIR</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:property dataType="IFCCOUNTMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/NumberOfRiser" cardinality="optional" instructions="Aantal optreden.">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_StairCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NumberOfRiser</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCCOUNTMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/NumberOfTreads" cardinality="optional" instructions="Aantal treden.">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_StairCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NumberOfTreads</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCPOSITIVELENGTHMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/RiserHeight" cardinality="optional" instructions="Hoogte van een optrede.">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_StairCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>RiserHeight</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCPOSITIVELENGTHMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/TreadLength" cardinality="optional" instructions="Aantrede ter plaatse van de klimlijn.">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_StairCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>TreadLength</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCPOSITIVELENGTHMEASURE" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/RequiredHeadroom" cardinality="optional" instructions="Vrije hoogte boven de trap.">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_StairCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>RequiredHeadroom</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/HandicapAccessible" cardinality="optional">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_StairCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>HandicapAccessible</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireExit" cardinality="optional" instructions="Indicatie of de trap deel is van een vluchtroute.">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_StairCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>FireExit</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCLABEL" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating" cardinality="optional" instructions="Brandwerendheid volgens NEN-EN 13501-2: klasse en tijd in minuten met een spatie ertussen, eventueel met achtervoegsel, bijvoorbeeld REI 60 of EI2 30-Sa. Voorlopige waardelijst: besluit van de gemeentelijke werkgroep van 3 november 2026, onder voorbehoud van afstemming met de BIM basis ILS via digiGO.">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_StairCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>FireRating</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="(R|E|RE|REI|REW|EI|EI1|EI2|EW) (15|20|30|45|60|90|120|180|240|360)(-(Sa|S200|C[0-5]?|M))*" />
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/IsExternal" cardinality="optional">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_StairCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>IsExternal</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+      </ids:requirements>
+    </ids:specification>
+  </ids:specifications>
+</ids:ids>

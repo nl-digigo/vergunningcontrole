@@ -8,6 +8,8 @@ De uitgebreide toelichting bij de begrippen, met achtergronden, uitzonderingen e
 
 Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van een gebruiksgebied? En dat tussenmuurtje en de ruimte onder de trap? De ene rekent het wel mee en de ander niet. Dit levert problemen. De NEN2580 is een richtlijn om de oppervlakten en inhoud van onroerende zaken eenduidig en objectief te meten en bepalen. De norm is omarmd door de vastgoedsector. De norm stelt niet wat een ruimte is, maar wel hoe men deze bepaalt. Concepten als “BVO” “NVO” zijn bepalingsmethodes, geen oppervlaktes.  
 
+Welke uitkomst een bepalingsmethode geeft, hangt af van het ruimtelijk gebied waarop deze wordt toegepast, zoals een pand, een gebouw of een eigendoms- en gebruikseenheid. Zie [Bepalingsmethode en ruimtelijk gebied](toelichting.md#bepalingsmethode-en-ruimtelijk-gebied) in de toelichting.
+
 ### Bepalingsmethode
 
 <table>

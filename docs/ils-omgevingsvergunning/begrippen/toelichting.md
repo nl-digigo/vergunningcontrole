@@ -4,6 +4,48 @@ Dit hoofdstuk bevat de uitgebreide toelichting bij de begrippen uit het [begripp
 
 ## Bepalingsmethoden
 
+### Bepalingsmethode en ruimtelijk gebied
+
+Een bepalingsmethode zegt hoe je meet, niet wát je meet. Welke ruimte wordt gemeten, hangt af van het ruimtelijk gebied waarop de bepalingsmethode wordt toegepast, bijvoorbeeld een pand, een gebouw of een eigendoms- en gebruikseenheid. Daardoor kan dezelfde bepalingsmethode in hetzelfde bouwwerk tot verschillende uitkomsten leiden. Dit geldt voor alle bepalingsmethoden: Bruto, Netto, Tarra, Gebruiks en Verhuurbaar. Het voorbeeld hieronder laat het zien voor de Bruto Inhoud van een rij van vier rijwoningen, elk met een losse berging in de tuin.
+
+<figure id="fig-rijwoning-situatie">
+  <img src="./afbeeldingen/Voorbeeld_rijwoning_situatie.png"
+       alt="Exploded view van een rij van vier rijwoningen met losse bergingen op een gezamenlijk kavel"
+       width="600">
+  <figcaption>Voorbeeldsituatie: een rij van vier rijwoningen met losse bergingen</figcaption>
+</figure>
+
+Wordt de Bruto Inhoud per **pand** bepaald, dan ontstaan acht volumes: elke woning en elke berging is een afzonderlijk pand. Tussen de woningen ligt de grens op het hart van de woningscheidende wand.
+
+<figure id="fig-rijwoning-pand">
+  <img src="./afbeeldingen/Voorbeeld_rijwoning_situatie_bruto_inhoud_pand.png"
+       alt="Bruto Inhoud van acht panden: vier woningen en vier bergingen"
+       width="600">
+  <figcaption>Bruto Inhoud per pand: acht panden</figcaption>
+</figure>
+
+Wordt de Bruto Inhoud per **gebouw** bepaald, dan vormen de vier aaneengesloten woningen samen één gebouw, en is elke losse berging een eigen gebouw. Dat levert vijf volumes op. De woningscheidende wanden liggen nu binnen het gebouw en vormen geen grens meer.
+
+<figure id="fig-rijwoning-gebouw">
+  <img src="./afbeeldingen/Voorbeeld_rijwoning_situatie_bruto_inhoud_gebouw.png"
+       alt="Bruto Inhoud van vijf gebouwen: de rij woningen als één gebouw en vier losse bergingen"
+       width="600">
+  <figcaption>Bruto Inhoud per gebouw: vijf gebouwen</figcaption>
+</figure>
+
+Wordt de Bruto Inhoud per **eigendoms- en gebruikseenheid** bepaald, dan volgt de grens het eigendom en gebruik. Elke woning vormt samen met haar berging en het bijbehorende deel van het kavel één eenheid. De brandgang, het gezamenlijke achterpad, is een vijfde eenheid. Ook dit levert vijf volumes op, maar met een heel andere indeling dan bij gebouwen.
+
+<figure id="fig-rijwoning-eenheid">
+  <img src="./afbeeldingen/Voorbeeld_rijwoning_situatie_bruto_inhoud_eigendom_en_gebruikseenheid.png"
+       alt="Bruto Inhoud van vijf eigendoms- en gebruikseenheden: vier woningen met berging en kavel, en een brandgang"
+       width="600">
+  <figcaption>Bruto Inhoud per eigendoms- en gebruikseenheid: vijf eenheden</figcaption>
+</figure>
+
+Bij het gebruiken of vergelijken van een oppervlakte of inhoud moet dus altijd duidelijk zijn op welk ruimtelijk gebied de bepalingsmethode is toegepast.
+
+<br> 
+
 ### Bruto Vloer Oppervlak
 
 Begrip: [Bruto Vloer Oppervlak](begrippen.md#bruto-vloer-oppervlak)

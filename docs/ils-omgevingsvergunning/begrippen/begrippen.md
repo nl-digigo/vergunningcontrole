@@ -2,31 +2,37 @@
 
 Bouwwerk Informatie Modellen (BIM) vormen een waardevolle bron voor digitaal ondersteunde vergunningscontroles. Voorwaarde is dat het BIM-model voorziet in informatie die nodig is voor de controle. Deze informatie moet voor mens én machine te begrijpen en gebruiken zijn. Een cruciaal aspect hierbij is de informatie over de ruimtelijke indeling. In Nederland gelden specifieke eisen voor specifieke ruimtes. Zo gelden er eisen over verwarming, lichtinval, toegankelijkheid, ventilatie en afmeting voor ruimtes die bedoeld zijn voor menselijk verblijf, die niet gelden voor ruimtes die ingedeeld zijn als technische of toiletruimte.  Bovendien leggen omgevingsplannen beperkingen op aan het gebruik van ruimte op specifieke locaties. Om een digitale controle op deze voorbeelden en op andere vergunningseisen uit te kunnen voeren is het van groot belang dat zowel mens als machine begrijpt welke beoogde functie of verblijf voor de ruimtes in en om een bouwwerk is bedacht voorgesteld en gemodelleerd. Dit vraagt om eenduidig begrip van ruimte. Dit begrippenkader 
 
+De uitgebreide toelichting bij de begrippen, met achtergronden, uitzonderingen en figuren over de grenzen van ruimten, staat in de [Toelichting op de ruimtelijke begrippen](toelichting.md).
+
 ## Bepalingsmethoden
 
 Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van een gebruiksgebied? En dat tussenmuurtje en de ruimte onder de trap? De ene rekent het wel mee en de ander niet. Dit levert problemen. De NEN2580 is een richtlijn om de oppervlakten en inhoud van onroerende zaken eenduidig en objectief te meten en bepalen. De norm is omarmd door de vastgoedsector. De norm stelt niet wat een ruimte is, maar wel hoe men deze bepaalt. Concepten als “BVO” “NVO” zijn bepalingsmethodes, geen oppervlaktes.  
 
 ### Bepalingsmethode
 
-<br> 
-
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Bepalingsmethodek</dfn> |
-| **definitie**        | Een vastgelegde werkwijze met regels en uitgangspunten waarmee de waarde of omvang van een bepaalde eigenschap of grootheid wordt vastgesteld. |
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Bepalingsmethode</dfn></td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Een vastgelegde werkwijze met regels en uitgangspunten waarmee de waarde of omvang van een bepaalde eigenschap of grootheid wordt vastgesteld.</td>
+  </tr>
+</table>
 
 <br> 
 
 ### Bruto Vloer Oppervlak
 
-<table>
+<table>ß
   <tr>
     <td><strong>voorkeursterm</strong></td>
     <td><dfn>Bruto Vloer Oppervlak</dfn></td>
     <td rowspan="8" style="vertical-align: top; width: 320px;">
       <figure id="fig-bvo">
         <img src="./afbeeldingen/Bruto_Vloer_Oppervlak_van_een_eigendoms_en_gebruikseenheid.png"
-             alt="Een conform Bruto Inhoud bepaalde eigendoms- en gebruikseenheid"
+             alt="Een conform Bruto Vloer Oppervlak bepaalde eigendoms- en gebruikseenheid"
              width="300">
         <figcaption>Voorbeeld van een conform Bruto Vloer Oppervlak bepaalde eigendoms- en gebruikseenheid</figcaption>
       </figure>
@@ -58,499 +64,1166 @@ Valt een gemeenschappelijk trappenhuis nu wel of niet onder de oppervlakte van e
   </tr>
   <tr>
     <td><strong>toelichting</strong></td>
-    <td>— indien een binnenruimte aan een andere binnenruimte grenst, moet worden gemeten tot het hart van de desbetreffende scheidingsconstructie; — indien een gebouwgebonden buitenruimte aan een binnenruimte grenst, moet het grondvlak van de scheidingsconstructie volledig worden toegerekend aan de BVO van de binnenruimte. — BVO wordt bepaald voor de aanwezige vloeren op iedere verdieping. Bij meerdere verdiepingen worden deze oppervlakken bij elkaar opgeteld. Een videopening zelf wordt niet meegerekend als vloeroppervlak.</td>
+    <td>Tussen binnenruimten wordt gemeten tot het hart van de scheidingsconstructie; bij meerdere verdiepingen worden de oppervlakken opgeteld. Zie <a href="toelichting.md#bruto-vloer-oppervlak">toelichting</a>.</td>
   </tr>
 </table>
-
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Bruto Vloer Oppervlak</dfn> |
-| **alternatieve term**   | BVO |
-| **alternatieve term**   | Gross Floor Area |
-| **alternatieve term**   | GFA |
-| **is specialisatie van** | Bepalingsmethode |
-| **definitie**        | Het bruto vloer oppervlak van een ruimte of van een groep van ruimten is de oppervlakte, gemeten op vloerniveau langs de buitenomtrek van de opgaande scheidingsconstructies, die de desbetreffende ruimte of groep van ruimten omhullen. |
-| **heeft bron** | https://example.org/source/nen2580 |
-| **toelichting** | — indien een binnenruimte aan een andere binnenruimte grenst, moet worden gemeten tot het hart van de desbetreffende scheidingsconstructie; — indien een gebouwgebonden buitenruimte aan een binnenruimte grenst, moet het grondvlak van de scheidingsconstructie volledig worden toegerekend aan de BVO van de binnenruimte. — BVO wordt bepaald voor de aanwezige vloeren op iedere verdieping. Bij meerdere verdiepingen worden deze oppervlakken bij elkaar opgeteld. Een videopening zelf wordt niet meegerekend als vloeroppervlak.   |
-
-<br> 
-
-<figure id="fig-bvo">
-  <img src="./afbeeldingen/Bruto_Vloer_Oppervlak_van_een_eigendoms_en_gebruikseenheid.png"
-       alt="Een conform Bruto Inhoud bepaalde eigendoms- en gebruikseenheid"
-       width="300">
-  <figcaption>Voorbeeld van een conform Bruto Vloer Oppervlak bepaalde eigendoms- en gebruikseenheid</figcaption>
-</figure>
 
 <br> 
 
 ### Bruto Inhoud
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Bruto Inhoud</dfn> |
-| **alternatieve term**   | BI |
-| **alternatieve term**   | Gross Volume |
-| **alternatieve term**   | GV |
-| **is specialisatie van** | Bepalingsmethode |
-| **definitie**        | De bruto inhoud van een ruimte of van een groep van ruimten is de inhoud, gemeten in 3D langs de buitenomtrek van de horizontale en verticale  scheidingsconstructies, die de desbetreffende ruimte of groep van ruimten omhullen. |
-| **heeft bron** | https://example.org/source/nen2580 |
-| **toelichting** | — indien een binnenruimte aan een andere binnenruimte grenst, moet worden gemeten tot het hart van de desbetreffende scheidingsconstructie; — indien een gebouwgebonden buitenruimte aan een binnenruimte grenst, moet de inhoud van de scheidingsconstructie volledig worden toegerekend aan de inhoud van de binnenruimte. |
-
-<br> 
-
-<figure id="fig-bi">
-  <img src="./afbeeldingen/Bruto_Inhoud_van_een_eigendoms_en_gebruikseenheid.png"
-       alt="Een conform Bruto Inhoud bepaalde eigendoms- en gebruikseenheid"
-       width="300">
-  <figcaption>Voorbeeld van een conform Bruto Inhoud bepaalde eigendoms- en gebruikseenheid</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Bruto Inhoud</dfn></td>
+    <td rowspan="8" style="vertical-align: top; width: 320px;">
+      <figure id="fig-bi">
+        <img src="./afbeeldingen/Bruto_Inhoud_van_een_eigendoms_en_gebruikseenheid.png"
+             alt="Een conform Bruto Inhoud bepaalde eigendoms- en gebruikseenheid"
+             width="300">
+        <figcaption>Voorbeeld van een conform Bruto Inhoud bepaalde eigendoms- en gebruikseenheid</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>BI</td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>Gross Volume</td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>GV</td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bepalingsmethode</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>De bruto inhoud van een ruimte of van een groep van ruimten is de inhoud, gemeten in 3D langs de buitenomtrek van de horizontale en verticale  scheidingsconstructies, die de desbetreffende ruimte of groep van ruimten omhullen.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://example.org/source/nen2580">https://example.org/source/nen2580</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Tussen binnenruimten wordt gemeten tot het hart van de scheidingsconstructie; in verticale richting wordt per verdieping de bruto hoogte aangehouden. Zie <a href="toelichting.md#bruto-inhoud">toelichting</a>.</td>
+  </tr>
+</table>
 
 <br> 
 
 ### Netto Vloer Oppervlak
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Netto Vloer Oppervlak</dfn> |
-| **alternatieve term**   | NVO |
-| **alternatieve term**   | Net Floor Area |
-| **alternatieve term**   | NFA |
-| **is specialisatie van** | Bepalingsmethode |
-| **definitie**        | Het netto vloer oppervlak van een ruimte of een groep van ruimten is het oppervlak tussen de begrenzende horizontale en verticale scheidingsconstructies van de afzonderlijke ruimten.  |
-| **heeft bron** | https://example.org/source/nen2580 |
-| **toelichting** | Het volgende oppervlak is geen onderdeel van het Netto oppervlak: Het oppervlak boven delen van vloeren, waarboven de netto-hoogte kleiner is dan 1,5 m; een schalmgat of een vide, indien de oppervlakte daarvan groter is dan of gelijk is aan 4 m; een vrijstaande kolom of een vrijstaande dragende wandschijf, indien het grondvlak daarvan groter is dan of gelijk is aan 0,5 m; het volume van een vrijstaande niet-toegankelijke leidingschacht, indien het grondvlak daarvan groter is dan of gelijk is aan 0,5 m. — NVO wordt bepaald voor de aanwezige vloeren op iedere verdieping. Bij meerdere verdiepingen worden deze oppervlakken bij elkaar opgeteld. |
-
-<br> 
-
-<figure id="fig-nvo">
-  <img src="./afbeeldingen/Netto_vloer_oppervlak_van_een_eigendoms_en_gebruikseenheid.png"
-       alt="Een conform Netto Vloer Oppervlak van een bepaalde eigendoms- en gebruikseenheid"
-       width="300">
-  <figcaption>Voorbeeld van een conform Netto Vloer Oppervlak bepaalde eigendoms- en gebruikseenheid</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Netto Vloer Oppervlak</dfn></td>
+    <td rowspan="8" style="vertical-align: top; width: 320px;">
+      <figure id="fig-nvo">
+        <img src="./afbeeldingen/Netto_vloer_oppervlak_van_een_eigendoms_en_gebruikseenheid.png"
+             alt="Een conform Netto Vloer Oppervlak bepaalde eigendoms- en gebruikseenheid"
+             width="300">
+        <figcaption>Voorbeeld van een conform Netto Vloer Oppervlak bepaalde eigendoms- en gebruikseenheid</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>NVO</td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>Net Floor Area</td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>NFA</td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bepalingsmethode</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Het netto vloer oppervlak van een ruimte of een groep van ruimten is het oppervlak tussen de begrenzende horizontale en verticale scheidingsconstructies van de afzonderlijke ruimten.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://example.org/source/nen2580">https://example.org/source/nen2580</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Lage gedeelten (netto-hoogte kleiner dan 1,5 m), grote vides en schachten en vrijstaande constructies tellen niet mee. Zie <a href="toelichting.md#netto-vloer-oppervlak">toelichting</a>.</td>
+  </tr>
+</table>
 
 <br> 
 
 ### Netto Inhoud
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Netto Inhoud</dfn> |
-| **alternatieve term**   | NI |
-| **alternatieve term**   | Net Volume |
-| **alternatieve term**   | NV |
-| **is specialisatie van** | Bepalingsmethode |
-| **definitie**        | De netto inhoud van een ruimte of een groep van ruimten is de inhoud tussen de begrenzende horizontale en verticale scheidingsconstructies van de afzonderlijke ruimten.  |
-| **heeft bron** | https://example.org/source/nen2580 |
-| **toelichting** | Het volgende volume is geen onderdeel van het Netto volume: Het volume boven delen van vloeren, waarboven de netto-hoogte kleiner is dan 1,5 m; een schalmgat of een vide, indien het grondvlakoppervlakte daarvan groter is dan of gelijk is aan 4 m2; een vrijstaande kolom of een vrijstaande dragende wandschijf, indien het grondvlak daarvan groter is dan of gelijk is aan 0,5 m; het volume van een vrijstaande niet-toegankelijke leidingschacht, indien het grondvlak daarvan groter is dan of gelijk is aan 0,5 m.  |
-
-<br> 
-
-<figure id="fig-ni">
-  <img src="./afbeeldingen/Netto_Inhoud_van_een_eigendoms_en_gebruikseenheid.png"
-       alt="Een conform Netto Inhoud bepaalde eigendoms- en gebruikseenheid"
-       width="300">
-  <figcaption>Voorbeeld van een conform Netto Inhoud bepaalde eigendoms- en gebruikseenheid</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Netto Inhoud</dfn></td>
+    <td rowspan="9" style="vertical-align: top; width: 320px;">
+      <figure id="fig-ni">
+        <img src="./afbeeldingen/Netto_Inhoud_van_een_eigendoms_en_gebruikseenheid.png"
+             alt="Een conform Netto Inhoud bepaalde eigendoms- en gebruikseenheid"
+             width="300">
+        <figcaption>Voorbeeld van een conform Netto Inhoud bepaalde eigendoms- en gebruikseenheid</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>NI</td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>Net Volume</td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>NV</td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bepalingsmethode</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>De netto inhoud van een ruimte of een groep van ruimten is de inhoud tussen de begrenzende horizontale en verticale scheidingsconstructies van de afzonderlijke ruimten.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://example.org/source/nen2580">https://example.org/source/nen2580</a></td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://example.org/source/en15221-6">https://example.org/source/en15221-6</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Begrensd door de binnenzijde van de scheidingsconstructies en in verticale richting door het plafond; een zwevend verlaagd plafond is geen grens. Het hoogteconcept is gebaseerd op EN 15221-6. Zie <a href="toelichting.md#netto-inhoud">toelichting</a>.</td>
+  </tr>
+</table>
 
 <br> 
 
 ### Tarra Oppervlak
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Tarra Oppervlak</dfn> |
-| **alternatieve term**   | TO |
-| **alternatieve term**   | Tare Area |
-| **alternatieve term**   | TA |
-| **is specialisatie van** | Bepalingsmethode |
-| **definitie**        | Het Tarra Oppervlak van een ruimte of een groep van ruimten is het oppervlak dat ingenomen wordt door constructies, lage gedeeltes en nissen en schachten.  |
-| **heeft bron** | https://example.org/source/nen2580 |
-| **toelichting** | Het volgende oppervlak is onderdeel van het Tara Oppervlak: Het vloeroppervlak van vloeren, waarboven de netto-hoogte kleiner is dan 1,5 m; het vloeroppervlak van een schalmgat of een vide, indien het grondvlakoppervlakte daarvan groter is dan of gelijk is aan 4 m2; een vrijstaande kolom of een vrijstaande dragende wandschijf, indien het grondvlak daarvan groter is dan of gelijk is aan 0,5 m; het volume van een vrijstaande niet-toegankelijke leidingschacht, indien het grondvlak daarvan groter is dan of gelijk is aan 0,5 m. Het vloeroppervlak van verticale scheidingsconstructies |
-
-<br> 
-
-<figure id="fig-to">
-  <img src="./afbeeldingen/Tarra_Oppervlak_van_een_eigendoms_en_gebruikseenheid.png"
-       alt="Een conform Tarra Oppervlak bepaalde eigendoms- en gebruikseenheid"
-       width="300">
-  <figcaption>Voorbeeld van een conform Tarra Oppervlak bepaalde eigendoms- en gebruikseenheid</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Tarra Oppervlak</dfn></td>
+    <td rowspan="8" style="vertical-align: top; width: 320px;">
+      <figure id="fig-to">
+        <img src="./afbeeldingen/Tarra_Oppervlak_van_een_eigendoms_en_gebruikseenheid.png"
+             alt="Een conform Tarra Oppervlak bepaalde eigendoms- en gebruikseenheid"
+             width="300">
+        <figcaption>Voorbeeld van een conform Tarra Oppervlak bepaalde eigendoms- en gebruikseenheid</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>TO</td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>Tare Area</td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>TA</td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bepalingsmethode</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Het Tarra Oppervlak van een ruimte of een groep van ruimten is het oppervlak dat ingenomen wordt door constructies, lage gedeeltes en nissen en schachten.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://example.org/source/nen2580">https://example.org/source/nen2580</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Omvat het oppervlak van verticale scheidingsconstructies, lage gedeelten, grote vides en schachten en vrijstaande constructies. Zie <a href="toelichting.md#tarra-oppervlak">toelichting</a>.</td>
+  </tr>
+</table>
 
 <br> 
 
 ### Tarra Inhoud
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Tarra Inhoud</dfn> |
-| **alternatieve term**   | TI |
-| **alternatieve term**   | Tare Volume |
-| **alternatieve term**   | TV |
-| **is specialisatie van** | Bepalingsmethode |
-| **definitie**        | De Tarra Inhoud van een ruimte of een groep van ruimten is de inhoud die ingenomen wordt door constructies, lage gedeeltes en nissen en schachten.  |
-| **heeft bron** | https://example.org/source/nen2580 |
-| **toelichting** | De volgende inhoud is onderdeel van het Tara Oppervlak: De inhoud van ruimte boven vloeren, waarboven de netto-hoogte kleiner is dan 1,5 m; de inhoud van ruimte van een schalmgat of een vide, indien het grondvlakoppervlakte daarvan groter is dan of gelijk is aan 4 m2; de inhoud van ruimte van een vrijstaande kolom of een vrijstaande dragende wandschijf, indien het grondvlak daarvan groter is dan of gelijk is aan 0,5 m; de inhoud van ruimte van een vrijstaande niet-toegankelijke leidingschacht, indien het grondvlak daarvan groter is dan of gelijk is aan 0,5 m. De inhoud van ruimte van verticale en horizontale scheidingsconstructies |
-
-<br> 
-
-<figure id="fig-ti">
-  <img src="./afbeeldingen/Tarra_Inhoud_van_een_eigendoms_en_gebruikseenheid.png"
-       alt="Een conform Tarra Inhoud bepaalde eigendoms- en gebruikseenheid"
-       width="300">
-  <figcaption>Voorbeeld van een conform Tarra Inhoud bepaalde eigendoms- en gebruikseenheid</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Tarra Inhoud</dfn></td>
+    <td rowspan="8" style="vertical-align: top; width: 320px;">
+      <figure id="fig-ti">
+        <img src="./afbeeldingen/Tarra_Inhoud_van_een_eigendoms_en_gebruikseenheid.png"
+             alt="Een conform Tarra Inhoud bepaalde eigendoms- en gebruikseenheid"
+             width="300">
+        <figcaption>Voorbeeld van een conform Tarra Inhoud bepaalde eigendoms- en gebruikseenheid</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>TI</td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>Tare Volume</td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>TV</td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bepalingsmethode</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>De Tarra Inhoud van een ruimte of een groep van ruimten is de inhoud die ingenomen wordt door constructies, lage gedeeltes en nissen en schachten.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://example.org/source/nen2580">https://example.org/source/nen2580</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Omvat de inhoud van verticale en horizontale scheidingsconstructies, lage gedeelten, grote vides en schachten en vrijstaande constructies. Zie <a href="toelichting.md#tarra-inhoud">toelichting</a>.</td>
+  </tr>
+</table>
 
 <br> 
 
 ### Gebruiks Oppervlak
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Gebruiks Oppervlak</dfn> |
-| **alternatieve term**   | GO |
-| **is specialisatie van** | Bepalingsmethode |
-| **definitie**        | Het gebruiksoppervlak van een ruimte of een groep van ruimten is het oppervlak tussen de begrenzende verticale scheidingsconstructies van de afzonderlijke ruimten, inclusief het oppervlak van niet dragende scheidingsmuren.   |
-| **heeft bron** | https://example.org/source/nen2580 |
-| **toelichting** | Het volgende oppervlak is geen onderdeel van het Gebruiks Oppervlak: Het opervlak van vloeren, waarboven de netto-hoogte kleiner is dan 1,5 m; een schalmgat of een vide, indien het grondvlakoppervlakte daarvan groter is dan of gelijk is aan 4 m2; een vrijstaande kolom of een vrijstaande dragende wandschijf, indien het grondvlak daarvan groter is dan of gelijk is aan 0,5 m; het oppervlak van een vrijstaande niet-toegankelijke leidingschacht, indien het grondvlak daarvan groter is dan of gelijk is aan 0,5 m. |
-
-<br> 
-
-<figure id="fig-go">
-  <img src="./afbeeldingen/Gebruiks_Oppervlak_van_een_eigendoms_en_gebruikseenheid.png"
-       alt="Een conform Tarra Inhoud bepaalde eigendoms- en gebruikseenheid"
-       width="300">
-  <figcaption>Voorbeeld van een conform Gebruiks Oppervlak bepaalde eigendoms- en gebruikseenheid</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Gebruiks Oppervlak</dfn></td>
+    <td rowspan="6" style="vertical-align: top; width: 320px;">
+      <figure id="fig-go">
+        <img src="./afbeeldingen/Gebruiks_Oppervlak_van_een_eigendoms_en_gebruikseenheid.png"
+             alt="Een conform Gebruiks Oppervlak bepaalde eigendoms- en gebruikseenheid"
+             width="300">
+        <figcaption>Voorbeeld van een conform Gebruiks Oppervlak bepaalde eigendoms- en gebruikseenheid</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>GO</td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bepalingsmethode</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Het gebruiksoppervlak van een ruimte of een groep van ruimten is het oppervlak tussen de begrenzende verticale scheidingsconstructies van de afzonderlijke ruimten, inclusief het oppervlak van niet dragende scheidingsmuren.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://example.org/source/nen2580">https://example.org/source/nen2580</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Lage gedeelten, grote vides en schachten en vrijstaande constructies tellen niet mee. Zie <a href="toelichting.md#gebruiks-oppervlak">toelichting</a>.</td>
+  </tr>
+</table>
 
 <br> 
 
 ### Gebruiks Inhoud
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Gebruiks Inhoud</dfn> |
-| **alternatieve term**   | GI |
-| **is specialisatie van** | Bepalingsmethode |
-| **definitie**        | De Gebruiks Inhoud van een ruimte of een groep van ruimten is de inhoud tussen de begrenzende horizontale en verticale scheidingsconstructies van de afzonderlijke ruimten, inclusief de ruimte van niet dragende scheidingsmuren.   |
-| **heeft bron** | https://example.org/source/nen2580 |
-| **toelichting** | Het volgende volume is geen onderdeel van het Gebruiks Inhoud: Het volume boven delen van vloeren, waarboven de netto-hoogte kleiner is dan 1,5 m; een schalmgat of een vide, indien het grondvlakoppervlakte daarvan groter is dan of gelijk is aan 4 m2; een vrijstaande kolom of een vrijstaande dragende wandschijf, indien het grondvlak daarvan groter is dan of gelijk is aan 0,5 m; het volume van een vrijstaande niet-toegankelijke leidingschacht, indien het grondvlak daarvan groter is dan of gelijk is aan 0,5 m. |
-
-<br> 
-
-<figure id="fig-gi">
-  <img src="./afbeeldingen/Gebruiks_Inhoud_van_een_eigendoms_en_gebruikseenheid.png"
-       alt="Een conform Gebruiks Inhoud bepaalde eigendoms- en gebruikseenheid"
-       width="300">
-  <figcaption>Voorbeeld van een conform Gebruiks Inhoud bepaalde eigendoms- en gebruikseenheid</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Gebruiks Inhoud</dfn></td>
+    <td rowspan="6" style="vertical-align: top; width: 320px;">
+      <figure id="fig-gi">
+        <img src="./afbeeldingen/Gebruiks_Inhoud_van_een_eigendoms_en_gebruikseenheid.png"
+             alt="Een conform Gebruiks Inhoud bepaalde eigendoms- en gebruikseenheid"
+             width="300">
+        <figcaption>Voorbeeld van een conform Gebruiks Inhoud bepaalde eigendoms- en gebruikseenheid</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>GI</td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bepalingsmethode</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>De Gebruiks Inhoud van een ruimte of een groep van ruimten is de inhoud tussen de begrenzende horizontale en verticale scheidingsconstructies van de afzonderlijke ruimten, inclusief de ruimte van niet dragende scheidingsmuren.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://example.org/source/nen2580">https://example.org/source/nen2580</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Als de Netto Inhoud, maar inclusief niet-dragende scheidingswanden; lage gedeelten, grote vides en schachten en vrijstaande constructies tellen niet mee. Zie <a href="toelichting.md#gebruiks-inhoud">toelichting</a>.</td>
+  </tr>
+</table>
 
 <br> 
 
 ### Verhuurbaar VloerOppervlak
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Verhuurbaar Vloeroppervlak</dfn> |
-| **alternatieve term**   | VVO |
-| **is specialisatie van** | Bepalingsmethode |
-| **definitie**        | Het Verhuurbaar Vloeroppervlak van een ruimte of een groep van ruimten is het oppervlak tussen de begrenzende verticale scheidingsconstructies van de afzonderlijke ruimten, inclusief het oppervlak van niet dragende scheidingsmuren. Exclusief installatieruimten of trappenhuizen.   |
-| **heeft bron** | https://example.org/source/nen2580 |
-| **toelichting** | Het volgende oppervlak is geen onderdeel van het Verhuurbaar Vloeroppervlak: Het volume boven delen van vloeren, waarboven de netto-hoogte kleiner is dan 1,5 m; een schalmgat of een vide, indien het grondvlakoppervlakte daarvan groter is dan of gelijk is aan 4 m2; een vrijstaande kolom of een vrijstaande dragende wandschijf, indien het grondvlak daarvan groter is dan of gelijk is aan 0,5 m; het volume van een vrijstaande niet-toegankelijke leidingschacht, indien het grondvlak daarvan groter is dan of gelijk is aan 0,5 m. Het vloeroppervlak van installatieruimten en trappenhuizen. |
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Verhuurbaar Vloeroppervlak</dfn></td>
+    <td rowspan="6" style="vertical-align: top; width: 320px;">
+      <figure id="fig-vvo">
+        <img src="./afbeeldingen/Verhuurbaar_Vloer_Oppervlak_van_een_eigendoms_en_gebruikseenheid.png"
+             alt="Een conform Verhuurbaar Vloer Oppervlak bepaalde eigendoms- en gebruikseenheid"
+             width="300">
+        <figcaption>Voorbeeld van een conform Verhuurbaar Vloer Oppervlak bepaalde eigendoms- en gebruikseenheid</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>VVO</td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bepalingsmethode</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Het Verhuurbaar Vloeroppervlak van een ruimte of een groep van ruimten is het oppervlak tussen de begrenzende verticale scheidingsconstructies van de afzonderlijke ruimten, inclusief het oppervlak van niet dragende scheidingsmuren. Exclusief installatieruimten of trappenhuizen.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://example.org/source/nen2580">https://example.org/source/nen2580</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Als het Gebruiks Oppervlak, maar exclusief installatieruimten en trappenhuizen. Zie <a href="toelichting.md#verhuurbaar-vloeroppervlak">toelichting</a>.</td>
+  </tr>
+</table>
 
 <br> 
-
-<figure id="fig-vvo">
-  <img src="./afbeeldingen/Verhuurbaar_Vloer_Oppervlak_van_een_eigendoms_en_gebruikseenheid.png"
-       alt="Een conform Verhuurbaar Vloer Oppervlak bepaalde eigendoms- en gebruikseenheid"
-       width="300">
-  <figcaption>Voorbeeld van een conform Verhuurbaar Vloer Oppervlak bepaalde eigendoms- en gebruikseenheid</figcaption>
-</figure>
-
-</br> 
 
 ### Verhuurbare Inhoud
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Verhuurbare Inhoud/dfn> |
-| **alternatieve term**   | VI |
-| **is specialisatie van** | Bepalingsmethode |
-| **definitie**        | De Verhuurbare Inhoud van een ruimte of een groep van ruimten is de inhoud tussen de begrenzende horizontale en verticale scheidingsconstructies van de afzonderlijke ruimten, inclusief de ruimte van niet dragende scheidingsmuren. Exclusief installatieruimten of trappenhuizen. |
-| **heeft bron** | https://example.org/source/nen2580 |
-| **toelichting** | Het volgende volume is geen onderdeel van het Vehuurbare Inhoud: Het volume boven delen van vloeren, waarboven de netto-hoogte kleiner is dan 1,5 m; een schalmgat of een vide, indien het grondvlakoppervlakte daarvan groter is dan of gelijk is aan 4 m2; een vrijstaande kolom of een vrijstaande dragende wandschijf, indien het grondvlak daarvan groter is dan of gelijk is aan 0,5 m; het volume van een vrijstaande niet-toegankelijke leidingschacht, indien het grondvlak daarvan groter is dan of gelijk is aan 0,5 m. Het volume van installatieruimten en trappenhuizen. |
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Verhuurbare Inhoud</dfn></td>
+    <td rowspan="6" style="vertical-align: top; width: 320px;">
+      <figure id="fig-vi">
+        <img src="./afbeeldingen/Verhuurbare_Inhoud_van_een_eigendoms_en_gebruikseenheid.png"
+             alt="Een conform Verhuurbare Inhoud bepaalde eigendoms- en gebruikseenheid"
+             width="300">
+        <figcaption>Voorbeeld van een conform Verhuurbare Inhoud bepaalde eigendoms- en gebruikseenheid</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>VI</td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bepalingsmethode</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>De Verhuurbare Inhoud van een ruimte of een groep van ruimten is de inhoud tussen de begrenzende horizontale en verticale scheidingsconstructies van de afzonderlijke ruimten, inclusief de ruimte van niet dragende scheidingsmuren. Exclusief installatieruimten of trappenhuizen.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://example.org/source/nen2580">https://example.org/source/nen2580</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Als de Gebruiks Inhoud, maar exclusief installatieruimten en trappenhuizen. Zie <a href="toelichting.md#verhuurbare-inhoud">toelichting</a>.</td>
+  </tr>
+</table>
 
 <br> 
-
-<figure id="fig-vi">
-  <img src="./afbeeldingen/Verhuurbare_Inhoud_van_een_eigendoms_en_gebruikseenheid.png"
-       alt="Een conform Vehuurbare Inhoud bepaalde eigendoms- en gebruikseenheid"
-       width="300">
-  <figcaption>Voorbeeld van een conform Verhuurbare Inhoud bepaalde eigendoms- en gebruikseenheid</figcaption>
-</figure>
-
-</br> 
 
 ### Gebruiksbevoegdvolume
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Gebruiksbevoegdheidvolume</dfn> |
-| **alternatieve term**   | GBV |
-| **is specialisatie van** | Bepalingsmethode |
-| **definitie**        | De Gebruiksbevoegdheidvolume van een ruimte of een groep van ruimten omvat de gebruik- en eigendomruimte van, zover de wet niet anders bepaalt: “de bovengrond en de zich daaronder bevindende aardlagen”. Het gebruik van de ruimte boven en onder de oppervlakte begrenst de inhoud. Het gebruik van de ruimte boven en onder de oppervlakte is aan anderen toegestaan, indien dit zo hoog boven of zo diep onder de oppervlakte plaats vindt, dat de eigenaar geen belang heeft zich daartegen te verzetten. |
-| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0005288&boek=5&titeldeel=3&artikel=20&z=2024-01-01&g=2024-01-01 |
-| **toelichting** |  — De ondergrond telt 6371 kilometer tot het middelpunt van de aarde. De bovengrond is oneindig. Artikel 21 van het burgerlijk wetboek, boek 5, stelt dat de grondeigenaar in plaats van een eigendomsrecht, een exclusieve gebruiksbevoegdheid van de ruimte boven het oppervlak heeft. Het gebruik van de ruimte boven en onder de oppervlakte is aan anderen toegestaan, indien dit zo hoog boven of zo diep onder de oppervlakte plaats vindt, dat de eigenaar geen belang heeft zich daartegen te verzetten. <br> — Hoe hoog boven of hoe diep onder de grond een derde de betreffende ruimte mag gebruiken en dus het eigendomsrecht van de grondeigenaar feitelijk wordt begrensd, is niet nader verduidelijkt. Wat dus in concreto de 'begrensde' afstanden zijn, zal van de feitelijke omstandigheden afhangen, bijvoorbeeld van de aard van de grond: agrarische grond of bouwgrond, of van de aard van het belang van de eigenaar om derden op een bepaalde hoogte of diepte te weren. <br> — Op het voorgaande wordt in de Mijnwetgeving min of meer een uitzondering gemaakt. In de huidige Mijnbouwwet, maar ook in de daaraan voorafgaande Mijnwetten van 1791 en 1810, is een soort van dieptecriterium genoemd. In artikel 2 Mijnbouwwet is vastgelegd dat de wet betrekking heeft op het winnen van delfstoffen op een diepte van meer dan 100 meter beneden de oppervlakte en op aardwarmte voor zover de aardwarmte aanwezig is op meer dan 500 meter beneden de oppervlakte van de aardbodem. De Staat is op grond van deze wetgeving eigenaar van de delfstoffen die op een diepte van meer dan 100 meter aanwezig zijn (artikelen 2, tweede lid en 3, eerste lid). In het tweede lid van artikel 3 van de Mijnbouwwet is vastgelegd dat de Staat door verlening van een vergunning (concessie) de eigendom van de delfstoffen, door winning, laat overgaan op de vergunninghouder. De eigenaar van de bovengrond wordt in zijn hoedanigheid derhalve niet geacht de eigenaar te zijn van de delfstoffen die op de genoemde diepte in de grond zitten of door delving aan de oppervlakte komen. <br> — Voor veel plekken is in omgevingsplannen restrictie gegeven voor hoogte van bebouwing in maximale bouwhoogte. Wanneer deze aanwezig is kan dit als hoogte van de Kadastrale Inhoud worden aangenomen. Diepte wordt tot 5 meter onder onderkant gebouw, fundering of maaiveld gemodelleerd. <br> — indien een binnenruimte aan een andere binnenruimte van ander eigendomgrenst, moet worden gemeten tot het hart van de desbetreffende scheidingsconstructie;|
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Gebruiksbevoegdheidvolume</dfn></td>
+    <td rowspan="6" style="vertical-align: top; width: 320px;">
+      <figure id="fig-gbv">
+        <img src="./afbeeldingen/GebruiksBevoegdheidVolume.png"
+             alt="Een conform Gebruiksbevoegdheidvolume bepaalde eigendoms- en gebruikseenheid"
+             width="300">
+        <figcaption>Voorbeeld van een conform Gebruiksbevoegdheidvolume bepaalde eigendoms- en gebruikseenheid</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>GBV</td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bepalingsmethode</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>De Gebruiksbevoegdheidvolume van een ruimte of een groep van ruimten omvat de gebruik- en eigendomruimte van, zover de wet niet anders bepaalt: “de bovengrond en de zich daaronder bevindende aardlagen”. Het gebruik van de ruimte boven en onder de oppervlakte begrenst de inhoud. Het gebruik van de ruimte boven en onder de oppervlakte is aan anderen toegestaan, indien dit zo hoog boven of zo diep onder de oppervlakte plaats vindt, dat de eigenaar geen belang heeft zich daartegen te verzetten.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0005288&boek=5&titeldeel=3&artikel=20&z=2024-01-01&g=2024-01-01">https://wetten.overheid.nl/jci1.3:c:BWBR0005288&boek=5&titeldeel=3&artikel=20&z=2024-01-01&g=2024-01-01</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>In het model begrensd door de maximale bouwhoogte uit het omgevingsplan en tot 5 meter onder onderkant gebouw, fundering of maaiveld; tussen binnenruimten van verschillende eigenaren gemeten tot het hart van de scheidingsconstructie. Zie <a href="toelichting.md#gebruiksbevoegdheidvolume">toelichting</a>.</td>
+  </tr>
+</table>
 
 <br> 
-
-<figure id="fig-gbv">
-  <img src="./afbeeldingen/GebruiksBevoegdheidVolume.png"
-       alt="Een conform Gebruiksbevoegdheidvolume bepaalde eigendoms- en gebruikseenheid"
-       width="300">
-  <figcaption>Voorbeeld van een conform Gebruiksbevoegdheidvolume bepaalde eigendoms- en gebruikseenheid</figcaption>
-</figure>
-
-</br> 
 
 ### GebruiksbevoegdOppervlak
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>GebruiksbevoegdheidOppervlak</dfn> |
-| **alternatieve term**   | GBO |
-| **is specialisatie van** | Bepalingsmethode |
-| **definitie**        | Het GebruiksbevoegdheidOppervlak van een ruimte of een groep van ruimten omvat het perceel en/of de vloer waarboven en/of onder het gebruik- en eigendom van toepassing is., zover de wet niet anders bepaalt. |
-| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0005288&boek=5&titeldeel=3&artikel=20&z=2024-01-01&g=2024-01-01 |
-| **toelichting** | — indien een binnenruimte aan een andere binnenruimte van ander eigendomgrenst, moet worden gemeten tot het hart van de desbetreffende scheidingsconstructie. |
-
-<figure id="fig-gbv">
-  <img src="./afbeeldingen/GebruiksBevoegdheidOppervlak.png"
-       alt="Een conform Gebruiksbevoegdheidvolume bepaalde eigendoms- en gebruikseenheid"
-       width="300">
-  <figcaption>Voorbeeld van een conform Gebruiksbevoegdheidvolume bepaalde eigendoms- en gebruikseenheid</figcaption>
-</figure>
-
-
-## Ruimtelijke gebieden
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>GebruiksbevoegdheidOppervlak</dfn></td>
+    <td rowspan="6" style="vertical-align: top; width: 320px;">
+      <figure id="fig-gbo">
+        <img src="./afbeeldingen/GebruiksBevoegdheidOppervlak.png"
+             alt="Een conform GebruiksbevoegdheidOppervlak bepaalde eigendoms- en gebruikseenheid"
+             width="300">
+        <figcaption>Voorbeeld van een conform GebruiksbevoegdheidOppervlak bepaalde eigendoms- en gebruikseenheid</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>GBO</td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bepalingsmethode</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Het GebruiksbevoegdheidOppervlak van een ruimte of een groep van ruimten omvat het perceel en/of de vloer waarboven en/of onder het gebruik- en eigendom van toepassing is., zover de wet niet anders bepaalt.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0005288&boek=5&titeldeel=3&artikel=20&z=2024-01-01&g=2024-01-01">https://wetten.overheid.nl/jci1.3:c:BWBR0005288&boek=5&titeldeel=3&artikel=20&z=2024-01-01&g=2024-01-01</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Indien een binnenruimte aan een andere binnenruimte van ander eigendom grenst, moet worden gemeten tot het hart van de desbetreffende scheidingsconstructie.</td>
+  </tr>
+</table>
 
 <br> 
 
+### Vrije Inhoud
+
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Vrije Inhoud</dfn></td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>VI</td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bepalingsmethode</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>De vrije inhoud van een ruimte of een groep van ruimten is de inhoud tussen de begrenzende verticale scheidingsconstructies van de afzonderlijke ruimten, gemeten vanaf de bovenkant van de afgewerkte vloer of het maaiveld tot de onderkant van het laagste daarboven gelegen incidentele constructiedelen.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://example.org/source/nen2580">https://example.org/source/nen2580</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Afgeleid van de vrije hoogte uit NEN 2580; houdt, anders dan de Netto Inhoud, wél rekening met incidentele constructiedelen, verlaagde plafonds en plafondlampen. Zie <a href="toelichting.md#vrije-inhoud">toelichting</a>.</td>
+  </tr>
+</table>
+
+<br> 
+
+### Constructie Inhoud
+
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Constructie Inhoud</dfn></td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>CI</td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bepalingsmethode</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>De constructie inhoud van een ruimte of een groep van ruimten is de inhoud binnen de begrenzende scheidingsconstructies die wordt ingenomen door verwijderbare of incidentele constructies, zoals verlaagde plafonds, omkastingen, spantbenen en moerbalken.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://example.org/source/nen2580">https://example.org/source/nen2580</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Afgesloten delen horen bij de Tarra Inhoud; niet-afgesloten delen tot 10% van het plafondvlak gelden als incidenteel. Zie <a href="toelichting.md#constructie-inhoud">toelichting</a>.</td>
+  </tr>
+</table>
+
+<br> 
+
+Een samenvatting van de grenzen van alle bepalingsmethoden in één detaildoorsnede staat in de toelichting onder [Samenvatting bepalingsmethoden](toelichting.md#samenvatting-bepalingsmethoden).
+
+## Ruimtelijke gebieden
+
 ### Ruimtelijk gebied
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Ruimtelijk gebied</dfn> |
-| **is specialisatie van** | Virtuele Ruimte |
-| **definitie**        | "Een virtuele ruimte die een bepaald gebied omsluit zoals  en dat wordt begrensd door of ruimte geeft aan reële objecten of andere ruimtelijke gebieden"|
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Ruimtelijk gebied</dfn></td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Virtuele Ruimte</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>"Een virtuele ruimte die een bepaald gebied omsluit zoals  en dat wordt begrensd door of ruimte geeft aan reële objecten of andere ruimtelijke gebieden"</td>
+  </tr>
+</table>
 
 <br> 
 
 ### Gebruiksfunctie
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Gebruiksfunctie</dfn> |
-| **is specialisatie van** | Ruimtelijk gebied |
-| **definitie**        | Gedeelten van een of meer bouwwerken die dezelfde gebruiksbestemming hebben en die samen een gebruikseenheid vormen; |
-| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
-| **toelichting** | — Een gebruiksfunctie van een gebouw is volgens het BBL een ruimtelijk gebied. Dit gebied bestaat uit die gedeelten van één of meer bouwwerken die dezelfde gebruiksbestemming hebben en die samen een gebruikseenheid vormen. Dit kan zijn: <br> 1 Woonfunctie <br> 2 Bijeenkomstfunctie <br> 3 Celfunctie <br> 4 Gezondheidszorgfunctie <br> 5 Industriefunctie <br> 6 Kantoorfunctie <br> 7 Logiesfunctie <br> 8 Onderwijsfunctie <br> 9 Sportfunctie <br> 10 Winkelfunctie <br> 11 Overige gebruiksfunctie <br> 12 Bouwwerk geen gebouw zijnde. <br> — Gebruiksfuncties worden gebruikelijk bepaald volgens bepalingsmethode Gebruiksinhoud (GI). Maar ook ander bepalingsmethodes zijn mogelijk. |
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Gebruiksfunctie</dfn></td>
+    <td rowspan="5" style="vertical-align: top; width: 320px;">
+      <figure id="fig-twee_gebruiksfunctie_ruimten">
+        <img src="./afbeeldingen/Gebruiksfunctie_conform_GebruiksInhoud.png"
+             alt="Twee gebruiksfunctieruimten, woonfunctie en overige gebruiksfunctie, conform gebruiksinhoud bepalingsmethode"
+             width="300">
+        <figcaption>Twee gebruiksfunctieruimten, woonfunctie (in oranje) en overige gebruiksfunctie (in blauw), conform bepalingsmethode gebruiksinhoud</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Ruimtelijk gebied</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Gedeelten van een of meer bouwwerken die dezelfde gebruiksbestemming hebben en die samen een gebruikseenheid vormen;</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24">https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Het Bbl onderscheidt twaalf gebruiksfuncties; deze worden gebruikelijk bepaald volgens de bepalingsmethode Gebruiks Inhoud. Zie <a href="toelichting.md#gebruiksfunctie">toelichting</a>.</td>
+  </tr>
+</table>
 
-
-<figure id="fig-twee_gebruiksfunctie_ruimten">
-  <img src="./afbeeldingen/Gebruiksfunctie_conform_GebruiksInhoud.png"
-       alt="Twee gebruiksfunctieruimten, woonfunctie en overige gebruiksfunctie, conform gebruiksinhoud bepalingsmethode"
-       width="300">
-  <figcaption>Twee gebruiksfunctieruimten, woonfunctie (in oranje) en overige gebruiksfunctie (in blauw), conform bepalingsmethode gebruiksinhoud</figcaption>
-</figure>
+<br> 
 
 ### Nevengebruiksfunctie
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Nevengebruiksfunctie</dfn> |
-| **is specialisatie van** | Ruimtelijk gebied |
-| **definitie**        | Gebruiksfunctie die ten dienste staat van een andere gebruiksfunctie; |
-| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
-| **toelichting** | Een nevengebruiksfunctie is dus zelf ook een gebruiksfunctie. Maar is als het ware bedoeld voor een andere gebruiksfunctie (‘ten dienste van’). Voorbeelden van nevengebruiksfuncties zijn een:
-- garage of buitenberging (overige gebruiksfunctie) bij een woning (woonfunctie)
-- kantoor (kantoorfunctie) aan huis (woonfunctie)
-- kantine (bijeenkomstfunctie) in een kantoor (kantoorfunctie)
-- fietsenstalling (overige gebruiksfunctie) bij een kantoor (kantoorfunctie)
-- werkplaats (industriefunctie) in een gevangeniscomplex (celfunctie)
-- liftschacht (overige gebruiksfunctie) bij een tunnel (bouwwerk geen gebouw zijnde)
-Een gebruiksfunctie en de nevengebruiksfunctie die daaraan ten dienste is, kunnen in hetzelfde bouwwerk liggen. Maar dat hoeft niet per se. |
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Nevengebruiksfunctie</dfn></td>
+    <td rowspan="5" style="vertical-align: top; width: 320px;">
+      <figure id="fig-nevengebruiksfuncties">
+        <img src="./afbeeldingen/Nevengebruiksfunctie.png"
+             alt="Een woonfunctie met twee nevengebruiksfuncties; overige gebruiksfunctie (de garage) en een kantoorfunctie (kantoor aan huis)"
+             width="300">
+        <figcaption>Een woonfunctie met twee nevengebruiksfuncties; overige gebruiksfunctie (de garage) en een kantoorfunctie (kantoor aan huis)</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Ruimtelijk gebied</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Gebruiksfunctie die ten dienste staat van een andere gebruiksfunctie;</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24">https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Bijvoorbeeld een garage bij een woning of een kantine in een kantoor. Zie <a href="toelichting.md#nevengebruiksfunctie">toelichting</a>.</td>
+  </tr>
+</table>
 
-<br>
-
-<figure id="fig-nevengebruiksfuncties">
-  <img src="./afbeeldingen/Nevengebruiksfunctie.png"
-       alt="Een woonfunctie met twee nevengebruiksfuncties; overige gebruiksfunctie (de garage)en een kantoorfunctie (kantoor aan huis)"
-       width="300">
-  <figcaption>TEen woonfunctie met twee nevengebruiksfuncties; overige gebruiksfunctie (de garage)en een kantoorfunctie (kantoor aan huis)</figcaption>
-</figure>
-
+<br> 
 
 ### Gebruiksgebied
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Gebruiksgebied</dfn> |
-| **is specialisatie van** | Ruimtelijk gebied |
-| **definitie**        | Vrij indeelbaar gedeelte van een gebruiksfunctie waar voor de gebruiksfunctie kenmerkende activiteiten plaatsvinden, dat bestaat uit een of meer op dezelfde bouwlaag gelegen ruimten gelegen in een brandcompartiment die niet door een dragende scheidingsconstructie van elkaar zijn gescheiden en die geen toiletruimte, badruimte, technische ruimte of verkeersruimte zijn, tenzij die ruimte zelf een functieruimte is; |
-| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
-| **toelichting** | Een voorbeeld van een ruimte die functieruimte is gelegen in een functiegebied, is een toilet (functieruimte) in het sanitair gebied (functiegebied). Een gebruiksfunctie wordt opgedeeld in gebruiksgebied en in restgebied. Het gebruiksgebied is een aggregatie van alles wat verblijfsgebied of functiegebied is, eventueel met tarra ruimte.  
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Gebruiksgebied</dfn></td>
+    <td rowspan="5" style="vertical-align: top; width: 320px;">
+      <figure id="fig-gebruiksgebied">
+        <img src="./afbeeldingen/Gebruiksgebied.png"
+             alt="Een voorbeeld van een woning met 5 gebruiksgebieden."
+             width="300">
+        <figcaption>Een voorbeeld van een woning met 5 gebruiksgebieden.</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Ruimtelijk gebied</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Vrij indeelbaar gedeelte van een gebruiksfunctie waar voor de gebruiksfunctie kenmerkende activiteiten plaatsvinden, dat bestaat uit een of meer op dezelfde bouwlaag gelegen ruimten gelegen in een brandcompartiment die niet door een dragende scheidingsconstructie van elkaar zijn gescheiden en die geen toiletruimte, badruimte, technische ruimte of verkeersruimte zijn, tenzij die ruimte zelf een functieruimte is;</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24">https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Een gebruiksfunctie wordt opgedeeld in gebruiksgebied en restgebied; het gebruiksgebied omvat de verblijfsgebieden en functiegebieden. Zie <a href="toelichting.md#gebruiksgebied">toelichting</a>.</td>
+  </tr>
+</table>
 
-- moeten in een brandcompartiment liggen
-- mogen niet door een dragende scheidingsconstructie van elkaar zijn gescheiden (lichte of verplaatsbare wand mag wel)
-- mogen geen toiletruimte, badruimte, technische ruimte of verkeersruimte zijn (behalve als deze ruimte zelf een functieruimte is)
-|
-
-<figure id="fig-gebruiksgebied">
-  <img src="./afbeeldingen/Gebruiksgebied.png"
-       alt="Een voorbeeld van een woning met 5 gebruiksgebieden."
-       width="300">
-  <figcaption>Een voorbeeld van een woning met 5 gebruiksgebieden.</figcaption>
-</figure>
-
+<br> 
 
 ### Restgebied
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Restgebied</dfn> |
-| **is specialisatie van** | Ruimtelijk gebied |
-| **definitie**        | Vrij indeelbaar gedeelte van een gebruiksfunctie waar niet voor de gebruiksfunctie kenmerkende activiteiten plaatsvinden, dat bestaat uit een of meer op dezelfde bouwlaag gelegen ruimten die niet door een dragende scheidingsconstructie van elkaar zijn gescheiden.  |
-| **heeft bron** | https://iplo.nl/regelgeving/regels-voor-activiteiten/technische-bouwactiviteit/nieuwbouw/rijksregels/vrije-indeelbaarheid/#h123cffef-59e1-4d07-904c-a5a72287c0e4 |
-| **toelichting** | Toiletruimten, badruimten, technische ruimten en verkeersruimten zijn geen onderdeel van een gebruiksgebied, want deze ruimten zijn niet kenmerkend voor de gebruiksfunctie. Daardoor zijn ze onderdeel van het restgebied. Behalve als het gaat om een op zichzelf staand gebouw met deze voorzieningen. Bijvoorbeeld een sanitairgebouw op een camping. Een restgebied ligt binnen een gebruiksfunctie maar buiten een gebruiksgebied. |
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Restgebied</dfn></td>
+    <td rowspan="5" style="vertical-align: top; width: 320px;">
+      <figure id="fig-Restgebied">
+        <img src="./afbeeldingen/Restgebied.png"
+             alt="Een voorbeeld van een woning met 2 restgebieden"
+             width="300">
+        <figcaption>Een voorbeeld van een woning met 2 restgebieden.</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Ruimtelijk gebied</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Vrij indeelbaar gedeelte van een gebruiksfunctie waar niet voor de gebruiksfunctie kenmerkende activiteiten plaatsvinden, dat bestaat uit een of meer op dezelfde bouwlaag gelegen ruimten die niet door een dragende scheidingsconstructie van elkaar zijn gescheiden.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://iplo.nl/regelgeving/regels-voor-activiteiten/technische-bouwactiviteit/nieuwbouw/rijksregels/vrije-indeelbaarheid/#h123cffef-59e1-4d07-904c-a5a72287c0e4">https://iplo.nl/regelgeving/regels-voor-activiteiten/technische-bouwactiviteit/nieuwbouw/rijksregels/vrije-indeelbaarheid/#h123cffef-59e1-4d07-904c-a5a72287c0e4</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Omvat onder meer toiletruimten, badruimten, technische ruimten en verkeersruimten. Zie <a href="toelichting.md#restgebied">toelichting</a>.</td>
+  </tr>
+</table>
 
-<figure id="fig-Restgebied">
-  <img src="./afbeeldingen/Restgebied.png"
-       alt="Een voorbeeld van een woning met 2 restgebieden"
-       width="300">
-  <figcaption>Een voorbeeld van een woning met 2 restgebieden.</figcaption>
-</figure>
+<br> 
 
 ### Restruimte of onbenoemde ruimte
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Restruimte</dfn> |
-| **alternatieve term**   | Onbenoemde ruimte |
-| **is specialisatie van** | Ruimtelijk gebied |
-| **definitie**        | Ruimte binnen een gebruiksfunctie zonder specifiek gebruik of waar niet voor de gebruiksfunctie kenmerkende activiteiten plaatsvinden.   |
-| **heeft bron** | https://iplo.nl/regelgeving/regels-voor-activiteiten/technische-bouwactiviteit/nieuwbouw/rijksregels/vrije-indeelbaarheid/#h123cffef-59e1-4d07-904c-a5a72287c0e4 |
-| **toelichting** | Naast functieruimten en verblijfsruimten, kunnen er nog andere ruimten zijn. Zoals een opbergruimte. Het Bbl biedt de mogelijkheid om (delen van) deze andere ruimten buiten het gebruiksgebied als onbenoemde ruimten aan te wijzen. Dit zijn bijvoorbeeld zolders in woningen die in eerste instantie niet specifiek gebruikt worden. Zolang deze ruimten niet voor een bepaald gebruik in gebruik genomen worden, hoeven ze niet te voldoen aan de eisen voor verblijfsgebieden of functiegebieden. |
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Restruimte</dfn></td>
+    <td rowspan="6" style="vertical-align: top; width: 320px;">
+      <figure id="fig-Restruimte">
+        <img src="./afbeeldingen/Restruimte.png"
+             alt="Een voorbeeld van een woning met 4 restruimten"
+             width="300">
+        <figcaption>Een voorbeeld van een woning met 4 restruimten.</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>alternatieve term</strong></td>
+    <td>Onbenoemde ruimte</td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Ruimtelijk gebied</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Ruimte binnen een gebruiksfunctie zonder specifiek gebruik of waar niet voor de gebruiksfunctie kenmerkende activiteiten plaatsvinden.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://iplo.nl/regelgeving/regels-voor-activiteiten/technische-bouwactiviteit/nieuwbouw/rijksregels/vrije-indeelbaarheid/#h123cffef-59e1-4d07-904c-a5a72287c0e4">https://iplo.nl/regelgeving/regels-voor-activiteiten/technische-bouwactiviteit/nieuwbouw/rijksregels/vrije-indeelbaarheid/#h123cffef-59e1-4d07-904c-a5a72287c0e4</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Bijvoorbeeld een zolder in een woning die (nog) niet specifiek gebruikt wordt. Zie <a href="toelichting.md#restruimte-of-onbenoemde-ruimte">toelichting</a>.</td>
+  </tr>
+</table>
 
-
-<figure id="fig-Restruimte">
-  <img src="./afbeeldingen/Restruimte.png"
-       alt="Een voorbeeld van een woning met 4 restruimten"
-       width="300">
-  <figcaption>Een voorbeeld van een woning met 4 restruimten.</figcaption>
-</figure>
+<br> 
 
 ### Verblijfsgebied
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Verblijfsgebied</dfn> |
-| **is specialisatie van** | Ruimtelijk gebied |
-| **definitie**        | Gebruiksgebied of een gedeelte daarvan voor het verblijven van personen.  |
-| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
-| **toelichting** | Een verblijfsgebied bestaat uit 1 of meer ruimten waarin personen verblijven. Een verblijfsruimte ligt dus altijd in een verblijfsgebied.
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Verblijfsgebied</dfn></td>
+    <td rowspan="5" style="vertical-align: top; width: 320px;">
+      <figure id="fig-Verblijfsgebied">
+        <img src="./afbeeldingen/Verblijfsgebied.png"
+             alt="Een voorbeeld van een woning met 4 verblijfsgebieden"
+             width="300">
+        <figcaption>Een voorbeeld van een woning met 4 verblijfsgebieden.</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Ruimtelijk gebied</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Gebruiksgebied of een gedeelte daarvan voor het verblijven van personen.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24">https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Bestaat uit een of meer verblijfsruimten en eventueel bedgebieden of andere ruimten. Zie <a href="toelichting.md#verblijfsgebied">toelichting</a>.</td>
+  </tr>
+</table>
 
-De regels voor een verblijfsgebied en een verblijfsruimte zijn afgestemd op de kenmerkende activiteiten voor het verblijven van personen. Zoals wonen, het bewerken of verhandelen van materialen of goederen, het verlenen van diensten en het beoefenen van sport.
-
-Met het stellen van eisen aan een verblijfsgebied, is een minimumniveau voor de verblijfsruimte gewaarborgd. Op deze manier wordt ook zoveel mogelijk recht gedaan aan de vrije indeelbaarheid van het verblijfsgebied.
-
-Verblijfsgebieden kunnen naast verblijfsruimten, ook bestaan uit een bedgebied met bedruimte of andere ruimten, waaronder onbenoemde ruimten. |
-
-<figure id="fig-Verblijfsgebied">
-  <img src="./afbeeldingen/Verblijfsgebied.png"
-       alt="Een voorbeeld van een woning met 4 verblijfsgebieden"
-       width="300">
-  <figcaption>Een voorbeeld van een woning met 4 verblijfsgebieden.</figcaption>
-</figure>
+<br> 
 
 ### Verblijfsruimte
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Verblijfsruimte</dfn> |
-| **is specialisatie van** | Ruimtelijk gebied |
-| **definitie**        | in een verblijfsgebied gelegen ruimte voor het verblijven van personen.  |
-| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
-| **toelichting** | Bij bijvoorbeeld een kantoorfunctie moeten de werkvertrekken voor administratieve werkzaamheden als verblijfsruimten worden aangemerkt. En bij een school de klaslokalen. |
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Verblijfsruimte</dfn></td>
+    <td rowspan="5" style="vertical-align: top; width: 320px;">
+      <figure id="fig-Verblijfsruimte">
+        <img src="./afbeeldingen/Verblijfsruimte.png"
+             alt="Een voorbeeld van een woning met 6 verblijfsruimten"
+             width="300">
+        <figcaption>Een voorbeeld van een woning met 6 verblijfsruimten.</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Ruimtelijk gebied</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>in een verblijfsgebied gelegen ruimte voor het verblijven van personen.</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24">https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Bij bijvoorbeeld een kantoorfunctie moeten de werkvertrekken voor administratieve werkzaamheden als verblijfsruimten worden aangemerkt. En bij een school de klaslokalen.</td>
+  </tr>
+</table>
 
-<figure id="fig-Verblijfsruimte">
-  <img src="./afbeeldingen/Verblijfsruimte.png"
-       alt="Een voorbeeld van een woning met 6 verblijfsruimten"
-       width="300">
-  <figcaption>Een voorbeeld van een woning met 6 verblijfsruimten.</figcaption>
-</figure>
-
+<br> 
 
 ### Functiegebied
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Functiegebied</dfn> |
-| **is specialisatie van** | Ruimtelijk gebied |
-| **definitie**        |  gebruiksgebied of een gedeelte daarvan, waar de voor die gebruiksfunctie kenmerkende activiteiten anders dan het verblijven van personen plaatsvinden;  |
-| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
-| **toelichting** | Voorbeelden van een functiegebied zijn: 
-- een sanitairgebouw
-- een gebied van een garage
-- een gebied met opslagruimte(n)
-- Een gebied met technische ruimte(n)
-- een gebied met productieruimte(n)
- Functiegebieden kunnen worden onderverdeeld in functieruimten of andere ruimten. In het voorbeeld van een sanitairgebouw kan dit toilet- en doucheruimten zijn. |
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Functiegebied</dfn></td>
+    <td rowspan="5" style="vertical-align: top; width: 320px;">
+      <figure id="fig-Functiegebied">
+        <img src="./afbeeldingen/functiegebied.png"
+             alt="Een voorbeeld van een woning met 1 functiegebied bestaande uit 1 functieruimte"
+             width="300">
+        <figcaption>Een voorbeeld van een woning met 1 functiegebied bestaande uit 1 functieruimte.</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Ruimtelijk gebied</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>gebruiksgebied of een gedeelte daarvan, waar de voor die gebruiksfunctie kenmerkende activiteiten anders dan het verblijven van personen plaatsvinden;</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24">https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Bijvoorbeeld een sanitairgebouw, een garage of een gebied met opslag-, technische of productieruimten. Zie <a href="toelichting.md#functiegebied">toelichting</a>.</td>
+  </tr>
+</table>
 
-<figure id="fig-Functiegebied">
-  <img src="./afbeeldingen/Functiegebied.png"
-       alt="Een voorbeeld van een woning met 1 functiegebied bestaande uit 1 functieruimte"
-       width="300">
-  <figcaption>Een voorbeeld van een woning met 1 functiegebied bestaande uit 1 functieruimte.</figcaption>
-</figure>
-
+<br> 
 
 ### Functieruimte
 
-|                       |                                       |
-|-----------------------|---------------------------------------|
-| **voorkeursterm**   | <dfn>Functieruimte</dfn> |
-| **is specialisatie van** | Ruimtelijk gebied |
-| **definitie**        |   in een functiegebied gelegen ruimte |
-| **heeft bron** | https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24 |
-| **toelichting** | Voorbeelden van een functieruimte zijn:
-- de toiletruimte binnen een sanitairgebouw
-- een garage
-- een opslagruimte
-- een technische ruimte
- |
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Functieruimte</dfn></td>
+    <td rowspan="5" style="vertical-align: top; width: 320px;">
+      <figure id="fig-Functieruimte">
+        <img src="./afbeeldingen/functieruimte.png"
+             alt="Een voorbeeld van een woning met 1 functieruimte, een garage"
+             width="300">
+        <figcaption>Een voorbeeld van een woning met 1 functieruimte, een garage.</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Ruimtelijk gebied</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>in een functiegebied gelegen ruimte</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24">https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Bijvoorbeeld de toiletruimte binnen een sanitairgebouw, een garage, een opslagruimte of een technische ruimte.</td>
+  </tr>
+</table>
 
- <figure id="fig-Functieruimte">
-  <img src="./afbeeldingen/Functieruimte.png"
-       alt="Een voorbeeld van een woning met 1 functieruimte, een garage"
-       width="300">
-  <figcaption>Een voorbeeld van een woning met 1 functieruimte, een garage.</figcaption>
-</figure>
+<br> 
 
 ### Bedgebied
-(bbl concept)
+
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Bedgebied</dfn></td>
+    <td rowspan="5" style="vertical-align: top; width: 320px;">
+      <figure id="fig-Bedgebied">
+        <img src="./afbeeldingen/Verblijfsgebied.png"
+             alt="Een voorbeeld van bedgebied (hetzelfde voorbeeld als verblijfsgebied)"
+             width="300">
+        <figcaption>Een voorbeeld van bedgebied (hetzelfde voorbeeld als verblijfsgebied).</figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Verblijfsgebied</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Verblijfsgebied met een of meer bedruimten;</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24">https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Bevat minstens één bedruimte; personen verblijven er normaal gesproken in bed. Zie <a href="toelichting.md#bedgebied">toelichting</a>.</td>
+  </tr>
+</table>
+
+<br> 
+
+### Bedgebied voor niet-bedgebonden personen
+
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Bedgebied voor niet-bedgebonden personen</dfn></td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bedgebied</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Bedgebied bedoeld voor niet-bedgebonden personen</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24">https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>In woningen zijn bedgebieden over het algemeen voor niet-bedgebonden personen. Zie <a href="toelichting.md#bedgebied-voor-bedgebonden-en-niet-bedgebonden-personen">toelichting</a>.</td>
+  </tr>
+</table>
+
+<br> 
+
+### Bedgebied voor bedgebonden personen
+
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Bedgebied voor bedgebonden personen</dfn></td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bedgebied</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Bedgebied bedoeld voor bedgebonden personen</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24">https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Hiervoor gelden zwaardere brandveiligheidseisen, omdat bedgebonden personen zich bij brand niet zonder hulp in veiligheid kunnen brengen. Zie <a href="toelichting.md#bedgebied-voor-bedgebonden-en-niet-bedgebonden-personen">toelichting</a>.</td>
+  </tr>
+</table>
+
+<br> 
 
 ### Bedruimte
-(bbl concept)
+
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Bedruimte</dfn></td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Verblijfsruimte</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>verblijfsruimte bestemd voor een of meer bedden bestemd voor slapen of voor het verblijf van bedgebonden patiënten in die ruimte;</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24">https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Bijvoorbeeld een slaapruimte in een crèche, een hotelkamer of een verpleegruimte; niet een ruimte voor de opslag van bedden of een behandelruimte. Zie <a href="toelichting.md#bedruimte">toelichting</a>.</td>
+  </tr>
+</table>
+
+<br> 
+
+### Bedruimte voor niet-bedgebonden personen
+
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Bedruimte voor niet-bedgebonden personen</dfn></td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bedruimte</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Bedruimte bestemd voor een of meer bedden bestemd voor slapen van niet- bedgebonden personen;</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24">https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Bijvoorbeeld een hotelkamer of een slaapruimte in een crèche. Zie <a href="toelichting.md#bedruimte">toelichting</a>.</td>
+  </tr>
+</table>
+
+<br> 
+
+### Bedruimte voor bedgebonden personen
+
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Bedruimte voor bedgebonden personen</dfn></td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Bedruimte</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>Bedruimte bestemd voor het verblijf van bedgebonden personen in die ruimte;</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24">https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Niet een ruimte met een rustbed voor een middagslaapje, of een behandel- of operatieruimte. Zie <a href="toelichting.md#bedruimte-voor-bedgebonden-personen">toelichting</a>.</td>
+  </tr>
+</table>
+
+<br> 
 
 ### Verkeersruimte
 
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Verkeersruimte</dfn></td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Ruimte</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>ruimte voor het bereiken van een andere ruimte, die niet ligt in een verblijfsgebied of in een functiegebied, een toiletruimte, een badruimte of een technische ruimte;</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24">https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Bijvoorbeeld een hal, gang, overloop, trappenhuis of galerij. Zie <a href="toelichting.md#verkeersruimte">toelichting</a>.</td>
+  </tr>
+</table>
+
+<br> 
 
 ### Verkeersroute
 
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Verkeersroute</dfn></td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Ruimte</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>route die begint bij een doorgang van een ruimte, alleen voert over vloeren, trappen of hellingbanen en eindigt bij de doorgang van een andere ruimte;</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24">https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>...</td>
+  </tr>
+</table>
 
+<br> 
 
+### Vluchtroute
+
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Vluchtroute</dfn></td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Ruimte</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>route die begint in een ruimte voor personen, alleen voert over vloeren, trappen of hellingbanen en eindigt op een veilige plaats;</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24">https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>Bij een vluchtroute mag geen lift gebruikt worden. Een vluchtroute kan ook niet via een raam lopen.</td>
+  </tr>
+</table>
+
+<br> 
+
+### Ruimte waardoor een verkeersroute voert
+
+<table>
+  <tr>
+    <td><strong>voorkeursterm</strong></td>
+    <td><dfn>Ruimte waardoor een verkeersroute voert</dfn></td>
+  </tr>
+  <tr>
+    <td><strong>is specialisatie van</strong></td>
+    <td>Ruimte</td>
+  </tr>
+  <tr>
+    <td><strong>definitie</strong></td>
+    <td>...</td>
+  </tr>
+  <tr>
+    <td><strong>heeft bron</strong></td>
+    <td><a href="https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24">https://wetten.overheid.nl/jci1.3:c:BWBR0041297&bijlage=I&z=2026-09-24&g=2026-09-24</a></td>
+  </tr>
+  <tr>
+    <td><strong>toelichting</strong></td>
+    <td>...</td>
+  </tr>
+</table>
+
+<br> 
 
 ## Bronnen (dct:source)
 
@@ -563,3 +1236,15 @@ Verblijfsgebieden kunnen naast verblijfsruimten, ook bestaan uit een bedgebied m
 | **dcterms:publisher** | <https://www.nen.nl/> |
 | **foaf:page** | <https://www.nen.nl/nen-2580-2007-nl-113982> |
 | **dcterms:identifier** | "NEN 2580" |
+
+<br> 
+
+|                       |                                       |
+|-----------------------|---------------------------------------|
+| **URI**   | https://example.org/source/en15221-6 |
+| **rdf.type**        | foaf:Document |
+| **dcterms.title** | "NEN-EN 15221-6 - Facility Management - Deel 6: Metingen van gebied en ruimte in Facility Management"@nl |
+| **rdfs.comment** | "EN 15221-6 is een Europese norm die een gemeenschappelijk kader geeft voor het meten van vloeroppervlakten en ruimten binnen gebouwen en van oppervlakten buiten gebouwen, ten behoeve van planning, ontwerp, ruimtebeheer, financiële beoordeling en benchmarking in facility management. Voor Nederland geldt een A-afwijking, waardoor NEN 2580 hier de leidende norm blijft."@nl |
+| **dcterms:publisher** | <https://www.nen.nl/> |
+| **foaf:page** | <https://www.nen.nl/nen-en-15221-6-2011-en-164685> |
+| **dcterms:identifier** | "NEN-EN 15221-6" |
